@@ -11,7 +11,6 @@
 		A3464E8D11F2794A0080B46B /* SimpleExpectationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3464E8C11F2794A0080B46B /* SimpleExpectationTests.m */; };
 		A3464F0F11F27F940080B46B /* LRMockery.m in Sources */ = {isa = PBXBuildFile; fileRef = A3464F0911F27F3B0080B46B /* LRMockery.m */; };
 		A3464F7F11F288980080B46B /* LRExpectationBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A3464F7E11F288980080B46B /* LRExpectationBuilder.m */; };
-		A3464F9411F28A0D0080B46B /* LRExpectationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3464F9311F28A0D0080B46B /* LRExpectationProxy.m */; };
 		A3464FF111F292660080B46B /* LRInvocationExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3464FF011F292660080B46B /* LRInvocationExpectation.m */; };
 		A346500211F2937D0080B46B /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A346500111F2937D0080B46B /* TestHelper.m */; };
 		A346505E11F299E60080B46B /* LRMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A346505D11F299E60080B46B /* LRMockObject.m */; };
@@ -42,8 +41,6 @@
 		A3464F0911F27F3B0080B46B /* LRMockery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMockery.m; sourceTree = "<group>"; };
 		A3464F7D11F288980080B46B /* LRExpectationBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectationBuilder.h; sourceTree = "<group>"; };
 		A3464F7E11F288980080B46B /* LRExpectationBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRExpectationBuilder.m; sourceTree = "<group>"; };
-		A3464F9211F28A0D0080B46B /* LRExpectationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectationProxy.h; sourceTree = "<group>"; };
-		A3464F9311F28A0D0080B46B /* LRExpectationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRExpectationProxy.m; sourceTree = "<group>"; };
 		A3464FEF11F292660080B46B /* LRInvocationExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRInvocationExpectation.h; sourceTree = "<group>"; };
 		A3464FF011F292660080B46B /* LRInvocationExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRInvocationExpectation.m; sourceTree = "<group>"; };
 		A346500011F2937D0080B46B /* TestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHelper.h; sourceTree = "<group>"; };
@@ -136,8 +133,6 @@
 				A3464F0911F27F3B0080B46B /* LRMockery.m */,
 				A3464F7D11F288980080B46B /* LRExpectationBuilder.h */,
 				A3464F7E11F288980080B46B /* LRExpectationBuilder.m */,
-				A3464F9211F28A0D0080B46B /* LRExpectationProxy.h */,
-				A3464F9311F28A0D0080B46B /* LRExpectationProxy.m */,
 				A3464FEF11F292660080B46B /* LRInvocationExpectation.h */,
 				A3464FF011F292660080B46B /* LRInvocationExpectation.m */,
 				A346505C11F299E60080B46B /* LRMockObject.h */,
@@ -290,7 +285,6 @@
 			files = (
 				A3464E8D11F2794A0080B46B /* SimpleExpectationTests.m in Sources */,
 				A3464F7F11F288980080B46B /* LRExpectationBuilder.m in Sources */,
-				A3464F9411F28A0D0080B46B /* LRExpectationProxy.m in Sources */,
 				A3464FF111F292660080B46B /* LRInvocationExpectation.m in Sources */,
 				A346500211F2937D0080B46B /* TestHelper.m in Sources */,
 				A346505E11F299E60080B46B /* LRMockObject.m in Sources */,
