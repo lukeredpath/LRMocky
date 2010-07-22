@@ -22,7 +22,7 @@
 
 @interface MockeryTests : SenTestCase
 {
-  LRMockery *mockery;
+  LRMockery *context;
   MockTestCase *testCase;
 }
 @end
@@ -32,32 +32,32 @@
 - (void)setUp;
 {
   testCase = [MockTestCase new];
-  mockery = [LRMockery mockeryForTestCase:testCase];
+  context = [LRMockery mockeryForTestCase:testCase];
 }
 
 - (void)testCanExpectSingleMethodCallAndPass;
 {
-  Workhorse *workhorse = [mockery mock:[Workhorse class]];
+  Workhorse *workhorse = [context mock:[Workhorse class]];
   
-  [mockery checking:^(LRExpectationBuilder *will){
+  [context checking:^(LRExpectationBuilder *will){
     [[will expect:workhorse] doSomething];
   }];
   
   [workhorse doSomething];
-  [mockery assertSatisfied];
+  [context assertSatisfied];
   
   STAssertTrue([testCase numberOfFailures] == 0, @"expected zero failures, got %d.", [testCase numberOfFailures]);
 }
 
 - (void)testCanExpectSingleMethodCallAndFail;
 {
-  Workhorse *workhorse = [mockery mock:[Workhorse class]];
+  Workhorse *workhorse = [context mock:[Workhorse class]];
   
-  [mockery checking:^(LRExpectationBuilder *will){
+  [context checking:^(LRExpectationBuilder *will){
     [[will expect:workhorse] doSomething];
   }];
   
-  [mockery assertSatisfied];
+  [context assertSatisfied];
   
   STAssertTrue([testCase numberOfFailures] == 1, @"expected 1 failure, got %d.", [testCase numberOfFailures]);
 }
