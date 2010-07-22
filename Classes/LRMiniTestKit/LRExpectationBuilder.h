@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LRImposter.h"
 
 @class LRMockObject;
 @class LRMockery;
 
-@interface LRExpectationBuilder : NSObject {
+@interface LRExpectationBuilder : LRClassImposter {
   LRMockery *mockery;
   Class mockedClass;
 }

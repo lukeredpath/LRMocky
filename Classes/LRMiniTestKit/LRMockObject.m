@@ -27,20 +27,15 @@
   return self;
 }
 
+- (Class)classToImposterize
+{
+  return mockedClass;
+}
+
 - (void)dealloc;
 {
   [context release];
   [super dealloc];
-}
-
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)sel
-{
-  return [mockedClass instanceMethodSignatureForSelector:sel];
-}
-
-- (BOOL)respondsToSelector:(SEL)aSelector
-{
-  return [mockedClass instancesRespondToSelector:aSelector];
 }
 
 - (void)forwardInvocation:(NSInvocation *)invocation

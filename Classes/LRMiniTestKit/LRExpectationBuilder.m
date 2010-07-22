@@ -26,6 +26,11 @@
   return self;
 }
 
+- (Class)classToImposterize
+{
+  return mockedClass;
+}
+
 - (void)dealloc;
 {
   [mockery release];
@@ -36,16 +41,6 @@
 {
   mockedClass = [(LRMockObject *)mockObject mockedClass];
   return self;
-}
-
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)sel
-{
-  return [mockedClass instanceMethodSignatureForSelector:sel];
-}
-
-- (BOOL)respondsToSelector:(SEL)aSelector
-{
-  return [mockedClass instancesRespondToSelector:aSelector];
 }
 
 - (void)forwardInvocation:(NSInvocation *)invocation
