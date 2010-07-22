@@ -11,12 +11,12 @@
 #import "LRTestCase.h"
 #import "LRExpectationBuilder.h"
 
-@interface Workhorse : NSObject
+@interface SimpleObject : NSObject
 {}
 - (void)doSomething;
 @end
 
-@implementation Workhorse; 
+@implementation SimpleObject; 
 - (void)doSomething {}
 @end
 
@@ -37,13 +37,13 @@
 
 - (void)testCanExpectSingleMethodCallAndPass;
 {
-  Workhorse *workhorse = [context mock:[Workhorse class]];
+  SimpleObject *testObject = [context mock:[SimpleObject class]];
   
   [context checking:^(LRExpectationBuilder *will){
-    [[will expect:workhorse] doSomething];
+    [[will expect:testObject] doSomething];
   }];
   
-  [workhorse doSomething];
+  [testObject doSomething];
   [context assertSatisfied];
   
   STAssertTrue([testCase numberOfFailures] == 0, @"expected zero failures, got %d.", [testCase numberOfFailures]);
@@ -51,10 +51,10 @@
 
 - (void)testCanExpectSingleMethodCallAndFail;
 {
-  Workhorse *workhorse = [context mock:[Workhorse class]];
+  SimpleObject *testObject = [context mock:[SimpleObject class]];
   
   [context checking:^(LRExpectationBuilder *will){
-    [[will expect:workhorse] doSomething];
+    [[will expect:testObject] doSomething];
   }];
   
   [context assertSatisfied];
