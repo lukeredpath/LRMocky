@@ -26,6 +26,14 @@
   return [NSException exceptionWithName:@"FailingExpectation" reason:@"always fails" userInfo:nil];
 }
 
+- (BOOL)matches:(NSInvocation *)invocation;
+{
+  return YES;
+}
+
+- (void)invoke:(NSInvocation *)invocation;
+{}
+
 @end
 
 @interface PassingExpectation : NSObject <LRExpectation>
@@ -43,6 +51,14 @@
 {
   return nil;
 }
+
+- (BOOL)matches:(NSInvocation *)invocation;
+{
+  return YES;
+}
+
+- (void)invoke:(NSInvocation *)invocation;
+{}
 
 @end
 
