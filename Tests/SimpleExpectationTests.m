@@ -46,7 +46,8 @@
   [testObject doSomething];
   [context assertSatisfied];
   
-  STAssertTrue([testCase numberOfFailures] == 0, @"expected zero failures, got %d.", [testCase numberOfFailures]);
+  STAssertTrue([testCase numberOfFailures] == 0, 
+               @"expected zero failures, got %d.", [testCase numberOfFailures]);
 }
 
 - (void)testCanExpectSingleMethodCallAndFail;
@@ -59,7 +60,8 @@
   
   [context assertSatisfied];
   
-  STAssertTrue([testCase numberOfFailures] == 1, @"expected 1 failure, got %d.", [testCase numberOfFailures]);
+  STAssertTrue([testCase numberOfFailures] == 1, 
+               @"expected 1 failure, got %d.", [testCase numberOfFailures]);
 }
 
 @end
