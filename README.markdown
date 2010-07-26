@@ -8,6 +8,14 @@ Mocky is an Objective-C mock object library based on the [jMock](http://jmock.or
 * Hamcrest matcher support built right in
 * Sequences and state support
 
+## Requirements
+
+Currently, Mocky only builds for iOS 4.0. The aim is to produce builds for iOS 4.0 and OSX 10.6 and above.
+
+Mocky can still be used to develop applications that run on older systems (including the iPad on iOS 3.2) however your Unit Test bundle's Base SDK will need to be set to iOS 4.0 or OSX 10.6 respectively.
+
+Because Mocky depends on Hamcrest, which is partly written in Objective-C++, the -lstdc++ linker flag will need to be added to your test target.
+
 ## A simple example
 
 Mocky is still in the early stages of development; the best way of getting an idea of what features are supported is to take a look at the functional tests. Here's a simple example that expects a method to be called.
