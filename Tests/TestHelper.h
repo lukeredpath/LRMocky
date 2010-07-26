@@ -26,3 +26,8 @@
 - (void)doSomething;
 - (id)returnSomething;
 @end
+
+@protocol LRTestCase;
+
+void assertThatTestCasePassed(MockTestCase *mockTestCase, SenTestCase *testCase);
+void assertThatTestCaseFailedWithFailures(MockTestCase *mockTestCase, int numberOfFailures, SenTestCase *testCase);

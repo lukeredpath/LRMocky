@@ -52,3 +52,18 @@
 - (void)doSomething {}
 - (id)returnSomething { return nil; }
 @end
+
+#pragma mark Custom assertions
+
+void assertThatTestCasePassed(MockTestCase *mockTestCase, SenTestCase *testCase) {
+  id self = testCase;
+  STAssertTrue([mockTestCase numberOfFailures] == 0, 
+               @"expected zero failures, got %d.", [mockTestCase numberOfFailures]);
+}
+
+void assertThatTestCaseFailedWithFailures(MockTestCase * mockTestCase, int numberOfFailures, SenTestCase *testCase) {
+  id self = testCase;
+  STAssertTrue([mockTestCase numberOfFailures] == numberOfFailures, 
+               @"expected %d failure(s), got %d.", numberOfFailures, [mockTestCase numberOfFailures]);
+  
+}
