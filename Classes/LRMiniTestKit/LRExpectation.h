@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol LRExpectation
+@protocol LRExpectation <NSObject>
 - (BOOL)matches:(NSInvocation *)invocation;
 - (void)invoke:(NSInvocation *)invocation;
 - (BOOL)isSatisfied;

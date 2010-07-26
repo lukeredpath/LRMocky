@@ -9,6 +9,7 @@
 #import "LRMockery.h"
 #import "LRExpectationBuilder.h"
 #import "LRMockObject.h"
+#import "LRUnexpectedInvocation.h"
 
 @implementation LRMockery
 
@@ -69,6 +70,7 @@
       return [expectation invoke:invocation];
     }
   }
+  [expectations addObject:[LRUnexpectedInvocation unexpectedInvocation:invocation]];
 }
 
 @end

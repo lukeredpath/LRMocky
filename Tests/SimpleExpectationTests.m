@@ -20,14 +20,14 @@
 - (void)doSomething {}
 @end
 
-@interface MockeryTests : SenTestCase
+@interface SimpleExpectationTests : SenTestCase
 {
   LRMockery *context;
   MockTestCase *testCase;
 }
 @end
 
-@implementation MockeryTests
+@implementation SimpleExpectationTests
 
 - (void)setUp;
 {
@@ -60,6 +60,17 @@
   
   [context assertSatisfied];
   
+  STAssertTrue([testCase numberOfFailures] == 1, 
+               @"expected 1 failure, got %d.", [testCase numberOfFailures]);
+}
+
+- (void)testFailsWhenUnexpectedMethodIsCalled;
+{
+  SimpleObject *testObject = [context mock:[SimpleObject class]];
+  
+  [testObject doSomething];  
+  [context assertSatisfied];
+
   STAssertTrue([testCase numberOfFailures] == 1, 
                @"expected 1 failure, got %d.", [testCase numberOfFailures]);
 }
