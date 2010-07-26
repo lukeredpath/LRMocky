@@ -7,31 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A301762011FDE34B004828C5 /* LRReturnObjectAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A301761F11FDE34B004828C5 /* LRReturnObjectAction.m */; };
-		A301763111FDE548004828C5 /* LRReturnObjectAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A301761F11FDE34B004828C5 /* LRReturnObjectAction.m */; };
-		A301766011FDE97A004828C5 /* LRPerformBlockAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A301765F11FDE97A004828C5 /* LRPerformBlockAction.m */; };
-		A301767A11FDEC19004828C5 /* LRPerformBlockAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A301765E11FDE97A004828C5 /* LRPerformBlockAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A301767B11FDEC1A004828C5 /* LRReturnObjectAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A301761E11FDE34B004828C5 /* LRReturnObjectAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A301767C11FDEC1C004828C5 /* LRExpectationAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A3C0426011FDE29300C8329C /* LRExpectationAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A301767D11FDEC1F004828C5 /* LRMockery.h in Headers */ = {isa = PBXBuildFile; fileRef = A3464F0811F27F3B0080B46B /* LRMockery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A301767E11FDEC22004828C5 /* LRMocky.h in Headers */ = {isa = PBXBuildFile; fileRef = A301767511FDEB9C004828C5 /* LRMocky.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A301767F11FDEC24004828C5 /* LRExpectationBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = A3464F7D11F288980080B46B /* LRExpectationBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A301768011FDEC2C004828C5 /* LRInvocationExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = A3464FEF11F292660080B46B /* LRInvocationExpectation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A301768111FDEC33004828C5 /* LRMockObject.h in Headers */ = {isa = PBXBuildFile; fileRef = A346505C11F299E60080B46B /* LRMockObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A301768211FDEC40004828C5 /* LRTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = A346508E11F8534C0080B46B /* LRTestCase.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		A301768311FDEC45004828C5 /* LRImposter.h in Headers */ = {isa = PBXBuildFile; fileRef = A346515311F861DA0080B46B /* LRImposter.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		A301769C11FDEEFC004828C5 /* LRExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = A301768811FDEEFC004828C5 /* LRExpectation.h */; };
+		A301769D11FDEEFC004828C5 /* LRExpectationAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A301768911FDEEFC004828C5 /* LRExpectationAction.h */; };
+		A301769E11FDEEFC004828C5 /* LRExpectationBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = A301768A11FDEEFC004828C5 /* LRExpectationBuilder.h */; };
+		A301769F11FDEEFC004828C5 /* LRExpectationBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A301768B11FDEEFC004828C5 /* LRExpectationBuilder.m */; };
+		A30176A011FDEEFC004828C5 /* LRImposter.h in Headers */ = {isa = PBXBuildFile; fileRef = A301768C11FDEEFC004828C5 /* LRImposter.h */; };
+		A30176A111FDEEFC004828C5 /* LRImposter.m in Sources */ = {isa = PBXBuildFile; fileRef = A301768D11FDEEFC004828C5 /* LRImposter.m */; };
+		A30176A211FDEEFC004828C5 /* LRInvocationExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = A301768E11FDEEFC004828C5 /* LRInvocationExpectation.h */; };
+		A30176A311FDEEFC004828C5 /* LRInvocationExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = A301768F11FDEEFC004828C5 /* LRInvocationExpectation.m */; };
+		A30176A411FDEEFC004828C5 /* LRMockery.h in Headers */ = {isa = PBXBuildFile; fileRef = A301769011FDEEFC004828C5 /* LRMockery.h */; };
+		A30176A511FDEEFC004828C5 /* LRMockery.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769111FDEEFC004828C5 /* LRMockery.m */; };
+		A30176A611FDEEFC004828C5 /* LRMockObject.h in Headers */ = {isa = PBXBuildFile; fileRef = A301769211FDEEFC004828C5 /* LRMockObject.h */; };
+		A30176A711FDEEFC004828C5 /* LRMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769311FDEEFC004828C5 /* LRMockObject.m */; };
+		A30176A811FDEEFC004828C5 /* LRPerformBlockAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A301769411FDEEFC004828C5 /* LRPerformBlockAction.h */; };
+		A30176A911FDEEFC004828C5 /* LRPerformBlockAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769511FDEEFC004828C5 /* LRPerformBlockAction.m */; };
+		A30176AA11FDEEFC004828C5 /* LRReturnObjectAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A301769611FDEEFC004828C5 /* LRReturnObjectAction.h */; };
+		A30176AB11FDEEFC004828C5 /* LRReturnObjectAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769711FDEEFC004828C5 /* LRReturnObjectAction.m */; };
+		A30176AC11FDEEFC004828C5 /* LRTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = A301769811FDEEFC004828C5 /* LRTestCase.h */; };
+		A30176AD11FDEEFC004828C5 /* LRTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769911FDEEFC004828C5 /* LRTestCase.m */; };
+		A30176AE11FDEEFC004828C5 /* LRUnexpectedInvocation.h in Headers */ = {isa = PBXBuildFile; fileRef = A301769A11FDEEFC004828C5 /* LRUnexpectedInvocation.h */; };
+		A30176AF11FDEEFC004828C5 /* LRUnexpectedInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769B11FDEEFC004828C5 /* LRUnexpectedInvocation.m */; };
 		A3464E8911F279270080B46B /* libMocky.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libMocky.a */; };
 		A3464E8D11F2794A0080B46B /* SimpleExpectationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3464E8C11F2794A0080B46B /* SimpleExpectationTests.m */; };
-		A3464F0F11F27F940080B46B /* LRMockery.m in Sources */ = {isa = PBXBuildFile; fileRef = A3464F0911F27F3B0080B46B /* LRMockery.m */; };
 		A346500211F2937D0080B46B /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A346500111F2937D0080B46B /* TestHelper.m */; };
 		A34650D411F857680080B46B /* LRMockeryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A34650D311F857680080B46B /* LRMockeryTest.m */; };
-		A3C707E911FDDF71000D2A8C /* LRExpectationBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A3464F7E11F288980080B46B /* LRExpectationBuilder.m */; };
-		A3C707EA11FDDF71000D2A8C /* LRInvocationExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3464FF011F292660080B46B /* LRInvocationExpectation.m */; };
-		A3C707EB11FDDF71000D2A8C /* LRMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A346505D11F299E60080B46B /* LRMockObject.m */; };
-		A3C707EC11FDDF71000D2A8C /* LRTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A346508F11F8534C0080B46B /* LRTestCase.m */; };
-		A3C707ED11FDDF71000D2A8C /* LRImposter.m in Sources */ = {isa = PBXBuildFile; fileRef = A346515411F861DA0080B46B /* LRImposter.m */; };
-		A3C707F211FDDF92000D2A8C /* LRUnexpectedInvocation.h in Headers */ = {isa = PBXBuildFile; fileRef = A3C707F011FDDF92000D2A8C /* LRUnexpectedInvocation.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		A3C707F311FDDF92000D2A8C /* LRUnexpectedInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C707F111FDDF92000D2A8C /* LRUnexpectedInvocation.m */; };
 		A3C707F811FDDFE0000D2A8C /* ExpectationActionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */; };
 		AA747D9F0F9514B9006C5449 /* Mocky_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* Mocky_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
@@ -48,35 +48,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A301761E11FDE34B004828C5 /* LRReturnObjectAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRReturnObjectAction.h; sourceTree = "<group>"; };
-		A301761F11FDE34B004828C5 /* LRReturnObjectAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRReturnObjectAction.m; sourceTree = "<group>"; };
-		A301765E11FDE97A004828C5 /* LRPerformBlockAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRPerformBlockAction.h; sourceTree = "<group>"; };
-		A301765F11FDE97A004828C5 /* LRPerformBlockAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRPerformBlockAction.m; sourceTree = "<group>"; };
 		A301767511FDEB9C004828C5 /* LRMocky.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMocky.h; sourceTree = "<group>"; };
-		A3464D6F11F241560080B46B /* MiniTestRunner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MiniTestRunner-Info.plist"; sourceTree = "<group>"; };
-		A3464DCB11F242B00080B46B /* MiniTestBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MiniTestBundle-Info.plist"; sourceTree = "<group>"; };
+		A301768811FDEEFC004828C5 /* LRExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectation.h; sourceTree = "<group>"; };
+		A301768911FDEEFC004828C5 /* LRExpectationAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectationAction.h; sourceTree = "<group>"; };
+		A301768A11FDEEFC004828C5 /* LRExpectationBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectationBuilder.h; sourceTree = "<group>"; };
+		A301768B11FDEEFC004828C5 /* LRExpectationBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRExpectationBuilder.m; sourceTree = "<group>"; };
+		A301768C11FDEEFC004828C5 /* LRImposter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRImposter.h; sourceTree = "<group>"; };
+		A301768D11FDEEFC004828C5 /* LRImposter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRImposter.m; sourceTree = "<group>"; };
+		A301768E11FDEEFC004828C5 /* LRInvocationExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRInvocationExpectation.h; sourceTree = "<group>"; };
+		A301768F11FDEEFC004828C5 /* LRInvocationExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRInvocationExpectation.m; sourceTree = "<group>"; };
+		A301769011FDEEFC004828C5 /* LRMockery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMockery.h; sourceTree = "<group>"; };
+		A301769111FDEEFC004828C5 /* LRMockery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMockery.m; sourceTree = "<group>"; };
+		A301769211FDEEFC004828C5 /* LRMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMockObject.h; sourceTree = "<group>"; };
+		A301769311FDEEFC004828C5 /* LRMockObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMockObject.m; sourceTree = "<group>"; };
+		A301769411FDEEFC004828C5 /* LRPerformBlockAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRPerformBlockAction.h; sourceTree = "<group>"; };
+		A301769511FDEEFC004828C5 /* LRPerformBlockAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRPerformBlockAction.m; sourceTree = "<group>"; };
+		A301769611FDEEFC004828C5 /* LRReturnObjectAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRReturnObjectAction.h; sourceTree = "<group>"; };
+		A301769711FDEEFC004828C5 /* LRReturnObjectAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRReturnObjectAction.m; sourceTree = "<group>"; };
+		A301769811FDEEFC004828C5 /* LRTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTestCase.h; sourceTree = "<group>"; };
+		A301769911FDEEFC004828C5 /* LRTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRTestCase.m; sourceTree = "<group>"; };
+		A301769A11FDEEFC004828C5 /* LRUnexpectedInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRUnexpectedInvocation.h; sourceTree = "<group>"; };
+		A301769B11FDEEFC004828C5 /* LRUnexpectedInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRUnexpectedInvocation.m; sourceTree = "<group>"; };
 		A3464E7E11F279020080B46B /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3464E7F11F279020080B46B /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		A3464E8C11F2794A0080B46B /* SimpleExpectationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleExpectationTests.m; sourceTree = "<group>"; };
-		A3464F0811F27F3B0080B46B /* LRMockery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMockery.h; sourceTree = "<group>"; };
-		A3464F0911F27F3B0080B46B /* LRMockery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMockery.m; sourceTree = "<group>"; };
-		A3464F7D11F288980080B46B /* LRExpectationBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectationBuilder.h; sourceTree = "<group>"; };
-		A3464F7E11F288980080B46B /* LRExpectationBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRExpectationBuilder.m; sourceTree = "<group>"; };
-		A3464FEF11F292660080B46B /* LRInvocationExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRInvocationExpectation.h; sourceTree = "<group>"; };
-		A3464FF011F292660080B46B /* LRInvocationExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRInvocationExpectation.m; sourceTree = "<group>"; };
 		A346500011F2937D0080B46B /* TestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHelper.h; sourceTree = "<group>"; };
 		A346500111F2937D0080B46B /* TestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHelper.m; sourceTree = "<group>"; };
-		A346505C11F299E60080B46B /* LRMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMockObject.h; sourceTree = "<group>"; };
-		A346505D11F299E60080B46B /* LRMockObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMockObject.m; sourceTree = "<group>"; };
-		A346508911F8528F0080B46B /* LRExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectation.h; sourceTree = "<group>"; };
-		A346508E11F8534C0080B46B /* LRTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTestCase.h; sourceTree = "<group>"; };
-		A346508F11F8534C0080B46B /* LRTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRTestCase.m; sourceTree = "<group>"; };
 		A34650D311F857680080B46B /* LRMockeryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMockeryTest.m; sourceTree = "<group>"; };
-		A346515311F861DA0080B46B /* LRImposter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRImposter.h; sourceTree = "<group>"; };
-		A346515411F861DA0080B46B /* LRImposter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRImposter.m; sourceTree = "<group>"; };
-		A3C0426011FDE29300C8329C /* LRExpectationAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectationAction.h; sourceTree = "<group>"; };
-		A3C707F011FDDF92000D2A8C /* LRUnexpectedInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRUnexpectedInvocation.h; sourceTree = "<group>"; };
-		A3C707F111FDDF92000D2A8C /* LRUnexpectedInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRUnexpectedInvocation.m; sourceTree = "<group>"; };
 		A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpectationActionsTest.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* Mocky_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mocky_Prefix.pch; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -120,8 +118,6 @@
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
-				A3464D6F11F241560080B46B /* MiniTestRunner-Info.plist */,
-				A3464DCB11F242B00080B46B /* MiniTestBundle-Info.plist */,
 				A3464E7F11F279020080B46B /* Tests-Info.plist */,
 			);
 			name = LRMiniTestKit;
@@ -138,8 +134,8 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A301768711FDEEFC004828C5 /* LRMocky */,
 				A301767511FDEB9C004828C5 /* LRMocky.h */,
-				A3464D1211F23CBF0080B46B /* Mocky */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -152,40 +148,39 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
-		A301761D11FDE32D004828C5 /* Actions */ = {
+		A301768711FDEEFC004828C5 /* LRMocky */ = {
 			isa = PBXGroup;
 			children = (
-				A3C0426011FDE29300C8329C /* LRExpectationAction.h */,
-				A301761E11FDE34B004828C5 /* LRReturnObjectAction.h */,
-				A301761F11FDE34B004828C5 /* LRReturnObjectAction.m */,
-				A301765E11FDE97A004828C5 /* LRPerformBlockAction.h */,
-				A301765F11FDE97A004828C5 /* LRPerformBlockAction.m */,
+				A30176B011FDEF01004828C5 /* Actions */,
+				A301768811FDEEFC004828C5 /* LRExpectation.h */,
+				A301768A11FDEEFC004828C5 /* LRExpectationBuilder.h */,
+				A301768B11FDEEFC004828C5 /* LRExpectationBuilder.m */,
+				A301768C11FDEEFC004828C5 /* LRImposter.h */,
+				A301768D11FDEEFC004828C5 /* LRImposter.m */,
+				A301768E11FDEEFC004828C5 /* LRInvocationExpectation.h */,
+				A301768F11FDEEFC004828C5 /* LRInvocationExpectation.m */,
+				A301769011FDEEFC004828C5 /* LRMockery.h */,
+				A301769111FDEEFC004828C5 /* LRMockery.m */,
+				A301769211FDEEFC004828C5 /* LRMockObject.h */,
+				A301769311FDEEFC004828C5 /* LRMockObject.m */,
+				A301769811FDEEFC004828C5 /* LRTestCase.h */,
+				A301769911FDEEFC004828C5 /* LRTestCase.m */,
+				A301769A11FDEEFC004828C5 /* LRUnexpectedInvocation.h */,
+				A301769B11FDEEFC004828C5 /* LRUnexpectedInvocation.m */,
 			);
-			name = Actions;
+			path = LRMocky;
 			sourceTree = "<group>";
 		};
-		A3464D1211F23CBF0080B46B /* Mocky */ = {
+		A30176B011FDEF01004828C5 /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				A301761D11FDE32D004828C5 /* Actions */,
-				A3C707F011FDDF92000D2A8C /* LRUnexpectedInvocation.h */,
-				A3C707F111FDDF92000D2A8C /* LRUnexpectedInvocation.m */,
-				A3464F0811F27F3B0080B46B /* LRMockery.h */,
-				A3464F0911F27F3B0080B46B /* LRMockery.m */,
-				A3464F7D11F288980080B46B /* LRExpectationBuilder.h */,
-				A3464F7E11F288980080B46B /* LRExpectationBuilder.m */,
-				A3464FEF11F292660080B46B /* LRInvocationExpectation.h */,
-				A3464FF011F292660080B46B /* LRInvocationExpectation.m */,
-				A346505C11F299E60080B46B /* LRMockObject.h */,
-				A346505D11F299E60080B46B /* LRMockObject.m */,
-				A346508911F8528F0080B46B /* LRExpectation.h */,
-				A346508E11F8534C0080B46B /* LRTestCase.h */,
-				A346508F11F8534C0080B46B /* LRTestCase.m */,
-				A346515311F861DA0080B46B /* LRImposter.h */,
-				A346515411F861DA0080B46B /* LRImposter.m */,
+				A301768911FDEEFC004828C5 /* LRExpectationAction.h */,
+				A301769411FDEEFC004828C5 /* LRPerformBlockAction.h */,
+				A301769511FDEEFC004828C5 /* LRPerformBlockAction.m */,
+				A301769611FDEEFC004828C5 /* LRReturnObjectAction.h */,
+				A301769711FDEEFC004828C5 /* LRReturnObjectAction.m */,
 			);
-			name = Mocky;
-			path = LRMiniTestKit;
+			name = Actions;
 			sourceTree = "<group>";
 		};
 		A3464D1311F23CC90080B46B /* Tests */ = {
@@ -232,17 +227,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A301767E11FDEC22004828C5 /* LRMocky.h in Headers */,
-				A301767D11FDEC1F004828C5 /* LRMockery.h in Headers */,
-				A301768111FDEC33004828C5 /* LRMockObject.h in Headers */,
-				A301768011FDEC2C004828C5 /* LRInvocationExpectation.h in Headers */,
-				A301767F11FDEC24004828C5 /* LRExpectationBuilder.h in Headers */,
-				A301767A11FDEC19004828C5 /* LRPerformBlockAction.h in Headers */,
-				A301767B11FDEC1A004828C5 /* LRReturnObjectAction.h in Headers */,
-				A301767C11FDEC1C004828C5 /* LRExpectationAction.h in Headers */,
-				A3C707F211FDDF92000D2A8C /* LRUnexpectedInvocation.h in Headers */,
-				A301768211FDEC40004828C5 /* LRTestCase.h in Headers */,
-				A301768311FDEC45004828C5 /* LRImposter.h in Headers */,
 				AA747D9F0F9514B9006C5449 /* Mocky_Prefix.pch in Headers */,
+				A301769C11FDEEFC004828C5 /* LRExpectation.h in Headers */,
+				A301769D11FDEEFC004828C5 /* LRExpectationAction.h in Headers */,
+				A301769E11FDEEFC004828C5 /* LRExpectationBuilder.h in Headers */,
+				A30176A011FDEEFC004828C5 /* LRImposter.h in Headers */,
+				A30176A211FDEEFC004828C5 /* LRInvocationExpectation.h in Headers */,
+				A30176A411FDEEFC004828C5 /* LRMockery.h in Headers */,
+				A30176A611FDEEFC004828C5 /* LRMockObject.h in Headers */,
+				A30176A811FDEEFC004828C5 /* LRPerformBlockAction.h in Headers */,
+				A30176AA11FDEEFC004828C5 /* LRReturnObjectAction.h in Headers */,
+				A30176AC11FDEEFC004828C5 /* LRTestCase.h in Headers */,
+				A30176AE11FDEEFC004828C5 /* LRUnexpectedInvocation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,8 +340,6 @@
 				A346500211F2937D0080B46B /* TestHelper.m in Sources */,
 				A34650D411F857680080B46B /* LRMockeryTest.m in Sources */,
 				A3C707F811FDDFE0000D2A8C /* ExpectationActionsTest.m in Sources */,
-				A301762011FDE34B004828C5 /* LRReturnObjectAction.m in Sources */,
-				A301766011FDE97A004828C5 /* LRPerformBlockAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,14 +347,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A301763111FDE548004828C5 /* LRReturnObjectAction.m in Sources */,
-				A3C707E911FDDF71000D2A8C /* LRExpectationBuilder.m in Sources */,
-				A3C707EA11FDDF71000D2A8C /* LRInvocationExpectation.m in Sources */,
-				A3C707EB11FDDF71000D2A8C /* LRMockObject.m in Sources */,
-				A3C707EC11FDDF71000D2A8C /* LRTestCase.m in Sources */,
-				A3C707ED11FDDF71000D2A8C /* LRImposter.m in Sources */,
-				A3464F0F11F27F940080B46B /* LRMockery.m in Sources */,
-				A3C707F311FDDF92000D2A8C /* LRUnexpectedInvocation.m in Sources */,
+				A301769F11FDEEFC004828C5 /* LRExpectationBuilder.m in Sources */,
+				A30176A111FDEEFC004828C5 /* LRImposter.m in Sources */,
+				A30176A311FDEEFC004828C5 /* LRInvocationExpectation.m in Sources */,
+				A30176A511FDEEFC004828C5 /* LRMockery.m in Sources */,
+				A30176A711FDEEFC004828C5 /* LRMockObject.m in Sources */,
+				A30176A911FDEEFC004828C5 /* LRPerformBlockAction.m in Sources */,
+				A30176AB11FDEEFC004828C5 /* LRReturnObjectAction.m in Sources */,
+				A30176AD11FDEEFC004828C5 /* LRTestCase.m in Sources */,
+				A30176AF11FDEEFC004828C5 /* LRUnexpectedInvocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
