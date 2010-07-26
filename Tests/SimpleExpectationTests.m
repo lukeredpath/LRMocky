@@ -8,6 +8,7 @@
 
 #import "TestHelper.h"
 #import "LRMocky.h"
+#import "LRMockySugar.h"
 
 @interface SimpleExpectationTests : SenTestCase
 {
@@ -28,8 +29,8 @@
 {
   SimpleObject *testObject = [context mock:[SimpleObject class]];
   
-  [context checking:^(LRExpectationBuilder *that){
-    [[that oneOf:testObject] doSomething];
+  [context checking:^(LRExpectationBuilder *builder){
+    [oneOf(testObject) doSomething];
   }];
   
   [testObject doSomething];
@@ -42,8 +43,8 @@
 {
   SimpleObject *testObject = [context mock:[SimpleObject class]];
   
-  [context checking:^(LRExpectationBuilder *that){
-    [[that oneOf:testObject] doSomething];
+  [context checking:^(LRExpectationBuilder *builder){
+    [oneOf(testObject) doSomething];
   }];
   
   [context assertSatisfied];
@@ -65,8 +66,8 @@
 {
   SimpleObject *testObject = [context mock:[SimpleObject class]];
   
-  [context checking:^(LRExpectationBuilder *that){
-    [[that allowing:testObject] doSomething];
+  [context checking:^(LRExpectationBuilder *builder){
+    [allowing(testObject) doSomething];
   }];
   
   [testObject doSomething];
@@ -79,8 +80,8 @@
 {
   SimpleObject *testObject = [context mock:[SimpleObject class]];
   
-  [context checking:^(LRExpectationBuilder *that){
-    [[that allowing:testObject] doSomething];
+  [context checking:^(LRExpectationBuilder *builder){
+    [allowing(testObject) doSomething];
   }];
   
   [context assertSatisfied];

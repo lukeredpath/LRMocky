@@ -227,6 +227,7 @@
 		A30177E211FE01DF004828C5 /* HCSubstringMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSubstringMatcher.h; sourceTree = "<group>"; };
 		A30177E311FE01DF004828C5 /* HCSubstringMatcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCSubstringMatcher.mm; sourceTree = "<group>"; };
 		A30177E411FE01DF004828C5 /* OCHamcrest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCHamcrest.h; sourceTree = "<group>"; };
+		A30178A411FE48BC004828C5 /* LRMockySugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMockySugar.h; sourceTree = "<group>"; };
 		A3464E7E11F279020080B46B /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3464E7F11F279020080B46B /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		A3464E8C11F2794A0080B46B /* SimpleExpectationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleExpectationTests.m; sourceTree = "<group>"; };
@@ -322,6 +323,7 @@
 				A301769311FDEEFC004828C5 /* LRMockObject.m */,
 				A301769811FDEEFC004828C5 /* LRTestCase.h */,
 				A301769911FDEEFC004828C5 /* LRTestCase.m */,
+				A30178A411FE48BC004828C5 /* LRMockySugar.h */,
 			);
 			path = LRMocky;
 			sourceTree = "<group>";

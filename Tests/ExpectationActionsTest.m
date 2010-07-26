@@ -9,6 +9,7 @@
 #define LRMOCKY_SHORTHAND
 #import "TestHelper.h"
 #import "LRMocky.h"
+#import "LRMockySugar.h"
 
 @interface ExpectationActionsTest : SenTestCase 
 {
@@ -31,8 +32,8 @@
   
   NSString *expectedObject = @"some string";
   
-  [context checking:^(LRExpectationBuilder *that){
-    [[that oneOf:testObject] returnSomething]; [that will:returnObject(expectedObject)];
+  [context checking:^(LRExpectationBuilder *builder){
+    [oneOf(testObject) returnSomething]; [it will:returnObject(expectedObject)];
   }];
   
   assertThat([testObject returnSomething], equalTo(expectedObject));
@@ -44,8 +45,8 @@
   
   NSString *expectedObject = @"some string";
   
-  [context checking:^(LRExpectationBuilder *that){
-    [[that allowing:testObject] returnSomething]; [that will:returnObject(expectedObject)];
+  [context checking:^(LRExpectationBuilder *builder){
+    [allowing(testObject) returnSomething]; [it will:returnObject(expectedObject)];
   }];
   
   assertThat([testObject returnSomething], equalTo(expectedObject));
@@ -57,8 +58,8 @@
   
   NSMutableArray *someArray = [NSMutableArray array];
   
-  [context checking:^(LRExpectationBuilder *that){
-    [[that oneOf:testObject] doSomething]; [that will:performBlock(^(NSInvocation *invocation) {
+  [context checking:^(LRExpectationBuilder *builder){
+    [oneOf(testObject) doSomething]; [it will:performBlock(^(NSInvocation *invocation) {
       [someArray addObject: NSStringFromSelector([invocation selector])];
     })];
   }];
@@ -74,8 +75,8 @@
   
   NSMutableArray *someArray = [NSMutableArray array];
   
-  [context checking:^(LRExpectationBuilder *that){
-    [[that allowing:testObject] doSomething]; [that will:performBlock(^(NSInvocation *invocation) {
+  [context checking:^(LRExpectationBuilder *builder){
+    [oneOf(testObject) doSomething]; [it will:performBlock(^(NSInvocation *invocation) {
       [someArray addObject: NSStringFromSelector([invocation selector])];
     })];
   }];
