@@ -18,5 +18,5 @@
 }
 + (id)builderInContext:(LRMockery *)context;
 - (id)initWithMockery:(LRMockery *)aMockery;
-- (id)expect:(id)mockObject;
+- (id)oneOf:(id)mockObject;
 @end

@@ -39,8 +39,8 @@
 {
   SimpleObject *testObject = [context mock:[SimpleObject class]];
   
-  [context checking:^(LRExpectationBuilder *will){
-    [[will expect:testObject] doSomething];
+  [context checking:^(LRExpectationBuilder *that){
+    [[that oneOf:testObject] doSomething];
   }];
   
   [testObject doSomething];
@@ -54,8 +54,8 @@
 {
   SimpleObject *testObject = [context mock:[SimpleObject class]];
   
-  [context checking:^(LRExpectationBuilder *will){
-    [[will expect:testObject] doSomething];
+  [context checking:^(LRExpectationBuilder *that){
+    [[that oneOf:testObject] doSomething];
   }];
   
   [context assertSatisfied];

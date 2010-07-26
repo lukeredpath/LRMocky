@@ -37,7 +37,7 @@
   [super dealloc];
 }
 
-- (id)expect:(id)mockObject;
+- (id)oneOf:(id)mockObject;
 {
   mockedClass = [(LRMockObject *)mockObject mockedClass];
   return self;
