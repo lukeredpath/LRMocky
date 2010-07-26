@@ -7,9 +7,7 @@
 //
 
 #import "TestHelper.h"
-#import "LRMockery.h"
-#import "LRTestCase.h"
-#import "LRExpectationBuilder.h"
+#import "LRMocky.h"
 
 @interface SimpleExpectationTests : SenTestCase
 {

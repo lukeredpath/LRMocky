@@ -8,10 +8,7 @@
 
 #define LRMOCKY_SHORTHAND
 #import "TestHelper.h"
-#import "LRMockery.h"
-#import "LRExpectationBuilder.h"
-#import "LRReturnObjectAction.h"
-#import "LRPerformBlockAction.h"
+#import "LRMocky.h"
 
 @interface ExpectationActionsTest : SenTestCase 
 {

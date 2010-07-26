@@ -42,6 +42,7 @@
 		A301761F11FDE34B004828C5 /* LRReturnObjectAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRReturnObjectAction.m; sourceTree = "<group>"; };
 		A301765E11FDE97A004828C5 /* LRPerformBlockAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRPerformBlockAction.h; sourceTree = "<group>"; };
 		A301765F11FDE97A004828C5 /* LRPerformBlockAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRPerformBlockAction.m; sourceTree = "<group>"; };
+		A301767511FDEB9C004828C5 /* LRMocky.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMocky.h; sourceTree = "<group>"; };
 		A3464D6F11F241560080B46B /* MiniTestRunner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MiniTestRunner-Info.plist"; sourceTree = "<group>"; };
 		A3464DCB11F242B00080B46B /* MiniTestBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MiniTestBundle-Info.plist"; sourceTree = "<group>"; };
 		A3464E7E11F279020080B46B /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +128,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A301767511FDEB9C004828C5 /* LRMocky.h */,
 				A3464D1211F23CBF0080B46B /* Mocky */,
 			);
 			path = Classes;
