@@ -48,4 +48,7 @@
   return [NSException exceptionWithName:@"UnexpectedInvocation" reason:@"Unexpected invocation" userInfo:nil];
 }
 
+- (void)addAction:(id<LRExpectationAction>)action
+{}
+
 @end

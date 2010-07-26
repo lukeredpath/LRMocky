@@ -21,12 +21,14 @@
   if (self = [super init]) {
     expectedInvocation = [anInvocation retain];
     numberOfInvocations = 0;
+    actions = [[NSMutableArray alloc] init];
   }
   return self;
 }
 
 - (void)dealloc;
 {
+  [actions release];
   [expectedInvocation release];
   [super dealloc];
 }
@@ -42,6 +44,10 @@
 - (void)invoke:(NSInvocation *)invocation
 {
   numberOfInvocations++;
+  
+  for (id<LRExpectationAction> action in actions) {
+    [action invoke:invocation];
+  }
 }
 
 - (BOOL)isSatisfied;
@@ -52,6 +58,11 @@
 - (NSException *)failureException;
 {
   return [NSException exceptionWithName:@"test failure" reason:@"just testing" userInfo:nil];
+}
+
+- (void)addAction:(id<LRExpectationAction>)anAction;
+{
+  [actions addObject:anAction];
 }
 
 @end

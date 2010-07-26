@@ -11,7 +11,13 @@
 #import "LRMockery.h"
 #import "LRInvocationExpectation.h"
 
+@interface LRExpectationBuilder ()
+@property (nonatomic, retain) id<LRExpectation> currentExpecation;
+@end
+
 @implementation LRExpectationBuilder
+
+@synthesize currentExpecation;
 
 + (id)builderInContext:(LRMockery *)context;
 {
@@ -45,7 +51,14 @@
 
 - (void)forwardInvocation:(NSInvocation *)invocation
 {
-  [mockery addExpectation:[LRInvocationExpectation expectationWithInvocation:invocation]];
+  self.currentExpecation = [LRInvocationExpectation expectationWithInvocation:invocation];
+  [mockery addExpectation:self.currentExpecation];
+}
+
+- (id)will:(id<LRExpectationAction>)action;
+{
+  [self.currentExpecation addAction:action];
+  return self;
 }
 
 @end

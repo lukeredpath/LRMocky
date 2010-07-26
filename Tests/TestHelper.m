@@ -47,3 +47,8 @@
 }
 
 @end
+
+@implementation SimpleObject; 
+- (void)doSomething {}
+- (id)returnSomething { return nil; }
+@end

@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LRExpectationAction.h"
 
 @protocol LRExpectation <NSObject>
 - (BOOL)matches:(NSInvocation *)invocation;
 - (void)invoke:(NSInvocation *)invocation;
 - (BOOL)isSatisfied;
 - (NSException *)failureException;
+- (void)addAction:(id<LRExpectationAction>)action;
 @end

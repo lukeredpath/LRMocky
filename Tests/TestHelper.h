@@ -20,3 +20,9 @@
 }
 - (NSUInteger)numberOfFailures;
 @end
+
+@interface SimpleObject : NSObject
+{}
+- (void)doSomething;
+- (id)returnSomething;
+@end

@@ -11,15 +11,6 @@
 #import "LRTestCase.h"
 #import "LRExpectationBuilder.h"
 
-@interface SimpleObject : NSObject
-{}
-- (void)doSomething;
-@end
-
-@implementation SimpleObject; 
-- (void)doSomething {}
-@end
-
 @interface SimpleExpectationTests : SenTestCase
 {
   LRMockery *context;
@@ -32,7 +23,7 @@
 - (void)setUp;
 {
   testCase = [MockTestCase new];
-  context = [LRMockery mockeryForTestCase:testCase];
+  context = [[LRMockery mockeryForTestCase:testCase] retain];
 }
 
 - (void)testCanExpectSingleMethodCallAndPass;
