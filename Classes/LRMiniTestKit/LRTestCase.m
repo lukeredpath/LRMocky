@@ -7,7 +7,10 @@
 //
 
 #import "LRTestCase.h"
-#import <SenTestingKit/SenTestingKit.h>
+
+@interface SenTestCase : NSObject
+- (void)failWithException:(NSException *)exception;
+@end
 
 @implementation LRSenTestCaseAdapter
 
