@@ -12,7 +12,7 @@
 @interface SimpleExpectationTests : SenTestCase
 {
   LRMockery *context;
-  MockTestCase *testCase;
+  FakeTestCase *testCase;
 }
 @end
 
@@ -20,7 +20,7 @@
 
 - (void)setUp;
 {
-  testCase = [MockTestCase new];
+  testCase = [FakeTestCase new];
   context = [[LRMockery mockeryForTestCase:testCase] retain];
 }
 

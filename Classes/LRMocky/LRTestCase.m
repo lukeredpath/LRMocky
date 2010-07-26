@@ -12,9 +12,9 @@
 - (void)failWithException:(NSException *)exception;
 @end
 
-@implementation LRSenTestCaseAdapter
+@implementation LRSenTestCaseNotifier
 
-+ (id)adapt:(SenTestCase *)aTestCase;
++ (id)notifierForTestCase:(SenTestCase *)aTestCase;
 {
   return [[[self alloc] initWithSenTestCase:aTestCase] autorelease];
 }
@@ -33,7 +33,7 @@
   [super dealloc];
 }
 
-- (void)failWithException:(NSException *)exception;
+- (void)notifiesFailureWithException:(NSException *)exception;
 {
   [testCase failWithException:exception];
 }

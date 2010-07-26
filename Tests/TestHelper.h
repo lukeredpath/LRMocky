@@ -16,7 +16,7 @@
 + (NSInvocation *)invocationForSelector:(SEL)selector onClass:(Class)aClass;
 @end
 
-@interface MockTestCase : NSObject <LRTestCase>
+@interface FakeTestCase : NSObject
 {
   NSMutableArray *failures;
 }

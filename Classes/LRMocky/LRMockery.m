@@ -13,20 +13,22 @@
 
 @implementation LRMockery
 
++ (id)mockeryForTestCase:(id)testCase;
+{
+  // support SenTestCase out of the box
+  return [self mockeryForSenTestCase:(SenTestCase *)testCase];
+}
+
 + (id)mockeryForSenTestCase:(SenTestCase *)testCase;
 {
-  return [self mockeryForTestCase:[LRSenTestCaseAdapter adapt:testCase]];
+  LRSenTestCaseNotifier *notifier = [LRSenTestCaseNotifier notifierForTestCase:testCase];
+  return [[[self alloc] initWithNotifier:notifier] autorelease];
 }
 
-+ (id)mockeryForTestCase:(id<LRTestCase>)testCase;
-{
-  return [[[self alloc] initWithTestCase:testCase] autorelease];
-}
-
-- (id)initWithTestCase:(id<LRTestCase>)aTestCase;
+- (id)initWithNotifier:(id<LRTestCaseNotifier>)aNotifier;
 {
   if (self = [super init]) {
-    testCase = [aTestCase retain];
+    testNotifier = [aNotifier retain];
     expectations = [[NSMutableArray alloc] init];
   }
   return self;
@@ -34,7 +36,7 @@
 
 - (void)dealloc;
 {
-  [testCase release];
+  [testNotifier release];
   [expectations release];
   [super dealloc];
 }
@@ -53,7 +55,7 @@
 {
   for (id<LRExpectation> expectation in expectations) {
     if ([expectation isSatisfied] == NO) {
-      [testCase failWithException:[expectation failureException]];
+      [testNotifier notifiesFailureWithException:[expectation failureException]];
     }
   }
 }

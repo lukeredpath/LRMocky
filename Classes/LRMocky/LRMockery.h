@@ -15,11 +15,11 @@
 
 @interface LRMockery : NSObject {
   NSMutableArray *expectations;
-  id<LRTestCase> testCase;
+  id<LRTestCaseNotifier> testNotifier;
 }
++ (id)mockeryForTestCase:(id)testCase;
 + (id)mockeryForSenTestCase:(SenTestCase *)testCase;
-+ (id)mockeryForTestCase:(id<LRTestCase>)testCase;
-- (id)initWithTestCase:(id<LRTestCase>)aTestCase;
+- (id)initWithNotifier:(id<LRTestCaseNotifier>)aNotifier;
 - (id)mock:(Class)klass;
 - (void)checking:(void (^)(LRExpectationBuilder *will))expectationBlock;
 - (void)addExpectation:(id<LRExpectation>)expectation;

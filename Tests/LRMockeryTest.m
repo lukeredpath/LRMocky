@@ -75,7 +75,7 @@
 
 @interface LRMockeryTest : SenTestCase 
 {
-  MockTestCase *testCase;
+  FakeTestCase *testCase;
   LRMockery *mockery;
 }
 @end
@@ -84,14 +84,14 @@
 
 - (void)setUp;
 {
-  testCase = [[MockTestCase alloc] init];
-  mockery = [[LRMockery alloc] initWithTestCase:testCase];
+  testCase = [[FakeTestCase alloc] init];
+  mockery = [[LRMockery mockeryForTestCase:testCase] retain];
 }
 
 #pragma mark -
 #pragma mark LRMockery tests
 
-- (void)testTriggersNoTestFailuresWhenAllExpectationsPass;
+- (void)testNotifiesNoFailuresWhenAllExpectationsPass;
 {
   [mockery addExpectation:[[PassingExpectation new] autorelease]];
   [mockery assertSatisfied];
@@ -99,7 +99,7 @@
   assertThat(testCase, passed());
 }
 
-- (void)testTriggersTestFailureForFailingExpectation;
+- (void)testNotifiesFailureForFailingExpectation;
 {
   [mockery addExpectation:[[FailingExpectation new] autorelease]];
   [mockery assertSatisfied];

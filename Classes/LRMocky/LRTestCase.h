@@ -8,18 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol LRTestCase <NSObject>
-
-- (void)failWithException:(NSException *)exception;
-
+@protocol LRTestCaseNotifier <NSObject>
+- (void)notifiesFailureWithException:(NSException *)exception;
 @end
 
 @class SenTestCase;
 
-@interface LRSenTestCaseAdapter : NSObject <LRTestCase>
+@interface LRSenTestCaseNotifier : NSObject <LRTestCaseNotifier>
 {
   SenTestCase *testCase;
 }
-+ (id)adapt:(SenTestCase *)aTestCase;
++ (id)notifierForTestCase:(SenTestCase *)aTestCase;
 - (id)initWithSenTestCase:(SenTestCase *)aTestCase;
 @end

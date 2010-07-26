@@ -20,7 +20,7 @@
 
 @end
 
-@implementation MockTestCase
+@implementation FakeTestCase
 
 - (id)init
 {
@@ -36,9 +36,9 @@
   [super dealloc];
 }
 
-- (void)failWithException:(NSException *)anException;
+- (void)failWithException:(NSException *)exception
 {
-  [failures addObject:anException];
+  [failures addObject:exception];
 }
 
 - (NSUInteger)numberOfFailures;
@@ -68,14 +68,14 @@
 id<HCMatcher> passed()
 {
   id<HCMatcher> valueMatcher = [HCIsEqual isEqualTo:[NSNumber numberWithInt:0]];
-  NSInvocation *invocation   = [HCInvocationMatcher createInvocationForSelector:@selector(numberOfFailuresAsNumber) onClass:[MockTestCase class]];
+  NSInvocation *invocation   = [HCInvocationMatcher createInvocationForSelector:@selector(numberOfFailuresAsNumber) onClass:[FakeTestCase class]];
   return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:valueMatcher] autorelease];
 }
 
 id<HCMatcher> failedWithNumberOfFailures(int numberOfFailures)
 {
   id<HCMatcher> valueMatcher = [HCIsEqual isEqualTo:[NSNumber numberWithInt:numberOfFailures]];
-  NSInvocation *invocation   = [HCInvocationMatcher createInvocationForSelector:@selector(numberOfFailuresAsNumber) onClass:[MockTestCase class]];
+  NSInvocation *invocation   = [HCInvocationMatcher createInvocationForSelector:@selector(numberOfFailuresAsNumber) onClass:[FakeTestCase class]];
   return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:valueMatcher] autorelease];
 }
 
