@@ -10,6 +10,16 @@
 		A301762011FDE34B004828C5 /* LRReturnObjectAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A301761F11FDE34B004828C5 /* LRReturnObjectAction.m */; };
 		A301763111FDE548004828C5 /* LRReturnObjectAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A301761F11FDE34B004828C5 /* LRReturnObjectAction.m */; };
 		A301766011FDE97A004828C5 /* LRPerformBlockAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A301765F11FDE97A004828C5 /* LRPerformBlockAction.m */; };
+		A301767A11FDEC19004828C5 /* LRPerformBlockAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A301765E11FDE97A004828C5 /* LRPerformBlockAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A301767B11FDEC1A004828C5 /* LRReturnObjectAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A301761E11FDE34B004828C5 /* LRReturnObjectAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A301767C11FDEC1C004828C5 /* LRExpectationAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A3C0426011FDE29300C8329C /* LRExpectationAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A301767D11FDEC1F004828C5 /* LRMockery.h in Headers */ = {isa = PBXBuildFile; fileRef = A3464F0811F27F3B0080B46B /* LRMockery.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A301767E11FDEC22004828C5 /* LRMocky.h in Headers */ = {isa = PBXBuildFile; fileRef = A301767511FDEB9C004828C5 /* LRMocky.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A301767F11FDEC24004828C5 /* LRExpectationBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = A3464F7D11F288980080B46B /* LRExpectationBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A301768011FDEC2C004828C5 /* LRInvocationExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = A3464FEF11F292660080B46B /* LRInvocationExpectation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A301768111FDEC33004828C5 /* LRMockObject.h in Headers */ = {isa = PBXBuildFile; fileRef = A346505C11F299E60080B46B /* LRMockObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A301768211FDEC40004828C5 /* LRTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = A346508E11F8534C0080B46B /* LRTestCase.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		A301768311FDEC45004828C5 /* LRImposter.h in Headers */ = {isa = PBXBuildFile; fileRef = A346515311F861DA0080B46B /* LRImposter.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		A3464E8911F279270080B46B /* libMocky.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libMocky.a */; };
 		A3464E8D11F2794A0080B46B /* SimpleExpectationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3464E8C11F2794A0080B46B /* SimpleExpectationTests.m */; };
 		A3464F0F11F27F940080B46B /* LRMockery.m in Sources */ = {isa = PBXBuildFile; fileRef = A3464F0911F27F3B0080B46B /* LRMockery.m */; };
@@ -20,7 +30,7 @@
 		A3C707EB11FDDF71000D2A8C /* LRMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A346505D11F299E60080B46B /* LRMockObject.m */; };
 		A3C707EC11FDDF71000D2A8C /* LRTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A346508F11F8534C0080B46B /* LRTestCase.m */; };
 		A3C707ED11FDDF71000D2A8C /* LRImposter.m in Sources */ = {isa = PBXBuildFile; fileRef = A346515411F861DA0080B46B /* LRImposter.m */; };
-		A3C707F211FDDF92000D2A8C /* LRUnexpectedInvocation.h in Headers */ = {isa = PBXBuildFile; fileRef = A3C707F011FDDF92000D2A8C /* LRUnexpectedInvocation.h */; };
+		A3C707F211FDDF92000D2A8C /* LRUnexpectedInvocation.h in Headers */ = {isa = PBXBuildFile; fileRef = A3C707F011FDDF92000D2A8C /* LRUnexpectedInvocation.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		A3C707F311FDDF92000D2A8C /* LRUnexpectedInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C707F111FDDF92000D2A8C /* LRUnexpectedInvocation.m */; };
 		A3C707F811FDDFE0000D2A8C /* ExpectationActionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */; };
 		AA747D9F0F9514B9006C5449 /* Mocky_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* Mocky_Prefix.pch */; };
@@ -221,8 +231,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA747D9F0F9514B9006C5449 /* Mocky_Prefix.pch in Headers */,
+				A301767E11FDEC22004828C5 /* LRMocky.h in Headers */,
+				A301767D11FDEC1F004828C5 /* LRMockery.h in Headers */,
+				A301768111FDEC33004828C5 /* LRMockObject.h in Headers */,
+				A301768011FDEC2C004828C5 /* LRInvocationExpectation.h in Headers */,
+				A301767F11FDEC24004828C5 /* LRExpectationBuilder.h in Headers */,
+				A301767A11FDEC19004828C5 /* LRPerformBlockAction.h in Headers */,
+				A301767B11FDEC1A004828C5 /* LRReturnObjectAction.h in Headers */,
+				A301767C11FDEC1C004828C5 /* LRExpectationAction.h in Headers */,
 				A3C707F211FDDF92000D2A8C /* LRUnexpectedInvocation.h in Headers */,
+				A301768211FDEC40004828C5 /* LRTestCase.h in Headers */,
+				A301768311FDEC45004828C5 /* LRImposter.h in Headers */,
+				AA747D9F0F9514B9006C5449 /* Mocky_Prefix.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
