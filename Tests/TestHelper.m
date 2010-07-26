@@ -46,6 +46,16 @@
   return [failures count];
 }
 
+- (NSNumber *)numberOfFailuresAsNumber;
+{
+  return [NSNumber numberWithInt:[self numberOfFailures]];
+}
+
+- (NSString *)description;
+{
+  return [NSString stringWithFormat:@"MockTestCase with %d failures", [self numberOfFailures]];
+}
+
 @end
 
 @implementation SimpleObject; 
@@ -53,17 +63,19 @@
 - (id)returnSomething { return nil; }
 @end
 
-#pragma mark Custom assertions
+#pragma mark Custom assertions and matchers
 
-void assertThatTestCasePassed(MockTestCase *mockTestCase, SenTestCase *testCase) {
-  id self = testCase;
-  STAssertTrue([mockTestCase numberOfFailures] == 0, 
-               @"expected zero failures, got %d.", [mockTestCase numberOfFailures]);
+id<HCMatcher> passed()
+{
+  id<HCMatcher> valueMatcher = [HCIsEqual isEqualTo:[NSNumber numberWithInt:0]];
+  NSInvocation *invocation   = [HCInvocationMatcher createInvocationForSelector:@selector(numberOfFailuresAsNumber) onClass:[MockTestCase class]];
+  return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:valueMatcher] autorelease];
 }
 
-void assertThatTestCaseFailedWithFailures(MockTestCase * mockTestCase, int numberOfFailures, SenTestCase *testCase) {
-  id self = testCase;
-  STAssertTrue([mockTestCase numberOfFailures] == numberOfFailures, 
-               @"expected %d failure(s), got %d.", numberOfFailures, [mockTestCase numberOfFailures]);
-  
+id<HCMatcher> failedWithNumberOfFailures(int numberOfFailures)
+{
+  id<HCMatcher> valueMatcher = [HCIsEqual isEqualTo:[NSNumber numberWithInt:numberOfFailures]];
+  NSInvocation *invocation   = [HCInvocationMatcher createInvocationForSelector:@selector(numberOfFailuresAsNumber) onClass:[MockTestCase class]];
+  return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:valueMatcher] autorelease];
 }
+

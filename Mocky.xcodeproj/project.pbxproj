@@ -30,6 +30,83 @@
 		A30176AF11FDEEFC004828C5 /* LRUnexpectedInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769B11FDEEFC004828C5 /* LRUnexpectedInvocation.m */; };
 		A30176D211FDFCEE004828C5 /* LRAllowingInvocation.h in Headers */ = {isa = PBXBuildFile; fileRef = A30176D011FDFCEE004828C5 /* LRAllowingInvocation.h */; };
 		A30176D311FDFCEE004828C5 /* LRAllowingInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A30176D111FDFCEE004828C5 /* LRAllowingInvocation.m */; };
+		A30177E511FE01DF004828C5 /* HCAllOf.h in Headers */ = {isa = PBXBuildFile; fileRef = A301779211FE01DF004828C5 /* HCAllOf.h */; };
+		A30177E611FE01DF004828C5 /* HCAllOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = A301779311FE01DF004828C5 /* HCAllOf.mm */; };
+		A30177E711FE01DF004828C5 /* HCAnyOf.h in Headers */ = {isa = PBXBuildFile; fileRef = A301779411FE01DF004828C5 /* HCAnyOf.h */; };
+		A30177E811FE01DF004828C5 /* HCAnyOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = A301779511FE01DF004828C5 /* HCAnyOf.mm */; };
+		A30177E911FE01DF004828C5 /* HCDescribedAs.h in Headers */ = {isa = PBXBuildFile; fileRef = A301779611FE01DF004828C5 /* HCDescribedAs.h */; };
+		A30177EA11FE01DF004828C5 /* HCDescribedAs.mm in Sources */ = {isa = PBXBuildFile; fileRef = A301779711FE01DF004828C5 /* HCDescribedAs.mm */; };
+		A30177EB11FE01DF004828C5 /* HCIs.h in Headers */ = {isa = PBXBuildFile; fileRef = A301779811FE01DF004828C5 /* HCIs.h */; };
+		A30177EC11FE01DF004828C5 /* HCIs.mm in Sources */ = {isa = PBXBuildFile; fileRef = A301779911FE01DF004828C5 /* HCIs.mm */; };
+		A30177ED11FE01DF004828C5 /* HCIsAnything.h in Headers */ = {isa = PBXBuildFile; fileRef = A301779A11FE01DF004828C5 /* HCIsAnything.h */; };
+		A30177EE11FE01DF004828C5 /* HCIsAnything.mm in Sources */ = {isa = PBXBuildFile; fileRef = A301779B11FE01DF004828C5 /* HCIsAnything.mm */; };
+		A30177EF11FE01DF004828C5 /* HCIsEqual.h in Headers */ = {isa = PBXBuildFile; fileRef = A301779C11FE01DF004828C5 /* HCIsEqual.h */; };
+		A30177F011FE01DF004828C5 /* HCIsEqual.mm in Sources */ = {isa = PBXBuildFile; fileRef = A301779D11FE01DF004828C5 /* HCIsEqual.mm */; };
+		A30177F111FE01DF004828C5 /* HCIsInstanceOf.h in Headers */ = {isa = PBXBuildFile; fileRef = A301779E11FE01DF004828C5 /* HCIsInstanceOf.h */; };
+		A30177F211FE01DF004828C5 /* HCIsInstanceOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = A301779F11FE01DF004828C5 /* HCIsInstanceOf.mm */; };
+		A30177F311FE01DF004828C5 /* HCIsNil.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177A011FE01DF004828C5 /* HCIsNil.h */; };
+		A30177F411FE01DF004828C5 /* HCIsNil.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177A111FE01DF004828C5 /* HCIsNil.mm */; };
+		A30177F511FE01DF004828C5 /* HCIsNot.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177A211FE01DF004828C5 /* HCIsNot.h */; };
+		A30177F611FE01DF004828C5 /* HCIsNot.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177A311FE01DF004828C5 /* HCIsNot.mm */; };
+		A30177F711FE01DF004828C5 /* HCIsSame.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177A411FE01DF004828C5 /* HCIsSame.h */; };
+		A30177F811FE01DF004828C5 /* HCIsSame.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177A511FE01DF004828C5 /* HCIsSame.mm */; };
+		A30177F911FE01DF004828C5 /* HCBaseDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177A611FE01DF004828C5 /* HCBaseDescription.h */; };
+		A30177FA11FE01DF004828C5 /* HCBaseDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177A711FE01DF004828C5 /* HCBaseDescription.mm */; };
+		A30177FB11FE01DF004828C5 /* HCBaseMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177A811FE01DF004828C5 /* HCBaseMatcher.h */; };
+		A30177FC11FE01DF004828C5 /* HCBaseMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177A911FE01DF004828C5 /* HCBaseMatcher.mm */; };
+		A30177FD11FE01DF004828C5 /* HCDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177AA11FE01DF004828C5 /* HCDescription.h */; };
+		A30177FE11FE01DF004828C5 /* HCInvocationMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177AB11FE01DF004828C5 /* HCInvocationMatcher.h */; };
+		A30177FF11FE01DF004828C5 /* HCInvocationMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177AC11FE01DF004828C5 /* HCInvocationMatcher.mm */; };
+		A301780011FE01DF004828C5 /* HCMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177AD11FE01DF004828C5 /* HCMatcher.h */; };
+		A301780111FE01DF004828C5 /* HCMatcherAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177AE11FE01DF004828C5 /* HCMatcherAssert.h */; };
+		A301780211FE01DF004828C5 /* HCMatcherAssert.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177AF11FE01DF004828C5 /* HCMatcherAssert.mm */; };
+		A301780311FE01DF004828C5 /* HCSelfDescribing.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177B011FE01DF004828C5 /* HCSelfDescribing.h */; };
+		A301780411FE01DF004828C5 /* HCStringDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177B111FE01DF004828C5 /* HCStringDescription.h */; };
+		A301780511FE01DF004828C5 /* HCStringDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177B211FE01DF004828C5 /* HCStringDescription.mm */; };
+		A301780611FE01DF004828C5 /* HCWrapInMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177B311FE01DF004828C5 /* HCWrapInMatcher.h */; };
+		A301780711FE01DF004828C5 /* HCWrapInMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177B411FE01DF004828C5 /* HCWrapInMatcher.mm */; };
+		A301780811FE01DF004828C5 /* HCCollectMatchers.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177B611FE01DF004828C5 /* HCCollectMatchers.h */; };
+		A301780911FE01DF004828C5 /* HCCollectMatchers.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177B711FE01DF004828C5 /* HCCollectMatchers.mm */; };
+		A301780A11FE01DF004828C5 /* HCIntegerTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177B811FE01DF004828C5 /* HCIntegerTypes.h */; };
+		A301780B11FE01DF004828C5 /* NSObject_HCSelfDescribingValue.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177B911FE01DF004828C5 /* NSObject_HCSelfDescribingValue.h */; };
+		A301780C11FE01DF004828C5 /* NSObject_HCSelfDescribingValue.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177BA11FE01DF004828C5 /* NSObject_HCSelfDescribingValue.mm */; };
+		A301780D11FE01DF004828C5 /* HCIsCollectionContaining.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177BD11FE01DF004828C5 /* HCIsCollectionContaining.h */; };
+		A301780E11FE01DF004828C5 /* HCIsCollectionContaining.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177BE11FE01DF004828C5 /* HCIsCollectionContaining.mm */; };
+		A301780F11FE01DF004828C5 /* HCIsCollectionOnlyContaining.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177BF11FE01DF004828C5 /* HCIsCollectionOnlyContaining.h */; };
+		A301781011FE01DF004828C5 /* HCIsCollectionOnlyContaining.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177C011FE01DF004828C5 /* HCIsCollectionOnlyContaining.mm */; };
+		A301781111FE01DF004828C5 /* HCIsDictionaryContaining.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177C111FE01DF004828C5 /* HCIsDictionaryContaining.h */; };
+		A301781211FE01DF004828C5 /* HCIsDictionaryContaining.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177C211FE01DF004828C5 /* HCIsDictionaryContaining.mm */; };
+		A301781311FE01DF004828C5 /* HCIsDictionaryContainingKey.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177C311FE01DF004828C5 /* HCIsDictionaryContainingKey.h */; };
+		A301781411FE01DF004828C5 /* HCIsDictionaryContainingKey.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177C411FE01DF004828C5 /* HCIsDictionaryContainingKey.mm */; };
+		A301781511FE01DF004828C5 /* HCIsDictionaryContainingValue.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177C511FE01DF004828C5 /* HCIsDictionaryContainingValue.h */; };
+		A301781611FE01DF004828C5 /* HCIsDictionaryContainingValue.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177C611FE01DF004828C5 /* HCIsDictionaryContainingValue.mm */; };
+		A301781711FE01DF004828C5 /* HCIsIn.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177C711FE01DF004828C5 /* HCIsIn.h */; };
+		A301781811FE01DF004828C5 /* HCIsIn.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177C811FE01DF004828C5 /* HCIsIn.mm */; };
+		A301781911FE01DF004828C5 /* HCBoxNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177CA11FE01DF004828C5 /* HCBoxNumber.h */; };
+		A301781A11FE01DF004828C5 /* HCIsCloseTo.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177CB11FE01DF004828C5 /* HCIsCloseTo.h */; };
+		A301781B11FE01DF004828C5 /* HCIsCloseTo.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177CC11FE01DF004828C5 /* HCIsCloseTo.mm */; };
+		A301781C11FE01DF004828C5 /* HCIsEqualToNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177CD11FE01DF004828C5 /* HCIsEqualToNumber.h */; };
+		A301781D11FE01DF004828C5 /* HCIsEqualToNumber.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177CE11FE01DF004828C5 /* HCIsEqualToNumber.mm */; };
+		A301781E11FE01DF004828C5 /* HCNumberAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177CF11FE01DF004828C5 /* HCNumberAssert.h */; };
+		A301781F11FE01DF004828C5 /* HCNumberAssert.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177D011FE01DF004828C5 /* HCNumberAssert.mm */; };
+		A301782011FE01DF004828C5 /* HCOrderingComparison.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177D111FE01DF004828C5 /* HCOrderingComparison.h */; };
+		A301782111FE01DF004828C5 /* HCOrderingComparison.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177D211FE01DF004828C5 /* HCOrderingComparison.mm */; };
+		A301782211FE01DF004828C5 /* HCHasDescription.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177D411FE01DF004828C5 /* HCHasDescription.h */; };
+		A301782311FE01DF004828C5 /* HCHasDescription.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177D511FE01DF004828C5 /* HCHasDescription.mm */; };
+		A301782411FE01DF004828C5 /* HCIsEqualIgnoringCase.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177D711FE01DF004828C5 /* HCIsEqualIgnoringCase.h */; };
+		A301782511FE01DF004828C5 /* HCIsEqualIgnoringCase.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177D811FE01DF004828C5 /* HCIsEqualIgnoringCase.mm */; };
+		A301782611FE01DF004828C5 /* HCIsEqualIgnoringWhiteSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177D911FE01DF004828C5 /* HCIsEqualIgnoringWhiteSpace.h */; };
+		A301782711FE01DF004828C5 /* HCIsEqualIgnoringWhiteSpace.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177DA11FE01DF004828C5 /* HCIsEqualIgnoringWhiteSpace.mm */; };
+		A301782811FE01DF004828C5 /* HCRequireNonNilString.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177DB11FE01DF004828C5 /* HCRequireNonNilString.h */; };
+		A301782911FE01DF004828C5 /* HCStringContains.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177DC11FE01DF004828C5 /* HCStringContains.h */; };
+		A301782A11FE01DF004828C5 /* HCStringContains.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177DD11FE01DF004828C5 /* HCStringContains.mm */; };
+		A301782B11FE01DF004828C5 /* HCStringEndsWith.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177DE11FE01DF004828C5 /* HCStringEndsWith.h */; };
+		A301782C11FE01DF004828C5 /* HCStringEndsWith.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177DF11FE01DF004828C5 /* HCStringEndsWith.mm */; };
+		A301782D11FE01DF004828C5 /* HCStringStartsWith.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177E011FE01DF004828C5 /* HCStringStartsWith.h */; };
+		A301782E11FE01DF004828C5 /* HCStringStartsWith.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177E111FE01DF004828C5 /* HCStringStartsWith.mm */; };
+		A301782F11FE01DF004828C5 /* HCSubstringMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177E211FE01DF004828C5 /* HCSubstringMatcher.h */; };
+		A301783011FE01DF004828C5 /* HCSubstringMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177E311FE01DF004828C5 /* HCSubstringMatcher.mm */; };
+		A301783111FE01DF004828C5 /* OCHamcrest.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177E411FE01DF004828C5 /* OCHamcrest.h */; };
 		A3464E8911F279270080B46B /* libMocky.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libMocky.a */; };
 		A3464E8D11F2794A0080B46B /* SimpleExpectationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3464E8C11F2794A0080B46B /* SimpleExpectationTests.m */; };
 		A346500211F2937D0080B46B /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A346500111F2937D0080B46B /* TestHelper.m */; };
@@ -73,6 +150,83 @@
 		A301769B11FDEEFC004828C5 /* LRUnexpectedInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRUnexpectedInvocation.m; sourceTree = "<group>"; };
 		A30176D011FDFCEE004828C5 /* LRAllowingInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRAllowingInvocation.h; sourceTree = "<group>"; };
 		A30176D111FDFCEE004828C5 /* LRAllowingInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRAllowingInvocation.m; sourceTree = "<group>"; };
+		A301779211FE01DF004828C5 /* HCAllOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAllOf.h; sourceTree = "<group>"; };
+		A301779311FE01DF004828C5 /* HCAllOf.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCAllOf.mm; sourceTree = "<group>"; };
+		A301779411FE01DF004828C5 /* HCAnyOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAnyOf.h; sourceTree = "<group>"; };
+		A301779511FE01DF004828C5 /* HCAnyOf.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCAnyOf.mm; sourceTree = "<group>"; };
+		A301779611FE01DF004828C5 /* HCDescribedAs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDescribedAs.h; sourceTree = "<group>"; };
+		A301779711FE01DF004828C5 /* HCDescribedAs.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCDescribedAs.mm; sourceTree = "<group>"; };
+		A301779811FE01DF004828C5 /* HCIs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIs.h; sourceTree = "<group>"; };
+		A301779911FE01DF004828C5 /* HCIs.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIs.mm; sourceTree = "<group>"; };
+		A301779A11FE01DF004828C5 /* HCIsAnything.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsAnything.h; sourceTree = "<group>"; };
+		A301779B11FE01DF004828C5 /* HCIsAnything.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsAnything.mm; sourceTree = "<group>"; };
+		A301779C11FE01DF004828C5 /* HCIsEqual.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqual.h; sourceTree = "<group>"; };
+		A301779D11FE01DF004828C5 /* HCIsEqual.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsEqual.mm; sourceTree = "<group>"; };
+		A301779E11FE01DF004828C5 /* HCIsInstanceOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsInstanceOf.h; sourceTree = "<group>"; };
+		A301779F11FE01DF004828C5 /* HCIsInstanceOf.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsInstanceOf.mm; sourceTree = "<group>"; };
+		A30177A011FE01DF004828C5 /* HCIsNil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsNil.h; sourceTree = "<group>"; };
+		A30177A111FE01DF004828C5 /* HCIsNil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsNil.mm; sourceTree = "<group>"; };
+		A30177A211FE01DF004828C5 /* HCIsNot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsNot.h; sourceTree = "<group>"; };
+		A30177A311FE01DF004828C5 /* HCIsNot.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsNot.mm; sourceTree = "<group>"; };
+		A30177A411FE01DF004828C5 /* HCIsSame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsSame.h; sourceTree = "<group>"; };
+		A30177A511FE01DF004828C5 /* HCIsSame.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsSame.mm; sourceTree = "<group>"; };
+		A30177A611FE01DF004828C5 /* HCBaseDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBaseDescription.h; sourceTree = "<group>"; };
+		A30177A711FE01DF004828C5 /* HCBaseDescription.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCBaseDescription.mm; sourceTree = "<group>"; };
+		A30177A811FE01DF004828C5 /* HCBaseMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBaseMatcher.h; sourceTree = "<group>"; };
+		A30177A911FE01DF004828C5 /* HCBaseMatcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCBaseMatcher.mm; sourceTree = "<group>"; };
+		A30177AA11FE01DF004828C5 /* HCDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCDescription.h; sourceTree = "<group>"; };
+		A30177AB11FE01DF004828C5 /* HCInvocationMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCInvocationMatcher.h; sourceTree = "<group>"; };
+		A30177AC11FE01DF004828C5 /* HCInvocationMatcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCInvocationMatcher.mm; sourceTree = "<group>"; };
+		A30177AD11FE01DF004828C5 /* HCMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMatcher.h; sourceTree = "<group>"; };
+		A30177AE11FE01DF004828C5 /* HCMatcherAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMatcherAssert.h; sourceTree = "<group>"; };
+		A30177AF11FE01DF004828C5 /* HCMatcherAssert.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCMatcherAssert.mm; sourceTree = "<group>"; };
+		A30177B011FE01DF004828C5 /* HCSelfDescribing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSelfDescribing.h; sourceTree = "<group>"; };
+		A30177B111FE01DF004828C5 /* HCStringDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCStringDescription.h; sourceTree = "<group>"; };
+		A30177B211FE01DF004828C5 /* HCStringDescription.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCStringDescription.mm; sourceTree = "<group>"; };
+		A30177B311FE01DF004828C5 /* HCWrapInMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCWrapInMatcher.h; sourceTree = "<group>"; };
+		A30177B411FE01DF004828C5 /* HCWrapInMatcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCWrapInMatcher.mm; sourceTree = "<group>"; };
+		A30177B611FE01DF004828C5 /* HCCollectMatchers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCCollectMatchers.h; sourceTree = "<group>"; };
+		A30177B711FE01DF004828C5 /* HCCollectMatchers.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCCollectMatchers.mm; sourceTree = "<group>"; };
+		A30177B811FE01DF004828C5 /* HCIntegerTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIntegerTypes.h; sourceTree = "<group>"; };
+		A30177B911FE01DF004828C5 /* NSObject_HCSelfDescribingValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObject_HCSelfDescribingValue.h; sourceTree = "<group>"; };
+		A30177BA11FE01DF004828C5 /* NSObject_HCSelfDescribingValue.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NSObject_HCSelfDescribingValue.mm; sourceTree = "<group>"; };
+		A30177BD11FE01DF004828C5 /* HCIsCollectionContaining.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsCollectionContaining.h; sourceTree = "<group>"; };
+		A30177BE11FE01DF004828C5 /* HCIsCollectionContaining.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsCollectionContaining.mm; sourceTree = "<group>"; };
+		A30177BF11FE01DF004828C5 /* HCIsCollectionOnlyContaining.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsCollectionOnlyContaining.h; sourceTree = "<group>"; };
+		A30177C011FE01DF004828C5 /* HCIsCollectionOnlyContaining.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsCollectionOnlyContaining.mm; sourceTree = "<group>"; };
+		A30177C111FE01DF004828C5 /* HCIsDictionaryContaining.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsDictionaryContaining.h; sourceTree = "<group>"; };
+		A30177C211FE01DF004828C5 /* HCIsDictionaryContaining.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsDictionaryContaining.mm; sourceTree = "<group>"; };
+		A30177C311FE01DF004828C5 /* HCIsDictionaryContainingKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsDictionaryContainingKey.h; sourceTree = "<group>"; };
+		A30177C411FE01DF004828C5 /* HCIsDictionaryContainingKey.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsDictionaryContainingKey.mm; sourceTree = "<group>"; };
+		A30177C511FE01DF004828C5 /* HCIsDictionaryContainingValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsDictionaryContainingValue.h; sourceTree = "<group>"; };
+		A30177C611FE01DF004828C5 /* HCIsDictionaryContainingValue.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsDictionaryContainingValue.mm; sourceTree = "<group>"; };
+		A30177C711FE01DF004828C5 /* HCIsIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsIn.h; sourceTree = "<group>"; };
+		A30177C811FE01DF004828C5 /* HCIsIn.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsIn.mm; sourceTree = "<group>"; };
+		A30177CA11FE01DF004828C5 /* HCBoxNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBoxNumber.h; sourceTree = "<group>"; };
+		A30177CB11FE01DF004828C5 /* HCIsCloseTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsCloseTo.h; sourceTree = "<group>"; };
+		A30177CC11FE01DF004828C5 /* HCIsCloseTo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsCloseTo.mm; sourceTree = "<group>"; };
+		A30177CD11FE01DF004828C5 /* HCIsEqualToNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqualToNumber.h; sourceTree = "<group>"; };
+		A30177CE11FE01DF004828C5 /* HCIsEqualToNumber.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsEqualToNumber.mm; sourceTree = "<group>"; };
+		A30177CF11FE01DF004828C5 /* HCNumberAssert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCNumberAssert.h; sourceTree = "<group>"; };
+		A30177D011FE01DF004828C5 /* HCNumberAssert.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCNumberAssert.mm; sourceTree = "<group>"; };
+		A30177D111FE01DF004828C5 /* HCOrderingComparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCOrderingComparison.h; sourceTree = "<group>"; };
+		A30177D211FE01DF004828C5 /* HCOrderingComparison.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCOrderingComparison.mm; sourceTree = "<group>"; };
+		A30177D411FE01DF004828C5 /* HCHasDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHasDescription.h; sourceTree = "<group>"; };
+		A30177D511FE01DF004828C5 /* HCHasDescription.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCHasDescription.mm; sourceTree = "<group>"; };
+		A30177D711FE01DF004828C5 /* HCIsEqualIgnoringCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqualIgnoringCase.h; sourceTree = "<group>"; };
+		A30177D811FE01DF004828C5 /* HCIsEqualIgnoringCase.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsEqualIgnoringCase.mm; sourceTree = "<group>"; };
+		A30177D911FE01DF004828C5 /* HCIsEqualIgnoringWhiteSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCIsEqualIgnoringWhiteSpace.h; sourceTree = "<group>"; };
+		A30177DA11FE01DF004828C5 /* HCIsEqualIgnoringWhiteSpace.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCIsEqualIgnoringWhiteSpace.mm; sourceTree = "<group>"; };
+		A30177DB11FE01DF004828C5 /* HCRequireNonNilString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCRequireNonNilString.h; sourceTree = "<group>"; };
+		A30177DC11FE01DF004828C5 /* HCStringContains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCStringContains.h; sourceTree = "<group>"; };
+		A30177DD11FE01DF004828C5 /* HCStringContains.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCStringContains.mm; sourceTree = "<group>"; };
+		A30177DE11FE01DF004828C5 /* HCStringEndsWith.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCStringEndsWith.h; sourceTree = "<group>"; };
+		A30177DF11FE01DF004828C5 /* HCStringEndsWith.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCStringEndsWith.mm; sourceTree = "<group>"; };
+		A30177E011FE01DF004828C5 /* HCStringStartsWith.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCStringStartsWith.h; sourceTree = "<group>"; };
+		A30177E111FE01DF004828C5 /* HCStringStartsWith.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCStringStartsWith.mm; sourceTree = "<group>"; };
+		A30177E211FE01DF004828C5 /* HCSubstringMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSubstringMatcher.h; sourceTree = "<group>"; };
+		A30177E311FE01DF004828C5 /* HCSubstringMatcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCSubstringMatcher.mm; sourceTree = "<group>"; };
+		A30177E411FE01DF004828C5 /* OCHamcrest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCHamcrest.h; sourceTree = "<group>"; };
 		A3464E7E11F279020080B46B /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3464E7F11F279020080B46B /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		A3464E8C11F2794A0080B46B /* SimpleExpectationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleExpectationTests.m; sourceTree = "<group>"; };
@@ -117,6 +271,7 @@
 		0867D691FE84028FC02AAC07 /* LRMiniTestKit */ = {
 			isa = PBXGroup;
 			children = (
+				A30176EE11FE017E004828C5 /* Vendor */,
 				A3464D1311F23CC90080B46B /* Tests */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
@@ -197,6 +352,162 @@
 			name = Expectations;
 			sourceTree = "<group>";
 		};
+		A30176EE11FE017E004828C5 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				A30176EF11FE017E004828C5 /* Hamcrest */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		A30176EF11FE017E004828C5 /* Hamcrest */ = {
+			isa = PBXGroup;
+			children = (
+				A301779011FE01DF004828C5 /* Core */,
+				A30177BB11FE01DF004828C5 /* Library */,
+				A30177E411FE01DF004828C5 /* OCHamcrest.h */,
+			);
+			path = Hamcrest;
+			sourceTree = "<group>";
+		};
+		A301779011FE01DF004828C5 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A301779111FE01DF004828C5 /* Core */,
+				A30177A611FE01DF004828C5 /* HCBaseDescription.h */,
+				A30177A711FE01DF004828C5 /* HCBaseDescription.mm */,
+				A30177A811FE01DF004828C5 /* HCBaseMatcher.h */,
+				A30177A911FE01DF004828C5 /* HCBaseMatcher.mm */,
+				A30177AA11FE01DF004828C5 /* HCDescription.h */,
+				A30177AB11FE01DF004828C5 /* HCInvocationMatcher.h */,
+				A30177AC11FE01DF004828C5 /* HCInvocationMatcher.mm */,
+				A30177AD11FE01DF004828C5 /* HCMatcher.h */,
+				A30177AE11FE01DF004828C5 /* HCMatcherAssert.h */,
+				A30177AF11FE01DF004828C5 /* HCMatcherAssert.mm */,
+				A30177B011FE01DF004828C5 /* HCSelfDescribing.h */,
+				A30177B111FE01DF004828C5 /* HCStringDescription.h */,
+				A30177B211FE01DF004828C5 /* HCStringDescription.mm */,
+				A30177B311FE01DF004828C5 /* HCWrapInMatcher.h */,
+				A30177B411FE01DF004828C5 /* HCWrapInMatcher.mm */,
+				A30177B511FE01DF004828C5 /* Internal */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A301779111FE01DF004828C5 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A301779211FE01DF004828C5 /* HCAllOf.h */,
+				A301779311FE01DF004828C5 /* HCAllOf.mm */,
+				A301779411FE01DF004828C5 /* HCAnyOf.h */,
+				A301779511FE01DF004828C5 /* HCAnyOf.mm */,
+				A301779611FE01DF004828C5 /* HCDescribedAs.h */,
+				A301779711FE01DF004828C5 /* HCDescribedAs.mm */,
+				A301779811FE01DF004828C5 /* HCIs.h */,
+				A301779911FE01DF004828C5 /* HCIs.mm */,
+				A301779A11FE01DF004828C5 /* HCIsAnything.h */,
+				A301779B11FE01DF004828C5 /* HCIsAnything.mm */,
+				A301779C11FE01DF004828C5 /* HCIsEqual.h */,
+				A301779D11FE01DF004828C5 /* HCIsEqual.mm */,
+				A301779E11FE01DF004828C5 /* HCIsInstanceOf.h */,
+				A301779F11FE01DF004828C5 /* HCIsInstanceOf.mm */,
+				A30177A011FE01DF004828C5 /* HCIsNil.h */,
+				A30177A111FE01DF004828C5 /* HCIsNil.mm */,
+				A30177A211FE01DF004828C5 /* HCIsNot.h */,
+				A30177A311FE01DF004828C5 /* HCIsNot.mm */,
+				A30177A411FE01DF004828C5 /* HCIsSame.h */,
+				A30177A511FE01DF004828C5 /* HCIsSame.mm */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A30177B511FE01DF004828C5 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				A30177B611FE01DF004828C5 /* HCCollectMatchers.h */,
+				A30177B711FE01DF004828C5 /* HCCollectMatchers.mm */,
+				A30177B811FE01DF004828C5 /* HCIntegerTypes.h */,
+				A30177B911FE01DF004828C5 /* NSObject_HCSelfDescribingValue.h */,
+				A30177BA11FE01DF004828C5 /* NSObject_HCSelfDescribingValue.mm */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		A30177BB11FE01DF004828C5 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				A30177BC11FE01DF004828C5 /* Collection */,
+				A30177C911FE01DF004828C5 /* Number */,
+				A30177D311FE01DF004828C5 /* Object */,
+				A30177D611FE01DF004828C5 /* Text */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		A30177BC11FE01DF004828C5 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				A30177BD11FE01DF004828C5 /* HCIsCollectionContaining.h */,
+				A30177BE11FE01DF004828C5 /* HCIsCollectionContaining.mm */,
+				A30177BF11FE01DF004828C5 /* HCIsCollectionOnlyContaining.h */,
+				A30177C011FE01DF004828C5 /* HCIsCollectionOnlyContaining.mm */,
+				A30177C111FE01DF004828C5 /* HCIsDictionaryContaining.h */,
+				A30177C211FE01DF004828C5 /* HCIsDictionaryContaining.mm */,
+				A30177C311FE01DF004828C5 /* HCIsDictionaryContainingKey.h */,
+				A30177C411FE01DF004828C5 /* HCIsDictionaryContainingKey.mm */,
+				A30177C511FE01DF004828C5 /* HCIsDictionaryContainingValue.h */,
+				A30177C611FE01DF004828C5 /* HCIsDictionaryContainingValue.mm */,
+				A30177C711FE01DF004828C5 /* HCIsIn.h */,
+				A30177C811FE01DF004828C5 /* HCIsIn.mm */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		A30177C911FE01DF004828C5 /* Number */ = {
+			isa = PBXGroup;
+			children = (
+				A30177CA11FE01DF004828C5 /* HCBoxNumber.h */,
+				A30177CB11FE01DF004828C5 /* HCIsCloseTo.h */,
+				A30177CC11FE01DF004828C5 /* HCIsCloseTo.mm */,
+				A30177CD11FE01DF004828C5 /* HCIsEqualToNumber.h */,
+				A30177CE11FE01DF004828C5 /* HCIsEqualToNumber.mm */,
+				A30177CF11FE01DF004828C5 /* HCNumberAssert.h */,
+				A30177D011FE01DF004828C5 /* HCNumberAssert.mm */,
+				A30177D111FE01DF004828C5 /* HCOrderingComparison.h */,
+				A30177D211FE01DF004828C5 /* HCOrderingComparison.mm */,
+			);
+			path = Number;
+			sourceTree = "<group>";
+		};
+		A30177D311FE01DF004828C5 /* Object */ = {
+			isa = PBXGroup;
+			children = (
+				A30177D411FE01DF004828C5 /* HCHasDescription.h */,
+				A30177D511FE01DF004828C5 /* HCHasDescription.mm */,
+			);
+			path = Object;
+			sourceTree = "<group>";
+		};
+		A30177D611FE01DF004828C5 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				A30177D711FE01DF004828C5 /* HCIsEqualIgnoringCase.h */,
+				A30177D811FE01DF004828C5 /* HCIsEqualIgnoringCase.mm */,
+				A30177D911FE01DF004828C5 /* HCIsEqualIgnoringWhiteSpace.h */,
+				A30177DA11FE01DF004828C5 /* HCIsEqualIgnoringWhiteSpace.mm */,
+				A30177DB11FE01DF004828C5 /* HCRequireNonNilString.h */,
+				A30177DC11FE01DF004828C5 /* HCStringContains.h */,
+				A30177DD11FE01DF004828C5 /* HCStringContains.mm */,
+				A30177DE11FE01DF004828C5 /* HCStringEndsWith.h */,
+				A30177DF11FE01DF004828C5 /* HCStringEndsWith.mm */,
+				A30177E011FE01DF004828C5 /* HCStringStartsWith.h */,
+				A30177E111FE01DF004828C5 /* HCStringStartsWith.mm */,
+				A30177E211FE01DF004828C5 /* HCSubstringMatcher.h */,
+				A30177E311FE01DF004828C5 /* HCSubstringMatcher.mm */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
 		A3464D1311F23CC90080B46B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +565,48 @@
 				A30176AC11FDEEFC004828C5 /* LRTestCase.h in Headers */,
 				A30176AE11FDEEFC004828C5 /* LRUnexpectedInvocation.h in Headers */,
 				A30176D211FDFCEE004828C5 /* LRAllowingInvocation.h in Headers */,
+				A30177E511FE01DF004828C5 /* HCAllOf.h in Headers */,
+				A30177E711FE01DF004828C5 /* HCAnyOf.h in Headers */,
+				A30177E911FE01DF004828C5 /* HCDescribedAs.h in Headers */,
+				A30177EB11FE01DF004828C5 /* HCIs.h in Headers */,
+				A30177ED11FE01DF004828C5 /* HCIsAnything.h in Headers */,
+				A30177EF11FE01DF004828C5 /* HCIsEqual.h in Headers */,
+				A30177F111FE01DF004828C5 /* HCIsInstanceOf.h in Headers */,
+				A30177F311FE01DF004828C5 /* HCIsNil.h in Headers */,
+				A30177F511FE01DF004828C5 /* HCIsNot.h in Headers */,
+				A30177F711FE01DF004828C5 /* HCIsSame.h in Headers */,
+				A30177F911FE01DF004828C5 /* HCBaseDescription.h in Headers */,
+				A30177FB11FE01DF004828C5 /* HCBaseMatcher.h in Headers */,
+				A30177FD11FE01DF004828C5 /* HCDescription.h in Headers */,
+				A30177FE11FE01DF004828C5 /* HCInvocationMatcher.h in Headers */,
+				A301780011FE01DF004828C5 /* HCMatcher.h in Headers */,
+				A301780111FE01DF004828C5 /* HCMatcherAssert.h in Headers */,
+				A301780311FE01DF004828C5 /* HCSelfDescribing.h in Headers */,
+				A301780411FE01DF004828C5 /* HCStringDescription.h in Headers */,
+				A301780611FE01DF004828C5 /* HCWrapInMatcher.h in Headers */,
+				A301780811FE01DF004828C5 /* HCCollectMatchers.h in Headers */,
+				A301780A11FE01DF004828C5 /* HCIntegerTypes.h in Headers */,
+				A301780B11FE01DF004828C5 /* NSObject_HCSelfDescribingValue.h in Headers */,
+				A301780D11FE01DF004828C5 /* HCIsCollectionContaining.h in Headers */,
+				A301780F11FE01DF004828C5 /* HCIsCollectionOnlyContaining.h in Headers */,
+				A301781111FE01DF004828C5 /* HCIsDictionaryContaining.h in Headers */,
+				A301781311FE01DF004828C5 /* HCIsDictionaryContainingKey.h in Headers */,
+				A301781511FE01DF004828C5 /* HCIsDictionaryContainingValue.h in Headers */,
+				A301781711FE01DF004828C5 /* HCIsIn.h in Headers */,
+				A301781911FE01DF004828C5 /* HCBoxNumber.h in Headers */,
+				A301781A11FE01DF004828C5 /* HCIsCloseTo.h in Headers */,
+				A301781C11FE01DF004828C5 /* HCIsEqualToNumber.h in Headers */,
+				A301781E11FE01DF004828C5 /* HCNumberAssert.h in Headers */,
+				A301782011FE01DF004828C5 /* HCOrderingComparison.h in Headers */,
+				A301782211FE01DF004828C5 /* HCHasDescription.h in Headers */,
+				A301782411FE01DF004828C5 /* HCIsEqualIgnoringCase.h in Headers */,
+				A301782611FE01DF004828C5 /* HCIsEqualIgnoringWhiteSpace.h in Headers */,
+				A301782811FE01DF004828C5 /* HCRequireNonNilString.h in Headers */,
+				A301782911FE01DF004828C5 /* HCStringContains.h in Headers */,
+				A301782B11FE01DF004828C5 /* HCStringEndsWith.h in Headers */,
+				A301782D11FE01DF004828C5 /* HCStringStartsWith.h in Headers */,
+				A301782F11FE01DF004828C5 /* HCSubstringMatcher.h in Headers */,
+				A301783111FE01DF004828C5 /* OCHamcrest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +725,41 @@
 				A30176AD11FDEEFC004828C5 /* LRTestCase.m in Sources */,
 				A30176AF11FDEEFC004828C5 /* LRUnexpectedInvocation.m in Sources */,
 				A30176D311FDFCEE004828C5 /* LRAllowingInvocation.m in Sources */,
+				A30177E611FE01DF004828C5 /* HCAllOf.mm in Sources */,
+				A30177E811FE01DF004828C5 /* HCAnyOf.mm in Sources */,
+				A30177EA11FE01DF004828C5 /* HCDescribedAs.mm in Sources */,
+				A30177EC11FE01DF004828C5 /* HCIs.mm in Sources */,
+				A30177EE11FE01DF004828C5 /* HCIsAnything.mm in Sources */,
+				A30177F011FE01DF004828C5 /* HCIsEqual.mm in Sources */,
+				A30177F211FE01DF004828C5 /* HCIsInstanceOf.mm in Sources */,
+				A30177F411FE01DF004828C5 /* HCIsNil.mm in Sources */,
+				A30177F611FE01DF004828C5 /* HCIsNot.mm in Sources */,
+				A30177F811FE01DF004828C5 /* HCIsSame.mm in Sources */,
+				A30177FA11FE01DF004828C5 /* HCBaseDescription.mm in Sources */,
+				A30177FC11FE01DF004828C5 /* HCBaseMatcher.mm in Sources */,
+				A30177FF11FE01DF004828C5 /* HCInvocationMatcher.mm in Sources */,
+				A301780211FE01DF004828C5 /* HCMatcherAssert.mm in Sources */,
+				A301780511FE01DF004828C5 /* HCStringDescription.mm in Sources */,
+				A301780711FE01DF004828C5 /* HCWrapInMatcher.mm in Sources */,
+				A301780911FE01DF004828C5 /* HCCollectMatchers.mm in Sources */,
+				A301780C11FE01DF004828C5 /* NSObject_HCSelfDescribingValue.mm in Sources */,
+				A301780E11FE01DF004828C5 /* HCIsCollectionContaining.mm in Sources */,
+				A301781011FE01DF004828C5 /* HCIsCollectionOnlyContaining.mm in Sources */,
+				A301781211FE01DF004828C5 /* HCIsDictionaryContaining.mm in Sources */,
+				A301781411FE01DF004828C5 /* HCIsDictionaryContainingKey.mm in Sources */,
+				A301781611FE01DF004828C5 /* HCIsDictionaryContainingValue.mm in Sources */,
+				A301781811FE01DF004828C5 /* HCIsIn.mm in Sources */,
+				A301781B11FE01DF004828C5 /* HCIsCloseTo.mm in Sources */,
+				A301781D11FE01DF004828C5 /* HCIsEqualToNumber.mm in Sources */,
+				A301781F11FE01DF004828C5 /* HCNumberAssert.mm in Sources */,
+				A301782111FE01DF004828C5 /* HCOrderingComparison.mm in Sources */,
+				A301782311FE01DF004828C5 /* HCHasDescription.mm in Sources */,
+				A301782511FE01DF004828C5 /* HCIsEqualIgnoringCase.mm in Sources */,
+				A301782711FE01DF004828C5 /* HCIsEqualIgnoringWhiteSpace.mm in Sources */,
+				A301782A11FE01DF004828C5 /* HCStringContains.mm in Sources */,
+				A301782C11FE01DF004828C5 /* HCStringEndsWith.mm in Sources */,
+				A301782E11FE01DF004828C5 /* HCStringStartsWith.mm in Sources */,
+				A301783011FE01DF004828C5 /* HCSubstringMatcher.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +788,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Mocky_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Mocky;
 			};
 			name = Debug;
@@ -414,6 +803,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Mocky_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Mocky;
 			};
 			name = Release;
@@ -465,8 +855,7 @@
 					Foundation,
 					"-framework",
 					SenTestingKit,
-					"-framework",
-					UIKit,
+					"-lstdc++",
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = Tests;
@@ -493,8 +882,7 @@
 					Foundation,
 					"-framework",
 					SenTestingKit,
-					"-framework",
-					UIKit,
+					"-lstdc++",
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = Tests;

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <SenTestingKit/SenTestingKit.h>
+#define HC_SHORTHAND
+#import "OCHamcrest.h"
 #import "LRTestCase.h"
 
 @interface NSInvocation (LRAdditions)
@@ -29,5 +31,5 @@
 
 @protocol LRTestCase;
 
-void assertThatTestCasePassed(MockTestCase *mockTestCase, SenTestCase *testCase);
-void assertThatTestCaseFailedWithFailures(MockTestCase *mockTestCase, int numberOfFailures, SenTestCase *testCase);
+id<HCMatcher> passed();
+id<HCMatcher> failedWithNumberOfFailures(int numberOfFailures);

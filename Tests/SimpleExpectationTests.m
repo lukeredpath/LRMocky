@@ -34,8 +34,8 @@
   
   [testObject doSomething];
   [context assertSatisfied];
-  
-  assertThatTestCasePassed(testCase, self);
+
+  assertThat(testCase, passed());
 }
 
 - (void)testCanExpectSingleMethodCallAndFail;
@@ -48,7 +48,7 @@
   
   [context assertSatisfied];
   
-  assertThatTestCaseFailedWithFailures(testCase, 1, self);
+  assertThat(testCase, failedWithNumberOfFailures(1));
 }
 
 - (void)testFailsWhenUnexpectedMethodIsCalled;
@@ -58,7 +58,7 @@
   [testObject doSomething];  
   [context assertSatisfied];
 
-  assertThatTestCaseFailedWithFailures(testCase, 1, self);
+  assertThat(testCase, failedWithNumberOfFailures(1));
 }
 
 - (void)testCanAllowSingleMethodCellAndPassWhenItIsCalled;
@@ -72,7 +72,7 @@
   [testObject doSomething];
   [context assertSatisfied];
   
-  assertThatTestCasePassed(testCase, self);
+  assertThat(testCase, passed());
 }
 
 - (void)testCanAllowSingleMethodCellAndPassWhenItIsNotCalled;
@@ -85,7 +85,7 @@
   
   [context assertSatisfied];
   
-  assertThatTestCasePassed(testCase, self);
+  assertThat(testCase, passed());
 }
 
 @end
