@@ -11,6 +11,7 @@
 #import "LRMockery.h"
 #import "LRExpectationBuilder.h"
 #import "LRReturnObjectAction.h"
+#import "LRPerformBlockAction.h"
 
 @interface ExpectationActionsTest : SenTestCase 
 {
@@ -39,8 +40,24 @@
   
   id result = [testObject returnSomething];
   STAssertEquals(expectedObject, result, @"Expected test object to return '%@', but returned %@", expectedObject, result);
+}
+
+- (void)testMocksCanCallBlocksFromAnExpectedInvocation;
+{
+  SimpleObject *testObject = [context mock:[SimpleObject class]];
   
-  [context assertSatisfied];
+  NSMutableArray *someArray = [NSMutableArray array];
+  
+  [context checking:^(LRExpectationBuilder *that){
+    [[that oneOf:testObject] doSomething]; [that will:performBlock(^(NSInvocation *invocation) {
+      [someArray addObject: NSStringFromSelector([invocation selector])];
+    })];
+  }];
+  
+  [testObject doSomething];
+  
+  STAssertEqualObjects(@"doSomething", [someArray objectAtIndex:0], 
+      @"Expected block to add the invocation selector 'doSomething', but got %@", [someArray objectAtIndex:0]);
 }
 
 @end

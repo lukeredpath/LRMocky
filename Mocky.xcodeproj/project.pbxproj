@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A301762011FDE34B004828C5 /* LRReturnObjectAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A301761F11FDE34B004828C5 /* LRReturnObjectAction.m */; };
 		A301763111FDE548004828C5 /* LRReturnObjectAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A301761F11FDE34B004828C5 /* LRReturnObjectAction.m */; };
+		A301766011FDE97A004828C5 /* LRPerformBlockAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A301765F11FDE97A004828C5 /* LRPerformBlockAction.m */; };
 		A3464E8911F279270080B46B /* libMocky.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libMocky.a */; };
 		A3464E8D11F2794A0080B46B /* SimpleExpectationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3464E8C11F2794A0080B46B /* SimpleExpectationTests.m */; };
 		A3464F0F11F27F940080B46B /* LRMockery.m in Sources */ = {isa = PBXBuildFile; fileRef = A3464F0911F27F3B0080B46B /* LRMockery.m */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		A301761E11FDE34B004828C5 /* LRReturnObjectAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRReturnObjectAction.h; sourceTree = "<group>"; };
 		A301761F11FDE34B004828C5 /* LRReturnObjectAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRReturnObjectAction.m; sourceTree = "<group>"; };
+		A301765E11FDE97A004828C5 /* LRPerformBlockAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRPerformBlockAction.h; sourceTree = "<group>"; };
+		A301765F11FDE97A004828C5 /* LRPerformBlockAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRPerformBlockAction.m; sourceTree = "<group>"; };
 		A3464D6F11F241560080B46B /* MiniTestRunner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MiniTestRunner-Info.plist"; sourceTree = "<group>"; };
 		A3464DCB11F242B00080B46B /* MiniTestBundle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MiniTestBundle-Info.plist"; sourceTree = "<group>"; };
 		A3464E7E11F279020080B46B /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,6 +146,8 @@
 				A3C0426011FDE29300C8329C /* LRExpectationAction.h */,
 				A301761E11FDE34B004828C5 /* LRReturnObjectAction.h */,
 				A301761F11FDE34B004828C5 /* LRReturnObjectAction.m */,
+				A301765E11FDE97A004828C5 /* LRPerformBlockAction.h */,
+				A301765F11FDE97A004828C5 /* LRPerformBlockAction.m */,
 			);
 			name = Actions;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 				A34650D411F857680080B46B /* LRMockeryTest.m in Sources */,
 				A3C707F811FDDFE0000D2A8C /* ExpectationActionsTest.m in Sources */,
 				A301762011FDE34B004828C5 /* LRReturnObjectAction.m in Sources */,
+				A301766011FDE97A004828C5 /* LRPerformBlockAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
