@@ -96,7 +96,7 @@
   [mockery addExpectation:[[PassingExpectation new] autorelease]];
   [mockery assertSatisfied];
   
-  STAssertTrue([testCase numberOfFailures] == 0, @"Expected 0 failures, got %d.", [testCase numberOfFailures]);
+  assertThat(testCase, passed());
 }
 
 - (void)testTriggersTestFailureForFailingExpectation;
@@ -104,7 +104,7 @@
   [mockery addExpectation:[[FailingExpectation new] autorelease]];
   [mockery assertSatisfied];
   
-  STAssertTrue([testCase numberOfFailures] == 1, @"Expected 1 failure, got %d.", [testCase numberOfFailures]);
+  assertThat(testCase, failedWithNumberOfFailures(1));
 }
 
 @end
