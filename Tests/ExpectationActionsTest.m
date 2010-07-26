@@ -38,6 +38,19 @@
   assertThat([testObject returnSomething], equalTo(expectedObject));
 }
 
+- (void)testMocksCanReturnAnObjectFromAnAllowedInvocation;
+{
+  SimpleObject *testObject = [context mock:[SimpleObject class]];
+  
+  NSString *expectedObject = @"some string";
+  
+  [context checking:^(LRExpectationBuilder *that){
+    [[that allowing:testObject] returnSomething]; [that will:returnObject(expectedObject)];
+  }];
+  
+  assertThat([testObject returnSomething], equalTo(expectedObject));
+}
+
 - (void)testMocksCanCallBlocksFromAnExpectedInvocation;
 {
   SimpleObject *testObject = [context mock:[SimpleObject class]];
@@ -46,6 +59,23 @@
   
   [context checking:^(LRExpectationBuilder *that){
     [[that oneOf:testObject] doSomething]; [that will:performBlock(^(NSInvocation *invocation) {
+      [someArray addObject: NSStringFromSelector([invocation selector])];
+    })];
+  }];
+  
+  [testObject doSomething];
+  
+  assertThat(someArray, hasItem(@"doSomething"));
+}
+
+- (void)testMocksCanCallBlocksFromAnAllowedInvocation;
+{
+  SimpleObject *testObject = [context mock:[SimpleObject class]];
+  
+  NSMutableArray *someArray = [NSMutableArray array];
+  
+  [context checking:^(LRExpectationBuilder *that){
+    [[that allowing:testObject] doSomething]; [that will:performBlock(^(NSInvocation *invocation) {
       [someArray addObject: NSStringFromSelector([invocation selector])];
     })];
   }];
