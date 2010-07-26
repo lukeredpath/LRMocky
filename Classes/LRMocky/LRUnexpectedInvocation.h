@@ -12,6 +12,8 @@
 @interface LRUnexpectedInvocation : NSObject <LRExpectation> {
   NSInvocation *invocation;
 }
+@property (nonatomic, retain) NSInvocation *invocation;
+
 + (id)unexpectedInvocation:(NSInvocation *)invocation;
 - (id)initWithInvocation:(NSInvocation *)anInvocation;
 @end

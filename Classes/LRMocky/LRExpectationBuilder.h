@@ -21,5 +21,6 @@
 + (id)builderInContext:(LRMockery *)context;
 - (id)initWithMockery:(LRMockery *)aMockery;
 - (id)oneOf:(id)mockObject;
-- (id)will:(id)action;
+- (id)will:(id<LRExpectationAction>)action;
+- (id)allowing:(id)mockObject;
 @end

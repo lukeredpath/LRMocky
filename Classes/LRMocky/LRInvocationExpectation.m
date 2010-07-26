@@ -11,15 +11,16 @@
 
 @implementation LRInvocationExpectation
 
-+ (id)expectationWithInvocation:(NSInvocation *)anInvocation;
+@synthesize invocation = expectedInvocation;
+
++ (id)expectation;
 {
-  return [[[self alloc] initWithInvocation:anInvocation] autorelease];
+  return [[[self alloc] init] autorelease];
 }
 
-- (id)initWithInvocation:(NSInvocation *)anInvocation;
+- (id)init;
 {
   if (self = [super init]) {
-    expectedInvocation = [anInvocation retain];
     numberOfInvocations = 0;
     actions = [[NSMutableArray alloc] init];
   }

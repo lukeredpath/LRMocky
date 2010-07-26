@@ -61,4 +61,31 @@
   assertThatTestCaseFailedWithFailures(testCase, 1, self);
 }
 
+- (void)testCanAllowSingleMethodCellAndPassWhenItIsCalled;
+{
+  SimpleObject *testObject = [context mock:[SimpleObject class]];
+  
+  [context checking:^(LRExpectationBuilder *that){
+    [[that allowing:testObject] doSomething];
+  }];
+  
+  [testObject doSomething];
+  [context assertSatisfied];
+  
+  assertThatTestCasePassed(testCase, self);
+}
+
+- (void)testCanAllowSingleMethodCellAndPassWhenItIsNotCalled;
+{
+  SimpleObject *testObject = [context mock:[SimpleObject class]];
+  
+  [context checking:^(LRExpectationBuilder *that){
+    [[that allowing:testObject] doSomething];
+  }];
+  
+  [context assertSatisfied];
+  
+  assertThatTestCasePassed(testCase, self);
+}
+
 @end

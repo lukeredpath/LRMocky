@@ -28,6 +28,8 @@
 		A30176AD11FDEEFC004828C5 /* LRTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769911FDEEFC004828C5 /* LRTestCase.m */; };
 		A30176AE11FDEEFC004828C5 /* LRUnexpectedInvocation.h in Headers */ = {isa = PBXBuildFile; fileRef = A301769A11FDEEFC004828C5 /* LRUnexpectedInvocation.h */; };
 		A30176AF11FDEEFC004828C5 /* LRUnexpectedInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769B11FDEEFC004828C5 /* LRUnexpectedInvocation.m */; };
+		A30176D211FDFCEE004828C5 /* LRAllowingInvocation.h in Headers */ = {isa = PBXBuildFile; fileRef = A30176D011FDFCEE004828C5 /* LRAllowingInvocation.h */; };
+		A30176D311FDFCEE004828C5 /* LRAllowingInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A30176D111FDFCEE004828C5 /* LRAllowingInvocation.m */; };
 		A3464E8911F279270080B46B /* libMocky.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libMocky.a */; };
 		A3464E8D11F2794A0080B46B /* SimpleExpectationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3464E8C11F2794A0080B46B /* SimpleExpectationTests.m */; };
 		A346500211F2937D0080B46B /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A346500111F2937D0080B46B /* TestHelper.m */; };
@@ -69,6 +71,8 @@
 		A301769911FDEEFC004828C5 /* LRTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRTestCase.m; sourceTree = "<group>"; };
 		A301769A11FDEEFC004828C5 /* LRUnexpectedInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRUnexpectedInvocation.h; sourceTree = "<group>"; };
 		A301769B11FDEEFC004828C5 /* LRUnexpectedInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRUnexpectedInvocation.m; sourceTree = "<group>"; };
+		A30176D011FDFCEE004828C5 /* LRAllowingInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRAllowingInvocation.h; sourceTree = "<group>"; };
+		A30176D111FDFCEE004828C5 /* LRAllowingInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRAllowingInvocation.m; sourceTree = "<group>"; };
 		A3464E7E11F279020080B46B /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3464E7F11F279020080B46B /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		A3464E8C11F2794A0080B46B /* SimpleExpectationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleExpectationTests.m; sourceTree = "<group>"; };
@@ -151,22 +155,18 @@
 		A301768711FDEEFC004828C5 /* LRMocky */ = {
 			isa = PBXGroup;
 			children = (
+				A30176CF11FDFCC7004828C5 /* Expectations */,
 				A30176B011FDEF01004828C5 /* Actions */,
-				A301768811FDEEFC004828C5 /* LRExpectation.h */,
 				A301768A11FDEEFC004828C5 /* LRExpectationBuilder.h */,
 				A301768B11FDEEFC004828C5 /* LRExpectationBuilder.m */,
 				A301768C11FDEEFC004828C5 /* LRImposter.h */,
 				A301768D11FDEEFC004828C5 /* LRImposter.m */,
-				A301768E11FDEEFC004828C5 /* LRInvocationExpectation.h */,
-				A301768F11FDEEFC004828C5 /* LRInvocationExpectation.m */,
 				A301769011FDEEFC004828C5 /* LRMockery.h */,
 				A301769111FDEEFC004828C5 /* LRMockery.m */,
 				A301769211FDEEFC004828C5 /* LRMockObject.h */,
 				A301769311FDEEFC004828C5 /* LRMockObject.m */,
 				A301769811FDEEFC004828C5 /* LRTestCase.h */,
 				A301769911FDEEFC004828C5 /* LRTestCase.m */,
-				A301769A11FDEEFC004828C5 /* LRUnexpectedInvocation.h */,
-				A301769B11FDEEFC004828C5 /* LRUnexpectedInvocation.m */,
 			);
 			path = LRMocky;
 			sourceTree = "<group>";
@@ -181,6 +181,20 @@
 				A301769711FDEEFC004828C5 /* LRReturnObjectAction.m */,
 			);
 			name = Actions;
+			sourceTree = "<group>";
+		};
+		A30176CF11FDFCC7004828C5 /* Expectations */ = {
+			isa = PBXGroup;
+			children = (
+				A301768811FDEEFC004828C5 /* LRExpectation.h */,
+				A301768E11FDEEFC004828C5 /* LRInvocationExpectation.h */,
+				A301768F11FDEEFC004828C5 /* LRInvocationExpectation.m */,
+				A301769A11FDEEFC004828C5 /* LRUnexpectedInvocation.h */,
+				A301769B11FDEEFC004828C5 /* LRUnexpectedInvocation.m */,
+				A30176D011FDFCEE004828C5 /* LRAllowingInvocation.h */,
+				A30176D111FDFCEE004828C5 /* LRAllowingInvocation.m */,
+			);
+			name = Expectations;
 			sourceTree = "<group>";
 		};
 		A3464D1311F23CC90080B46B /* Tests */ = {
@@ -239,6 +253,7 @@
 				A30176AA11FDEEFC004828C5 /* LRReturnObjectAction.h in Headers */,
 				A30176AC11FDEEFC004828C5 /* LRTestCase.h in Headers */,
 				A30176AE11FDEEFC004828C5 /* LRUnexpectedInvocation.h in Headers */,
+				A30176D211FDFCEE004828C5 /* LRAllowingInvocation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +371,7 @@
 				A30176AB11FDEEFC004828C5 /* LRReturnObjectAction.m in Sources */,
 				A30176AD11FDEEFC004828C5 /* LRTestCase.m in Sources */,
 				A30176AF11FDEEFC004828C5 /* LRUnexpectedInvocation.m in Sources */,
+				A30176D311FDFCEE004828C5 /* LRAllowingInvocation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

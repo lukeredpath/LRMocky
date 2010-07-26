@@ -11,6 +11,8 @@
 
 @implementation LRUnexpectedInvocation
 
+@synthesize invocation;
+
 + (id)unexpectedInvocation:(NSInvocation *)invocation;
 {
   return [[[self alloc] initWithInvocation:invocation] autorelease];

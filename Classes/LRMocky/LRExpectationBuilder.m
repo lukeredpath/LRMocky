@@ -10,9 +10,11 @@
 #import "LRMockObject.h"
 #import "LRMockery.h"
 #import "LRInvocationExpectation.h"
+#import "LRAllowingInvocation.h"
 
 @interface LRExpectationBuilder ()
 @property (nonatomic, retain) id<LRExpectation> currentExpecation;
+- (void)actAsImposterForMockObject:(LRMockObject *)mock;
 @end
 
 @implementation LRExpectationBuilder
@@ -45,13 +47,23 @@
 
 - (id)oneOf:(id)mockObject;
 {
-  mockedClass = [(LRMockObject *)mockObject mockedClass];
+  self.currentExpecation = [LRInvocationExpectation expectation];
+  
+  [self actAsImposterForMockObject:mockObject];
+  return self;
+}
+
+- (id)allowing:(id)mockObject;
+{
+  self.currentExpecation = [LRAllowingInvocation expectation];
+  
+  [self actAsImposterForMockObject:mockObject];
   return self;
 }
 
 - (void)forwardInvocation:(NSInvocation *)invocation
 {
-  self.currentExpecation = [LRInvocationExpectation expectationWithInvocation:invocation];
+  self.currentExpecation.invocation = invocation;
   [mockery addExpectation:self.currentExpecation];
 }
 
@@ -59,6 +71,13 @@
 {
   [self.currentExpecation addAction:action];
   return self;
+}
+
+#pragma mark Private methods
+
+- (void)actAsImposterForMockObject:(LRMockObject *)mock;
+{
+  mockedClass = [mock mockedClass];
 }
 
 @end

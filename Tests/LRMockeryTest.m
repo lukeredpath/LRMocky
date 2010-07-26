@@ -37,6 +37,8 @@
 - (void)addAction:(id<LRExpectationAction>)action
 {}
 
+- (void)setInvocation:(NSInvocation *)invocation
+{}
 @end
 
 @interface PassingExpectation : NSObject <LRExpectation>
@@ -64,6 +66,9 @@
 {}
 
 - (void)addAction:(id<LRExpectationAction>)action
+{}
+
+- (void)setInvocation:(NSInvocation *)invocation
 {}
 
 @end

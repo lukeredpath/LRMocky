@@ -15,7 +15,8 @@
   NSUInteger numberOfInvocations;
   NSMutableArray *actions;
 }
-+ (id)expectationWithInvocation:(NSInvocation *)anInvocation;
-- (id)initWithInvocation:(NSInvocation *)anInvocation;
+@property (nonatomic, retain) NSInvocation *invocation;
+
++ (id)expectation;
 - (void)addAction:(id<LRExpectationAction>)anAction;
 @end

@@ -15,4 +15,5 @@
 - (BOOL)isSatisfied;
 - (NSException *)failureException;
 - (void)addAction:(id<LRExpectationAction>)action;
+- (void)setInvocation:(NSInvocation *)invocation;
 @end
