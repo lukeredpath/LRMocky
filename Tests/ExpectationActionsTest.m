@@ -35,8 +35,7 @@
     [[that oneOf:testObject] returnSomething]; [that will:returnObject(expectedObject)];
   }];
   
-  id result = [testObject returnSomething];
-  STAssertEquals(expectedObject, result, @"Expected test object to return '%@', but returned %@", expectedObject, result);
+  assertThat([testObject returnSomething], equalTo(expectedObject));
 }
 
 - (void)testMocksCanCallBlocksFromAnExpectedInvocation;
@@ -53,8 +52,7 @@
   
   [testObject doSomething];
   
-  STAssertEqualObjects(@"doSomething", [someArray objectAtIndex:0], 
-      @"Expected block to add the invocation selector 'doSomething', but got %@", [someArray objectAtIndex:0]);
+  assertThat(someArray, hasItem(@"doSomething"));
 }
 
 @end
