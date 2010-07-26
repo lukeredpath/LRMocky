@@ -6,9 +6,11 @@
 //  Copyright 2010 LJR Software Limited. All rights reserved.
 //
 
+#define LRMOCKY_SHORTHAND
+#define LRMOCKY_SUGAR
+
 #import "TestHelper.h"
 #import "LRMocky.h"
-#import "LRMockySugar.h"
 
 @interface SimpleExpectationTests : SenTestCase
 {

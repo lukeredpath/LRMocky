@@ -24,3 +24,10 @@
 - (id)will:(id<LRExpectationAction>)action;
 - (id)allowing:(id)mockObject;
 @end
+
+
+#ifdef LRMOCKY_SUGAR
+#define it builder
+#define oneOf(arg)    [builder oneOf:arg]
+#define allowing(arg) [builder allowing:arg]
+#endif

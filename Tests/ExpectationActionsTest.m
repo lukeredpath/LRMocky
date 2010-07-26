@@ -7,9 +7,10 @@
 //
 
 #define LRMOCKY_SHORTHAND
+#define LRMOCKY_SUGAR
+
 #import "TestHelper.h"
 #import "LRMocky.h"
-#import "LRMockySugar.h"
 
 @interface ExpectationActionsTest : SenTestCase 
 {
