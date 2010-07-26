@@ -31,6 +31,8 @@ Mocks can also be configured to return values:
       [[that oneOf:testObject] doSomething]; [that will:returnObject(someObject)];
     }];
     
+    assertThat([testObject doSomething], equalTo(someObject));
+    
 Or perform a block:
 
     id outsideTheBlock = nil;
@@ -42,6 +44,7 @@ Or perform a block:
     }];
     
     [context assertSatisfied];
+    [testObject doSomething];
     
     assertThat(outsideTheBlock, equalTo(@"called the block"));
     
