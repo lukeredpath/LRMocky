@@ -39,29 +39,18 @@
   for (int i = 2; i < [methodSignature numberOfArguments]; i++) {
     const char *argType = [methodSignature getArgumentTypeAtIndex:i];
     
-    if (*argType == *@encode(id)) {
-      id receivedArg;
-      id expectedArg;
-      
-      [invocation getArgument:&receivedArg atIndex:i];
-      [expectedInvocation getArgument:&expectedArg atIndex:i];
-      
-      matchesParameters = [receivedArg isEqual:expectedArg];
+    void *receivedArg;
+    void *expectedArg;
+    
+    [invocation getArgument:&receivedArg atIndex:i];
+    [expectedInvocation getArgument:&expectedArg atIndex:i];
+    
+    if (*argType == *@encode(id)) {      
+      matchesParameters = [(id)receivedArg isEqual:(id)expectedArg];
     } 
-    else if(*argType == *@encode(int))
-    {
-      int receivedArg;
-      int expectedArg;
-      
-      [invocation getArgument:&receivedArg atIndex:i];
-      [expectedInvocation getArgument:&expectedArg atIndex:i];
-      
-      matchesParameters = (receivedArg == expectedArg);
-    }
     else
     {
-      NSLog(@"Unknown argType %c", *argType);
-      matchesParameters = NO;
+      matchesParameters = (receivedArg == expectedArg);
     }
   }
   return matchesParameters;

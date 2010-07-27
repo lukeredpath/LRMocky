@@ -18,7 +18,8 @@
 @implementation InvocationTesterObject
 
 - (id)takesAnObject:(id)object { return nil; }
-- (id)takesAnInt:(int)anInt { return 0; }
+- (id)takesAnInt:(int)anInt { return nil; }
+- (id)takesAFloat:(float)aFloat { return nil; }
 
 @end
 
@@ -75,7 +76,7 @@
                  equalToBool(NO));
 }
 
-- (void)testCanCompareObjectIntegerParameters
+- (void)testCanCompareIntegerParameters
 {
   NSInvocation *expected = [[capture takesAnInt:10] invocation];
   LRInvocationComparitor *comparitor = [LRInvocationComparitor comparitorForInvocation:expected];
@@ -87,5 +88,16 @@
                  equalToBool(NO));
 }
 
+- (void)testCanCompareFloatParameters
+{
+  NSInvocation *expected = [[capture takesAFloat:3.14] invocation];
+  LRInvocationComparitor *comparitor = [LRInvocationComparitor comparitorForInvocation:expected];
+  
+  assertThatBool([comparitor matchesParameters:[[capture takesAFloat:3.14] invocation]], 
+                 equalToBool(YES));
+  
+  assertThatBool([comparitor matchesParameters:[[capture takesAFloat:10.45] invocation]], 
+                 equalToBool(NO));
+}
 
 @end
