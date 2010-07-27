@@ -84,6 +84,12 @@
   return self;
 }
 
+- (id)never:(id)mockObject;
+{
+  [self prepareExpectationForObject:mockObject withCardinality:LRM_never()];
+  return self;
+}
+
 - (void)forwardInvocation:(NSInvocation *)invocation
 {
   self.currentExpecation.invocation = invocation;

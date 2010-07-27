@@ -216,5 +216,29 @@
   assertThat(testCase, passed());
 }
 
+#pragma mark Never allowed
+
+- (void)testCanSpecifyExpectationIsNotAllowedAndFailIfItIsCalled
+{
+  [context checking:^(LRExpectationBuilder *builder){
+    [never(testObject) doSomething];
+  }];
+  
+  [testObject doSomething];
+  [context assertSatisfied];
+  
+  assertThat(testCase, failedWithNumberOfFailures(1));
+}
+
+- (void)testCanSpecifyExpectationIsNotAllowedAndPassIfItIsNotCalled
+{
+  [context checking:^(LRExpectationBuilder *builder){
+    [never(testObject) doSomething];
+  }];
+  
+  [context assertSatisfied];
+  
+  assertThat(testCase, passed());
+}
 
 @end

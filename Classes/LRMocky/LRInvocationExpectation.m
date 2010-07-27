@@ -182,3 +182,22 @@ id<LRExpectationCardinality> LRM_between(int min, int max)
 {
   return [[[LRBetweenCardinality alloc] initWithMinimum:min andMaximum:max] autorelease];
 }
+
+@implementation LRNeverCardinality
+
+- (BOOL)satisfiedBy:(int)numberOfInvocations
+{
+  return numberOfInvocations == 0;
+}
+
+- (NSString *)description
+{
+  return @"never";
+}
+
+@end
+
+id<LRExpectationCardinality> LRM_never()
+{
+  return [[[LRNeverCardinality alloc] init] autorelease];
+}

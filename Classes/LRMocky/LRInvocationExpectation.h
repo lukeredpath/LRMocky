@@ -60,3 +60,8 @@ id<LRExpectationCardinality> LRM_atMost(int anInt);
 
 id<LRExpectationCardinality> LRM_between(int min, int max);
 
+@interface LRNeverCardinality : NSObject <LRExpectationCardinality> 
+{}
+@end
+
+id<LRExpectationCardinality> LRM_never();

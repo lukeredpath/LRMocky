@@ -28,6 +28,7 @@
 - (id)between:(int)minimum and:(int)maximum of:(id)mockObject;
 - (id)will:(id<LRExpectationAction>)action;
 - (id)allowing:(id)mockObject;
+- (id)never:(id)mockObject;
 @end
 
 
@@ -36,6 +37,7 @@
 #define it             builder
 #define oneOf(arg)    [builder oneOf:arg]
 #define allowing(arg) [builder allowing:arg]
+#define never(arg)    [builder never:arg]
 #define exactly(x)     builder exactly:x
 #define atLeast(x)     builder atLeast:x
 #define atMost(x)      builder atMost:x
