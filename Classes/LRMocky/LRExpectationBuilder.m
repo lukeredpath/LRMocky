@@ -70,6 +70,12 @@
   return self;
 }
 
+- (id)between:(int)minimum and:(int)maximum of:(id)mockObject;
+{
+  [self prepareExpectationForObject:mockObject withCardinality:LRM_between(minimum, maximum)];
+  return self;
+}
+
 - (id)allowing:(id)mockObject;
 {
   self.currentExpecation = [LRAllowingInvocation expectation];

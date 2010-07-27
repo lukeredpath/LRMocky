@@ -51,3 +51,12 @@ id<LRExpectationCardinality> LRM_atLeast(int anInt);
 
 id<LRExpectationCardinality> LRM_atMost(int anInt);
 
+@interface LRBetweenCardinality : NSObject <LRExpectationCardinality> {
+  int minimum;
+  int maximum;
+}
+- (id)initWithMinimum:(int)theMinimum andMaximum:(int)theMaximum;
+@end
+
+id<LRExpectationCardinality> LRM_between(int min, int max);
+

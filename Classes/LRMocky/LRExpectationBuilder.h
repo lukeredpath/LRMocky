@@ -25,6 +25,7 @@
 - (id)exactly:(int)numberOfTimes of:(id)mockObject;
 - (id)atLeast:(int)minimum of:(id)mockObject;
 - (id)atMost:(int)maximum of:(id)mockObject;
+- (id)between:(int)minimum and:(int)maximum of:(id)mockObject;
 - (id)will:(id<LRExpectationAction>)action;
 - (id)allowing:(id)mockObject;
 @end
@@ -38,4 +39,5 @@
 #define exactly(x)     builder exactly:x
 #define atLeast(x)     builder atLeast:x
 #define atMost(x)      builder atMost:x
+#define between(x, y)  builder between:x and:y
 #endif

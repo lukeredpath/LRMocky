@@ -18,6 +18,8 @@
 
 @implementation CardinalityTests
 
+#pragma mark Exactly (x) times
+
 - (void)testCanSpecifyExpectationIsCalledOnceAndFailIfCalledTwice
 {
   [context checking:^(LRExpectationBuilder *builder){
@@ -58,6 +60,8 @@
   assertThat(testCase, failedWithNumberOfFailures(1));
 }
 
+#pragma mark At least (x) times
+
 - (void)testCanSpecifyExpectationIsCalledAtLeastNumberOfTimesAndFailIfCalledFewerTimes
 {
   [context checking:^(LRExpectationBuilder *builder){
@@ -97,6 +101,8 @@
   assertThat(testCase, passed());
 }
 
+#pragma mark At most (x) times
+
 - (void)testCanSpecifyExpectationIsCalledAtMostNumberOfTimesAndFailIfCalledMoreTimes
 {
   [context checking:^(LRExpectationBuilder *builder){
@@ -135,5 +141,80 @@
   
   assertThat(testCase, passed());
 }
+
+#pragma mark Between (x) and (y) times
+
+- (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndFailIfCalledMoreTimesThanTheUpperLimit
+{
+  [context checking:^(LRExpectationBuilder *builder){
+    [[between(2, 5) of:testObject] doSomething];
+  }];
+  
+  [testObject doSomething];
+  [testObject doSomething];
+  [testObject doSomething];
+  [testObject doSomething];
+  [testObject doSomething];
+  [testObject doSomething];
+  [context assertSatisfied];
+  
+  assertThat(testCase, failedWithNumberOfFailures(1));
+}
+
+- (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndFailIfCalledFewerTimesThanTheLowerLimit
+{
+  [context checking:^(LRExpectationBuilder *builder){
+    [[between(2, 5) of:testObject] doSomething];
+  }];
+  
+  [testObject doSomething];
+  [context assertSatisfied];
+  
+  assertThat(testCase, failedWithNumberOfFailures(1));
+}
+
+- (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndPassIfCalledLowerLimitTimes
+{
+  [context checking:^(LRExpectationBuilder *builder){
+    [[between(2, 5) of:testObject] doSomething];
+  }];
+  
+  [testObject doSomething];
+  [testObject doSomething];
+  [context assertSatisfied];
+  
+  assertThat(testCase, passed());
+}
+
+- (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndPassIfCalledUpperLimitTimes
+{
+  [context checking:^(LRExpectationBuilder *builder){
+    [[between(2, 5) of:testObject] doSomething];
+  }];
+  
+  [testObject doSomething];
+  [testObject doSomething];
+  [testObject doSomething];
+  [testObject doSomething];
+  [testObject doSomething];
+  [context assertSatisfied];
+  
+  assertThat(testCase, passed());
+}
+
+- (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndPassIfCalledBetweenUpperAndLowerLimitTimes
+{
+  [context checking:^(LRExpectationBuilder *builder){
+    [[between(2, 5) of:testObject] doSomething];
+  }];
+  
+  [testObject doSomething];
+  [testObject doSomething];
+  [testObject doSomething];
+  [context assertSatisfied];
+  
+  assertThat(testCase, passed());
+}
+
 
 @end
