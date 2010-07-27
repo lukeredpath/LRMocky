@@ -28,8 +28,6 @@
 		A30176AD11FDEEFC004828C5 /* LRTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769911FDEEFC004828C5 /* LRTestCase.m */; };
 		A30176AE11FDEEFC004828C5 /* LRUnexpectedInvocation.h in Headers */ = {isa = PBXBuildFile; fileRef = A301769A11FDEEFC004828C5 /* LRUnexpectedInvocation.h */; };
 		A30176AF11FDEEFC004828C5 /* LRUnexpectedInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769B11FDEEFC004828C5 /* LRUnexpectedInvocation.m */; };
-		A30176D211FDFCEE004828C5 /* LRAllowingInvocation.h in Headers */ = {isa = PBXBuildFile; fileRef = A30176D011FDFCEE004828C5 /* LRAllowingInvocation.h */; };
-		A30176D311FDFCEE004828C5 /* LRAllowingInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A30176D111FDFCEE004828C5 /* LRAllowingInvocation.m */; };
 		A30177E511FE01DF004828C5 /* HCAllOf.h in Headers */ = {isa = PBXBuildFile; fileRef = A301779211FE01DF004828C5 /* HCAllOf.h */; };
 		A30177E611FE01DF004828C5 /* HCAllOf.mm in Sources */ = {isa = PBXBuildFile; fileRef = A301779311FE01DF004828C5 /* HCAllOf.mm */; };
 		A30177E711FE01DF004828C5 /* HCAnyOf.h in Headers */ = {isa = PBXBuildFile; fileRef = A301779411FE01DF004828C5 /* HCAnyOf.h */; };
@@ -157,8 +155,6 @@
 		A301769911FDEEFC004828C5 /* LRTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRTestCase.m; sourceTree = "<group>"; };
 		A301769A11FDEEFC004828C5 /* LRUnexpectedInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRUnexpectedInvocation.h; sourceTree = "<group>"; };
 		A301769B11FDEEFC004828C5 /* LRUnexpectedInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRUnexpectedInvocation.m; sourceTree = "<group>"; };
-		A30176D011FDFCEE004828C5 /* LRAllowingInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRAllowingInvocation.h; sourceTree = "<group>"; };
-		A30176D111FDFCEE004828C5 /* LRAllowingInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRAllowingInvocation.m; sourceTree = "<group>"; };
 		A301779211FE01DF004828C5 /* HCAllOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAllOf.h; sourceTree = "<group>"; };
 		A301779311FE01DF004828C5 /* HCAllOf.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCAllOf.mm; sourceTree = "<group>"; };
 		A301779411FE01DF004828C5 /* HCAnyOf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAnyOf.h; sourceTree = "<group>"; };
@@ -380,8 +376,6 @@
 				A301768F11FDEEFC004828C5 /* LRInvocationExpectation.m */,
 				A301769A11FDEEFC004828C5 /* LRUnexpectedInvocation.h */,
 				A301769B11FDEEFC004828C5 /* LRUnexpectedInvocation.m */,
-				A30176D011FDFCEE004828C5 /* LRAllowingInvocation.h */,
-				A30176D111FDFCEE004828C5 /* LRAllowingInvocation.m */,
 			);
 			name = Expectations;
 			sourceTree = "<group>";
@@ -603,7 +597,6 @@
 				A30176AA11FDEEFC004828C5 /* LRReturnValueAction.h in Headers */,
 				A30176AC11FDEEFC004828C5 /* LRTestCase.h in Headers */,
 				A30176AE11FDEEFC004828C5 /* LRUnexpectedInvocation.h in Headers */,
-				A30176D211FDFCEE004828C5 /* LRAllowingInvocation.h in Headers */,
 				A30177E511FE01DF004828C5 /* HCAllOf.h in Headers */,
 				A30177E711FE01DF004828C5 /* HCAnyOf.h in Headers */,
 				A30177E911FE01DF004828C5 /* HCDescribedAs.h in Headers */,
@@ -771,7 +764,6 @@
 				A30176AB11FDEEFC004828C5 /* LRReturnValueAction.m in Sources */,
 				A30176AD11FDEEFC004828C5 /* LRTestCase.m in Sources */,
 				A30176AF11FDEEFC004828C5 /* LRUnexpectedInvocation.m in Sources */,
-				A30176D311FDFCEE004828C5 /* LRAllowingInvocation.m in Sources */,
 				A30177E611FE01DF004828C5 /* HCAllOf.mm in Sources */,
 				A30177E811FE01DF004828C5 /* HCAnyOf.mm in Sources */,
 				A30177EA11FE01DF004828C5 /* HCDescribedAs.mm in Sources */,

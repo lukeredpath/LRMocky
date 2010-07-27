@@ -201,3 +201,22 @@ id<LRExpectationCardinality> LRM_never()
 {
   return [[[LRNeverCardinality alloc] init] autorelease];
 }
+
+@implementation LRAllowingCardinality
+
+- (BOOL)satisfiedBy:(int)numberOfInvocations
+{
+  return YES;
+}
+
+- (NSString *)description
+{
+  return @"any number of times";
+}
+
+@end
+
+id<LRExpectationCardinality> LRM_allowing()
+{
+  return [[[LRAllowingCardinality alloc] init] autorelease];
+}

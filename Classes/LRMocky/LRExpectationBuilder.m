@@ -10,7 +10,6 @@
 #import "LRMockObject.h"
 #import "LRMockery.h"
 #import "LRInvocationExpectation.h"
-#import "LRAllowingInvocation.h"
 
 @interface LRExpectationBuilder ()
 @property (nonatomic, retain) LRInvocationExpectation *currentExpecation;
@@ -78,9 +77,7 @@
 
 - (id)allowing:(id)mockObject;
 {
-  self.currentExpecation = [LRAllowingInvocation expectation];
-  
-  [self actAsImposterForMockObject:mockObject];
+  [self prepareExpectationForObject:mockObject withCardinality:LRM_allowing()];
   return self;
 }
 
