@@ -27,6 +27,7 @@
 {}
 - (void)doSomething;
 - (id)returnSomething;
+- (int)returnSomeValue;
 @end
 
 @protocol LRTestCase;

@@ -11,5 +11,5 @@
 #import "LRExpectationBuilder.h"
 
 // actions
-#import "LRReturnObjectAction.h"
+#import "LRReturnValueAction.h"
 #import "LRPerformBlockAction.h"

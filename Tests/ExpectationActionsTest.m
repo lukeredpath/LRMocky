@@ -87,4 +87,27 @@
   assertThat(someArray, hasItem(@"doSomething"));
 }
 
+- (void)testMocksCanReturnANonObjectValueFromAnExpectedInvocation;
+{
+  SimpleObject *testObject = [context mock:[SimpleObject class]];
+  
+  [context checking:^(LRExpectationBuilder *builder){
+    [oneOf(testObject) returnSomeValue]; [it will:returnInt(10)];
+  }];
+  
+  assertThatInt((int)[testObject returnSomeValue], equalToInt(10));
+}
+
+- (void)testMocksCanReturnANonObjectValueFromAnAllowedInvocation;
+{
+  SimpleObject *testObject = [context mock:[SimpleObject class]];
+  
+  [context checking:^(LRExpectationBuilder *builder){
+    int intValue = 10;
+    [allowing(testObject) returnSomeValue]; [it will:returnValue(&intValue)];
+  }];
+  
+  assertThatInt((int)[testObject returnSomeValue], equalToInt(10));
+}
+
 @end

@@ -61,6 +61,7 @@
 @implementation SimpleObject; 
 - (void)doSomething {}
 - (id)returnSomething { return nil; }
+- (int)returnSomeValue { return 0; }
 @end
 
 #pragma mark Custom assertions and matchers
