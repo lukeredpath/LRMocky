@@ -13,8 +13,10 @@
 #import "LRAllowingInvocation.h"
 
 @interface LRExpectationBuilder ()
-@property (nonatomic, retain) id<LRExpectation> currentExpecation;
+@property (nonatomic, retain) LRInvocationExpectation *currentExpecation;
 - (void)actAsImposterForMockObject:(LRMockObject *)mock;
+- (void)prepareExpectationForObject:(id)mockObject 
+                    withCardinality:(id<LRExpectationCardinality>)cardinality;
 @end
 
 @implementation LRExpectationBuilder
@@ -47,9 +49,24 @@
 
 - (id)oneOf:(id)mockObject;
 {
-  self.currentExpecation = [LRInvocationExpectation expectation];
-  
-  [self actAsImposterForMockObject:mockObject];
+  return [self exactly:1 of:mockObject];
+}
+
+- (id)exactly:(int)numberOfTimes of:(id)mockObject;
+{
+  [self prepareExpectationForObject:mockObject withCardinality:LRM_expectExactly(numberOfTimes)];
+  return self;
+}
+
+- (id)atLeast:(int)minimum of:(id)mockObject;
+{
+  [self prepareExpectationForObject:mockObject withCardinality:LRM_atLeast(minimum)];
+  return self;
+}
+
+- (id)atMost:(int)maximum of:(id)mockObject;
+{
+  [self prepareExpectationForObject:mockObject withCardinality:LRM_atMost(maximum)];
   return self;
 }
 
@@ -78,6 +95,15 @@
 - (void)actAsImposterForMockObject:(LRMockObject *)mock;
 {
   mockedClass = [mock mockedClass];
+}
+
+- (void)prepareExpectationForObject:(id)mockObject 
+                    withCardinality:(id<LRExpectationCardinality>)cardinality;
+{
+  self.currentExpecation = [LRInvocationExpectation expectation];
+  self.currentExpecation.cardinality = cardinality;
+  
+  [self actAsImposterForMockObject:mockObject];
 }
 
 @end

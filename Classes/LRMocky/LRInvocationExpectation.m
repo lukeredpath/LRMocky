@@ -12,6 +12,7 @@
 @implementation LRInvocationExpectation
 
 @synthesize invocation = expectedInvocation;
+@synthesize cardinality;
 
 + (id)expectation;
 {
@@ -23,6 +24,7 @@
   if (self = [super init]) {
     numberOfInvocations = 0;
     actions = [[NSMutableArray alloc] init];
+    self.cardinality = LRM_expectExactly(1); // TODO choose a better default
   }
   return self;
 }
@@ -57,7 +59,7 @@
 
 - (BOOL)isSatisfied;
 {
-  return numberOfInvocations > 0;
+  return [self.cardinality satisfiedBy:numberOfInvocations];
 }
 
 - (NSException *)failureException;
@@ -71,3 +73,86 @@
 }
 
 @end
+
+@implementation LREqualToCardinality
+
+- (id)initWithInt:(int)anInt;
+{
+  if (self = [super init]) {
+    equalToInt = anInt;
+  }
+  return self;
+}
+
+- (BOOL)satisfiedBy:(int)numberOfInvocations
+{
+  return numberOfInvocations == equalToInt;
+}
+
+- (NSString *)description
+{
+  return [NSString stringWithFormat:@"equalTo(%d)", equalToInt];
+}
+
+@end
+
+id<LRExpectationCardinality> LRM_expectExactly(int anInt)
+{
+  return [[[LREqualToCardinality alloc] initWithInt:anInt] autorelease];
+}
+
+@implementation LRAtLeastCardinality
+
+- (id)initWithMinimum:(int)theMinimum;
+{
+  if (self = [super init]) {
+    minimum = theMinimum;
+  }
+  return self;
+}
+
+- (BOOL)satisfiedBy:(int)numberOfInvocations
+{
+  return numberOfInvocations >= minimum;
+}
+
+- (NSString *)description
+{
+  return [NSString stringWithFormat:@"atLeast(%d)", minimum];
+}
+
+@end
+
+id<LRExpectationCardinality> LRM_atLeast(int anInt)
+{
+  return [[[LRAtLeastCardinality alloc] initWithMinimum:anInt] autorelease];
+}
+
+@implementation LRAtMostCardinality
+
+- (id)initWithMaximum:(int)theMaximum;
+{
+  if (self = [super init]) {
+    maximum = theMaximum;
+  }
+  return self;
+}
+
+- (BOOL)satisfiedBy:(int)numberOfInvocations
+{
+  return numberOfInvocations <= maximum;
+}
+
+- (NSString *)description
+{
+  return [NSString stringWithFormat:@"atMost(%d)", maximum];
+}
+
+@end
+
+id<LRExpectationCardinality> LRM_atMost(int anInt)
+{
+  return [[[LRAtMostCardinality alloc] initWithMaximum:anInt] autorelease];
+}
+
+

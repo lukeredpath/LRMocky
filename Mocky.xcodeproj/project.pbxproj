@@ -114,6 +114,7 @@
 		A35D65BD11FF2DE800F0C310 /* LRInvocationComparitorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D65B611FF2C3F00F0C310 /* LRInvocationComparitorTest.m */; };
 		A35D65BE11FF2DF300F0C310 /* LRInvocationComparitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D65BA11FF2C6C00F0C310 /* LRInvocationComparitor.m */; };
 		A35D65F411FF34BC00F0C310 /* LRHamcrestParameterAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D65F311FF34BC00F0C310 /* LRHamcrestParameterAdapter.m */; };
+		A35D667C11FF508B00F0C310 /* CardinalityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D667B11FF508B00F0C310 /* CardinalityTests.m */; };
 		A3C707F811FDDFE0000D2A8C /* ExpectationActionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */; };
 		A3EE4EF711FE5D64002DA61D /* LRConsecutiveCallAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4EF611FE5D64002DA61D /* LRConsecutiveCallAction.m */; };
 		A3EE4F1611FE6187002DA61D /* LRThrowExceptionAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F1511FE6187002DA61D /* LRThrowExceptionAction.m */; };
@@ -246,6 +247,7 @@
 		A35D65BA11FF2C6C00F0C310 /* LRInvocationComparitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LRInvocationComparitor.m; path = ../LRInvocationComparitor.m; sourceTree = "<group>"; };
 		A35D65F211FF34BC00F0C310 /* LRHamcrestParameterAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRHamcrestParameterAdapter.h; sourceTree = "<group>"; };
 		A35D65F311FF34BC00F0C310 /* LRHamcrestParameterAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRHamcrestParameterAdapter.m; sourceTree = "<group>"; };
+		A35D667B11FF508B00F0C310 /* CardinalityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardinalityTests.m; sourceTree = "<group>"; };
 		A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpectationActionsTest.m; sourceTree = "<group>"; };
 		A3EE4EF511FE5D64002DA61D /* LRConsecutiveCallAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRConsecutiveCallAction.h; sourceTree = "<group>"; };
 		A3EE4EF611FE5D64002DA61D /* LRConsecutiveCallAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRConsecutiveCallAction.m; sourceTree = "<group>"; };
@@ -556,6 +558,7 @@
 				A3464E8C11F2794A0080B46B /* SimpleExpectationTests.m */,
 				A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */,
 				A3EE4F5111FF1B7C002DA61D /* HamcrestIntegrationTest.m */,
+				A35D667B11FF508B00F0C310 /* CardinalityTests.m */,
 			);
 			name = Functional;
 			sourceTree = "<group>";
@@ -751,6 +754,7 @@
 				A3EE4F5911FF1C10002DA61D /* FunctionalMockeryTestCase.m in Sources */,
 				A35D65BD11FF2DE800F0C310 /* LRInvocationComparitorTest.m in Sources */,
 				A35D65F411FF34BC00F0C310 /* LRHamcrestParameterAdapter.m in Sources */,
+				A35D667C11FF508B00F0C310 /* CardinalityTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
