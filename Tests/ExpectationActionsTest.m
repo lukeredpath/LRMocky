@@ -11,23 +11,13 @@
 
 #import "TestHelper.h"
 #import "LRMocky.h"
+#import "FunctionalMockeryTestCase.h"
 
-@interface ExpectationActionsTest : SenTestCase 
-{
-  LRMockery *context;
-  FakeTestCase *testCase;
-  SimpleObject *testObject;
-}
+@interface ExpectationActionsTest : FunctionalMockeryTestCase 
+{}
 @end
 
 @implementation ExpectationActionsTest
-
-- (void)setUp;
-{
-  testCase = [FakeTestCase new];
-  context = [[LRMockery mockeryForTestCase:testCase] retain];
-  testObject = [[context mock:[SimpleObject class]] retain];
-}
 
 - (void)testMocksCanReturnAnObjectFromAnExpectedInvocation;
 {

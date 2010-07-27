@@ -11,26 +11,16 @@
 
 #import "TestHelper.h"
 #import "LRMocky.h"
+#import "FunctionalMockeryTestCase.h"
 
-@interface SimpleExpectationTests : SenTestCase
-{
-  LRMockery *context;
-  FakeTestCase *testCase;
-}
+@interface SimpleExpectationTests : FunctionalMockeryTestCase
+{}
 @end
 
 @implementation SimpleExpectationTests
 
-- (void)setUp;
-{
-  testCase = [FakeTestCase new];
-  context = [[LRMockery mockeryForTestCase:testCase] retain];
-}
-
 - (void)testCanExpectSingleMethodCallAndPass;
 {
-  SimpleObject *testObject = [context mock:[SimpleObject class]];
-  
   [context checking:^(LRExpectationBuilder *builder){
     [oneOf(testObject) doSomething];
   }];
@@ -43,8 +33,6 @@
 
 - (void)testCanExpectSingleMethodCallAndFail;
 {
-  SimpleObject *testObject = [context mock:[SimpleObject class]];
-  
   [context checking:^(LRExpectationBuilder *builder){
     [oneOf(testObject) doSomething];
   }];
@@ -56,8 +44,6 @@
 
 - (void)testFailsWhenUnexpectedMethodIsCalled;
 {
-  SimpleObject *testObject = [context mock:[SimpleObject class]];
-  
   [testObject doSomething];  
   [context assertSatisfied];
 
@@ -66,8 +52,6 @@
 
 - (void)testCanAllowSingleMethodCellAndPassWhenItIsCalled;
 {
-  SimpleObject *testObject = [context mock:[SimpleObject class]];
-  
   [context checking:^(LRExpectationBuilder *builder){
     [allowing(testObject) doSomething];
   }];
@@ -80,8 +64,6 @@
 
 - (void)testCanAllowSingleMethodCellAndPassWhenItIsNotCalled;
 {
-  SimpleObject *testObject = [context mock:[SimpleObject class]];
-  
   [context checking:^(LRExpectationBuilder *builder){
     [allowing(testObject) doSomething];
   }];

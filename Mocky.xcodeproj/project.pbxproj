@@ -115,6 +115,8 @@
 		A3EE4EF711FE5D64002DA61D /* LRConsecutiveCallAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4EF611FE5D64002DA61D /* LRConsecutiveCallAction.m */; };
 		A3EE4F1611FE6187002DA61D /* LRThrowExceptionAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F1511FE6187002DA61D /* LRThrowExceptionAction.m */; };
 		A3EE4F3B11FF1680002DA61D /* LRMultipleAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F3A11FF1680002DA61D /* LRMultipleAction.m */; };
+		A3EE4F5211FF1B7C002DA61D /* HamcrestIntegrationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F5111FF1B7C002DA61D /* HamcrestIntegrationTest.m */; };
+		A3EE4F5911FF1C10002DA61D /* FunctionalMockeryTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F5811FF1C0F002DA61D /* FunctionalMockeryTestCase.m */; };
 		AA747D9F0F9514B9006C5449 /* Mocky_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* Mocky_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -243,6 +245,9 @@
 		A3EE4F1511FE6187002DA61D /* LRThrowExceptionAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRThrowExceptionAction.m; sourceTree = "<group>"; };
 		A3EE4F3911FF1680002DA61D /* LRMultipleAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMultipleAction.h; sourceTree = "<group>"; };
 		A3EE4F3A11FF1680002DA61D /* LRMultipleAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMultipleAction.m; sourceTree = "<group>"; };
+		A3EE4F5111FF1B7C002DA61D /* HamcrestIntegrationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HamcrestIntegrationTest.m; sourceTree = "<group>"; };
+		A3EE4F5711FF1C0F002DA61D /* FunctionalMockeryTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionalMockeryTestCase.h; sourceTree = "<group>"; };
+		A3EE4F5811FF1C0F002DA61D /* FunctionalMockeryTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionalMockeryTestCase.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* Mocky_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mocky_Prefix.pch; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libMocky.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMocky.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -538,6 +543,7 @@
 			children = (
 				A3464E8C11F2794A0080B46B /* SimpleExpectationTests.m */,
 				A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */,
+				A3EE4F5111FF1B7C002DA61D /* HamcrestIntegrationTest.m */,
 			);
 			name = Functional;
 			sourceTree = "<group>";
@@ -553,6 +559,8 @@
 		A346500311F293810080B46B /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				A3EE4F5711FF1C0F002DA61D /* FunctionalMockeryTestCase.h */,
+				A3EE4F5811FF1C0F002DA61D /* FunctionalMockeryTestCase.m */,
 				A346500011F2937D0080B46B /* TestHelper.h */,
 				A346500111F2937D0080B46B /* TestHelper.m */,
 			);
@@ -726,6 +734,8 @@
 				A3EE4EF711FE5D64002DA61D /* LRConsecutiveCallAction.m in Sources */,
 				A3EE4F1611FE6187002DA61D /* LRThrowExceptionAction.m in Sources */,
 				A3EE4F3B11FF1680002DA61D /* LRMultipleAction.m in Sources */,
+				A3EE4F5211FF1B7C002DA61D /* HamcrestIntegrationTest.m in Sources */,
+				A3EE4F5911FF1C10002DA61D /* FunctionalMockeryTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
