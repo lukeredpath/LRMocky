@@ -19,6 +19,16 @@
 
 @implementation HamcrestIntegrationTest
 
-
+- (void)testCanExpectInvocationWithEqualObjectAndPass
+{
+  [context checking:^(LRExpectationBuilder *builder){
+    [oneOf(testObject) returnSomethingForValue:with(equalTo(@"foo"))];
+  }];
+  
+  [testObject returnSomethingForValue:@"foo"];
+  [context assertSatisfied];
+  
+  assertThat(testCase, passed());
+}
 
 @end

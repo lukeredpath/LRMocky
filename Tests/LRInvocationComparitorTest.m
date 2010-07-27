@@ -9,6 +9,8 @@
 #import "TestHelper.h"
 #import "LRInvocationComparitor.h"
 #import "LRImposter.h"
+#define LRMOCKY_SHORTHAND
+#import "LRHamcrestParameterAdapter.h"
 
 @interface InvocationTesterObject : NSObject
 - (id)takesAnObject:(id)object;
@@ -102,7 +104,7 @@
 
 - (void)testCanCompareParametersThatUseMatchers
 {
-  NSInvocation *expected = [[capture takesAnObject:hasItem(@"foo")] invocation];
+  NSInvocation *expected = [[capture takesAnObject:with(hasItem(@"foo"))] invocation];
   LRInvocationComparitor *comparitor = [LRInvocationComparitor comparitorForInvocation:expected];
   
   assertThatBool([comparitor matchesParameters:[[capture takesAnObject:[NSArray arrayWithObject:@"foo"]] invocation]], 
