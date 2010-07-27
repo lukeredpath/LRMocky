@@ -115,4 +115,25 @@
   assertThatInt((int)[testObject returnSomeValue], equalToInt(30));
 }
 
+- (void)testMocksCanThrowAnException;
+{
+  [context checking:^(LRExpectationBuilder *builder){
+    [allowing(testObject) doSomething]; [it will:throwException([NSException exceptionWithName:@"Test Exception" reason:nil userInfo:nil])];
+  }];
+  
+  /**
+   * this will only pass using the iOS 4.0 Device SDK, it currently fails
+   * with the simulator SDK due to a runtime bug. rdar://8081169
+   * also see: http://openradar.appspot.com/8081169
+   */
+  
+  @try {
+    [testObject doSomething];
+    STFail(@"Exception expected but none was thrown");
+  }
+  @catch (NSException *exception) {
+    assertThat([exception name], equalTo(@"Test Exception"));
+  }
+}
+
 @end

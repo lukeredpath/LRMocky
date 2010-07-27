@@ -13,4 +13,5 @@
 // actions
 #import "LRReturnValueAction.h"
 #import "LRPerformBlockAction.h"
+#import "LRThrowExceptionAction.h"
 #import "LRConsecutiveCallAction.h"
