@@ -13,6 +13,9 @@
 // actions
 #import "LRReturnValueAction.h"
 #import "LRPerformBlockAction.h"
-#import "LRThrowExceptionAction.h"
 #import "LRConsecutiveCallAction.h"
 #import "LRMultipleAction.h"
+
+#if !(TARGET_IPHONE_SIMULATOR)
+#import "LRThrowExceptionAction.h"
+#endif

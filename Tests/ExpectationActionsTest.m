@@ -115,6 +115,7 @@
   assertThatInt((int)[testObject returnSomeValue], equalToInt(30));
 }
 
+#if !(TARGET_IPHONE_SIMULATOR)
 - (void)testMocksCanThrowAnException;
 {
   [context checking:^(LRExpectationBuilder *builder){
@@ -136,6 +137,7 @@
     assertThat([exception name], equalTo(@"Test Exception"));
   }
 }
+#endif
 
 - (void)testMocksCanPerformMultipleActions;
 {
