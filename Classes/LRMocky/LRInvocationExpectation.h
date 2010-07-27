@@ -9,19 +9,22 @@
 #import <Foundation/Foundation.h>
 #import "LRExpectation.h"
 #import "LRExpectationAction.h"
+#import "LRDescribable.h"
 
-@protocol LRExpectationCardinality <NSObject>
-- (BOOL)satisfiedBy:(int)numberOfInvocations;
-@end    
+@protocol LRExpectationCardinality;
 
-@interface LRInvocationExpectation : NSObject <LRExpectation> {
+@class LRMockObject;
+
+@interface LRInvocationExpectation : NSObject <LRExpectation, LRDescribable> {
   NSInvocation *expectedInvocation;
   NSUInteger numberOfInvocations;
   NSMutableArray *actions;
   id<LRExpectationCardinality> cardinality;
+  LRMockObject *mockObject;
 }
 @property (nonatomic, retain) NSInvocation *invocation;
 @property (nonatomic, retain) id<LRExpectationCardinality> cardinality;
+@property (nonatomic, retain) LRMockObject *mockObject;
 
 + (id)expectation;
 - (void)addAction:(id<LRExpectationAction>)anAction;

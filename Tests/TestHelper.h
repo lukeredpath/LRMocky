@@ -22,6 +22,7 @@
 }
 @property (nonatomic, readonly) NSArray *failures;
 - (NSUInteger)numberOfFailures;
+- (NSException *)lastFailure;
 @end
 
 @interface SimpleObject : NSObject
@@ -39,3 +40,4 @@
 
 id<HCMatcher> passed();
 id<HCMatcher> failedWithNumberOfFailures(int numberOfFailures);
+id<HCMatcher> failedWithExpectationError(NSString *errorDescription);

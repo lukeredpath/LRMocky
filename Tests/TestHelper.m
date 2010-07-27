@@ -7,6 +7,7 @@
 //
 
 #import "TestHelper.h"
+#import "LRExpectation.h"
 
 @implementation NSInvocation (LRAdditions)
 
@@ -55,7 +56,12 @@
 
 - (NSString *)description;
 {
-  return [NSString stringWithFormat:@"MockTestCase with %d failures", [self numberOfFailures]];
+  return [NSString stringWithFormat:@"MockTestCase with %d failures, last failure %@: %@", [self numberOfFailures], [[self lastFailure] name], [self lastFailure]];
+}
+
+- (NSException *)lastFailure;
+{
+  return [failures lastObject];
 }
 
 @end
@@ -72,6 +78,26 @@
 
 #pragma mark Custom assertions and matchers
 
+id<HCMatcher> isExceptionOfType(id<HCMatcher>nameMatcher)
+{
+  NSInvocation *nameInvocation = [HCInvocationMatcher createInvocationForSelector:@selector(name) onClass:[NSException class]];
+  
+  return [[[HCInvocationMatcher alloc] initWithInvocation:nameInvocation matching:nameMatcher] autorelease];
+}
+
+id<HCMatcher> isExceptionOfTypeWithDescription(id<HCMatcher>nameMatcher, id<HCMatcher>descMatcher)
+{
+  NSInvocation *nameInvocation = [HCInvocationMatcher 
+    createInvocationForSelector:@selector(name) onClass:[NSException class]];
+  NSInvocation *descInvocation = [HCInvocationMatcher 
+    createInvocationForSelector:@selector(description) onClass:[NSException class]];
+  
+  return allOf(
+    [[[HCInvocationMatcher alloc] initWithInvocation:nameInvocation matching:nameMatcher] autorelease],
+    [[[HCInvocationMatcher alloc] initWithInvocation:descInvocation matching:descMatcher] autorelease],
+  nil);
+}
+
 id<HCMatcher> passed()
 {
   id<HCMatcher> valueMatcher = [HCIsEqual isEqualTo:[NSNumber numberWithInt:0]];
@@ -84,5 +110,12 @@ id<HCMatcher> failedWithNumberOfFailures(int numberOfFailures)
   id<HCMatcher> valueMatcher = [HCIsEqual isEqualTo:[NSNumber numberWithInt:numberOfFailures]];
   NSInvocation *invocation   = [HCInvocationMatcher createInvocationForSelector:@selector(numberOfFailuresAsNumber) onClass:[FakeTestCase class]];
   return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:valueMatcher] autorelease];
+}
+
+id<HCMatcher> failedWithExpectationError(NSString *errorDescription)
+{
+  id<HCMatcher> exceptionMatcher = isExceptionOfTypeWithDescription(equalTo(LRMockyExpectationError), containsString(errorDescription));
+  NSInvocation *invocation   = [HCInvocationMatcher createInvocationForSelector:@selector(lastFailure) onClass:[FakeTestCase class]];
+  return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:exceptionMatcher] autorelease];
 }
 

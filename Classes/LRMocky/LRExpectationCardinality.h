@@ -7,6 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LRDescribable.h"
+
+@protocol LRExpectationCardinality <NSObject, LRDescribable>
+- (BOOL)satisfiedBy:(int)numberOfInvocations;
+@end
 
 @interface LREqualToCardinality : NSObject <LRExpectationCardinality> {
   int equalToInt;

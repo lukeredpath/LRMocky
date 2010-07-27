@@ -7,6 +7,7 @@
 //
 
 #import "LRExpectationCardinality.h"
+#import "LRExpectationMessage.h"
 
 @implementation LREqualToCardinality
 
@@ -25,7 +26,12 @@
 
 - (NSString *)description
 {
-  return [NSString stringWithFormat:@"equalTo(%d)", equalToInt];
+  return [NSString stringWithFormat:@"exactly(%d)", equalToInt];
+}
+
+- (void)describeTo:(LRExpectationMessage *)message
+{
+  [message append:[NSString stringWithFormat:@"%@ times", [self description]]];
 }
 
 @end
@@ -55,6 +61,11 @@ id<LRExpectationCardinality> LRM_expectExactly(int anInt)
   return [NSString stringWithFormat:@"atLeast(%d)", minimum];
 }
 
+- (void)describeTo:(LRExpectationMessage *)message
+{
+  
+}
+
 @end
 
 id<LRExpectationCardinality> LRM_atLeast(int anInt)
@@ -80,6 +91,11 @@ id<LRExpectationCardinality> LRM_atLeast(int anInt)
 - (NSString *)description
 {
   return [NSString stringWithFormat:@"atMost(%d)", maximum];
+}
+
+- (void)describeTo:(LRExpectationMessage *)message
+{
+  
 }
 
 @end
@@ -110,6 +126,11 @@ id<LRExpectationCardinality> LRM_atMost(int anInt)
   return [NSString stringWithFormat:@"between(%d and %d)", minimum, maximum];
 }
 
+- (void)describeTo:(LRExpectationMessage *)message
+{
+  
+}
+
 @end
 
 id<LRExpectationCardinality> LRM_between(int min, int max)
@@ -129,6 +150,11 @@ id<LRExpectationCardinality> LRM_between(int min, int max)
   return @"never";
 }
 
+- (void)describeTo:(LRExpectationMessage *)message
+{
+  
+}
+
 @end
 
 id<LRExpectationCardinality> LRM_never()
@@ -146,6 +172,11 @@ id<LRExpectationCardinality> LRM_never()
 - (NSString *)description
 {
   return @"any number of times";
+}
+
+- (void)describeTo:(LRExpectationMessage *)message
+{
+  
 }
 
 @end

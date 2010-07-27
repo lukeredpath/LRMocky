@@ -114,6 +114,7 @@
 		A35D65F411FF34BC00F0C310 /* LRHamcrestParameterAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D65F311FF34BC00F0C310 /* LRHamcrestParameterAdapter.m */; };
 		A35D667C11FF508B00F0C310 /* CardinalityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D667B11FF508B00F0C310 /* CardinalityTests.m */; };
 		A391554911FF5F0900FE7C49 /* LRExpectationCardinality.m in Sources */ = {isa = PBXBuildFile; fileRef = A391554811FF5F0900FE7C49 /* LRExpectationCardinality.m */; };
+		A391557111FF661400FE7C49 /* LRExpectationMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A391557011FF661400FE7C49 /* LRExpectationMessage.m */; };
 		A3C707F811FDDFE0000D2A8C /* ExpectationActionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */; };
 		A3EE4EF711FE5D64002DA61D /* LRConsecutiveCallAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4EF611FE5D64002DA61D /* LRConsecutiveCallAction.m */; };
 		A3EE4F1611FE6187002DA61D /* LRThrowExceptionAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F1511FE6187002DA61D /* LRThrowExceptionAction.m */; };
@@ -247,6 +248,9 @@
 		A35D667B11FF508B00F0C310 /* CardinalityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardinalityTests.m; sourceTree = "<group>"; };
 		A391554711FF5F0900FE7C49 /* LRExpectationCardinality.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectationCardinality.h; sourceTree = "<group>"; };
 		A391554811FF5F0900FE7C49 /* LRExpectationCardinality.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRExpectationCardinality.m; sourceTree = "<group>"; };
+		A391556F11FF661400FE7C49 /* LRExpectationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LRExpectationMessage.h; path = ../LRExpectationMessage.h; sourceTree = "<group>"; };
+		A391557011FF661400FE7C49 /* LRExpectationMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LRExpectationMessage.m; path = ../LRExpectationMessage.m; sourceTree = "<group>"; };
+		A391557A11FF670500FE7C49 /* LRDescribable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LRDescribable.h; path = ../LRDescribable.h; sourceTree = "<group>"; };
 		A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpectationActionsTest.m; sourceTree = "<group>"; };
 		A3EE4EF511FE5D64002DA61D /* LRConsecutiveCallAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRConsecutiveCallAction.h; sourceTree = "<group>"; };
 		A3EE4EF611FE5D64002DA61D /* LRConsecutiveCallAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRConsecutiveCallAction.m; sourceTree = "<group>"; };
@@ -349,6 +353,9 @@
 				A35D65BA11FF2C6C00F0C310 /* LRInvocationComparitor.m */,
 				A35D65F211FF34BC00F0C310 /* LRHamcrestParameterAdapter.h */,
 				A35D65F311FF34BC00F0C310 /* LRHamcrestParameterAdapter.m */,
+				A391556F11FF661400FE7C49 /* LRExpectationMessage.h */,
+				A391557011FF661400FE7C49 /* LRExpectationMessage.m */,
+				A391557A11FF670500FE7C49 /* LRDescribable.h */,
 			);
 			path = LRMocky;
 			sourceTree = "<group>";
@@ -754,6 +761,7 @@
 				A35D65F411FF34BC00F0C310 /* LRHamcrestParameterAdapter.m in Sources */,
 				A35D667C11FF508B00F0C310 /* CardinalityTests.m in Sources */,
 				A391554911FF5F0900FE7C49 /* LRExpectationCardinality.m in Sources */,
+				A391557111FF661400FE7C49 /* LRExpectationMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

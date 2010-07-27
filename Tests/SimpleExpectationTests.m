@@ -39,7 +39,8 @@
   
   [context assertSatisfied];
   
-  assertThat(testCase, failedWithNumberOfFailures(1));
+  assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
+    @"Expected %@ to receive doSomething exactly(1) times but received it 0 times", testObject]));
 }
 
 - (void)testFailsWhenUnexpectedMethodIsCalled;

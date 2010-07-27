@@ -8,11 +8,16 @@
 
 #import "LRInvocationExpectation.h"
 #import "LRInvocationComparitor.h"
+#import "LRExpectationCardinality.h"
+#import "LRExpectationMessage.h"
+
+NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 
 @implementation LRInvocationExpectation
 
 @synthesize invocation = expectedInvocation;
 @synthesize cardinality;
+@synthesize mockObject;
 
 + (id)expectation;
 {
@@ -31,6 +36,8 @@
 
 - (void)dealloc;
 {
+  [mockObject release];
+  [cardinality release];
   [actions release];
   [expectedInvocation release];
   [super dealloc];
@@ -64,7 +71,16 @@
 
 - (NSException *)failureException;
 {
-  return [NSException exceptionWithName:@"test failure" reason:@"just testing" userInfo:nil];
+  LRExpectationMessage *errorMessage = [[[LRExpectationMessage alloc] init] autorelease];
+  [self describeTo:errorMessage];
+  return [NSException exceptionWithName:LRMockyExpectationError reason:errorMessage.message userInfo:nil];
+}
+
+- (void)describeTo:(LRExpectationMessage *)message
+{
+  [message append:[NSString stringWithFormat:@"Expected %@ to receive %@ ", mockObject, NSStringFromSelector([expectedInvocation selector])]];
+  [self.cardinality describeTo:message];
+  [message append:[NSString stringWithFormat:@" but received it %d times", numberOfInvocations]];
 }
 
 - (void)addAction:(id<LRExpectationAction>)anAction;

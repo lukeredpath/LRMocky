@@ -10,6 +10,7 @@
 #import "LRMockObject.h"
 #import "LRMockery.h"
 #import "LRInvocationExpectation.h"
+#import "LRExpectationCardinality.h"
 
 @interface LRExpectationBuilder ()
 @property (nonatomic, retain) LRInvocationExpectation *currentExpecation;
@@ -111,6 +112,7 @@
 {
   self.currentExpecation = [LRInvocationExpectation expectation];
   self.currentExpecation.cardinality = cardinality;
+  self.currentExpecation.mockObject = mockObject;
   
   [self actAsImposterForMockObject:mockObject];
 }
