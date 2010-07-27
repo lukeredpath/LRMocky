@@ -112,6 +112,7 @@
 		A346500211F2937D0080B46B /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A346500111F2937D0080B46B /* TestHelper.m */; };
 		A34650D411F857680080B46B /* LRMockeryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A34650D311F857680080B46B /* LRMockeryTest.m */; };
 		A3C707F811FDDFE0000D2A8C /* ExpectationActionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */; };
+		A3EE4EF711FE5D64002DA61D /* LRConsecutiveCallAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4EF611FE5D64002DA61D /* LRConsecutiveCallAction.m */; };
 		AA747D9F0F9514B9006C5449 /* Mocky_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* Mocky_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -234,6 +235,8 @@
 		A346500111F2937D0080B46B /* TestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHelper.m; sourceTree = "<group>"; };
 		A34650D311F857680080B46B /* LRMockeryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMockeryTest.m; sourceTree = "<group>"; };
 		A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpectationActionsTest.m; sourceTree = "<group>"; };
+		A3EE4EF511FE5D64002DA61D /* LRConsecutiveCallAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRConsecutiveCallAction.h; sourceTree = "<group>"; };
+		A3EE4EF611FE5D64002DA61D /* LRConsecutiveCallAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRConsecutiveCallAction.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* Mocky_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mocky_Prefix.pch; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libMocky.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMocky.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -334,6 +337,8 @@
 				A301769511FDEEFC004828C5 /* LRPerformBlockAction.m */,
 				A301769611FDEEFC004828C5 /* LRReturnValueAction.h */,
 				A301769711FDEEFC004828C5 /* LRReturnValueAction.m */,
+				A3EE4EF511FE5D64002DA61D /* LRConsecutiveCallAction.h */,
+				A3EE4EF611FE5D64002DA61D /* LRConsecutiveCallAction.m */,
 			);
 			name = Actions;
 			sourceTree = "<group>";
@@ -708,6 +713,7 @@
 				A346500211F2937D0080B46B /* TestHelper.m in Sources */,
 				A34650D411F857680080B46B /* LRMockeryTest.m in Sources */,
 				A3C707F811FDDFE0000D2A8C /* ExpectationActionsTest.m in Sources */,
+				A3EE4EF711FE5D64002DA61D /* LRConsecutiveCallAction.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

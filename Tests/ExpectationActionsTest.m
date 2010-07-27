@@ -16,6 +16,7 @@
 {
   LRMockery *context;
   FakeTestCase *testCase;
+  SimpleObject *testObject;
 }
 @end
 
@@ -25,12 +26,11 @@
 {
   testCase = [FakeTestCase new];
   context = [[LRMockery mockeryForTestCase:testCase] retain];
+  testObject = [[context mock:[SimpleObject class]] retain];
 }
 
 - (void)testMocksCanReturnAnObjectFromAnExpectedInvocation;
 {
-  SimpleObject *testObject = [context mock:[SimpleObject class]];
-  
   NSString *expectedObject = @"some string";
   
   [context checking:^(LRExpectationBuilder *builder){
@@ -42,8 +42,6 @@
 
 - (void)testMocksCanReturnAnObjectFromAnAllowedInvocation;
 {
-  SimpleObject *testObject = [context mock:[SimpleObject class]];
-  
   NSString *expectedObject = @"some string";
   
   [context checking:^(LRExpectationBuilder *builder){
@@ -55,8 +53,6 @@
 
 - (void)testMocksCanCallBlocksFromAnExpectedInvocation;
 {
-  SimpleObject *testObject = [context mock:[SimpleObject class]];
-  
   NSMutableArray *someArray = [NSMutableArray array];
   
   [context checking:^(LRExpectationBuilder *builder){
@@ -72,8 +68,6 @@
 
 - (void)testMocksCanCallBlocksFromAnAllowedInvocation;
 {
-  SimpleObject *testObject = [context mock:[SimpleObject class]];
-  
   NSMutableArray *someArray = [NSMutableArray array];
   
   [context checking:^(LRExpectationBuilder *builder){
@@ -89,8 +83,6 @@
 
 - (void)testMocksCanReturnANonObjectValueFromAnExpectedInvocation;
 {
-  SimpleObject *testObject = [context mock:[SimpleObject class]];
-  
   [context checking:^(LRExpectationBuilder *builder){
     [oneOf(testObject) returnSomeValue]; [it will:returnInt(10)];
   }];
@@ -100,14 +92,27 @@
 
 - (void)testMocksCanReturnANonObjectValueFromAnAllowedInvocation;
 {
-  SimpleObject *testObject = [context mock:[SimpleObject class]];
-  
   [context checking:^(LRExpectationBuilder *builder){
-    int intValue = 10;
-    [allowing(testObject) returnSomeValue]; [it will:returnValue(&intValue)];
+    [allowing(testObject) returnSomeValue]; [it will:returnInt(20)];
+  }];
+  
+  assertThatInt((int)[testObject returnSomeValue], equalToInt(20));
+}
+
+- (void)testMocksCanReturnDifferentValuesOnConsecutiveCalls;
+{
+  [context checking:^(LRExpectationBuilder *builder){
+    [allowing(testObject) returnSomeValue]; [it will:onConsecutiveCalls(
+      returnInt(10),
+      returnInt(20),
+      returnInt(30),                                       
+     nil)];
   }];
   
   assertThatInt((int)[testObject returnSomeValue], equalToInt(10));
+  assertThatInt((int)[testObject returnSomeValue], equalToInt(20));
+  assertThatInt((int)[testObject returnSomeValue], equalToInt(30));
+  assertThatInt((int)[testObject returnSomeValue], equalToInt(30));
 }
 
 @end
