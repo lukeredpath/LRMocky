@@ -125,6 +125,7 @@
    * this will only pass using the iOS 4.0 Device SDK, it currently fails
    * with the simulator SDK due to a runtime bug. rdar://8081169
    * also see: http://openradar.appspot.com/8081169
+   * filed dupe: http://openradar.appspot.com/
    */
   
   @try {
@@ -134,6 +135,23 @@
   @catch (NSException *exception) {
     assertThat([exception name], equalTo(@"Test Exception"));
   }
+}
+
+- (void)testMocksCanPerformMultipleActions;
+{
+  NSMutableArray *array = [NSMutableArray array];
+
+  [context checking:^(LRExpectationBuilder *builder){
+    [allowing(testObject) returnSomething]; [it will:doAll(
+      returnObject(@"test"),
+      performBlock(^(NSInvocation *invocation){ 
+        [array addObject:@"from block"];
+      }), 
+    nil)];
+  }];
+  
+  assertThat([testObject returnSomething], equalTo(@"test"));
+  assertThat(array, hasItem(@"from block"));
 }
 
 @end

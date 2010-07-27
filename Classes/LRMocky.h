@@ -15,3 +15,4 @@
 #import "LRPerformBlockAction.h"
 #import "LRThrowExceptionAction.h"
 #import "LRConsecutiveCallAction.h"
+#import "LRMultipleAction.h"
