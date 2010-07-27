@@ -73,4 +73,64 @@
   assertThat(testCase, passed());
 }
 
+- (void)testCanExpectMethodCallWithSpecificParametersAndPassWhenTheCorrectParameterIsUsed;
+{
+  [context checking:^(LRExpectationBuilder *builder){
+    [oneOf(testObject) returnSomethingForValue:@"one"];
+  }];
+  
+  [testObject returnSomethingForValue:@"one"];
+  [context assertSatisfied];
+  
+  assertThat(testCase, passed());
+}
+
+- (void)testCanExpectMethodCallWithSpecificParametersAndFailWhenTheWrongParameterIsUsed;
+{
+  [context checking:^(LRExpectationBuilder *builder){
+    [oneOf(testObject) returnSomethingForValue:@"one"];
+  }];
+  
+  [testObject returnSomethingForValue:@"two"];
+  [context assertSatisfied];
+  
+  assertThat(testCase, failedWithNumberOfFailures(1));
+}
+
+- (void)testCanExpectMethodCallWithSpecificParametersAndFailWhenAtLeastOneParameterIsWrong;
+{
+  [context checking:^(LRExpectationBuilder *builder){
+    [oneOf(testObject) doSomethingWith:@"foo" andObject:@"bar"];
+  }];
+  
+  [testObject doSomethingWith:@"foo" andObject:@"qux"];
+  [context assertSatisfied];
+  
+  assertThat(testCase, failedWithNumberOfFailures(1));
+}
+
+- (void)testCanExpectMethodCallWithSpecificNonObjectParametersAndPass;
+{
+  [context checking:^(LRExpectationBuilder *builder){
+    [oneOf(testObject) doSomethingWithInt:20];
+  }];
+  
+  [testObject doSomethingWithInt:20];
+  [context assertSatisfied];
+  
+  assertThat(testCase, passed());
+}
+
+- (void)testCanExpectMethodCallWithSpecificNonObjectParametersAndFail;
+{
+  [context checking:^(LRExpectationBuilder *builder){
+    [oneOf(testObject) doSomethingWithInt:10];
+  }];
+  
+  [testObject doSomethingWithInt:20];
+  [context assertSatisfied];
+
+  assertThat(testCase, failedWithNumberOfFailures(1));
+}
+
 @end

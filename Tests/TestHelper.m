@@ -22,6 +22,8 @@
 
 @implementation FakeTestCase
 
+@synthesize failures;
+
 - (id)init
 {
   if (self = [super init]) {
@@ -62,6 +64,9 @@
 - (void)doSomething {}
 - (id)returnSomething { return nil; }
 - (int)returnSomeValue { return 0; }
+- (id)returnSomethingForValue:(NSString *)value { return nil; }
+- (void)doSomethingWith:(id)object andObject:(id)another {}
+- (void)doSomethingWithInt:(NSInteger)anInt {}
 @end
 
 #pragma mark Custom assertions and matchers

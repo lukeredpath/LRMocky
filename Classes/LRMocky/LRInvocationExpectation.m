@@ -8,6 +8,9 @@
 
 #import "LRInvocationExpectation.h"
 
+@interface LRInvocationExpectation ()
+- (BOOL)calledWithCorrectParameters:(NSInvocation *)invocation;
+@end
 
 @implementation LRInvocationExpectation
 
@@ -38,16 +41,18 @@
 {
   if ([invocation selector] != [expectedInvocation selector]) {
     return NO;
-  }
+  }  
   return YES;
 }
 
 - (void)invoke:(NSInvocation *)invocation
 {
-  numberOfInvocations++;
-  
-  for (id<LRExpectationAction> action in actions) {
-    [action invoke:invocation];
+  if([self calledWithCorrectParameters:invocation]) {
+    numberOfInvocations++;
+    
+    for (id<LRExpectationAction> action in actions) {
+      [action invoke:invocation];
+    } 
   }
 }
 
@@ -64,6 +69,44 @@
 - (void)addAction:(id<LRExpectationAction>)anAction;
 {
   [actions addObject:anAction];
+}
+
+#pragma mark Private methods
+
+- (BOOL)calledWithCorrectParameters:(NSInvocation *)invocation
+{
+  NSMethodSignature *methodSignature = [invocation methodSignature];
+  
+  BOOL parametersAreCorrect = YES;
+  for (int i = 2; i < [methodSignature numberOfArguments]; i++) {
+    const char *argType = [methodSignature getArgumentTypeAtIndex:i];
+  
+    if (*argType == *@encode(id)) {
+      id receivedArg;
+      id expectedArg;
+      
+      [invocation getArgument:&receivedArg atIndex:i];
+      [expectedInvocation getArgument:&expectedArg atIndex:i];
+      
+      parametersAreCorrect = [receivedArg isEqual:expectedArg];
+    } 
+    else if(*argType == *@encode(int))
+    {
+      int receivedArg;
+      int expectedArg;
+      
+      [invocation getArgument:&receivedArg atIndex:i];
+      [expectedInvocation getArgument:&expectedArg atIndex:i];
+      
+      parametersAreCorrect = (receivedArg == expectedArg);
+    }
+    else
+    {
+      NSLog(@"Unknown argType %c", *argType);
+      parametersAreCorrect = NO;
+    }
+  }
+  return parametersAreCorrect;
 }
 
 @end

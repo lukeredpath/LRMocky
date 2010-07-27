@@ -20,6 +20,7 @@
 {
   NSMutableArray *failures;
 }
+@property (nonatomic, readonly) NSArray *failures;
 - (NSUInteger)numberOfFailures;
 @end
 
@@ -28,6 +29,9 @@
 - (void)doSomething;
 - (id)returnSomething;
 - (int)returnSomeValue;
+- (id)returnSomethingForValue:(NSString *)value;
+- (void)doSomethingWith:(id)object andObject:(id)another;
+- (void)doSomethingWithInt:(NSInteger)anInt;
 @end
 
 @protocol LRTestCase;
