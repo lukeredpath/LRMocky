@@ -111,6 +111,8 @@
 		A3464E8D11F2794A0080B46B /* SimpleExpectationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3464E8C11F2794A0080B46B /* SimpleExpectationTests.m */; };
 		A346500211F2937D0080B46B /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A346500111F2937D0080B46B /* TestHelper.m */; };
 		A34650D411F857680080B46B /* LRMockeryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A34650D311F857680080B46B /* LRMockeryTest.m */; };
+		A35D65BD11FF2DE800F0C310 /* LRInvocationComparitorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D65B611FF2C3F00F0C310 /* LRInvocationComparitorTest.m */; };
+		A35D65BE11FF2DF300F0C310 /* LRInvocationComparitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D65BA11FF2C6C00F0C310 /* LRInvocationComparitor.m */; };
 		A3C707F811FDDFE0000D2A8C /* ExpectationActionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */; };
 		A3EE4EF711FE5D64002DA61D /* LRConsecutiveCallAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4EF611FE5D64002DA61D /* LRConsecutiveCallAction.m */; };
 		A3EE4F1611FE6187002DA61D /* LRThrowExceptionAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F1511FE6187002DA61D /* LRThrowExceptionAction.m */; };
@@ -238,6 +240,9 @@
 		A346500011F2937D0080B46B /* TestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestHelper.h; sourceTree = "<group>"; };
 		A346500111F2937D0080B46B /* TestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestHelper.m; sourceTree = "<group>"; };
 		A34650D311F857680080B46B /* LRMockeryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMockeryTest.m; sourceTree = "<group>"; };
+		A35D65B611FF2C3F00F0C310 /* LRInvocationComparitorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRInvocationComparitorTest.m; sourceTree = "<group>"; };
+		A35D65B911FF2C6B00F0C310 /* LRInvocationComparitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LRInvocationComparitor.h; path = ../LRInvocationComparitor.h; sourceTree = "<group>"; };
+		A35D65BA11FF2C6C00F0C310 /* LRInvocationComparitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LRInvocationComparitor.m; path = ../LRInvocationComparitor.m; sourceTree = "<group>"; };
 		A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpectationActionsTest.m; sourceTree = "<group>"; };
 		A3EE4EF511FE5D64002DA61D /* LRConsecutiveCallAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRConsecutiveCallAction.h; sourceTree = "<group>"; };
 		A3EE4EF611FE5D64002DA61D /* LRConsecutiveCallAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRConsecutiveCallAction.m; sourceTree = "<group>"; };
@@ -336,6 +341,8 @@
 				A301769311FDEEFC004828C5 /* LRMockObject.m */,
 				A301769811FDEEFC004828C5 /* LRTestCase.h */,
 				A301769911FDEEFC004828C5 /* LRTestCase.m */,
+				A35D65B911FF2C6B00F0C310 /* LRInvocationComparitor.h */,
+				A35D65BA11FF2C6C00F0C310 /* LRInvocationComparitor.m */,
 			);
 			path = LRMocky;
 			sourceTree = "<group>";
@@ -552,6 +559,7 @@
 			isa = PBXGroup;
 			children = (
 				A34650D311F857680080B46B /* LRMockeryTest.m */,
+				A35D65B611FF2C3F00F0C310 /* LRInvocationComparitorTest.m */,
 			);
 			name = "Unit Tests";
 			sourceTree = "<group>";
@@ -736,6 +744,7 @@
 				A3EE4F3B11FF1680002DA61D /* LRMultipleAction.m in Sources */,
 				A3EE4F5211FF1B7C002DA61D /* HamcrestIntegrationTest.m in Sources */,
 				A3EE4F5911FF1C10002DA61D /* FunctionalMockeryTestCase.m in Sources */,
+				A35D65BD11FF2DE800F0C310 /* LRInvocationComparitorTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -763,6 +772,7 @@
 				A30177F411FE01DF004828C5 /* HCIsNil.mm in Sources */,
 				A30177F611FE01DF004828C5 /* HCIsNot.mm in Sources */,
 				A30177F811FE01DF004828C5 /* HCIsSame.mm in Sources */,
+				A35D65BE11FF2DF300F0C310 /* LRInvocationComparitor.m in Sources */,
 				A30177FA11FE01DF004828C5 /* HCBaseDescription.mm in Sources */,
 				A30177FC11FE01DF004828C5 /* HCBaseMatcher.mm in Sources */,
 				A30177FF11FE01DF004828C5 /* HCInvocationMatcher.mm in Sources */,
