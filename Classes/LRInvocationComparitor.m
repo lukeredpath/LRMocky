@@ -43,8 +43,8 @@
     
     [invocation getArgument:&receivedArg atIndex:i];
     [expectedInvocation getArgument:&expectedArg atIndex:i];
-    
-    if (*argType == *@encode(id)) {      
+
+    if (*argType == *@encode(id)) { 
       matchesParameters = [(id)expectedArg isEqual:(id)receivedArg];
     } 
     else

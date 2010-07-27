@@ -102,7 +102,7 @@
                  equalToBool(NO));
 }
 
-- (void)testCanCompareParametersThatUseMatchers
+- (void)testCanCompareParametersThatUseObjectMatchers
 {
   NSInvocation *expected = [[capture takesAnObject:with(hasItem(@"foo"))] invocation];
   LRInvocationComparitor *comparitor = [LRInvocationComparitor comparitorForInvocation:expected];

@@ -31,6 +31,7 @@
 - (int)returnSomeValue;
 - (id)returnSomethingForValue:(NSString *)value;
 - (void)doSomethingWith:(id)object andObject:(id)another;
+- (void)doSomethingWithObject:(id)object;
 - (void)doSomethingWithInt:(NSInteger)anInt;
 @end
 
