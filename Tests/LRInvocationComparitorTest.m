@@ -100,4 +100,16 @@
                  equalToBool(NO));
 }
 
+- (void)testCanCompareParametersThatUseMatchers
+{
+  NSInvocation *expected = [[capture takesAnObject:hasItem(@"foo")] invocation];
+  LRInvocationComparitor *comparitor = [LRInvocationComparitor comparitorForInvocation:expected];
+  
+  assertThatBool([comparitor matchesParameters:[[capture takesAnObject:[NSArray arrayWithObject:@"foo"]] invocation]], 
+                 equalToBool(YES));
+  
+  assertThatBool([comparitor matchesParameters:[[capture takesAnObject:[NSArray arrayWithObject:@"bar"]] invocation]], 
+                 equalToBool(NO));
+}
+
 @end

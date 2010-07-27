@@ -7,7 +7,7 @@
 //
 
 #import "LRInvocationComparitor.h"
-
+#import "HCMatcher.h"
 
 @implementation LRInvocationComparitor
 
@@ -46,7 +46,11 @@
     [expectedInvocation getArgument:&expectedArg atIndex:i];
     
     if (*argType == *@encode(id)) {      
-      matchesParameters = [(id)receivedArg isEqual:(id)expectedArg];
+      if ([(id)expectedArg conformsToProtocol:@protocol(HCMatcher)]) {
+        matchesParameters = [(id<HCMatcher>)expectedArg matches:(id)receivedArg];
+      } else {
+        matchesParameters = [(id)receivedArg isEqual:(id)expectedArg];
+      }
     } 
     else
     {
