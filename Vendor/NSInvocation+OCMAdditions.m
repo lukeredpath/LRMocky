@@ -186,9 +186,7 @@
 
 - (NSString *)objectDescriptionAtIndex:(int)anInt
 {
-	id object;
-	
-	[self getArgument:&object atIndex:anInt];
+	id object = [self getArgumentAtIndexAsObject:anInt];
 	if (object == nil)
 		return @"nil";
 	else if(![object isProxy] && [object isKindOfClass:[NSString class]])

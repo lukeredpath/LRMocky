@@ -68,6 +68,7 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
       [action invoke:invocation];
     } 
   } else {
+    [invocation retainArguments];
     self.similarInvocation = invocation;
   }
 }
@@ -92,7 +93,7 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
   if (numberOfArguments > 2) {
     NSMutableArray *parameters = [NSMutableArray array];
     for (int i = 2; i < numberOfArguments; i++) {
-      [parameters addObject:[NSString stringWithFormat:@"'%@'", [expectedInvocation getArgumentAtIndexAsObject:i]]];
+      [parameters addObject:[expectedInvocation objectDescriptionAtIndex:i]];
     }
     [message append:[NSString stringWithFormat:@"with(%@) ", [parameters componentsJoinedByString:@", "]]];
   } 
@@ -105,7 +106,7 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
     
     NSMutableArray *parameters = [NSMutableArray array];
     for (int i = 2; i < numberOfArguments; i++) {
-      [parameters addObject:[NSString stringWithFormat:@"'%@'", [self.similarInvocation getArgumentAtIndexAsObject:i]]];
+      [parameters addObject:[self.similarInvocation objectDescriptionAtIndex:i]];
     }
     [message append:[NSString stringWithFormat:@"with(%@).", [parameters componentsJoinedByString:@", "]]];
   }

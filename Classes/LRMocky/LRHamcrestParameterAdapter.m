@@ -30,6 +30,11 @@
   return [matcher matches:object];
 }
 
+- (NSString *)description;
+{
+  return [matcher description];
+}
+
 @end
 
 id LRM_with(id<HCMatcher> matcher)

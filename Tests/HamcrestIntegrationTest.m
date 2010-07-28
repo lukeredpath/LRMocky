@@ -40,7 +40,8 @@
   [testObject doSomethingWithObject:@"bar"];
   [context assertSatisfied];
   
-  assertThat(testCase, failedWithNumberOfFailures(1));
+  assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
+    @"Expected %@ to receive doSomethingWithObject: with(\"foo\") exactly(1) times but received it 0 times. doSomethingWithObject: was called with(@\"bar\").", testObject]));
 }
 
 - (void)testCanExpectInvocationWithIdenticalObjectAndPass
@@ -65,10 +66,12 @@
     [oneOf(testObject) doSomethingWithObject:with(sameInstance(dummy))];
   }];
   
-  [testObject doSomethingWithObject:[[[SimpleObject alloc] init] autorelease]];
+  SimpleObject *other = [[[SimpleObject alloc] init] autorelease];
+  [testObject doSomethingWithObject:other];
   [context assertSatisfied];
   
-  assertThat(testCase, failedWithNumberOfFailures(1));
+  assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
+    @"Expected %@ to receive doSomethingWithObject: with(sameInstance(<%@>)) exactly(1) times but received it 0 times. doSomethingWithObject: was called with(%@).", testObject, dummy, other]));
 }
 
 @end

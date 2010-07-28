@@ -97,7 +97,7 @@
   [context assertSatisfied];
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive returnSomethingForValue: with('one') exactly(1) times but received it 0 times. returnSomethingForValue: was called with('two').", testObject]));
+    @"Expected %@ to receive returnSomethingForValue: with(@\"one\") exactly(1) times but received it 0 times. returnSomethingForValue: was called with(@\"two\").", testObject]));
 }
 
 - (void)testCanExpectMethodCallWithSpecificParametersAndFailWhenAtLeastOneParameterIsWrong;
@@ -110,7 +110,7 @@
   [context assertSatisfied];
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomethingWith:andObject: with('foo', 'bar') exactly(1) times but received it 0 times. doSomethingWith:andObject: was called with('foo', 'qux').", testObject]));
+    @"Expected %@ to receive doSomethingWith:andObject: with(@\"foo\", @\"bar\") exactly(1) times but received it 0 times. doSomethingWith:andObject: was called with(@\"foo\", @\"qux\").", testObject]));
 }
 
 - (void)testCanExpectMethodCallWithSpecificNonObjectParametersAndPass;
@@ -135,7 +135,7 @@
   [context assertSatisfied];
 
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomethingWithInt: with('10') exactly(1) times but received it 0 times. doSomethingWithInt: was called with('20').", testObject]));
+    @"Expected %@ to receive doSomethingWithInt: with(10) exactly(1) times but received it 0 times. doSomethingWithInt: was called with(20).", testObject]));
 }
 
 @end
