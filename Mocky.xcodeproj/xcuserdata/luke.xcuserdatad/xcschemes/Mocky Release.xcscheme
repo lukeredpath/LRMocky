@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme>
    <BuildAction
-      buildConfiguration = "Debug">
+      buildConfiguration = "Release">
       <BuildableProductReferences>
          <BuildableProductReference
             BuildableProductIdentifier = "libMocky.a">
@@ -10,10 +10,11 @@
    </BuildAction>
    <TestAction>
    </TestAction>
-   <LaunchAction
-      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.GDB"
-      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.GDB">
-      <AdditionalOptions>
-      </AdditionalOptions>
-   </LaunchAction>
+   <ArchiveAction>
+      <ArchivingStrategy
+         StrategyType = "Xcode.IDEStandardArchivingStrategies.ArchivingStrategyType.DiskImage">
+         <StrategyContent>
+         </StrategyContent>
+      </ArchivingStrategy>
+   </ArchiveAction>
 </Scheme>
