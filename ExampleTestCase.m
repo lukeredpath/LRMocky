@@ -8,6 +8,7 @@
 
 #define LRMOCKY_SHORTHAND
 #define LRMOCKY_SUGAR
+#define HC_SHORTHAND
 
 #import <SenTestingKit/SenTestingKit.h>
 #import "OCHamcrest.h"
@@ -23,7 +24,7 @@
 {
   LRMockery *context = [LRMockery mockeryForTestCase:self];
 
-  id myMockString = [context mock:[NSString class]];
+  id myMockString = [context mock:[NSString class] named:@"My Mock String"];
   
   [context checking:^(LRExpectationBuilder *builder){
     [oneOf(myMockString) uppercaseString];
@@ -37,13 +38,41 @@
 {
   LRMockery *context = [LRMockery mockeryForTestCase:self];
   
-  id myMockString = [context mock:[NSString class]];
+  id myMockString = [context mock:[NSString class] named:@"My Mock String"];
   
   [context checking:^(LRExpectationBuilder *builder){
     [oneOf(myMockString) uppercaseString];
   }];
   
   [myMockString lowercaseString];
+  [context assertSatisfied];
+}
+
+- (void)testSuccessfulMockingWithHamcrest 
+{
+  LRMockery *context = [LRMockery mockeryForTestCase:self];
+  
+  id myMockString = [context mock:[NSString class] named:@"My Mock String"];
+  
+  [context checking:^(LRExpectationBuilder *builder){
+    [oneOf(myMockString) stringByAppendingString:(id)with(startsWith(@"super"))];
+  }];
+  
+  [myMockString stringByAppendingString:@"super"];
+  [context assertSatisfied];
+}
+
+- (void)testFailedMockingWithHamcrest 
+{
+  LRMockery *context = [LRMockery mockeryForTestCase:self];
+  
+  id myMockString = [context mock:[NSString class] named:@"My Mock String"];
+  
+  [context checking:^(LRExpectationBuilder *builder){
+    [oneOf(myMockString) stringByAppendingString:(id)with(startsWith(@"super"))];
+  }];
+  
+  [myMockString stringByAppendingString:@"not super"];
   [context assertSatisfied];
 }
 

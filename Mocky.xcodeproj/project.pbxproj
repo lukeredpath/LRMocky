@@ -1053,6 +1053,8 @@
 					SenTestingKit,
 					"-framework",
 					UIKit,
+					"-lstdc++",
+					"-all_load",
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "Example Tests";
@@ -1081,6 +1083,8 @@
 					SenTestingKit,
 					"-framework",
 					UIKit,
+					"-lstdc++",
+					"-all_load",
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = "Example Tests";
