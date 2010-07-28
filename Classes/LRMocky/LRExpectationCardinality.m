@@ -63,7 +63,7 @@ id<LRExpectationCardinality> LRM_expectExactly(int anInt)
 
 - (void)describeTo:(LRExpectationMessage *)message
 {
-  
+  [message append:[NSString stringWithFormat:@"%@ times", [self description]]];
 }
 
 @end
@@ -95,7 +95,7 @@ id<LRExpectationCardinality> LRM_atLeast(int anInt)
 
 - (void)describeTo:(LRExpectationMessage *)message
 {
-  
+  [message append:[NSString stringWithFormat:@"%@ times", [self description]]];
 }
 
 @end
@@ -128,7 +128,7 @@ id<LRExpectationCardinality> LRM_atMost(int anInt)
 
 - (void)describeTo:(LRExpectationMessage *)message
 {
-  
+  [message append:[NSString stringWithFormat:@"%@ times", [self description]]];
 }
 
 @end
@@ -152,7 +152,7 @@ id<LRExpectationCardinality> LRM_between(int min, int max)
 
 - (void)describeTo:(LRExpectationMessage *)message
 {
-  
+  [message append:[self description]];
 }
 
 @end
@@ -176,7 +176,7 @@ id<LRExpectationCardinality> LRM_never()
 
 - (void)describeTo:(LRExpectationMessage *)message
 {
-  
+  [message append:[self description]];
 }
 
 @end

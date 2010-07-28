@@ -30,7 +30,8 @@
   [testObject doSomething];
   [context assertSatisfied];
   
-  assertThat(testCase, failedWithNumberOfFailures(1));
+  assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
+    @"Expected %@ to receive doSomething exactly(1) times but received it 2 times.", testObject]));
 }
 
 - (void)testCanSpecifyExpectationIsCalledExactNumberOfTimesAndFailIfCalledFewerTimes
@@ -43,7 +44,8 @@
   [testObject doSomething];
   [context assertSatisfied];
   
-  assertThat(testCase, failedWithNumberOfFailures(1));
+  assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
+    @"Expected %@ to receive doSomething exactly(3) times but received it 2 times.", testObject]));
 }
 
 - (void)testCanSpecifyExpectationIsCalledExactNumberOfTimesAndFailIfCalledMoreTimes
@@ -57,7 +59,8 @@
   [testObject doSomething];
   [context assertSatisfied];
   
-  assertThat(testCase, failedWithNumberOfFailures(1));
+  assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
+    @"Expected %@ to receive doSomething exactly(2) times but received it 3 times.", testObject]));
 }
 
 #pragma mark At least (x) times
@@ -71,7 +74,8 @@
   [testObject doSomething];
   [context assertSatisfied];
   
-  assertThat(testCase, failedWithNumberOfFailures(1));
+  assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
+    @"Expected %@ to receive doSomething atLeast(2) times but received it 1 times.", testObject]));
 }
 
 - (void)testCanSpecifyExpectationIsCalledAtLeastNumberOfTimesAndPassIfCalledMoreTimes
@@ -114,7 +118,8 @@
   [testObject doSomething];
   [context assertSatisfied];
   
-  assertThat(testCase, failedWithNumberOfFailures(1));
+  assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
+    @"Expected %@ to receive doSomething atMost(2) times but received it 3 times.", testObject]));
 }
 
 - (void)testCanSpecifyExpectationIsCalledAtMostNumberOfTimesAndPassIfCalledFewerTimes
@@ -158,7 +163,8 @@
   [testObject doSomething];
   [context assertSatisfied];
   
-  assertThat(testCase, failedWithNumberOfFailures(1));
+  assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
+    @"Expected %@ to receive doSomething between(2 and 5) times but received it 6 times.", testObject]));
 }
 
 - (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndFailIfCalledFewerTimesThanTheLowerLimit
@@ -170,7 +176,8 @@
   [testObject doSomething];
   [context assertSatisfied];
   
-  assertThat(testCase, failedWithNumberOfFailures(1));
+  assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
+    @"Expected %@ to receive doSomething between(2 and 5) times but received it 1 times.", testObject]));
 }
 
 - (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndPassIfCalledLowerLimitTimes
@@ -227,7 +234,8 @@
   [testObject doSomething];
   [context assertSatisfied];
   
-  assertThat(testCase, failedWithNumberOfFailures(1));
+  assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
+    @"Expected %@ to receive doSomething never but received it 1 times.", testObject]));
 }
 
 - (void)testCanSpecifyExpectationIsNotAllowedAndPassIfItIsNotCalled
