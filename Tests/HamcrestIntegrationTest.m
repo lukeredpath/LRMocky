@@ -44,6 +44,31 @@
     @"Expected %@ to receive doSomethingWithObject: with(\"foo\") exactly(1) times but received it 0 times. doSomethingWithObject: was called with(@\"bar\").", testObject]));
 }
 
+- (void)testCanExpectInvocationWithStringWithPrefixAndPass
+{
+  [context checking:^(LRExpectationBuilder *builder){
+    [oneOf(testObject) doSomethingWithObject:with(startsWith(@"foo"))];
+  }];
+  
+  [testObject doSomethingWithObject:@"foo"];
+  [context assertSatisfied];
+  
+  assertThat(testCase, passed());
+}
+
+- (void)testCanExpectInvocationWithStringWithPrefixAndFail
+{
+  [context checking:^(LRExpectationBuilder *builder){
+    [oneOf(testObject) doSomethingWithObject:with(startsWith(@"foo"))];
+  }];
+  
+  [testObject doSomethingWithObject:@"bar foo"];
+  [context assertSatisfied];
+  
+  assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
+   @"Expected %@ to receive doSomethingWithObject: with(a string starting with \"foo\") exactly(1) times but received it 0 times. doSomethingWithObject: was called with(@\"bar foo\").", testObject]));
+}
+
 - (void)testCanExpectInvocationWithIdenticalObjectAndPass
 {
   SimpleObject *dummy = [[SimpleObject alloc] init];
