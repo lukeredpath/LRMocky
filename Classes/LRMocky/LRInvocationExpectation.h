@@ -15,8 +15,9 @@
 
 @class LRMockObject;
 
-@interface LRInvocationExpectation : NSObject <LRExpectation, LRDescribable> {
+@interface LRInvocationExpectation : NSObject <LRExpectation> {
   NSInvocation *expectedInvocation;
+  NSInvocation *similarInvocation;
   NSUInteger numberOfInvocations;
   NSMutableArray *actions;
   id<LRExpectationCardinality> cardinality;

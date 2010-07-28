@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "LRExpectationAction.h"
+#import "LRDescribable.h"
 
 extern NSString *const LRMockyExpectationError;
 
-@protocol LRExpectation <NSObject>
+@protocol LRExpectation <NSObject, LRDescribable>
 - (BOOL)matches:(NSInvocation *)invocation;
 - (void)invoke:(NSInvocation *)invocation;
 - (BOOL)isSatisfied;

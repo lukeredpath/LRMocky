@@ -7,11 +7,12 @@
 //
 
 #import "LRUnexpectedInvocation.h"
-
+#import "LRExpectationMessage.h"
 
 @implementation LRUnexpectedInvocation
 
 @synthesize invocation;
+@synthesize mockObject;
 
 + (id)unexpectedInvocation:(NSInvocation *)invocation;
 {
@@ -28,6 +29,7 @@
 
 - (void)dealloc;
 {
+  [mockObject release];
   [invocation release];
   [super dealloc];
 }
@@ -45,9 +47,16 @@
   return NO;
 }
 
-- (NSException *)failureException
+- (NSException *)failureException;
 {
-  return [NSException exceptionWithName:@"UnexpectedInvocation" reason:@"Unexpected invocation" userInfo:nil];
+  LRExpectationMessage *errorMessage = [[[LRExpectationMessage alloc] init] autorelease];
+  [self describeTo:errorMessage];
+  return [NSException exceptionWithName:LRMockyExpectationError reason:errorMessage.message userInfo:nil];
+}
+
+- (void)describeTo:(LRExpectationMessage *)message
+{
+  [message append:[NSString stringWithFormat:@"Unexpected method %@ called on %@", NSStringFromSelector([invocation selector]), mockObject]];
 }
 
 - (void)addAction:(id<LRExpectationAction>)action

@@ -10,14 +10,20 @@
 #import "LRInvocationComparitor.h"
 #import "LRExpectationCardinality.h"
 #import "LRExpectationMessage.h"
+#import "NSInvocation+OCMAdditions.h"
 
 NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
+
+@interface LRInvocationExpectation ()
+@property (nonatomic, retain) NSInvocation *similarInvocation;
+@end
 
 @implementation LRInvocationExpectation
 
 @synthesize invocation = expectedInvocation;
 @synthesize cardinality;
 @synthesize mockObject;
+@synthesize similarInvocation;
 
 + (id)expectation;
 {
@@ -61,6 +67,8 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
     for (id<LRExpectationAction> action in actions) {
       [action invoke:invocation];
     } 
+  } else {
+    self.similarInvocation = invocation;
   }
 }
 
@@ -79,8 +87,28 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 - (void)describeTo:(LRExpectationMessage *)message
 {
   [message append:[NSString stringWithFormat:@"Expected %@ to receive %@ ", mockObject, NSStringFromSelector([expectedInvocation selector])]];
+  
+  NSInteger numberOfArguments = [[expectedInvocation methodSignature] numberOfArguments];
+  if (numberOfArguments > 2) {
+    NSMutableArray *parameters = [NSMutableArray array];
+    for (int i = 2; i < numberOfArguments; i++) {
+      [parameters addObject:[NSString stringWithFormat:@"'%@'", [expectedInvocation getArgumentAtIndexAsObject:i]]];
+    }
+    [message append:[NSString stringWithFormat:@"with(%@) ", [parameters componentsJoinedByString:@", "]]];
+  } 
+  
   [self.cardinality describeTo:message];
-  [message append:[NSString stringWithFormat:@" but received it %d times", numberOfInvocations]];
+  [message append:[NSString stringWithFormat:@" but received it %d times.", numberOfInvocations]];
+  
+  if (self.similarInvocation && numberOfArguments > 2) {
+    [message append:[NSString stringWithFormat:@" %@ was called ", NSStringFromSelector([expectedInvocation selector])]];
+    
+    NSMutableArray *parameters = [NSMutableArray array];
+    for (int i = 2; i < numberOfArguments; i++) {
+      [parameters addObject:[NSString stringWithFormat:@"'%@'", [self.similarInvocation getArgumentAtIndexAsObject:i]]];
+    }
+    [message append:[NSString stringWithFormat:@"with(%@).", [parameters componentsJoinedByString:@", "]]];
+  }
 }
 
 - (void)addAction:(id<LRExpectationAction>)anAction;

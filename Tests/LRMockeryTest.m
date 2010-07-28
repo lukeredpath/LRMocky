@@ -9,6 +9,7 @@
 #import "TestHelper.h"
 #import "LRExpectation.h"
 #import "LRMockery.h"
+#import "LRExpectationMessage.h"
 
 @interface FailingExpectation : NSObject <LRExpectation>
 {}
@@ -39,6 +40,10 @@
 
 - (void)setInvocation:(NSInvocation *)invocation
 {}
+
+- (void)describeTo:(LRExpectationMessage *)message
+{}
+
 @end
 
 @interface PassingExpectation : NSObject <LRExpectation>
@@ -69,6 +74,9 @@
 {}
 
 - (void)setInvocation:(NSInvocation *)invocation
+{}
+
+- (void)describeTo:(LRExpectationMessage *)message
 {}
 
 @end

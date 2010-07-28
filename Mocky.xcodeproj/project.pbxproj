@@ -115,6 +115,8 @@
 		A35D667C11FF508B00F0C310 /* CardinalityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D667B11FF508B00F0C310 /* CardinalityTests.m */; };
 		A391554911FF5F0900FE7C49 /* LRExpectationCardinality.m in Sources */ = {isa = PBXBuildFile; fileRef = A391554811FF5F0900FE7C49 /* LRExpectationCardinality.m */; };
 		A391557111FF661400FE7C49 /* LRExpectationMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A391557011FF661400FE7C49 /* LRExpectationMessage.m */; };
+		A39155B811FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A39155B611FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h */; };
+		A39155B911FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A39155B711FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m */; };
 		A3C707F811FDDFE0000D2A8C /* ExpectationActionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */; };
 		A3EE4EF711FE5D64002DA61D /* LRConsecutiveCallAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4EF611FE5D64002DA61D /* LRConsecutiveCallAction.m */; };
 		A3EE4F1611FE6187002DA61D /* LRThrowExceptionAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F1511FE6187002DA61D /* LRThrowExceptionAction.m */; };
@@ -251,6 +253,8 @@
 		A391556F11FF661400FE7C49 /* LRExpectationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LRExpectationMessage.h; path = ../LRExpectationMessage.h; sourceTree = "<group>"; };
 		A391557011FF661400FE7C49 /* LRExpectationMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LRExpectationMessage.m; path = ../LRExpectationMessage.m; sourceTree = "<group>"; };
 		A391557A11FF670500FE7C49 /* LRDescribable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LRDescribable.h; path = ../LRDescribable.h; sourceTree = "<group>"; };
+		A39155B611FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+OCMAdditions.h"; sourceTree = "<group>"; };
+		A39155B711FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+OCMAdditions.m"; sourceTree = "<group>"; };
 		A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpectationActionsTest.m; sourceTree = "<group>"; };
 		A3EE4EF511FE5D64002DA61D /* LRConsecutiveCallAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRConsecutiveCallAction.h; sourceTree = "<group>"; };
 		A3EE4EF611FE5D64002DA61D /* LRConsecutiveCallAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRConsecutiveCallAction.m; sourceTree = "<group>"; };
@@ -395,6 +399,8 @@
 		A30176EE11FE017E004828C5 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				A39155B611FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h */,
+				A39155B711FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m */,
 				A30176EF11FE017E004828C5 /* Hamcrest */,
 			);
 			path = Vendor;
@@ -651,6 +657,7 @@
 				A301782D11FE01DF004828C5 /* HCStringStartsWith.h in Headers */,
 				A301782F11FE01DF004828C5 /* HCSubstringMatcher.h in Headers */,
 				A301783111FE01DF004828C5 /* OCHamcrest.h in Headers */,
+				A39155B811FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,6 +780,7 @@
 				A30176A111FDEEFC004828C5 /* LRImposter.m in Sources */,
 				A30176A311FDEEFC004828C5 /* LRInvocationExpectation.m in Sources */,
 				A30176A511FDEEFC004828C5 /* LRMockery.m in Sources */,
+				A39155B911FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m in Sources */,
 				A30176A711FDEEFC004828C5 /* LRMockObject.m in Sources */,
 				A30176A911FDEEFC004828C5 /* LRPerformBlockAction.m in Sources */,
 				A30176AB11FDEEFC004828C5 /* LRReturnValueAction.m in Sources */,
@@ -910,6 +918,7 @@
 					"-framework",
 					SenTestingKit,
 					"-lstdc++",
+					"-all_load",
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = Tests;
@@ -937,6 +946,7 @@
 					"-framework",
 					SenTestingKit,
 					"-lstdc++",
+					"-all_load",
 				);
 				PREBINDING = NO;
 				PRODUCT_NAME = Tests;

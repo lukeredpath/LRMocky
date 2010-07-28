@@ -72,7 +72,9 @@
       return [expectation invoke:invocation];
     }
   }
-  [expectations addObject:[LRUnexpectedInvocation unexpectedInvocation:invocation]];
+  LRUnexpectedInvocation *unexpectedInvocation = [LRUnexpectedInvocation unexpectedInvocation:invocation];
+  unexpectedInvocation.mockObject = [invocation target];
+  [expectations addObject:unexpectedInvocation];
 }
 
 @end
