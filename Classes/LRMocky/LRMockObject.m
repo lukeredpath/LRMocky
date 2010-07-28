@@ -12,6 +12,7 @@
 @implementation LRMockObject
 
 @synthesize mockedClass;
+@synthesize name;
 
 + (id)mockForClass:(Class)aClass inContext:(LRMockery *)mockery;
 {
@@ -34,6 +35,7 @@
 
 - (void)dealloc;
 {
+  [name release];
   [context release];
   [super dealloc];
 }
@@ -41,6 +43,14 @@
 - (void)forwardInvocation:(NSInvocation *)invocation
 {
   [context dispatchInvocation:invocation];
+}
+
+- (NSString *)description
+{
+  if (self.name == nil) {
+    return [NSString stringWithFormat:@"<LRMockObject forClass:%@>", NSStringFromClass(mockedClass)];
+  }
+  return [NSString stringWithFormat:@"<LRMockObject named:\"%@\" forClass:%@>", self.name, NSStringFromClass(mockedClass)];
 }
 
 @end

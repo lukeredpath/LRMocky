@@ -21,6 +21,7 @@
 + (id)mockeryForSenTestCase:(SenTestCase *)testCase;
 - (id)initWithNotifier:(id<LRTestCaseNotifier>)aNotifier;
 - (id)mock:(Class)klass;
+- (id)mock:(Class)klass named:(NSString *)name;
 - (void)checking:(void (^)(LRExpectationBuilder *will))expectationBlock;
 - (void)addExpectation:(id<LRExpectation>)expectation;
 - (void)assertSatisfied;

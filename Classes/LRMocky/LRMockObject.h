@@ -14,8 +14,10 @@
 @interface LRMockObject : LRClassImposter {
   Class mockedClass;
   LRMockery *context;
+  NSString *name;
 }
 @property (nonatomic, readonly) Class mockedClass;
+@property (nonatomic, copy) NSString *name;
 
 + (id)mockForClass:(Class)aClass inContext:(LRMockery *)mockery;
 - (id)initWithClass:(Class)aClass context:(LRMockery *)mockery;

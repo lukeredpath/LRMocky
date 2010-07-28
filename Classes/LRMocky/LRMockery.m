@@ -46,6 +46,13 @@
   return [LRMockObject mockForClass:klass inContext:self]; 
 }
 
+- (id)mock:(Class)klass named:(NSString *)name;
+{
+  LRMockObject *mock = [self mock:klass];
+  mock.name = name;
+  return mock;
+}
+
 - (void)checking:(void (^)(id will))expectationBlock;
 {
   expectationBlock([LRExpectationBuilder builderInContext:self]);
