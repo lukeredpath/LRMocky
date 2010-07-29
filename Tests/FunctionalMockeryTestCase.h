@@ -6,10 +6,13 @@
 //  Copyright (c) 2010 LJR Software Limited. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <SenTestingKit/SenTestCase.h>
+#define LRMOCKY_SHORTHAND
+#define LRMOCKY_SUGAR
 
-@class LRMockery;
+#import <Foundation/Foundation.h>
+#import "TestHelper.h"
+#import "LRMocky.h"
+
 @class FakeTestCase;
 @class SimpleObject;
 

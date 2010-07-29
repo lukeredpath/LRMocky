@@ -6,11 +6,6 @@
 //  Copyright (c) 2010 LJR Software Limited. All rights reserved.
 //
 
-#define LRMOCKY_SHORTHAND
-#define LRMOCKY_SUGAR
-
-#import "TestHelper.h"
-#import "LRMocky.h"
 #import "FunctionalMockeryTestCase.h"
 
 @interface CardinalityTests : FunctionalMockeryTestCase
