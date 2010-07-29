@@ -37,7 +37,7 @@ Mocky is still in the early stages of development; the best way of getting an id
 Mocks can also be configured to return values:
 
     [context checking:^(that){
-      [[oneOf(testObject) receives] doSomething]; and(returnsObject(@"FOOBAR"));
+      [[oneOf(testObject) receives] doSomething]; andThen(returnsObject(@"FOOBAR"));
     }];
     
     assertThat([testObject doSomething], equalTo(@"FOOBAR"));
@@ -47,7 +47,7 @@ Or perform a block:
     __block id outsideTheBlock = nil;
     
     [context checking:^(that){
-      [[oneOf(testObject) receives] uppercaseString]; and(performsBlock(^(NSInvocation *invocation) {
+      [[oneOf(testObject) receives] uppercaseString]; andThen(performsBlock(^(NSInvocation *invocation) {
         outsideTheBlock = @"FOOBAR";
       }));
     }];
