@@ -34,7 +34,7 @@
   [context assertSatisfied];
 }
 
-- (void)testFailedMocking // this will fail the test case
+- (void)testFailedMocking 
 {
   LRMockery *context = [LRMockery mockeryForTestCase:self];
   
@@ -45,6 +45,37 @@
   }];
   
   [myMockString lowercaseString];
+  [context assertSatisfied];
+}
+
+
+- (void)testSuccessfulMockingWithMultipleCallsExpected
+{
+  LRMockery *context = [LRMockery mockeryForTestCase:self];
+  
+  id myMockString = [context mock:[NSString class] named:@"My Mock String"];
+  
+  [context checking:^(that){
+    [[[atLeast(2) of:myMockString] receives] uppercaseString];
+  }];
+  
+  [myMockString uppercaseString];
+  [myMockString uppercaseString];
+  [myMockString uppercaseString];
+  [context assertSatisfied];
+}
+
+- (void)testFailedMockingWithMultipleCallsExpected
+{
+  LRMockery *context = [LRMockery mockeryForTestCase:self];
+  
+  id myMockString = [context mock:[NSString class] named:@"My Mock String"];
+  
+  [context checking:^(that){
+    [[[between(2, 4) of:myMockString] receives] uppercaseString];
+  }];
+  
+  [myMockString uppercaseString];
   [context assertSatisfied];
 }
 
