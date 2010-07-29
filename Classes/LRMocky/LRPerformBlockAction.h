@@ -20,5 +20,6 @@ typedef void (^LR_invocationActionBlock)(NSInvocation *);
 LRPerformBlockAction *LRA_performBlock(LR_invocationActionBlock theBlock);
 
 #ifdef LRMOCKY_SHORTHAND
-#define performBlock LRA_performBlock
+#define performBlock  LRA_performBlock
+#define performsBlock LRA_performBlock
 #endif

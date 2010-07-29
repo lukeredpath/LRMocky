@@ -26,8 +26,8 @@
 
   id myMockString = [context mock:[NSString class] named:@"My Mock String"];
   
-  [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(myMockString) uppercaseString];
+  [context checking:^(that){
+    [[oneOf(myMockString) receives] uppercaseString];
   }];
   
   [myMockString uppercaseString];
@@ -40,8 +40,8 @@
   
   id myMockString = [context mock:[NSString class] named:@"My Mock String"];
   
-  [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(myMockString) uppercaseString];
+  [context checking:^(that){
+    [[oneOf(myMockString) receives] uppercaseString];
   }];
   
   [myMockString lowercaseString];
@@ -54,8 +54,8 @@
   
   id myMockString = [context mock:[NSString class] named:@"My Mock String"];
   
-  [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(myMockString) stringByAppendingString:(id)with(startsWith(@"super"))];
+  [context checking:^(that){
+    [[oneOf(myMockString) receives] stringByAppendingString:with(startsWith(@"super"))];
   }];
   
   [myMockString stringByAppendingString:@"super"];
@@ -68,12 +68,47 @@
   
   id myMockString = [context mock:[NSString class] named:@"My Mock String"];
   
-  [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(myMockString) stringByAppendingString:(id)with(startsWith(@"super"))];
+  [context checking:^(that){
+    [[oneOf(myMockString) receives] stringByAppendingString:with(startsWith(@"super"))];
   }];
   
   [myMockString stringByAppendingString:@"not super"];
   [context assertSatisfied];
+}
+
+- (void)testSuccessfulMockWithReturnValue
+{
+  LRMockery *context = [LRMockery mockeryForTestCase:self];
+  
+  id myMockString = [context mock:[NSString class] named:@"My Mock String"];
+  
+  [context checking:^(that){
+    [[oneOf(myMockString) receives] uppercaseString]; and(returnsObject(@"FOOBAR"));
+  }];
+  
+  NSString *returnedValue = [myMockString uppercaseString];
+  [context assertSatisfied];
+
+  assertThat(returnedValue, equalTo(@"FOOBAR"));
+}
+
+- (void)testSuccessfulMockWithPerformedBlock
+{
+  LRMockery *context = [LRMockery mockeryForTestCase:self];
+  
+  id myMockString = [context mock:[NSString class] named:@"My Mock String"];
+  __block id outsideTheBlock = nil;
+  
+  [context checking:^(that){
+    [[oneOf(myMockString) receives] uppercaseString]; and(performsBlock(^(NSInvocation *invocation) {
+      outsideTheBlock = @"FOOBAR";
+    }));
+  }];
+  
+  [myMockString uppercaseString];
+  [context assertSatisfied];
+  
+  assertThat(outsideTheBlock, equalTo(@"FOOBAR"));
 }
 
 @end

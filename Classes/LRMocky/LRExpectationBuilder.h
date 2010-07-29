@@ -21,6 +21,7 @@
 }
 + (id)builderInContext:(LRMockery *)context;
 - (id)initWithMockery:(LRMockery *)aMockery;
+- (id)receives; // syntatic sugar
 - (id)oneOf:(id)mockObject;
 - (id)exactly:(int)numberOfTimes of:(id)mockObject;
 - (id)atLeast:(int)minimum of:(id)mockObject;
@@ -35,6 +36,7 @@
 #ifdef LRMOCKY_SUGAR
 #define that          LRExpectationBuilder *builder
 #define it             builder
+#define and(action)   [builder will:action]
 #define oneOf(arg)    [builder oneOf:arg]
 #define allowing(arg) [builder allowing:arg]
 #define never(arg)    [builder never:arg]

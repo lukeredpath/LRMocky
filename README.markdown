@@ -20,41 +20,42 @@ Because Mocky depends on Hamcrest, which is partly written in Objective-C++, the
 
 Mocky is still in the early stages of development; the best way of getting an idea of what features are supported is to take a look at the functional tests. Here's a simple example that expects a method to be called.
 
-    - (void)testCanExpectSingleMethodCallAndPass;
+    - (void)testSuccessfulMocking
     {
-      LRMockery *context = [LRMockery mockeryForSenTestCase:self];
-      SimpleObject *testObject = [context mock:[SimpleObject class]];
+      LRMockery *context = [LRMockery mockeryForTestCase:self];
 
-      [context checking:^(LRExpectationBuilder *that){
-        [[that oneOf:testObject] doSomething];
+      id testObject = [context mock:[NSString class] named:@"My Mock String"];
+
+      [context checking:^(that){
+        [[oneOf(testObject) receives] uppercaseString];
       }];
 
-      [testObject doSomething];
+      [testObject uppercaseString];
       [context assertSatisfied];
     }
 
 Mocks can also be configured to return values:
 
-    [context checking:^(LRExpectationBuilder *that){
-      [[that oneOf:testObject] doSomething]; [that will:returnObject(someObject)];
+    [context checking:^(that){
+      [[oneOf(testObject) receives] doSomething]; and(returnsObject(@"FOOBAR"));
     }];
     
-    assertThat([testObject doSomething], equalTo(someObject));
+    assertThat([testObject doSomething], equalTo(@"FOOBAR"));
     
 Or perform a block:
 
-    id outsideTheBlock = nil;
-
-    [context checking:^(LRExpectationBuilder *that){
-      [[that oneOf:testObject] doSomething]; [that will:performBlock(^(NSInvocation *invocation) {
-        outsideTheBlock = @"called the block"
-      })];
+    __block id outsideTheBlock = nil;
+    
+    [context checking:^(that){
+      [[oneOf(testObject) receives] uppercaseString]; and(performsBlock(^(NSInvocation *invocation) {
+        outsideTheBlock = @"FOOBAR";
+      }));
     }];
     
+    [testObject uppercaseString];
     [context assertSatisfied];
-    [testObject doSomething];
     
-    assertThat(outsideTheBlock, equalTo(@"called the block"));
+    assertThat(outsideTheBlock, equalTo(@"FOOBAR"));
     
 ## Credits and Licence
 

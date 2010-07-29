@@ -47,6 +47,11 @@
   [super dealloc];
 }
 
+- (id)receives;
+{
+  return self;
+}
+
 - (id)oneOf:(id)mockObject;
 {
   return [self exactly:1 of:mockObject];
