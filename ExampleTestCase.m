@@ -83,7 +83,7 @@
   id myMockString = [context mock:[NSString class] named:@"My Mock String"];
   
   [context checking:^(that){
-    [[oneOf(myMockString) receives] uppercaseString]; and(returnsObject(@"FOOBAR"));
+    [[oneOf(myMockString) receives] uppercaseString]; andThen(returnsObject(@"FOOBAR"));
   }];
   
   NSString *returnedValue = [myMockString uppercaseString];
@@ -100,7 +100,7 @@
   __block id outsideTheBlock = nil;
   
   [context checking:^(that){
-    [[oneOf(myMockString) receives] uppercaseString]; and(performsBlock(^(NSInvocation *invocation) {
+    [[oneOf(myMockString) receives] uppercaseString]; andThen(performsBlock(^(NSInvocation *invocation) {
       outsideTheBlock = @"FOOBAR";
     }));
   }];
