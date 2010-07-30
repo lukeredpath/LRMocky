@@ -25,7 +25,6 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 @synthesize cardinality;
 @synthesize mockObject;
 @synthesize similarInvocation;
-@synthesize transitionsToState;
 @synthesize requiredState;
 
 + (id)expectation;

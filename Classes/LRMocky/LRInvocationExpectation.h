@@ -24,13 +24,11 @@
   id<LRExpectationCardinality> cardinality;
   LRMockObject *mockObject;
   LRMockyState *requiredState;
-  LRMockyState *transitionsToState;
 }
 @property (nonatomic, retain) NSInvocation *invocation;
 @property (nonatomic, retain) id<LRExpectationCardinality> cardinality;
 @property (nonatomic, retain) LRMockObject *mockObject;
 @property (nonatomic, retain) LRMockyState *requiredState;
-@property (nonatomic, retain) LRMockyState *transitionsToState;
 
 + (id)expectation;
 - (void)addAction:(id<LRExpectationAction>)anAction;
