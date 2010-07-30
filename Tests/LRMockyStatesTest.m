@@ -9,11 +9,11 @@
 #import "TestHelper.h"
 #import "LRMockyStates.h"
 
-@interface LRMockyStates (Testing)
+@interface LRMockyStateMachine (Testing)
 @property (nonatomic, readonly) LRMockyState *currentState;
 @end
 
-@implementation LRMockyStates (Testing)
+@implementation LRMockyStateMachine (Testing)
 - (LRMockyState *)currentState
 {
   return currentState;
@@ -22,7 +22,7 @@
 
 id<HCMatcher> isInState(LRMockyState *state)
 {
-  NSInvocation *invocation   = [HCInvocationMatcher createInvocationForSelector:@selector(currentState) onClass:[LRMockyStates class]];
+  NSInvocation *invocation   = [HCInvocationMatcher createInvocationForSelector:@selector(currentState) onClass:[LRMockyStateMachine class]];
   return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:equalTo(state)] autorelease];
 }
 
@@ -34,7 +34,7 @@ id<HCMatcher> isInState(LRMockyState *state)
 
 - (void)testCanTransitionToNewState
 {
-  LRMockyStates *context = [[LRMockyStates alloc] initWithName:@"Test"];
+  LRMockyStateMachine *context = [[LRMockyStateMachine alloc] initWithName:@"Test"];
 
   [[context state:@"First"] transitionToState];
   
@@ -43,7 +43,7 @@ id<HCMatcher> isInState(LRMockyState *state)
 
 - (void)testCanTransitionToNewStateFromExistingState
 {
-  LRMockyStates *context = [[LRMockyStates alloc] initWithName:@"Test" defaultState:@"First"];
+  LRMockyStateMachine *context = [[LRMockyStateMachine alloc] initWithName:@"Test" defaultState:@"First"];
   
   [[context state:@"Second"] transitionToState];
   
