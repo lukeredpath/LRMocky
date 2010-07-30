@@ -26,7 +26,7 @@
 - (void)testCanConstrainExpectationsToOccurWithinAGivenState
 {
   [context checking:^(that){
-    [allowing(testObject) doSomething];     when([readiness hasBecome:@"ready"]);
+    [allowing(testObject) doSomething]; when([readiness hasBecome:@"ready"]);
     [allowing(testObject) doSomethingElse]; then([readiness becomes:@"ready"]);
   }];
   
@@ -40,7 +40,7 @@
 - (void)testAllowsExpectationsToOccurInCorrectState
 {
   [context checking:^(that){
-    [allowing(testObject) doSomething];     when([readiness hasBecome:@"ready"]);
+    [allowing(testObject) doSomething]; when([readiness hasBecome:@"ready"]);
     [allowing(testObject) doSomethingElse]; then([readiness becomes:@"ready"]);
   }];
   
@@ -57,7 +57,7 @@
   [readiness startsAs:@"ready"];
 
   [context checking:^(that){
-    [allowing(testObject) doSomething];     when([readiness hasBecome:@"ready"]);
+    [allowing(testObject) doSomething]; when([readiness hasBecome:@"ready"]);
   }];
   
   [testObject doSomething];
