@@ -57,7 +57,7 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
   if ([invocation selector] != [expectedInvocation selector]) {
     return NO;
   }
-  if (self.requiredState && ![self.requiredState isCurrentState]) {
+  if (self.requiredState && ![self.requiredState isActive]) {
     return NO;
   }
   return YES;

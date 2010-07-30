@@ -17,8 +17,8 @@
 }
 + (id)stateWithLabel:(NSString *)label inContext:(LRMockyStateMachine *)context;
 - (id)initWithLabel:(NSString *)aLabel context:(LRMockyStateMachine *)aContext;
-- (void)transitionToState;
-- (BOOL)isCurrentState;
+- (void)activate;
+- (BOOL)isActive;
 - (BOOL)isEqualToState:(LRMockyState *)state;
 - (BOOL)matches:(NSString *)stateLabel;
 @end

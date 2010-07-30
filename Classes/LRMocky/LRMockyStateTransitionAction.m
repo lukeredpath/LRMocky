@@ -32,7 +32,7 @@
 
 - (void)invoke:(NSInvocation *)invocation
 {
-  [state transitionToState];
+  [state activate];
 }
 
 @end

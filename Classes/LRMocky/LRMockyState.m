@@ -52,12 +52,12 @@
   [super dealloc];
 }
 
-- (BOOL)isCurrentState;
+- (BOOL)isActive;
 {
   return [context isCurrentState:self]; 
 }
 
-- (void)transitionToState;
+- (void)activate;
 {
   [context transitionToState:self];
 }

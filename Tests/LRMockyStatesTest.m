@@ -36,7 +36,7 @@ id<HCMatcher> isInState(LRMockyState *state)
 {
   LRMockyStateMachine *context = [[LRMockyStateMachine alloc] initWithName:@"Test"];
 
-  [[context state:@"First"] transitionToState];
+  [[context state:@"First"] activate];
   
   assertThat(context, isInState([context state:@"First"]));
 }
@@ -45,7 +45,7 @@ id<HCMatcher> isInState(LRMockyState *state)
 {
   LRMockyStateMachine *context = [[LRMockyStateMachine alloc] initWithName:@"Test" defaultState:@"First"];
   
-  [[context state:@"Second"] transitionToState];
+  [[context state:@"Second"] activate];
   
   assertThat(context, isInState([context state:@"Second"]));
 }
