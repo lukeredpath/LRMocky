@@ -36,7 +36,7 @@
 
 @end
 
-id<LRExpectationCardinality> LRM_expectExactly(int anInt)
+id<LRExpectationCardinality> LRM_exactly(int anInt)
 {
   return [[[LREqualToCardinality alloc] initWithInt:anInt] autorelease];
 }
@@ -136,52 +136,4 @@ id<LRExpectationCardinality> LRM_atMost(int anInt)
 id<LRExpectationCardinality> LRM_between(int min, int max)
 {
   return [[[LRBetweenCardinality alloc] initWithMinimum:min andMaximum:max] autorelease];
-}
-
-@implementation LRNeverCardinality
-
-- (BOOL)satisfiedBy:(int)numberOfInvocations
-{
-  return numberOfInvocations == 0;
-}
-
-- (NSString *)description
-{
-  return @"never";
-}
-
-- (void)describeTo:(LRExpectationMessage *)message
-{
-  [message append:[self description]];
-}
-
-@end
-
-id<LRExpectationCardinality> LRM_never()
-{
-  return [[[LRNeverCardinality alloc] init] autorelease];
-}
-
-@implementation LRAllowingCardinality
-
-- (BOOL)satisfiedBy:(int)numberOfInvocations
-{
-  return YES;
-}
-
-- (NSString *)description
-{
-  return @"any number of times";
-}
-
-- (void)describeTo:(LRExpectationMessage *)message
-{
-  [message append:[self description]];
-}
-
-@end
-
-id<LRExpectationCardinality> LRM_allowing()
-{
-  return [[[LRAllowingCardinality alloc] init] autorelease];
 }

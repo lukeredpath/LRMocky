@@ -230,7 +230,7 @@
   [context assertSatisfied];
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomething never but received it 1 times.", testObject]));
+    @"Expected %@ to receive doSomething exactly(0) times but received it 1 times.", testObject]));
 }
 
 - (void)testCanSpecifyExpectationIsNotAllowedAndPassIfItIsNotCalled

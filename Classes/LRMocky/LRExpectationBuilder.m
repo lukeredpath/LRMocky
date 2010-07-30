@@ -60,7 +60,7 @@
 
 - (id)exactly:(int)numberOfTimes of:(id)mockObject;
 {
-  [self prepareExpectationForObject:mockObject withCardinality:LRM_expectExactly(numberOfTimes)];
+  [self prepareExpectationForObject:mockObject withCardinality:LRM_exactly(numberOfTimes)];
   return self;
 }
 
@@ -84,13 +84,13 @@
 
 - (id)allowing:(id)mockObject;
 {
-  [self prepareExpectationForObject:mockObject withCardinality:LRM_allowing()];
+  [self prepareExpectationForObject:mockObject withCardinality:LRM_atLeast(0)];
   return self;
 }
 
 - (id)never:(id)mockObject;
 {
-  [self prepareExpectationForObject:mockObject withCardinality:LRM_never()];
+  [self prepareExpectationForObject:mockObject withCardinality:LRM_exactly(0)];
   return self;
 }
 

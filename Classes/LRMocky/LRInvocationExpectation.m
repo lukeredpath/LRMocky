@@ -37,7 +37,7 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
   if (self = [super init]) {
     numberOfInvocations = 0;
     actions = [[NSMutableArray alloc] init];
-    self.cardinality = LRM_expectExactly(1); // TODO choose a better default
+    self.cardinality = LRM_exactly(1); // TODO choose a better default
   }
   return self;
 }

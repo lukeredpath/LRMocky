@@ -19,7 +19,7 @@
 - (id)initWithInt:(int)anInt;
 @end
 
-id<LRExpectationCardinality> LRM_expectExactly(int anInt);
+id<LRExpectationCardinality> LRM_exactly(int anInt);
 
 @interface LRAtLeastCardinality : NSObject <LRExpectationCardinality> {
   int minimum;
@@ -45,15 +45,3 @@ id<LRExpectationCardinality> LRM_atMost(int anInt);
 @end
 
 id<LRExpectationCardinality> LRM_between(int min, int max);
-
-@interface LRNeverCardinality : NSObject <LRExpectationCardinality> 
-{}
-@end
-
-id<LRExpectationCardinality> LRM_never();
-
-@interface LRAllowingCardinality : NSObject <LRExpectationCardinality>
-{}
-@end
-
-id<LRExpectationCardinality> LRM_allowing();
