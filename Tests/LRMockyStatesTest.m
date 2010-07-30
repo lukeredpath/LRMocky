@@ -1,0 +1,53 @@
+//
+//  LRMockyStatesTest.m
+//  Mocky
+//
+//  Created by Luke Redpath on 30/07/2010.
+//  Copyright (c) 2010 LJR Software Limited. All rights reserved.
+//
+
+#import "TestHelper.h"
+#import "LRMockyStates.h"
+
+@interface LRMockyStates (Testing)
+@property (nonatomic, readonly) LRMockyState *currentState;
+@end
+
+@implementation LRMockyStates (Testing)
+- (LRMockyState *)currentState
+{
+  return currentState;
+}
+@end
+
+id<HCMatcher> isInState(LRMockyState *state)
+{
+  NSInvocation *invocation   = [HCInvocationMatcher createInvocationForSelector:@selector(currentState) onClass:[LRMockyStates class]];
+  return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:equalTo(state)] autorelease];
+}
+
+@interface LRMockyStatesTest : SenTestCase 
+{}
+@end
+
+@implementation LRMockyStatesTest
+
+- (void)testCanTransitionToNewState
+{
+  LRMockyStates *context = [[LRMockyStates alloc] initWithName:@"Test"];
+
+  [[context state:@"First"] transitionToState];
+  
+  assertThat(context, isInState([context state:@"First"]));
+}
+
+- (void)testCanTransitionToNewStateFromExistingState
+{
+  LRMockyStates *context = [[LRMockyStates alloc] initWithName:@"Test" defaultState:@"First"];
+  
+  [[context state:@"Second"] transitionToState];
+  
+  assertThat(context, isInState([context state:@"Second"]));
+}
+
+@end

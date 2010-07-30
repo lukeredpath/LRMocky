@@ -93,6 +93,16 @@
   return self;
 }
 
+- (void)transitionsToState:(LRMockyState *)state;
+{
+  self.currentExpecation.transitionsToState = state;
+}
+
+- (void)requiresState:(LRMockyState *)state;
+{
+  self.currentExpecation.requiredState = state;
+}
+
 - (void)forwardInvocation:(NSInvocation *)invocation
 {
   self.currentExpecation.invocation = invocation;

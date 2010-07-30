@@ -10,6 +10,7 @@
 #import "LRInvocationComparitor.h"
 #import "LRExpectationCardinality.h"
 #import "LRExpectationMessage.h"
+#import "LRMockyStates.h"
 #import "NSInvocation+OCMAdditions.h"
 
 NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
@@ -24,6 +25,8 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 @synthesize cardinality;
 @synthesize mockObject;
 @synthesize similarInvocation;
+@synthesize transitionsToState;
+@synthesize requiredState;
 
 + (id)expectation;
 {
@@ -53,7 +56,10 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 {
   if ([invocation selector] != [expectedInvocation selector]) {
     return NO;
-  }  
+  }
+  if (self.requiredState && ![self.requiredState isCurrentState]) {
+    return NO;
+  }
   return YES;
 }
 
@@ -63,6 +69,8 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
   
   if([comparitor matchesParameters:invocation]) {
     numberOfInvocations++;
+    
+    [self.transitionsToState transitionToState];
     
     for (id<LRExpectationAction> action in actions) {
       [action invoke:invocation];

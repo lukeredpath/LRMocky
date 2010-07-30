@@ -10,6 +10,7 @@
 #import "LRExpectationBuilder.h"
 #import "LRMockObject.h"
 #import "LRUnexpectedInvocation.h"
+#import "LRMockyStates.h"
 
 @implementation LRMockery
 
@@ -51,6 +52,11 @@
   LRMockObject *mock = [self mock:klass];
   mock.name = name;
   return mock;
+}
+
+- (LRMockyStates *)states:(NSString *)name;
+{
+  return [[[LRMockyStates alloc] initWithName:name] autorelease];
 }
 
 - (void)checking:(void (^)(id will))expectationBlock;

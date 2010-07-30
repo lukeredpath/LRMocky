@@ -9,7 +9,6 @@
 #define LRMOCKY_SHORTHAND
 #define LRMOCKY_SUGAR
 
-#import <Foundation/Foundation.h>
 #import "TestHelper.h"
 #import "LRMocky.h"
 

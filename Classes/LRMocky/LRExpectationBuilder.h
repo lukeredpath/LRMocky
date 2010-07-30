@@ -13,6 +13,7 @@
 @class LRMockObject;
 @class LRMockery;
 @class LRInvocationExpectation;
+@class LRMockyState;
 
 @interface LRExpectationBuilder : LRClassImposter {
   LRMockery *mockery;
@@ -30,6 +31,8 @@
 - (id)will:(id<LRExpectationAction>)action;
 - (id)allowing:(id)mockObject;
 - (id)never:(id)mockObject;
+- (void)transitionsToState:(LRMockyState *)state;
+- (void)requiresState:(LRMockyState *)state;
 @end
 
 
@@ -44,4 +47,6 @@
 #define atLeast(x)       builder atLeast:x
 #define atMost(x)        builder atMost:x
 #define between(x, y)    builder between:x and:y
+#define then(state)     [builder transitionsToState:state]
+#define when(state)     [builder requiresState:state];
 #endif
