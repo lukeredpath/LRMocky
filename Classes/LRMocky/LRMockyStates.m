@@ -45,7 +45,7 @@
   return [self state:label];
 }
 
-- (LRMockyState *)inState:(NSString *)label;
+- (LRMockyState *)hasBecome:(NSString *)label;
 {
   return [self state:label];
 }
@@ -114,6 +114,34 @@
 - (void)transitionToState;
 {
   [context transitionToState:self];
+}
+
+@end
+
+@implementation LRMockyStateTransitionAction
+
++ (id)transitionToState:(LRMockyState *)state;
+{
+  return [[[self alloc] initWithState:state] autorelease];
+}
+
+- (id)initWithState:(LRMockyState *)aState;
+{
+  if (self = [super init]) {
+    state = [aState retain];
+  }
+  return self;
+}
+
+- (void)dealloc
+{
+  [state release];
+  [super dealloc];
+}
+
+- (void)invoke:(NSInvocation *)invocation
+{
+  [state transitionToState];
 }
 
 @end

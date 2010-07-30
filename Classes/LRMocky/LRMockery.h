@@ -24,6 +24,7 @@
 - (id)mock:(Class)klass;
 - (id)mock:(Class)klass named:(NSString *)name;
 - (LRMockyStates *)states:(NSString *)name;
+- (LRMockyStates *)states:(NSString *)name defaultTo:(NSString *)defaultState;
 - (void)checking:(void (^)(LRExpectationBuilder *will))expectationBlock;
 - (void)addExpectation:(id<LRExpectation>)expectation;
 - (void)assertSatisfied;

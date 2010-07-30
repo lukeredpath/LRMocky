@@ -11,6 +11,7 @@
 #import "LRMockery.h"
 #import "LRInvocationExpectation.h"
 #import "LRExpectationCardinality.h"
+#import "LRMockyStates.h"
 
 @interface LRExpectationBuilder ()
 @property (nonatomic, retain) LRInvocationExpectation *currentExpecation;
@@ -93,14 +94,14 @@
   return self;
 }
 
-- (void)transitionsToState:(LRMockyState *)state;
-{
-  self.currentExpecation.transitionsToState = state;
-}
-
 - (void)requiresState:(LRMockyState *)state;
 {
   self.currentExpecation.requiredState = state;
+}
+
+- (void)shouldTransitionToState:(LRMockyState *)state;
+{
+  [self.currentExpecation addAction:[LRMockyStateTransitionAction transitionToState:state]];
 }
 
 - (void)forwardInvocation:(NSInvocation *)invocation

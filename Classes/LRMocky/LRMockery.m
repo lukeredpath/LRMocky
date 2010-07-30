@@ -59,6 +59,11 @@
   return [[[LRMockyStates alloc] initWithName:name] autorelease];
 }
 
+- (LRMockyStates *)states:(NSString *)name defaultTo:(NSString *)defaultState;
+{
+  return [[[LRMockyStates alloc] initWithName:name defaultState:defaultState] autorelease];
+}
+
 - (void)checking:(void (^)(id will))expectationBlock;
 {
   expectationBlock([LRExpectationBuilder builderInContext:self]);

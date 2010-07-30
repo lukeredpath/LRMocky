@@ -28,6 +28,7 @@
 @interface SimpleObject : NSObject
 {}
 - (void)doSomething;
+- (void)doSomethingElse;
 - (id)returnSomething;
 - (int)returnSomeValue;
 - (id)returnSomethingForValue:(NSString *)value;

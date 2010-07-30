@@ -56,7 +56,7 @@
 
 - (NSString *)description;
 {
-  return [NSString stringWithFormat:@"MockTestCase with %d failures, last failure %@: %@", [self numberOfFailures], [[self lastFailure] name], [self lastFailure]];
+  return [NSString stringWithFormat:@"MockTestCase with %d failures, %@", [self numberOfFailures], failures];
 }
 
 - (NSException *)lastFailure;
@@ -68,6 +68,7 @@
 
 @implementation SimpleObject; 
 - (void)doSomething {}
+- (void)doSomethingElse {}
 - (id)returnSomething { return nil; }
 - (int)returnSomeValue { return 0; }
 - (id)returnSomethingForValue:(NSString *)value { return nil; }

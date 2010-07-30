@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LRExpectationAction.h"
 
 @class LRMockyState;
 
@@ -20,7 +21,7 @@
 - (BOOL)isCurrentState:(LRMockyState *)state;
 - (LRMockyState *)state:(NSString *)label;
 - (LRMockyState *)becomes:(NSString *)label;
-- (LRMockyState *)inState:(NSString *)label;
+- (LRMockyState *)hasBecome:(NSString *)label;
 @end
 
 @interface LRMockyState : NSObject
@@ -36,3 +37,10 @@
 - (BOOL)matches:(NSString *)stateLabel;
 @end
 
+@interface LRMockyStateTransitionAction : NSObject <LRExpectationAction> 
+{
+  LRMockyState *state;
+}
++ (id)transitionToState:(LRMockyState *)state;
+- (id)initWithState:(LRMockyState *)aState;
+@end

@@ -70,8 +70,6 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
   if([comparitor matchesParameters:invocation]) {
     numberOfInvocations++;
     
-    [self.transitionsToState transitionToState];
-    
     for (id<LRExpectationAction> action in actions) {
       [action invoke:invocation];
     } 
