@@ -13,17 +13,8 @@
 
 - (id)initWithName:(NSString *)aName;
 {
-  return [self initWithName:aName defaultState:nil];
-}
-
-- (id)initWithName:(NSString *)aName defaultState:(NSString *)label;
-{
   if (self = [super init]) {
     name = [aName copy];
-    
-    if (label) {
-      currentState = [self state:label];
-    }
   }
   return self;
 }
@@ -33,6 +24,11 @@
   [name release];
   [currentState release];
   [super dealloc];
+}
+
+- (void)startsAs:(NSString *)label;
+{
+  [self transitionToState:[self state:label]];
 }
 
 - (LRMockyState *)state:(NSString *)label;

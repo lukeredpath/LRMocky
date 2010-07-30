@@ -15,7 +15,7 @@
   LRMockyState *currentState;
 }
 - (id)initWithName:(NSString *)aName;
-- (id)initWithName:(NSString *)aName defaultState:(NSString *)label;
+- (void)startsAs:(NSString *)label;
 - (void)transitionToState:(LRMockyState *)newState;
 - (BOOL)isCurrentState:(LRMockyState *)state;
 - (LRMockyState *)state:(NSString *)label;

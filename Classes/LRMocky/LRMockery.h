@@ -12,7 +12,7 @@
 
 @class LRExpectationBuilder;
 @class SenTestCase;
-@class LRMockyStates;
+@class LRMockyStateMachine;
 
 @interface LRMockery : NSObject {
   NSMutableArray *expectations;
@@ -23,8 +23,8 @@
 - (id)initWithNotifier:(id<LRTestCaseNotifier>)aNotifier;
 - (id)mock:(Class)klass;
 - (id)mock:(Class)klass named:(NSString *)name;
-- (LRMockyStates *)states:(NSString *)name;
-- (LRMockyStates *)states:(NSString *)name defaultTo:(NSString *)defaultState;
+- (LRMockyStateMachine *)states:(NSString *)name;
+- (LRMockyStateMachine *)states:(NSString *)name defaultTo:(NSString *)defaultState;
 - (void)checking:(void (^)(LRExpectationBuilder *will))expectationBlock;
 - (void)addExpectation:(id<LRExpectation>)expectation;
 - (void)assertSatisfied;

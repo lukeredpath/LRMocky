@@ -9,14 +9,22 @@
 #import "FunctionalMockeryTestCase.h"
 
 @interface StateMachineTests : FunctionalMockeryTestCase
+{
+  LRMockyStateMachine *readiness;
+}
 @end
 
 @implementation StateMachineTests
 
+- (void)setUp
+{
+  [super setUp];
+  
+  readiness = [[context states:@"readiness"] retain];
+}
+
 - (void)testCanConstrainExpectationsToOccurWithinAGivenState
 {
-  LRMockyStates *readiness = [context states:@"readiness"];
-
   [context checking:^(that){
     [allowing(testObject) doSomething];     when([readiness hasBecome:@"ready"]);
     [allowing(testObject) doSomethingElse]; then([readiness becomes:@"ready"]);
@@ -31,14 +39,27 @@
 
 - (void)testAllowsExpectationsToOccurInCorrectState
 {
-  LRMockyStates *readiness = [context states:@"readiness"];
-  
   [context checking:^(that){
     [allowing(testObject) doSomething];     when([readiness hasBecome:@"ready"]);
     [allowing(testObject) doSomethingElse]; then([readiness becomes:@"ready"]);
   }];
   
   [testObject doSomethingElse];
+  [testObject doSomething];
+  
+  [context assertSatisfied];
+  
+  assertThat(testCase, passed());
+}
+
+- (void)testCanStartInASpecificState
+{
+  [readiness startsAs:@"ready"];
+
+  [context checking:^(that){
+    [allowing(testObject) doSomething];     when([readiness hasBecome:@"ready"]);
+  }];
+  
   [testObject doSomething];
   
   [context assertSatisfied];

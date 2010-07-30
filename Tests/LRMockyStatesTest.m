@@ -43,7 +43,8 @@ id<HCMatcher> isInState(LRMockyState *state)
 
 - (void)testCanTransitionToNewStateFromExistingState
 {
-  LRMockyStateMachine *context = [[LRMockyStateMachine alloc] initWithName:@"Test" defaultState:@"First"];
+  LRMockyStateMachine *context = [[LRMockyStateMachine alloc] initWithName:@"Test"];
+  [context startsAs:@"First"];
   
   [[context state:@"Second"] activate];
   

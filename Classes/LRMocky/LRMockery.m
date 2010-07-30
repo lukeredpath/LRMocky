@@ -54,14 +54,16 @@
   return mock;
 }
 
-- (LRMockyStates *)states:(NSString *)name;
+- (LRMockyStateMachine *)states:(NSString *)name;
 {
   return [[[LRMockyStateMachine alloc] initWithName:name] autorelease];
 }
 
-- (LRMockyStates *)states:(NSString *)name defaultTo:(NSString *)defaultState;
+- (LRMockyStateMachine *)states:(NSString *)name defaultTo:(NSString *)defaultState;
 {
-  return [[[LRMockyStateMachine alloc] initWithName:name defaultState:defaultState] autorelease];
+  LRMockyStateMachine *stateMachine = [self states:name];
+  [stateMachine startsAs:defaultState];
+  return stateMachine;
 }
 
 - (void)checking:(void (^)(id will))expectationBlock;
