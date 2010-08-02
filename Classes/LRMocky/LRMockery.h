@@ -27,6 +27,13 @@
 - (LRMockyStateMachine *)states:(NSString *)name defaultTo:(NSString *)defaultState;
 - (void)checking:(void (^)(LRExpectationBuilder *will))expectationBlock;
 - (void)addExpectation:(id<LRExpectation>)expectation;
+- (void)assertSatisfiedInFile:(NSString *)fileName lineNumber:(int)lineNumber;
 - (void)assertSatisfied;
 - (void)dispatchInvocation:(NSInvocation *)invocation;
 @end
+
+void LRM_assertContextSatisfied(LRMockery *context, NSString *fileName, int lineNumber);
+
+#ifdef LRMOCKY_SUGAR
+#define assertContextSatisfied(context) LRM_assertContextSatisfied(context, [NSString stringWithUTF8String:__FILE__], __LINE__)
+#endif

@@ -7,6 +7,7 @@
 //
 
 #import "LRTestCase.h"
+#import "NSException_SenTestFailure.h"
 
 @interface SenTestCase : NSObject
 - (void)failWithException:(NSException *)exception;
@@ -33,9 +34,15 @@
   [super dealloc];
 }
 
-- (void)notifiesFailureWithException:(NSException *)exception;
+- (void)notifiesFailureWithDescription:(NSString *)description 
+                                inFile:(NSString *)fileName 
+                            lineNumber:(int)lineNumber;
 {
-  [testCase failWithException:exception];
+  [testCase failWithException:[NSException 
+        failureInFile:fileName
+               atLine:lineNumber
+      withDescription:description
+  ]];
 }
 
 @end

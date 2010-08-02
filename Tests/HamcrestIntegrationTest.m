@@ -21,7 +21,7 @@
   }];
   
   [testObject doSomethingWithObject:@"foo"];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, passed());
 }
@@ -33,7 +33,7 @@
   }];
   
   [testObject doSomethingWithObject:@"bar"];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomethingWithObject: with(\"foo\") exactly(1) times but received it 0 times. doSomethingWithObject: was called with(@\"bar\").", testObject]));
@@ -46,7 +46,7 @@
   }];
   
   [testObject doSomethingWithObject:@"foo"];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, passed());
 }
@@ -58,7 +58,7 @@
   }];
   
   [testObject doSomethingWithObject:@"bar foo"];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
    @"Expected %@ to receive doSomethingWithObject: with(a string starting with \"foo\") exactly(1) times but received it 0 times. doSomethingWithObject: was called with(@\"bar foo\").", testObject]));
@@ -73,7 +73,7 @@
   }];
   
   [testObject doSomethingWithObject:dummy];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, passed());
 }
@@ -88,7 +88,7 @@
   
   SimpleObject *other = [[[SimpleObject alloc] init] autorelease];
   [testObject doSomethingWithObject:other];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomethingWithObject: with(sameInstance(<%@>)) exactly(1) times but received it 0 times. doSomethingWithObject: was called with(%@).", testObject, dummy, other]));

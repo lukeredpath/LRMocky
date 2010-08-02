@@ -86,17 +86,17 @@ id<HCMatcher> isExceptionOfType(id<HCMatcher>nameMatcher)
   return [[[HCInvocationMatcher alloc] initWithInvocation:nameInvocation matching:nameMatcher] autorelease];
 }
 
-id<HCMatcher> isExceptionOfTypeWithDescription(id<HCMatcher>nameMatcher, id<HCMatcher>descMatcher)
+id<HCMatcher> exceptionWithDescription(id<HCMatcher> descriptionMatcher)
 {
-  NSInvocation *nameInvocation = [HCInvocationMatcher 
-    createInvocationForSelector:@selector(name) onClass:[NSException class]];
   NSInvocation *descInvocation = [HCInvocationMatcher 
     createInvocationForSelector:@selector(description) onClass:[NSException class]];
-  
-  return allOf(
-    [[[HCInvocationMatcher alloc] initWithInvocation:nameInvocation matching:nameMatcher] autorelease],
-    [[[HCInvocationMatcher alloc] initWithInvocation:descInvocation matching:descMatcher] autorelease],
-  nil);
+
+  return [[[HCInvocationMatcher alloc] initWithInvocation:descInvocation matching:descriptionMatcher] autorelease];
+}
+
+id<HCMatcher> isExceptionOfTypeWithDescription(id<HCMatcher>nameMatcher, id<HCMatcher>descMatcher)
+{
+  return allOf(isExceptionOfType(nameMatcher), exceptionWithDescription(descMatcher), nil);
 }
 
 id<HCMatcher> passed()
@@ -115,8 +115,7 @@ id<HCMatcher> failedWithNumberOfFailures(int numberOfFailures)
 
 id<HCMatcher> failedWithExpectationError(NSString *errorDescription)
 {
-  id<HCMatcher> exceptionMatcher = isExceptionOfTypeWithDescription(equalTo(LRMockyExpectationError), containsString(errorDescription));
   NSInvocation *invocation   = [HCInvocationMatcher createInvocationForSelector:@selector(lastFailure) onClass:[FakeTestCase class]];
-  return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:exceptionMatcher] autorelease];
+  return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:exceptionWithDescription(containsString(errorDescription))] autorelease];
 }
 

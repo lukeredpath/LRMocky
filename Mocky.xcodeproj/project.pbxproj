@@ -101,6 +101,7 @@
 		A301782F11FE01DF004828C5 /* HCSubstringMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177E211FE01DF004828C5 /* HCSubstringMatcher.h */; };
 		A301783011FE01DF004828C5 /* HCSubstringMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177E311FE01DF004828C5 /* HCSubstringMatcher.mm */; };
 		A301783111FE01DF004828C5 /* OCHamcrest.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177E411FE01DF004828C5 /* OCHamcrest.h */; };
+		A32E0C6112070555009B4C81 /* NSException_SenTestFailure.h in Headers */ = {isa = PBXBuildFile; fileRef = A32E0C6012070555009B4C81 /* NSException_SenTestFailure.h */; };
 		A3385A1812024B31006E95AB /* StateMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C66A2A120244F20004F78B /* StateMachineTests.m */; };
 		A3385A2D12024DD3006E95AB /* LRMockyStatesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3385A2512024D08006E95AB /* LRMockyStatesTest.m */; };
 		A3385ADD12026372006E95AB /* LRMockyStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = A3385AC712026269006E95AB /* LRMockyStateMachine.m */; };
@@ -246,6 +247,7 @@
 		A30177E211FE01DF004828C5 /* HCSubstringMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSubstringMatcher.h; sourceTree = "<group>"; };
 		A30177E311FE01DF004828C5 /* HCSubstringMatcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = HCSubstringMatcher.mm; sourceTree = "<group>"; };
 		A30177E411FE01DF004828C5 /* OCHamcrest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCHamcrest.h; sourceTree = "<group>"; };
+		A32E0C6012070555009B4C81 /* NSException_SenTestFailure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSException_SenTestFailure.h; sourceTree = "<group>"; };
 		A3385A2512024D08006E95AB /* LRMockyStatesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMockyStatesTest.m; sourceTree = "<group>"; };
 		A3385AC612026269006E95AB /* LRMockyStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMockyStateMachine.h; sourceTree = "<group>"; };
 		A3385AC712026269006E95AB /* LRMockyStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMockyStateMachine.m; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 		A301768711FDEEFC004828C5 /* LRMocky */ = {
 			isa = PBXGroup;
 			children = (
+				A32E0C5C12070477009B4C81 /* Integration */,
 				A3385AC512026244006E95AB /* States */,
 				A30176CF11FDFCC7004828C5 /* Expectations */,
 				A30176B011FDEF01004828C5 /* Actions */,
@@ -385,8 +388,6 @@
 				A301769111FDEEFC004828C5 /* LRMockery.m */,
 				A301769211FDEEFC004828C5 /* LRMockObject.h */,
 				A301769311FDEEFC004828C5 /* LRMockObject.m */,
-				A301769811FDEEFC004828C5 /* LRTestCase.h */,
-				A301769911FDEEFC004828C5 /* LRTestCase.m */,
 				A35D65B911FF2C6B00F0C310 /* LRInvocationComparitor.h */,
 				A35D65BA11FF2C6C00F0C310 /* LRInvocationComparitor.m */,
 				A35D65F211FF34BC00F0C310 /* LRHamcrestParameterAdapter.h */,
@@ -434,6 +435,7 @@
 		A30176EE11FE017E004828C5 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				A32E0C6012070555009B4C81 /* NSException_SenTestFailure.h */,
 				A39155B611FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h */,
 				A39155B711FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m */,
 				A30176EF11FE017E004828C5 /* Hamcrest */,
@@ -589,6 +591,15 @@
 			path = Text;
 			sourceTree = "<group>";
 		};
+		A32E0C5C12070477009B4C81 /* Integration */ = {
+			isa = PBXGroup;
+			children = (
+				A301769811FDEEFC004828C5 /* LRTestCase.h */,
+				A301769911FDEEFC004828C5 /* LRTestCase.m */,
+			);
+			name = Integration;
+			sourceTree = "<group>";
+		};
 		A3385AC512026244006E95AB /* States */ = {
 			isa = PBXGroup;
 			children = (
@@ -712,6 +723,7 @@
 				A301782F11FE01DF004828C5 /* HCSubstringMatcher.h in Headers */,
 				A301783111FE01DF004828C5 /* OCHamcrest.h in Headers */,
 				A39155B811FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h in Headers */,
+				A32E0C6112070555009B4C81 /* NSException_SenTestFailure.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

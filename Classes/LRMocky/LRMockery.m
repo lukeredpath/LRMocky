@@ -11,6 +11,7 @@
 #import "LRMockObject.h"
 #import "LRUnexpectedInvocation.h"
 #import "LRMockyStates.h"
+#import "LRExpectationMessage.h"
 
 @implementation LRMockery
 
@@ -71,11 +72,22 @@
   expectationBlock([LRExpectationBuilder builderInContext:self]);
 }
 
-- (void)assertSatisfied;
+NSString *failureFor(id<LRDescribable> expectation) {
+  LRExpectationMessage *errorMessage = [[[LRExpectationMessage alloc] init] autorelease];
+  [expectation describeTo:errorMessage];
+  return [errorMessage description];
+}
+
+- (void)assertSatisfied
+{
+  return [self assertSatisfiedInFile:nil lineNumber:0];
+}
+
+- (void)assertSatisfiedInFile:(NSString *)fileName lineNumber:(int)lineNumber;
 {
   for (id<LRExpectation> expectation in expectations) {
     if ([expectation isSatisfied] == NO) {
-      [testNotifier notifiesFailureWithException:[expectation failureException]];
+      [testNotifier notifiesFailureWithDescription:failureFor(expectation) inFile:fileName lineNumber:lineNumber];
     }
   }
 }
@@ -98,3 +110,9 @@
 }
 
 @end
+
+void LRM_assertContextSatisfied(LRMockery *context, NSString *fileName, int lineNumber)
+{
+  [context assertSatisfiedInFile:fileName lineNumber:lineNumber];
+}
+

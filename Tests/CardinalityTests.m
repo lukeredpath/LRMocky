@@ -23,7 +23,7 @@
   
   [testObject doSomething];
   [testObject doSomething];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomething exactly(1) times but received it 2 times.", testObject]));
@@ -37,7 +37,7 @@
   
   [testObject doSomething];
   [testObject doSomething];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomething exactly(3) times but received it 2 times.", testObject]));
@@ -52,7 +52,7 @@
   [testObject doSomething];
   [testObject doSomething];
   [testObject doSomething];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomething exactly(2) times but received it 3 times.", testObject]));
@@ -67,7 +67,7 @@
   }];
   
   [testObject doSomething];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomething atLeast(2) times but received it 1 times.", testObject]));
@@ -82,7 +82,7 @@
   [testObject doSomething];
   [testObject doSomething];
   [testObject doSomething];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, passed());
 }
@@ -95,7 +95,7 @@
   
   [testObject doSomething];
   [testObject doSomething];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, passed());
 }
@@ -111,7 +111,7 @@
   [testObject doSomething];
   [testObject doSomething];
   [testObject doSomething];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomething atMost(2) times but received it 3 times.", testObject]));
@@ -124,7 +124,7 @@
   }];
   
   [testObject doSomething];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, passed());
 }
@@ -137,7 +137,7 @@
   
   [testObject doSomething];
   [testObject doSomething];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, passed());
 }
@@ -156,7 +156,7 @@
   [testObject doSomething];
   [testObject doSomething];
   [testObject doSomething];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomething between(2 and 5) times but received it 6 times.", testObject]));
@@ -169,7 +169,7 @@
   }];
   
   [testObject doSomething];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomething between(2 and 5) times but received it 1 times.", testObject]));
@@ -183,7 +183,7 @@
   
   [testObject doSomething];
   [testObject doSomething];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, passed());
 }
@@ -199,7 +199,7 @@
   [testObject doSomething];
   [testObject doSomething];
   [testObject doSomething];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, passed());
 }
@@ -213,7 +213,7 @@
   [testObject doSomething];
   [testObject doSomething];
   [testObject doSomething];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, passed());
 }
@@ -227,7 +227,7 @@
   }];
   
   [testObject doSomething];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomething exactly(0) times but received it 1 times.", testObject]));
@@ -239,7 +239,7 @@
     [never(testObject) doSomething];
   }];
   
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, passed());
 }

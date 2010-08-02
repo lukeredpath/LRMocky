@@ -83,13 +83,6 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
   return [self.cardinality satisfiedBy:numberOfInvocations];
 }
 
-- (NSException *)failureException;
-{
-  LRExpectationMessage *errorMessage = [[[LRExpectationMessage alloc] init] autorelease];
-  [self describeTo:errorMessage];
-  return [NSException exceptionWithName:LRMockyExpectationError reason:errorMessage.message userInfo:nil];
-}
-
 - (void)describeTo:(LRExpectationMessage *)message
 {
   [message append:[NSString stringWithFormat:@"Expected %@ to receive %@ ", mockObject, NSStringFromSelector([expectedInvocation selector])]];

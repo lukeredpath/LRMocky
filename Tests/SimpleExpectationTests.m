@@ -21,7 +21,7 @@
   }];
   
   [testObject doSomething];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
 
   assertThat(testCase, passed());
 }
@@ -32,7 +32,7 @@
     [oneOf(testObject) doSomething];
   }];
   
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomething exactly(1) times but received it 0 times", testObject]));
@@ -41,7 +41,7 @@
 - (void)testFailsWhenUnexpectedMethodIsCalled;
 {
   [testObject doSomething];  
-  [context assertSatisfied];
+  assertContextSatisfied(context);
 
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Unexpected method doSomething called on %@", testObject]));
@@ -54,7 +54,7 @@
   }];
   
   [testObject doSomething];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, passed());
 }
@@ -65,7 +65,7 @@
     [allowing(testObject) doSomething];
   }];
   
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, passed());
 }
@@ -77,7 +77,7 @@
   }];
   
   [testObject returnSomethingForValue:@"one"];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, passed());
 }
@@ -89,7 +89,7 @@
   }];
   
   [testObject returnSomethingForValue:@"two"];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive returnSomethingForValue: with(@\"one\") exactly(1) times but received it 0 times. returnSomethingForValue: was called with(@\"two\").", testObject]));
@@ -102,7 +102,7 @@
   }];
   
   [testObject doSomethingWith:@"foo" andObject:@"qux"];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomethingWith:andObject: with(@\"foo\", @\"bar\") exactly(1) times but received it 0 times. doSomethingWith:andObject: was called with(@\"foo\", @\"qux\").", testObject]));
@@ -115,7 +115,7 @@
   }];
   
   [testObject doSomethingWithInt:20];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, passed());
 }
@@ -127,7 +127,7 @@
   }];
   
   [testObject doSomethingWithInt:20];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
 
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomethingWithInt: with(10) exactly(1) times but received it 0 times. doSomethingWithInt: was called with(20).", testObject]));

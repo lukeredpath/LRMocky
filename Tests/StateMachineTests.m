@@ -32,7 +32,7 @@
   
   [testObject doSomething];
   
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, failedWithNumberOfFailures(1));
 }
@@ -47,7 +47,7 @@
   [testObject doSomethingElse];
   [testObject doSomething];
   
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, passed());
 }
@@ -62,7 +62,7 @@
   
   [testObject doSomething];
   
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(testCase, passed());
 }

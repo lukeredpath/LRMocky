@@ -30,4 +30,9 @@
   return [[message copy] autorelease];
 }
 
+- (NSString *)description;
+{
+  return [self message];
+}
+
 @end

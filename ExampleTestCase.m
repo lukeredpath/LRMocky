@@ -31,7 +31,7 @@
   }];
   
   [myMockString uppercaseString];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
 }
 
 - (void)testFailedMocking 
@@ -45,7 +45,8 @@
   }];
   
   [myMockString lowercaseString];
-  [context assertSatisfied];
+  
+  assertContextSatisfied(context);
 }
 
 
@@ -62,7 +63,8 @@
   [myMockString uppercaseString];
   [myMockString uppercaseString];
   [myMockString uppercaseString];
-  [context assertSatisfied];
+  
+  assertContextSatisfied(context);
 }
 
 - (void)testFailedMockingWithMultipleCallsExpected
@@ -76,7 +78,7 @@
   }];
   
   [myMockString uppercaseString];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
 }
 
 - (void)testSuccessfulMockingWithHamcrest 
@@ -90,7 +92,7 @@
   }];
   
   [myMockString stringByAppendingString:@"super"];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
 }
 
 - (void)testFailedMockingWithHamcrest 
@@ -104,7 +106,7 @@
   }];
   
   [myMockString stringByAppendingString:@"not super"];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
 }
 
 - (void)testSuccessfulMockWithReturnValue
@@ -118,7 +120,7 @@
   }];
   
   NSString *returnedValue = [myMockString uppercaseString];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
 
   assertThat(returnedValue, equalTo(@"FOOBAR"));
 }
@@ -137,7 +139,7 @@
   }];
   
   [myMockString uppercaseString];
-  [context assertSatisfied];
+  assertContextSatisfied(context);
   
   assertThat(outsideTheBlock, equalTo(@"FOOBAR"));
 }
