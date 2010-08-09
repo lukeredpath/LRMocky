@@ -101,7 +101,7 @@
 		A301782F11FE01DF004828C5 /* HCSubstringMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177E211FE01DF004828C5 /* HCSubstringMatcher.h */; };
 		A301783011FE01DF004828C5 /* HCSubstringMatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = A30177E311FE01DF004828C5 /* HCSubstringMatcher.mm */; };
 		A301783111FE01DF004828C5 /* OCHamcrest.h in Headers */ = {isa = PBXBuildFile; fileRef = A30177E411FE01DF004828C5 /* OCHamcrest.h */; };
-		A32E0C6112070555009B4C81 /* NSException_SenTestFailure.h in Headers */ = {isa = PBXBuildFile; fileRef = A32E0C6012070555009B4C81 /* NSException_SenTestFailure.h */; };
+		A32E0C6112070555009B4C81 /* NSException_SenTestFailure.h in Headers */ = {isa = PBXBuildFile; fileRef = A32E0C6012070555009B4C81 /* NSException_SenTestFailure.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3385A1812024B31006E95AB /* StateMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C66A2A120244F20004F78B /* StateMachineTests.m */; };
 		A3385A2D12024DD3006E95AB /* LRMockyStatesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3385A2512024D08006E95AB /* LRMockyStatesTest.m */; };
 		A3385ADD12026372006E95AB /* LRMockyStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = A3385AC712026269006E95AB /* LRMockyStateMachine.m */; };
@@ -679,6 +679,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A32E0C6112070555009B4C81 /* NSException_SenTestFailure.h in Headers */,
 				A30176AC11FDEEFC004828C5 /* LRTestCase.h in Headers */,
 				A3C805921207139A00BA64E7 /* LRMockyStateMachine.h in Headers */,
 				A3C805931207139A00BA64E7 /* LRMockyState.h in Headers */,
@@ -739,7 +740,6 @@
 				A301782F11FE01DF004828C5 /* HCSubstringMatcher.h in Headers */,
 				A301783111FE01DF004828C5 /* OCHamcrest.h in Headers */,
 				A39155B811FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h in Headers */,
-				A32E0C6112070555009B4C81 /* NSException_SenTestFailure.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
