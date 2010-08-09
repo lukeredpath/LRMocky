@@ -133,4 +133,16 @@
     @"Expected %@ to receive doSomethingWithInt: with(10) exactly(1) times but received it 0 times. doSomethingWithInt: was called with(20).", testObject]));
 }
 
+- (void)testCanResetTheMockery
+{
+  [context checking:^(LRExpectationBuilder *builder){
+    [oneOf(testObject) doSomething];
+  }];
+  
+  [context reset];
+  
+  assertContextSatisfied(context);
+  assertThat(testCase, passed());
+}
+
 @end

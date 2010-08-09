@@ -30,6 +30,7 @@
 - (void)assertSatisfiedInFile:(NSString *)fileName lineNumber:(int)lineNumber;
 - (void)assertSatisfied;
 - (void)dispatchInvocation:(NSInvocation *)invocation;
+- (void)reset;
 @end
 
 void LRM_assertContextSatisfied(LRMockery *context, NSString *fileName, int lineNumber);

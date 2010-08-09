@@ -109,6 +109,11 @@ NSString *failureFor(id<LRDescribable> expectation) {
   [expectations addObject:unexpectedInvocation];
 }
 
+- (void)reset;
+{
+  [expectations removeAllObjects];
+}
+
 @end
 
 void LRM_assertContextSatisfied(LRMockery *context, NSString *fileName, int lineNumber)
