@@ -36,7 +36,7 @@
   assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomethingWithObject: with(\"foo\") exactly(1) times but received it 0 times. doSomethingWithObject: was called with(@\"bar\").", testObject]));
+    @"Expected %@ to receive doSomethingWithObject: with(\"foo\") exactly(1) times but received it 0 times.", testObject]));
 }
 
 - (void)testCanExpectInvocationWithStringWithPrefixAndPass
@@ -61,7 +61,7 @@
   assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-   @"Expected %@ to receive doSomethingWithObject: with(a string starting with \"foo\") exactly(1) times but received it 0 times. doSomethingWithObject: was called with(@\"bar foo\").", testObject]));
+   @"Expected %@ to receive doSomethingWithObject: with(a string starting with \"foo\") exactly(1) times but received it 0 times.", testObject]));
 }
 
 - (void)testCanExpectInvocationWithIdenticalObjectAndPass
@@ -91,7 +91,7 @@
   assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomethingWithObject: with(sameInstance(<%@>)) exactly(1) times but received it 0 times. doSomethingWithObject: was called with(%@).", testObject, dummy, other]));
+    @"Expected %@ to receive doSomethingWithObject: with(sameInstance(<%@>)) exactly(1) times but received it 0 times.", testObject, dummy, other]));
 }
 
 @end

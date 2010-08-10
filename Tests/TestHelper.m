@@ -115,7 +115,7 @@ id<HCMatcher> failedWithNumberOfFailures(int numberOfFailures)
 
 id<HCMatcher> failedWithExpectationError(NSString *errorDescription)
 {
-  NSInvocation *invocation   = [HCInvocationMatcher createInvocationForSelector:@selector(lastFailure) onClass:[FakeTestCase class]];
-  return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:exceptionWithDescription(containsString(errorDescription))] autorelease];
+  NSInvocation *invocation   = [HCInvocationMatcher createInvocationForSelector:@selector(failures) onClass:[FakeTestCase class]];
+  return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:hasItem(exceptionWithDescription(containsString(errorDescription)))] autorelease];
 }
 

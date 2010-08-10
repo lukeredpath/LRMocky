@@ -92,7 +92,7 @@
   assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive returnSomethingForValue: with(@\"one\") exactly(1) times but received it 0 times. returnSomethingForValue: was called with(@\"two\").", testObject]));
+    @"Expected %@ to receive returnSomethingForValue: with(@\"one\") exactly(1) times but received it 0 times.", testObject]));
 }
 
 - (void)testCanExpectMethodCallWithSpecificParametersAndFailWhenAtLeastOneParameterIsWrong;
@@ -105,7 +105,7 @@
   assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomethingWith:andObject: with(@\"foo\", @\"bar\") exactly(1) times but received it 0 times. doSomethingWith:andObject: was called with(@\"foo\", @\"qux\").", testObject]));
+    @"Expected %@ to receive doSomethingWith:andObject: with(@\"foo\", @\"bar\") exactly(1) times but received it 0 times.", testObject]));
 }
 
 - (void)testCanExpectMethodCallWithSpecificNonObjectParametersAndPass;
@@ -130,7 +130,7 @@
   assertContextSatisfied(context);
 
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomethingWithInt: with(10) exactly(1) times but received it 0 times. doSomethingWithInt: was called with(20).", testObject]));
+    @"Expected %@ to receive doSomethingWithInt: with(10) exactly(1) times but received it 0 times.", testObject]));
 }
 
 - (void)testCanResetTheMockery
