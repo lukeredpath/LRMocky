@@ -8,22 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class LRImposterizer;
 
-@protocol LRImposter
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)sel;
-- (BOOL)respondsToSelector:(SEL)aSelector;
-@optional
-// override to actually do something with an invocation
-- (void)forwardInvocation:(NSInvocation *)anInvocation;
+@interface LRImposter : NSObject
+{
+  LRImposterizer *imposterizer;
+}
+@property (nonatomic, retain) LRImposterizer *imposterizer;
+
+- (id)initWithImposterizer:(LRImposterizer *)anImposterizer;
 @end
-
-@interface LRClassImposter : NSObject
-{}
-- (Class)classToImposterize; // template method
-@end
-
-@interface LRObjectImposter : NSObject
-{}
-- (id)objectToImposterize;  // template method
-@end
-

@@ -7,49 +7,55 @@
 //
 
 #import "LRImposter.h"
+#import "LRImposterizer.h"
 
+@implementation LRImposter
 
-@implementation LRClassImposter
+@synthesize imposterizer;
 
-- (Class)classToImposterize
+- (id)initWithImposterizer:(LRImposterizer *)anImposterizer;
 {
-  [NSException raise:NSInternalInconsistencyException 
-              format:@"Sub-classes of LRClassImposter must override classToImposterize"];
-  return nil;
+  if (self = [super init]) {
+    imposterizer = [anImposterizer retain];
+    imposterizer.delegate = self;
+  }
+  return self;
+}
+
+- (void)dealloc
+{
+  [imposterizer release];
+  [super dealloc];
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)sel
 {
-  return [[self classToImposterize] instanceMethodSignatureForSelector:sel];
+  return [imposterizer methodSignatureForSelector:sel];
 }
 
 - (BOOL)respondsToSelector:(SEL)aSelector
 {
-  return [[self classToImposterize] instancesRespondToSelector:aSelector];
+  if (aSelector == @selector(handleImposterizedInvocation:)) {
+    return YES;
+  }
+  return [imposterizer respondsToSelector:aSelector];
+}
+
+- (id)forwardingTargetForSelector:(SEL)aSelector
+{
+  return imposterizer;
+}
+
+- (void)setImposterizer:(LRImposterizer *)newImposterizer;
+{
+  [imposterizer release];
+  imposterizer = [newImposterizer retain];
+  imposterizer.delegate = self;
+}
+
+- (void)handleImposterizedInvocation:(NSInvocation *)invocation;
+{
+  NSLog(@"Imposter sub-class did not handle invocation %@ did you forget to override handleImposterizedInvocation:?", invocation);
 }
 
 @end
-
-
-@implementation LRObjectImposter
-
-- (id)objectToImposterize
-{
-  [NSException raise:NSInternalInconsistencyException 
-              format:@"Sub-classes of LRObjectImposter must override objectToImposterize"];
-  return nil;
-}
-
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)sel
-{
-  return [[self objectToImposterize] methodSignatureForSelector:sel];
-}
-
-- (BOOL)respondsToSelector:(SEL)aSelector
-{
-  return [[self objectToImposterize] respondsToSelector:aSelector];
-}
-
-
-@end
-

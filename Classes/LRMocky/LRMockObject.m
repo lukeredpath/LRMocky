@@ -8,29 +8,31 @@
 
 #import "LRMockObject.h"
 #import "LRMockery.h"
+#import "LRClassImposterizer.h"
+#import "LRProtocolImposterizer.h"
 
 @implementation LRMockObject
 
-@synthesize mockedClass;
 @synthesize name;
 
 + (id)mockForClass:(Class)aClass inContext:(LRMockery *)mockery;
 {
-  return [[[self alloc] initWithClass:aClass context:mockery] autorelease];
+  LRClassImposterizer *imposterizer = [[[LRClassImposterizer alloc] initWithClass:aClass] autorelease];
+  return [[[self alloc] initWithImposterizer:imposterizer context:mockery] autorelease];
 }
 
-- (id)initWithClass:(Class)aClass context:(LRMockery *)mockery;
++ (id)mockForProtocol:(Protocol *)protocol inContext:(LRMockery *)mockery;
 {
-  if (self = [super init]) {
-    mockedClass = aClass;
+  LRProtocolImposterizer *imposterizer = [[[LRProtocolImposterizer alloc] initWithProtocol:protocol] autorelease];
+  return [[[self alloc] initWithImposterizer:imposterizer context:mockery] autorelease];
+}
+
+- (id)initWithImposterizer:(LRImposterizer *)anImposterizer context:(LRMockery *)mockery;
+{
+  if (self = [super initWithImposterizer:anImposterizer]) {
     context = [mockery retain];
   }
   return self;
-}
-
-- (Class)classToImposterize
-{
-  return mockedClass;
 }
 
 - (void)dealloc;
@@ -40,17 +42,19 @@
   [super dealloc];
 }
 
-- (void)forwardInvocation:(NSInvocation *)invocation
+- (void)handleImposterizedInvocation:(NSInvocation *)invocation
 {
-  [context dispatchInvocation:invocation];
+  [context dispatchInvocation:invocation forMock:self];
 }
 
 - (NSString *)description
 {
-  if (self.name == nil) {
-    return [NSString stringWithFormat:@"<LRMockObject forClass:%@>", NSStringFromClass(mockedClass)];
+  NSMutableString *description = [NSMutableString stringWithString:@"<LRMockObject "];
+  if (self.name) {
+    [description appendFormat:@"named:\"%@\" ", self.name];
   }
-  return [NSString stringWithFormat:@"<LRMockObject named:\"%@\" forClass:%@>", self.name, NSStringFromClass(mockedClass)];
+  [description appendFormat:@"%@>", [imposterizer description]];
+  return description;
 }
 
 @end

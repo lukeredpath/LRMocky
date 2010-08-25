@@ -10,15 +10,15 @@
 #import "LRImposter.h"
 
 @class LRMockery;
+@class LRImposterizer;
 
-@interface LRMockObject : LRClassImposter {
-  Class mockedClass;
+@interface LRMockObject : LRImposter {
   LRMockery *context;
   NSString *name;
 }
-@property (nonatomic, readonly) Class mockedClass;
 @property (nonatomic, copy) NSString *name;
 
 + (id)mockForClass:(Class)aClass inContext:(LRMockery *)mockery;
-- (id)initWithClass:(Class)aClass context:(LRMockery *)mockery;
++ (id)mockForProtocol:(Protocol *)protocol inContext:(LRMockery *)mockery;
+- (id)initWithImposterizer:(LRImposterizer *)anImposterizer context:(LRMockery *)mockery;
 @end
