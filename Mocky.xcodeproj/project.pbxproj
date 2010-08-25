@@ -121,6 +121,18 @@
 		A381A20212243C0900FA2A5C /* LRHamcrestParameterAdapter.h in Headers */ = {isa = PBXBuildFile; fileRef = A35D65F211FF34BC00F0C310 /* LRHamcrestParameterAdapter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A381A20312243C1400FA2A5C /* LRMockyStates.h in Headers */ = {isa = PBXBuildFile; fileRef = A3C66A42120249240004F78B /* LRMockyStates.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A381A20B12243C3000FA2A5C /* LRMultipleAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A3EE4F3911FF1680002DA61D /* LRMultipleAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A381A25312243FAC00FA2A5C /* ProtocolMockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A381A25212243FAC00FA2A5C /* ProtocolMockTests.m */; };
+		A381A2611224410A00FA2A5C /* ImposterizerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A381A2601224410A00FA2A5C /* ImposterizerTest.m */; };
+		A381A2671224426200FA2A5C /* LRClassImposterizer.h in Headers */ = {isa = PBXBuildFile; fileRef = A381A2651224426200FA2A5C /* LRClassImposterizer.h */; };
+		A381A2681224426200FA2A5C /* LRClassImposterizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A381A2661224426200FA2A5C /* LRClassImposterizer.m */; };
+		A381A2F312244DD700FA2A5C /* HCBlockMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = A381A2F112244DD700FA2A5C /* HCBlockMatcher.h */; };
+		A381A2F412244DD700FA2A5C /* HCBlockMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A381A2F212244DD700FA2A5C /* HCBlockMatcher.m */; };
+		A381A3861224553200FA2A5C /* LRObjectImposterizer.h in Headers */ = {isa = PBXBuildFile; fileRef = A381A3841224553200FA2A5C /* LRObjectImposterizer.h */; };
+		A381A3871224553200FA2A5C /* LRObjectImposterizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A381A3851224553200FA2A5C /* LRObjectImposterizer.m */; };
+		A381A38E122455EE00FA2A5C /* LRImposterizer.h in Headers */ = {isa = PBXBuildFile; fileRef = A381A38C122455EE00FA2A5C /* LRImposterizer.h */; };
+		A381A38F122455EE00FA2A5C /* LRImposterizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A381A38D122455EE00FA2A5C /* LRImposterizer.m */; };
+		A381A3A0122456B200FA2A5C /* LRProtocolImposterizer.h in Headers */ = {isa = PBXBuildFile; fileRef = A381A39E122456B200FA2A5C /* LRProtocolImposterizer.h */; };
+		A381A3A1122456B200FA2A5C /* LRProtocolImposterizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A381A39F122456B200FA2A5C /* LRProtocolImposterizer.m */; };
 		A39155B811FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A39155B611FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A39155B911FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A39155B711FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m */; };
 		A391561111FFB80F00FE7C49 /* LRExpectationMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A391557011FF661400FE7C49 /* LRExpectationMessage.m */; };
@@ -284,6 +296,18 @@
 		A35D667B11FF508B00F0C310 /* CardinalityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardinalityTests.m; sourceTree = "<group>"; };
 		A36FDBB411FFBB6E004A08F4 /* Example Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Example Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A36FDBB511FFBB6E004A08F4 /* Example Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example Tests-Info.plist"; sourceTree = "<group>"; };
+		A381A25212243FAC00FA2A5C /* ProtocolMockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolMockTests.m; sourceTree = "<group>"; };
+		A381A2601224410A00FA2A5C /* ImposterizerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImposterizerTest.m; sourceTree = "<group>"; };
+		A381A2651224426200FA2A5C /* LRClassImposterizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRClassImposterizer.h; sourceTree = "<group>"; };
+		A381A2661224426200FA2A5C /* LRClassImposterizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRClassImposterizer.m; sourceTree = "<group>"; };
+		A381A2F112244DD700FA2A5C /* HCBlockMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBlockMatcher.h; sourceTree = "<group>"; };
+		A381A2F212244DD700FA2A5C /* HCBlockMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBlockMatcher.m; sourceTree = "<group>"; };
+		A381A3841224553200FA2A5C /* LRObjectImposterizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRObjectImposterizer.h; sourceTree = "<group>"; };
+		A381A3851224553200FA2A5C /* LRObjectImposterizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRObjectImposterizer.m; sourceTree = "<group>"; };
+		A381A38C122455EE00FA2A5C /* LRImposterizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRImposterizer.h; sourceTree = "<group>"; };
+		A381A38D122455EE00FA2A5C /* LRImposterizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRImposterizer.m; sourceTree = "<group>"; };
+		A381A39E122456B200FA2A5C /* LRProtocolImposterizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRProtocolImposterizer.h; sourceTree = "<group>"; };
+		A381A39F122456B200FA2A5C /* LRProtocolImposterizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRProtocolImposterizer.m; sourceTree = "<group>"; };
 		A391554711FF5F0900FE7C49 /* LRExpectationCardinality.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectationCardinality.h; sourceTree = "<group>"; };
 		A391554811FF5F0900FE7C49 /* LRExpectationCardinality.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRExpectationCardinality.m; sourceTree = "<group>"; };
 		A391556F11FF661400FE7C49 /* LRExpectationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LRExpectationMessage.h; path = ../LRExpectationMessage.h; sourceTree = "<group>"; };
@@ -392,6 +416,7 @@
 		A301768711FDEEFC004828C5 /* LRMocky */ = {
 			isa = PBXGroup;
 			children = (
+				A381A2621224412B00FA2A5C /* Imposterizers */,
 				A32E0C5C12070477009B4C81 /* Integration */,
 				A3385AC512026244006E95AB /* States */,
 				A30176CF11FDFCC7004828C5 /* Expectations */,
@@ -454,6 +479,7 @@
 				A32E0C6012070555009B4C81 /* NSException_SenTestFailure.h */,
 				A39155B611FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h */,
 				A39155B711FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m */,
+				A381A2F012244DC400FA2A5C /* Hamcrest-Extensions */,
 				A30176EF11FE017E004828C5 /* Hamcrest */,
 			);
 			path = Vendor;
@@ -648,6 +674,7 @@
 				A35D667B11FF508B00F0C310 /* CardinalityTests.m */,
 				A3C66A2A120244F20004F78B /* StateMachineTests.m */,
 				A3D496D91210CF910076940C /* ExpectationsWithDifferentArgumentsTest.m */,
+				A381A25212243FAC00FA2A5C /* ProtocolMockTests.m */,
 			);
 			name = Functional;
 			sourceTree = "<group>";
@@ -658,6 +685,7 @@
 				A34650D311F857680080B46B /* LRMockeryTest.m */,
 				A35D65B611FF2C3F00F0C310 /* LRInvocationComparitorTest.m */,
 				A3385A2512024D08006E95AB /* LRMockyStatesTest.m */,
+				A381A2601224410A00FA2A5C /* ImposterizerTest.m */,
 			);
 			name = "Unit Tests";
 			sourceTree = "<group>";
@@ -671,6 +699,30 @@
 				A346500111F2937D0080B46B /* TestHelper.m */,
 			);
 			name = Support;
+			sourceTree = "<group>";
+		};
+		A381A2621224412B00FA2A5C /* Imposterizers */ = {
+			isa = PBXGroup;
+			children = (
+				A381A2651224426200FA2A5C /* LRClassImposterizer.h */,
+				A381A2661224426200FA2A5C /* LRClassImposterizer.m */,
+				A381A3841224553200FA2A5C /* LRObjectImposterizer.h */,
+				A381A3851224553200FA2A5C /* LRObjectImposterizer.m */,
+				A381A39E122456B200FA2A5C /* LRProtocolImposterizer.h */,
+				A381A39F122456B200FA2A5C /* LRProtocolImposterizer.m */,
+				A381A38C122455EE00FA2A5C /* LRImposterizer.h */,
+				A381A38D122455EE00FA2A5C /* LRImposterizer.m */,
+			);
+			name = Imposterizers;
+			sourceTree = "<group>";
+		};
+		A381A2F012244DC400FA2A5C /* Hamcrest-Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A381A2F112244DD700FA2A5C /* HCBlockMatcher.h */,
+				A381A2F212244DD700FA2A5C /* HCBlockMatcher.m */,
+			);
+			name = "Hamcrest-Extensions";
 			sourceTree = "<group>";
 		};
 		A3943E0911FFBB99007FE700 /* Examples */ = {
@@ -755,6 +807,11 @@
 				A301782F11FE01DF004828C5 /* HCSubstringMatcher.h in Headers */,
 				A301783111FE01DF004828C5 /* OCHamcrest.h in Headers */,
 				A39155B811FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h in Headers */,
+				A381A2671224426200FA2A5C /* LRClassImposterizer.h in Headers */,
+				A381A2F312244DD700FA2A5C /* HCBlockMatcher.h in Headers */,
+				A381A3861224553200FA2A5C /* LRObjectImposterizer.h in Headers */,
+				A381A38E122455EE00FA2A5C /* LRImposterizer.h in Headers */,
+				A381A3A0122456B200FA2A5C /* LRProtocolImposterizer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -902,6 +959,8 @@
 				A35D667C11FF508B00F0C310 /* CardinalityTests.m in Sources */,
 				A3385A2D12024DD3006E95AB /* LRMockyStatesTest.m in Sources */,
 				A3D496E31210D0070076940C /* ExpectationsWithDifferentArgumentsTest.m in Sources */,
+				A381A25312243FAC00FA2A5C /* ProtocolMockTests.m in Sources */,
+				A381A2611224410A00FA2A5C /* ImposterizerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -972,6 +1031,11 @@
 				A301782C11FE01DF004828C5 /* HCStringEndsWith.mm in Sources */,
 				A301782E11FE01DF004828C5 /* HCStringStartsWith.mm in Sources */,
 				A301783011FE01DF004828C5 /* HCSubstringMatcher.mm in Sources */,
+				A381A2681224426200FA2A5C /* LRClassImposterizer.m in Sources */,
+				A381A2F412244DD700FA2A5C /* HCBlockMatcher.m in Sources */,
+				A381A3871224553200FA2A5C /* LRObjectImposterizer.m in Sources */,
+				A381A38F122455EE00FA2A5C /* LRImposterizer.m in Sources */,
+				A381A3A1122456B200FA2A5C /* LRProtocolImposterizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

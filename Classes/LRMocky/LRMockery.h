@@ -13,6 +13,7 @@
 @class LRExpectationBuilder;
 @class SenTestCase;
 @class LRMockyStateMachine;
+@class LRMockObject;
 
 @interface LRMockery : NSObject {
   NSMutableArray *expectations;
@@ -23,13 +24,14 @@
 - (id)initWithNotifier:(id<LRTestCaseNotifier>)aNotifier;
 - (id)mock:(Class)klass;
 - (id)mock:(Class)klass named:(NSString *)name;
+- (id)protocolMock:(Protocol *)protocol;
 - (LRMockyStateMachine *)states:(NSString *)name;
 - (LRMockyStateMachine *)states:(NSString *)name defaultTo:(NSString *)defaultState;
 - (void)checking:(void (^)(LRExpectationBuilder *will))expectationBlock;
 - (void)addExpectation:(id<LRExpectation>)expectation;
 - (void)assertSatisfiedInFile:(NSString *)fileName lineNumber:(int)lineNumber;
 - (void)assertSatisfied;
-- (void)dispatchInvocation:(NSInvocation *)invocation;
+- (void)dispatchInvocation:(NSInvocation *)invocation forMock:(LRMockObject *)mockObject;
 - (void)reset;
 @end
 

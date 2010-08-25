@@ -119,3 +119,23 @@ id<HCMatcher> failedWithExpectationError(NSString *errorDescription)
   return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:hasItem(exceptionWithDescription(containsString(errorDescription)))] autorelease];
 }
 
+void LR_assertNothingRaisedWithLocation(void (^block)(void), SenTestCase *testCase, NSString *fileName, int lineNumber)
+{
+  @try {
+    
+    passed();
+  }
+  @catch (NSException * e) {
+    NSException *exception = [NSException failureInFile:fileName atLine:lineNumber withDescription:
+     [NSString stringWithFormat:@"Expected block not to raise, but raised '%@'", [e description]]];
+    [testCase failWithException:exception];
+  }
+}
+
+@implementation NSInvocation (BetterDescription)
+- (NSString *)description
+{
+  return [NSString stringWithFormat:@"NSInvocation for:@selector(%@)", NSStringFromSelector([self selector])];
+}
+@end
+

@@ -12,6 +12,7 @@
 #import "LRInvocationExpectation.h"
 #import "LRExpectationCardinality.h"
 #import "LRMockyStates.h"
+#import "LRObjectImposterizer.h"
 
 @interface LRExpectationBuilder ()
 @property (nonatomic, retain) LRInvocationExpectation *currentExpecation;
@@ -37,13 +38,9 @@
   return self;
 }
 
-- (Class)classToImposterize
-{
-  return mockedClass;
-}
-
 - (void)dealloc;
 {
+  [imposterizer release];
   [mockery release];
   [super dealloc];
 }
@@ -104,12 +101,6 @@
   [self.currentExpecation addAction:[LRMockyStateTransitionAction transitionToState:state]];
 }
 
-- (void)forwardInvocation:(NSInvocation *)invocation
-{
-  self.currentExpecation.invocation = invocation;
-  [mockery addExpectation:self.currentExpecation];
-}
-
 - (id)will:(id<LRExpectationAction>)action;
 {
   [self.currentExpecation addAction:action];
@@ -120,7 +111,23 @@
 
 - (void)actAsImposterForMockObject:(LRMockObject *)mock;
 {
-  mockedClass = [mock mockedClass];
+  imposterizer = mock.imposterizer;
+}
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)sel
+{
+  return [imposterizer methodSignatureForSelector:sel];
+}
+
+- (BOOL)respondsToSelector:(SEL)aSelector
+{
+  return [imposterizer respondsToSelector:aSelector];
+}
+
+- (void)forwardInvocation:(NSInvocation *)anInvocation
+{
+  self.currentExpecation.invocation = anInvocation;
+  [mockery addExpectation:self.currentExpecation];
 }
 
 - (void)prepareExpectationForObject:(id)mockObject 

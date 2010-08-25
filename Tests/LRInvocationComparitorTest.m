@@ -9,6 +9,7 @@
 #import "TestHelper.h"
 #import "LRInvocationComparitor.h"
 #import "LRImposter.h"
+#import "LRClassImposterizer.h"
 #define LRMOCKY_SHORTHAND
 #import "LRHamcrestParameterAdapter.h"
 
@@ -25,7 +26,7 @@
 
 @end
 
-@interface InvocationCapturer : LRClassImposter
+@interface InvocationCapturer : LRImposter
 {
   NSInvocation *lastInvocation;
 }
@@ -36,12 +37,13 @@
 
 @synthesize invocation = lastInvocation;
 
-- (Class)classToImposterize
+- (id)init
 {
-  return [InvocationTesterObject class];
+  LRImposterizer *theImposterizer = [[[LRClassImposterizer alloc] initWithClass:[InvocationTesterObject class]] autorelease];
+  return [super initWithImposterizer:theImposterizer];
 }
 
-- (void)forwardInvocation:(NSInvocation *)invocation;
+- (void)handleImposterizedInvocation:(NSInvocation *)invocation
 {
   [lastInvocation release];
   [invocation retainArguments];
@@ -66,16 +68,19 @@
   capture = [[InvocationCapturer alloc] init];
 }
 
+- (void)testSanity
+{
+  assertThat([[capture takesAnObject:@"bar"] invocation], isNot(nilValue()));
+  assertThat([[capture takesAnObject:@"bar"] invocation], isNot(equalTo([[capture takesAnObject:@"foo"] invocation])));
+}
+
 - (void)testCanCompareObjectMethodParameters
 {
   NSInvocation *expected = [[capture takesAnObject:@"foo"] invocation];
   LRInvocationComparitor *comparitor = [LRInvocationComparitor comparitorForInvocation:expected];
   
-  assertThatBool([comparitor matchesParameters:[[capture takesAnObject:@"foo"] invocation]], 
-                 equalToBool(YES));
-
-  assertThatBool([comparitor matchesParameters:[[capture takesAnObject:@"bar"] invocation]], 
-                 equalToBool(NO));
+  assertTrue([comparitor matchesParameters:[[capture takesAnObject:@"foo"] invocation]]);
+  assertFalse([comparitor matchesParameters:[[capture takesAnObject:@"bar"] invocation]]);
 }
 
 - (void)testCanCompareIntegerParameters
@@ -83,11 +88,8 @@
   NSInvocation *expected = [[capture takesAnInt:10] invocation];
   LRInvocationComparitor *comparitor = [LRInvocationComparitor comparitorForInvocation:expected];
   
-  assertThatBool([comparitor matchesParameters:[[capture takesAnInt:10] invocation]], 
-                 equalToBool(YES));
-  
-  assertThatBool([comparitor matchesParameters:[[capture takesAnInt:20] invocation]], 
-                 equalToBool(NO));
+  assertTrue([comparitor matchesParameters:[[capture takesAnInt:10] invocation]]);
+  assertFalse([comparitor matchesParameters:[[capture takesAnInt:20] invocation]]);
 }
 
 - (void)testCanCompareFloatParameters
@@ -95,11 +97,8 @@
   NSInvocation *expected = [[capture takesAFloat:3.14] invocation];
   LRInvocationComparitor *comparitor = [LRInvocationComparitor comparitorForInvocation:expected];
   
-  assertThatBool([comparitor matchesParameters:[[capture takesAFloat:3.14] invocation]], 
-                 equalToBool(YES));
-  
-  assertThatBool([comparitor matchesParameters:[[capture takesAFloat:10.45] invocation]], 
-                 equalToBool(NO));
+  assertTrue([comparitor matchesParameters:[[capture takesAFloat:3.14] invocation]]);
+  assertFalse([comparitor matchesParameters:[[capture takesAFloat:10.45] invocation]]);
 }
 
 - (void)testCanCompareParametersThatUseObjectMatchers
@@ -107,11 +106,8 @@
   NSInvocation *expected = [[capture takesAnObject:with(hasItem(@"foo"))] invocation];
   LRInvocationComparitor *comparitor = [LRInvocationComparitor comparitorForInvocation:expected];
   
-  assertThatBool([comparitor matchesParameters:[[capture takesAnObject:[NSArray arrayWithObject:@"foo"]] invocation]], 
-                 equalToBool(YES));
-  
-  assertThatBool([comparitor matchesParameters:[[capture takesAnObject:[NSArray arrayWithObject:@"bar"]] invocation]], 
-                 equalToBool(NO));
+  assertTrue([comparitor matchesParameters:[[capture takesAnObject:[NSArray arrayWithObject:@"foo"]] invocation]]);
+  assertFalse([comparitor matchesParameters:[[capture takesAnObject:[NSArray arrayWithObject:@"bar"]] invocation]]);
 }
 
 @end

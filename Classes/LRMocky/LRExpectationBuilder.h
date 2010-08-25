@@ -7,18 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LRImposter.h"
 #import "LRExpectation.h"
 
 @class LRMockObject;
 @class LRMockery;
 @class LRInvocationExpectation;
 @class LRMockyState;
+@class LRImposterizer;
 
-@interface LRExpectationBuilder : LRClassImposter {
+@interface LRExpectationBuilder : NSObject {
   LRMockery *mockery;
-  Class mockedClass;
   LRInvocationExpectation *currentExpectation;
+  LRImposterizer *imposterizer;
 }
 + (id)builderInContext:(LRMockery *)context;
 - (id)initWithMockery:(LRMockery *)aMockery;

@@ -54,7 +54,7 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 - (BOOL)matches:(NSInvocation *)invocation;
 {
   LRInvocationComparitor *comparitor = [LRInvocationComparitor comparitorForInvocation:expectedInvocation];
-  
+    
   if ([invocation selector] != [expectedInvocation selector]) {
     return NO;
   }

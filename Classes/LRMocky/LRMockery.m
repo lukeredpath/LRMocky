@@ -55,6 +55,11 @@
   return mock;
 }
 
+- (id)protocolMock:(Protocol *)protocol;
+{
+  return [LRMockObject mockForProtocol:protocol inContext:self];
+}
+
 - (LRMockyStateMachine *)states:(NSString *)name;
 {
   return [[[LRMockyStateMachine alloc] initWithName:name] autorelease];
@@ -97,7 +102,7 @@ NSString *failureFor(id<LRDescribable> expectation) {
   [expectations addObject:expectation];
 }
 
-- (void)dispatchInvocation:(NSInvocation *)invocation;
+- (void)dispatchInvocation:(NSInvocation *)invocation forMock:(LRMockObject *)mockObject;
 {
   for (id<LRExpectation> expectation in expectations) {
     if ([expectation matches:invocation]) {
@@ -105,7 +110,7 @@ NSString *failureFor(id<LRDescribable> expectation) {
     }
   }
   LRUnexpectedInvocation *unexpectedInvocation = [LRUnexpectedInvocation unexpectedInvocation:invocation];
-  unexpectedInvocation.mockObject = [invocation target];
+  unexpectedInvocation.mockObject = mockObject;
   [expectations addObject:unexpectedInvocation];
 }
 
