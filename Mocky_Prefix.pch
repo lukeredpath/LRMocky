@@ -4,4 +4,8 @@
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
+#import <TargetConditionals.h> 
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < 40000
+#import <PLBlocks/Block.h>
+#endif
 #endif
