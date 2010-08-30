@@ -144,6 +144,17 @@
   [(NSArray *)mockArray indexesOfObjectsPassingTest:^(id object, NSUInteger idx, BOOL *stop) { return YES; }];
 }
 
+- (void)testCanExpectMethodCallsWithBlockArgumentsWithObjectAndPass;
+{
+  [context checking:^(LRExpectationBuilder *builder) {
+    [oneOf(testObject) doSomethingWithBlockThatYields:with(anything())]; andThen(performBlockArgumentsWithObject(@"some string"));
+  }];
+  
+  [testObject doSomethingWithBlockThatYields:^(id object) {
+    assertThat(object, is(equalTo(@"some string")));
+  }];
+}
+
 - (void)testCanResetTheMockery
 {
   [context checking:^(LRExpectationBuilder *builder){

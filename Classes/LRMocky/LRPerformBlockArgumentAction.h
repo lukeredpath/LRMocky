@@ -10,15 +10,18 @@
 #import "LRExpectationAction.h"
 
 @interface LRPerformBlockArgumentAction : NSObject <LRExpectationAction> {
-
+  id object;
 }
-
+- (id)initWithObject:(id)anObject;
 @end
 
 LRPerformBlockArgumentAction *LRA_performBlockArguments();
+LRPerformBlockArgumentAction *LRA_performBlockArgumentsWithObject(id object);
 
 #ifdef LRMOCKY_SHORTHAND
 #define performBlockArguments  LRA_performBlockArguments()
 #define performsBlockArguments LRA_performBlockArguments()
+#define performBlockArgumentsWithObject(object) LRA_performBlockArgumentsWithObject(object)
+#define performsBlockArgumentsWithObject(object) LRA_performBlockArgumentsWithObject(object)
 #endif
 

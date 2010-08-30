@@ -76,6 +76,7 @@
 - (void)doSomethingWithObject:(id)object {}
 - (void)doSomethingWithInt:(NSInteger)anInt {}
 - (void)doSomethingWithBlock:(void (^)())block {}
+- (void)doSomethingWithBlockThatYields:(void (^)(id object))block {}
 @end
 
 #pragma mark Custom assertions and matchers
