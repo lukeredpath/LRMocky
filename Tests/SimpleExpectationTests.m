@@ -133,6 +133,17 @@
     @"Expected %@ to receive doSomethingWithInt: with(10) exactly(1) times but received it 0 times.", testObject]));
 }
 
+- (void)testCanExpectMethodCallsWithBlockArgumentsAndPass;
+{
+  id mockArray = [context mock:[NSArray class]];
+ 
+  [context checking:^(LRExpectationBuilder *builder) {
+    [oneOf(mockArray) indexesOfObjectsPassingTest:with(anything())];
+  }];
+  
+  [(NSArray *)mockArray indexesOfObjectsPassingTest:^(id object, NSUInteger idx, BOOL *stop) { return YES; }];
+}
+
 - (void)testCanResetTheMockery
 {
   [context checking:^(LRExpectationBuilder *builder){
