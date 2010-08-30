@@ -25,6 +25,8 @@
 - (id)mock:(Class)klass;
 - (id)mock:(Class)klass named:(NSString *)name;
 - (id)protocolMock:(Protocol *)protocol;
+- (void)expectNotificationNamed:(NSString *)name;
+- (void)expectNotificationNamed:(NSString *)name fromObject:(id)sender;
 - (LRMockyStateMachine *)states:(NSString *)name;
 - (LRMockyStateMachine *)states:(NSString *)name defaultTo:(NSString *)defaultState;
 - (void)checking:(void (^)(LRExpectationBuilder *will))expectationBlock;

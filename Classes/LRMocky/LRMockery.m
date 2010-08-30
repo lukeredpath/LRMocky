@@ -11,6 +11,7 @@
 #import "LRMockObject.h"
 #import "LRUnexpectedInvocation.h"
 #import "LRInvocationExpectation.h"
+#import "LRNotificationExpectation.h"
 #import "LRMockyStates.h"
 #import "LRExpectationMessage.h"
 
@@ -61,6 +62,16 @@
   return [LRMockObject mockForProtocol:protocol inContext:self];
 }
 
+- (void)expectNotificationNamed:(NSString *)name;
+{
+  [self addExpectation:[LRNotificationExpectation expectationWithNotificationName:name]];
+}
+
+- (void)expectNotificationNamed:(NSString *)name fromObject:(id)sender;
+{
+  [self addExpectation:[LRNotificationExpectation expectationWithNotificationName:name sender:sender]];
+}
+
 - (LRMockyStateMachine *)states:(NSString *)name;
 {
   return [[[LRMockyStateMachine alloc] initWithName:name] autorelease];
@@ -106,11 +117,11 @@ NSString *failureFor(id<LRDescribable> expectation) {
 - (void)dispatchInvocation:(NSInvocation *)invocation forMock:(LRMockObject *)mockObject;
 {
   for (id<LRExpectation> expectation in expectations) {
-    if ([expectation matches:invocation]) {
+    if ([expectation respondsToSelector:@selector(matches:)] && [(LRInvocationExpectation *)expectation matches:invocation]) {
       if ([expectation respondsToSelector:@selector(calledWithInvalidState)] && expectation.calledWithInvalidState == YES) {
         return;
       }
-      return [expectation invoke:invocation];
+      return [(LRInvocationExpectation *)expectation invoke:invocation];
     }
   }
   LRUnexpectedInvocation *unexpectedInvocation = [LRUnexpectedInvocation unexpectedInvocation:invocation];

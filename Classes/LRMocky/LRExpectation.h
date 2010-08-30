@@ -13,11 +13,8 @@
 extern NSString *const LRMockyExpectationError;
 
 @protocol LRExpectation <NSObject, LRDescribable>
-- (BOOL)matches:(NSInvocation *)invocation;
-- (void)invoke:(NSInvocation *)invocation;
 - (BOOL)isSatisfied;
 - (void)addAction:(id<LRExpectationAction>)action;
-- (void)setInvocation:(NSInvocation *)invocation;
 @optional
 - (BOOL)calledWithInvalidState;
 @end

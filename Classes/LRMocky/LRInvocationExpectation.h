@@ -34,4 +34,7 @@
 
 + (id)expectation;
 - (void)addAction:(id<LRExpectationAction>)anAction;
+- (BOOL)matches:(NSInvocation *)invocation;
+- (void)invoke:(NSInvocation *)invocation;
+- (void)setInvocation:(NSInvocation *)invocation;
 @end
