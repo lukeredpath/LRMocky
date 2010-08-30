@@ -159,7 +159,7 @@
   
 	switch(*argType)
 	{
-		case '@':	return [self objectDescriptionAtIndex:argIndex];
+		case '@': return [self objectDescriptionAtIndex:argIndex];
 		case 'c':	return [self charDescriptionAtIndex:argIndex];
 		case 'C':	return [self unsignedCharDescriptionAtIndex:argIndex];
 		case 'i':	return [self intDescriptionAtIndex:argIndex];
@@ -331,6 +331,11 @@
 	
 	[self getArgument:&selectorValue atIndex:anInt];
 	return [NSString stringWithFormat:@"@selector(%@)", NSStringFromSelector(selectorValue)];
+}
+
+- (NSString *)blockDescriptionAtIndex:(int)anInt;
+{
+  return @"<<block>>";
 }
 
 @end

@@ -16,6 +16,7 @@
 #import "LRPerformBlockAction.h"
 #import "LRConsecutiveCallAction.h"
 #import "LRMultipleAction.h"
+#import "LRPerformBlockArgumentAction.h"
 
 // state machine
 #import "LRMockyStates.h"

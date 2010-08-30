@@ -30,5 +30,6 @@
 - (NSString *)pointerDescriptionAtIndex:(int)anInt;
 - (NSString *)cStringDescriptionAtIndex:(int)anInt;
 - (NSString *)selectorDescriptionAtIndex:(int)anInt;
+- (NSString *)blockDescriptionAtIndex:(int)anInt;
 
 @end

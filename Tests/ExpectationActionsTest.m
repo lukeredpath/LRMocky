@@ -100,6 +100,24 @@
   assertThatInt((int)[testObject returnSomeValue], equalToInt(30));
 }
 
+- (void)testCanExpectMethodCallsWithBlockArgumentsAndCallTheSuppliedBlock;
+{
+  id mockArray = [context mock:[NSArray class]];
+  
+  __block NSString *someString = nil;
+  
+  [context checking:^(LRExpectationBuilder *builder) {
+    [oneOf(mockArray) indexesOfObjectsPassingTest:with(anything())]; andThen(performBlockArguments);
+  }];
+  
+  [(NSArray *)mockArray indexesOfObjectsPassingTest:^(id object, NSUInteger idx, BOOL *stop) { 
+    someString = @"some string";
+    return YES; 
+  }];
+  
+  assertThat(someString, equalTo(@"some string"));
+}
+
 #if !(TARGET_IPHONE_SIMULATOR)
 - (void)testMocksCanThrowAnException;
 {
