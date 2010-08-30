@@ -10,6 +10,7 @@
 #import "LRExpectationBuilder.h"
 #import "LRMockObject.h"
 #import "LRUnexpectedInvocation.h"
+#import "LRInvocationExpectation.h"
 #import "LRMockyStates.h"
 #import "LRExpectationMessage.h"
 
@@ -106,6 +107,9 @@ NSString *failureFor(id<LRDescribable> expectation) {
 {
   for (id<LRExpectation> expectation in expectations) {
     if ([expectation matches:invocation]) {
+      if ([expectation respondsToSelector:@selector(calledWithInvalidState)] && expectation.calledWithInvalidState == YES) {
+        return;
+      }
       return [expectation invoke:invocation];
     }
   }

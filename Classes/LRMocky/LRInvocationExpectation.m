@@ -12,6 +12,7 @@
 #import "LRExpectationMessage.h"
 #import "LRMockyStates.h"
 #import "NSInvocation+OCMAdditions.h"
+#import "NSInvocation+LRAdditions.h"
 
 NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 
@@ -26,6 +27,7 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 @synthesize mockObject;
 @synthesize similarInvocation;
 @synthesize requiredState;
+@synthesize calledWithInvalidState;
 
 + (id)expectation;
 {
@@ -37,6 +39,7 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
   if (self = [super init]) {
     numberOfInvocations = 0;
     actions = [[NSMutableArray alloc] init];
+    calledWithInvalidState = NO;
     self.cardinality = LRM_exactly(1); // TODO choose a better default
   }
   return self;
@@ -62,7 +65,9 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
     return NO;
   }
   if (self.requiredState && ![self.requiredState isActive]) {
-    return NO;
+    NSLog(@"Required state %@ but it is not active", self.requiredState);
+    calledWithInvalidState = YES;
+    return YES;
   }
   return YES;
 }
@@ -70,9 +75,11 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 - (void)invoke:(NSInvocation *)invocation
 {
   LRInvocationComparitor *comparitor = [LRInvocationComparitor comparitorForInvocation:expectedInvocation];
-  
+    
   if([comparitor matchesParameters:invocation]) {
     numberOfInvocations++;
+    
+    [invocation copyBlockArguments];
     
     for (id<LRExpectationAction> action in actions) {
       [action invoke:invocation];

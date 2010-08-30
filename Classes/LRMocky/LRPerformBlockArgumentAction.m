@@ -13,11 +13,12 @@
 
 - (void)invoke:(NSInvocation *)invocation
 {
-  for (int i = 0; i < [[invocation methodSignature] numberOfArguments]; i++) {
+  for (int i = 2; i < [[invocation methodSignature] numberOfArguments]; i++) {
     if ([[invocation argumentDescriptionAtIndex:i] rangeOfString:@"Block"].location != NSNotFound) {
       void *arg;
       [invocation getArgument:&arg atIndex:i];
       void (^block)() = (void (^)())arg;
+      [block copy];
       block();
     }
   } 

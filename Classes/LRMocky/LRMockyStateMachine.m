@@ -11,10 +11,13 @@
 
 @implementation LRMockyStateMachine
 
+@synthesize currentState;
+
 - (id)initWithName:(NSString *)aName;
 {
   if (self = [super init]) {
     name = [aName copy];
+    [self startsAs:@"<<initial state>>"];
   }
   return self;
 }

@@ -14,6 +14,8 @@
   NSString *name;
   LRMockyState *currentState;
 }
+@property (nonatomic, readonly) LRMockyState *currentState;
+
 - (id)initWithName:(NSString *)aName;
 - (void)startsAs:(NSString *)label;
 - (void)transitionToState:(LRMockyState *)newState;

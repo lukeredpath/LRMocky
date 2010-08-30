@@ -26,8 +26,8 @@
 - (void)testCanConstrainExpectationsToOccurWithinAGivenState
 {
   [context checking:^(that){
-    [allowing(testObject) doSomething]; when([readiness hasBecome:@"ready"]);
     [allowing(testObject) doSomethingElse]; then([readiness becomes:@"ready"]);
+    [oneOf(testObject) doSomething]; when([readiness hasBecome:@"ready"]);
   }];
   
   [testObject doSomething];
@@ -40,8 +40,8 @@
 - (void)testAllowsExpectationsToOccurInCorrectState
 {
   [context checking:^(that){
-    [allowing(testObject) doSomething]; when([readiness hasBecome:@"ready"]);
     [allowing(testObject) doSomethingElse]; then([readiness becomes:@"ready"]);
+    [oneOf(testObject) doSomething]; when([readiness hasBecome:@"ready"]);
   }];
   
   [testObject doSomethingElse];
@@ -65,6 +65,22 @@
   assertContextSatisfied(context);
   
   assertThat(testCase, passed());
+}
+
+- (void)testCanConstraintExpectationsToStatesTriggeredByBlocks
+{
+  [context checking:^(that){
+    [allowing(testObject) doSomethingWithBlock:with(anything())]; then([readiness becomes:@"ready"]); andThen(performBlockArguments);
+    [oneOf(testObject) doSomething]; when([readiness hasBecome:@"ready"]);
+  }];
+  
+  [testObject doSomethingWithBlock:^{
+    [testObject doSomething];
+  }];
+  
+  assertContextSatisfied(context);
+
+  assertThat(testCase, passed());  
 }
 
 @end

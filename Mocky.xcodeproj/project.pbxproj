@@ -270,6 +270,9 @@
 		A38AFDFB122BEC2E0001D038 /* LRPerformBlockArgumentAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A38AFDF9122BEC2E0001D038 /* LRPerformBlockArgumentAction.h */; };
 		A38AFDFC122BEC2E0001D038 /* LRPerformBlockArgumentAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A38AFDFA122BEC2E0001D038 /* LRPerformBlockArgumentAction.m */; };
 		A38AFE50122BEFFA0001D038 /* LRPerformBlockArgumentAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A38AFDFA122BEC2E0001D038 /* LRPerformBlockArgumentAction.m */; };
+		A38AFFC5122BFD020001D038 /* NSInvocation+LRAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A38AFFC3122BFD020001D038 /* NSInvocation+LRAdditions.h */; };
+		A38AFFC6122BFD020001D038 /* NSInvocation+LRAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A38AFFC4122BFD020001D038 /* NSInvocation+LRAdditions.m */; };
+		A38AFFF6122BFE970001D038 /* NSInvocation+LRAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A38AFFC4122BFD020001D038 /* NSInvocation+LRAdditions.m */; };
 		A39155B811FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A39155B611FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A39155B911FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A39155B711FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m */; };
 		A391561111FFB80F00FE7C49 /* LRExpectationMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A391557011FF661400FE7C49 /* LRExpectationMessage.m */; };
@@ -449,6 +452,8 @@
 		A381A39F122456B200FA2A5C /* LRProtocolImposterizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRProtocolImposterizer.m; sourceTree = "<group>"; };
 		A38AFDF9122BEC2E0001D038 /* LRPerformBlockArgumentAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRPerformBlockArgumentAction.h; sourceTree = "<group>"; };
 		A38AFDFA122BEC2E0001D038 /* LRPerformBlockArgumentAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRPerformBlockArgumentAction.m; sourceTree = "<group>"; };
+		A38AFFC3122BFD020001D038 /* NSInvocation+LRAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+LRAdditions.h"; sourceTree = "<group>"; };
+		A38AFFC4122BFD020001D038 /* NSInvocation+LRAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+LRAdditions.m"; sourceTree = "<group>"; };
 		A391554711FF5F0900FE7C49 /* LRExpectationCardinality.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectationCardinality.h; sourceTree = "<group>"; };
 		A391554811FF5F0900FE7C49 /* LRExpectationCardinality.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRExpectationCardinality.m; sourceTree = "<group>"; };
 		A391556F11FF661400FE7C49 /* LRExpectationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LRExpectationMessage.h; path = ../LRExpectationMessage.h; sourceTree = "<group>"; };
@@ -635,6 +640,8 @@
 				A39155B711FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m */,
 				A381A2F012244DC400FA2A5C /* Hamcrest-Extensions */,
 				A30176EF11FE017E004828C5 /* Hamcrest */,
+				A38AFFC3122BFD020001D038 /* NSInvocation+LRAdditions.h */,
+				A38AFFC4122BFD020001D038 /* NSInvocation+LRAdditions.m */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -1046,6 +1053,7 @@
 				A381A38E122455EE00FA2A5C /* LRImposterizer.h in Headers */,
 				A381A3A0122456B200FA2A5C /* LRProtocolImposterizer.h in Headers */,
 				A38AFDFB122BEC2E0001D038 /* LRPerformBlockArgumentAction.h in Headers */,
+				A38AFFC5122BFD020001D038 /* NSInvocation+LRAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1261,6 +1269,7 @@
 				A332B1421229D06800B8F201 /* LRImposterizer.m in Sources */,
 				A332B1431229D06800B8F201 /* LRProtocolImposterizer.m in Sources */,
 				A38AFE50122BEFFA0001D038 /* LRPerformBlockArgumentAction.m in Sources */,
+				A38AFFF6122BFE970001D038 /* NSInvocation+LRAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1357,6 +1366,7 @@
 				A381A38F122455EE00FA2A5C /* LRImposterizer.m in Sources */,
 				A381A3A1122456B200FA2A5C /* LRProtocolImposterizer.m in Sources */,
 				A38AFDFC122BEC2E0001D038 /* LRPerformBlockArgumentAction.m in Sources */,
+				A38AFFC6122BFD020001D038 /* NSInvocation+LRAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

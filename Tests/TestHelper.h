@@ -35,6 +35,7 @@
 - (void)doSomethingWith:(id)object andObject:(id)another;
 - (void)doSomethingWithObject:(id)object;
 - (void)doSomethingWithInt:(NSInteger)anInt;
+- (void)doSomethingWithBlock:(void (^)())block;
 @end
 
 @protocol LRTestCase;

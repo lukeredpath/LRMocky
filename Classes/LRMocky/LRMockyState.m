@@ -45,6 +45,11 @@
   return [NSString stringWithFormat:@"<LRMockyState %@>", label];
 }
 
+- (NSString *)description
+{
+  return [self state];
+}
+
 - (void)dealloc;
 {
   [label release];
