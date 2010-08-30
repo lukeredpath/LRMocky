@@ -14,7 +14,7 @@
 - (void)invoke:(NSInvocation *)invocation
 {
   for (int i = 0; i < [[invocation methodSignature] numberOfArguments]; i++) {
-    if ([[invocation argumentDescriptionAtIndex:i] rangeOfString:@"Block__"].location != NSNotFound) {
+    if ([[invocation argumentDescriptionAtIndex:i] rangeOfString:@"Block"].location != NSNotFound) {
       void *arg;
       [invocation getArgument:&arg atIndex:i];
       void (^block)() = (void (^)())arg;
