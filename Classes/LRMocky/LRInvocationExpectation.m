@@ -96,7 +96,7 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
   if (numberOfArguments > 2) {
     NSMutableArray *parameters = [NSMutableArray array];
     for (int i = 2; i < numberOfArguments; i++) {
-      [parameters addObject:[expectedInvocation objectDescriptionAtIndex:i]];
+      [parameters addObject:[expectedInvocation argumentDescriptionAtIndex:i]];
     }
     [message append:[NSString stringWithFormat:@"with(%@) ", [parameters componentsJoinedByString:@", "]]];
   } 

@@ -8,6 +8,7 @@
 
 #import "LRUnexpectedInvocation.h"
 #import "LRExpectationMessage.h"
+#import "NSInvocation+OCMAdditions.h"
 
 @implementation LRUnexpectedInvocation
 
@@ -56,7 +57,12 @@
 
 - (void)describeTo:(LRExpectationMessage *)message
 {
-  [message append:[NSString stringWithFormat:@"Unexpected method %@ called on %@", NSStringFromSelector([invocation selector]), mockObject]];
+  NSMutableArray *arguments = [NSMutableArray array];
+  for (int i = 2; i < [[invocation methodSignature] numberOfArguments]; i++) {
+    [arguments addObject:[invocation getArgumentAtIndexAsObject:i]];
+  }  
+  [message append:[NSString stringWithFormat:@"Unexpected method %@ called on %@ with arguments: %@", 
+      NSStringFromSelector([invocation selector]), mockObject, arguments]];
 }
 
 - (void)addAction:(id<LRExpectationAction>)action
