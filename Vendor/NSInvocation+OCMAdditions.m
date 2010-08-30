@@ -5,7 +5,6 @@
 
 #import "NSInvocation+OCMAdditions.h"
 
-
 @implementation NSInvocation(OCMAdditions)
 
 - (id)getArgumentAtIndexAsObject:(int)argIndex
@@ -16,7 +15,7 @@
 	while(strchr("rnNoORV", argType[0]) != NULL)
 		argType += 1;
 	
-	if((strlen(argType) > 1) && (strchr("{^", argType[0]) == NULL))
+	if((strlen(argType) > 1) && (strchr("{^", argType[0]) == NULL) && (strcmp("@?", argType) != 0))
 		[NSException raise:NSInvalidArgumentException format:@"Cannot handle argument type '%s'.", argType];
 	
 	switch (argType[0]) 
@@ -114,11 +113,11 @@
 			return [NSNumber numberWithBool:value];
 		}
 		case '^':
-        {
-            void *value = NULL;
-            [self getArgument:&value atIndex:argIndex];
-            return [NSValue valueWithPointer:value];
-        }
+    {
+      void *value = NULL;
+      [self getArgument:&value atIndex:argIndex];
+      return [NSValue valueWithPointer:value];
+    }
 		case '{': // structure
 		{
 			unsigned maxArgSize = [[self methodSignature] frameLength];
@@ -157,7 +156,7 @@
 	const char *argType = [[self methodSignature] getArgumentTypeAtIndex:argIndex];
 	if(strchr("rnNoORV", argType[0]) != NULL)
 		argType += 1;
-
+  
 	switch(*argType)
 	{
 		case '@':	return [self objectDescriptionAtIndex:argIndex];
@@ -173,8 +172,8 @@
 		case 'Q':	return [self unsignedLongLongDescriptionAtIndex:argIndex];
 		case 'd':	return [self doubleDescriptionAtIndex:argIndex];
 		case 'f':	return [self floatDescriptionAtIndex:argIndex];
-		// Why does this throw EXC_BAD_ACCESS when appending the string?
-		//	case NSObjCStructType: return [self structDescriptionAtIndex:index];
+      // Why does this throw EXC_BAD_ACCESS when appending the string?
+      //	case NSObjCStructType: return [self structDescriptionAtIndex:index];
 		case '^':	return [self pointerDescriptionAtIndex:argIndex];
 		case '*':	return [self cStringDescriptionAtIndex:argIndex];
 		case ':':	return [self selectorDescriptionAtIndex:argIndex];
@@ -186,7 +185,9 @@
 
 - (NSString *)objectDescriptionAtIndex:(int)anInt
 {
-	id object = [self getArgumentAtIndexAsObject:anInt];
+	id object;
+	
+	[self getArgument:&object atIndex:anInt];
 	if (object == nil)
 		return @"nil";
 	else if(![object isProxy] && [object isKindOfClass:[NSString class]])
