@@ -7,6 +7,7 @@
 //
 
 #import "LRInvocationComparitor.h"
+#import "NSInvocation+OCMAdditions.h"
 
 @implementation LRInvocationComparitor
 
@@ -36,21 +37,9 @@
   
   BOOL matchesParameters = YES;
   for (int i = 2; i < [methodSignature numberOfArguments]; i++) {
-    const char *argType = [methodSignature getArgumentTypeAtIndex:i];
-    
-    void *receivedArg;
-    void *expectedArg;
-    
-    [invocation getArgument:&receivedArg atIndex:i];
-    [expectedInvocation getArgument:&expectedArg atIndex:i];
-
-    if (*argType == *@encode(id)) { 
-      matchesParameters = [(id)expectedArg isEqual:(id)receivedArg];
-    } 
-    else
-    {
-      matchesParameters = (receivedArg == expectedArg);
-    }
+    id expected = [expectedInvocation getArgumentAtIndexAsObject:i];
+    id received = [invocation getArgumentAtIndexAsObject:i];
+    matchesParameters = [expected isEqual:received];
   }
   return matchesParameters;
 }

@@ -115,6 +115,20 @@
   }];
   
   [testObject doSomethingWithInt:20];
+  
+  assertContextSatisfied(context);
+  
+  assertThat(testCase, passed());
+}
+
+- (void)testCanExpectMethodCallWitBoolParametersAndPass;
+{
+  [context checking:^(LRExpectationBuilder *builder){
+    [oneOf(testObject) doSomethingWithBool:YES];
+  }];
+  
+  [testObject doSomethingWithBool:YES];
+  
   assertContextSatisfied(context);
   
   assertThat(testCase, passed());

@@ -35,6 +35,7 @@
 - (void)doSomethingWith:(id)object andObject:(id)another;
 - (void)doSomethingWithObject:(id)object;
 - (void)doSomethingWithInt:(NSInteger)anInt;
+- (void)doSomethingWithBool:(BOOL)aBool;
 - (void)doSomethingWithBlock:(void (^)())block;
 - (void)doSomethingWithBlockThatYields:(void (^)(id object))block;
 @end
