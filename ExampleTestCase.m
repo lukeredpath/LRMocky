@@ -13,6 +13,7 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import "OCHamcrest.h"
 #import "LRMocky.h"
+#import "TestHelper.h"
 
 @interface ExampleTestCase : SenTestCase
 {}
@@ -46,9 +47,8 @@
   
   [myMockString lowercaseString];
   
-  assertContextSatisfied(context);
+  assertContextNotSatisfied(context);
 }
-
 
 - (void)testSuccessfulMockingWithMultipleCallsExpected
 {
@@ -78,7 +78,7 @@
   }];
   
   [myMockString uppercaseString];
-  assertContextSatisfied(context);
+  assertContextNotSatisfied(context);
 }
 
 - (void)testSuccessfulMockingWithHamcrest 
@@ -106,7 +106,7 @@
   }];
   
   [myMockString stringByAppendingString:@"not super"];
-  assertContextSatisfied(context);
+  assertContextNotSatisfied(context);
 }
 
 - (void)testSuccessfulMockWithReturnValue

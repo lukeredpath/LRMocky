@@ -46,6 +46,7 @@ id<HCMatcher> passed();
 id<HCMatcher> failedWithNumberOfFailures(int numberOfFailures);
 id<HCMatcher> failedWithExpectationError(NSString *errorDescription);
 
+<<<<<<< HEAD
 #define assertTrue(expression) assertThatBool(expression, equalToBool(YES))
 #define assertFalse(expression) assertThatBool(expression, equalToBool(NO))
 
@@ -57,3 +58,10 @@ void LRM_assertContextSatisfied(LRMockery *context, NSString *fileName, int line
 void LR_assertNothingRaisedWithLocation(void (^block)(void), SenTestCase *testCase, NSString *fileName, int lineNumber);
 #define assertNothingRaised(block) LR_assertNothingRaisedWithLocation(block, self, [NSString stringWithUTF8String:__FILE__], __LINE__)
 
+=======
+@class LRMockery;
+
+/** used for verifying examples that should fail **/
+void LRM_assertContextNotSatisfied(LRMockery *context, NSString *fileName, int lineNumber);
+#define assertContextNotSatisfied(context) LRM_assertContextNotSatisfied(context, [NSString stringWithUTF8String:__FILE__], __LINE__)
+>>>>>>> Handle failed expectations in the examples with a proper assertion that checks

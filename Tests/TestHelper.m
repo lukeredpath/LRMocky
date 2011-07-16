@@ -8,6 +8,8 @@
 
 #import "TestHelper.h"
 #import "LRExpectation.h"
+#import "LRMockery.h"
+#import "LRExpectationMessage.h"
 
 @implementation NSInvocation (LRAdditions)
 
@@ -122,6 +124,7 @@ id<HCMatcher> failedWithExpectationError(NSString *errorDescription)
   return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:hasItem(exceptionWithDescription(containsString(errorDescription)))] autorelease];
 }
 
+<<<<<<< HEAD
 void LR_assertNothingRaisedWithLocation(void (^block)(void), SenTestCase *testCase, NSString *fileName, int lineNumber)
 {
   @try {
@@ -142,3 +145,37 @@ void LR_assertNothingRaisedWithLocation(void (^block)(void), SenTestCase *testCa
 }
 @end
 
+=======
+#pragma mark - Failed mocking checks (for examples)
+
+@interface LRMockery (TestingAdditions)
+- (void)assertNotSatisfiedInFile:(NSString *)fileName lineNumber:(int)lineNumber;
+@end
+
+@implementation LRMockery (TestingAdditions)
+
+- (void)assertNotSatisfiedInFile:(NSString *)fileName lineNumber:(int)lineNumber
+{
+  NSMutableArray *passedExpectations = [NSMutableArray array];
+  
+  for (id<LRExpectation> expectation in expectations) {
+    if ([expectation isSatisfied] == YES) {
+      LRExpectationMessage *message = [[LRExpectationMessage alloc] init];
+      [expectation describeTo:message];
+      [passedExpectations addObject:message];
+      [message release];
+    }
+  }
+  if (passedExpectations.count > 0) {
+    NSString *failureMessage = [NSString stringWithFormat:@"Expected context to fail, but the following expectations passed: %@", passedExpectations];
+    [testNotifier notifiesFailureWithDescription:failureMessage inFile:fileName lineNumber:lineNumber];
+  }
+}
+
+@end
+
+void LRM_assertContextNotSatisfied(LRMockery *context, NSString *fileName, int lineNumber)
+{
+  [context assertNotSatisfiedInFile:fileName lineNumber:lineNumber];
+}
+>>>>>>> Handle failed expectations in the examples with a proper assertion that checks
