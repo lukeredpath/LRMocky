@@ -37,6 +37,7 @@
 
 
 #ifdef LRMOCKY_SUGAR
+#define mockery()       [LRMockery mockeryForTestCase:self]
 #define that            LRExpectationBuilder *builder
 #define it               builder
 #define andThen(action) [builder will:action]

@@ -32,15 +32,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>192</integer>
-=======
-					<integer>308</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>319</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 		</dict>
@@ -625,7 +617,7 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>332527185.51531303</real>
+		<real>332527233.36449999</real>
 		<string>{0, 1549}</string>
 		<string>{1330, 0}</string>
 		<dict>
@@ -1679,43 +1671,6 @@
 					<key>CF$UID</key>
 					<integer>16</integer>
 				</dict>
-<<<<<<< HEAD
-=======
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>156</integer>
-			</dict>
-			<key>documentURL</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>149</integer>
-			</dict>
-			<key>selection</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>151</integer>
-			</dict>
-			<key>timestamp</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>150</integer>
-			</dict>
-		</dict>
-		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Mocky.xcodeproj/</string>
-		<real>332525848.42806202</real>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
->>>>>>> Fixed warnings
 				<dict>
 					<key>CF$UID</key>
 					<integer>176</integer>
@@ -2380,7 +2335,6 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>234</integer>
 				</dict>
 				<dict>
@@ -2393,45 +2347,6 @@
 		<string>DVTViewMagnitude</string>
 		<string></string>
 		<real>162</real>
-=======
-					<integer>28</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>191</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>206</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>207</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>213</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>246</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>254</integer>
-				</dict>
-			</array>
-		</dict>
-<<<<<<< HEAD
-		<string>LRMultipleAction.m</string>
->>>>>>> Fixed warnings
-=======
-		<string>ExampleTestCase.m</string>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -2446,30 +2361,18 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>233</integer>
-=======
-					<integer>208</integer>
->>>>>>> Fixed warnings
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>234</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>237</integer>
-=======
-					<integer>209</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>211</integer>
->>>>>>> Fixed warnings
 				</dict>
 			</array>
 		</dict>
@@ -2484,15 +2387,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>239</integer>
-=======
-					<integer>35</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>210</integer>
->>>>>>> Fixed warnings
 				</dict>
 			</array>
 		</dict>
@@ -2545,11 +2440,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>227</integer>
-=======
-					<integer>212</integer>
->>>>>>> Fixed warnings
 				</dict>
 			</array>
 		</dict>
@@ -2573,53 +2464,10 @@
 				<integer>76</integer>
 			</dict>
 			<key>NS.keys</key>
-<<<<<<< HEAD
 			<array/>
-=======
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>45</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>44</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>214</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>43</integer>
-				</dict>
-			</array>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 			<key>NS.objects</key>
-<<<<<<< HEAD
 			<array/>
-=======
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>215</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>43</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>231</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>239</integer>
-				</dict>
-			</array>
->>>>>>> Fixed warnings
 		</dict>
-		<string>Xcode.IDEKit.Navigator.Logs</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -2630,82 +2478,15 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>249</integer>
-=======
-					<integer>47</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>48</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>49</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>50</integer>
-=======
-					<integer>65</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>66</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>67</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>68</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>69</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>70</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>71</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>216</integer>
->>>>>>> Fixed warnings
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>251</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>253</integer>
-=======
-					<integer>218</integer>
-=======
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>73</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
->>>>>>> Fixed warnings
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -2713,12 +2494,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>257</integer>
-=======
-					<integer>219</integer>
->>>>>>> Fixed warnings
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -2726,7 +2502,6 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>261</integer>
 				</dict>
 				<dict>
@@ -2760,80 +2535,12 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>277</integer>
-=======
-					<integer>220</integer>
-=======
-					<integer>217</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>223</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
-		</dict>
-		<string>{{0, 0}, {370, 1058}}</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>17</integer>
-			</dict>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>218</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>40</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>219</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>220</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>221</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>71</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>222</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-		</dict>
-		<string>Mocky</string>
-		<string>Tests</string>
-		<string>Support</string>
-		<string>TestHelper.m</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>74</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>279</integer>
 				</dict>
 				<dict>
@@ -2891,35 +2598,6 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>337</integer>
-=======
-					<integer>222</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>73</integer>
-=======
-					<integer>224</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>225</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>226</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>228</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>230</integer>
 				</dict>
 			</array>
 		</dict>
@@ -2927,82 +2605,6 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>40</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>219</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>40</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>219</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>220</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>40</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>219</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>220</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>227</integer>
-				</dict>
-			</array>
-		</dict>
-		<string>Functional</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>40</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>219</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>234</integer>
->>>>>>> Fixed warnings
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>75</integer>
 			</dict>
 			<key>NS.base</key>
@@ -3016,196 +2618,26 @@
 				<integer>250</integer>
 			</dict>
 		</dict>
-=======
-				<integer>37</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>33</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>34</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>23</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>231</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>280</real>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>33</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>34</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>26</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>233</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>1640</real>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>33</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>34</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>83</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>235</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>260</real>
->>>>>>> Fixed warnings
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>211</integer>
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRExpectationMessage.h</string>
-=======
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>86</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>87</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>88</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>89</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>90</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>91</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>92</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>93</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>237</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>256</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>284</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>191</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>28</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>301</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>307</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>191</integer>
-				</dict>
-			</array>
->>>>>>> Fixed warnings
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>75</integer>
 			</dict>
 			<key>NS.base</key>
-=======
-				<integer>111</integer>
-			</dict>
-			<key>geniusEditorContextNode</key>
->>>>>>> Fixed warnings
 			<dict>
 				<key>CF$UID</key>
 				<integer>0</integer>
 			</dict>
-<<<<<<< HEAD
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
@@ -3220,50 +2652,19 @@
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRMockery.h</string>
-=======
-			<key>primaryEditorContextNode</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>238</integer>
-			</dict>
-			<key>rootLayoutTreeNode</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>254</integer>
-			</dict>
->>>>>>> Fixed warnings
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>75</integer>
 			</dict>
 			<key>NS.base</key>
-=======
-				<integer>110</integer>
-			</dict>
-			<key>children</key>
->>>>>>> Fixed warnings
 			<dict>
 				<key>CF$UID</key>
 				<integer>0</integer>
 			</dict>
-<<<<<<< HEAD
 			<key>NS.relative</key>
-=======
-			<key>contentType</key>
-			<integer>1</integer>
-			<key>documentArchivableRepresentation</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>239</integer>
-			</dict>
-			<key>orientation</key>
-			<integer>0</integer>
-			<key>parent</key>
->>>>>>> Fixed warnings
 			<dict>
 				<key>CF$UID</key>
 				<integer>254</integer>
@@ -3273,43 +2674,15 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>211</integer>
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Tests/TestHelper.m</string>
 		</dict>
-=======
-				<integer>107</integer>
-			</dict>
-			<key>DocumentLocation</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>252</integer>
-			</dict>
-			<key>DomainIdentifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>240</integer>
-			</dict>
-			<key>IdentifierPath</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>241</integer>
-			</dict>
-			<key>IndexOfDocumentIdentifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>28</integer>
-			</dict>
-		</dict>
-		<string>Xcode.IDENavigableItemDomain.WorkspaceStructure</string>
->>>>>>> Fixed warnings
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>75</integer>
 			</dict>
 			<key>NS.base</key>
@@ -3323,73 +2696,19 @@
 				<integer>256</integer>
 			</dict>
 		</dict>
-=======
-				<integer>17</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>242</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>244</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>246</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>248</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>250</integer>
-				</dict>
-			</array>
-		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>101</integer>
-			</dict>
-			<key>Identifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>243</integer>
-			</dict>
-		</dict>
-		<string>LRMultipleAction.m</string>
->>>>>>> Fixed warnings
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>211</integer>
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRMockery.m</string>
 		</dict>
-=======
-				<integer>101</integer>
-			</dict>
-			<key>Identifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>245</integer>
-			</dict>
-		</dict>
-		<string>Actions</string>
->>>>>>> Fixed warnings
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>75</integer>
 			</dict>
 			<key>NS.base</key>
@@ -3403,56 +2722,19 @@
 				<integer>258</integer>
 			</dict>
 		</dict>
-=======
-				<integer>101</integer>
-			</dict>
-			<key>Identifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>247</integer>
-			</dict>
-		</dict>
-		<string>LRMocky</string>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>101</integer>
-			</dict>
-			<key>Identifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>249</integer>
-			</dict>
-		</dict>
-		<string>Classes</string>
->>>>>>> Fixed warnings
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>211</integer>
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/ExampleTestCase.m</string>
 		</dict>
-=======
-				<integer>101</integer>
-			</dict>
-			<key>Identifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>251</integer>
-			</dict>
-		</dict>
-		<string>Mocky</string>
->>>>>>> Fixed warnings
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>75</integer>
 			</dict>
 			<key>NS.base</key>
@@ -3464,102 +2746,47 @@
 			<dict>
 				<key>CF$UID</key>
 				<integer>260</integer>
-=======
-				<integer>106</integer>
-			</dict>
-			<key>documentURL</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>253</integer>
-			</dict>
-			<key>timestamp</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
->>>>>>> Fixed warnings
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>211</integer>
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRExpectationMessage.m</string>
-=======
-				<integer>105</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRMultipleAction.m</string>
->>>>>>> Fixed warnings
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>75</integer>
 			</dict>
 			<key>NS.base</key>
-=======
-				<integer>110</integer>
-			</dict>
-			<key>children</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>255</integer>
-			</dict>
-			<key>contentType</key>
-			<integer>0</integer>
-			<key>documentArchivableRepresentation</key>
->>>>>>> Fixed warnings
 			<dict>
 				<key>CF$UID</key>
 				<integer>0</integer>
 			</dict>
-<<<<<<< HEAD
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
 				<integer>262</integer>
-=======
-			<key>orientation</key>
-			<integer>0</integer>
-			<key>parent</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
->>>>>>> Fixed warnings
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>211</integer>
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRTestCase.h</string>
-=======
-				<integer>17</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>238</integer>
-				</dict>
-			</array>
->>>>>>> Fixed warnings
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>75</integer>
 			</dict>
 			<key>NS.base</key>
@@ -3572,296 +2799,20 @@
 				<key>CF$UID</key>
 				<integer>264</integer>
 			</dict>
-=======
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>113</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>257</integer>
-=======
-					<integer>229</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-		</dict>
-		<string>Examples</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
-				<integer>41</integer>
-=======
-				<integer>40</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>115</integer>
-=======
-					<integer>219</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>258</integer>
-=======
-					<integer>220</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>221</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>117</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>118</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>119</integer>
-=======
-					<integer>232</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>233</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>259</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>28</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>282</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>17</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>260</integer>
-=======
-					<integer>234</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>235</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>236</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>237</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>238</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
->>>>>>> Fixed warnings
-		</dict>
-<<<<<<< HEAD
-=======
-		<string>IDELogNavigatorExpandedItemsStateKey</string>
-		<string>IDELogNavigatorSelectedObjectsStateKey</string>
-		<string>IDELogNavigatorRecentFilterStateKey</string>
-		<string>IDELogNavigatorVisibleRectStateKey</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>40</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array/>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>40</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array/>
-		</dict>
-		<string>{{0, 0}, {370, 1058}}</string>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>211</integer>
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRInvocationExpectation.m</string>
 		</dict>
-=======
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>122</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>123</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>124</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>125</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>126</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>127</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>128</integer>
-=======
-					<integer>47</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>48</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>49</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>50</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>51</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>52</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>53</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>54</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>261</integer>
-=======
-					<integer>55</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>56</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>262</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>270</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>278</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>243</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>279</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>280</integer>
-				</dict>
-			</array>
-		</dict>
-		<string>public.objective-c-source</string>
->>>>>>> Fixed warnings
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>75</integer>
 			</dict>
 			<key>NS.base</key>
@@ -3873,110 +2824,21 @@
 			<dict>
 				<key>CF$UID</key>
 				<integer>266</integer>
-=======
-				<integer>107</integer>
-			</dict>
-			<key>DocumentLocation</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>252</integer>
-			</dict>
-			<key>DomainIdentifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>240</integer>
-			</dict>
-			<key>IdentifierPath</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>263</integer>
-			</dict>
-			<key>IndexOfDocumentIdentifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>28</integer>
->>>>>>> Fixed warnings
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>211</integer>
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Tests/TestHelper.h</string>
-=======
-				<integer>17</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>264</integer>
-=======
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>240</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>241</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>242</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>243</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>265</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>266</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>267</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>268</integer>
-=======
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>245</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
->>>>>>> Fixed warnings
 		</dict>
-		<string>{{0, 0}, {370, 1036}}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 				<integer>75</integer>
 			</dict>
 			<key>NS.base</key>
@@ -3988,763 +2850,26 @@
 			<dict>
 				<key>CF$UID</key>
 				<integer>268</integer>
-=======
-				<integer>101</integer>
-			</dict>
-			<key>Identifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>243</integer>
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>101</integer>
-			</dict>
-			<key>Identifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>245</integer>
->>>>>>> Fixed warnings
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>211</integer>
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRExpectationBuilder.h</string>
 		</dict>
-=======
-				<integer>101</integer>
-			</dict>
-			<key>Identifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>247</integer>
-			</dict>
-		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>101</integer>
-			</dict>
-			<key>Identifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>249</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>101</integer>
-			</dict>
-			<key>Identifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>269</integer>
-=======
-				<integer>59</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-			</dict>
-			<key>NS.objects</key>
-			<array/>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
-				<integer>37</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>271</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>272</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>273</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>274</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>275</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>276</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>277</integer>
-				</dict>
-			</array>
-=======
-				<integer>59</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array/>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>40</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array/>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-		</dict>
-		<string>PrimaryDocumentTimestamp</string>
-		<string>PrimaryDocumentVisibleCharacterRange</string>
-		<string>HideAllIssues</string>
-		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>332525936.37676299</real>
-		<string>{82, 964}</string>
-		<string>{919, 0}</string>
-		<string>LRA_doAll()</string>
-		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>281</integer>
-=======
-				<integer>59</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-			</dict>
-			<key>NS.objects</key>
-			<array/>
-		</dict>
-		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRMultipleAction.m</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>59</integer>
-			</dict>
-			<key>NS.objects</key>
-<<<<<<< HEAD
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>283</integer>
-				</dict>
-			</array>
-=======
-			<array/>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-		</dict>
-		<string>{{0, 0}, {1640, 711}}</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>166</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>167</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>168</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>169</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>170</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>171</integer>
-=======
-					<integer>30</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>285</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>286</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>287</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>288</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>289</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>295</integer>
-=======
-					<integer>247</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-		</dict>
-		<integer>2</integer>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>40</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>174</integer>
-=======
-					<integer>248</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>28</integer>
-=======
-					<integer>250</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>252</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>176</integer>
-=======
-					<integer>33</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>34</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>23</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>249</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-		</dict>
-		<real>371</real>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>172</integer>
-=======
-					<integer>33</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-		</dict>
-		<integer>3</integer>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>30</integer>
-=======
-					<integer>34</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>290</integer>
-=======
-					<integer>26</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>251</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-		</dict>
-		<real>1549</real>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
-				<integer>40</integer>
-=======
-				<integer>37</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>33</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>34</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>291</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>293</integer>
-=======
-					<integer>83</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>253</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-		</dict>
-		<real>260</real>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>33</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>34</integer>
-=======
-					<integer>86</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>87</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>88</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>180</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>292</integer>
-=======
-					<integer>89</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>90</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-		</dict>
-		<real>823</real>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>33</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>34</integer>
-=======
-					<integer>91</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>92</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>93</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>183</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>294</integer>
-=======
-					<integer>255</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>269</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>295</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>191</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>28</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-		</dict>
-		<real>816</real>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>30</integer>
-=======
-					<integer>312</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>318</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>296</integer>
-				</dict>
-			</array>
-		</dict>
-=======
-					<integer>191</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>111</integer>
-			</dict>
-			<key>geniusEditorContextNode</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>primaryEditorContextNode</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>256</integer>
-			</dict>
-			<key>rootLayoutTreeNode</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>267</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>110</integer>
-			</dict>
-			<key>children</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>contentType</key>
-			<integer>1</integer>
-			<key>documentArchivableRepresentation</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>257</integer>
-			</dict>
-			<key>orientation</key>
-			<integer>0</integer>
-			<key>parent</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>267</integer>
-			</dict>
-		</dict>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
-				<integer>40</integer>
-=======
-				<integer>107</integer>
-			</dict>
-			<key>DocumentLocation</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>265</integer>
-			</dict>
-			<key>DomainIdentifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>258</integer>
-			</dict>
-			<key>IdentifierPath</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>259</integer>
-			</dict>
-			<key>IndexOfDocumentIdentifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>28</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>297</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>299</integer>
-				</dict>
-			</array>
-		</dict>
-		<string>Xcode.IDENavigableItemDomain.WorkspaceStructure</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>33</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>34</integer>
-=======
-					<integer>260</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>180</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>298</integer>
-=======
-					<integer>262</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>263</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-		</dict>
-		<real>823</real>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
-				<integer>37</integer>
-=======
-				<integer>101</integer>
-			</dict>
-			<key>Identifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>261</integer>
-			</dict>
-		</dict>
-		<string>ExampleTestCase.m</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>101</integer>
-			</dict>
-			<key>Identifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>229</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>33</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>34</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>183</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>300</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>816</real>
->>>>>>> Fixed warnings
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>75</integer>
 			</dict>
 			<key>NS.base</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>0</integer>
 			</dict>
 			<key>NS.relative</key>
@@ -4752,462 +2877,72 @@
 				<key>CF$UID</key>
 				<integer>270</integer>
 			</dict>
-=======
-				<integer>41</integer>
-=======
-				<integer>264</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>30</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>302</integer>
-				</dict>
-			</array>
->>>>>>> Fixed warnings
 		</dict>
-		<string>Mocky</string>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 				<integer>211</integer>
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRTestCase.m</string>
-=======
-				<integer>40</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>303</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>305</integer>
-				</dict>
-			</array>
->>>>>>> Fixed warnings
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>75</integer>
 			</dict>
 			<key>NS.base</key>
-=======
-				<integer>106</integer>
-			</dict>
-			<key>documentURL</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>266</integer>
-			</dict>
-			<key>timestamp</key>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 			<dict>
 				<key>CF$UID</key>
 				<integer>0</integer>
 			</dict>
-<<<<<<< HEAD
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
 				<integer>272</integer>
 			</dict>
 		</dict>
-=======
-				<integer>37</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>33</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>34</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>195</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>304</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>733</real>
->>>>>>> Fixed warnings
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>211</integer>
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky.h</string>
 		</dict>
-=======
-				<integer>37</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>33</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>34</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>198</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>306</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>369</real>
->>>>>>> Fixed warnings
-=======
-		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>105</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/ExampleTestCase.m</string>
-		</dict>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 				<integer>75</integer>
-=======
-				<integer>110</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 			</dict>
-			<key>children</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>268</integer>
-			</dict>
-			<key>contentType</key>
-			<integer>0</integer>
-			<key>documentArchivableRepresentation</key>
+			<key>NS.base</key>
 			<dict>
 				<key>CF$UID</key>
 				<integer>0</integer>
 			</dict>
-			<key>orientation</key>
-			<integer>0</integer>
-			<key>parent</key>
+			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>274</integer>
 			</dict>
-=======
-				<integer>41</integer>
-=======
-				<integer>0</integer>
-			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>17</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-			</dict>
-			<key>NS.keys</key>
-			<array/>
-			<key>NS.objects</key>
-<<<<<<< HEAD
-			<array/>
->>>>>>> Fixed warnings
-=======
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>256</integer>
-				</dict>
-			</array>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>211</integer>
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRConsecutiveCallAction.m</string>
 		</dict>
-=======
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>309</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>310</integer>
-=======
-					<integer>113</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>311</integer>
-=======
-					<integer>270</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>312</integer>
-=======
-					<integer>115</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>313</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>314</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>315</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>316</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>317</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>318</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>319</integer>
-=======
-					<integer>271</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>117</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>118</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>119</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>320</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>28</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>362</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>367</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>370</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>402</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>403</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>411</integer>
-=======
-					<integer>272</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>28</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>293</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>17</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>273</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>122</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>123</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>124</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>125</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>126</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>127</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>128</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
-				</dict>
-			</array>
-		</dict>
-		<string>BreakpointsActivated</string>
-		<string>DefaultEditorStatesForURLs</string>
-		<string>DebuggingWindowBehavior</string>
-		<string>ActiveRunDestination</string>
-		<string>ActiveScheme</string>
-		<string>LastCompletedPersistentSchemeBasedActivityReport</string>
-		<string>DocumentWindows</string>
-		<string>DefaultEditorFrameSizeForURLs</string>
-		<string>RecentEditorDocumentURLs</string>
-		<string>AppFocusInMiniDebugging</string>
-		<string>MiniDebuggingConsole</string>
->>>>>>> Fixed warnings
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>75</integer>
 			</dict>
 			<key>NS.base</key>
@@ -5220,124 +2955,21 @@
 				<key>CF$UID</key>
 				<integer>276</integer>
 			</dict>
-=======
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>159</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>279</integer>
-=======
-					<integer>274</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>275</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>281</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>289</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>321</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>338</integer>
-=======
-					<integer>261</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>290</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>291</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
->>>>>>> Fixed warnings
 		</dict>
-<<<<<<< HEAD
-=======
-		<string>public.objective-c-source</string>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 				<integer>211</integer>
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRMultipleAction.m</string>
-=======
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>322</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>323</integer>
-				</dict>
-			</array>
->>>>>>> Fixed warnings
-=======
-				<integer>107</integer>
-			</dict>
-			<key>DocumentLocation</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>265</integer>
-			</dict>
-			<key>DomainIdentifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>258</integer>
-			</dict>
-			<key>IdentifierPath</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>276</integer>
-			</dict>
-			<key>IndexOfDocumentIdentifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>28</integer>
-			</dict>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 				<integer>75</integer>
-=======
-				<integer>162</integer>
->>>>>>> Fixed warnings
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -5347,98 +2979,28 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>278</integer>
 			</dict>
-=======
-				<integer>17</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>277</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>278</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>279</integer>
-				</dict>
-			</array>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>211</integer>
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRHamcrestParameterAdapter.h</string>
-=======
-				<integer>104</integer>
-			</dict>
->>>>>>> Fixed warnings
-		</dict>
-=======
-				<integer>101</integer>
-			</dict>
-			<key>Identifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>261</integer>
-			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>101</integer>
-			</dict>
-			<key>Identifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>229</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>101</integer>
-			</dict>
-			<key>Identifier</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>280</integer>
-			</dict>
-		</dict>
-		<string>Mocky</string>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 				<integer>76</integer>
-=======
-				<integer>41</integer>
->>>>>>> Fixed warnings
-=======
-				<integer>37</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>280</integer>
 				</dict>
 				<dict>
@@ -5452,42 +3014,18 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>283</integer>
-=======
-					<integer>136</integer>
 				</dict>
+			</array>
+			<key>NS.objects</key>
+			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>137</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>138</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>139</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>282</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>283</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 					<integer>284</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>285</integer>
 				</dict>
-<<<<<<< HEAD
 				<dict>
 					<key>CF$UID</key>
 					<integer>16</integer>
@@ -5505,95 +3043,16 @@
 		<real>332526678.47103202</real>
 		<string>{0, 358}</string>
 		<string>{0, 0}</string>
-=======
-					<integer>324</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>325</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>331</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>337</integer>
-				</dict>
-			</array>
-		</dict>
-		<string>Xcode3ProjectInfoEditor</string>
->>>>>>> Fixed warnings
-=======
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>286</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>287</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>288</integer>
-				</dict>
-			</array>
-		</dict>
-		<string>PrimaryDocumentTimestamp</string>
-		<string>PrimaryDocumentVisibleCharacterRange</string>
-		<string>HideAllIssues</string>
-		<string>PrimaryDocumentSelectedCharacterRange</string>
-		<real>332526812.830257</real>
-		<string>{280, 1212}</string>
-		<string>{1039, 0}</string>
-		<string>-testFailedMocking</string>
-		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 				<integer>76</integer>
-=======
-				<integer>41</integer>
->>>>>>> Fixed warnings
-=======
-				<integer>162</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>292</integer>
-			</dict>
-		</dict>
-		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/ExampleTestCase.m</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>17</integer>
-			</dict>
-			<key>NS.objects</key>
+			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>63</integer>
 				</dict>
 				<dict>
@@ -5607,16 +3066,12 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>66</integer>
-=======
-					<integer>30</integer>
->>>>>>> Fixed warnings
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>288</integer>
 				</dict>
 				<dict>
@@ -5630,36 +3085,10 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>290</integer>
-=======
-					<integer>326</integer>
-=======
-					<integer>294</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 		</dict>
-		<string>{{0, 0}, {1549, 750}}</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>327</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>329</integer>
->>>>>>> Fixed warnings
-				</dict>
-			</array>
-		</dict>
-		<real>332527185.51387602</real>
+		<real>332527233.36241001</real>
 		<string>{0, 1549}</string>
 		<string>{1330, 0}</string>
 		<dict>
@@ -5677,34 +3106,9 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>281</integer>
-=======
-					<integer>166</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>167</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>168</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>169</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>170</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>171</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>282</integer>
 				</dict>
 				<dict>
@@ -5713,68 +3117,17 @@
 				</dict>
 			</array>
 			<key>NS.objects</key>
-=======
-					<integer>35</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>328</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>162</real>
-=======
-					<integer>296</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>297</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>298</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>299</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>300</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>306</integer>
-				</dict>
-			</array>
-		</dict>
-		<integer>2</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
->>>>>>> Fixed warnings
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>292</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>293</integer>
-=======
-					<integer>174</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>16</integer>
 				</dict>
 				<dict>
@@ -5786,34 +3139,6 @@
 		<real>332526807.70102203</real>
 		<string>{2595, 2264}</string>
 		<string>{4688, 0}</string>
-=======
-					<integer>28</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>176</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>172</integer>
-				</dict>
-			</array>
-		</dict>
-		<integer>3</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -5824,88 +3149,37 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>280</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>281</integer>
-=======
-					<integer>30</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>282</integer>
-=======
-					<integer>301</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>40</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>283</integer>
-=======
-					<integer>302</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>296</integer>
-=======
-					<integer>304</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>297</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>16</integer>
-=======
-					<integer>33</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>34</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>298</integer>
 				</dict>
 			</array>
@@ -5913,36 +3187,10 @@
 		<real>332526203.619434</real>
 		<string>{1438, 1474}</string>
 		<string>{2098, 221}</string>
-=======
-					<integer>35</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>330</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>458</real>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>17</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>332</integer>
-				</dict>
-			</array>
-		</dict>
->>>>>>> Fixed warnings
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>76</integer>
 			</dict>
 			<key>NS.keys</key>
@@ -5950,28 +3198,9 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>63</integer>
-=======
-					<integer>180</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>303</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-		</dict>
-		<real>823</real>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>64</integer>
 				</dict>
 				<dict>
@@ -5981,20 +3210,12 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>66</integer>
-=======
-					<integer>33</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>34</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>300</integer>
 				</dict>
 				<dict>
@@ -6004,28 +3225,9 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>16</integer>
-=======
-					<integer>183</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>305</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-		</dict>
-		<real>816</real>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>302</integer>
 				</dict>
 			</array>
@@ -6044,78 +3246,28 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>280</integer>
-=======
-					<integer>30</integer>
 				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>307</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>40</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>281</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>282</integer>
-=======
-					<integer>308</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>310</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>283</integer>
-=======
-					<integer>33</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>304</integer>
-=======
-					<integer>34</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>305</integer>
 				</dict>
 				<dict>
@@ -6130,32 +3282,16 @@
 		</dict>
 		<real>332526679.20967501</real>
 		<string>{0, 561}</string>
-=======
-					<integer>180</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>309</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>823</real>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>76</integer>
-=======
-				<integer>37</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>280</integer>
 				</dict>
 				<dict>
@@ -6169,20 +3305,12 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>283</integer>
-=======
-					<integer>33</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>34</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>307</integer>
 				</dict>
 				<dict>
@@ -6192,1198 +3320,45 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>16</integer>
-=======
-					<integer>183</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>311</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>816</real>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>30</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>309</integer>
-=======
-					<integer>313</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 		</dict>
 		<real>332526232.95461202</real>
 		<string>{0, 633}</string>
 		<string>{633, 0}</string>
-=======
-				<integer>156</integer>
-			</dict>
-			<key>documentURL</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
-				<integer>149</integer>
-			</dict>
-			<key>selection</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>334</integer>
-			</dict>
-			<key>timestamp</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>333</integer>
-=======
-				<integer>40</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>314</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>316</integer>
-				</dict>
-			</array>
-		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>33</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>34</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>195</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>315</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>772</real>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>33</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>34</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>198</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>317</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>330</real>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array/>
-			<key>NS.objects</key>
-			<array/>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>320</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>321</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>322</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>323</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>324</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>325</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>326</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>327</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>328</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>329</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>330</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>331</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>28</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>432</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>437</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>440</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>471</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>472</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>480</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
-				</dict>
-			</array>
-		</dict>
-		<string>BreakpointsActivated</string>
-		<string>DefaultEditorStatesForURLs</string>
-		<string>DebuggingWindowBehavior</string>
-		<string>ActiveRunDestination</string>
-		<string>ActiveScheme</string>
-		<string>LastCompletedPersistentSchemeBasedActivityReport</string>
-		<string>DocumentWindows</string>
-		<string>DefaultEditorFrameSizeForURLs</string>
-		<string>RecentEditorDocumentURLs</string>
-		<string>AppFocusInMiniDebugging</string>
-		<string>MiniDebuggingConsole</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>332</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>159</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>290</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>333</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>343</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>360</integer>
-				</dict>
-			</array>
-		</dict>
-		<string>Xcode.IDEKit.EditorDocument.PlistEditor</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>334</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>336</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>335</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>105</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Example%20Tests-Info.plist</string>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>337</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>338</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>339</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>340</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>341</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>342</integer>
-				</dict>
-			</array>
-		</dict>
-		<string>IDE_PLIST_EDITOR_SELECTION_KEY</string>
-		<string>IDE_PLIST_EDITOR_VISIBLERECT_KEY</string>
-		<string>IDE_PLIST_EDITOR_EXPANSION_KEY</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>17</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array/>
-		</dict>
-		<string>{{0, 0}, {1640, 711}}</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>59</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array/>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>344</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>345</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>104</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>136</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>137</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>138</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>139</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>346</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>347</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>353</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>359</integer>
-				</dict>
-			</array>
-		</dict>
-		<string>Xcode3ProjectInfoEditor</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>30</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>348</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>40</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>349</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>351</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>33</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>34</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>35</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>350</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>162</real>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>37</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>33</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>34</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>35</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>352</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>458</real>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>17</integer>
-			</dict>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>354</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>156</integer>
-			</dict>
-			<key>documentURL</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>149</integer>
-			</dict>
-			<key>selection</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>356</integer>
-			</dict>
-			<key>timestamp</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>355</integer>
-			</dict>
-		</dict>
-		<real>332525843.82081199</real>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>152</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>153</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>357</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>358</integer>
-				</dict>
-			</array>
-		</dict>
-		<string>Mocky</string>
-		<string>Xcode3ProjectInfoEditor</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array/>
-			<key>NS.objects</key>
-			<array/>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>361</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>363</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>365</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>367</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>369</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>371</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>373</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>375</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>377</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>379</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>381</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>383</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>385</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>389</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>393</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>397</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>401</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>405</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>408</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>412</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>416</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>420</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>424</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>428</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>362</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>105</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRExpectationMessage.h</string>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>364</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>105</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRMockery.h</string>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>366</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>105</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Tests/TestHelper.m</string>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>368</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>105</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRMockery.m</string>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>370</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>105</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/ExampleTestCase.m</string>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>372</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>105</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRExpectationMessage.m</string>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>374</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>105</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRTestCase.h</string>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>376</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>105</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRInvocationExpectation.m</string>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>378</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>105</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Tests/TestHelper.h</string>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>380</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>105</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRTestCase.m</string>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>382</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>105</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRConsecutiveCallAction.m</string>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>384</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-			</dict>
-		</dict>
-		<real>332525843.82081199</real>
->>>>>>> Fixed warnings
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 				<integer>76</integer>
-=======
-=======
-				<integer>105</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRMultipleAction.m</string>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				<integer>41</integer>
->>>>>>> Fixed warnings
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>280</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>281</integer>
-=======
-					<integer>152</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>153</integer>
->>>>>>> Fixed warnings
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>282</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>283</integer>
-=======
-					<integer>282</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>283</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>284</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>285</integer>
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>386</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>387</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>388</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>332526678.47103202</real>
-		<string>{0, 358}</string>
-		<string>{0, 0}</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>282</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>283</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>284</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>285</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>311</integer>
 				</dict>
 				<dict>
@@ -7403,27 +3378,6 @@
 		<real>332526761.54781997</real>
 		<string>{1722, 1720}</string>
 		<string>{2705, 0}</string>
-=======
-					<integer>390</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>391</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>392</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>332526176.25701499</real>
-		<string>{0, 1330}</string>
-		<string>{943, 0}</string>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -7434,7 +3388,6 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>280</integer>
 				</dict>
 				<dict>
@@ -7448,91 +3401,20 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>283</integer>
-=======
-					<integer>335</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>336</integer>
-				</dict>
-			</array>
-		</dict>
-		<string>Mocky</string>
-		<string>Xcode3ProjectInfoEditor</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array/>
-			<key>NS.objects</key>
-			<array/>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>339</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>340</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>282</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>283</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>284</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>285</integer>
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>394</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>395</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>315</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>316</integer>
-=======
-					<integer>342</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>344</integer>
->>>>>>> Fixed warnings
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>16</integer>
 				</dict>
 				<dict>
@@ -7544,34 +3426,16 @@
 		<real>332526605.621957</real>
 		<string>{0, 1410}</string>
 		<string>{1230, 0}</string>
-=======
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>396</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>332526807.70102203</real>
-		<string>{2595, 2264}</string>
-		<string>{4688, 0}</string>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>76</integer>
-=======
-				<integer>41</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>63</integer>
 				</dict>
 				<dict>
@@ -7585,28 +3449,12 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>66</integer>
-=======
-					<integer>282</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>283</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>284</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>285</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>319</integer>
 				</dict>
 				<dict>
@@ -7620,108 +3468,22 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>321</integer>
-=======
-					<integer>398</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>399</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>400</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>332526203.619434</real>
-		<string>{1438, 1474}</string>
-		<string>{2098, 221}</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>282</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>283</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>284</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>285</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 		</dict>
 		<real>332526965.13984603</real>
 		<string>{0, 1701}</string>
 		<string>{1129, 0}</string>
-=======
-					<integer>346</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>350</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>354</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>358</integer>
-				</dict>
-			</array>
-		</dict>
->>>>>>> Fixed warnings
-=======
-					<integer>402</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>403</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>404</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>332526812.82840902</real>
-		<string>{280, 1212}</string>
-		<string>{1039, 0}</string>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>76</integer>
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>280</integer>
 				</dict>
 				<dict>
@@ -7735,28 +3497,12 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>283</integer>
-=======
-					<integer>282</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>283</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>284</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>285</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>323</integer>
 				</dict>
 				<dict>
@@ -7772,222 +3518,20 @@
 					<integer>325</integer>
 				</dict>
 			</array>
-=======
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>253</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>341</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>105</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRMockery.m</string>
->>>>>>> Fixed warnings
 		</dict>
 		<real>332526232.03440702</real>
 		<string>{0, 1004}</string>
 		<string>{1004, 0}</string>
-=======
-					<integer>406</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>407</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>388</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>332526679.20967501</real>
-		<string>{0, 561}</string>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 				<integer>76</integer>
-=======
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>343</integer>
-			</dict>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>105</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRMockery.h</string>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>345</integer>
-=======
-				<integer>41</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>282</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>283</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>284</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>285</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>409</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>410</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>411</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>332526232.95461202</real>
-		<string>{0, 633}</string>
-		<string>{633, 0}</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>282</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>283</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>284</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>285</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>413</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>414</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>415</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>332526761.54781997</real>
-		<string>{1722, 1720}</string>
-		<string>{2705, 0}</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
->>>>>>> Fixed warnings
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>280</integer>
 				</dict>
 				<dict>
@@ -8001,36 +3545,12 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>283</integer>
-=======
-					<integer>271</integer>
-=======
-					<integer>282</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>283</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>284</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>274</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>285</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>327</integer>
 				</dict>
 				<dict>
@@ -8049,36 +3569,6 @@
 		</dict>
 		<real>332526907.13806802</real>
 		<string>{0, 514}</string>
-=======
-					<integer>347</integer>
-=======
-					<integer>417</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>418</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>419</integer>
-				</dict>
-			</array>
-		</dict>
-<<<<<<< HEAD
-		<real>332525936.37612599</real>
-		<string>{82, 964}</string>
-		<string>{919, 0}</string>
->>>>>>> Fixed warnings
-=======
-		<real>332526605.621957</real>
-		<string>{0, 1410}</string>
-		<string>{1230, 0}</string>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8089,8 +3579,6 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>280</integer>
 				</dict>
 				<dict>
@@ -8115,29 +3603,9 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>331</integer>
-=======
-					<integer>271</integer>
-=======
-					<integer>282</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>283</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>284</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>274</integer>
->>>>>>> Fixed warnings
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>16</integer>
 				</dict>
 				<dict>
@@ -8172,16 +3640,12 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>283</integer>
-=======
-					<integer>285</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>334</integer>
 				</dict>
 				<dict>
@@ -8201,52 +3665,16 @@
 		<real>332525979.220146</real>
 		<string>{36, 1010}</string>
 		<string>{919, 0}</string>
-=======
-					<integer>351</integer>
-=======
-					<integer>421</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>422</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>423</integer>
-				</dict>
-			</array>
-		</dict>
-<<<<<<< HEAD
-		<real>332525903.95826203</real>
-		<string>{323, 1997}</string>
-		<string>{1633, 0}</string>
->>>>>>> Fixed warnings
-=======
-		<real>332526232.03440702</real>
-		<string>{0, 1004}</string>
-		<string>{1004, 0}</string>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>76</integer>
-=======
-				<integer>41</integer>
->>>>>>> Fixed warnings
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>63</integer>
 				</dict>
 				<dict>
@@ -8260,36 +3688,12 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>66</integer>
-=======
-					<integer>271</integer>
-=======
-					<integer>282</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>283</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>284</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>274</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>285</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>338</integer>
 				</dict>
 				<dict>
@@ -8309,84 +3713,6 @@
 		<real>332527101.06601298</real>
 		<string>{0, 491}</string>
 		<string>{491, 0}</string>
-=======
-					<integer>355</integer>
-=======
-					<integer>425</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>426</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>427</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>332525918.437558</real>
-		<string>{0, 1225}</string>
-		<string>{1064, 0}</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>282</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>283</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>284</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>285</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>429</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>430</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>14</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>431</integer>
-				</dict>
-			</array>
-		</dict>
-<<<<<<< HEAD
-		<real>332525918.437558</real>
-		<string>{0, 1225}</string>
-		<string>{1064, 0}</string>
->>>>>>> Fixed warnings
-=======
-		<real>332525979.220146</real>
-		<string>{36, 1010}</string>
-		<string>{919, 0}</string>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8397,54 +3723,22 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>342</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>343</integer>
-=======
-					<integer>363</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>364</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>433</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>434</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>344</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>345</integer>
-=======
-					<integer>365</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>366</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>435</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>436</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 		</dict>
@@ -8462,35 +3756,19 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>347</integer>
-=======
-					<integer>368</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>438</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>348</integer>
-=======
-					<integer>369</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>439</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 		</dict>
 		<string>IDENameString</string>
-		<string>Mocky Examples</string>
+		<string>Mocky</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -8501,8 +3779,6 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>350</integer>
 				</dict>
 				<dict>
@@ -8512,32 +3788,12 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>352</integer>
-=======
-					<integer>371</integer>
-=======
-					<integer>441</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>442</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>373</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>443</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>353</integer>
 				</dict>
 				<dict>
@@ -8547,24 +3803,6 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>360</integer>
-=======
-					<integer>374</integer>
-=======
-					<integer>444</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>470</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>401</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>451</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 		</dict>
@@ -8581,8 +3819,6 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>354</integer>
 				</dict>
 				<dict>
@@ -8596,28 +3832,6 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>370</integer>
-=======
-					<integer>375</integer>
-=======
-					<integer>445</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>452</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>456</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>391</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>461</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 		</dict>
@@ -8631,8 +3845,6 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>355</integer>
 				</dict>
 				<dict>
@@ -8642,32 +3854,12 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>357</integer>
-=======
-					<integer>376</integer>
-=======
-					<integer>446</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>447</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>378</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>448</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>358</integer>
 				</dict>
 				<dict>
@@ -8677,24 +3869,6 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>360</integer>
-=======
-					<integer>379</integer>
-=======
-					<integer>449</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>450</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>381</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>451</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 		</dict>
@@ -8714,8 +3888,6 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>355</integer>
 				</dict>
 				<dict>
@@ -8725,32 +3897,12 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>357</integer>
-=======
-					<integer>376</integer>
-=======
-					<integer>446</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>447</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>378</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>448</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>362</integer>
 				</dict>
 				<dict>
@@ -8760,24 +3912,6 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>364</integer>
-=======
-					<integer>383</integer>
-=======
-					<integer>453</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>454</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>385</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>455</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 		</dict>
@@ -8794,8 +3928,6 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>355</integer>
 				</dict>
 				<dict>
@@ -8805,32 +3937,12 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>357</integer>
-=======
-					<integer>376</integer>
-=======
-					<integer>446</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>447</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>378</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>448</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>366</integer>
 				</dict>
 				<dict>
@@ -8840,24 +3952,6 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>368</integer>
-=======
-					<integer>387</integer>
-=======
-					<integer>457</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>458</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>389</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>459</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 		</dict>
@@ -8867,15 +3961,7 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 				<integer>369</integer>
-=======
-				<integer>390</integer>
->>>>>>> Fixed warnings
-=======
-				<integer>460</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 			</dict>
 			<key>NS.data</key>
 			<data>
@@ -8917,8 +4003,6 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>355</integer>
 				</dict>
 				<dict>
@@ -8940,51 +4024,13 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>374</integer>
-=======
-					<integer>376</integer>
-=======
-					<integer>446</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>462</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>463</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>448</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>464</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>395</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>465</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>375</integer>
-=======
-					<integer>396</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>466</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -8992,27 +4038,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>376</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
 					<integer>378</integer>
-=======
-					<integer>397</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>399</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>467</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>469</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -9033,24 +4063,10 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 				<integer>377</integer>
 			</dict>
 			<key>NS.time</key>
 			<real>332527116.169756</real>
-=======
-				<integer>398</integer>
-			</dict>
-			<key>NS.time</key>
-			<real>332525927.71911299</real>
->>>>>>> Fixed warnings
-=======
-				<integer>468</integer>
-			</dict>
-			<key>NS.time</key>
-			<real>332526812.45095098</real>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -9061,15 +4077,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-<<<<<<< HEAD
-<<<<<<< HEAD
 		<string>Today at 17:38</string>
-=======
-		<string>Today at 17:18</string>
->>>>>>> Fixed warnings
-=======
-		<string>Today at 17:33</string>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 		<integer>234</integer>
 		<dict>
 			<key>$class</key>
@@ -9081,24 +4089,9 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>3</integer>
+					<integer>2</integer>
 				</dict>
 			</array>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>41</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>473</integer>
-				</dict>
-			</array>
-<<<<<<< HEAD
 		</dict>
 		<dict>
 			<key>$class</key>
@@ -9118,17 +4111,6 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>384</integer>
-=======
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>406</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>475</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 		</dict>
@@ -9136,11 +4118,7 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>75</integer>
-=======
-				<integer>162</integer>
->>>>>>> Fixed warnings
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -9150,91 +4128,36 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 				<integer>383</integer>
 			</dict>
 		</dict>
 		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Mocky.xcodeproj/</string>
-=======
-				<integer>405</integer>
-=======
-				<integer>474</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-			</dict>
-		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>105</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Mocky.xcodeproj/</string>
-		</dict>
->>>>>>> Fixed warnings
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
 				<integer>70</integer>
-=======
-				<integer>37</integer>
->>>>>>> Fixed warnings
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>385</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>386</integer>
-=======
-					<integer>407</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>408</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>476</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>477</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>387</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>388</integer>
-=======
-					<integer>409</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>410</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>478</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>479</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 		</dict>
@@ -9252,8 +4175,6 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 					<integer>390</integer>
 				</dict>
 				<dict>
@@ -9291,52 +4212,6 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>407</integer>
-=======
-					<integer>412</integer>
-=======
-					<integer>481</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>483</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>485</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>487</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-<<<<<<< HEAD
-					<integer>420</integer>
->>>>>>> Fixed warnings
-=======
-					<integer>489</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>491</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>493</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>495</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>497</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>499</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 				</dict>
 			</array>
 		</dict>
@@ -9515,187 +4390,10 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
-<<<<<<< HEAD
-<<<<<<< HEAD
 				<integer>408</integer>
-=======
-				<integer>413</integer>
-=======
-				<integer>482</integer>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
-			</dict>
-		</dict>
-		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/ExampleTestCase.m</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>484</integer>
-			</dict>
-		</dict>
-		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Tests/TestHelper.m</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>486</integer>
-			</dict>
-		</dict>
-		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRInvocationExpectation.m</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>488</integer>
-			</dict>
-		</dict>
-		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRExpectationMessage.m</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-<<<<<<< HEAD
-				<integer>149</integer>
->>>>>>> Fixed warnings
 			</dict>
 		</dict>
 		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Tests/TestHelper.h</string>
-=======
-				<integer>490</integer>
-			</dict>
-		</dict>
-		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRExpectationMessage.h</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>492</integer>
-			</dict>
-		</dict>
-		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Tests/TestHelper.h</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>494</integer>
-			</dict>
-		</dict>
-		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRTestCase.h</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>496</integer>
-			</dict>
-		</dict>
-		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRTestCase.m</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>498</integer>
-			</dict>
-		</dict>
-		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRMockery.m</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>162</integer>
-			</dict>
-			<key>NS.base</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>0</integer>
-			</dict>
-			<key>NS.relative</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>500</integer>
-			</dict>
-		</dict>
-		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRMockery.h</string>
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
 	</array>
 	<key>$top</key>
 	<dict>

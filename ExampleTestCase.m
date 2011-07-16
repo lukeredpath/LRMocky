@@ -23,7 +23,7 @@
 
 - (void)testSuccessfulMocking
 {
-  LRMockery *context = [LRMockery mockeryForTestCase:self];
+  LRMockery *context = mockery();
 
   id myMockString = [context mock:[NSString class] named:@"My Mock String"];
   
@@ -37,7 +37,7 @@
 
 - (void)testFailedMocking 
 {
-  LRMockery *context = [LRMockery mockeryForTestCase:self];
+  LRMockery *context = mockery();
   
   id myMockString = [context mock:[NSString class] named:@"My Mock String"];
   
@@ -52,7 +52,7 @@
 
 - (void)testSuccessfulMockingWithMultipleCallsExpected
 {
-  LRMockery *context = [LRMockery mockeryForTestCase:self];
+  LRMockery *context = mockery();
   
   id myMockString = [context mock:[NSString class] named:@"My Mock String"];
   
@@ -69,7 +69,7 @@
 
 - (void)testFailedMockingWithMultipleCallsExpected
 {
-  LRMockery *context = [LRMockery mockeryForTestCase:self];
+  LRMockery *context = mockery();
   
   id myMockString = [context mock:[NSString class] named:@"My Mock String"];
   
@@ -83,7 +83,7 @@
 
 - (void)testSuccessfulMockingWithHamcrest 
 {
-  LRMockery *context = [LRMockery mockeryForTestCase:self];
+  LRMockery *context = mockery();
   
   id myMockString = [context mock:[NSString class] named:@"My Mock String"];
   
@@ -97,7 +97,7 @@
 
 - (void)testFailedMockingWithHamcrest 
 {
-  LRMockery *context = [LRMockery mockeryForTestCase:self];
+  LRMockery *context = mockery();
   
   id myMockString = [context mock:[NSString class] named:@"My Mock String"];
   
@@ -111,7 +111,7 @@
 
 - (void)testSuccessfulMockWithReturnValue
 {
-  LRMockery *context = [LRMockery mockeryForTestCase:self];
+  LRMockery *context = mockery();
   
   id myMockString = [context mock:[NSString class] named:@"My Mock String"];
   
@@ -127,7 +127,7 @@
 
 - (void)testSuccessfulMockWithPerformedBlock
 {
-  LRMockery *context = [LRMockery mockeryForTestCase:self];
+  LRMockery *context = mockery();
   
   id myMockString = [context mock:[NSString class] named:@"My Mock String"];
   __block id outsideTheBlock = nil;
