@@ -44,7 +44,7 @@ LRMultipleAction *LRA_doAll(id<LRExpectationAction>firstAction, ...)
     [multipleAction addAction:firstAction];
     
     va_start(actionList, firstAction);
-    while (eachAction = va_arg(actionList, id<LRExpectationAction>)) {
+    while ((eachAction = va_arg(actionList, id<LRExpectationAction>))) {
       [multipleAction addAction:eachAction];
     }
     va_end(actionList);

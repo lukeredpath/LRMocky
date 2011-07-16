@@ -49,7 +49,7 @@ LRConsecutiveCallAction *LRA_onConsecutiveCalls(id<LRExpectationAction>firstActi
     [actions addObject:firstAction];
     
     va_start(actionList, firstAction);
-    while (eachAction = va_arg(actionList, id<LRExpectationAction>)) {
+    while ((eachAction = va_arg(actionList, id<LRExpectationAction>))) {
       [actions addObject:eachAction];
     }
     va_end(actionList);
