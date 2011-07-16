@@ -88,7 +88,7 @@
   return stateMachine;
 }
 
-- (void)checking:(void (^)(LRExpectationBuilder *will))expectationBlock
+- (void)checking:(void (^)(LRExpectationBuilder *))expectationBlock;
 {
   expectationBlock([LRExpectationBuilder builderInContext:self]);
 }
