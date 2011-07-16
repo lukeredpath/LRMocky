@@ -15,6 +15,10 @@
 #import "LRMockyStates.h"
 #import "LRExpectationMessage.h"
 
+@interface LRMockery ()
+- (void)assertSatisfiedInFile:(NSString *)fileName lineNumber:(int)lineNumber;
+@end
+
 @implementation LRMockery
 
 + (id)mockeryForTestCase:(id)testCase;
@@ -112,21 +116,6 @@ NSString *failureFor(id<LRDescribable> expectation) {
 - (void)addExpectation:(id<LRExpectation>)expectation;
 {
   [expectations addObject:expectation];
-}
-
-- (void)dispatchInvocation:(NSInvocation *)invocation forMock:(LRMockObject *)mockObject;
-{
-  for (id<LRExpectation> expectation in expectations) {
-    if ([expectation respondsToSelector:@selector(matches:)] && [(LRInvocationExpectation *)expectation matches:invocation]) {
-      if ([expectation respondsToSelector:@selector(calledWithInvalidState)] && expectation.calledWithInvalidState == YES) {
-        return;
-      }
-      return [(LRInvocationExpectation *)expectation invoke:invocation];
-    }
-  }
-  LRUnexpectedInvocation *unexpectedInvocation = [LRUnexpectedInvocation unexpectedInvocation:invocation];
-  unexpectedInvocation.mockObject = mockObject;
-  [expectations addObject:unexpectedInvocation];
 }
 
 - (void)reset;

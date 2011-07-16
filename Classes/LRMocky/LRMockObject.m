@@ -10,6 +10,12 @@
 #import "LRMockery.h"
 #import "LRClassImposterizer.h"
 #import "LRProtocolImposterizer.h"
+#import "LRInvocationExpectation.h"
+#import "LRUnexpectedInvocation.h"
+
+@interface LRMockery (MockObjectDispatch)
+- (void)dispatchInvocation:(NSInvocation *)invocation forMock:(LRMockObject *)mockObject;
+@end
 
 @implementation LRMockObject
 
@@ -42,11 +48,6 @@
   [super dealloc];
 }
 
-- (void)handleImposterizedInvocation:(NSInvocation *)invocation
-{
-  [context dispatchInvocation:invocation forMock:self];
-}
-
 - (NSString *)description
 {
   NSMutableString *description = [NSMutableString stringWithString:@"<LRMockObject "];
@@ -55,6 +56,30 @@
   }
   [description appendFormat:@"%@>", [imposterizer description]];
   return description;
+}
+
+- (void)handleImposterizedInvocation:(NSInvocation *)invocation
+{
+  [context dispatchInvocation:invocation forMock:self];
+}
+
+@end
+
+@implementation LRMockery (MockObjectDispatch)
+
+- (void)dispatchInvocation:(NSInvocation *)invocation forMock:(LRMockObject *)mockObject;
+{
+  for (id<LRExpectation> expectation in expectations) {
+    if ([expectation respondsToSelector:@selector(matches:)] && [(LRInvocationExpectation *)expectation matches:invocation]) {
+      if ([expectation respondsToSelector:@selector(calledWithInvalidState)] && expectation.calledWithInvalidState == YES) {
+        return;
+      }
+      return [(LRInvocationExpectation *)expectation invoke:invocation];
+    }
+  }
+  LRUnexpectedInvocation *unexpectedInvocation = [LRUnexpectedInvocation unexpectedInvocation:invocation];
+  unexpectedInvocation.mockObject = mockObject;
+  [expectations addObject:unexpectedInvocation];
 }
 
 @end

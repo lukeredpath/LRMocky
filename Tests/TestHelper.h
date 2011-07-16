@@ -51,9 +51,6 @@ id<HCMatcher> failedWithExpectationError(NSString *errorDescription);
 
 @class LRMockery;
 
-void LRM_assertContextSatisfied(LRMockery *context, NSString *fileName, int lineNumber);
-#define assertContextSatisfied(context) LRM_assertContextSatisfied(context, [NSString stringWithUTF8String:__FILE__], __LINE__)
-
 void LR_assertNothingRaisedWithLocation(void (^block)(void), SenTestCase *testCase, NSString *fileName, int lineNumber);
 #define assertNothingRaised(block) LR_assertNothingRaisedWithLocation(block, self, [NSString stringWithUTF8String:__FILE__], __LINE__)
 

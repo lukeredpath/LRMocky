@@ -19,22 +19,56 @@
   NSMutableArray *expectations;
   id<LRTestCaseNotifier> testNotifier;
 }
+
+/*--------------------------------------------------------------------------------------
+ * @name Creating and initializing Mockeries
+ *-------------------------------------------------------------------------------------*/
+
 + (id)mockeryForTestCase:(id)testCase;
 + (id)mockeryForSenTestCase:(SenTestCase *)testCase;
 - (id)initWithNotifier:(id<LRTestCaseNotifier>)aNotifier;
+
+/*--------------------------------------------------------------------------------------
+ * @name Creating mocks
+ *-------------------------------------------------------------------------------------*/
+
 - (id)mock:(Class)klass;
 - (id)mock:(Class)klass named:(NSString *)name;
 - (id)protocolMock:(Protocol *)protocol;
+
+/*--------------------------------------------------------------------------------------
+ * @name Expecting NSNotifications
+ *-------------------------------------------------------------------------------------*/
+
 - (void)expectNotificationNamed:(NSString *)name;
 - (void)expectNotificationNamed:(NSString *)name fromObject:(id)sender;
+
+/*--------------------------------------------------------------------------------------
+ * @name Creating state machines
+ *-------------------------------------------------------------------------------------*/
+
 - (LRMockyStateMachine *)states:(NSString *)name;
 - (LRMockyStateMachine *)states:(NSString *)name defaultTo:(NSString *)defaultState;
+
+/*--------------------------------------------------------------------------------------
+ * @name Setting up expectations
+ *-------------------------------------------------------------------------------------*/
+
 - (void)checking:(void (^)(LRExpectationBuilder *will))expectationBlock;
 - (void)addExpectation:(id<LRExpectation>)expectation;
-- (void)assertSatisfiedInFile:(NSString *)fileName lineNumber:(int)lineNumber;
+
+/*--------------------------------------------------------------------------------------
+ * @name Checking expectations
+ *-------------------------------------------------------------------------------------*/
+
 - (void)assertSatisfied;
-- (void)dispatchInvocation:(NSInvocation *)invocation forMock:(LRMockObject *)mockObject;
+
+/*--------------------------------------------------------------------------------------
+ * @name Resetting the current context
+ *-------------------------------------------------------------------------------------*/
+
 - (void)reset;
+
 @end
 
 void LRM_assertContextSatisfied(LRMockery *context, NSString *fileName, int lineNumber);
