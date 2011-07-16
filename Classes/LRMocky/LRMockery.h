@@ -25,7 +25,7 @@
 }
 
 ///------------------------------------------------------------------------------------/
-/// @name Creating and initializing Mockeries
+/// @name Creating and initializing 
 ///------------------------------------------------------------------------------------/
 
 /** Creates a mocking context for a generic test case.
