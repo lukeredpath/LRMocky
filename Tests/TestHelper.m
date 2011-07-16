@@ -124,7 +124,6 @@ id<HCMatcher> failedWithExpectationError(NSString *errorDescription)
   return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:hasItem(exceptionWithDescription(containsString(errorDescription)))] autorelease];
 }
 
-<<<<<<< HEAD
 void LR_assertNothingRaisedWithLocation(void (^block)(void), SenTestCase *testCase, NSString *fileName, int lineNumber)
 {
   @try {
@@ -145,7 +144,6 @@ void LR_assertNothingRaisedWithLocation(void (^block)(void), SenTestCase *testCa
 }
 @end
 
-=======
 #pragma mark - Failed mocking checks (for examples)
 
 @interface LRMockery (TestingAdditions)
@@ -178,4 +176,3 @@ void LRM_assertContextNotSatisfied(LRMockery *context, NSString *fileName, int l
 {
   [context assertNotSatisfiedInFile:fileName lineNumber:lineNumber];
 }
->>>>>>> Handle failed expectations in the examples with a proper assertion that checks
