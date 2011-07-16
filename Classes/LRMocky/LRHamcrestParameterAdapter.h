@@ -20,4 +20,5 @@ id LRM_with(id<HCMatcher> matcher);
 
 #ifdef LRMOCKY_SHORTHAND
 #define with LRM_with
+#define withObjectThat LRM_with // is this more fluent?
 #endif

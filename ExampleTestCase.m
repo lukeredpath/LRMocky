@@ -32,6 +32,7 @@
   }];
   
   [myMockString uppercaseString];
+  
   assertContextSatisfied(context);
 }
 
@@ -78,6 +79,7 @@
   }];
   
   [myMockString uppercaseString];
+  
   assertContextNotSatisfied(context);
 }
 
@@ -88,10 +90,11 @@
   id myMockString = [context mock:[NSString class] named:@"My Mock String"];
   
   [context checking:^(that){
-    [[oneOf(myMockString) receives] stringByAppendingString:with(startsWith(@"super"))];
+    [[oneOf(myMockString) receives] stringByAppendingString:withObjectThat(startsWith(@"super"))];
   }];
   
   [myMockString stringByAppendingString:@"super"];
+  
   assertContextSatisfied(context);
 }
 
@@ -102,10 +105,11 @@
   id myMockString = [context mock:[NSString class] named:@"My Mock String"];
   
   [context checking:^(that){
-    [[oneOf(myMockString) receives] stringByAppendingString:with(startsWith(@"super"))];
+    [[oneOf(myMockString) receives] stringByAppendingString:withObjectThat(startsWith(@"super"))];
   }];
   
   [myMockString stringByAppendingString:@"not super"];
+  
   assertContextNotSatisfied(context);
 }
 
@@ -120,6 +124,7 @@
   }];
   
   NSString *returnedValue = [myMockString uppercaseString];
+  
   assertContextSatisfied(context);
 
   assertThat(returnedValue, equalTo(@"FOOBAR"));
@@ -139,8 +144,8 @@
   }];
   
   [myMockString uppercaseString];
-  assertContextSatisfied(context);
   
+  assertContextSatisfied(context);
   assertThat(outsideTheBlock, equalTo(@"FOOBAR"));
 }
 

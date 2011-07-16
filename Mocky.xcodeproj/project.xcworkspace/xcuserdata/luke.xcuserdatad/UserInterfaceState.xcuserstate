@@ -11,7 +11,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>70</integer>
+=======
+				<integer>81</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
@@ -32,7 +36,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>192</integer>
+=======
+					<integer>213</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -42,7 +50,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
@@ -152,7 +164,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
@@ -205,6 +221,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>130</integer>
 				</dict>
 				<dict>
@@ -214,6 +231,17 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>183</integer>
+=======
+					<integer>143</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>150</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>204</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -221,7 +249,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>77</integer>
+=======
+					<integer>67</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -239,7 +271,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
@@ -288,7 +324,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>80</integer>
+=======
+					<integer>89</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -296,6 +336,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>77</integer>
 				</dict>
 				<dict>
@@ -309,6 +350,21 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>121</integer>
+=======
+					<integer>67</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>121</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>129</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>130</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -324,7 +380,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
@@ -346,7 +406,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
@@ -368,7 +432,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>70</integer>
+=======
+				<integer>81</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
@@ -393,11 +461,19 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>77</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>78</integer>
+=======
+					<integer>67</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>87</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -422,7 +498,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
@@ -467,11 +547,19 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>62</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>71</integer>
+=======
+					<integer>73</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>59</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -479,11 +567,19 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>73</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>74</integer>
+=======
+					<integer>82</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>83</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -499,12 +595,20 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>61</integer>
+=======
+				<integer>72</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>DocumentLocation</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>58</integer>
+=======
+				<integer>68</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>DomainIdentifier</key>
 			<dict>
@@ -519,7 +623,11 @@
 			<key>IndexOfDocumentIdentifier</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>57</integer>
+=======
+				<integer>67</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<dict>
@@ -529,19 +637,110 @@
 				<integer>15</integer>
 			</dict>
 			<key>NS.objects</key>
+<<<<<<< HEAD
 			<array/>
 		</dict>
 		<integer>9223372036854775807</integer>
+=======
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>58</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>61</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>63</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>65</integer>
+				</dict>
+			</array>
+		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
 				<integer>60</integer>
 			</dict>
+			<key>Identifier</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>59</integer>
+			</dict>
+		</dict>
+		<string>LRMockery.h</string>
+		<dict>
+			<key>$classes</key>
+			<array>
+				<string>IDEArchivableStringIndexPair</string>
+				<string>NSObject</string>
+			</array>
+			<key>$classname</key>
+			<string>IDEArchivableStringIndexPair</string>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>60</integer>
+			</dict>
+			<key>Identifier</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>62</integer>
+			</dict>
+		</dict>
+		<string>LRMocky</string>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>60</integer>
+			</dict>
+<<<<<<< HEAD
 			<key>documentURL</key>
 			<dict>
 				<key>CF$UID</key>
 				<integer>59</integer>
+=======
+			<key>Identifier</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>64</integer>
+			</dict>
+		</dict>
+		<string>Classes</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>60</integer>
+			</dict>
+			<key>Identifier</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>66</integer>
+			</dict>
+		</dict>
+		<string>Mocky</string>
+		<integer>0</integer>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>71</integer>
+			</dict>
+			<key>documentURL</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>69</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>timestamp</key>
 			<dict>
@@ -549,7 +748,29 @@
 				<integer>0</integer>
 			</dict>
 		</dict>
+<<<<<<< HEAD
 		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRMockery.h</string>
+=======
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>70</integer>
+			</dict>
+			<key>NS.string</key>
+			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRMockery.h</string>
+		</dict>
+		<dict>
+			<key>$classes</key>
+			<array>
+				<string>NSMutableString</string>
+				<string>NSString</string>
+				<string>NSObject</string>
+			</array>
+			<key>$classname</key>
+			<string>NSMutableString</string>
+		</dict>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 		<dict>
 			<key>$classes</key>
 			<array>
@@ -572,12 +793,17 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>70</integer>
+=======
+				<integer>81</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>63</integer>
 				</dict>
 				<dict>
@@ -591,17 +817,40 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>66</integer>
+=======
+					<integer>74</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>75</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>76</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>77</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>67</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>68</integer>
+=======
+					<integer>78</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>79</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -609,7 +858,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>69</integer>
+=======
+					<integer>80</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -617,8 +870,13 @@
 		<string>PrimaryDocumentVisibleCharacterRange</string>
 		<string>HideAllIssues</string>
 		<string>PrimaryDocumentSelectedCharacterRange</string>
+<<<<<<< HEAD
 		<real>332527233.36449999</real>
 		<string>{0, 1549}</string>
+=======
+		<real>332527150.39867002</real>
+		<string>{0, 1330}</string>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 		<string>{1330, 0}</string>
 		<dict>
 			<key>$classes</key>
@@ -629,14 +887,21 @@
 			<key>$classname</key>
 			<string>NSDictionary</string>
 		</dict>
+<<<<<<< HEAD
 		<string>LRM_assertContextSatisfied(LRMockery *context, NSString *fileName, int lineNumber)</string>
 		<string>LRMockery.h</string>
+=======
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 		<string>Xcode.IDEKit.EditorDocument.SourceCode</string>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -646,9 +911,16 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>59</integer>
 			</dict>
 		</dict>
+=======
+				<integer>84</integer>
+			</dict>
+		</dict>
+		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRMockery.h</string>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 		<dict>
 			<key>$classes</key>
 			<array>
@@ -679,7 +951,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>79</integer>
+=======
+					<integer>88</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -688,17 +964,25 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>81</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>82</integer>
+=======
+					<integer>90</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -716,24 +1000,32 @@
 					<key>CF$UID</key>
 					<integer>86</integer>
 				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
 				<dict>
 					<key>CF$UID</key>
 					<integer>87</integer>
 				</dict>
+			</array>
+			<key>NS.objects</key>
+			<array>
 				<dict>
 					<key>CF$UID</key>
 					<integer>88</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>90</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>102</integer>
+=======
+					<integer>97</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>99</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -741,7 +1033,15 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>109</integer>
+=======
+					<integer>112</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>118</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -756,20 +1056,32 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>89</integer>
+=======
+					<integer>98</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>77</integer>
+=======
+					<integer>67</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -778,20 +1090,32 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>91</integer>
+=======
+					<integer>100</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>92</integer>
+=======
+					<integer>101</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -800,17 +1124,29 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>101</integer>
+=======
+				<integer>110</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>93</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>98</integer>
+=======
+					<integer>102</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>107</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -818,28 +1154,48 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>70</integer>
+=======
+				<integer>81</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>94</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>95</integer>
+=======
+					<integer>103</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>104</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>96</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>97</integer>
+=======
+					<integer>105</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>106</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -851,28 +1207,48 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>70</integer>
+=======
+				<integer>81</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>94</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>95</integer>
+=======
+					<integer>103</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>104</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>99</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>100</integer>
+=======
+					<integer>108</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>109</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -893,20 +1269,32 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>91</integer>
+=======
+					<integer>100</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>104</integer>
+=======
+					<integer>113</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -914,17 +1302,29 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>101</integer>
+=======
+				<integer>110</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>105</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>107</integer>
+=======
+					<integer>114</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>116</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -932,28 +1332,48 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>70</integer>
+=======
+				<integer>81</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>94</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>95</integer>
+=======
+					<integer>103</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>104</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>96</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>106</integer>
+=======
+					<integer>105</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>115</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -962,28 +1382,48 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>70</integer>
+=======
+				<integer>81</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>94</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>95</integer>
+=======
+					<integer>103</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>104</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>99</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>108</integer>
+=======
+					<integer>108</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>117</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -992,20 +1432,32 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>110</integer>
+=======
+					<integer>119</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>111</integer>
+=======
+					<integer>120</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -1015,20 +1467,32 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>91</integer>
+=======
+					<integer>100</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>113</integer>
+=======
+					<integer>122</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -1036,17 +1500,29 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>101</integer>
+=======
+				<integer>110</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>114</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>117</integer>
+=======
+					<integer>123</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>126</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -1054,28 +1530,48 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>70</integer>
+=======
+				<integer>81</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>94</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>95</integer>
+=======
+					<integer>103</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>104</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>115</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>116</integer>
+=======
+					<integer>124</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>125</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -1085,28 +1581,48 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>70</integer>
+=======
+				<integer>81</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>94</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>95</integer>
+=======
+					<integer>103</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>104</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>118</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>119</integer>
+=======
+					<integer>127</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>128</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -1116,7 +1632,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array/>
@@ -1127,7 +1647,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>129</integer>
+=======
+				<integer>142</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>geniusEditorContextNode</key>
 			<dict>
@@ -1137,19 +1661,31 @@
 			<key>primaryEditorContextNode</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>122</integer>
+=======
+				<integer>131</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>rootLayoutTreeNode</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>126</integer>
+=======
+				<integer>139</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>128</integer>
+=======
+				<integer>141</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>children</key>
 			<dict>
@@ -1161,26 +1697,42 @@
 			<key>documentArchivableRepresentation</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>123</integer>
+=======
+				<integer>132</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>orientation</key>
 			<integer>0</integer>
 			<key>parent</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>126</integer>
+=======
+				<integer>139</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>61</integer>
+=======
+				<integer>72</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>DocumentLocation</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>58</integer>
+=======
+				<integer>68</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>DomainIdentifier</key>
 			<dict>
@@ -1190,12 +1742,20 @@
 			<key>IdentifierPath</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>124</integer>
+=======
+				<integer>133</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>IndexOfDocumentIdentifier</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>125</integer>
+=======
+				<integer>67</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<dict>
@@ -1205,7 +1765,28 @@
 				<integer>15</integer>
 			</dict>
 			<key>NS.objects</key>
+<<<<<<< HEAD
 			<array/>
+=======
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>134</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>135</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>136</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>137</integer>
+				</dict>
+			</array>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 		</dict>
 		<integer>9223372036854775807</integer>
 		<dict>
@@ -1231,6 +1812,60 @@
 			<key>parent</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
+=======
+				<integer>62</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>60</integer>
+			</dict>
+			<key>Identifier</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>64</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>60</integer>
+			</dict>
+			<key>Identifier</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>138</integer>
+			</dict>
+		</dict>
+		<string>Mocky</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>141</integer>
+			</dict>
+			<key>children</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>140</integer>
+			</dict>
+			<key>contentType</key>
+			<integer>0</integer>
+			<key>documentArchivableRepresentation</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>0</integer>
+			</dict>
+			<key>orientation</key>
+			<integer>0</integer>
+			<key>parent</key>
+			<dict>
+				<key>CF$UID</key>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				<integer>0</integer>
 			</dict>
 		</dict>
@@ -1244,7 +1879,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>122</integer>
+=======
+					<integer>131</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -1270,20 +1909,32 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>91</integer>
+=======
+					<integer>100</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>131</integer>
+=======
+					<integer>144</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -1291,17 +1942,29 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>101</integer>
+=======
+				<integer>110</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>132</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>135</integer>
+=======
+					<integer>145</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>148</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -1309,28 +1972,48 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>70</integer>
+=======
+				<integer>81</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>94</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>95</integer>
+=======
+					<integer>103</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>104</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>133</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>134</integer>
+=======
+					<integer>146</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>147</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -1340,28 +2023,48 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>70</integer>
+=======
+				<integer>81</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>94</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>95</integer>
+=======
+					<integer>103</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>104</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>133</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>136</integer>
+=======
+					<integer>146</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>149</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -1370,12 +2073,17 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>138</integer>
 				</dict>
 				<dict>
@@ -1389,12 +2097,28 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>141</integer>
+=======
+					<integer>151</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>152</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>153</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>154</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>142</integer>
 				</dict>
 				<dict>
@@ -1408,6 +2132,21 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>165</integer>
+=======
+					<integer>155</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>178</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>151</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>186</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -1419,12 +2158,17 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>143</integer>
 				</dict>
 				<dict>
@@ -1450,13 +2194,44 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>149</integer>
+=======
+					<integer>156</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>157</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>158</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>159</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>160</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>161</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>162</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>150</integer>
+=======
+					<integer>163</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -1464,7 +2239,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>151</integer>
+=======
+					<integer>164</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -1476,11 +2255,19 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>153</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>154</integer>
+=======
+					<integer>166</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>171</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -1496,7 +2283,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>152</integer>
+=======
+				<integer>165</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.objects</key>
 			<array/>
@@ -1517,19 +2308,13 @@
 				<integer>15</integer>
 			</dict>
 			<key>NS.objects</key>
+<<<<<<< HEAD
 			<array/>
-		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>152</integer>
-			</dict>
-			<key>NS.objects</key>
+=======
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>155</integer>
+					<integer>167</integer>
 				</dict>
 			</array>
 		</dict>
@@ -1537,13 +2322,139 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>101</integer>
+				<integer>110</integer>
 			</dict>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+					<integer>168</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>169</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>170</integer>
+				</dict>
+			</array>
+		</dict>
+		<string>Mocky</string>
+		<string>Examples</string>
+		<string>ExampleTestCase.m</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>165</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>172</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>173</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>175</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>177</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>110</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>168</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>110</integer>
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+					<integer>168</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>174</integer>
+				</dict>
+			</array>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+<<<<<<< HEAD
+				<integer>152</integer>
+=======
+				<integer>110</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>155</integer>
+=======
+					<integer>168</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>174</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>176</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+<<<<<<< HEAD
+				<integer>101</integer>
+=======
+				<integer>110</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+			</dict>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>156</integer>
+=======
+					<integer>168</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>169</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -1552,12 +2463,17 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>158</integer>
 				</dict>
 				<dict>
@@ -1571,17 +2487,40 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>161</integer>
+=======
+					<integer>179</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>180</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>181</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>182</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>162</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>163</integer>
+=======
+					<integer>183</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>184</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -1589,7 +2528,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>164</integer>
+=======
+					<integer>185</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -1601,7 +2544,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>101</integer>
+=======
+				<integer>110</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.objects</key>
 			<array/>
@@ -1610,7 +2557,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>101</integer>
+=======
+				<integer>110</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.objects</key>
 			<array/>
@@ -1620,12 +2571,17 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>166</integer>
 				</dict>
 				<dict>
@@ -1663,6 +2619,45 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>175</integer>
+=======
+					<integer>187</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>188</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>189</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>190</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>191</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>192</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>193</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>194</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>195</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>196</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
@@ -1673,6 +2668,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>176</integer>
 				</dict>
 				<dict>
@@ -1686,6 +2682,21 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>180</integer>
+=======
+					<integer>197</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>198</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>200</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>201</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -1697,7 +2708,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>181</integer>
+=======
+					<integer>202</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -1705,7 +2720,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>182</integer>
+=======
+					<integer>203</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -1724,7 +2743,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>178</integer>
+=======
+				<integer>199</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.objects</key>
 			<array/>
@@ -1743,7 +2766,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>178</integer>
+=======
+				<integer>199</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.objects</key>
 			<array/>
@@ -1752,7 +2779,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>101</integer>
+=======
+				<integer>110</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.objects</key>
 			<array/>
@@ -1761,7 +2792,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>178</integer>
+=======
+				<integer>199</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.objects</key>
 			<array/>
@@ -1770,7 +2805,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>178</integer>
+=======
+				<integer>199</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.objects</key>
 			<array/>
@@ -1779,20 +2818,32 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>91</integer>
+=======
+					<integer>100</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>184</integer>
+=======
+					<integer>205</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -1800,12 +2851,17 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>101</integer>
+=======
+				<integer>110</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>185</integer>
 				</dict>
 				<dict>
@@ -1815,6 +2871,17 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>189</integer>
+=======
+					<integer>206</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>208</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>210</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -1822,17 +2889,29 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>70</integer>
+=======
+				<integer>81</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>94</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>95</integer>
+=======
+					<integer>103</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>104</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
@@ -1843,7 +2922,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>186</integer>
+=======
+					<integer>207</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -1852,17 +2935,29 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>70</integer>
+=======
+				<integer>81</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>94</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>95</integer>
+=======
+					<integer>103</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>104</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
@@ -1873,7 +2968,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>188</integer>
+=======
+					<integer>209</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -1882,28 +2981,48 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>70</integer>
+=======
+				<integer>81</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>94</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>95</integer>
+=======
+					<integer>103</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>104</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>190</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>191</integer>
+=======
+					<integer>211</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>212</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -1913,12 +3032,17 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>193</integer>
 				</dict>
 				<dict>
@@ -1960,6 +3084,49 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>203</integer>
+=======
+					<integer>214</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>215</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>216</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>217</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>218</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>219</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>220</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>221</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>222</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>223</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>224</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
@@ -1970,6 +3137,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>204</integer>
 				</dict>
 				<dict>
@@ -1999,6 +3167,37 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>389</integer>
+=======
+					<integer>225</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>67</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>360</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>365</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>368</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>399</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>400</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>408</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -2025,12 +3224,17 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>205</integer>
 				</dict>
 				<dict>
@@ -2040,12 +3244,24 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>207</integer>
+=======
+					<integer>226</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>227</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>228</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>208</integer>
 				</dict>
 				<dict>
@@ -2055,6 +3271,17 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>248</integer>
+=======
+					<integer>229</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>239</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>268</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -2065,20 +3292,32 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>209</integer>
+=======
+					<integer>230</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>212</integer>
+=======
+					<integer>232</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -2086,7 +3325,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -2096,14 +3339,22 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>210</integer>
+=======
+				<integer>231</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>211</integer>
+=======
+				<integer>70</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Example%20Tests-Info.plist</string>
@@ -2122,12 +3373,17 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>213</integer>
 				</dict>
 				<dict>
@@ -2137,12 +3393,24 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>215</integer>
+=======
+					<integer>233</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>234</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>235</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>216</integer>
 				</dict>
 				<dict>
@@ -2152,6 +3420,17 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>218</integer>
+=======
+					<integer>236</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>237</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>238</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -2171,7 +3450,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>178</integer>
+=======
+				<integer>199</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.objects</key>
 			<array/>
@@ -2181,20 +3464,32 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>220</integer>
+=======
+					<integer>240</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>222</integer>
+=======
+					<integer>242</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -2202,7 +3497,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -2212,14 +3511,22 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>221</integer>
+=======
+				<integer>241</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>211</integer>
+=======
+				<integer>70</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Mocky.xcodeproj/</string>
@@ -2228,12 +3535,17 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>223</integer>
 				</dict>
 				<dict>
@@ -2247,12 +3559,28 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>226</integer>
+=======
+					<integer>243</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>244</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>245</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>246</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>227</integer>
 				</dict>
 				<dict>
@@ -2266,6 +3594,21 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>247</integer>
+=======
+					<integer>247</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>248</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>258</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>267</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -2278,20 +3621,32 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>229</integer>
+=======
+					<integer>249</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>230</integer>
+=======
+					<integer>250</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -2300,17 +3655,29 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>101</integer>
+=======
+				<integer>110</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>231</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>236</integer>
+=======
+					<integer>251</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>256</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -2318,28 +3685,48 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>70</integer>
+=======
+				<integer>81</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>232</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>233</integer>
+=======
+					<integer>252</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>253</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>234</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>235</integer>
+=======
+					<integer>254</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>255</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -2351,28 +3738,48 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>70</integer>
+=======
+				<integer>81</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>232</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>233</integer>
+=======
+					<integer>252</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>253</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>234</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>237</integer>
+=======
+					<integer>254</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>257</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -2387,7 +3794,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>239</integer>
+=======
+					<integer>259</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -2395,22 +3806,38 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>246</integer>
+=======
+				<integer>266</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>documentURL</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>240</integer>
+=======
+				<integer>260</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>selection</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>242</integer>
+=======
+				<integer>262</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>timestamp</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>241</integer>
+=======
+				<integer>261</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Mocky.xcodeproj/</string>
@@ -2419,28 +3846,48 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>243</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>244</integer>
+=======
+					<integer>263</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>264</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>245</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>227</integer>
+=======
+					<integer>265</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>247</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -2461,7 +3908,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array/>
@@ -2472,12 +3923,17 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>249</integer>
 				</dict>
 				<dict>
@@ -2487,6 +3943,9 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>253</integer>
+=======
+					<integer>269</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -2494,7 +3953,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>257</integer>
+=======
+					<integer>272</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -2536,11 +3999,24 @@
 					<key>CF$UID</key>
 					<integer>277</integer>
 				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>292</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>294</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>296</integer>
+				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>279</integer>
 				</dict>
 				<dict>
@@ -2598,6 +4074,65 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>337</integer>
+=======
+					<integer>298</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>306</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>310</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>314</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>318</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>322</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>325</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>329</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>333</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>337</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>341</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>345</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>348</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>352</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>356</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -2605,7 +4140,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -2615,14 +4154,22 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>250</integer>
+=======
+				<integer>270</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>211</integer>
+=======
+				<integer>70</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRExpectationMessage.h</string>
@@ -2631,7 +4178,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -2641,6 +4192,7 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>252</integer>
 			</dict>
 		</dict>
@@ -2649,15 +4201,20 @@
 			<dict>
 				<key>CF$UID</key>
 				<integer>211</integer>
+=======
+				<integer>69</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRMockery.h</string>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -2667,14 +4224,22 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>254</integer>
+=======
+				<integer>273</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>211</integer>
+=======
+				<integer>70</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Tests/TestHelper.m</string>
@@ -2683,7 +4248,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -2693,14 +4262,22 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>256</integer>
+=======
+				<integer>275</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>211</integer>
+=======
+				<integer>70</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRMockery.m</string>
@@ -2709,7 +4286,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -2719,6 +4300,7 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>258</integer>
 			</dict>
 		</dict>
@@ -2727,6 +4309,9 @@
 			<dict>
 				<key>CF$UID</key>
 				<integer>211</integer>
+=======
+				<integer>277</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/ExampleTestCase.m</string>
@@ -2735,7 +4320,20 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>70</integer>
+			</dict>
+			<key>NS.string</key>
+			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/ExampleTestCase.m</string>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -2745,14 +4343,22 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>260</integer>
+=======
+				<integer>279</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>211</integer>
+=======
+				<integer>70</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRExpectationMessage.m</string>
@@ -2761,7 +4367,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -2771,14 +4381,22 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>262</integer>
+=======
+				<integer>281</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>211</integer>
+=======
+				<integer>70</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRTestCase.h</string>
@@ -2787,7 +4405,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -2797,14 +4419,22 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>264</integer>
+=======
+				<integer>283</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>211</integer>
+=======
+				<integer>70</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRInvocationExpectation.m</string>
@@ -2813,7 +4443,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -2823,14 +4457,22 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>266</integer>
+=======
+				<integer>285</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>211</integer>
+=======
+				<integer>70</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Tests/TestHelper.h</string>
@@ -2839,7 +4481,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -2849,14 +4495,22 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>268</integer>
+=======
+				<integer>287</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>211</integer>
+=======
+				<integer>70</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRExpectationBuilder.h</string>
@@ -2865,7 +4519,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -2875,14 +4533,22 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>270</integer>
+=======
+				<integer>289</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>211</integer>
+=======
+				<integer>70</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRTestCase.m</string>
@@ -2891,7 +4557,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -2901,14 +4571,22 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>272</integer>
+=======
+				<integer>291</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>211</integer>
+=======
+				<integer>70</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky.h</string>
@@ -2917,7 +4595,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -2927,14 +4609,22 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>274</integer>
+=======
+				<integer>293</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>211</integer>
+=======
+				<integer>70</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRConsecutiveCallAction.m</string>
@@ -2943,7 +4633,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -2953,14 +4647,22 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>276</integer>
+=======
+				<integer>295</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>211</integer>
+=======
+				<integer>70</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.string</key>
 			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRMultipleAction.m</string>
@@ -2997,10 +4699,37 @@
 				<key>CF$UID</key>
 				<integer>76</integer>
 			</dict>
+			<key>NS.base</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>0</integer>
+			</dict>
+			<key>NS.relative</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>297</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>70</integer>
+			</dict>
+			<key>NS.string</key>
+			<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRHamcrestParameterAdapter.h</string>
+		</dict>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>86</integer>
+			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>280</integer>
 				</dict>
 				<dict>
@@ -3014,17 +4743,40 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>283</integer>
+=======
+					<integer>299</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>300</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>301</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>302</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>284</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>285</integer>
+=======
+					<integer>303</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>304</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -3032,7 +4784,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>286</integer>
+=======
+					<integer>305</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -3047,12 +4803,17 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>63</integer>
 				</dict>
 				<dict>
@@ -3066,17 +4827,40 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>66</integer>
+=======
+					<integer>74</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>75</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>76</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>77</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>288</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>289</integer>
+=======
+					<integer>307</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>308</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -3084,23 +4868,37 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>290</integer>
 				</dict>
 			</array>
 		</dict>
 		<real>332527233.36241001</real>
 		<string>{0, 1549}</string>
+=======
+					<integer>309</integer>
+				</dict>
+			</array>
+		</dict>
+		<real>332527150.39772803</real>
+		<string>{0, 1330}</string>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 		<string>{1330, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>280</integer>
 				</dict>
 				<dict>
@@ -3114,106 +4912,9 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>283</integer>
+=======
+					<integer>299</integer>
 				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>292</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>293</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>16</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>294</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>332526807.70102203</real>
-		<string>{2595, 2264}</string>
-		<string>{4688, 0}</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>76</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>280</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>281</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>282</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>283</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>296</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>297</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>16</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>298</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>332526203.619434</real>
-		<string>{1438, 1474}</string>
-		<string>{2098, 221}</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>76</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>63</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>64</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>65</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>66</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
 				<dict>
 					<key>CF$UID</key>
 					<integer>300</integer>
@@ -3224,146 +4925,27 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>16</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
 					<integer>302</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>332527180.67212498</real>
-		<string>{1545, 2005}</string>
-		<string>{2591, 0}</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>76</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>280</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>281</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>282</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>283</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>304</integer>
+<<<<<<< HEAD
+					<integer>292</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>305</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>16</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>286</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>332526679.20967501</real>
-		<string>{0, 561}</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>76</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>280</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>281</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>282</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>283</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>307</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>308</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>16</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>309</integer>
-				</dict>
-			</array>
-		</dict>
-		<real>332526232.95461202</real>
-		<string>{0, 633}</string>
-		<string>{633, 0}</string>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>76</integer>
-			</dict>
-			<key>NS.keys</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>280</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>281</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>282</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>283</integer>
-				</dict>
-			</array>
-			<key>NS.objects</key>
-			<array>
-				<dict>
-					<key>CF$UID</key>
+					<integer>293</integer>
+=======
 					<integer>311</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>312</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -3371,23 +4953,32 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>294</integer>
+=======
 					<integer>313</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
-		<real>332526761.54781997</real>
-		<string>{1722, 1720}</string>
-		<string>{2705, 0}</string>
+		<real>332526807.70102203</real>
+		<string>{2595, 2264}</string>
+		<string>{4688, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>280</integer>
 				</dict>
 				<dict>
@@ -3401,17 +4992,40 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>283</integer>
+=======
+					<integer>299</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>300</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>301</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>302</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>296</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>297</integer>
+=======
 					<integer>315</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>316</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -3419,23 +5033,32 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>298</integer>
+=======
 					<integer>317</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
-		<real>332526605.621957</real>
-		<string>{0, 1410}</string>
-		<string>{1230, 0}</string>
+		<real>332526203.619434</real>
+		<string>{1438, 1474}</string>
+		<string>{2098, 221}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>63</integer>
 				</dict>
 				<dict>
@@ -3449,17 +5072,40 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>66</integer>
+=======
+					<integer>74</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>75</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>76</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>77</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>300</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>301</integer>
+=======
 					<integer>319</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>320</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -3467,23 +5113,37 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>302</integer>
+				</dict>
+			</array>
+		</dict>
+		<real>332527180.67212498</real>
+		<string>{1545, 2005}</string>
+=======
 					<integer>321</integer>
 				</dict>
 			</array>
 		</dict>
-		<real>332526965.13984603</real>
-		<string>{0, 1701}</string>
-		<string>{1129, 0}</string>
+		<real>332527145.37964398</real>
+		<string>{1622, 1928}</string>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+		<string>{2591, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>280</integer>
 				</dict>
 				<dict>
@@ -3497,17 +5157,40 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>283</integer>
+=======
+					<integer>299</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>300</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>301</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>302</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>304</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>305</integer>
+=======
 					<integer>323</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>324</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -3515,23 +5198,31 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>325</integer>
+<<<<<<< HEAD
+					<integer>286</integer>
+=======
+					<integer>305</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
-		<real>332526232.03440702</real>
-		<string>{0, 1004}</string>
-		<string>{1004, 0}</string>
+		<real>332526679.20967501</real>
+		<string>{0, 561}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>280</integer>
 				</dict>
 				<dict>
@@ -3545,17 +5236,40 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>283</integer>
+=======
+					<integer>299</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>300</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>301</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>302</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
+				<dict>
+					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>307</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>308</integer>
+=======
+					<integer>326</integer>
+				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>327</integer>
-				</dict>
-				<dict>
-					<key>CF$UID</key>
-					<integer>328</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -3563,22 +5277,32 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>286</integer>
+<<<<<<< HEAD
+					<integer>309</integer>
+=======
+					<integer>328</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
-		<real>332526907.13806802</real>
-		<string>{0, 514}</string>
+		<real>332526232.95461202</real>
+		<string>{0, 633}</string>
+		<string>{633, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>280</integer>
 				</dict>
 				<dict>
@@ -3592,17 +5316,40 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>283</integer>
+=======
+					<integer>299</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>300</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>301</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>302</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>311</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>312</integer>
+=======
 					<integer>330</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>331</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -3610,36 +5357,43 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>313</integer>
+=======
 					<integer>332</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
-		<real>332525918.437558</real>
-		<string>{0, 1225}</string>
-		<string>{1064, 0}</string>
+		<real>332526761.54781997</real>
+		<string>{1722, 1720}</string>
+		<string>{2705, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>280</integer>
+					<integer>299</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>281</integer>
+					<integer>300</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>282</integer>
+					<integer>301</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>283</integer>
+					<integer>302</integer>
 				</dict>
 			</array>
 			<key>NS.objects</key>
@@ -3662,19 +5416,101 @@
 				</dict>
 			</array>
 		</dict>
-		<real>332525979.220146</real>
-		<string>{36, 1010}</string>
-		<string>{919, 0}</string>
+		<real>332526605.621957</real>
+		<string>{0, 1410}</string>
+		<string>{1230, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>76</integer>
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>280</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>281</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>282</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>283</integer>
+=======
+					<integer>74</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>75</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>76</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>77</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+				</dict>
+			</array>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>315</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>316</integer>
+=======
+					<integer>338</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>339</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>16</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>317</integer>
+=======
+					<integer>340</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+				</dict>
+			</array>
+		</dict>
+		<real>332526965.13984603</real>
+		<string>{0, 1701}</string>
+		<string>{1129, 0}</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+<<<<<<< HEAD
+				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+			</dict>
+			<key>NS.keys</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>63</integer>
 				</dict>
 				<dict>
@@ -3688,12 +5524,419 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>66</integer>
+=======
+					<integer>299</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>300</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>301</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>302</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>319</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>320</integer>
+=======
+					<integer>342</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>343</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>16</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>321</integer>
+=======
+					<integer>344</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+				</dict>
+			</array>
+		</dict>
+		<real>332526232.03440702</real>
+		<string>{0, 1004}</string>
+		<string>{1004, 0}</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+<<<<<<< HEAD
+				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+			</dict>
+			<key>NS.keys</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>280</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>281</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>282</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>283</integer>
+=======
+					<integer>299</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>300</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>301</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>302</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+				</dict>
+			</array>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>323</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>324</integer>
+=======
+					<integer>346</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>347</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>16</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>325</integer>
+=======
+					<integer>305</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+				</dict>
+			</array>
+		</dict>
+		<real>332526907.13806802</real>
+		<string>{0, 514}</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+<<<<<<< HEAD
+				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+			</dict>
+			<key>NS.keys</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>280</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>281</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>282</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>283</integer>
+=======
+					<integer>299</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>300</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>301</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>302</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+				</dict>
+			</array>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>327</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>328</integer>
+=======
+					<integer>349</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>350</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>16</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>286</integer>
+=======
+					<integer>351</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+				</dict>
+			</array>
+		</dict>
+		<real>332525918.437558</real>
+		<string>{0, 1225}</string>
+		<string>{1064, 0}</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+<<<<<<< HEAD
+				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+			</dict>
+			<key>NS.keys</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>280</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>281</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>282</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>283</integer>
+=======
+					<integer>299</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>300</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>301</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>302</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+				</dict>
+			</array>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>330</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>331</integer>
+=======
+					<integer>353</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>354</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>16</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>332</integer>
+=======
+					<integer>355</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+				</dict>
+			</array>
+		</dict>
+		<real>332525979.220146</real>
+		<string>{36, 1010}</string>
+		<string>{919, 0}</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+<<<<<<< HEAD
+				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+			</dict>
+			<key>NS.keys</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>280</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>281</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>282</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>283</integer>
+=======
+					<integer>74</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>75</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>76</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>77</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+				</dict>
+			</array>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>334</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>335</integer>
+=======
+					<integer>357</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>358</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>16</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>336</integer>
+=======
+					<integer>359</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+				</dict>
+			</array>
+		</dict>
+		<real>332527101.06601298</real>
+		<string>{0, 491}</string>
+		<string>{491, 0}</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+<<<<<<< HEAD
+				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+			</dict>
+			<key>NS.keys</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+<<<<<<< HEAD
+					<integer>63</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>64</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>65</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>66</integer>
+=======
+					<integer>361</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>362</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
+				</dict>
+			</array>
+			<key>NS.objects</key>
+			<array>
+				<dict>
+					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>338</integer>
 				</dict>
 				<dict>
@@ -3739,6 +5982,13 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>345</integer>
+=======
+					<integer>363</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>364</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -3750,20 +6000,32 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>347</integer>
+=======
+					<integer>366</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>348</integer>
+=======
+					<integer>367</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -3773,12 +6035,17 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>350</integer>
 				</dict>
 				<dict>
@@ -3788,12 +6055,24 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>352</integer>
+=======
+					<integer>369</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>370</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>371</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>353</integer>
 				</dict>
 				<dict>
@@ -3803,6 +6082,17 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>360</integer>
+=======
+					<integer>372</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>398</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>379</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -3813,12 +6103,17 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>101</integer>
+=======
+				<integer>110</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>354</integer>
 				</dict>
 				<dict>
@@ -3832,6 +6127,21 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>370</integer>
+=======
+					<integer>373</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>380</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>384</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>389</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -3839,12 +6149,17 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>355</integer>
 				</dict>
 				<dict>
@@ -3854,12 +6169,24 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>357</integer>
+=======
+					<integer>374</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>375</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>376</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>358</integer>
 				</dict>
 				<dict>
@@ -3869,6 +6196,17 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>360</integer>
+=======
+					<integer>377</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>378</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>379</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -3882,12 +6220,17 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>355</integer>
 				</dict>
 				<dict>
@@ -3897,12 +6240,24 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>357</integer>
+=======
+					<integer>374</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>375</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>376</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>362</integer>
 				</dict>
 				<dict>
@@ -3912,6 +6267,17 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>364</integer>
+=======
+					<integer>381</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>382</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>383</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -3922,12 +6288,17 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>355</integer>
 				</dict>
 				<dict>
@@ -3937,12 +6308,24 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>357</integer>
+=======
+					<integer>374</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>375</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>376</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>366</integer>
 				</dict>
 				<dict>
@@ -3952,6 +6335,17 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>368</integer>
+=======
+					<integer>385</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>386</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>387</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -3961,7 +6355,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>369</integer>
+=======
+				<integer>388</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.data</key>
 			<data>
@@ -3997,12 +6395,17 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>355</integer>
 				</dict>
 				<dict>
@@ -4024,12 +6427,36 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>374</integer>
+=======
+					<integer>374</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>390</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>391</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>376</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>392</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>393</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>375</integer>
 				</dict>
 				<dict>
@@ -4051,6 +6478,29 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>111</integer>
+=======
+					<integer>394</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>120</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>395</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>397</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>120</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>120</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -4063,7 +6513,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>377</integer>
+=======
+				<integer>396</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.time</key>
 			<real>332527116.169756</real>
@@ -4083,7 +6537,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>101</integer>
+=======
+				<integer>110</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.objects</key>
 			<array>
@@ -4097,20 +6555,32 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>76</integer>
+=======
+				<integer>86</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>382</integer>
+=======
+					<integer>401</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>384</integer>
+=======
+					<integer>403</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -4118,7 +6588,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -4128,7 +6602,11 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>383</integer>
+=======
+				<integer>402</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Mocky.xcodeproj/</string>
@@ -4136,28 +6614,48 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>70</integer>
+=======
+				<integer>81</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.keys</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>385</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>386</integer>
+=======
+					<integer>404</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>405</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>387</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>388</integer>
+=======
+					<integer>406</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>407</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -4169,12 +6667,17 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>101</integer>
+=======
+				<integer>110</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.objects</key>
 			<array>
 				<dict>
 					<key>CF$UID</key>
+<<<<<<< HEAD
 					<integer>390</integer>
 				</dict>
 				<dict>
@@ -4212,6 +6715,45 @@
 				<dict>
 					<key>CF$UID</key>
 					<integer>407</integer>
+=======
+					<integer>409</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>411</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>413</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>415</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>417</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>419</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>421</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>423</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>425</integer>
+				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>427</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 				</dict>
 			</array>
 		</dict>
@@ -4219,7 +6761,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -4229,14 +6775,25 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>59</integer>
 			</dict>
 		</dict>
+=======
+				<integer>410</integer>
+			</dict>
+		</dict>
+		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRMockery.h</string>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 		<dict>
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -4246,7 +6803,11 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>392</integer>
+=======
+				<integer>412</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/ExampleTestCase.m</string>
@@ -4254,7 +6815,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -4264,7 +6829,11 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>394</integer>
+=======
+				<integer>414</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRHamcrestParameterAdapter.h</string>
@@ -4272,7 +6841,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -4282,7 +6855,11 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>396</integer>
+=======
+				<integer>416</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRExpectationBuilder.h</string>
@@ -4290,7 +6867,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -4300,7 +6881,11 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>398</integer>
+=======
+				<integer>418</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky.h</string>
@@ -4308,7 +6893,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -4318,7 +6907,11 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>400</integer>
+=======
+				<integer>420</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Tests/TestHelper.m</string>
@@ -4326,7 +6919,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -4336,7 +6933,11 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>402</integer>
+=======
+				<integer>422</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRMocky/LRInvocationExpectation.m</string>
@@ -4344,7 +6945,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -4354,7 +6959,11 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>404</integer>
+=======
+				<integer>424</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRExpectationMessage.m</string>
@@ -4362,7 +6971,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -4372,7 +6985,11 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>406</integer>
+=======
+				<integer>426</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Classes/LRExpectationMessage.h</string>
@@ -4380,7 +6997,11 @@
 			<key>$class</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>75</integer>
+=======
+				<integer>85</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 			<key>NS.base</key>
 			<dict>
@@ -4390,7 +7011,11 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
+<<<<<<< HEAD
 				<integer>408</integer>
+=======
+				<integer>428</integer>
+>>>>>>> Improved syntatic sugar for hamcrest adapter
 			</dict>
 		</dict>
 		<string>file://localhost/Users/luke/Code/Xcode/Projects/Mocky/Tests/TestHelper.h</string>
