@@ -10,6 +10,8 @@
 *.pbxuser
 *.xcodeproj/project.xcworkspace/xcuserdata/*.xcuserdatad/*.xcuserstate
 
+docs/generated
+
 # Generated files
 VersionX-revision.h
 
