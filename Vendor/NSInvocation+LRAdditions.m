@@ -18,7 +18,7 @@
       void *arg;
       [self getArgument:&arg atIndex:i];
       void (^block)() = (void (^)())arg;
-      Block_copy(block);
+      [block copy];
     }
   } 
 }
@@ -30,7 +30,7 @@
       void *arg;
       [self getArgument:&arg atIndex:i];
       void (^block)() = (void (^)())arg;
-      Block_release(block);
+      [block release];
     }
   } 
 }
