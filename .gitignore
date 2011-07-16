@@ -8,7 +8,7 @@
 *.perspective
 *.perspectivev3
 *.pbxuser
-
+*.xcodeproj/project.xcworkspace/xcuserdata/*.xcuserdatad/*.xcuserstate
 
 # Generated files
 VersionX-revision.h
