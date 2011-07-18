@@ -15,11 +15,11 @@
 #import "LRMocky.h"
 #import "TestHelper.h"
 
-@interface ExampleTestCase : SenTestCase
+@interface BasicExamples : SenTestCase
 {}
 @end
 
-@implementation ExampleTestCase
+@implementation BasicExamples
 
 - (void)testSuccessfulMocking
 {
@@ -147,6 +147,33 @@
   
   assertContextSatisfied(context);
   assertThat(outsideTheBlock, equalTo(@"FOOBAR"));
+}
+
+- (void)testStubbingMethod
+{
+  LRMockery *context = mockery();
+  
+  id myMockString = [context mock:[NSString class] named:@"My Mock String"];
+  
+  [context checking:^(that){
+    [stub(myMockString) uppercaseString]; andReturn(@"some string");
+  }];
+  
+  assertThat([myMockString uppercaseString], equalTo(@"some string"));  
+  assertContextSatisfied(context);
+}
+
+- (void)testContextSatisfiedWhenStubbingMethodNotCalled
+{
+  LRMockery *context = mockery();
+  
+  id myMockString = [context mock:[NSString class] named:@"My Mock String"];
+  
+  [context checking:^(that){
+    [stub(myMockString) uppercaseString]; andReturn(@"some string");
+  }];
+  
+  assertContextSatisfied(context);
 }
 
 @end

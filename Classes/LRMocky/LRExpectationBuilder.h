@@ -37,17 +37,19 @@
 
 
 #ifdef LRMOCKY_SUGAR
-#define mockery()       [LRMockery mockeryForTestCase:self]
-#define that            LRExpectationBuilder *builder
-#define it               builder
-#define andThen(action) [builder will:action]
-#define oneOf(arg)      [builder oneOf:arg]
-#define allowing(arg)   [builder allowing:arg]
-#define never(arg)      [builder never:arg]
-#define exactly(x)       builder exactly:x
-#define atLeast(x)       builder atLeast:x
-#define atMost(x)        builder atMost:x
-#define between(x, y)    builder between:x and:y
-#define then(state)     [builder shouldTransitionToState:state]
-#define when(state)     [builder requiresState:state];
+#define mockery()           [LRMockery mockeryForTestCase:self]
+#define that                LRExpectationBuilder *builder
+#define it                  builder
+#define andThen(action)     [builder will:action]
+#define andReturn(object)   [builder will:returnsObject(object)];
+#define oneOf(arg)          [builder oneOf:arg]
+#define allowing(arg)       [builder allowing:arg]
+#define never(arg)          [builder never:arg]
+#define exactly(x)           builder exactly:x
+#define atLeast(x)           builder atLeast:x
+#define atMost(x)            builder atMost:x
+#define between(x, y)        builder between:x and:y
+#define then(state)         [builder shouldTransitionToState:state]
+#define when(state)         [builder requiresState:state];
+#define stub(arg)           [builder allowing:arg] 
 #endif
