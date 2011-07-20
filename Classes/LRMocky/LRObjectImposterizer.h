@@ -13,4 +13,5 @@
   id objectToImposterize;
 }
 - (id)initWithObject:(id)object;
+- (void)setupInvocationHandlerForImposterizedObjectForInvocation:(NSInvocation *)invocation;
 @end

@@ -9,11 +9,13 @@
 #import "LRMockObject.h"
 #import "LRMockery.h"
 #import "LRClassImposterizer.h"
+#import "LRObjectImposterizer.h"
 #import "LRProtocolImposterizer.h"
 #import "LRInvocationExpectation.h"
 #import "LRUnexpectedInvocation.h"
 
 @interface LRMockery (MockObjectDispatch)
+- (LRInvocationExpectation *)validExpectationForInvocation:(NSInvocation *)invocation;
 - (void)dispatchInvocation:(NSInvocation *)invocation forMock:(LRMockObject *)mockObject;
 @end
 
@@ -31,6 +33,12 @@
 {
   LRProtocolImposterizer *imposterizer = [[[LRProtocolImposterizer alloc] initWithProtocol:protocol] autorelease];
   return [[[self alloc] initWithImposterizer:imposterizer context:mockery] autorelease];
+}
+
++ (id)partialMockForObject:(id)object inContext:(LRMockery *)context
+{
+  LRObjectImposterizer *imposterizer = [[[LRObjectImposterizer alloc] initWithObject:object] autorelease];
+  return [[[self alloc] initWithImposterizer:imposterizer context:context] autorelease];
 }
 
 - (id)initWithImposterizer:(LRImposterizer *)anImposterizer context:(LRMockery *)mockery;
@@ -58,6 +66,17 @@
   return description;
 }
 
+- (BOOL)shouldActAsImposterForInvocation:(NSInvocation *)invocation
+{
+  if ([imposterizer isKindOfClass:[LRObjectImposterizer class]]) {
+    if ([context validExpectationForInvocation:invocation]) {
+      return YES;
+    }
+    return NO;
+  }
+  return [super shouldActAsImposterForInvocation:invocation];
+}
+
 - (void)handleImposterizedInvocation:(NSInvocation *)invocation
 {
   [context dispatchInvocation:invocation forMock:self];
@@ -66,6 +85,16 @@
 @end
 
 @implementation LRMockery (MockObjectDispatch)
+
+- (LRInvocationExpectation *)validExpectationForInvocation:(NSInvocation *)invocation
+{
+  for (id<LRExpectation> expectation in expectations) {
+    if ([expectation respondsToSelector:@selector(matches:)] && [(LRInvocationExpectation *)expectation matches:invocation]) {
+      return expectation;
+    }
+  }
+  return nil;
+}
 
 - (void)dispatchInvocation:(NSInvocation *)invocation forMock:(LRMockObject *)mockObject;
 {

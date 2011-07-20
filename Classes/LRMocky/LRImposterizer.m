@@ -15,7 +15,7 @@
 
 - (void)forwardInvocation:(NSInvocation *)anInvocation
 {
-  if ([self.delegate respondsToSelector:@selector(handleImposterizedInvocation:)]) {
+  if ([self.delegate shouldActAsImposterForInvocation:anInvocation]) {
     [self.delegate handleImposterizedInvocation:anInvocation];
   }
 }

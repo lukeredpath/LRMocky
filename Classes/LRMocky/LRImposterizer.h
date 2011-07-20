@@ -8,14 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (ImposterizerDelegate)
+@protocol LRImposterizerDelegate
+- (BOOL)shouldActAsImposterForInvocation:(NSInvocation *)invocation;
 - (void)handleImposterizedInvocation:(NSInvocation *)invocation;
 @end
 
 @interface LRImposterizer : NSObject {
-  id delegate;
+  id<LRImposterizerDelegate> delegate;
 }
-@property (nonatomic, assign) id delegate;
+@property (nonatomic, assign) id<LRImposterizerDelegate> delegate;
 
 - (LRImposterizer *)matchingImposterizer;
 @end

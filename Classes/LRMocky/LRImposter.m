@@ -7,7 +7,6 @@
 //
 
 #import "LRImposter.h"
-#import "LRImposterizer.h"
 
 @implementation LRImposter
 
@@ -51,6 +50,11 @@
   [imposterizer release];
   imposterizer = [newImposterizer retain];
   imposterizer.delegate = self;
+}
+
+- (BOOL)shouldActAsImposterForInvocation:(NSInvocation *)invocation
+{
+  return YES;
 }
 
 - (void)handleImposterizedInvocation:(NSInvocation *)invocation;

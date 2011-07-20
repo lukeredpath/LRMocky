@@ -66,6 +66,11 @@
   return [LRMockObject mockForProtocol:protocol inContext:self];
 }
 
+- (id)partialMockForObject:(id)object
+{
+  return [LRMockObject partialMockForObject:object inContext:self];
+}
+
 - (void)expectNotificationNamed:(NSString *)name;
 {
   [self addExpectation:[LRNotificationExpectation expectationWithNotificationName:name]];

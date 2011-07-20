@@ -127,12 +127,20 @@
 - (void)forwardInvocation:(NSInvocation *)anInvocation
 {
   self.currentExpecation.invocation = anInvocation;
+
+  if ([imposterizer isKindOfClass:[LRObjectImposterizer class]]) {
+    [(LRObjectImposterizer *)imposterizer setupInvocationHandlerForImposterizedObjectForInvocation:anInvocation];
+  }
   [mockery addExpectation:self.currentExpecation];
 }
 
 - (void)prepareExpectationForObject:(id)mockObject 
                     withCardinality:(id<LRExpectationCardinality>)cardinality;
 {
+  if (![mockObject isKindOfClass:[LRMockObject class]]) {
+    mockObject = [mockery partialMockForObject:mockObject];
+  }
+  
   self.currentExpecation = [LRInvocationExpectation expectation];
   self.currentExpecation.cardinality = cardinality;
   self.currentExpecation.mockObject = mockObject;

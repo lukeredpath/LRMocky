@@ -16,12 +16,18 @@
 #import "LRProtocolImposterizer.h"
 
 @interface MyTestClass : NSObject
+@property (nonatomic, assign) BOOL receivedInstanceMethodCall;
+
 - (void)anInstanceMethod;
 + (void)aClassMethod;
 @end
 
 @implementation MyTestClass
-- (void)anInstanceMethod {}
+@synthesize receivedInstanceMethodCall;
+
+- (void)anInstanceMethod {
+  self.receivedInstanceMethodCall = YES;
+}
 + (void)aClassMethod {}
 @end
 
@@ -34,7 +40,7 @@ id invocationForSelector(SEL selector)
 
 #pragma mark -
 
-@interface ClassImposterizerTest : SenTestCase
+@interface ClassImposterizerTest : SenTestCase <LRImposterizerDelegate>
 {
   LRMockery *context;
   LRClassImposterizer *imposterizer;
@@ -63,6 +69,11 @@ id invocationForSelector(SEL selector)
   assertThat(handledInvocation, is(invocationForSelector(@selector(anInstanceMethod))));
 }
 
+- (BOOL)shouldActAsImposterForInvocation:(NSInvocation *)invocation
+{
+  return YES;
+}
+
 - (void)handleImposterizedInvocation:(NSInvocation *)invocation
 {
   handledInvocation = [invocation retain];
@@ -72,12 +83,14 @@ id invocationForSelector(SEL selector)
 
 #pragma mark -
 
-@interface ObjectImposterizerTest : SenTestCase
+@interface ObjectImposterizerTest : SenTestCase <LRImposterizerDelegate>
 {
   LRMockery *context;
   LRObjectImposterizer *imposterizer;
+  id objectToImposterize;
   id mockDelegate;
   NSInvocation *handledInvocation;
+  BOOL shouldHandleInvocation;
 }
 @end
 
@@ -86,7 +99,8 @@ id invocationForSelector(SEL selector)
 - (void)setUp
 {
   context = [[LRMockery mockeryForTestCase:self] retain];
-  imposterizer = [[LRObjectImposterizer alloc] initWithObject:[[MyTestClass new] autorelease]];
+  objectToImposterize = [[MyTestClass alloc] init];
+  imposterizer = [[LRObjectImposterizer alloc] initWithObject:objectToImposterize];
   imposterizer.delegate = self;
 }
 
@@ -95,10 +109,35 @@ id invocationForSelector(SEL selector)
   assertTrue([imposterizer respondsToSelector:@selector(anInstanceMethod)]);
 }
 
-- (void)testForwardMethodCallsToItsDelegate
+- (void)testForwardMethodCallsToItsDelegateWhenDelegateWantsToHandleInvocation
 {
+  shouldHandleInvocation = YES;
   [imposterizer performSelector:@selector(anInstanceMethod)];
   assertThat(handledInvocation, is(invocationForSelector(@selector(anInstanceMethod))));
+  assertThatBool([objectToImposterize receivedInstanceMethodCall], is(equalToBool(NO)));
+}
+
+- (void)testForwardMethodCallsToItsTheOriginalObjectWhenDelegateDoesNotWantsToHandleInvocation
+{
+  shouldHandleInvocation = NO;
+  [imposterizer performSelector:@selector(anInstanceMethod)];
+  assertThat(handledInvocation, is(nilValue()));
+  assertThatBool([objectToImposterize receivedInstanceMethodCall], is(equalToBool(YES)));
+}
+
+- (void)testItCanEnsureDirectMessagesToTheImposterizedObjectAreRoutedThroughTheImposterizer
+{
+  shouldHandleInvocation = YES;
+  NSInvocation *invocation = [NSInvocation invocationForSelector:@selector(anInstanceMethod) onClass:[objectToImposterize class]];
+  [imposterizer setupInvocationHandlerForImposterizedObjectForInvocation:invocation];
+  [objectToImposterize anInstanceMethod];
+  assertThat(handledInvocation, is(invocationForSelector(@selector(anInstanceMethod))));
+  assertThatBool([objectToImposterize receivedInstanceMethodCall], is(equalToBool(NO)));
+}
+
+- (BOOL)shouldActAsImposterForInvocation:(NSInvocation *)invocation
+{
+  return shouldHandleInvocation;
 }
 
 - (void)handleImposterizedInvocation:(NSInvocation *)invocation
@@ -116,7 +155,7 @@ id invocationForSelector(SEL selector)
 - (void)someOptionalMethod;
 @end
 
-@interface ProtocolImposterizerTest : SenTestCase
+@interface ProtocolImposterizerTest : SenTestCase <LRImposterizerDelegate>
 {
   LRMockery *context;
   LRProtocolImposterizer *imposterizer;
@@ -154,6 +193,11 @@ id invocationForSelector(SEL selector)
 {
   [imposterizer performSelector:@selector(someOptionalMethod)];
   assertThat(handledInvocation, is(invocationForSelector(@selector(someOptionalMethod))));
+}
+
+- (BOOL)shouldActAsImposterForInvocation:(NSInvocation *)invocation
+{
+  return YES;
 }
 
 - (void)handleImposterizedInvocation:(NSInvocation *)invocation

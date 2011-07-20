@@ -163,6 +163,20 @@
   assertContextSatisfied(context);
 }
 
+- (void)testPartialStubbingMethodOnRealObject
+{
+  LRMockery *context = mockery();
+  
+  SimpleObject *simpleObject = [[SimpleObject alloc] init];
+  
+  [context checking:^(that){
+    [stub(simpleObject) returnSomething]; andReturn(@"some return value");
+  }];
+  
+  assertThat([simpleObject returnSomething], equalTo(@"some return value"));
+  assertContextSatisfied(context);
+}
+
 - (void)testContextSatisfiedWhenStubbingMethodNotCalled
 {
   LRMockery *context = mockery();

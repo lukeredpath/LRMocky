@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LRImposterizer.h"
 
-@class LRImposterizer;
-
-@interface LRImposter : NSObject
+@interface LRImposter : NSObject <LRImposterizerDelegate>
 {
   LRImposterizer *imposterizer;
 }
