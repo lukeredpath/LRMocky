@@ -22,4 +22,5 @@
 + (id)mockForProtocol:(Protocol *)protocol inContext:(LRMockery *)mockery;
 + (id)partialMockForObject:(id)object inContext:(LRMockery *)context;
 - (id)initWithImposterizer:(LRImposterizer *)anImposterizer context:(LRMockery *)mockery;
+- (void)undoSideEffects;
 @end

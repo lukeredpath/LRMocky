@@ -82,6 +82,13 @@
   [context dispatchInvocation:invocation forMock:self];
 }
 
+- (void)undoSideEffects
+{
+  if ([imposterizer respondsToSelector:@selector(undoSideEffects)]) {
+    [imposterizer performSelector:@selector(undoSideEffects)];
+  }
+}
+
 @end
 
 @implementation LRMockery (MockObjectDispatch)

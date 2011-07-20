@@ -21,8 +21,10 @@
  */
 @interface LRMockery : NSObject {
   NSMutableArray *expectations;
+  NSMutableArray *mockObjects;
   id<LRTestCaseNotifier> testNotifier;
 }
+@property (nonatomic, assign) BOOL automaticallyResetWhenAsserting;
 
 ///------------------------------------------------------------------------------------/
 /// @name Creating and initializing 

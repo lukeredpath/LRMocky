@@ -190,6 +190,19 @@
   assertContextSatisfied(context);
 }
 
+- (void)testPartialStubsOnlyAffectTheStubbedInstance
+{
+  LRMockery *context = mockery();
+  
+  SimpleObject *simpleObject = [[SimpleObject alloc] init];
+  
+  [context checking:^(that){
+    [stub(simpleObject) returnSomething]; andReturn(@"some return value");
+  }];
+  
+  assertThat([[SimpleObject new] returnSomething], is(nilValue()));
+}
+
 - (void)testStubbingClassMethod
 {
   LRMockery *context = mockery();
@@ -201,7 +214,21 @@
   }];
   
   assertThat([SimpleObject factoryMethod], equalTo(expectedObject));  
+}
+
+- (void)testStubbedClassMethodIsRestoredAfterContextAssertSatisfied
+{
+  LRMockery *context = mockery();
+  
+  SimpleObject *expectedObject = [[SimpleObject alloc] init];
+  
+  [context checking:^(that){
+    [stub([SimpleObject class]) factoryMethod]; andReturn(expectedObject);
+  }];
+  
+  assertThat([SimpleObject factoryMethod], equalTo(expectedObject));  
   assertContextSatisfied(context);
+  assertThat([SimpleObject factoryMethod], is(nilValue()));
 }
 
 @end

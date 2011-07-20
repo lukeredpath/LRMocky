@@ -15,11 +15,15 @@
 #import "LRMockyStates.h"
 #import "LRExpectationMessage.h"
 
+#define addMock(mock) [self addAndReturnMock:mock];
+
 @interface LRMockery ()
 - (void)assertSatisfiedInFile:(NSString *)fileName lineNumber:(int)lineNumber;
 @end
 
 @implementation LRMockery
+
+@synthesize automaticallyResetWhenAsserting;
 
 + (id)mockeryForTestCase:(id)testCase;
 {
@@ -38,20 +42,32 @@
   if (self = [super init]) {
     testNotifier = [aNotifier retain];
     expectations = [[NSMutableArray alloc] init];
+    mockObjects  = [[NSMutableArray alloc] init];
+    automaticallyResetWhenAsserting = YES;
   }
   return self;
 }
 
 - (void)dealloc;
 {
+  for (LRMockObject *mock in mockObjects) {
+    [mock undoSideEffects];
+  }
+  [mockObjects release];
   [testNotifier release];
   [expectations release];
   [super dealloc];
 }
 
+- (id)addAndReturnMock:(id)mock
+{
+  [mockObjects addObject:mock];
+  return mock;
+}
+
 - (id)mock:(Class)klass;
 {
-  return [LRMockObject mockForClass:klass inContext:self]; 
+  return addMock([LRMockObject mockForClass:klass inContext:self]);
 }
 
 - (id)mock:(Class)klass named:(NSString *)name;
@@ -63,12 +79,12 @@
 
 - (id)protocolMock:(Protocol *)protocol;
 {
-  return [LRMockObject mockForProtocol:protocol inContext:self];
+  return addMock([LRMockObject mockForProtocol:protocol inContext:self]);
 }
 
 - (id)partialMockForObject:(id)object
 {
-  return [LRMockObject partialMockForObject:object inContext:self];
+  return addMock([LRMockObject partialMockForObject:object inContext:self]);
 }
 
 - (void)expectNotificationNamed:(NSString *)name;
@@ -116,6 +132,9 @@ NSString *failureFor(id<LRDescribable> expectation) {
       [testNotifier notifiesFailureWithDescription:failureFor(expectation) inFile:fileName lineNumber:lineNumber];
     }
   }
+  if (self.automaticallyResetWhenAsserting) {
+    [self reset];
+  }
 }
 
 - (void)addExpectation:(id<LRExpectation>)expectation;
@@ -125,6 +144,9 @@ NSString *failureFor(id<LRDescribable> expectation) {
 
 - (void)reset;
 {
+  for (LRMockObject *mock in mockObjects) {
+    [mock undoSideEffects];
+  }
   [expectations removeAllObjects];
 }
 

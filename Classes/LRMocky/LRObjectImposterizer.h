@@ -11,7 +11,10 @@
 
 @interface LRObjectImposterizer : LRImposterizer {
   id objectToImposterize;
+  Method originalClassMethod;
+  NSInvocation *imposterizedInvocation;
 }
 - (id)initWithObject:(id)object;
 - (void)setupInvocationHandlerForImposterizedObjectForInvocation:(NSInvocation *)invocation;
+- (void)undoSideEffects;
 @end

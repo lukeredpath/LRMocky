@@ -11,6 +11,10 @@
 
 #define kOBJECT_IMPOSTERIZER_ASSOCIATION_KEY "_mockyCurrentImposterizer"
 
+@interface LRObjectImposterizer ()
+- (void)removeInvocationHandlerForImposterizedClass;
+@end
+
 @implementation LRObjectImposterizer
 
 - (id)initWithObject:(id)object;
@@ -33,9 +37,15 @@
 
 - (void)dealloc
 {
-  objc_setAssociatedObject(objectToImposterize, kOBJECT_IMPOSTERIZER_ASSOCIATION_KEY, nil, OBJC_ASSOCIATION_ASSIGN);
+  [imposterizedInvocation release];
   [objectToImposterize release];
   [super dealloc];
+}
+
+- (void)undoSideEffects
+{
+  [self removeInvocationHandlerForImposterizedClass];
+  objc_setAssociatedObject(objectToImposterize, kOBJECT_IMPOSTERIZER_ASSOCIATION_KEY, nil, OBJC_ASSOCIATION_ASSIGN); 
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)sel
@@ -45,6 +55,9 @@
 
 - (BOOL)respondsToSelector:(SEL)aSelector
 {
+  if ([super respondsToSelector:aSelector]) {
+    return YES;
+  }
   return [objectToImposterize respondsToSelector:aSelector];
 }
 
@@ -62,6 +75,8 @@
 {
   Class metaclass = object_getClass(objectToImposterize);
   
+  imposterizedInvocation = [invocation retain];
+  
   // configure it's forwardInvocation: method to delegate to the imposterizer
 	Method forwardInvocationMethod = class_getInstanceMethod([self class], @selector(forwardInvocationForRealObject:));
 	IMP forwardInvocationImp = method_getImplementation(forwardInvocationMethod);
@@ -69,12 +84,19 @@
 	class_addMethod(metaclass, @selector(forwardInvocation:), forwardInvocationImp, forwardInvocationTypes);
   
   // ensure that calls to the stubbed selector are handled by forwardInvocation:
-	Method originalMethod = class_getInstanceMethod(metaclass, invocation.selector);
+	originalClassMethod = class_getInstanceMethod(metaclass, invocation.selector);
 	IMP forwarderImp = [metaclass instanceMethodForSelector:@selector(__MOCKY_SELECTOR_THAT_WILL_NOT_EXIST)];
-  class_replaceMethod(metaclass, invocation.selector, forwarderImp, method_getTypeEncoding(originalMethod));
+  class_replaceMethod(metaclass, invocation.selector, forwarderImp, method_getTypeEncoding(originalClassMethod));
   
   // finally, we need a way to get the imposterizer from the imposterized object
   objc_setAssociatedObject(objectToImposterize, kOBJECT_IMPOSTERIZER_ASSOCIATION_KEY, self, OBJC_ASSOCIATION_ASSIGN);
+}
+
+- (void)removeInvocationHandlerForImposterizedClass
+{
+  Class metaclass = object_getClass(objectToImposterize);
+  class_replaceMethod(metaclass, imposterizedInvocation.selector, 
+    method_getImplementation(originalClassMethod), method_getTypeEncoding(originalClassMethod));
 }
 
 /* swap the class of the imposterized object to a dynamic subclass that forwards stubbed invocations
