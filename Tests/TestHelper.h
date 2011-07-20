@@ -27,6 +27,7 @@
 
 @interface SimpleObject : NSObject
 {}
++ (id)factoryMethod;
 - (void)doSomething;
 - (void)doSomethingElse;
 - (id)returnSomething;

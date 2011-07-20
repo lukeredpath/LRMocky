@@ -190,4 +190,18 @@
   assertContextSatisfied(context);
 }
 
+- (void)testStubbingClassMethod
+{
+  LRMockery *context = mockery();
+  
+  SimpleObject *expectedObject = [[SimpleObject alloc] init];
+  
+  [context checking:^(that){
+    [stub([SimpleObject class]) factoryMethod]; andReturn(expectedObject);
+  }];
+  
+  assertThat([SimpleObject factoryMethod], equalTo(expectedObject));  
+  assertContextSatisfied(context);
+}
+
 @end

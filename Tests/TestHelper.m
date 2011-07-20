@@ -69,6 +69,7 @@
 @end
 
 @implementation SimpleObject; 
++ (id)factoryMethod { return nil; };
 - (void)doSomething {}
 - (void)doSomethingElse {}
 - (id)returnSomething { return nil; }

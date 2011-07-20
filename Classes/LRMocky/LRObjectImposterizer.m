@@ -33,6 +33,7 @@
 
 - (void)dealloc
 {
+  objc_setAssociatedObject(objectToImposterize, kOBJECT_IMPOSTERIZER_ASSOCIATION_KEY, nil, OBJC_ASSOCIATION_ASSIGN);
   [objectToImposterize release];
   [super dealloc];
 }
@@ -57,13 +58,35 @@
   return [NSString stringWithFormat:@"forObject:%@", objectToImposterize];
 }
 
+- (void)setupInvocationHandlerForImposterizedClassForInvocation:(NSInvocation *)invocation
+{
+  Class metaclass = object_getClass(objectToImposterize);
+  
+  // configure it's forwardInvocation: method to delegate to the imposterizer
+	Method forwardInvocationMethod = class_getInstanceMethod([self class], @selector(forwardInvocationForRealObject:));
+	IMP forwardInvocationImp = method_getImplementation(forwardInvocationMethod);
+	const char *forwardInvocationTypes = method_getTypeEncoding(forwardInvocationMethod);
+	class_addMethod(metaclass, @selector(forwardInvocation:), forwardInvocationImp, forwardInvocationTypes);
+  
+  // ensure that calls to the stubbed selector are handled by forwardInvocation:
+	Method originalMethod = class_getInstanceMethod(metaclass, invocation.selector);
+	IMP forwarderImp = [metaclass instanceMethodForSelector:@selector(__MOCKY_SELECTOR_THAT_WILL_NOT_EXIST)];
+  class_replaceMethod(metaclass, invocation.selector, forwarderImp, method_getTypeEncoding(originalMethod));
+  
+  // finally, we need a way to get the imposterizer from the imposterized object
+  objc_setAssociatedObject(objectToImposterize, kOBJECT_IMPOSTERIZER_ASSOCIATION_KEY, self, OBJC_ASSOCIATION_ASSIGN);
+}
+
 /* swap the class of the imposterized object to a dynamic subclass that forwards stubbed invocations
     back to the imposterizer. This technique is borrowed entirely from OCMock */
 
 - (void)setupInvocationHandlerForImposterizedObjectForInvocation:(NSInvocation *)invocation
 {  
-  // create a subclass of the imposterized object
+  if (class_isMetaClass(object_getClass(objectToImposterize))) { // it's a class!
+    return [self setupInvocationHandlerForImposterizedClassForInvocation:invocation];
+  }
   
+  // create a subclass of the imposterized object
   Class realClass = [objectToImposterize class];
 	double timestamp = [NSDate timeIntervalSinceReferenceDate];
 	const char *className = [[NSString stringWithFormat:@"%@-Imposterizer-%p-%f", realClass, objectToImposterize, timestamp] cString]; 
@@ -72,14 +95,12 @@
 	object_setClass(objectToImposterize, subclass);
   
   // configure it's forwardInvocation: method to delegate to the imposterizer
-  
 	Method forwardInvocationMethod = class_getInstanceMethod([self class], @selector(forwardInvocationForRealObject:));
 	IMP forwardInvocationImp = method_getImplementation(forwardInvocationMethod);
 	const char *forwardInvocationTypes = method_getTypeEncoding(forwardInvocationMethod);
 	class_addMethod(subclass, @selector(forwardInvocation:), forwardInvocationImp, forwardInvocationTypes);
   
   // ensure that calls to the stubbed selector are handled by forwardInvocation:
-  
   Class dynamicSubclass = [objectToImposterize class]; 
 	Method originalMethod = class_getInstanceMethod(dynamicSubclass, invocation.selector);
 	IMP forwarderImp = [subclass instanceMethodForSelector:@selector(__MOCKY_SELECTOR_THAT_WILL_NOT_EXIST)];
