@@ -83,6 +83,10 @@
  */
 - (id)mock:(Class)klass named:(NSString *)name;
 
+- (id)mock;
+
+- (id)mockNamed:(NSString *)name;
+
 /** Creates a new protocol mock object.
  
  Similar to a class mock, but protocol mocks only represent an object that implements

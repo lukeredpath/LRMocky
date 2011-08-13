@@ -77,6 +77,16 @@
   return mock;
 }
 
+- (id)mock
+{
+  return [self mock:[NSObject class]];
+}
+
+- (id)mockNamed:(NSString *)name
+{
+  return [self mock:[NSObject class] named:name];
+}
+
 - (id)protocolMock:(Protocol *)protocol;
 {
   return addMock([LRMockObject mockForProtocol:protocol inContext:self]);
