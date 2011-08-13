@@ -152,7 +152,7 @@
   id mockArray = [context mock:[NSArray class]];
  
   [context checking:^(LRExpectationBuilder *builder) {
-    [oneOf(mockArray) indexesOfObjectsPassingTest:with(anything())];
+    [oneOf(mockArray) indexesOfObjectsPassingTest:anyBlock()];
   }];
   
   [(NSArray *)mockArray indexesOfObjectsPassingTest:^(id object, NSUInteger idx, BOOL *stop) { return YES; }];
@@ -161,7 +161,7 @@
 - (void)testCanExpectMethodCallsWithBlockArgumentsWithObjectAndPass;
 {
   [context checking:^(LRExpectationBuilder *builder) {
-    [oneOf(testObject) doSomethingWithBlockThatYields:with(anything())]; andThen(performBlockArgumentsWithObject(@"some string"));
+    [oneOf(testObject) doSomethingWithBlockThatYields:anyBlock()]; andThen(performBlockArgumentsWithObject(@"some string"));
   }];
   
   [testObject doSomethingWithBlockThatYields:^(id object) {

@@ -8,6 +8,7 @@
 
 #import "LRInvocationComparitor.h"
 #import "NSInvocation+OCMAdditions.h"
+#import "HCMatcher.h"
 
 @implementation LRInvocationComparitor
 
@@ -39,7 +40,14 @@
   for (int i = 2; i < [methodSignature numberOfArguments]; i++) {
     id expected = [expectedInvocation getArgumentAtIndexAsObject:i];
     id received = [invocation getArgumentAtIndexAsObject:i];
-    matchesParameters = [expected isEqual:received];
+
+    if ([expected conformsToProtocol:@protocol(HCMatcher)]) {
+      id<HCMatcher> matcher = expected;
+      matchesParameters = [matcher matches:received];
+    }
+    else {
+      matchesParameters = [expected isEqual:received]; 
+    }
   }
   return matchesParameters;
 }

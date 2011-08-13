@@ -31,8 +31,8 @@
 - (void)testCanExpectTheSameMethodWithDifferentArgumentsUsingMatchers
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(testObject) doSomethingWithObject:with(equalTo(@"foo"))];
-    [oneOf(testObject) doSomethingWithObject:with(equalTo(@"bar"))];
+    [oneOf(testObject) doSomethingWithObject:equalTo(@"foo")];
+    [oneOf(testObject) doSomethingWithObject:equalTo(@"bar")];
   }];
   
   [testObject doSomethingWithObject:@"foo"];

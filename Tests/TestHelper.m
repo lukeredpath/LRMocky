@@ -177,3 +177,8 @@ void LRM_assertContextNotSatisfied(LRMockery *context, NSString *fileName, int l
 {
   [context assertNotSatisfiedInFile:fileName lineNumber:lineNumber];
 }
+
+void *anyBlock()
+{
+  return anything();
+}

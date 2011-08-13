@@ -58,3 +58,5 @@ void LR_assertNothingRaisedWithLocation(void (^block)(void), SenTestCase *testCa
 void LRM_assertContextNotSatisfied(LRMockery *context, NSString *fileName, int lineNumber);
 #define assertContextNotSatisfied(context) LRM_assertContextNotSatisfied(context, [NSString stringWithUTF8String:__FILE__], __LINE__)
 
+void *anyBlock();
+

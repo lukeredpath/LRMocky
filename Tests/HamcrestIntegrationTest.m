@@ -17,19 +17,19 @@
 - (void)testCanExpectInvocationWithEqualObjectAndPass
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(testObject) doSomethingWithObject:with(equalTo(@"foo"))];
+    [oneOf(testObject) doSomethingWithObject:equalTo(@"foo")];
   }];
   
   [testObject doSomethingWithObject:@"foo"];
   assertContextSatisfied(context);
-  
+
   assertThat(testCase, passed());
 }
 
 - (void)testCanExpectInvocationWithEqualObjectAndFail
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(testObject) doSomethingWithObject:with(equalTo(@"foo"))];
+    [oneOf(testObject) doSomethingWithObject:equalTo(@"foo")];
   }];
   
   [testObject doSomethingWithObject:@"bar"];
@@ -42,7 +42,7 @@
 - (void)testCanExpectInvocationWithStringWithPrefixAndPass
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(testObject) doSomethingWithObject:with(startsWith(@"foo"))];
+    [oneOf(testObject) doSomethingWithObject:startsWith(@"foo")];
   }];
   
   [testObject doSomethingWithObject:@"foo"];
@@ -54,7 +54,7 @@
 - (void)testCanExpectInvocationWithStringWithPrefixAndFail
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(testObject) doSomethingWithObject:with(startsWith(@"foo"))];
+    [oneOf(testObject) doSomethingWithObject:startsWith(@"foo")];
   }];
   
   [testObject doSomethingWithObject:@"bar foo"];
@@ -69,7 +69,7 @@
   SimpleObject *dummy = [[SimpleObject alloc] init];
 
   [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(testObject) doSomethingWithObject:with(sameInstance(dummy))];
+    [oneOf(testObject) doSomethingWithObject:sameInstance(dummy)];
   }];
   
   [testObject doSomethingWithObject:dummy];
@@ -83,7 +83,7 @@
   SimpleObject *dummy = [[SimpleObject alloc] init];
 
   [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(testObject) doSomethingWithObject:with(sameInstance(dummy))];
+    [oneOf(testObject) doSomethingWithObject:sameInstance(dummy)];
   }];
   
   SimpleObject *other = [[[SimpleObject alloc] init] autorelease];

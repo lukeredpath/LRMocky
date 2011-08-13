@@ -9,7 +9,6 @@
 // base classes
 #import "LRMockery.h"
 #import "LRExpectationBuilder.h"
-#import "LRHamcrestParameterAdapter.h"
 
 // actions
 #import "LRReturnValueAction.h"

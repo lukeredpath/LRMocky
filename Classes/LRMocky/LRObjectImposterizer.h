@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "LRImposterizer.h"
+#import <objc/runtime.h>
 
 @interface LRObjectImposterizer : LRImposterizer {
   id objectToImposterize;

@@ -70,7 +70,7 @@
 - (void)testCanConstraintExpectationsToStatesTriggeredByBlocks
 {
   [context checking:^(that){
-    [allowing(testObject) doSomethingWithBlock:with(anything())]; then([readiness becomes:@"ready"]); andThen(performBlockArguments);
+    [allowing(testObject) doSomethingWithBlock:anyBlock()]; then([readiness becomes:@"ready"]); andThen(performBlockArguments);
     [oneOf(testObject) doSomething]; when([readiness hasBecome:@"ready"]);
   }];
   

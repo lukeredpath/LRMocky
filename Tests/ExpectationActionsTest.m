@@ -107,7 +107,7 @@
   __block NSString *someString = nil;
   
   [context checking:^(LRExpectationBuilder *builder) {
-    [oneOf(mockArray) indexesOfObjectsPassingTest:with(anything())]; andThen(performBlockArguments);
+    [oneOf(mockArray) indexesOfObjectsPassingTest:anyBlock()]; andThen(performBlockArguments);
   }];
   
   [(NSArray *)mockArray indexesOfObjectsPassingTest:^(id object, NSUInteger idx, BOOL *stop) { 
