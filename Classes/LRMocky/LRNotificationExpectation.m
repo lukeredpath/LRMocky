@@ -8,6 +8,7 @@
 
 #import "LRNotificationExpectation.h"
 #import "LRExpectationMessage.h"
+#import "HCMatcher.h"
 
 @implementation LRNotificationExpectation
 
@@ -28,18 +29,30 @@
     name = [notificationName copy];
     sender = [object retain];
     
+    id notificationObject = sender;
+    
+    if ([sender conformsToProtocol:@protocol(HCMatcher)]) {
+      notificationObject = nil;
+    }
+    
     [[NSNotificationCenter defaultCenter] 
         addObserver:self 
            selector:@selector(receiveNotification:) 
                name:name 
-             object:sender];
+             object:notificationObject];
   }
   return self;
 }
 
 - (void)receiveNotification:(NSNotification *)note
 {
-  isSatisfied = YES;
+  if ([sender conformsToProtocol:@protocol(HCMatcher)]) {
+    id<HCMatcher> matcher = sender;
+    isSatisfied = [matcher matches:note.object];
+  }
+  else {
+    isSatisfied = YES;
+  }
 }
 
 - (void)dealloc
