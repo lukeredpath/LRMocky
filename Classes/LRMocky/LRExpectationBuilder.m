@@ -13,7 +13,6 @@
 #import "LRExpectationCardinality.h"
 #import "LRMockyStates.h"
 #import "LRObjectImposterizer.h"
-#import "LRHamcrestParameterAdapter.h"
 #import "NSInvocation+OCMAdditions.h"
 
 @interface LRExpectationBuilder ()

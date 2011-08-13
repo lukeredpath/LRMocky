@@ -11,7 +11,6 @@
 #import "LRImposter.h"
 #import "LRClassImposterizer.h"
 #define LRMOCKY_SHORTHAND
-#import "LRHamcrestParameterAdapter.h"
 
 @interface InvocationTesterObject : NSObject
 - (id)takesAnObject:(id)object;
@@ -103,7 +102,7 @@
 
 - (void)testCanCompareParametersThatUseObjectMatchers
 {
-  NSInvocation *expected = [[capture takesAnObject:with(hasItem(@"foo"))] invocation];
+  NSInvocation *expected = [[capture takesAnObject:hasItem(@"foo")] invocation];
   LRInvocationComparitor *comparitor = [LRInvocationComparitor comparitorForInvocation:expected];
   
   assertTrue([comparitor matchesParameters:[[capture takesAnObject:[NSArray arrayWithObject:@"foo"]] invocation]]);
