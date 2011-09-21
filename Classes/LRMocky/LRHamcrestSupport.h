@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (LRHamcrestSupport)
-
+@interface NSObject (LRHamcrestCompileSupport)
+- (BOOL)matches:(id)object;
 @end

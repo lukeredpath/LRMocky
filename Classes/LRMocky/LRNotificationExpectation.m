@@ -8,7 +8,8 @@
 
 #import "LRNotificationExpectation.h"
 #import "LRExpectationMessage.h"
-#import "HCMatcher.h"
+#import "LRHamcrestSupport.h"
+
 
 @implementation LRNotificationExpectation
 
@@ -31,7 +32,7 @@
     
     id notificationObject = sender;
     
-    if ([sender conformsToProtocol:@protocol(HCMatcher)]) {
+    if ([sender conformsToProtocol:NSProtocolFromString(@"HCMatcher")]) {
       notificationObject = nil;
     }
     
@@ -46,9 +47,8 @@
 
 - (void)receiveNotification:(NSNotification *)note
 {
-  if ([sender conformsToProtocol:@protocol(HCMatcher)]) {
-    id<HCMatcher> matcher = sender;
-    isSatisfied = [matcher matches:note.object];
+  if ([sender conformsToProtocol:NSProtocolFromString(@"HCMatcher")]) {
+    isSatisfied = [sender matches:note.object];
   }
   else {
     isSatisfied = YES;
