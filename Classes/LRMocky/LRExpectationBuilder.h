@@ -52,4 +52,5 @@
 #define then(state)         [builder shouldTransitionToState:state]
 #define when(state)         [builder requiresState:state];
 #define stub(arg)           [builder allowing:arg] 
+#define matching(matcher)   (id)matcher
 #endif

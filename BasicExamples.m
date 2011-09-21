@@ -90,7 +90,7 @@
   id myMockString = [context mock:[NSString class] named:@"My Mock String"];
   
   [context checking:^(that){
-    [[oneOf(myMockString) receives] stringByAppendingString:withObjectThat(startsWith(@"super"))];
+    [[oneOf(myMockString) receives] stringByAppendingString:matching(startsWith(@"super"))];
   }];
   
   [myMockString stringByAppendingString:@"super"];
@@ -105,7 +105,7 @@
   id myMockString = [context mock:[NSString class] named:@"My Mock String"];
   
   [context checking:^(that){
-    [[oneOf(myMockString) receives] stringByAppendingString:withObjectThat(startsWith(@"super"))];
+    [[oneOf(myMockString) receives] stringByAppendingString:matching(startsWith(@"super"))];
   }];
   
   [myMockString stringByAppendingString:@"not super"];
