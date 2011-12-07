@@ -8,6 +8,7 @@
 *.perspective
 *.perspectivev3
 *.pbxuser
+*.xcodeproj/xcuserdata
 *.xcodeproj/project.xcworkspace/xcuserdata/*.xcuserdatad/*.xcuserstate
 
 docs/generated
