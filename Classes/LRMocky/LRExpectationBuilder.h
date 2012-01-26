@@ -39,7 +39,6 @@
 #ifdef LRMOCKY_SUGAR
 #define mockery()           [LRMockery mockeryForTestCase:self]
 #define that                LRExpectationBuilder *builder
-#define it                  builder
 #define andThen(action)     [builder will:action]
 #define andReturn(object)   [builder will:returnsObject(object)];
 #define oneOf(arg)          [builder oneOf:arg]
@@ -53,4 +52,8 @@
 #define when(state)         [builder requiresState:state];
 #define stub(arg)           [builder allowing:arg] 
 #define matching(matcher)   (id)matcher
+#endif
+
+#ifndef LRMOCKY_KIWI_COMPATIBILITY_MODE
+#define it                  builder
 #endif
