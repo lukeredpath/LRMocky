@@ -1,2 +1,5 @@
 platform :ios
-dependency 'OCHamcrest', '~> 1.6'
+
+target :tests, :exclusive => true do
+  dependency 'OCHamcrest', '~> 1.6'
+end

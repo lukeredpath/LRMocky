@@ -24,6 +24,10 @@
 		A30176AC11FDEEFC004828C5 /* LRTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = A301769811FDEEFC004828C5 /* LRTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A30176AD11FDEEFC004828C5 /* LRTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769911FDEEFC004828C5 /* LRTestCase.m */; };
 		A30176AF11FDEEFC004828C5 /* LRUnexpectedInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769B11FDEEFC004828C5 /* LRUnexpectedInvocation.m */; };
+		A31562FE150434C0006949E6 /* libPods-tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31562FD150434C0006949E6 /* libPods-tests.a */; };
+		A3156300150434C4006949E6 /* libPods-tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31562FF150434C4006949E6 /* libPods-tests.a */; };
+		A3156301150434D5006949E6 /* HCBlockMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A36F415314296449004EAA45 /* HCBlockMatcher.m */; };
+		A3156302150434D6006949E6 /* HCBlockMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A36F415314296449004EAA45 /* HCBlockMatcher.m */; };
 		A3289A3C122C73B100D89A88 /* LRNotificationExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = A3289A3A122C73B100D89A88 /* LRNotificationExpectation.h */; };
 		A3289A3D122C73B100D89A88 /* LRNotificationExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3289A3B122C73B100D89A88 /* LRNotificationExpectation.m */; };
 		A3289A56122C746500D89A88 /* NotificationExpectationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3289A53122C744700D89A88 /* NotificationExpectationTests.m */; };
@@ -41,7 +45,6 @@
 		A35D65BD11FF2DE800F0C310 /* LRInvocationComparitorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D65B611FF2C3F00F0C310 /* LRInvocationComparitorTest.m */; };
 		A35D65BE11FF2DF300F0C310 /* LRInvocationComparitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D65BA11FF2C6C00F0C310 /* LRInvocationComparitor.m */; };
 		A35D667C11FF508B00F0C310 /* CardinalityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D667B11FF508B00F0C310 /* CardinalityTests.m */; };
-		A369D0401503EE0E00A8D56B /* HCBlockMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A36F415314296449004EAA45 /* HCBlockMatcher.m */; };
 		A36F414B142962C4004EAA45 /* LRHamcrestSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = A36F414A142962C4004EAA45 /* LRHamcrestSupport.h */; };
 		A381A1FA12243BE900FA2A5C /* LRExpectationAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A301768911FDEEFC004828C5 /* LRExpectationAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A381A1FB12243BF200FA2A5C /* LRDescribable.h in Headers */ = {isa = PBXBuildFile; fileRef = A391557A11FF670500FE7C49 /* LRDescribable.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -85,7 +88,6 @@
 		A3EE4F5911FF1C10002DA61D /* FunctionalMockeryTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F5811FF1C0F002DA61D /* FunctionalMockeryTestCase.m */; };
 		AA747D9F0F9514B9006C5449 /* Mocky_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* Mocky_Prefix.pch */; settings = {ATTRIBUTES = (); }; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
-		FAD7F9DDC6C3428C83ED400A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0320E4B8467A449C9250B972 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,7 +109,6 @@
 
 /* Begin PBXFileReference section */
 		0320E4B8467A449C9250B972 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		868A0B8230F44A779E869FC4 /* Pods.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		A301767511FDEB9C004828C5 /* LRMocky.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMocky.h; sourceTree = "<group>"; };
 		A301768811FDEEFC004828C5 /* LRExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectation.h; sourceTree = "<group>"; };
 		A301768911FDEEFC004828C5 /* LRExpectationAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectationAction.h; sourceTree = "<group>"; };
@@ -129,6 +130,9 @@
 		A301769911FDEEFC004828C5 /* LRTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRTestCase.m; sourceTree = "<group>"; };
 		A301769A11FDEEFC004828C5 /* LRUnexpectedInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRUnexpectedInvocation.h; sourceTree = "<group>"; };
 		A301769B11FDEEFC004828C5 /* LRUnexpectedInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRUnexpectedInvocation.m; sourceTree = "<group>"; };
+		A31562FC150434B4006949E6 /* Pods-tests.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-tests.xcconfig"; path = "Pods/Pods-tests.xcconfig"; sourceTree = "<group>"; };
+		A31562FD150434C0006949E6 /* libPods-tests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-tests.a"; path = "Pods/build/Release-iphoneos/libPods-tests.a"; sourceTree = "<group>"; };
+		A31562FF150434C4006949E6 /* libPods-tests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-tests.a"; path = "Pods/build/Release-iphoneos/libPods-tests.a"; sourceTree = "<group>"; };
 		A3289A3A122C73B100D89A88 /* LRNotificationExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRNotificationExpectation.h; sourceTree = "<group>"; };
 		A3289A3B122C73B100D89A88 /* LRNotificationExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRNotificationExpectation.m; sourceTree = "<group>"; };
 		A3289A53122C744700D89A88 /* NotificationExpectationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationExpectationTests.m; sourceTree = "<group>"; };
@@ -201,6 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A31562FE150434C0006949E6 /* libPods-tests.a in Frameworks */,
 				A3464E8911F279270080B46B /* libMocky.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +214,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3156300150434C4006949E6 /* libPods-tests.a in Frameworks */,
 				A340492D11FFBC4D0092E4C6 /* libMocky.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,7 +224,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
-				FAD7F9DDC6C3428C83ED400A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +250,7 @@
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
-				868A0B8230F44A779E869FC4 /* Pods.xcconfig */,
+				A31562FB150434A1006949E6 /* Pods Support */,
 			);
 			name = LRMiniTestKit;
 			sourceTree = "<group>";
@@ -348,11 +353,20 @@
 				A32E0C6012070555009B4C81 /* NSException_SenTestFailure.h */,
 				A39155B611FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h */,
 				A39155B711FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m */,
-				A381A2F012244DC400FA2A5C /* Hamcrest-Extensions */,
 				A38AFFC3122BFD020001D038 /* NSInvocation+LRAdditions.h */,
 				A38AFFC4122BFD020001D038 /* NSInvocation+LRAdditions.m */,
 			);
 			path = Vendor;
+			sourceTree = "<group>";
+		};
+		A31562FB150434A1006949E6 /* Pods Support */ = {
+			isa = PBXGroup;
+			children = (
+				A31562FF150434C4006949E6 /* libPods-tests.a */,
+				A31562FD150434C0006949E6 /* libPods-tests.a */,
+				A31562FC150434B4006949E6 /* Pods-tests.xcconfig */,
+			);
+			name = "Pods Support";
 			sourceTree = "<group>";
 		};
 		A32E0C5C12070477009B4C81 /* Integration */ = {
@@ -416,6 +430,7 @@
 		A346500311F293810080B46B /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				A381A2F012244DC400FA2A5C /* Hamcrest-Extensions */,
 				A3EE4F5711FF1C0F002DA61D /* FunctionalMockeryTestCase.h */,
 				A3EE4F5811FF1C0F002DA61D /* FunctionalMockeryTestCase.m */,
 				A346500011F2937D0080B46B /* TestHelper.h */,
@@ -446,6 +461,7 @@
 				A36F415314296449004EAA45 /* HCBlockMatcher.m */,
 			);
 			name = "Hamcrest-Extensions";
+			path = ../Vendor;
 			sourceTree = "<group>";
 		};
 		A3943E0911FFBB99007FE700 /* Examples */ = {
@@ -616,7 +632,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "";
+			showEnvVarsInLog = 0;
 		};
 		A3464E7C11F279020080B46B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -666,6 +683,7 @@
 				A381A25312243FAC00FA2A5C /* ProtocolMockTests.m in Sources */,
 				A381A2611224410A00FA2A5C /* ImposterizerTest.m in Sources */,
 				A3289A56122C746500D89A88 /* NotificationExpectationTests.m in Sources */,
+				A3156301150434D5006949E6 /* HCBlockMatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,6 +693,7 @@
 			files = (
 				A3943E0B11FFBBAB007FE700 /* BasicExamples.m in Sources */,
 				A398EEF413D1F759005C26AA /* TestHelper.m in Sources */,
+				A3156302150434D6006949E6 /* HCBlockMatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,7 +727,6 @@
 				A38AFDFC122BEC2E0001D038 /* LRPerformBlockArgumentAction.m in Sources */,
 				A38AFFC6122BFD020001D038 /* NSInvocation+LRAdditions.m in Sources */,
 				A3289A3D122C73B100D89A88 /* LRNotificationExpectation.m in Sources */,
-				A369D0401503EE0E00A8D56B /* HCBlockMatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,7 +748,6 @@
 /* Begin XCBuildConfiguration section */
 		1DEB921F08733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 868A0B8230F44A779E869FC4 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
@@ -755,7 +772,6 @@
 		};
 		1DEB922008733DC00010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 868A0B8230F44A779E869FC4 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
@@ -806,7 +822,7 @@
 		};
 		A3464E8011F279030080B46B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 868A0B8230F44A779E869FC4 /* Pods.xcconfig */;
+			baseConfigurationReference = A31562FC150434B4006949E6 /* Pods-tests.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -838,7 +854,6 @@
 		};
 		A3464E8111F279030080B46B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 868A0B8230F44A779E869FC4 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -870,7 +885,7 @@
 		};
 		A36FDBB611FFBB6F004A08F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 868A0B8230F44A779E869FC4 /* Pods.xcconfig */;
+			baseConfigurationReference = A31562FC150434B4006949E6 /* Pods-tests.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -904,7 +919,6 @@
 		};
 		A36FDBB711FFBB6F004A08F4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 868A0B8230F44A779E869FC4 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
