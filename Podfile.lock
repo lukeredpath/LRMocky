@@ -1,0 +1,5 @@
+PODS:
+  - OCHamcrest (1.6)
+
+DEPENDENCIES:
+  - OCHamcrest (~> 1.6)
