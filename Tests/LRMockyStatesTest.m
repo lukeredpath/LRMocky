@@ -22,7 +22,7 @@
 
 id<HCMatcher> isInState(LRMockyState *state)
 {
-  NSInvocation *invocation   = [HCInvocationMatcher createInvocationForSelector:@selector(currentState) onClass:[LRMockyStateMachine class]];
+  NSInvocation *invocation   = [HCInvocationMatcher invocationForSelector:@selector(currentState) onClass:[LRMockyStateMachine class]];
   return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:equalTo(state)] autorelease];
 }
 

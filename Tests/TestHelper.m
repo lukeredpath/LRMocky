@@ -87,7 +87,7 @@
 
 id<HCMatcher> isExceptionOfType(id<HCMatcher>nameMatcher)
 {
-  NSInvocation *nameInvocation = [HCInvocationMatcher createInvocationForSelector:@selector(name) onClass:[NSException class]];
+  NSInvocation *nameInvocation = [HCInvocationMatcher invocationForSelector:@selector(name) onClass:[NSException class]];
   
   return [[[HCInvocationMatcher alloc] initWithInvocation:nameInvocation matching:nameMatcher] autorelease];
 }
@@ -95,7 +95,7 @@ id<HCMatcher> isExceptionOfType(id<HCMatcher>nameMatcher)
 id<HCMatcher> exceptionWithDescription(id<HCMatcher> descriptionMatcher)
 {
   NSInvocation *descInvocation = [HCInvocationMatcher 
-    createInvocationForSelector:@selector(description) onClass:[NSException class]];
+    invocationForSelector:@selector(description) onClass:[NSException class]];
 
   return [[[HCInvocationMatcher alloc] initWithInvocation:descInvocation matching:descriptionMatcher] autorelease];
 }
@@ -108,20 +108,20 @@ id<HCMatcher> isExceptionOfTypeWithDescription(id<HCMatcher>nameMatcher, id<HCMa
 id<HCMatcher> passed()
 {
   id<HCMatcher> valueMatcher = [HCIsEqual isEqualTo:[NSNumber numberWithInt:0]];
-  NSInvocation *invocation   = [HCInvocationMatcher createInvocationForSelector:@selector(numberOfFailuresAsNumber) onClass:[FakeTestCase class]];
+  NSInvocation *invocation   = [HCInvocationMatcher invocationForSelector:@selector(numberOfFailuresAsNumber) onClass:[FakeTestCase class]];
   return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:valueMatcher] autorelease];
 }
 
 id<HCMatcher> failedWithNumberOfFailures(int numberOfFailures)
 {
   id<HCMatcher> valueMatcher = [HCIsEqual isEqualTo:[NSNumber numberWithInt:numberOfFailures]];
-  NSInvocation *invocation   = [HCInvocationMatcher createInvocationForSelector:@selector(numberOfFailuresAsNumber) onClass:[FakeTestCase class]];
+  NSInvocation *invocation   = [HCInvocationMatcher invocationForSelector:@selector(numberOfFailuresAsNumber) onClass:[FakeTestCase class]];
   return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:valueMatcher] autorelease];
 }
 
 id<HCMatcher> failedWithExpectationError(NSString *errorDescription)
 {
-  NSInvocation *invocation   = [HCInvocationMatcher createInvocationForSelector:@selector(failures) onClass:[FakeTestCase class]];
+  NSInvocation *invocation   = [HCInvocationMatcher invocationForSelector:@selector(failures) onClass:[FakeTestCase class]];
   return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:hasItem(exceptionWithDescription(containsString(errorDescription)))] autorelease];
 }
 

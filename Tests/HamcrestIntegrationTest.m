@@ -91,7 +91,7 @@
   assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomethingWithObject: with(sameInstance(<%@>)) exactly(1) times but received it 0 times.", testObject, dummy, other]));
+    @"Expected %@ to receive doSomethingWithObject: with(same instance as 0x%0x %@) exactly(1) times but received it 0 times.", testObject, dummy, dummy, other]));
 }
 
 @end
