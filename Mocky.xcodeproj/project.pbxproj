@@ -118,8 +118,8 @@
 		A35D65BD11FF2DE800F0C310 /* LRInvocationComparitorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D65B611FF2C3F00F0C310 /* LRInvocationComparitorTest.m */; };
 		A35D65BE11FF2DF300F0C310 /* LRInvocationComparitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D65BA11FF2C6C00F0C310 /* LRInvocationComparitor.m */; };
 		A35D667C11FF508B00F0C310 /* CardinalityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D667B11FF508B00F0C310 /* CardinalityTests.m */; };
+		A369D0401503EE0E00A8D56B /* HCBlockMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A36F415314296449004EAA45 /* HCBlockMatcher.m */; };
 		A36F414B142962C4004EAA45 /* LRHamcrestSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = A36F414A142962C4004EAA45 /* LRHamcrestSupport.h */; };
-		A36F415414296449004EAA45 /* HCBlockMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A36F415314296449004EAA45 /* HCBlockMatcher.m */; };
 		A381A1FA12243BE900FA2A5C /* LRExpectationAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A301768911FDEEFC004828C5 /* LRExpectationAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A381A1FB12243BF200FA2A5C /* LRDescribable.h in Headers */ = {isa = PBXBuildFile; fileRef = A391557A11FF670500FE7C49 /* LRDescribable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A381A20112243C0100FA2A5C /* LRConsecutiveCallAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A3EE4EF511FE5D64002DA61D /* LRConsecutiveCallAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -997,7 +997,6 @@
 			files = (
 				A3943E0B11FFBBAB007FE700 /* BasicExamples.m in Sources */,
 				A398EEF413D1F759005C26AA /* TestHelper.m in Sources */,
-				A36F415414296449004EAA45 /* HCBlockMatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1066,6 +1065,7 @@
 				A38AFDFC122BEC2E0001D038 /* LRPerformBlockArgumentAction.m in Sources */,
 				A38AFFC6122BFD020001D038 /* NSInvocation+LRAdditions.m in Sources */,
 				A3289A3D122C73B100D89A88 /* LRNotificationExpectation.m in Sources */,
+				A369D0401503EE0E00A8D56B /* HCBlockMatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
