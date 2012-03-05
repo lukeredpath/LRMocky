@@ -9,6 +9,8 @@
 #import "LRProtocolImposterizer.h"
 #import <objc/runtime.h>
 
+struct objc_method_description methodDescriptionForProtocol(Protocol *protocol, SEL selector);
+
 @implementation LRProtocolImposterizer
 
 - (id)initWithProtocol:(Protocol *)protocol;

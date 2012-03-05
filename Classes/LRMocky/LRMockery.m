@@ -17,6 +17,8 @@
 
 #define addMock(mock) [self addAndReturnMock:mock];
 
+NSString *failureFor(id<LRDescribable> expectation);
+
 @interface LRMockery ()
 - (void)assertSatisfiedInFile:(NSString *)fileName lineNumber:(int)lineNumber;
 @end

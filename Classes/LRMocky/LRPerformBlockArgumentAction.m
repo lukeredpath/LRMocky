@@ -9,6 +9,9 @@
 #import "LRPerformBlockArgumentAction.h"
 #import "NSInvocation+OCMAdditions.h"
 
+LRPerformBlockArgumentAction *LRA_performBlockArguments(void);
+LRPerformBlockArgumentAction *LRA_performBlockArgumentsWithObject(id object);
+
 @implementation LRPerformBlockArgumentAction
 
 - (id)initWithObject:(id)anObject;
@@ -44,7 +47,7 @@
 
 @end
 
-LRPerformBlockArgumentAction *LRA_performBlockArguments()
+LRPerformBlockArgumentAction *LRA_performBlockArguments(void)
 {
   return [[[LRPerformBlockArgumentAction alloc] init] autorelease]; 
 }
