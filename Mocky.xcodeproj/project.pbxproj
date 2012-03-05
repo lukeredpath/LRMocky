@@ -86,7 +86,7 @@
 		A3D496E31210D0070076940C /* ExpectationsWithDifferentArgumentsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D496D91210CF910076940C /* ExpectationsWithDifferentArgumentsTest.m */; };
 		A3EE4F5211FF1B7C002DA61D /* HamcrestIntegrationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F5111FF1B7C002DA61D /* HamcrestIntegrationTest.m */; };
 		A3EE4F5911FF1C10002DA61D /* FunctionalMockeryTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F5811FF1C0F002DA61D /* FunctionalMockeryTestCase.m */; };
-		A3F962441505869F003051DD /* LRMockyAutomation.h in Headers */ = {isa = PBXBuildFile; fileRef = A3F962421505869F003051DD /* LRMockyAutomation.h */; };
+		A3F962441505869F003051DD /* LRMockyAutomation.h in Headers */ = {isa = PBXBuildFile; fileRef = A3F962421505869F003051DD /* LRMockyAutomation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3F962451505869F003051DD /* LRMockyAutomation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F962431505869F003051DD /* LRMockyAutomation.m */; };
 		AA747D9F0F9514B9006C5449 /* Mocky_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* Mocky_Prefix.pch */; settings = {ATTRIBUTES = (); }; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
