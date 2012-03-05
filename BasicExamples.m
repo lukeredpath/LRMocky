@@ -13,6 +13,7 @@
 #import <SenTestingKit/SenTestingKit.h>
 #import "OCHamcrest.h"
 #import "LRMocky.h"
+#import "LRMockyAutomation.h"
 #import "TestHelper.h"
 
 @interface BasicExamples : SenTestCase
@@ -229,6 +230,19 @@
   assertThat([SimpleObject factoryMethod], equalTo(expectedObject));  
   assertContextSatisfied(context);
   assertThat([SimpleObject factoryMethod], is(nilValue()));
+}
+
+- (void)testBasicMockingWithMockeryAutomation
+{
+  id myMockString = [automock mock:[NSString class] named:@"My Mock String"];
+  
+  check(^(that) {
+    [[oneOf(myMockString) receives] uppercaseString];
+  });
+  
+  verifyWith(^{
+    [myMockString uppercaseString];
+  });
 }
 
 @end

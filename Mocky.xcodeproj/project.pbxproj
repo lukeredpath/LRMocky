@@ -86,6 +86,8 @@
 		A3D496E31210D0070076940C /* ExpectationsWithDifferentArgumentsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D496D91210CF910076940C /* ExpectationsWithDifferentArgumentsTest.m */; };
 		A3EE4F5211FF1B7C002DA61D /* HamcrestIntegrationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F5111FF1B7C002DA61D /* HamcrestIntegrationTest.m */; };
 		A3EE4F5911FF1C10002DA61D /* FunctionalMockeryTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F5811FF1C0F002DA61D /* FunctionalMockeryTestCase.m */; };
+		A3F962441505869F003051DD /* LRMockyAutomation.h in Headers */ = {isa = PBXBuildFile; fileRef = A3F962421505869F003051DD /* LRMockyAutomation.h */; };
+		A3F962451505869F003051DD /* LRMockyAutomation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F962431505869F003051DD /* LRMockyAutomation.m */; };
 		AA747D9F0F9514B9006C5449 /* Mocky_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* Mocky_Prefix.pch */; settings = {ATTRIBUTES = (); }; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -195,6 +197,8 @@
 		A3EE4F5111FF1B7C002DA61D /* HamcrestIntegrationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HamcrestIntegrationTest.m; sourceTree = "<group>"; };
 		A3EE4F5711FF1C0F002DA61D /* FunctionalMockeryTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionalMockeryTestCase.h; sourceTree = "<group>"; };
 		A3EE4F5811FF1C0F002DA61D /* FunctionalMockeryTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionalMockeryTestCase.m; sourceTree = "<group>"; };
+		A3F962421505869F003051DD /* LRMockyAutomation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMockyAutomation.h; sourceTree = "<group>"; };
+		A3F962431505869F003051DD /* LRMockyAutomation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMockyAutomation.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* Mocky_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mocky_Prefix.pch; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libMocky.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMocky.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -307,6 +311,8 @@
 				A391557A11FF670500FE7C49 /* LRDescribable.h */,
 				A3C66A42120249240004F78B /* LRMockyStates.h */,
 				A36F414A142962C4004EAA45 /* LRHamcrestSupport.h */,
+				A3F962421505869F003051DD /* LRMockyAutomation.h */,
+				A3F962431505869F003051DD /* LRMockyAutomation.m */,
 			);
 			path = LRMocky;
 			sourceTree = "<group>";
@@ -511,6 +517,7 @@
 				A38AFFC5122BFD020001D038 /* NSInvocation+LRAdditions.h in Headers */,
 				A3289A3C122C73B100D89A88 /* LRNotificationExpectation.h in Headers */,
 				A36F414B142962C4004EAA45 /* LRHamcrestSupport.h in Headers */,
+				A3F962441505869F003051DD /* LRMockyAutomation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,6 +734,7 @@
 				A38AFDFC122BEC2E0001D038 /* LRPerformBlockArgumentAction.m in Sources */,
 				A38AFFC6122BFD020001D038 /* NSInvocation+LRAdditions.m in Sources */,
 				A3289A3D122C73B100D89A88 /* LRNotificationExpectation.m in Sources */,
+				A3F962451505869F003051DD /* LRMockyAutomation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -763,6 +771,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Mocky_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				INSTALL_PATH = /usr/local/lib;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Mocky;
@@ -784,6 +793,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Mocky_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				INSTALL_PATH = /usr/local/lib;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Mocky;
@@ -798,7 +808,6 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
@@ -813,7 +822,6 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
