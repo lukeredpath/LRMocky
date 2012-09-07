@@ -1,5 +1,7 @@
 platform :ios
 
 target :tests, :exclusive => true do
-  dependency 'OCHamcrest', '~> 1.6'
+  link_with 'Tests'
+  
+  pod 'OCHamcrest', '~> 1.6'
 end
