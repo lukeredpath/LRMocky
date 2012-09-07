@@ -12,6 +12,8 @@
 #import "TestHelper.h"
 #import "LRMocky.h"
 
+#define DEFINE_FUNCTIONAL_TEST_CASE(name) DEFINE_TEST_CASE_WITH_SUBCLASS(name, FunctionalMockeryTestCase)
+
 @class FakeTestCase;
 @class SimpleObject;
 

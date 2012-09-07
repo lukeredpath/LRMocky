@@ -26,11 +26,7 @@ id<HCMatcher> isInState(LRMockyState *state)
   return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:equalTo(state)] autorelease];
 }
 
-@interface LRMockyStatesTest : SenTestCase 
-{}
-@end
-
-@implementation LRMockyStatesTest
+DEFINE_TEST_CASE(LRMockyStatesTest)
 
 - (void)testCanTransitionToNewState
 {
@@ -51,4 +47,4 @@ id<HCMatcher> isInState(LRMockyState *state)
   assertThat(context, isInState([context state:@"Second"]));
 }
 
-@end
+END_TEST_CASE

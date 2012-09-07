@@ -8,11 +8,7 @@
 
 #import "FunctionalMockeryTestCase.h"
 
-@interface HamcrestIntegrationTest : FunctionalMockeryTestCase 
-{}
-@end
-
-@implementation HamcrestIntegrationTest
+DEFINE_FUNCTIONAL_TEST_CASE(HamcrestIntegrationTest)
 
 - (void)testCanExpectInvocationWithEqualObjectAndPass
 {
@@ -94,4 +90,4 @@
     @"Expected %@ to receive doSomethingWithObject: with(same instance as 0x%0x %@) exactly(1) times but received it 0 times.", testObject, dummy, dummy, other]));
 }
 
-@end
+END_TEST_CASE

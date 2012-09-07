@@ -8,12 +8,7 @@
 
 #import "FunctionalMockeryTestCase.h"
 
-@interface NotificationExpectationTests : FunctionalMockeryTestCase
-{}
-@end
-
-
-@implementation NotificationExpectationTests
+DEFINE_FUNCTIONAL_TEST_CASE(NotificationExpectationTests)
 
 - (void)testCanExpectNotificationWithNameAndPass
 {
@@ -68,5 +63,4 @@
   assertThat(testCase, failedWithNumberOfFailures(1));
 }
 
-
-@end
+END_TEST_CASE

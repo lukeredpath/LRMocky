@@ -81,14 +81,11 @@
 
 @end
 
-@interface LRMockeryTest : SenTestCase 
-{
+DEFINE_TEST_CASE(LRMockeryTest) {
   FakeTestCase *testCase;
   LRMockery *mockery;
 }
-@end
 
-@implementation LRMockeryTest
 
 - (void)setUp;
 {
@@ -115,4 +112,4 @@
   assertThat(testCase, failedWithNumberOfFailures(1));
 }
 
-@end
+END_TEST_CASE

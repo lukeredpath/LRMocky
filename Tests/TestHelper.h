@@ -12,6 +12,16 @@
 #import "OCHamcrest.h"
 #import "LRTestCase.h"
 
+#define DEFINE_TEST_CASE_WITH_SUBCLASS(name, subclass) \
+@interface name : subclass \
+@end \
+@implementation name
+
+#define DEFINE_TEST_CASE(name) DEFINE_TEST_CASE_WITH_SUBCLASS(name, SenTestCase)
+
+#define END_TEST_CASE \
+@end
+
 @interface NSInvocation (LRAdditions)
 + (NSInvocation *)invocationForSelector:(SEL)selector onClass:(Class)aClass;
 @end

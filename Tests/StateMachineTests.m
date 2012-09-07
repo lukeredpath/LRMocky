@@ -8,13 +8,9 @@
 
 #import "FunctionalMockeryTestCase.h"
 
-@interface StateMachineTests : FunctionalMockeryTestCase
-{
+DEFINE_FUNCTIONAL_TEST_CASE(StateMachineTests) {
   LRMockyStateMachine *readiness;
 }
-@end
-
-@implementation StateMachineTests
 
 - (void)setUp
 {
@@ -83,4 +79,4 @@
   assertThat(testCase, passed());  
 }
 
-@end
+END_TEST_CASE

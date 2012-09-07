@@ -8,10 +8,7 @@
 
 #import "FunctionalMockeryTestCase.h"
 
-@interface CardinalityTests : FunctionalMockeryTestCase
-@end
-
-@implementation CardinalityTests
+DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 
 #pragma mark Exactly (x) times
 
@@ -244,4 +241,4 @@
   assertThat(testCase, passed());
 }
 
-@end
+END_TEST_CASE

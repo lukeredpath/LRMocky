@@ -41,15 +41,14 @@ id invocationForSelector(SEL selector)
 #pragma mark -
 
 @interface ClassImposterizerTest : SenTestCase <LRImposterizerDelegate>
-{
+@end
+
+@implementation ClassImposterizerTest {
   LRMockery *context;
   LRClassImposterizer *imposterizer;
   id mockDelegate;
   NSInvocation *handledInvocation;
 }
-@end
-
-@implementation ClassImposterizerTest
 
 - (void)setUp
 {
@@ -84,7 +83,9 @@ id invocationForSelector(SEL selector)
 #pragma mark -
 
 @interface ObjectImposterizerTest : SenTestCase <LRImposterizerDelegate>
-{
+@end
+
+@implementation ObjectImposterizerTest {
   LRMockery *context;
   LRObjectImposterizer *imposterizer;
   id objectToImposterize;
@@ -92,9 +93,6 @@ id invocationForSelector(SEL selector)
   NSInvocation *handledInvocation;
   BOOL shouldHandleInvocation;
 }
-@end
-
-@implementation ObjectImposterizerTest
 
 - (void)setUp
 {
@@ -156,15 +154,14 @@ id invocationForSelector(SEL selector)
 @end
 
 @interface ProtocolImposterizerTest : SenTestCase <LRImposterizerDelegate>
-{
+@end
+
+@implementation ProtocolImposterizerTest {
   LRMockery *context;
   LRProtocolImposterizer *imposterizer;
   id mockDelegate;
   NSInvocation *handledInvocation;
 }
-@end
-
-@implementation ProtocolImposterizerTest
 
 - (void)setUp
 {

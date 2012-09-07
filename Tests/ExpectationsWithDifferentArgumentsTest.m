@@ -8,11 +8,7 @@
 
 #import "FunctionalMockeryTestCase.h"
 
-@interface ExpectationsWithDifferentArguments : FunctionalMockeryTestCase
-{}
-@end
-
-@implementation ExpectationsWithDifferentArguments
+DEFINE_FUNCTIONAL_TEST_CASE(ExpectationsWithDifferentArguments)
 
 - (void)testCanExpectTheSameMethodWithDifferentArguments
 {
@@ -42,4 +38,4 @@
   assertThat(testCase, passed());
 }
 
-@end
+END_TEST_CASE

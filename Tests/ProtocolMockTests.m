@@ -14,13 +14,9 @@
 - (void)optionalMethod;
 @end
 
-@interface ProtocolMockTests : FunctionalMockeryTestCase
-{
+DEFINE_FUNCTIONAL_TEST_CASE(ProtocolMockTests) {
   id protocolImp;
 }
-@end
-
-@implementation ProtocolMockTests
 
 - (void)setUp
 {
@@ -52,4 +48,4 @@
   assertThat(testCase, passed());
 }
 
-@end
+END_TEST_CASE

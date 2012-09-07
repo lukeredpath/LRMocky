@@ -52,14 +52,11 @@
 
 @end
 
-@interface LRInvocationComparitorTest : SenTestCase
-{
+
+DEFINE_TEST_CASE(LRInvocationComparitorTest) {
   InvocationTesterObject *testObject;
   id capture;
 }
-@end
-
-@implementation LRInvocationComparitorTest
 
 - (void)setUp;
 {
@@ -109,4 +106,4 @@
   assertFalse([comparitor matchesParameters:[[capture takesAnObject:[NSArray arrayWithObject:@"bar"]] invocation]]);
 }
 
-@end
+END_TEST_CASE

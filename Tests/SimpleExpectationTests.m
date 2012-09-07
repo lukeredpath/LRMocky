@@ -8,11 +8,7 @@
 
 #import "FunctionalMockeryTestCase.h"
 
-@interface SimpleExpectationTests : FunctionalMockeryTestCase
-{}
-@end
-
-@implementation SimpleExpectationTests
+DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
 
 - (void)testCanExpectSingleMethodCallAndPass;
 {
@@ -24,6 +20,11 @@
   assertContextSatisfied(context);
 
   assertThat(testCase, passed());
+}
+
+- (void)testSimpleExpectationWithNewSyntax
+{
+  
 }
 
 - (void)testCanExpectSingleMethodCallAndFail;
@@ -181,4 +182,4 @@
   assertThat(testCase, passed());
 }
 
-@end
+END_TEST_CASE

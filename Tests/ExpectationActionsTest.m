@@ -8,11 +8,7 @@
 
 #import "FunctionalMockeryTestCase.h"
 
-@interface ExpectationActionsTest : FunctionalMockeryTestCase 
-{}
-@end
-
-@implementation ExpectationActionsTest
+DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
 
 - (void)testMocksCanReturnAnObjectFromAnExpectedInvocation;
 {
@@ -159,4 +155,4 @@
   assertThat(array, hasItem(@"from block"));
 }
 
-@end
+END_TEST_CASE
