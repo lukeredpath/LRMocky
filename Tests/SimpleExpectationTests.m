@@ -22,10 +22,60 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
   assertThat(testCase, passed());
 }
 
-- (void)testSimpleExpectationWithNewSyntax
-{
-  
-}
+//- (void)testSimpleExpectationWithNewSyntax
+//{
+//  [context checking:^{
+//    // simple expectation
+//    [expectThat(testObject).receives doSomething];
+//    
+//    // with arguments
+//    [expectThat(testObject).receives doSomethingWithArgument:@"arg"];
+//
+//    // expectation with cardinality
+//    [[expectThat(testObject).receives doSomething] times:1];
+//    [[expectThat(testObject).receives doSomething] atLeast:1];
+//    [[expectThat(testObject).receives doSomething] never];
+//    
+//    // syntatic sugar for common cardinality options
+//    [[expectThat(testObject).receives doSomething] once];
+//    [expectThat(testObject.neverReceives doSomething)];
+//    [allow(testObject).receives doSomething];
+//    
+//    // expectation actions
+//    [[[expectThat(testObject).receives doSomething] then] returns:@"result"];
+//    [[[expectThat(testObject).receives doSomething] then] raises:anException];
+//    [[[expectThat(testObject).receives doSomething] then] performs:^{ /* some code */ }];
+//    
+//    // sequences
+//    id sequence = [context sequence:@"some sequence"];
+//    
+//    [[expectThat(testObject).receives doSomething] inSequence:sequence];
+//    [[expectThat(testObject).receives doSomethingElse] inSequence:sequence];
+//    
+//    // states
+//    id power = [[context state:@"power"] startsAs:@"off"];
+//    
+//    [[[expectThat(testObject).receives doSomething] when:power is:@"on"] then:power is:@"off"];
+//    [[[expectThat(testObject).receives doSomething] when:power is:@"off"]];
+//  }];
+//  
+//  // do things with testObject
+//  
+//  // check if the context is satisfied 
+//  [context assertSatisfied];
+//  
+//  // or use your own matcher library (e.g. expecta)
+//  expect(context).isSatisfied();
+//  
+//  // wait for asynchronous behaviour to complete?
+//  [context assertEventuallySatisfied];
+//  
+//  // or some kind of expecta async syntax for predicates?
+//  expect(context).eventually.isSatisfied();
+//  
+//  // or perhaps
+//  expect(context).will.beSatisfied();
+//}
 
 - (void)testCanExpectSingleMethodCallAndFail;
 {
