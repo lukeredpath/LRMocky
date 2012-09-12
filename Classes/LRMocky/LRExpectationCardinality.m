@@ -26,12 +26,17 @@
 
 - (NSString *)description
 {
-  return [NSString stringWithFormat:@"exactly(%d)", equalToInt];
+  return [NSString stringWithFormat:@"exactly %d", equalToInt];
 }
 
 - (void)describeTo:(LRExpectationMessage *)message
 {
-  [message append:[NSString stringWithFormat:@"%@ times", [self description]]];
+  if (equalToInt == 1) {
+    [message append:@"once"];
+  }
+  else {
+    [message append:[NSString stringWithFormat:@"%@ times", [self description]]];
+  }
 }
 
 @end
@@ -58,7 +63,7 @@ id<LRExpectationCardinality> LRM_exactly(int anInt)
 
 - (NSString *)description
 {
-  return [NSString stringWithFormat:@"atLeast(%d)", minimum];
+  return [NSString stringWithFormat:@"at least %d", minimum];
 }
 
 - (void)describeTo:(LRExpectationMessage *)message
@@ -90,7 +95,7 @@ id<LRExpectationCardinality> LRM_atLeast(int anInt)
 
 - (NSString *)description
 {
-  return [NSString stringWithFormat:@"atMost(%d)", maximum];
+  return [NSString stringWithFormat:@"at most %d", maximum];
 }
 
 - (void)describeTo:(LRExpectationMessage *)message
@@ -123,7 +128,7 @@ id<LRExpectationCardinality> LRM_atMost(int anInt)
 
 - (NSString *)description
 {
-  return [NSString stringWithFormat:@"between(%d and %d)", minimum, maximum];
+  return [NSString stringWithFormat:@"between %d and %d", minimum, maximum];
 }
 
 - (void)describeTo:(LRExpectationMessage *)message

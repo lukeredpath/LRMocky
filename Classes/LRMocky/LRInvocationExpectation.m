@@ -107,11 +107,17 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
     for (int i = 2; i < numberOfArguments; i++) {
       [parameters addObject:[expectedInvocation argumentDescriptionAtIndex:i]];
     }
-    [message append:[NSString stringWithFormat:@"with(%@) ", [parameters componentsJoinedByString:@", "]]];
+    [message append:[NSString stringWithFormat:@"with arguments: [%@] ", [parameters componentsJoinedByString:@", "]]];
   } 
   
   [self.cardinality describeTo:message];
-  [message append:[NSString stringWithFormat:@" but received it %d times.", numberOfInvocations]];
+  
+  if (numberOfInvocations == 1) {
+    [message append:@" but received it only once."];
+  }
+  else {
+    [message append:[NSString stringWithFormat:@" but received it %d times.", numberOfInvocations]];
+  }
   
   if (self.similarInvocation && numberOfArguments > 2) {
     [message append:[NSString stringWithFormat:@" %@ was called ", NSStringFromSelector([expectedInvocation selector])]];
@@ -120,7 +126,7 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
     for (int i = 2; i < numberOfArguments; i++) {
       [parameters addObject:[self.similarInvocation objectDescriptionAtIndex:i]];
     }
-    [message append:[NSString stringWithFormat:@"with(%@).", [parameters componentsJoinedByString:@", "]]];
+    [message append:[NSString stringWithFormat:@"with arguments: [%@].", [parameters componentsJoinedByString:@", "]]];
   }
 }
 

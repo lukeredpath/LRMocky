@@ -79,14 +79,14 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
 
 - (void)testCanExpectSingleMethodCallAndFail;
 {
-  [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(testObject) doSomething];
+  [context setExpectations:^{
+    [[expectThat(testObject) receives] doSomething];
   }];
   
   assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomething exactly(1) times but received it 0 times", testObject]));
+    @"Expected %@ to receive doSomething once but received it 0 times.", testObject]));
 }
 
 - (void)testFailsWhenUnexpectedMethodIsCalled;
@@ -143,7 +143,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
   assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive returnSomethingForValue: with(@\"one\") exactly(1) times but received it 0 times.", testObject]));
+    @"Expected %@ to receive returnSomethingForValue: with arguments: [@\"one\"] once but received it 0 times.", testObject]));
 }
 
 - (void)testCanExpectMethodCallWithSpecificParametersAndFailWhenAtLeastOneParameterIsWrong;
@@ -156,7 +156,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
   assertContextSatisfied(context);
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomethingWith:andObject: with(@\"foo\", @\"bar\") exactly(1) times but received it 0 times.", testObject]));
+    @"Expected %@ to receive doSomethingWith:andObject: with arguments: [@\"foo\", @\"bar\"] once but received it 0 times.", testObject]));
 }
 
 - (void)testCanExpectMethodCallWithSpecificNonObjectParametersAndPass;
@@ -195,7 +195,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
   assertContextSatisfied(context);
 
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomethingWithInt: with(10) exactly(1) times but received it 0 times.", testObject]));
+    @"Expected %@ to receive doSomethingWithInt: with arguments: [10] once but received it 0 times.", testObject]));
 }
 
 - (void)testCanExpectMethodCallsWithBlockArgumentsAndPass;
