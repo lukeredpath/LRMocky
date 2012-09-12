@@ -84,7 +84,6 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
   }];
   
   assertContextSatisfied(context);
-  
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomething once but received it 0 times.", testObject]));
 }
@@ -92,32 +91,31 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
 - (void)testFailsWhenUnexpectedMethodIsCalled;
 {
   [testObject doSomething];  
+  
   assertContextSatisfied(context);
-
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Unexpected method doSomething called on %@", testObject]));
 }
 
-- (void)testCanAllowSingleMethodCellAndPassWhenItIsCalled;
+- (void)testCanAllowSingleMethodCallAndPassWhenItIsCalled;
 {
-  [context checking:^(LRExpectationBuilder *builder){
-    [allowing(testObject) doSomething];
+  [context setExpectations:^{
+    [[allow(testObject) toReceive] doSomething];
   }];
   
   [testObject doSomething];
-  assertContextSatisfied(context);
   
+  assertContextSatisfied(context);
   assertThat(testCase, passed());
 }
 
 - (void)testCanAllowSingleMethodCellAndPassWhenItIsNotCalled;
 {
-  [context checking:^(LRExpectationBuilder *builder){
-    [allowing(testObject) doSomething];
+  [context setExpectations:^{
+    [[allow(testObject) toReceive] doSomething];
   }];
   
   assertContextSatisfied(context);
-  
   assertThat(testCase, passed());
 }
 

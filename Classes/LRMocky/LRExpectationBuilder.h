@@ -22,6 +22,7 @@
 }
 + (void)buildExpectationsWithBlock:(dispatch_block_t)expectationBlock inContext:(LRMockery *)context;
 + (id)expectThat:(id)object;
++ (id)allow:(id)object;
 + (id)builderInContext:(LRMockery *)context;
 - (id)initWithMockery:(LRMockery *)aMockery;
 - (id)receives; // syntatic sugar
@@ -36,6 +37,9 @@
 - (void)shouldTransitionToState:(LRMockyState *)state;
 - (void)requiresState:(LRMockyState *)state;
 @end
+
+// syntatic sugar for allowing calls
+#define toReceive receives
 
 #ifdef LRMOCKY_SUGAR
 #define mockery()           [LRMockery mockeryForTestCase:self]

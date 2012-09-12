@@ -32,13 +32,16 @@ static LRExpectationBuilder *__globalExpectationBuilder = nil;
 {
   __globalExpectationBuilder = [self builderInContext:context];
   expectationBlock();
-  [__globalExpectationBuilder release];
-  __globalExpectationBuilder = nil;
 }
 
 + (id)expectThat:(id)object
 {
   return [__globalExpectationBuilder oneOf:object];
+}
+
++ (id)allow:(id)object
+{
+  return [__globalExpectationBuilder allowing:object];
 }
 
 + (id)builderInContext:(LRMockery *)context;
