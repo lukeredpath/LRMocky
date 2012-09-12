@@ -23,3 +23,5 @@
 #if !(TARGET_IPHONE_SIMULATOR)
 #import "LRThrowExceptionAction.h"
 #endif
+
+#define expectThat(object) [LRExpectationBuilder expectThat:object]

@@ -20,6 +20,8 @@
   LRInvocationExpectation *currentExpectation;
   LRImposterizer *imposterizer;
 }
++ (void)buildExpectationsWithBlock:(dispatch_block_t)expectationBlock inContext:(LRMockery *)context;
++ (id)expectThat:(id)object;
 + (id)builderInContext:(LRMockery *)context;
 - (id)initWithMockery:(LRMockery *)aMockery;
 - (id)receives; // syntatic sugar
@@ -34,7 +36,6 @@
 - (void)shouldTransitionToState:(LRMockyState *)state;
 - (void)requiresState:(LRMockyState *)state;
 @end
-
 
 #ifdef LRMOCKY_SUGAR
 #define mockery()           [LRMockery mockeryForTestCase:self]

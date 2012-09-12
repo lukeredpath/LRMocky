@@ -181,6 +181,7 @@
  */
 - (void)checking:(void (^)(LRExpectationBuilder *))expectationBlock;
 
+- (void)setExpectations:(dispatch_block_t)expectationBlock;
 
 /** Add's a new expectation to the current context.
  

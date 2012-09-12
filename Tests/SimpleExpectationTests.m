@@ -12,13 +12,13 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
 
 - (void)testCanExpectSingleMethodCallAndPass;
 {
-  [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(testObject) doSomething];
+  [context setExpectations:^{
+    [[expectThat(testObject) receives] doSomething];
   }];
   
   [testObject doSomething];
-  assertContextSatisfied(context);
 
+  assertContextSatisfied(context);
   assertThat(testCase, passed());
 }
 

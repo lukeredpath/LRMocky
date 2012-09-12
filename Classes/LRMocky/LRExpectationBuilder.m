@@ -26,6 +26,21 @@
 
 @synthesize currentExpecation;
 
+static LRExpectationBuilder *__globalExpectationBuilder = nil;
+
++ (void)buildExpectationsWithBlock:(dispatch_block_t)expectationBlock inContext:(LRMockery *)context
+{
+  __globalExpectationBuilder = [self builderInContext:context];
+  expectationBlock();
+  [__globalExpectationBuilder release];
+  __globalExpectationBuilder = nil;
+}
+
++ (id)expectThat:(id)object
+{
+  return [__globalExpectationBuilder oneOf:object];
+}
+
 + (id)builderInContext:(LRMockery *)context;
 {
   return [[[self alloc] initWithMockery:context] autorelease];

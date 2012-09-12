@@ -126,6 +126,11 @@ NSString *failureFor(id<LRDescribable> expectation);
   expectationBlock([LRExpectationBuilder builderInContext:self]);
 }
 
+- (void)setExpectations:(dispatch_block_t)expectationBlock
+{
+  [LRExpectationBuilder buildExpectationsWithBlock:expectationBlock inContext:self];
+}
+
 NSString *failureFor(id<LRDescribable> expectation) {
   LRExpectationMessage *errorMessage = [[[LRExpectationMessage alloc] init] autorelease];
   [expectation describeTo:errorMessage];
