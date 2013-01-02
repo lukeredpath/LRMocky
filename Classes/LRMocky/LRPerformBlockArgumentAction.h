@@ -20,8 +20,5 @@ LRPerformBlockArgumentAction *LRA_performBlockArgumentsWithObject(id object);
 
 #ifdef LRMOCKY_SHORTHAND
 #define performBlockArguments  LRA_performBlockArguments()
-#define performsBlockArguments LRA_performBlockArguments()
 #define performBlockArgumentsWithObject(object) LRA_performBlockArgumentsWithObject(object)
-#define performsBlockArgumentsWithObject(object) LRA_performBlockArgumentsWithObject(object)
 #endif
-

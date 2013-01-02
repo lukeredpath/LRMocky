@@ -14,8 +14,8 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
 {
   NSString *expectedObject = @"some string";
   
-  [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(testObject) returnSomething]; [it will:returnObject(expectedObject)];
+  [context setExpectations:^{
+    [[expectThat(testObject) receives] doSomething]; [and then:returnObject(expectedObject)];
   }];
   
   assertThat([testObject returnSomething], equalTo(expectedObject));
@@ -26,7 +26,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
   NSString *expectedObject = @"some string";
   
   [context checking:^(LRExpectationBuilder *builder){
-    [allowing(testObject) returnSomething]; [it will:returnObject(expectedObject)];
+    [allowing(testObject) returnSomething]; [and then:returnObject(expectedObject)];
   }];
   
   assertThat([testObject returnSomething], equalTo(expectedObject));
@@ -37,7 +37,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
   NSMutableArray *someArray = [NSMutableArray array];
   
   [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(testObject) doSomething]; [it will:performBlock(^(NSInvocation *invocation) {
+    [[expectThat(testObject) receives] doSomething]; [and then:performBlock(^(NSInvocation *invocation) {
       [someArray addObject: NSStringFromSelector([invocation selector])];
     })];
   }];
@@ -52,7 +52,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
   NSMutableArray *someArray = [NSMutableArray array];
   
   [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(testObject) doSomething]; [it will:performBlock(^(NSInvocation *invocation) {
+    [[expectThat(testObject) receives] doSomething]; [and then:performBlock(^(NSInvocation *invocation) {
       [someArray addObject: NSStringFromSelector([invocation selector])];
     })];
   }];
@@ -65,7 +65,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
 - (void)testMocksCanReturnANonObjectValueFromAnExpectedInvocation;
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(testObject) returnSomeValue]; [it will:returnInt(10)];
+    [[expectThat(testObject) receives] doSomething]; [and then:returnInt(10)];
   }];
   
   assertThatInt((int)[testObject returnSomeValue], equalToInt(10));
@@ -74,7 +74,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
 - (void)testMocksCanReturnANonObjectValueFromAnAllowedInvocation;
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [allowing(testObject) returnSomeValue]; [it will:returnInt(20)];
+    [allowing(testObject) returnSomeValue]; [and then:returnInt(20)];
   }];
   
   assertThatInt((int)[testObject returnSomeValue], equalToInt(20));
@@ -83,7 +83,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
 - (void)testMocksCanReturnDifferentValuesOnConsecutiveCalls;
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [allowing(testObject) returnSomeValue]; [it will:onConsecutiveCalls(
+    [[expectThat(testObject) receives] doSomething]; [and then:onConsecutiveCalls(
       returnInt(10),
       returnInt(20),
       returnInt(30),                                       
@@ -103,7 +103,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
   __block NSString *someString = nil;
   
   [context checking:^(LRExpectationBuilder *builder) {
-    [oneOf(mockArray) indexesOfObjectsPassingTest:anyBlock()]; andThen(performBlockArguments);
+    [[expectThat(mockArray) receives] indexesOfObjectsPassingTest:anyBlock()]; [and then:performBlockArguments];
   }];
   
   [(NSArray *)mockArray indexesOfObjectsPassingTest:^(id object, NSUInteger idx, BOOL *stop) { 
@@ -118,7 +118,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
 - (void)testMocksCanThrowAnException;
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [allowing(testObject) doSomething]; [it will:throwException([NSException exceptionWithName:@"Test Exception" reason:nil userInfo:nil])];
+    [allowing(testObject) doSomething]; [and then:throwException([NSException exceptionWithName:@"Test Exception" reason:nil userInfo:nil])];
   }];
   
   /**
@@ -143,7 +143,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
   NSMutableArray *array = [NSMutableArray array];
 
   [context checking:^(LRExpectationBuilder *builder){
-    [allowing(testObject) returnSomething]; [it will:doAll(
+    [allowing(testObject) returnSomething]; [and then:doAll(
       returnObject(@"test"),
       performBlock(^(NSInvocation *invocation){ 
         [array addObject:@"from block"];

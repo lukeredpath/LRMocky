@@ -39,9 +39,6 @@
             </BuildableReference>
             <SkippedTests>
                <Test
-                  Identifier = "ExpectationActionsTest">
-               </Test>
-               <Test
                   Identifier = "HamcrestIntegrationTest">
                </Test>
                <Test

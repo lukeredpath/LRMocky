@@ -63,6 +63,10 @@
  */
 - (id)of;
 
+/* Specifies an action that should occur when the expectation is met.
+ */
+- (id)then:(id<LRExpectationAction>)action;
+
 #pragma mark - Deprecated syntax
 
 - (void)shouldTransitionToState:(LRMockyState *)state;
@@ -74,6 +78,7 @@
 
 #define expectThat(object) [[LRExpectationBuilder currentExpectationBuilder] setExpectationTarget:object]
 #define allowing(object)   [expectThat(object) receives:LRM_atLeast(0)]
+#define and                [LRExpectationBuilder currentExpectationBuilder]
 
 #ifdef LRMOCKY_SUGAR
 #define mockery()           [LRMockery mockeryForTestCase:self]

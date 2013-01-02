@@ -27,17 +27,10 @@ LRReturnValueAction *LRA_returnBool(BOOL aBool);
 
 #ifdef LRMOCKY_SHORTHAND
 #define returnObject  LRA_returnObject
-#define returnsObject  LRA_returnObject
 #define returnValue   LRA_returnValue
-#define returnsValue   LRA_returnValue
 #define returnInt     LRA_returnInt
-#define returnsInt     LRA_returnInt
 #define returnInteger LRA_returnInteger
-#define returnsInteger LRA_returnInteger
 #define returnFloat   LRA_returnFloat
-#define returnsFloat   LRA_returnFloat
 #define returnLong    LRA_returnLong
-#define returnsLong    LRA_returnLong
 #define returnBool    LRA_returnBool
-#define returnsBool    LRA_returnBool
 #endif
