@@ -32,7 +32,7 @@
 @property (nonatomic, retain) LRMockyState *requiredState;
 @property (nonatomic, readonly) BOOL calledWithInvalidState;
 
-+ (id)expectation;
++ (id)expectationWithObject:(LRMockObject *)mockObject;
 - (void)addAction:(id<LRExpectationAction>)anAction;
 - (BOOL)matches:(NSInvocation *)invocation;
 - (void)invoke:(NSInvocation *)invocation;

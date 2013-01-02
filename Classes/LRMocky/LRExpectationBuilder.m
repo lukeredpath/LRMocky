@@ -17,51 +17,82 @@
 
 @interface LRExpectationBuilder ()
 @property (nonatomic, retain) LRInvocationExpectation *currentExpecation;
+@property (nonatomic, readonly) LRImposterizer *imposterizer;
+
+- (id)initWithMockery:(LRMockery *)aMockery;
 - (void)actAsImposterForMockObject:(LRMockObject *)mock;
-- (void)prepareExpectationForObject:(id)mockObject 
-                    withCardinality:(id<LRExpectationCardinality>)cardinality;
+
 @end
 
-@implementation LRExpectationBuilder
-
+@implementation LRExpectationBuilder {
+  LRMockery *_mockery;
+  LRImposterizer *_imposterizer;
+}
 @synthesize currentExpecation;
 
-static LRExpectationBuilder *__globalExpectationBuilder = nil;
+#pragma mark - Global expectation builder access
+
+static LRExpectationBuilder *__currentExpectationBuilder = nil;
 
 + (void)buildExpectationsWithBlock:(dispatch_block_t)expectationBlock inContext:(LRMockery *)context
 {
-  __globalExpectationBuilder = [self builderInContext:context];
+  __currentExpectationBuilder = [[self alloc] initWithMockery:context];
   expectationBlock();
 }
 
-+ (id)expectThat:(id)object
++ (LRExpectationBuilder *)currentExpectationBuilder
 {
-  return [__globalExpectationBuilder oneOf:object];
+  return __currentExpectationBuilder;
 }
 
-+ (id)allow:(id)object
-{
-  return [__globalExpectationBuilder allowing:object];
-}
+//+ (id)expectThat:(id)object
+//{
+//  return [__globalExpectationBuilder oneOf:object];
+//}
+//
+//+ (id)allow:(id)object
+//{
+//  return [__globalExpectationBuilder allowing:object];
+//}
+//
+//+ (void)setCardinalityForCurrentExpectation:(id<LRExpectationCardinality>)cardinality
+//{
+//  [__globalExpectationBuilder setCardinalityForCurrentExpectation:cardinality];
+//}
 
-+ (id)builderInContext:(LRMockery *)context;
-{
-  return [[[self alloc] initWithMockery:context] autorelease];
-}
+#pragma mark -
 
 - (id)initWithMockery:(LRMockery *)aMockery;
 {
   if (self = [super init]) {
-    mockery = [aMockery retain];
+    _mockery = [aMockery retain];
   }
   return self;
 }
 
 - (void)dealloc;
 {
-  [imposterizer release];
-  [mockery release];
+  [_imposterizer release];
+  [_mockery release];
   [super dealloc];
+}
+
+- (id<LRExpectation>)expectation
+{
+  return self.currentExpecation;
+}
+
+- (LRImposterizer *)imposterizer
+{
+  return self.currentExpecation.mockObject.imposterizer;
+}
+
+#pragma mark - Fluent Interface
+
+- (id)setExpectationTarget:(id)object
+{
+  self.currentExpecation = [self expectationForObject:object];
+  return self;
 }
 
 - (id)receives;
@@ -69,44 +100,20 @@ static LRExpectationBuilder *__globalExpectationBuilder = nil;
   return self;
 }
 
-- (id)oneOf:(id)mockObject;
+- (id)receives:(id<LRExpectationCardinality>)cardinality
 {
-  return [self exactly:1 of:mockObject];
-}
-
-- (id)exactly:(int)numberOfTimes of:(id)mockObject;
-{
-  [self prepareExpectationForObject:mockObject withCardinality:LRM_exactly(numberOfTimes)];
+  self.currentExpecation.cardinality = cardinality;
   return self;
 }
 
-- (id)atLeast:(int)minimum of:(id)mockObject;
+- (id)neverReceives
 {
-  [self prepareExpectationForObject:mockObject withCardinality:LRM_atLeast(minimum)];
+  [self receives:LRM_exactly(0)];
   return self;
 }
 
-- (id)atMost:(int)maximum of:(id)mockObject;
+- (id)of
 {
-  [self prepareExpectationForObject:mockObject withCardinality:LRM_atMost(maximum)];
-  return self;
-}
-
-- (id)between:(int)minimum and:(int)maximum of:(id)mockObject;
-{
-  [self prepareExpectationForObject:mockObject withCardinality:LRM_between(minimum, maximum)];
-  return self;
-}
-
-- (id)allowing:(id)mockObject;
-{
-  [self prepareExpectationForObject:mockObject withCardinality:LRM_atLeast(0)];
-  return self;
-}
-
-- (id)never:(id)mockObject;
-{
-  [self prepareExpectationForObject:mockObject withCardinality:LRM_exactly(0)];
   return self;
 }
 
@@ -126,45 +133,36 @@ static LRExpectationBuilder *__globalExpectationBuilder = nil;
   return self;
 }
 
-#pragma mark Private methods
-
-- (void)actAsImposterForMockObject:(LRMockObject *)mock;
-{
-  imposterizer = mock.imposterizer;
-}
+#pragma mark - Imposterizer methods
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)sel
 {
-  return [imposterizer methodSignatureForSelector:sel];
+  return [self.imposterizer methodSignatureForSelector:sel];
 }
 
 - (BOOL)respondsToSelector:(SEL)aSelector
 {
-  return [imposterizer respondsToSelector:aSelector];
+  return [self.imposterizer respondsToSelector:aSelector];
 }
 
 - (void)forwardInvocation:(NSInvocation *)anInvocation
 {  
   self.currentExpecation.invocation = anInvocation;
 
-  if ([imposterizer isKindOfClass:[LRObjectImposterizer class]]) {
-    [(LRObjectImposterizer *)imposterizer setupInvocationHandlerForImposterizedObjectForInvocation:anInvocation];
+  if ([self.imposterizer isKindOfClass:[LRObjectImposterizer class]]) {
+    [(LRObjectImposterizer *)self.imposterizer setupInvocationHandlerForImposterizedObjectForInvocation:anInvocation];
   }
-  [mockery addExpectation:self.currentExpecation];
+  [_mockery addExpectation:self.currentExpecation];
 }
 
-- (void)prepareExpectationForObject:(id)mockObject 
-                    withCardinality:(id<LRExpectationCardinality>)cardinality;
+#pragma mark - Private
+
+- (LRInvocationExpectation *)expectationForObject:(id)object
 {
-  if (![mockObject isKindOfClass:[LRMockObject class]]) {
-    mockObject = [mockery partialMockForObject:mockObject];
+  if (![object isKindOfClass:[LRMockObject class]]) {
+    object = [_mockery partialMockForObject:object];
   }
-  
-  self.currentExpecation = [LRInvocationExpectation expectation];
-  self.currentExpecation.cardinality = cardinality;
-  self.currentExpecation.mockObject = mockObject;
-  
-  [self actAsImposterForMockObject:mockObject];
+  return [LRInvocationExpectation expectationWithObject:object];
 }
 
 @end

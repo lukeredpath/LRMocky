@@ -14,27 +14,29 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 
 - (void)testCanSpecifyExpectationIsCalledOnceAndFailIfCalledTwice
 {
-  [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(testObject) doSomething];
+  [context setExpectations:^{
+    [[expectThat(testObject) receives] doSomething];
   }];
   
   [testObject doSomething];
   [testObject doSomething];
-  assertContextSatisfied(context);
   
+  [context assertSatisfied];
+
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomething once but received it 2 times.", testObject]));
 }
 
 - (void)testCanSpecifyExpectationIsCalledExactNumberOfTimesAndFailIfCalledFewerTimes
 {
-  [context checking:^(LRExpectationBuilder *builder){
-    [[exactly(3) of:testObject] doSomething];
+  [context setExpectations:^{
+    [[expectThat(testObject) receives:exactly(3)] doSomething];
   }];
   
   [testObject doSomething];
   [testObject doSomething];
-  assertContextSatisfied(context);
+  
+  [context assertSatisfied];
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomething exactly 3 times but received it 2 times.", testObject]));
@@ -42,14 +44,15 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 
 - (void)testCanSpecifyExpectationIsCalledExactNumberOfTimesAndFailIfCalledMoreTimes
 {
-  [context checking:^(LRExpectationBuilder *builder){
-    [[exactly(2) of:testObject] doSomething];
+  [context setExpectations:^{
+    [[[expectThat(testObject) receives:exactly(2)] of] doSomething];
   }];
+
+  [testObject doSomething];
+  [testObject doSomething];
+  [testObject doSomething];
   
-  [testObject doSomething];
-  [testObject doSomething];
-  [testObject doSomething];
-  assertContextSatisfied(context);
+  [context assertSatisfied];
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomething exactly 2 times but received it 3 times.", testObject]));
@@ -60,11 +63,12 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsCalledAtLeastNumberOfTimesAndFailIfCalledFewerTimes
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [[atLeast(2) of:testObject] doSomething];
+    [[[expectThat(testObject) receives:atLeast(2)] of] doSomething];
   }];
   
   [testObject doSomething];
-  assertContextSatisfied(context);
+  
+  [context assertSatisfied];
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomething at least 2 times but received it only once.", testObject]));
@@ -73,13 +77,14 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsCalledAtLeastNumberOfTimesAndPassIfCalledMoreTimes
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [[atLeast(2) of:testObject] doSomething];
+    [[[expectThat(testObject) receives:atLeast(2)] of] doSomething];
   }];
   
   [testObject doSomething];
   [testObject doSomething];
   [testObject doSomething];
-  assertContextSatisfied(context);
+  
+  [context assertSatisfied];
   
   assertThat(testCase, passed());
 }
@@ -87,12 +92,13 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsCalledAtLeastNumberOfTimesAndPassIfCalledTheExactNumberOfTimes
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [[atLeast(2) of:testObject] doSomething];
+    [[[expectThat(testObject) receives:atLeast(2)] of] doSomething];
   }];
   
   [testObject doSomething];
   [testObject doSomething];
-  assertContextSatisfied(context);
+  
+  [context assertSatisfied];
   
   assertThat(testCase, passed());
 }
@@ -102,13 +108,14 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsCalledAtMostNumberOfTimesAndFailIfCalledMoreTimes
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [[atMost(2) of:testObject] doSomething];
+    [[[expectThat(testObject) receives:atMost(2)] of] doSomething];
   }];
   
   [testObject doSomething];
   [testObject doSomething];
   [testObject doSomething];
-  assertContextSatisfied(context);
+  
+  [context assertSatisfied];
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomething at most 2 times but received it 3 times.", testObject]));
@@ -117,11 +124,12 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsCalledAtMostNumberOfTimesAndPassIfCalledFewerTimes
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [[atMost(2) of:testObject] doSomething];
+    [[[expectThat(testObject) receives:atMost(2)] of] doSomething];
   }];
   
   [testObject doSomething];
-  assertContextSatisfied(context);
+  
+  [context assertSatisfied];
   
   assertThat(testCase, passed());
 }
@@ -129,12 +137,13 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsCalledAtMostNumberOfTimesAndPassIfCalledTheExactNumberOfTimes
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [[atMost(2) of:testObject] doSomething];
+    [[[expectThat(testObject) receives:atMost(2)] of] doSomething];
   }];
   
   [testObject doSomething];
   [testObject doSomething];
-  assertContextSatisfied(context);
+  
+  [context assertSatisfied];
   
   assertThat(testCase, passed());
 }
@@ -144,7 +153,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndFailIfCalledMoreTimesThanTheUpperLimit
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [[between(2, 5) of:testObject] doSomething];
+    [[[expectThat(testObject) receives:between(2, 5)] of] doSomething];
   }];
   
   [testObject doSomething];
@@ -153,7 +162,8 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
   [testObject doSomething];
   [testObject doSomething];
   [testObject doSomething];
-  assertContextSatisfied(context);
+
+  [context assertSatisfied];
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomething between 2 and 5 times but received it 6 times.", testObject]));
@@ -162,11 +172,12 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndFailIfCalledFewerTimesThanTheLowerLimit
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [[between(2, 5) of:testObject] doSomething];
+    [[[expectThat(testObject) receives:between(2, 5)] of] doSomething];
   }];
   
   [testObject doSomething];
-  assertContextSatisfied(context);
+  
+  [context assertSatisfied];
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomething between 2 and 5 times but received it only once.", testObject]));
@@ -175,12 +186,13 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndPassIfCalledLowerLimitTimes
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [[between(2, 5) of:testObject] doSomething];
+    [[[expectThat(testObject) receives:between(2, 5)] of] doSomething];
   }];
   
   [testObject doSomething];
   [testObject doSomething];
-  assertContextSatisfied(context);
+  
+  [context assertSatisfied];
   
   assertThat(testCase, passed());
 }
@@ -188,7 +200,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndPassIfCalledUpperLimitTimes
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [[between(2, 5) of:testObject] doSomething];
+    [[[expectThat(testObject) receives:between(2, 5)] of] doSomething];
   }];
   
   [testObject doSomething];
@@ -196,7 +208,8 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
   [testObject doSomething];
   [testObject doSomething];
   [testObject doSomething];
-  assertContextSatisfied(context);
+
+  [context assertSatisfied];
   
   assertThat(testCase, passed());
 }
@@ -204,13 +217,14 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndPassIfCalledBetweenUpperAndLowerLimitTimes
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [[between(2, 5) of:testObject] doSomething];
+    [[[expectThat(testObject) receives:between(2, 5)] of] doSomething];
   }];
   
   [testObject doSomething];
   [testObject doSomething];
   [testObject doSomething];
-  assertContextSatisfied(context);
+  
+  [context assertSatisfied];
   
   assertThat(testCase, passed());
 }
@@ -220,11 +234,12 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsNotAllowedAndFailIfItIsCalled
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [never(testObject) doSomething];
+    [[expectThat(testObject) neverReceives] doSomething];
   }];
   
   [testObject doSomething];
-  assertContextSatisfied(context);
+  
+  [context assertSatisfied];
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
     @"Expected %@ to receive doSomething exactly 0 times but received it only once.", testObject]));
@@ -233,10 +248,10 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsNotAllowedAndPassIfItIsNotCalled
 {
   [context checking:^(LRExpectationBuilder *builder){
-    [never(testObject) doSomething];
+    [[expectThat(testObject) neverReceives] doSomething];
   }];
   
-  assertContextSatisfied(context);
+  [context assertSatisfied];
   
   assertThat(testCase, passed());
 }

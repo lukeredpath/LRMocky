@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "LRExpectation.h"
+#import "LRExpectationCardinality.h"
 
 @class LRMockObject;
 @class LRMockery;
@@ -15,50 +16,66 @@
 @class LRMockyState;
 @class LRImposterizer;
 
-@interface LRExpectationBuilder : NSObject {
-  LRMockery *mockery;
-  LRInvocationExpectation *currentExpectation;
-  LRImposterizer *imposterizer;
-}
+@interface LRExpectationBuilder : NSObject
+
+@property (nonatomic, readonly) id<LRExpectation> expectation;
+
 + (void)buildExpectationsWithBlock:(dispatch_block_t)expectationBlock inContext:(LRMockery *)context;
-+ (id)expectThat:(id)object;
-+ (id)allow:(id)object;
-+ (id)builderInContext:(LRMockery *)context;
-- (id)initWithMockery:(LRMockery *)aMockery;
-- (id)receives; // syntatic sugar
-- (id)oneOf:(id)mockObject;
-- (id)exactly:(int)numberOfTimes of:(id)mockObject;
-- (id)atLeast:(int)minimum of:(id)mockObject;
-- (id)atMost:(int)maximum of:(id)mockObject;
-- (id)between:(int)minimum and:(int)maximum of:(id)mockObject;
-- (id)will:(id<LRExpectationAction>)action;
-- (id)allowing:(id)mockObject;
-- (id)never:(id)mockObject;
++ (LRExpectationBuilder *)currentExpectationBuilder;
+
+#pragma mark - Configuring expectations
+
+/* No-op - simply returns self.
+ 
+ This method is provided purely as syntatic sugar to make your expectations read more fluently.
+ 
+ It is the equivalent of calling receives:exactly(1).
+ */
+- (id)receives;
+
+/* Assert that the expectation target will receive the expected message with the given 
+ cardinality.
+ 
+ Cardinality objects should be created using the factory functions defined in LRExpectationCardinality.h
+ */
+- (id)receives:(id<LRExpectationCardinality>)cardinality;
+
+/* Syntatic sugar for calling receives: with LRM_exactly(0) cardinality.
+ */
+- (id)neverReceives;
+
+/* Sets the target for the expectation.
+ 
+ Not normally called directly - use the expectThat() macro to call this method on the global expectation
+ builder within a setExpectations: block.
+ */
+- (id)setExpectationTarget:(id)object;
+
+/* No-op - simple returns self.
+ 
+ Syntatic sugar, designed to be used following a call to receives:cardinality.
+ 
+ e.g. instead of:
+   [[expectThat(object) receives:atLeast(1)] someMethod];
+ 
+ You can write:
+   [[[expectThat(object) receives:atLeast(1)] of] someMethod];
+ */
+- (id)of;
+
+#pragma mark - Deprecated syntax
+
 - (void)shouldTransitionToState:(LRMockyState *)state;
 - (void)requiresState:(LRMockyState *)state;
+
 @end
 
-// syntatic sugar for allowing calls
-#define toReceive receives
+#pragma mark - Global expectation builder proxy macros
+
+#define expectThat(object) [[LRExpectationBuilder currentExpectationBuilder] setExpectationTarget:object]
+#define allowing(object)   [expectThat(object) receives:LRM_atLeast(0)]
 
 #ifdef LRMOCKY_SUGAR
 #define mockery()           [LRMockery mockeryForTestCase:self]
-#define that                LRExpectationBuilder *builder
-#define andThen(action)     [builder will:action]
-#define andReturn(object)   [builder will:returnsObject(object)];
-#define oneOf(arg)          [builder oneOf:arg]
-#define allowing(arg)       [builder allowing:arg]
-#define never(arg)          [builder never:arg]
-#define exactly(x)           builder exactly:x
-#define atLeast(x)           builder atLeast:x
-#define atMost(x)            builder atMost:x
-#define between(x, y)        builder between:x and:y
-#define then(state)         [builder shouldTransitionToState:state]
-#define when(state)         [builder requiresState:state];
-#define stub(arg)           [builder allowing:arg] 
 #define matching(matcher)   (id)matcher
-#endif
-
-#ifndef LRMOCKY_KIWI_COMPATIBILITY_MODE
-#define it                  builder
 #endif

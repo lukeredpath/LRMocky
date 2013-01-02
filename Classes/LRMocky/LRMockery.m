@@ -121,11 +121,6 @@ NSString *failureFor(id<LRDescribable> expectation);
   return stateMachine;
 }
 
-- (void)checking:(void (^)(LRExpectationBuilder *))expectationBlock;
-{
-  expectationBlock([LRExpectationBuilder builderInContext:self]);
-}
-
 - (void)setExpectations:(dispatch_block_t)expectationBlock
 {
   [LRExpectationBuilder buildExpectationsWithBlock:expectationBlock inContext:self];

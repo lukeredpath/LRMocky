@@ -29,9 +29,11 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 @synthesize requiredState;
 @synthesize calledWithInvalidState;
 
-+ (id)expectation;
++ (id)expectationWithObject:(LRMockObject *)mockObject
 {
-  return [[[self alloc] init] autorelease];
+  LRInvocationExpectation *expectation = [[[self alloc] init] autorelease];
+  expectation.mockObject = mockObject;
+  return mockObject;
 }
 
 - (id)init;

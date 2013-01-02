@@ -37,6 +37,23 @@
                BlueprintName = "Tests"
                ReferencedContainer = "container:Mocky.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "ExpectationActionsTest">
+               </Test>
+               <Test
+                  Identifier = "HamcrestIntegrationTest">
+               </Test>
+               <Test
+                  Identifier = "LRMockyStatesTest">
+               </Test>
+               <Test
+                  Identifier = "NotificationExpectationTests">
+               </Test>
+               <Test
+                  Identifier = "StateMachineTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
    </TestAction>

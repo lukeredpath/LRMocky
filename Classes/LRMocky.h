@@ -24,5 +24,3 @@
 #import "LRThrowExceptionAction.h"
 #endif
 
-#define expectThat(object) [LRExpectationBuilder expectThat:object]
-#define allow(object) [LRExpectationBuilder allow:object]
