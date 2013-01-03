@@ -12,3 +12,36 @@ NSInvocation *anyValidInvocation(void) {
   NSMethodSignature *validMethodSignature = [NSObject instanceMethodSignatureForSelector:@selector(init)];
   return [NSInvocation invocationWithMethodSignature:validMethodSignature];
 }
+
+@implementation CapturesInvocations {
+  NSMutableArray *_capturedInvocations;
+}
+
+@synthesize capturedInvocations = _capturedInvocations;
+
+- (id)init
+{
+  self = [super init];
+  if (self) {
+    _capturedInvocations = [[NSMutableArray alloc] init];
+  }
+  return self;
+}
+
+- (void)invoke:(NSInvocation *)invocation
+{
+  if ([self respondsToSelector:invocation.selector]) {
+    [invocation setTarget:self];
+    [invocation invoke];
+  }
+  else {
+    [_capturedInvocations addObject:invocation];
+  }
+}
+
+- (NSInvocation *)lastInvocation
+{
+  return [_capturedInvocations lastObject];
+}
+
+@end

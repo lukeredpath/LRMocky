@@ -8,8 +8,8 @@
 
 #import "TestHelper.h"
 #import "LRInvocationComparitor.h"
-#import "OLD_LRImposter.h"
-#import "LRClassImposterizer.h"
+#import "LRReflectionImposterizer.h"
+
 #define LRMOCKY_SHORTHAND
 
 @interface InvocationTesterObject : NSObject
@@ -25,34 +25,6 @@
 
 @end
 
-@interface InvocationCapturer : OLD_LRImposter
-{
-  NSInvocation *lastInvocation;
-}
-@property (nonatomic, readonly) NSInvocation *invocation;
-@end
-
-@implementation InvocationCapturer
-
-@synthesize invocation = lastInvocation;
-
-- (id)init
-{
-  OLD_LRImposterizer *theImposterizer = [[[LRClassImposterizer alloc] initWithClass:[InvocationTesterObject class]] autorelease];
-  return [super initWithImposterizer:theImposterizer];
-}
-
-- (void)handleImposterizedInvocation:(NSInvocation *)invocation
-{
-  [lastInvocation release];
-  [invocation retainArguments];
-  [invocation setReturnValue:&self];
-  lastInvocation = [invocation retain];
-}
-
-@end
-
-
 DEFINE_TEST_CASE(LRInvocationComparitorTest) {
   InvocationTesterObject *testObject;
   id capture;
@@ -61,13 +33,16 @@ DEFINE_TEST_CASE(LRInvocationComparitorTest) {
 - (void)setUp;
 {
   testObject = [[InvocationTesterObject alloc] init];
-  capture = [[InvocationCapturer alloc] init];
+  
+  LRReflectionImposterizer *imposterizer = [[LRReflectionImposterizer alloc] init];
+
+  capture = [imposterizer imposterizeClass:[InvocationTesterObject class] invokable:[[CapturesInvocations alloc] init] ancilliaryProtocols:nil];
 }
 
 - (void)testSanity
 {
-  assertThat([[capture takesAnObject:@"bar"] invocation], isNot(nilValue()));
-  assertThat([[capture takesAnObject:@"bar"] invocation], isNot(equalTo([[capture takesAnObject:@"foo"] invocation])));
+  assertThat([[capture takesAnObject:@"bar"] lastInvocation], isNot(nilValue()));
+  assertThat([[capture takesAnObject:@"bar"] lastInvocation], isNot(equalTo([[capture takesAnObject:@"foo"] invocation])));
 }
 
 - (void)testCanCompareObjectMethodParameters

@@ -7,13 +7,11 @@
 //
 
 #import "LRExpectationBuilder.h"
-#import "OLD_LRMockObject.h"
 #import "LRMockObject.h"
 #import "LRMockery.h"
 #import "LRInvocationExpectation.h"
 #import "LRExpectationCardinality.h"
 #import "LRMockyStates.h"
-#import "LRObjectImposterizer.h"
 #import "LRPerformBlockAction.h"
 #import "NSInvocation+OCMAdditions.h"
 

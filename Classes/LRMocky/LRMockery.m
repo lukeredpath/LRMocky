@@ -9,15 +9,12 @@
 #import "LRMockery.h"
 #import "LRExpectationBuilder.h"
 #import "LRMockObject.h"
-#import "OLD_LRMockObject.h"
 #import "LRUnexpectedInvocation.h"
 #import "LRInvocationExpectation.h"
 #import "LRNotificationExpectation.h"
 #import "LRMockyStates.h"
 #import "LRExpectationMessage.h"
 #import "LRReflectionImposterizer.h"
-
-#define addMock(mock) [self addAndReturnMock:mock];
 
 NSString *failureFor(id<LRDescribable> expectation);
 
@@ -58,20 +55,13 @@ NSString *failureFor(id<LRDescribable> expectation);
 
 - (void)dealloc;
 {
-  for (OLD_LRMockObject *mock in mockObjects) {
-    [mock undoSideEffects];
-  }
   [mockObjects release];
   [testNotifier release];
   [expectations release];
   [super dealloc];
 }
 
-- (id)addAndReturnMock:(id)mock
-{
-  [mockObjects addObject:mock];
-  return mock;
-}
+#pragma mark - Creating mock objects
 
 - (id)mock:(Class)klass;
 {
@@ -86,8 +76,6 @@ NSString *failureFor(id<LRDescribable> expectation);
   [mockObjects addObject:mock];
   return [_imposterizer imposterizeClass:klass invokable:mock ancilliaryProtocols:@[@protocol(LRCaptureControl)]];
 }
-
-#pragma mark - Creating mock objects
 
 - (id)mock
 {
@@ -106,12 +94,14 @@ NSString *failureFor(id<LRDescribable> expectation);
   return [_imposterizer imposterizeProtocol:protocol invokable:mock ancilliaryProtocols:@[@protocol(LRCaptureControl)]];
 }
 
-- (id)partialMockForObject:(id)object
+#pragma mark - Configuring expectations
+
+- (void)check:(__weak dispatch_block_t)expectationBlock
 {
-  return addMock([OLD_LRMockObject partialMockForObject:object inContext:self]);
+  [LRExpectationBuilder buildExpectationsWithBlock:expectationBlock inContext:self];
 }
 
-#pragma mark -
+#pragma mark - Notification expectations
 
 - (void)expectNotificationNamed:(NSString *)name;
 {
@@ -122,6 +112,8 @@ NSString *failureFor(id<LRDescribable> expectation);
 {
   [self addExpectation:[LRNotificationExpectation expectationWithNotificationName:name sender:sender]];
 }
+
+#pragma mark - States
 
 - (LRMockyStateMachine *)states:(NSString *)name;
 {
@@ -135,21 +127,13 @@ NSString *failureFor(id<LRDescribable> expectation);
   return stateMachine;
 }
 
-- (void)setExpectations:(__weak dispatch_block_t)expectationBlock
-{
-  [LRExpectationBuilder buildExpectationsWithBlock:expectationBlock inContext:self];
-}
-
-- (void)check:(__weak dispatch_block_t)expectationBlock
-{
-  [LRExpectationBuilder buildExpectationsWithBlock:expectationBlock inContext:self];
-}
-
 NSString *failureFor(id<LRDescribable> expectation) {
   LRExpectationMessage *errorMessage = [[[LRExpectationMessage alloc] init] autorelease];
   [expectation describeTo:errorMessage];
   return [errorMessage description];
 }
+
+#pragma mark - Verification
 
 - (void)assertSatisfied
 {
@@ -167,6 +151,8 @@ NSString *failureFor(id<LRDescribable> expectation) {
     [self reset];
   }
 }
+
+#pragma mark -
 
 - (void)addExpectation:(id<LRExpectation>)expectation;
 {

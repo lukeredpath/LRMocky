@@ -154,16 +154,12 @@
  Checking blocks are used to configure the expectations within the current mocking
  context. 
  
- checking: can be called multiple times, all expectations created within each
+ checki: can be called multiple times, all expectations created within each
  block will be appended to the previous expectations.
  
  @param expectationBlock An expectation block containing expectation calls.
  @see LRExpectationBuilder
  */
-- (void)checking:(void (^)(LRExpectationBuilder *))expectationBlock;
-
-- (void)setExpectations:(__weak dispatch_block_t)expectationBlock;
-
 - (void)check:(__weak dispatch_block_t)expectationBlock;
 
 /** Add's a new expectation to the current context.

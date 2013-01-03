@@ -26,32 +26,6 @@
 - (void)doSomething {}
 @end
 
-@interface CapturesInvocations : NSObject <LRInvokable>
-@property (nonatomic, readonly) NSArray *capturedInvocations;
-@end
-
-@implementation CapturesInvocations {
-  NSMutableArray *_capturedInvocations;
-}
-
-@synthesize capturedInvocations = _capturedInvocations;
-
-- (id)init
-{
-  self = [super init];
-  if (self) {
-    _capturedInvocations = [[NSMutableArray alloc] init];
-  }
-  return self;
-}
-
-- (void)invoke:(NSInvocation *)invocation
-{
-  [_capturedInvocations addObject:invocation];
-}
-
-@end
-
 DEFINE_TEST_CASE(LRReflectionImposterizerTest) {
   LRReflectionImposterizer *imposterizer;
   CapturesInvocations *invocationCapturer;

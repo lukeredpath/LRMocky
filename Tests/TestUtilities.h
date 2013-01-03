@@ -7,5 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LRInvokable.h"
 
 NSInvocation *anyValidInvocation(void);
+
+@interface CapturesInvocations : NSObject <LRInvokable>
+
+@property (nonatomic, readonly) NSArray *capturedInvocations;
+@property (nonatomic, readonly) NSInvocation *lastInvocation;
+
+@end
