@@ -1,121 +1,63 @@
 //
-//  LRMockObject.m
-//  LRMiniTestKit
+//  LRMockyObject.m
+//  Mocky
 //
-//  Created by Luke Redpath on 18/07/2010.
-//  Copyright 2010 LJR Software Limited. All rights reserved.
+//  Created by Luke Redpath on 03/01/2013.
+//
 //
 
 #import "LRMockObject.h"
-#import "LRMockery.h"
-#import "LRClassImposterizer.h"
-#import "LRObjectImposterizer.h"
-#import "LRProtocolImposterizer.h"
-#import "LRInvocationExpectation.h"
-#import "LRUnexpectedInvocation.h"
+#import "LRReflectionImposterizer.h"
+#import "LRInvocationToExpectationTranslator.h"
 
-@interface LRMockery (MockObjectDispatch)
-- (LRInvocationExpectation *)validExpectationForInvocation:(NSInvocation *)invocation;
-- (void)dispatchInvocation:(NSInvocation *)invocation forMock:(LRMockObject *)mockObject;
-@end
-
-@implementation LRMockObject
-
-@synthesize name;
-
-+ (id)mockForClass:(Class)aClass inContext:(LRMockery *)mockery;
-{
-  LRClassImposterizer *imposterizer = [[[LRClassImposterizer alloc] initWithClass:aClass] autorelease];
-  return [[[self alloc] initWithImposterizer:imposterizer context:mockery] autorelease];
+@implementation LRMockObject {
+  id<LRInvocationDispatcher> _dispatcher;
+  id<LRImposterizer> _imposterizer;
+  id _mockedType;
 }
 
-+ (id)mockForProtocol:(Protocol *)protocol inContext:(LRMockery *)mockery;
+- (id)initWithInvocationDispatcher:(id<LRInvocationDispatcher>)dispatcher
+                        mockedType:(id)mockedType
+                              name:(NSString *)name
 {
-  LRProtocolImposterizer *imposterizer = [[[LRProtocolImposterizer alloc] initWithProtocol:protocol] autorelease];
-  return [[[self alloc] initWithImposterizer:imposterizer context:mockery] autorelease];
-}
-
-+ (id)partialMockForObject:(id)object inContext:(LRMockery *)context
-{
-  LRObjectImposterizer *imposterizer = [[[LRObjectImposterizer alloc] initWithObject:object] autorelease];
-  return [[[self alloc] initWithImposterizer:imposterizer context:context] autorelease];
-}
-
-- (id)initWithImposterizer:(LRImposterizer *)anImposterizer context:(LRMockery *)mockery;
-{
-  if (self = [super initWithImposterizer:anImposterizer]) {
-    context = [mockery retain];
+  NSParameterAssert(dispatcher);
+  
+  if ((self = [super init])) {
+    _dispatcher = dispatcher;
+    _mockedType = mockedType;
+    _name = [name copy];
+    _imposterizer = [[LRReflectionImposterizer alloc] init];
   }
   return self;
 }
 
-- (void)dealloc;
+- (void)invoke:(NSInvocation *)invocation
 {
-  [name release];
-  [context release];
-  [super dealloc];
-}
-
-- (NSString *)description
-{
-  NSMutableString *description = [NSMutableString stringWithString:@"<LRMockObject "];
-  if (self.name) {
-    [description appendFormat:@"named:\"%@\" ", self.name];
+  if ([self respondsToSelector:invocation.selector]) {
+    [invocation setTarget:self];
+    [invocation invoke];
   }
-  [description appendFormat:@"%@>", [imposterizer description]];
-  return description;
-}
-
-- (BOOL)shouldActAsImposterForInvocation:(NSInvocation *)invocation
-{
-  if ([imposterizer isKindOfClass:[LRObjectImposterizer class]]) {
-    if ([context validExpectationForInvocation:invocation]) {
-      return YES;
-    }
-    return NO;
-  }
-  return [super shouldActAsImposterForInvocation:invocation];
-}
-
-- (void)handleImposterizedInvocation:(NSInvocation *)invocation
-{
-  [context dispatchInvocation:invocation forMock:self];
-}
-
-- (void)undoSideEffects
-{
-  if ([imposterizer respondsToSelector:@selector(undoSideEffects)]) {
-    [imposterizer performSelector:@selector(undoSideEffects)];
+  else {
+    [_dispatcher dispatch:invocation];
   }
 }
 
-@end
-
-@implementation LRMockery (MockObjectDispatch)
-
-- (LRInvocationExpectation *)validExpectationForInvocation:(NSInvocation *)invocation
+- (id)captureExpectationTo:(id<LRExpectationCapture>)capture
 {
-  for (id<LRExpectation> expectation in expectations) {
-    if ([expectation respondsToSelector:@selector(matches:)] && [(LRInvocationExpectation *)expectation matches:invocation]) {
-      return expectation;
-    }
+  LRInvocationToExpectationTranslator *translator = [[LRInvocationToExpectationTranslator alloc] initWithExpectationCapture:capture];
+  
+  id imposter = nil;
+  
+  if ([_mockedType class] == NSClassFromString(@"Protocol")) {
+    imposter = [_imposterizer imposterizeProtocol:(Protocol *)_mockedType invokable:translator ancilliaryProtocols:@[@protocol(LRExpectationCaptureSyntaticSugar)]];
   }
-  return nil;
-}
-
-- (void)dispatchInvocation:(NSInvocation *)invocation forMock:(LRMockObject *)mockObject;
-{
-  for (id<LRExpectation> expectation in expectations) {
-    if ([expectation respondsToSelector:@selector(matches:)] && [(LRInvocationExpectation *)expectation matches:invocation]) {
-      if ([expectation respondsToSelector:@selector(calledWithInvalidState)] && expectation.calledWithInvalidState == YES) {
-        return;
-      }
-      return [(LRInvocationExpectation *)expectation invoke:invocation];
-    }
+  else {
+    imposter = [_imposterizer imposterizeClass:_mockedType invokable:translator ancilliaryProtocols:@[@protocol(LRExpectationCaptureSyntaticSugar)]];
   }
-  LRUnexpectedInvocation *unexpectedInvocation = [LRUnexpectedInvocation unexpectedInvocation:invocation];
-  unexpectedInvocation.mockObject = mockObject;
-  [expectations addObject:unexpectedInvocation];
+  
+  NSAssert(imposter, @"Imposter should never be nil.");
+  
+  return imposter;
 }
 
 @end

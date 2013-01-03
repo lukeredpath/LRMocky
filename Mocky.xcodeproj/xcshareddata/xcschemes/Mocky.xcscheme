@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D2AAC07D0554694100DB518D"
                BuildableName = "libMocky.a"
-               BlueprintName = "Mocky"
+               BlueprintName = "Mocky-iOS"
                ReferencedContainer = "container:Mocky.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

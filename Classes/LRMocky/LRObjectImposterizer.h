@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LRImposterizer.h"
+#import "OLD_LRImposterizer.h"
 #import <objc/runtime.h>
 
-@interface LRObjectImposterizer : LRImposterizer {
+@interface LRObjectImposterizer : OLD_LRImposterizer {
   id objectToImposterize;
   Method originalClassMethod;
   NSInvocation *imposterizedInvocation;

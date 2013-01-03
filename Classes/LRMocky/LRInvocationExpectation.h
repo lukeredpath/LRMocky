@@ -13,7 +13,7 @@
 
 @protocol LRExpectationCardinality;
 
-@class LRMockObject;
+@class OLD_LRMockObject;
 @class LRMockyState;
 
 @interface LRInvocationExpectation : NSObject <LRExpectation> {
@@ -22,19 +22,17 @@
   NSUInteger numberOfInvocations;
   NSMutableArray *actions;
   id<LRExpectationCardinality> cardinality;
-  LRMockObject *mockObject;
+  OLD_LRMockObject *mockObject;
   LRMockyState *requiredState;
   BOOL calledWithInvalidState;
 }
 @property (nonatomic, retain) NSInvocation *invocation;
 @property (nonatomic, retain) id<LRExpectationCardinality> cardinality;
-@property (nonatomic, retain) LRMockObject *mockObject;
+@property (nonatomic, retain) OLD_LRMockObject *mockObject;
 @property (nonatomic, retain) LRMockyState *requiredState;
 @property (nonatomic, readonly) BOOL calledWithInvalidState;
 
-+ (id)expectationWithObject:(LRMockObject *)mockObject;
++ (id)expectationWithObject:(OLD_LRMockObject *)mockObject;
 - (void)addAction:(id<LRExpectationAction>)anAction;
-- (BOOL)matches:(NSInvocation *)invocation;
-- (void)invoke:(NSInvocation *)invocation;
 - (void)setInvocation:(NSInvocation *)invocation;
 @end

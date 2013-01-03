@@ -47,7 +47,7 @@ struct objc_method_description methodDescriptionForProtocol(Protocol *protocol, 
   return mdesc.types != NULL;
 }
 
-- (LRImposterizer *)matchingImposterizer;
+- (OLD_LRImposterizer *)matchingImposterizer;
 {
   return [[[LRProtocolImposterizer alloc] initWithProtocol:protocolToImposterize] autorelease];
 }

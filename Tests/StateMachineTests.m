@@ -21,9 +21,11 @@ DEFINE_FUNCTIONAL_TEST_CASE(StateMachineTests) {
 
 - (void)testCanConstrainExpectationsToOccurWithinAGivenState
 {
-  [context checking:^(that){
-    [allowing(testObject) doSomethingElse]; then([readiness becomes:@"ready"]);
-    [oneOf(testObject) doSomething]; when([readiness hasBecome:@"ready"]);
+  [context setExpectations:^{
+    [allowing(testObject) doSomethingElse]; [and then:readiness becomes:@"ready"];
+    
+    
+    [[expectThat(testObject) receives] doSomething]; when([readiness hasBecome:@"ready"]);
   }];
   
   [testObject doSomething];

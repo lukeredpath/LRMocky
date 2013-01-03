@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LRImposterizer.h"
+#import "OLD_LRImposterizer.h"
 
-@interface LRClassImposterizer : LRImposterizer {
+@interface LRClassImposterizer : OLD_LRImposterizer {
   Class klassToImposterize;
 }
 - (id)initWithClass:(Class)klass;

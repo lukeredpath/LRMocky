@@ -14,7 +14,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 
 - (void)testCanSpecifyExpectationIsCalledOnceAndFailIfCalledTwice
 {
-  [context setExpectations:^{
+  [context check:^{
     [[expectThat(testObject) receives] doSomething];
   }];
   
@@ -29,7 +29,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 
 - (void)testCanSpecifyExpectationIsCalledExactNumberOfTimesAndFailIfCalledFewerTimes
 {
-  [context setExpectations:^{
+  [context check:^{
     [[expectThat(testObject) receives:exactly(3)] doSomething];
   }];
   
@@ -44,7 +44,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 
 - (void)testCanSpecifyExpectationIsCalledExactNumberOfTimesAndFailIfCalledMoreTimes
 {
-  [context setExpectations:^{
+  [context check:^{
     [[[expectThat(testObject) receives:exactly(2)] of] doSomething];
   }];
 
@@ -62,7 +62,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 
 - (void)testCanSpecifyExpectationIsCalledAtLeastNumberOfTimesAndFailIfCalledFewerTimes
 {
-  [context checking:^(LRExpectationBuilder *builder){
+  [context check:^{
     [[[expectThat(testObject) receives:atLeast(2)] of] doSomething];
   }];
   
@@ -76,7 +76,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 
 - (void)testCanSpecifyExpectationIsCalledAtLeastNumberOfTimesAndPassIfCalledMoreTimes
 {
-  [context checking:^(LRExpectationBuilder *builder){
+  [context check:^{
     [[[expectThat(testObject) receives:atLeast(2)] of] doSomething];
   }];
   
@@ -91,7 +91,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 
 - (void)testCanSpecifyExpectationIsCalledAtLeastNumberOfTimesAndPassIfCalledTheExactNumberOfTimes
 {
-  [context checking:^(LRExpectationBuilder *builder){
+  [context check:^{
     [[[expectThat(testObject) receives:atLeast(2)] of] doSomething];
   }];
   
@@ -107,7 +107,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 
 - (void)testCanSpecifyExpectationIsCalledAtMostNumberOfTimesAndFailIfCalledMoreTimes
 {
-  [context checking:^(LRExpectationBuilder *builder){
+  [context check:^{
     [[[expectThat(testObject) receives:atMost(2)] of] doSomething];
   }];
   
@@ -123,7 +123,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 
 - (void)testCanSpecifyExpectationIsCalledAtMostNumberOfTimesAndPassIfCalledFewerTimes
 {
-  [context checking:^(LRExpectationBuilder *builder){
+  [context check:^{
     [[[expectThat(testObject) receives:atMost(2)] of] doSomething];
   }];
   
@@ -136,7 +136,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 
 - (void)testCanSpecifyExpectationIsCalledAtMostNumberOfTimesAndPassIfCalledTheExactNumberOfTimes
 {
-  [context checking:^(LRExpectationBuilder *builder){
+  [context check:^{
     [[[expectThat(testObject) receives:atMost(2)] of] doSomething];
   }];
   
@@ -152,7 +152,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 
 - (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndFailIfCalledMoreTimesThanTheUpperLimit
 {
-  [context checking:^(LRExpectationBuilder *builder){
+  [context check:^{
     [[[expectThat(testObject) receives:between(2, 5)] of] doSomething];
   }];
   
@@ -171,7 +171,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 
 - (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndFailIfCalledFewerTimesThanTheLowerLimit
 {
-  [context checking:^(LRExpectationBuilder *builder){
+  [context check:^{
     [[[expectThat(testObject) receives:between(2, 5)] of] doSomething];
   }];
   
@@ -185,7 +185,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 
 - (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndPassIfCalledLowerLimitTimes
 {
-  [context checking:^(LRExpectationBuilder *builder){
+  [context check:^{
     [[[expectThat(testObject) receives:between(2, 5)] of] doSomething];
   }];
   
@@ -199,7 +199,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 
 - (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndPassIfCalledUpperLimitTimes
 {
-  [context checking:^(LRExpectationBuilder *builder){
+  [context check:^{
     [[[expectThat(testObject) receives:between(2, 5)] of] doSomething];
   }];
   
@@ -216,7 +216,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 
 - (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndPassIfCalledBetweenUpperAndLowerLimitTimes
 {
-  [context checking:^(LRExpectationBuilder *builder){
+  [context check:^{
     [[[expectThat(testObject) receives:between(2, 5)] of] doSomething];
   }];
   
@@ -233,7 +233,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 
 - (void)testCanSpecifyExpectationIsNotAllowedAndFailIfItIsCalled
 {
-  [context checking:^(LRExpectationBuilder *builder){
+  [context check:^{
     [[expectThat(testObject) neverReceives] doSomething];
   }];
   
@@ -247,7 +247,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 
 - (void)testCanSpecifyExpectationIsNotAllowedAndPassIfItIsNotCalled
 {
-  [context checking:^(LRExpectationBuilder *builder){
+  [context check:^{
     [[expectThat(testObject) neverReceives] doSomething];
   }];
   

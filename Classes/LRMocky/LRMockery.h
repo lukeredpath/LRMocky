@@ -9,17 +9,18 @@
 #import <Foundation/Foundation.h>
 #import "LRExpectation.h"
 #import "LRTestCase.h"
+#import "LRInvocationDispatcher.h"
 
 @class LRExpectationBuilder;
 @class SenTestCase;
 @class LRMockyStateMachine;
-@class LRMockObject;
+@class OLD_LRMockObject;
 
 
 /** Represents a context in which mocks are created and verified.
  
  */
-@interface LRMockery : NSObject {
+@interface LRMockery : NSObject <LRInvocationDispatcher> {
   NSMutableArray *expectations;
   NSMutableArray *mockObjects;
   id<LRTestCaseNotifier> testNotifier;
@@ -97,26 +98,6 @@
  */
 - (id)protocolMock:(Protocol *)protocol;
 
-/** Creates a partial mock for an object.
- 
- A partial mock can be used to mock and stub methods on real objects, which otherwise
- act as normal objects. Stubbing can be used to return canned values from real objects
- (handy if you are unable to inject a mock in it's place).
- 
- You do not generally need to call this method manually although you may if you wish.
- You can set up expectations on real objects directly and a partial mock will be 
- created automatically.
- 
- In addition, any stubs configured on a partial mock will still be handled when the
- stubbed method is called directly on the original object.
- 
- @warning Dynamic handling of stubbed methods on objects does not work for toll-free
- bridged classes (NSString, NSArray, NSNumber etc.).
- 
- @param object The object that you wish to create a partial mock for.
- */
-- (id)partialMockForObject:(id)object;
-
 ///------------------------------------------------------------------------------------/
 /// @name Expecting NSNotifications
 ///------------------------------------------------------------------------------------/
@@ -181,7 +162,9 @@
  */
 - (void)checking:(void (^)(LRExpectationBuilder *))expectationBlock;
 
-- (void)setExpectations:(dispatch_block_t)expectationBlock;
+- (void)setExpectations:(__weak dispatch_block_t)expectationBlock;
+
+- (void)check:(__weak dispatch_block_t)expectationBlock;
 
 /** Add's a new expectation to the current context.
  

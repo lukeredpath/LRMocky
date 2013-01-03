@@ -15,22 +15,22 @@
 @end
 
 DEFINE_FUNCTIONAL_TEST_CASE(ProtocolMockTests) {
-  id protocolImp;
+  id mockObject;
 }
 
 - (void)setUp
 {
   [super setUp];
-  protocolImp = [[context protocolMock:@protocol(SimpleProtocol)] retain];
+  mockObject = [[context protocolMock:@protocol(SimpleProtocol)] retain];
 }
 
 - (void)testCanSetExpectationsOnRequiredMethods
 {
-  [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(protocolImp) requiredMethod];
+  [context check:^{
+    [[expectThat(mockObject) receives] requiredMethod];
   }];
   
-  [protocolImp requiredMethod];
+  [mockObject requiredMethod];
 
   assertContextSatisfied(context);
   assertThat(testCase, passed());
@@ -38,11 +38,11 @@ DEFINE_FUNCTIONAL_TEST_CASE(ProtocolMockTests) {
 
 - (void)testCanSetExpectationsOnOptionalMethods
 {
-  [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(protocolImp) optionalMethod];
+  [context check:^{
+    [[expectThat(mockObject) receives] optionalMethod];
   }];
   
-  [protocolImp optionalMethod];
+  [mockObject optionalMethod];
   
   assertContextSatisfied(context);
   assertThat(testCase, passed());

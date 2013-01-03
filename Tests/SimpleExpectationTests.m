@@ -12,7 +12,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
 
 - (void)testCanExpectSingleMethodCallAndPass;
 {
-  [context setExpectations:^{
+  [context check:^{
     [[expectThat(testObject) receives] doSomething];
   }];
   
@@ -79,7 +79,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
 
 - (void)testCanExpectSingleMethodCallAndFail;
 {
-  [context setExpectations:^{
+  [context check:^{
     [[expectThat(testObject) receives] doSomething];
   }];
 
@@ -100,7 +100,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
 
 - (void)testCanAllowSingleMethodCallAndPassWhenItIsCalled;
 {
-  [context setExpectations:^{
+  [context check:^{
     [allowing(testObject) doSomething];
   }];
   
@@ -112,7 +112,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
 
 - (void)testCanAllowSingleMethodCellAndPassWhenItIsNotCalled;
 {
-  [context setExpectations:^{
+  [context check:^{
     [allowing(testObject) doSomething];
   }];
   [context assertSatisfied];
@@ -122,7 +122,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
 
 - (void)testCanExpectMethodCallWithSpecificParametersAndPassWhenTheCorrectParameterIsUsed;
 {
-  [context setExpectations:^{
+  [context check:^{
     [[expectThat(testObject) receives] returnSomethingForValue:@"one"];
   }];
   
@@ -134,7 +134,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
 
 - (void)testCanExpectMethodCallWithSpecificParametersAndFailWhenTheWrongParameterIsUsed;
 {
-  [context setExpectations:^{
+  [context check:^{
     [[expectThat(testObject) receives] returnSomethingForValue:@"one"];
   }];
   
@@ -147,7 +147,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
 
 - (void)testCanExpectMethodCallWithSpecificParametersAndFailWhenAtLeastOneParameterIsWrong;
 {
-  [context setExpectations:^{
+  [context check:^{
     [[expectThat(testObject) receives] doSomethingWith:@"foo" andObject:@"bar"];
   }];
   
@@ -160,7 +160,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
 
 - (void)testCanExpectMethodCallWithSpecificNonObjectParametersAndPass;
 {
-  [context setExpectations:^{
+  [context check:^{
     [[expectThat(testObject) receives] doSomethingWithInt:20];
   }];
   
@@ -172,7 +172,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
 
 - (void)testCanExpectMethodCallWitBoolParametersAndPass;
 {
-  [context setExpectations:^{
+  [context check:^{
     [[expectThat(testObject) receives] doSomethingWithBool:YES];
   }];
   
@@ -184,7 +184,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
 
 - (void)testCanExpectMethodCallWithSpecificNonObjectParametersAndFail;
 {
-  [context setExpectations:^{
+  [context check:^{
     [[expectThat(testObject) receives] doSomethingWithInt:10];
   }];
   
@@ -199,7 +199,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
 {
   id mockArray = [context mock:[NSArray class]];
  
-  [context setExpectations:^{
+  [context check:^{
     [[expectThat(mockArray) receives] indexesOfObjectsPassingTest:anyBlock()];
   }];
   
@@ -208,7 +208,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
 
 //- (void)testCanExpectMethodCallsWithBlockArgumentsWithObjectAndPass;
 //{
-//  [context setExpectations:^{
+//  [context check:^{
 //    [[expectThat(testObject) receives] doSomethingWithBlockThatYields:anyBlock()]; andThen(performBlockArgumentsWithObject(@"some string"));
 //  }];
 //  
@@ -219,7 +219,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
 
 - (void)testCanResetTheMockery
 {
-  [context setExpectations:^{
+  [context check:^{
     [[expectThat(testObject) receives] doSomething];
   }];
   

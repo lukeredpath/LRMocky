@@ -28,7 +28,7 @@
   return [klassToImposterize instancesRespondToSelector:aSelector];
 }
 
-- (LRImposterizer *)matchingImposterizer;
+- (OLD_LRImposterizer *)matchingImposterizer;
 {
   return [[[LRClassImposterizer alloc] initWithClass:klassToImposterize] autorelease];
 }

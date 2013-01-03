@@ -1,26 +1,27 @@
 //
-//  LRMockObject.h
-//  LRMiniTestKit
+//  LRMockyObject.h
+//  Mocky
 //
-//  Created by Luke Redpath on 18/07/2010.
-//  Copyright 2010 LJR Software Limited. All rights reserved.
+//  Created by Luke Redpath on 03/01/2013.
+//
 //
 
-#import <Foundation/Foundation.h>
-#import "LRImposter.h"
+#import "LRInvocationDispatcher.h"
+#import "LRInvokable.h"
+#import "LRExpectationCapture.h"
 
-@class LRMockery;
-@class LRImposterizer;
+@protocol LRCaptureControl <NSObject>
 
-@interface LRMockObject : LRImposter {
-  LRMockery *context;
-  NSString *name;
-}
-@property (nonatomic, copy) NSString *name;
+- (id)captureExpectationTo:(id<LRExpectationCapture>)capture;
 
-+ (id)mockForClass:(Class)aClass inContext:(LRMockery *)mockery;
-+ (id)mockForProtocol:(Protocol *)protocol inContext:(LRMockery *)mockery;
-+ (id)partialMockForObject:(id)object inContext:(LRMockery *)context;
-- (id)initWithImposterizer:(LRImposterizer *)anImposterizer context:(LRMockery *)mockery;
-- (void)undoSideEffects;
+@end
+
+@interface LRMockObject : NSObject <LRInvokable, LRCaptureControl>
+
+@property (nonatomic, readonly) NSString *name;
+
+- (id)initWithInvocationDispatcher:(id<LRInvocationDispatcher>)dispatcher
+                        mockedType:(id)mockedType
+                              name:(NSString *)name;
+
 @end

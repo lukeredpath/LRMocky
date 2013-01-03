@@ -61,7 +61,7 @@
   return [objectToImposterize respondsToSelector:aSelector];
 }
 
-- (LRImposterizer *)matchingImposterizer;
+- (OLD_LRImposterizer *)matchingImposterizer;
 {
   return [[[LRObjectImposterizer alloc] initWithObject:objectToImposterize] autorelease];
 }

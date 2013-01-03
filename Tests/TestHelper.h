@@ -11,6 +11,7 @@
 #define HC_SHORTHAND
 #import "OCHamcrest.h"
 #import "LRTestCase.h"
+#import "TestUtilities.h"
 
 #define DEFINE_TEST_CASE_WITH_SUBCLASS(name, subclass) \
 @interface name : subclass \

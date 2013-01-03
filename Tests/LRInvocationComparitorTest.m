@@ -8,7 +8,7 @@
 
 #import "TestHelper.h"
 #import "LRInvocationComparitor.h"
-#import "LRImposter.h"
+#import "OLD_LRImposter.h"
 #import "LRClassImposterizer.h"
 #define LRMOCKY_SHORTHAND
 
@@ -25,7 +25,7 @@
 
 @end
 
-@interface InvocationCapturer : LRImposter
+@interface InvocationCapturer : OLD_LRImposter
 {
   NSInvocation *lastInvocation;
 }
@@ -38,7 +38,7 @@
 
 - (id)init
 {
-  LRImposterizer *theImposterizer = [[[LRClassImposterizer alloc] initWithClass:[InvocationTesterObject class]] autorelease];
+  OLD_LRImposterizer *theImposterizer = [[[LRClassImposterizer alloc] initWithClass:[InvocationTesterObject class]] autorelease];
   return [super initWithImposterizer:theImposterizer];
 }
 

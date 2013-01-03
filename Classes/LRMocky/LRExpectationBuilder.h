@@ -9,14 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "LRExpectation.h"
 #import "LRExpectationCardinality.h"
+#import "LRExpectationCapture.h"
 
-@class LRMockObject;
+@class OLD_LRMockObject;
 @class LRMockery;
 @class LRInvocationExpectation;
 @class LRMockyState;
-@class LRImposterizer;
+@class OLD_LRImposterizer;
 
-@interface LRExpectationBuilder : NSObject
+@interface LRExpectationBuilder : NSObject <LRExpectationCapture, LRExpectationCaptureSyntaticSugar>
 
 @property (nonatomic, readonly) id<LRExpectation> expectation;
 
@@ -51,21 +52,14 @@
  */
 - (id)setExpectationTarget:(id)object;
 
-/* No-op - simple returns self.
- 
- Syntatic sugar, designed to be used following a call to receives:cardinality.
- 
- e.g. instead of:
-   [[expectThat(object) receives:atLeast(1)] someMethod];
- 
- You can write:
-   [[[expectThat(object) receives:atLeast(1)] of] someMethod];
- */
-- (id)of;
-
 /* Specifies an action that should occur when the expectation is met.
+ 
+ 'action' should be an object that conforms to the LRExpectationAction protocol or as a
+ convenience, can be a LR_invocationActionBlock (takes an NSInvocation as its only argument).
  */
-- (id)then:(id<LRExpectationAction>)action;
+- (id)then:(id)action;
+
+- (id)then:(LRMockyState *)state becomes:(NSString *)newState;
 
 #pragma mark - Deprecated syntax
 

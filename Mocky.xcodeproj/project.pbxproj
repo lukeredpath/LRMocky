@@ -10,13 +10,13 @@
 		A301767E11FDEC22004828C5 /* LRMocky.h in Headers */ = {isa = PBXBuildFile; fileRef = A301767511FDEB9C004828C5 /* LRMocky.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A301769E11FDEEFC004828C5 /* LRExpectationBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = A301768A11FDEEFC004828C5 /* LRExpectationBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A301769F11FDEEFC004828C5 /* LRExpectationBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A301768B11FDEEFC004828C5 /* LRExpectationBuilder.m */; };
-		A30176A011FDEEFC004828C5 /* LRImposter.h in Headers */ = {isa = PBXBuildFile; fileRef = A301768C11FDEEFC004828C5 /* LRImposter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A30176A111FDEEFC004828C5 /* LRImposter.m in Sources */ = {isa = PBXBuildFile; fileRef = A301768D11FDEEFC004828C5 /* LRImposter.m */; };
+		A30176A011FDEEFC004828C5 /* OLD_LRImposter.h in Headers */ = {isa = PBXBuildFile; fileRef = A301768C11FDEEFC004828C5 /* OLD_LRImposter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A30176A111FDEEFC004828C5 /* OLD_LRImposter.m in Sources */ = {isa = PBXBuildFile; fileRef = A301768D11FDEEFC004828C5 /* OLD_LRImposter.m */; };
 		A30176A311FDEEFC004828C5 /* LRInvocationExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = A301768F11FDEEFC004828C5 /* LRInvocationExpectation.m */; };
 		A30176A411FDEEFC004828C5 /* LRMockery.h in Headers */ = {isa = PBXBuildFile; fileRef = A301769011FDEEFC004828C5 /* LRMockery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A30176A511FDEEFC004828C5 /* LRMockery.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769111FDEEFC004828C5 /* LRMockery.m */; };
-		A30176A611FDEEFC004828C5 /* LRMockObject.h in Headers */ = {isa = PBXBuildFile; fileRef = A301769211FDEEFC004828C5 /* LRMockObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A30176A711FDEEFC004828C5 /* LRMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769311FDEEFC004828C5 /* LRMockObject.m */; };
+		A30176A611FDEEFC004828C5 /* OLD_LRMockObject.h in Headers */ = {isa = PBXBuildFile; fileRef = A301769211FDEEFC004828C5 /* OLD_LRMockObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A30176A711FDEEFC004828C5 /* OLD_LRMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769311FDEEFC004828C5 /* OLD_LRMockObject.m */; };
 		A30176A811FDEEFC004828C5 /* LRPerformBlockAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A301769411FDEEFC004828C5 /* LRPerformBlockAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A30176A911FDEEFC004828C5 /* LRPerformBlockAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769511FDEEFC004828C5 /* LRPerformBlockAction.m */; };
 		A30176AA11FDEEFC004828C5 /* LRReturnValueAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A301769611FDEEFC004828C5 /* LRReturnValueAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,11 +28,30 @@
 		A3156300150434C4006949E6 /* libPods-tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31562FF150434C4006949E6 /* libPods-tests.a */; };
 		A3156301150434D5006949E6 /* HCBlockMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A36F415314296449004EAA45 /* HCBlockMatcher.m */; };
 		A3156302150434D6006949E6 /* HCBlockMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A36F415314296449004EAA45 /* HCBlockMatcher.m */; };
+		A319BB961695A469003BB49A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A319BB951695A469003BB49A /* Foundation.framework */; };
+		A319BB991695A4C2003BB49A /* LRMockObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A319BB971695A4BF003BB49A /* LRMockObjectTest.m */; };
+		A319BB9D1695A584003BB49A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A319BB9C1695A584003BB49A /* SenTestingKit.framework */; };
+		A319BBA01695AE1A003BB49A /* LRReflectionImposterizerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A319BB9E1695AB7C003BB49A /* LRReflectionImposterizerTest.m */; };
+		A31FD27B16961B66002D4511 /* LRMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E4288E1695E16800780641 /* LRMockObject.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		A31FD27C16961B8B002D4511 /* LRMockyStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = A3385AC712026269006E95AB /* LRMockyStateMachine.m */; };
+		A31FD27D16961B8B002D4511 /* LRMockyState.m in Sources */ = {isa = PBXBuildFile; fileRef = A3385ACA12026274006E95AB /* LRMockyState.m */; };
+		A31FD27E16961B8B002D4511 /* LRMockyStateTransitionAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3385ACD1202627E006E95AB /* LRMockyStateTransitionAction.m */; };
+		A31FD27F16961B9A002D4511 /* LRObjectImposterizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A381A3851224553200FA2A5C /* LRObjectImposterizer.m */; };
+		A31FD28016961BA7002D4511 /* OLD_LRImposterizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A381A38D122455EE00FA2A5C /* OLD_LRImposterizer.m */; };
+		A31FD28116961BA7002D4511 /* OLD_LRImposter.m in Sources */ = {isa = PBXBuildFile; fileRef = A301768D11FDEEFC004828C5 /* OLD_LRImposter.m */; };
+		A31FD28216961BA7002D4511 /* OLD_LRMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769311FDEEFC004828C5 /* OLD_LRMockObject.m */; };
+		A31FD28316961BB1002D4511 /* LRClassImposterizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A381A2661224426200FA2A5C /* LRClassImposterizer.m */; };
+		A31FD28416961BB1002D4511 /* LRProtocolImposterizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A381A39F122456B200FA2A5C /* LRProtocolImposterizer.m */; };
+		A31FD288169623C4002D4511 /* LRInvocationToExpectationTranslatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD286169623B4002D4511 /* LRInvocationToExpectationTranslatorTest.m */; };
+		A31FD28B16962533002D4511 /* TestUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD28A16962533002D4511 /* TestUtilities.m */; };
+		A31FD28C16962576002D4511 /* TestUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD28A16962533002D4511 /* TestUtilities.m */; };
+		A31FD29116962851002D4511 /* LRInvocationToExpectationTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD28F169626E6002D4511 /* LRInvocationToExpectationTranslator.m */; };
+		A31FD29216962852002D4511 /* LRInvocationToExpectationTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD28F169626E6002D4511 /* LRInvocationToExpectationTranslator.m */; };
+		A31FD293169641BB002D4511 /* ExpectationsWithDifferentArgumentsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D496D91210CF910076940C /* ExpectationsWithDifferentArgumentsTest.m */; };
+		A31FD294169641E0002D4511 /* CardinalityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D667B11FF508B00F0C310 /* CardinalityTests.m */; };
 		A3289A3C122C73B100D89A88 /* LRNotificationExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = A3289A3A122C73B100D89A88 /* LRNotificationExpectation.h */; };
 		A3289A3D122C73B100D89A88 /* LRNotificationExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3289A3B122C73B100D89A88 /* LRNotificationExpectation.m */; };
-		A3289A56122C746500D89A88 /* NotificationExpectationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3289A53122C744700D89A88 /* NotificationExpectationTests.m */; };
 		A32E0C6112070555009B4C81 /* NSException_SenTestFailure.h in Headers */ = {isa = PBXBuildFile; fileRef = A32E0C6012070555009B4C81 /* NSException_SenTestFailure.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A3385A1812024B31006E95AB /* StateMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C66A2A120244F20004F78B /* StateMachineTests.m */; };
 		A3385A2D12024DD3006E95AB /* LRMockyStatesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3385A2512024D08006E95AB /* LRMockyStatesTest.m */; };
 		A3385ADD12026372006E95AB /* LRMockyStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = A3385AC712026269006E95AB /* LRMockyStateMachine.m */; };
 		A3385ADE12026375006E95AB /* LRMockyState.m in Sources */ = {isa = PBXBuildFile; fileRef = A3385ACA12026274006E95AB /* LRMockyState.m */; };
@@ -44,21 +63,18 @@
 		A34650D411F857680080B46B /* LRMockeryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A34650D311F857680080B46B /* LRMockeryTest.m */; };
 		A35D65BD11FF2DE800F0C310 /* LRInvocationComparitorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D65B611FF2C3F00F0C310 /* LRInvocationComparitorTest.m */; };
 		A35D65BE11FF2DF300F0C310 /* LRInvocationComparitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D65BA11FF2C6C00F0C310 /* LRInvocationComparitor.m */; };
-		A35D667C11FF508B00F0C310 /* CardinalityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D667B11FF508B00F0C310 /* CardinalityTests.m */; };
 		A36F414B142962C4004EAA45 /* LRHamcrestSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = A36F414A142962C4004EAA45 /* LRHamcrestSupport.h */; };
 		A381A1FA12243BE900FA2A5C /* LRExpectationAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A301768911FDEEFC004828C5 /* LRExpectationAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A381A1FB12243BF200FA2A5C /* LRDescribable.h in Headers */ = {isa = PBXBuildFile; fileRef = A391557A11FF670500FE7C49 /* LRDescribable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A381A20112243C0100FA2A5C /* LRConsecutiveCallAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A3EE4EF511FE5D64002DA61D /* LRConsecutiveCallAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A381A20312243C1400FA2A5C /* LRMockyStates.h in Headers */ = {isa = PBXBuildFile; fileRef = A3C66A42120249240004F78B /* LRMockyStates.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A381A20B12243C3000FA2A5C /* LRMultipleAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A3EE4F3911FF1680002DA61D /* LRMultipleAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A381A25312243FAC00FA2A5C /* ProtocolMockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A381A25212243FAC00FA2A5C /* ProtocolMockTests.m */; };
-		A381A2611224410A00FA2A5C /* ImposterizerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A381A2601224410A00FA2A5C /* ImposterizerTest.m */; };
 		A381A2671224426200FA2A5C /* LRClassImposterizer.h in Headers */ = {isa = PBXBuildFile; fileRef = A381A2651224426200FA2A5C /* LRClassImposterizer.h */; };
 		A381A2681224426200FA2A5C /* LRClassImposterizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A381A2661224426200FA2A5C /* LRClassImposterizer.m */; };
 		A381A3861224553200FA2A5C /* LRObjectImposterizer.h in Headers */ = {isa = PBXBuildFile; fileRef = A381A3841224553200FA2A5C /* LRObjectImposterizer.h */; };
 		A381A3871224553200FA2A5C /* LRObjectImposterizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A381A3851224553200FA2A5C /* LRObjectImposterizer.m */; };
-		A381A38E122455EE00FA2A5C /* LRImposterizer.h in Headers */ = {isa = PBXBuildFile; fileRef = A381A38C122455EE00FA2A5C /* LRImposterizer.h */; };
-		A381A38F122455EE00FA2A5C /* LRImposterizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A381A38D122455EE00FA2A5C /* LRImposterizer.m */; };
+		A381A38E122455EE00FA2A5C /* OLD_LRImposterizer.h in Headers */ = {isa = PBXBuildFile; fileRef = A381A38C122455EE00FA2A5C /* OLD_LRImposterizer.h */; };
+		A381A38F122455EE00FA2A5C /* OLD_LRImposterizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A381A38D122455EE00FA2A5C /* OLD_LRImposterizer.m */; };
 		A381A3A0122456B200FA2A5C /* LRProtocolImposterizer.h in Headers */ = {isa = PBXBuildFile; fileRef = A381A39E122456B200FA2A5C /* LRProtocolImposterizer.h */; };
 		A381A3A1122456B200FA2A5C /* LRProtocolImposterizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A381A39F122456B200FA2A5C /* LRProtocolImposterizer.m */; };
 		A38AFDFB122BEC2E0001D038 /* LRPerformBlockArgumentAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A38AFDF9122BEC2E0001D038 /* LRPerformBlockArgumentAction.h */; };
@@ -74,7 +90,6 @@
 		A391561A11FFB82900FE7C49 /* LRConsecutiveCallAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4EF611FE5D64002DA61D /* LRConsecutiveCallAction.m */; };
 		A3943E0B11FFBBAB007FE700 /* BasicExamples.m in Sources */ = {isa = PBXBuildFile; fileRef = A3943E0A11FFBBAB007FE700 /* BasicExamples.m */; };
 		A398EEF413D1F759005C26AA /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A346500111F2937D0080B46B /* TestHelper.m */; };
-		A3C707F811FDDFE0000D2A8C /* ExpectationActionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */; };
 		A3C8058F1207138E00BA64E7 /* LRExpectationMessage.m in Headers */ = {isa = PBXBuildFile; fileRef = A391557011FF661400FE7C49 /* LRExpectationMessage.m */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3C805921207139A00BA64E7 /* LRMockyStateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = A3385AC612026269006E95AB /* LRMockyStateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3C805931207139A00BA64E7 /* LRMockyState.h in Headers */ = {isa = PBXBuildFile; fileRef = A3385AC912026273006E95AB /* LRMockyState.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -83,8 +98,32 @@
 		A3C805961207139A00BA64E7 /* LRInvocationExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = A301768E11FDEEFC004828C5 /* LRInvocationExpectation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3C805971207139A00BA64E7 /* LRUnexpectedInvocation.h in Headers */ = {isa = PBXBuildFile; fileRef = A301769A11FDEEFC004828C5 /* LRUnexpectedInvocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3C805981207139A00BA64E7 /* LRExpectationCardinality.h in Headers */ = {isa = PBXBuildFile; fileRef = A391554711FF5F0900FE7C49 /* LRExpectationCardinality.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A3D496E31210D0070076940C /* ExpectationsWithDifferentArgumentsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D496D91210CF910076940C /* ExpectationsWithDifferentArgumentsTest.m */; };
-		A3EE4F5211FF1B7C002DA61D /* HamcrestIntegrationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F5111FF1B7C002DA61D /* HamcrestIntegrationTest.m */; };
+		A3E4288F1695E16800780641 /* LRMockObject.h in Headers */ = {isa = PBXBuildFile; fileRef = A3E4288D1695E16800780641 /* LRMockObject.h */; };
+		A3E428901695E16800780641 /* LRMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E4288E1695E16800780641 /* LRMockObject.m */; };
+		A3E428951695E23000780641 /* LRReflectionImposterizer.h in Headers */ = {isa = PBXBuildFile; fileRef = A3E428931695E22F00780641 /* LRReflectionImposterizer.h */; };
+		A3E428961695E23000780641 /* LRReflectionImposterizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E428941695E23000780641 /* LRReflectionImposterizer.m */; };
+		A3E428AA1695E32300780641 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3E428A81695E32300780641 /* InfoPlist.strings */; };
+		A3E428AE1695E32300780641 /* Mocky_OSX.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E428AD1695E32300780641 /* Mocky_OSX.m */; };
+		A3E428B31695E33A00780641 /* LRReflectionImposterizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E428941695E23000780641 /* LRReflectionImposterizer.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		A3E428B41695E34900780641 /* Mocky-OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E4289E1695E32300780641 /* Mocky-OSX.framework */; };
+		A3E428B51695E37E00780641 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A319BB951695A469003BB49A /* Foundation.framework */; };
+		A3E428B61695E59200780641 /* LRMockery.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769111FDEEFC004828C5 /* LRMockery.m */; };
+		A3E428B71695E6D900780641 /* ProtocolMockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A381A25212243FAC00FA2A5C /* ProtocolMockTests.m */; };
+		A3E428B816961AD700780641 /* LRTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769911FDEEFC004828C5 /* LRTestCase.m */; };
+		A3E428B916961B0F00780641 /* LRInvocationExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = A301768F11FDEEFC004828C5 /* LRInvocationExpectation.m */; };
+		A3E428BA16961B0F00780641 /* LRUnexpectedInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769B11FDEEFC004828C5 /* LRUnexpectedInvocation.m */; };
+		A3E428BB16961B0F00780641 /* LRExpectationCardinality.m in Sources */ = {isa = PBXBuildFile; fileRef = A391554811FF5F0900FE7C49 /* LRExpectationCardinality.m */; };
+		A3E428BC16961B0F00780641 /* LRNotificationExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3289A3B122C73B100D89A88 /* LRNotificationExpectation.m */; };
+		A3E428BD16961B0F00780641 /* LRPerformBlockAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769511FDEEFC004828C5 /* LRPerformBlockAction.m */; };
+		A3E428BE16961B0F00780641 /* LRReturnValueAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769711FDEEFC004828C5 /* LRReturnValueAction.m */; };
+		A3E428BF16961B0F00780641 /* LRConsecutiveCallAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4EF611FE5D64002DA61D /* LRConsecutiveCallAction.m */; };
+		A3E428C016961B0F00780641 /* LRThrowExceptionAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F1511FE6187002DA61D /* LRThrowExceptionAction.m */; };
+		A3E428C116961B0F00780641 /* LRMultipleAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F3A11FF1680002DA61D /* LRMultipleAction.m */; };
+		A3E428C216961B0F00780641 /* LRPerformBlockArgumentAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A38AFDFA122BEC2E0001D038 /* LRPerformBlockArgumentAction.m */; };
+		A3E428C316961B0F00780641 /* LRExpectationBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A301768B11FDEEFC004828C5 /* LRExpectationBuilder.m */; };
+		A3E428C416961B0F00780641 /* LRInvocationComparitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D65BA11FF2C6C00F0C310 /* LRInvocationComparitor.m */; };
+		A3E428C516961B0F00780641 /* LRExpectationMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A391557011FF661400FE7C49 /* LRExpectationMessage.m */; };
+		A3E428C616961B0F00780641 /* LRMockyAutomation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F962431505869F003051DD /* LRMockyAutomation.m */; };
 		A3EE4F5911FF1C10002DA61D /* FunctionalMockeryTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F5811FF1C0F002DA61D /* FunctionalMockeryTestCase.m */; };
 		A3F962441505869F003051DD /* LRMockyAutomation.h in Headers */ = {isa = PBXBuildFile; fileRef = A3F962421505869F003051DD /* LRMockyAutomation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3F962451505869F003051DD /* LRMockyAutomation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F962431505869F003051DD /* LRMockyAutomation.m */; };
@@ -116,14 +155,14 @@
 		A301768911FDEEFC004828C5 /* LRExpectationAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectationAction.h; sourceTree = "<group>"; };
 		A301768A11FDEEFC004828C5 /* LRExpectationBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectationBuilder.h; sourceTree = "<group>"; };
 		A301768B11FDEEFC004828C5 /* LRExpectationBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRExpectationBuilder.m; sourceTree = "<group>"; };
-		A301768C11FDEEFC004828C5 /* LRImposter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRImposter.h; sourceTree = "<group>"; };
-		A301768D11FDEEFC004828C5 /* LRImposter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRImposter.m; sourceTree = "<group>"; };
+		A301768C11FDEEFC004828C5 /* OLD_LRImposter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLD_LRImposter.h; sourceTree = "<group>"; };
+		A301768D11FDEEFC004828C5 /* OLD_LRImposter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLD_LRImposter.m; sourceTree = "<group>"; };
 		A301768E11FDEEFC004828C5 /* LRInvocationExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRInvocationExpectation.h; sourceTree = "<group>"; };
 		A301768F11FDEEFC004828C5 /* LRInvocationExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRInvocationExpectation.m; sourceTree = "<group>"; };
 		A301769011FDEEFC004828C5 /* LRMockery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMockery.h; sourceTree = "<group>"; };
 		A301769111FDEEFC004828C5 /* LRMockery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMockery.m; sourceTree = "<group>"; };
-		A301769211FDEEFC004828C5 /* LRMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMockObject.h; sourceTree = "<group>"; };
-		A301769311FDEEFC004828C5 /* LRMockObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMockObject.m; sourceTree = "<group>"; };
+		A301769211FDEEFC004828C5 /* OLD_LRMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLD_LRMockObject.h; sourceTree = "<group>"; };
+		A301769311FDEEFC004828C5 /* OLD_LRMockObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLD_LRMockObject.m; sourceTree = "<group>"; };
 		A301769411FDEEFC004828C5 /* LRPerformBlockAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRPerformBlockAction.h; sourceTree = "<group>"; };
 		A301769511FDEEFC004828C5 /* LRPerformBlockAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRPerformBlockAction.m; sourceTree = "<group>"; };
 		A301769611FDEEFC004828C5 /* LRReturnValueAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRReturnValueAction.h; sourceTree = "<group>"; };
@@ -135,11 +174,21 @@
 		A31562FC150434B4006949E6 /* Pods-tests.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-tests.xcconfig"; path = "Pods/Pods-tests.xcconfig"; sourceTree = "<group>"; };
 		A31562FD150434C0006949E6 /* libPods-tests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-tests.a"; path = "Pods/build/Release-iphoneos/libPods-tests.a"; sourceTree = "<group>"; };
 		A31562FF150434C4006949E6 /* libPods-tests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-tests.a"; path = "Pods/build/Release-iphoneos/libPods-tests.a"; sourceTree = "<group>"; };
+		A319BB7F1695A414003BB49A /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A319BB951695A469003BB49A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A319BB971695A4BF003BB49A /* LRMockObjectTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMockObjectTest.m; sourceTree = "<group>"; };
+		A319BB9C1695A584003BB49A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		A319BB9E1695AB7C003BB49A /* LRReflectionImposterizerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRReflectionImposterizerTest.m; sourceTree = "<group>"; };
+		A31FD286169623B4002D4511 /* LRInvocationToExpectationTranslatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRInvocationToExpectationTranslatorTest.m; sourceTree = "<group>"; };
+		A31FD28916962532002D4511 /* TestUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUtilities.h; sourceTree = "<group>"; };
+		A31FD28A16962533002D4511 /* TestUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUtilities.m; sourceTree = "<group>"; };
+		A31FD28D1696260D002D4511 /* LRExpectationCapture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRExpectationCapture.h; sourceTree = "<group>"; };
+		A31FD28E169626E6002D4511 /* LRInvocationToExpectationTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRInvocationToExpectationTranslator.h; sourceTree = "<group>"; };
+		A31FD28F169626E6002D4511 /* LRInvocationToExpectationTranslator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRInvocationToExpectationTranslator.m; sourceTree = "<group>"; };
 		A3289A3A122C73B100D89A88 /* LRNotificationExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRNotificationExpectation.h; sourceTree = "<group>"; };
 		A3289A3B122C73B100D89A88 /* LRNotificationExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRNotificationExpectation.m; sourceTree = "<group>"; };
 		A3289A53122C744700D89A88 /* NotificationExpectationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationExpectationTests.m; sourceTree = "<group>"; };
 		A32E0C6012070555009B4C81 /* NSException_SenTestFailure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSException_SenTestFailure.h; sourceTree = "<group>"; };
-		A332B0B61229D05B00B8F201 /* PLBlocks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PLBlocks.framework; sourceTree = "<group>"; };
 		A3385A2512024D08006E95AB /* LRMockyStatesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMockyStatesTest.m; sourceTree = "<group>"; };
 		A3385AC612026269006E95AB /* LRMockyStateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMockyStateMachine.h; sourceTree = "<group>"; };
 		A3385AC712026269006E95AB /* LRMockyStateMachine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMockyStateMachine.m; sourceTree = "<group>"; };
@@ -163,13 +212,12 @@
 		A36FDBB411FFBB6E004A08F4 /* Example Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Example Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A36FDBB511FFBB6E004A08F4 /* Example Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example Tests-Info.plist"; sourceTree = "<group>"; };
 		A381A25212243FAC00FA2A5C /* ProtocolMockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolMockTests.m; sourceTree = "<group>"; };
-		A381A2601224410A00FA2A5C /* ImposterizerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImposterizerTest.m; sourceTree = "<group>"; };
 		A381A2651224426200FA2A5C /* LRClassImposterizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRClassImposterizer.h; sourceTree = "<group>"; };
 		A381A2661224426200FA2A5C /* LRClassImposterizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRClassImposterizer.m; sourceTree = "<group>"; };
 		A381A3841224553200FA2A5C /* LRObjectImposterizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRObjectImposterizer.h; sourceTree = "<group>"; };
 		A381A3851224553200FA2A5C /* LRObjectImposterizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRObjectImposterizer.m; sourceTree = "<group>"; };
-		A381A38C122455EE00FA2A5C /* LRImposterizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRImposterizer.h; sourceTree = "<group>"; };
-		A381A38D122455EE00FA2A5C /* LRImposterizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRImposterizer.m; sourceTree = "<group>"; };
+		A381A38C122455EE00FA2A5C /* OLD_LRImposterizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OLD_LRImposterizer.h; sourceTree = "<group>"; };
+		A381A38D122455EE00FA2A5C /* OLD_LRImposterizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OLD_LRImposterizer.m; sourceTree = "<group>"; };
 		A381A39E122456B200FA2A5C /* LRProtocolImposterizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRProtocolImposterizer.h; sourceTree = "<group>"; };
 		A381A39F122456B200FA2A5C /* LRProtocolImposterizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRProtocolImposterizer.m; sourceTree = "<group>"; };
 		A38AFDF9122BEC2E0001D038 /* LRPerformBlockArgumentAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRPerformBlockArgumentAction.h; sourceTree = "<group>"; };
@@ -188,6 +236,22 @@
 		A3C66A42120249240004F78B /* LRMockyStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMockyStates.h; sourceTree = "<group>"; };
 		A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpectationActionsTest.m; sourceTree = "<group>"; };
 		A3D496D91210CF910076940C /* ExpectationsWithDifferentArgumentsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpectationsWithDifferentArgumentsTest.m; sourceTree = "<group>"; };
+		A3E4288D1695E16800780641 /* LRMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMockObject.h; sourceTree = "<group>"; };
+		A3E4288E1695E16800780641 /* LRMockObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMockObject.m; sourceTree = "<group>"; };
+		A3E428911695E1A500780641 /* LRInvocationDispatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRInvocationDispatcher.h; sourceTree = "<group>"; };
+		A3E428921695E1DD00780641 /* LRInvokable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRInvokable.h; sourceTree = "<group>"; };
+		A3E428931695E22F00780641 /* LRReflectionImposterizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRReflectionImposterizer.h; sourceTree = "<group>"; };
+		A3E428941695E23000780641 /* LRReflectionImposterizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRReflectionImposterizer.m; sourceTree = "<group>"; };
+		A3E428971695E24B00780641 /* LRImposterizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRImposterizer.h; sourceTree = "<group>"; };
+		A3E4289E1695E32300780641 /* Mocky-OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Mocky-OSX.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3E428A21695E32300780641 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		A3E428A31695E32300780641 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A3E428A41695E32300780641 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A3E428A71695E32300780641 /* Mocky-OSX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Mocky-OSX-Info.plist"; sourceTree = "<group>"; };
+		A3E428A91695E32300780641 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A3E428AB1695E32300780641 /* Mocky-OSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mocky-OSX-Prefix.pch"; sourceTree = "<group>"; };
+		A3E428AC1695E32300780641 /* Mocky_OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Mocky_OSX.h; sourceTree = "<group>"; };
+		A3E428AD1695E32300780641 /* Mocky_OSX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mocky_OSX.m; sourceTree = "<group>"; };
 		A3EE4EF511FE5D64002DA61D /* LRConsecutiveCallAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRConsecutiveCallAction.h; sourceTree = "<group>"; };
 		A3EE4EF611FE5D64002DA61D /* LRConsecutiveCallAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRConsecutiveCallAction.m; sourceTree = "<group>"; };
 		A3EE4F1411FE6187002DA61D /* LRThrowExceptionAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRThrowExceptionAction.h; sourceTree = "<group>"; };
@@ -205,6 +269,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A319BB7B1695A414003BB49A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3E428B41695E34900780641 /* Mocky-OSX.framework in Frameworks */,
+				A319BB9D1695A584003BB49A /* SenTestingKit.framework in Frameworks */,
+				A319BB961695A469003BB49A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A3464E7B11F279020080B46B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -220,6 +294,14 @@
 			files = (
 				A3156300150434C4006949E6 /* libPods-tests.a in Frameworks */,
 				A340492D11FFBC4D0092E4C6 /* libMocky.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3E4289A1695E32300780641 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3E428B51695E37E00780641 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +322,8 @@
 				D2AAC07E0554694100DB518D /* libMocky.a */,
 				A3464E7E11F279020080B46B /* Tests.octest */,
 				A36FDBB411FFBB6E004A08F4 /* Example Tests.octest */,
+				A319BB7F1695A414003BB49A /* UnitTests.octest */,
+				A3E4289E1695E32300780641 /* Mocky-OSX.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -252,6 +336,7 @@
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				A3464D1311F23CC90080B46B /* Tests */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
+				A3E428A51695E32300780641 /* Mocky-OSX */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 				A31562FB150434A1006949E6 /* Pods Support */,
@@ -262,9 +347,11 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A332B0B61229D05B00B8F201 /* PLBlocks.framework */,
+				A319BB9C1695A584003BB49A /* SenTestingKit.framework */,
+				A319BB951695A469003BB49A /* Foundation.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 				0320E4B8467A449C9250B972 /* libPods.a */,
+				A3E428A11695E32300780641 /* Other Frameworks */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -291,6 +378,16 @@
 		A301768711FDEEFC004828C5 /* LRMocky */ = {
 			isa = PBXGroup;
 			children = (
+				A3E4288D1695E16800780641 /* LRMockObject.h */,
+				A3E4288E1695E16800780641 /* LRMockObject.m */,
+				A3E428911695E1A500780641 /* LRInvocationDispatcher.h */,
+				A3E428921695E1DD00780641 /* LRInvokable.h */,
+				A3E428971695E24B00780641 /* LRImposterizer.h */,
+				A31FD28D1696260D002D4511 /* LRExpectationCapture.h */,
+				A3E428931695E22F00780641 /* LRReflectionImposterizer.h */,
+				A3E428941695E23000780641 /* LRReflectionImposterizer.m */,
+				A31FD28E169626E6002D4511 /* LRInvocationToExpectationTranslator.h */,
+				A31FD28F169626E6002D4511 /* LRInvocationToExpectationTranslator.m */,
 				A381A2621224412B00FA2A5C /* Imposterizers */,
 				A32E0C5C12070477009B4C81 /* Integration */,
 				A3385AC512026244006E95AB /* States */,
@@ -298,12 +395,12 @@
 				A30176B011FDEF01004828C5 /* Actions */,
 				A301768A11FDEEFC004828C5 /* LRExpectationBuilder.h */,
 				A301768B11FDEEFC004828C5 /* LRExpectationBuilder.m */,
-				A301768C11FDEEFC004828C5 /* LRImposter.h */,
-				A301768D11FDEEFC004828C5 /* LRImposter.m */,
+				A301768C11FDEEFC004828C5 /* OLD_LRImposter.h */,
+				A301768D11FDEEFC004828C5 /* OLD_LRImposter.m */,
 				A301769011FDEEFC004828C5 /* LRMockery.h */,
 				A301769111FDEEFC004828C5 /* LRMockery.m */,
-				A301769211FDEEFC004828C5 /* LRMockObject.h */,
-				A301769311FDEEFC004828C5 /* LRMockObject.m */,
+				A301769211FDEEFC004828C5 /* OLD_LRMockObject.h */,
+				A301769311FDEEFC004828C5 /* OLD_LRMockObject.m */,
 				A35D65B911FF2C6B00F0C310 /* LRInvocationComparitor.h */,
 				A35D65BA11FF2C6C00F0C310 /* LRInvocationComparitor.m */,
 				A391556F11FF661400FE7C49 /* LRExpectationMessage.h */,
@@ -425,10 +522,12 @@
 		A3464F8911F289260080B46B /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
+				A31FD286169623B4002D4511 /* LRInvocationToExpectationTranslatorTest.m */,
+				A319BB971695A4BF003BB49A /* LRMockObjectTest.m */,
+				A319BB9E1695AB7C003BB49A /* LRReflectionImposterizerTest.m */,
 				A34650D311F857680080B46B /* LRMockeryTest.m */,
 				A35D65B611FF2C3F00F0C310 /* LRInvocationComparitorTest.m */,
 				A3385A2512024D08006E95AB /* LRMockyStatesTest.m */,
-				A381A2601224410A00FA2A5C /* ImposterizerTest.m */,
 			);
 			name = "Unit Tests";
 			sourceTree = "<group>";
@@ -441,6 +540,8 @@
 				A3EE4F5811FF1C0F002DA61D /* FunctionalMockeryTestCase.m */,
 				A346500011F2937D0080B46B /* TestHelper.h */,
 				A346500111F2937D0080B46B /* TestHelper.m */,
+				A31FD28916962532002D4511 /* TestUtilities.h */,
+				A31FD28A16962533002D4511 /* TestUtilities.m */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -454,8 +555,8 @@
 				A381A3851224553200FA2A5C /* LRObjectImposterizer.m */,
 				A381A39E122456B200FA2A5C /* LRProtocolImposterizer.h */,
 				A381A39F122456B200FA2A5C /* LRProtocolImposterizer.m */,
-				A381A38C122455EE00FA2A5C /* LRImposterizer.h */,
-				A381A38D122455EE00FA2A5C /* LRImposterizer.m */,
+				A381A38C122455EE00FA2A5C /* OLD_LRImposterizer.h */,
+				A381A38D122455EE00FA2A5C /* OLD_LRImposterizer.m */,
 			);
 			name = Imposterizers;
 			sourceTree = "<group>";
@@ -478,9 +579,46 @@
 			name = Examples;
 			sourceTree = "<group>";
 		};
+		A3E428A11695E32300780641 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3E428A21695E32300780641 /* AppKit.framework */,
+				A3E428A31695E32300780641 /* CoreData.framework */,
+				A3E428A41695E32300780641 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		A3E428A51695E32300780641 /* Mocky-OSX */ = {
+			isa = PBXGroup;
+			children = (
+				A3E428AC1695E32300780641 /* Mocky_OSX.h */,
+				A3E428AD1695E32300780641 /* Mocky_OSX.m */,
+				A3E428A61695E32300780641 /* Supporting Files */,
+			);
+			path = "Mocky-OSX";
+			sourceTree = "<group>";
+		};
+		A3E428A61695E32300780641 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3E428A71695E32300780641 /* Mocky-OSX-Info.plist */,
+				A3E428A81695E32300780641 /* InfoPlist.strings */,
+				A3E428AB1695E32300780641 /* Mocky-OSX-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		A3E4289B1695E32300780641 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AAC07A0554694100DB518D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -503,27 +641,47 @@
 				A301767E11FDEC22004828C5 /* LRMocky.h in Headers */,
 				AA747D9F0F9514B9006C5449 /* Mocky_Prefix.pch in Headers */,
 				A301769E11FDEEFC004828C5 /* LRExpectationBuilder.h in Headers */,
-				A30176A011FDEEFC004828C5 /* LRImposter.h in Headers */,
+				A30176A011FDEEFC004828C5 /* OLD_LRImposter.h in Headers */,
 				A30176A411FDEEFC004828C5 /* LRMockery.h in Headers */,
-				A30176A611FDEEFC004828C5 /* LRMockObject.h in Headers */,
+				A30176A611FDEEFC004828C5 /* OLD_LRMockObject.h in Headers */,
 				A30176A811FDEEFC004828C5 /* LRPerformBlockAction.h in Headers */,
 				A30176AA11FDEEFC004828C5 /* LRReturnValueAction.h in Headers */,
 				A39155B811FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h in Headers */,
 				A381A2671224426200FA2A5C /* LRClassImposterizer.h in Headers */,
 				A381A3861224553200FA2A5C /* LRObjectImposterizer.h in Headers */,
-				A381A38E122455EE00FA2A5C /* LRImposterizer.h in Headers */,
+				A381A38E122455EE00FA2A5C /* OLD_LRImposterizer.h in Headers */,
 				A381A3A0122456B200FA2A5C /* LRProtocolImposterizer.h in Headers */,
 				A38AFDFB122BEC2E0001D038 /* LRPerformBlockArgumentAction.h in Headers */,
 				A38AFFC5122BFD020001D038 /* NSInvocation+LRAdditions.h in Headers */,
 				A3289A3C122C73B100D89A88 /* LRNotificationExpectation.h in Headers */,
 				A36F414B142962C4004EAA45 /* LRHamcrestSupport.h in Headers */,
 				A3F962441505869F003051DD /* LRMockyAutomation.h in Headers */,
+				A3E4288F1695E16800780641 /* LRMockObject.h in Headers */,
+				A3E428951695E23000780641 /* LRReflectionImposterizer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		A319BB7E1695A414003BB49A /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A319BB941695A414003BB49A /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				A319BB7A1695A414003BB49A /* Sources */,
+				A319BB7B1695A414003BB49A /* Frameworks */,
+				A319BB7C1695A414003BB49A /* Resources */,
+				A319BB7D1695A414003BB49A /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = A319BB7F1695A414003BB49A /* UnitTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		A3464E7D11F279020080B46B /* Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3464E8211F279030080B46B /* Build configuration list for PBXNativeTarget "Tests" */;
@@ -564,9 +722,27 @@
 			productReference = A36FDBB411FFBB6E004A08F4 /* Example Tests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
-		D2AAC07D0554694100DB518D /* Mocky */ = {
+		A3E4289D1695E32300780641 /* Mocky-OSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "Mocky" */;
+			buildConfigurationList = A3E428AF1695E32300780641 /* Build configuration list for PBXNativeTarget "Mocky-OSX" */;
+			buildPhases = (
+				A3E428991695E32300780641 /* Sources */,
+				A3E4289A1695E32300780641 /* Frameworks */,
+				A3E4289B1695E32300780641 /* Headers */,
+				A3E4289C1695E32300780641 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mocky-OSX";
+			productName = "Mocky-OSX";
+			productReference = A3E4289E1695E32300780641 /* Mocky-OSX.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D2AAC07D0554694100DB518D /* Mocky-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "Mocky-iOS" */;
 			buildPhases = (
 				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07B0554694100DB518D /* Sources */,
@@ -577,7 +753,7 @@
 			);
 			dependencies = (
 			);
-			name = Mocky;
+			name = "Mocky-iOS";
 			productName = LRMiniTestKit;
 			productReference = D2AAC07E0554694100DB518D /* libMocky.a */;
 			productType = "com.apple.product-type.library.static";
@@ -602,14 +778,23 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D2AAC07D0554694100DB518D /* Mocky */,
+				D2AAC07D0554694100DB518D /* Mocky-iOS */,
+				A3E4289D1695E32300780641 /* Mocky-OSX */,
 				A3464E7D11F279020080B46B /* Tests */,
 				A36FDBB311FFBB6E004A08F4 /* Example Tests */,
+				A319BB7E1695A414003BB49A /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A319BB7C1695A414003BB49A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A3464E7911F279020080B46B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -621,6 +806,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3E4289C1695E32300780641 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3E428AA1695E32300780641 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,6 +834,19 @@
 			shellPath = /bin/sh;
 			shellScript = "";
 			showEnvVarsInLog = 0;
+		};
+		A319BB7D1695A414003BB49A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
 		A3464E7C11F279020080B46B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -672,6 +878,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A319BB7A1695A414003BB49A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A319BB991695A4C2003BB49A /* LRMockObjectTest.m in Sources */,
+				A319BBA01695AE1A003BB49A /* LRReflectionImposterizerTest.m in Sources */,
+				A31FD288169623C4002D4511 /* LRInvocationToExpectationTranslatorTest.m in Sources */,
+				A31FD28C16962576002D4511 /* TestUtilities.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A3464E7A11F279020080B46B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -679,18 +896,14 @@
 				A3464E8D11F2794A0080B46B /* SimpleExpectationTests.m in Sources */,
 				A346500211F2937D0080B46B /* TestHelper.m in Sources */,
 				A34650D411F857680080B46B /* LRMockeryTest.m in Sources */,
-				A3C707F811FDDFE0000D2A8C /* ExpectationActionsTest.m in Sources */,
-				A3EE4F5211FF1B7C002DA61D /* HamcrestIntegrationTest.m in Sources */,
 				A3EE4F5911FF1C10002DA61D /* FunctionalMockeryTestCase.m in Sources */,
 				A35D65BD11FF2DE800F0C310 /* LRInvocationComparitorTest.m in Sources */,
-				A3385A1812024B31006E95AB /* StateMachineTests.m in Sources */,
-				A35D667C11FF508B00F0C310 /* CardinalityTests.m in Sources */,
 				A3385A2D12024DD3006E95AB /* LRMockyStatesTest.m in Sources */,
-				A3D496E31210D0070076940C /* ExpectationsWithDifferentArgumentsTest.m in Sources */,
-				A381A25312243FAC00FA2A5C /* ProtocolMockTests.m in Sources */,
-				A381A2611224410A00FA2A5C /* ImposterizerTest.m in Sources */,
-				A3289A56122C746500D89A88 /* NotificationExpectationTests.m in Sources */,
 				A3156301150434D5006949E6 /* HCBlockMatcher.m in Sources */,
+				A3E428B71695E6D900780641 /* ProtocolMockTests.m in Sources */,
+				A31FD28B16962533002D4511 /* TestUtilities.m in Sources */,
+				A31FD293169641BB002D4511 /* ExpectationsWithDifferentArgumentsTest.m in Sources */,
+				A31FD294169641E0002D4511 /* CardinalityTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,6 +917,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A3E428991695E32300780641 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3E428AE1695E32300780641 /* Mocky_OSX.m in Sources */,
+				A3E428B31695E33A00780641 /* LRReflectionImposterizer.m in Sources */,
+				A3E428B61695E59200780641 /* LRMockery.m in Sources */,
+				A3E428B816961AD700780641 /* LRTestCase.m in Sources */,
+				A3E428B916961B0F00780641 /* LRInvocationExpectation.m in Sources */,
+				A3E428BA16961B0F00780641 /* LRUnexpectedInvocation.m in Sources */,
+				A3E428BB16961B0F00780641 /* LRExpectationCardinality.m in Sources */,
+				A3E428BC16961B0F00780641 /* LRNotificationExpectation.m in Sources */,
+				A3E428BD16961B0F00780641 /* LRPerformBlockAction.m in Sources */,
+				A3E428BE16961B0F00780641 /* LRReturnValueAction.m in Sources */,
+				A3E428BF16961B0F00780641 /* LRConsecutiveCallAction.m in Sources */,
+				A3E428C016961B0F00780641 /* LRThrowExceptionAction.m in Sources */,
+				A3E428C116961B0F00780641 /* LRMultipleAction.m in Sources */,
+				A3E428C216961B0F00780641 /* LRPerformBlockArgumentAction.m in Sources */,
+				A3E428C316961B0F00780641 /* LRExpectationBuilder.m in Sources */,
+				A3E428C416961B0F00780641 /* LRInvocationComparitor.m in Sources */,
+				A3E428C516961B0F00780641 /* LRExpectationMessage.m in Sources */,
+				A3E428C616961B0F00780641 /* LRMockyAutomation.m in Sources */,
+				A31FD27B16961B66002D4511 /* LRMockObject.m in Sources */,
+				A31FD27C16961B8B002D4511 /* LRMockyStateMachine.m in Sources */,
+				A31FD27D16961B8B002D4511 /* LRMockyState.m in Sources */,
+				A31FD27E16961B8B002D4511 /* LRMockyStateTransitionAction.m in Sources */,
+				A31FD27F16961B9A002D4511 /* LRObjectImposterizer.m in Sources */,
+				A31FD28016961BA7002D4511 /* OLD_LRImposterizer.m in Sources */,
+				A31FD28116961BA7002D4511 /* OLD_LRImposter.m in Sources */,
+				A31FD28216961BA7002D4511 /* OLD_LRMockObject.m in Sources */,
+				A31FD28316961BB1002D4511 /* LRClassImposterizer.m in Sources */,
+				A31FD28416961BB1002D4511 /* LRProtocolImposterizer.m in Sources */,
+				A31FD29216962852002D4511 /* LRInvocationToExpectationTranslator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D2AAC07B0554694100DB518D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -712,11 +961,11 @@
 				A3385ADE12026375006E95AB /* LRMockyState.m in Sources */,
 				A3385ADD12026372006E95AB /* LRMockyStateMachine.m in Sources */,
 				A301769F11FDEEFC004828C5 /* LRExpectationBuilder.m in Sources */,
-				A30176A111FDEEFC004828C5 /* LRImposter.m in Sources */,
+				A30176A111FDEEFC004828C5 /* OLD_LRImposter.m in Sources */,
 				A30176A311FDEEFC004828C5 /* LRInvocationExpectation.m in Sources */,
 				A30176A511FDEEFC004828C5 /* LRMockery.m in Sources */,
 				A39155B911FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m in Sources */,
-				A30176A711FDEEFC004828C5 /* LRMockObject.m in Sources */,
+				A30176A711FDEEFC004828C5 /* OLD_LRMockObject.m in Sources */,
 				A30176A911FDEEFC004828C5 /* LRPerformBlockAction.m in Sources */,
 				A30176AB11FDEEFC004828C5 /* LRReturnValueAction.m in Sources */,
 				A30176AD11FDEEFC004828C5 /* LRTestCase.m in Sources */,
@@ -729,12 +978,15 @@
 				A391561111FFB80F00FE7C49 /* LRExpectationMessage.m in Sources */,
 				A381A2681224426200FA2A5C /* LRClassImposterizer.m in Sources */,
 				A381A3871224553200FA2A5C /* LRObjectImposterizer.m in Sources */,
-				A381A38F122455EE00FA2A5C /* LRImposterizer.m in Sources */,
+				A381A38F122455EE00FA2A5C /* OLD_LRImposterizer.m in Sources */,
 				A381A3A1122456B200FA2A5C /* LRProtocolImposterizer.m in Sources */,
 				A38AFDFC122BEC2E0001D038 /* LRPerformBlockArgumentAction.m in Sources */,
 				A38AFFC6122BFD020001D038 /* NSInvocation+LRAdditions.m in Sources */,
 				A3289A3D122C73B100D89A88 /* LRNotificationExpectation.m in Sources */,
 				A3F962451505869F003051DD /* LRMockyAutomation.m in Sources */,
+				A3E428901695E16800780641 /* LRMockObject.m in Sources */,
+				A3E428961695E23000780641 /* LRReflectionImposterizer.m in Sources */,
+				A31FD29116962851002D4511 /* LRInvocationToExpectationTranslator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -743,15 +995,26 @@
 /* Begin PBXTargetDependency section */
 		A340492C11FFBC420092E4C6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D2AAC07D0554694100DB518D /* Mocky */;
+			target = D2AAC07D0554694100DB518D /* Mocky-iOS */;
 			targetProxy = A340492B11FFBC420092E4C6 /* PBXContainerItemProxy */;
 		};
 		A3464E8811F279230080B46B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D2AAC07D0554694100DB518D /* Mocky */;
+			target = D2AAC07D0554694100DB518D /* Mocky-iOS */;
 			targetProxy = A3464E8711F279230080B46B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A3E428A81695E32300780641 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A3E428A91695E32300780641 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB921F08733DC00010E9CD /* Debug */ = {
@@ -827,6 +1090,68 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		A319BB921695A414003BB49A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				HEADER_SEARCH_PATHS = "Pods/Headers/**";
+				INFOPLIST_FILE = "Tests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		A319BB931695A414003BB49A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				HEADER_SEARCH_PATHS = "Pods/Headers/**";
+				INFOPLIST_FILE = "Tests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -960,10 +1285,84 @@
 			};
 			name = Release;
 		};
+		A3E428B01695E32300780641 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mocky-OSX/Mocky-OSX-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "Mocky-OSX/Mocky-OSX-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		A3E428B11695E32300780641 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Mocky-OSX/Mocky-OSX-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "Mocky-OSX/Mocky-OSX-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "Mocky" */ = {
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "Mocky-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB921F08733DC00010E9CD /* Debug */,
@@ -977,6 +1376,15 @@
 			buildConfigurations = (
 				1DEB922308733DC00010E9CD /* Debug */,
 				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A319BB941695A414003BB49A /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A319BB921695A414003BB49A /* Debug */,
+				A319BB931695A414003BB49A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -995,6 +1403,15 @@
 			buildConfigurations = (
 				A36FDBB611FFBB6F004A08F4 /* Debug */,
 				A36FDBB711FFBB6F004A08F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3E428AF1695E32300780641 /* Build configuration list for PBXNativeTarget "Mocky-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3E428B01695E32300780641 /* Debug */,
+				A3E428B11695E32300780641 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

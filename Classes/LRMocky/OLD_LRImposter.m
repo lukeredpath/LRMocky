@@ -6,13 +6,13 @@
 //  Copyright 2010 LJR Software Limited. All rights reserved.
 //
 
-#import "LRImposter.h"
+#import "OLD_LRImposter.h"
 
-@implementation LRImposter
+@implementation OLD_LRImposter
 
 @synthesize imposterizer;
 
-- (id)initWithImposterizer:(LRImposterizer *)anImposterizer;
+- (id)initWithImposterizer:(OLD_LRImposterizer *)anImposterizer;
 {
   if (self = [super init]) {
     imposterizer = [anImposterizer retain];
@@ -45,7 +45,7 @@
   return imposterizer;
 }
 
-- (void)setImposterizer:(LRImposterizer *)newImposterizer;
+- (void)setImposterizer:(OLD_LRImposterizer *)newImposterizer;
 {
   [imposterizer release];
   imposterizer = [newImposterizer retain];

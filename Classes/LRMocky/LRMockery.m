@@ -9,11 +9,13 @@
 #import "LRMockery.h"
 #import "LRExpectationBuilder.h"
 #import "LRMockObject.h"
+#import "OLD_LRMockObject.h"
 #import "LRUnexpectedInvocation.h"
 #import "LRInvocationExpectation.h"
 #import "LRNotificationExpectation.h"
 #import "LRMockyStates.h"
 #import "LRExpectationMessage.h"
+#import "LRReflectionImposterizer.h"
 
 #define addMock(mock) [self addAndReturnMock:mock];
 
@@ -23,7 +25,9 @@ NSString *failureFor(id<LRDescribable> expectation);
 - (void)assertSatisfiedInFile:(NSString *)fileName lineNumber:(int)lineNumber;
 @end
 
-@implementation LRMockery
+@implementation LRMockery {
+  id<LRImposterizer> _imposterizer;
+}
 
 @synthesize automaticallyResetWhenAsserting;
 
@@ -46,13 +50,15 @@ NSString *failureFor(id<LRDescribable> expectation);
     expectations = [[NSMutableArray alloc] init];
     mockObjects  = [[NSMutableArray alloc] init];
     automaticallyResetWhenAsserting = YES;
+
+    _imposterizer = [[LRReflectionImposterizer alloc] init];
   }
   return self;
 }
 
 - (void)dealloc;
 {
-  for (LRMockObject *mock in mockObjects) {
+  for (OLD_LRMockObject *mock in mockObjects) {
     [mock undoSideEffects];
   }
   [mockObjects release];
@@ -69,15 +75,19 @@ NSString *failureFor(id<LRDescribable> expectation);
 
 - (id)mock:(Class)klass;
 {
-  return addMock([LRMockObject mockForClass:klass inContext:self]);
+  LRMockObject *mock = [[LRMockObject alloc] initWithInvocationDispatcher:self mockedType:klass name:nil];
+  [mockObjects addObject:mock];
+  return [_imposterizer imposterizeClass:klass invokable:mock ancilliaryProtocols:@[@protocol(LRCaptureControl)]];
 }
 
 - (id)mock:(Class)klass named:(NSString *)name;
 {
-  LRMockObject *mock = [self mock:klass];
-  mock.name = name;
-  return mock;
+  LRMockObject *mock = [[LRMockObject alloc] initWithInvocationDispatcher:self mockedType:klass name:name];
+  [mockObjects addObject:mock];
+  return [_imposterizer imposterizeClass:klass invokable:mock ancilliaryProtocols:@[@protocol(LRCaptureControl)]];
 }
+
+#pragma mark - Creating mock objects
 
 - (id)mock
 {
@@ -91,13 +101,17 @@ NSString *failureFor(id<LRDescribable> expectation);
 
 - (id)protocolMock:(Protocol *)protocol;
 {
-  return addMock([LRMockObject mockForProtocol:protocol inContext:self]);
+  LRMockObject *mock = [[LRMockObject alloc] initWithInvocationDispatcher:self mockedType:protocol name:nil];
+  [mockObjects addObject:mock];
+  return [_imposterizer imposterizeProtocol:protocol invokable:mock ancilliaryProtocols:@[@protocol(LRCaptureControl)]];
 }
 
 - (id)partialMockForObject:(id)object
 {
-  return addMock([LRMockObject partialMockForObject:object inContext:self]);
+  return addMock([OLD_LRMockObject partialMockForObject:object inContext:self]);
 }
+
+#pragma mark -
 
 - (void)expectNotificationNamed:(NSString *)name;
 {
@@ -121,7 +135,12 @@ NSString *failureFor(id<LRDescribable> expectation);
   return stateMachine;
 }
 
-- (void)setExpectations:(dispatch_block_t)expectationBlock
+- (void)setExpectations:(__weak dispatch_block_t)expectationBlock
+{
+  [LRExpectationBuilder buildExpectationsWithBlock:expectationBlock inContext:self];
+}
+
+- (void)check:(__weak dispatch_block_t)expectationBlock
 {
   [LRExpectationBuilder buildExpectationsWithBlock:expectationBlock inContext:self];
 }
@@ -156,10 +175,23 @@ NSString *failureFor(id<LRDescribable> expectation) {
 
 - (void)reset;
 {
-  for (LRMockObject *mock in mockObjects) {
-    [mock undoSideEffects];
-  }
   [expectations removeAllObjects];
+}
+
+#pragma mark - Mock object dispatch
+
+- (void)dispatch:(NSInvocation *)invocation
+{
+  for (id<LRExpectation> expectation in expectations) {
+    if ([expectation matches:invocation]) {
+      [expectation invoke:invocation];
+    }
+  }
+//  LRUnexpectedInvocation *unexpectedInvocation = [LRUnexpectedInvocation unexpectedInvocation:invocation];
+//  unexpectedInvocation.mockObject = mockObject;
+//  [expectations addObject:unexpectedInvocation];
+  
+  // TODO: throw unexpected invocation error
 }
 
 @end

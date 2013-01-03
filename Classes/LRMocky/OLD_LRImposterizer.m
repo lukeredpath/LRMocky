@@ -6,10 +6,10 @@
 //  Copyright 2010 LJR Software Limited. All rights reserved.
 //
 
-#import "LRImposterizer.h"
+#import "OLD_LRImposterizer.h"
 
 
-@implementation LRImposterizer
+@implementation OLD_LRImposterizer
 
 @synthesize delegate;
 
@@ -20,7 +20,7 @@
   }
 }
 
-- (LRImposterizer *)matchingImposterizer;
+- (OLD_LRImposterizer *)matchingImposterizer;
 {
   @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:@"Must overide matchingImposterizer in subclass" userInfo:nil];
 }

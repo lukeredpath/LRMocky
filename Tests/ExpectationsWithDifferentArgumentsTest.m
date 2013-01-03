@@ -12,29 +12,31 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationsWithDifferentArguments)
 
 - (void)testCanExpectTheSameMethodWithDifferentArguments
 {
-  [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(testObject) doSomethingWithObject:@"foo"];
-    [oneOf(testObject) doSomethingWithObject:@"bar"];
+  [context check:^{
+    [[expectThat(testObject) receives] doSomethingWithObject:@"foo"];
+    [[expectThat(testObject) receives] doSomethingWithObject:@"bar"];
   }];
   
   [testObject doSomethingWithObject:@"foo"];
   [testObject doSomethingWithObject:@"bar"];
   
-  assertContextSatisfied(context);
+  [context assertSatisfied];
+  
   assertThat(testCase, passed());
 }
 
 - (void)testCanExpectTheSameMethodWithDifferentArgumentsUsingMatchers
 {
-  [context checking:^(LRExpectationBuilder *builder){
-    [oneOf(testObject) doSomethingWithObject:equalTo(@"foo")];
-    [oneOf(testObject) doSomethingWithObject:equalTo(@"bar")];
+  [context check:^{
+    [[expectThat(testObject) receives] doSomethingWithObject:equalTo(@"foo")];
+    [[expectThat(testObject) receives] doSomethingWithObject:equalTo(@"bar")];
   }];
   
   [testObject doSomethingWithObject:@"foo"];
   [testObject doSomethingWithObject:@"bar"];
   
-  assertContextSatisfied(context);
+  [context assertSatisfied];
+  
   assertThat(testCase, passed());
 }
 

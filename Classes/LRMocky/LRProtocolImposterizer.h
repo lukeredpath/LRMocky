@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LRImposterizer.h"
+#import "OLD_LRImposterizer.h"
 
-@interface LRProtocolImposterizer : LRImposterizer {
+@interface LRProtocolImposterizer : OLD_LRImposterizer {
   Protocol *protocolToImposterize;
 }
 - (id)initWithProtocol:(Protocol *)protocol;

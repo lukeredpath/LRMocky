@@ -7,28 +7,30 @@
 //
 
 #import "LRExpectationBuilder.h"
+#import "OLD_LRMockObject.h"
 #import "LRMockObject.h"
 #import "LRMockery.h"
 #import "LRInvocationExpectation.h"
 #import "LRExpectationCardinality.h"
 #import "LRMockyStates.h"
 #import "LRObjectImposterizer.h"
+#import "LRPerformBlockAction.h"
 #import "NSInvocation+OCMAdditions.h"
 
 @interface LRExpectationBuilder ()
 @property (nonatomic, retain) LRInvocationExpectation *currentExpecation;
-@property (nonatomic, readonly) LRImposterizer *imposterizer;
+@property (nonatomic, readonly) OLD_LRImposterizer *imposterizer;
 
 - (id)initWithMockery:(LRMockery *)aMockery;
-- (void)actAsImposterForMockObject:(LRMockObject *)mock;
+- (void)actAsImposterForMockObject:(OLD_LRMockObject *)mock;
 
 @end
 
 @implementation LRExpectationBuilder {
   LRMockery *_mockery;
-  LRImposterizer *_imposterizer;
+  OLD_LRImposterizer *_imposterizer;
+  id _capturingImposter;
 }
-@synthesize currentExpecation;
 
 #pragma mark - Global expectation builder access
 
@@ -82,39 +84,42 @@ static LRExpectationBuilder *__currentExpectationBuilder = nil;
   return self.currentExpecation;
 }
 
-- (LRImposterizer *)imposterizer
-{
-  return self.currentExpecation.mockObject.imposterizer;
-}
-
 #pragma mark - Fluent Interface
 
 - (id)setExpectationTarget:(id)object
 {
+  if (![object conformsToProtocol:@protocol(LRCaptureControl)]) {
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                                   reason:@"Can only set expectations on mock objects!"
+                                 userInfo:nil];
+  }
   self.currentExpecation = [self expectationForObject:object];
+  
+  _capturingImposter = [(id<LRCaptureControl>)object captureExpectationTo:(id<LRExpectationCapture>)self];
+  
   return self;
 }
 
 - (id)receives;
 {
-  return self;
+  return _capturingImposter;
 }
 
 - (id)receives:(id<LRExpectationCardinality>)cardinality
 {
   self.currentExpecation.cardinality = cardinality;
-  return self;
+  return _capturingImposter;
 }
 
 - (id)neverReceives
 {
   [self receives:LRM_exactly(0)];
-  return self;
+  return _capturingImposter;
 }
 
 - (id)of
 {
-  return self;
+  return _capturingImposter;
 }
 
 - (void)requiresState:(LRMockyState *)state;
@@ -127,31 +132,27 @@ static LRExpectationBuilder *__currentExpectationBuilder = nil;
   [self.currentExpecation addAction:[LRMockyStateTransitionAction transitionToState:state]];
 }
 
-- (id)will:(id<LRExpectationAction>)action;
+- (id)then:(id)action
 {
-  [self.currentExpecation addAction:action];
+  if ([action conformsToProtocol:@protocol(LRExpectationAction)]) {
+    [self.currentExpecation addAction:action];
+  }
+  else {
+    // we will *assume* it's a block - not very safe, we'll have
+    // to rely on clients of this method to do the right thing.
+    
+    LR_invocationActionBlock actionBlock = (LR_invocationActionBlock)action;
+    action = [[LRPerformBlockAction alloc] initWithBlock:actionBlock];
+    [self.currentExpecation addAction:action];
+  }
   return self;
 }
 
-#pragma mark - Imposterizer methods
+#pragma mark - LRExpectationCapture
 
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)sel
+- (void)createExpectationFromInvocation:(NSInvocation *)invocation
 {
-  return [self.imposterizer methodSignatureForSelector:sel];
-}
-
-- (BOOL)respondsToSelector:(SEL)aSelector
-{
-  return [self.imposterizer respondsToSelector:aSelector];
-}
-
-- (void)forwardInvocation:(NSInvocation *)anInvocation
-{  
-  self.currentExpecation.invocation = anInvocation;
-
-  if ([self.imposterizer isKindOfClass:[LRObjectImposterizer class]]) {
-    [(LRObjectImposterizer *)self.imposterizer setupInvocationHandlerForImposterizedObjectForInvocation:anInvocation];
-  }
+  self.currentExpecation.invocation = invocation;
   [_mockery addExpectation:self.currentExpecation];
 }
 
@@ -159,9 +160,6 @@ static LRExpectationBuilder *__currentExpectationBuilder = nil;
 
 - (LRInvocationExpectation *)expectationForObject:(id)object
 {
-  if (![object isKindOfClass:[LRMockObject class]]) {
-    object = [_mockery partialMockForObject:object];
-  }
   return [LRInvocationExpectation expectationWithObject:object];
 }
 
