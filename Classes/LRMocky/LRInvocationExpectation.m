@@ -77,9 +77,7 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 - (void)invoke:(NSInvocation *)invocation
 {
   LRInvocationComparitor *comparitor = [LRInvocationComparitor comparitorForInvocation:expectedInvocation];
-  
-  NSLog(@"Invoking %@", invocation);
-    
+
   if([comparitor matchesParameters:invocation]) {
     numberOfInvocations++;
     

@@ -39,6 +39,7 @@
 		A31FD29216962852002D4511 /* LRInvocationToExpectationTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD28F169626E6002D4511 /* LRInvocationToExpectationTranslator.m */; };
 		A31FD293169641BB002D4511 /* ExpectationsWithDifferentArgumentsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D496D91210CF910076940C /* ExpectationsWithDifferentArgumentsTest.m */; };
 		A31FD294169641E0002D4511 /* CardinalityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D667B11FF508B00F0C310 /* CardinalityTests.m */; };
+		A31FD29616964DFA002D4511 /* ExpectationActionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */; };
 		A3289A3C122C73B100D89A88 /* LRNotificationExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = A3289A3A122C73B100D89A88 /* LRNotificationExpectation.h */; };
 		A3289A3D122C73B100D89A88 /* LRNotificationExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3289A3B122C73B100D89A88 /* LRNotificationExpectation.m */; };
 		A32E0C6112070555009B4C81 /* NSException_SenTestFailure.h in Headers */ = {isa = PBXBuildFile; fileRef = A32E0C6012070555009B4C81 /* NSException_SenTestFailure.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -848,6 +849,7 @@
 				A31FD28B16962533002D4511 /* TestUtilities.m in Sources */,
 				A31FD293169641BB002D4511 /* ExpectationsWithDifferentArgumentsTest.m in Sources */,
 				A31FD294169641E0002D4511 /* CardinalityTests.m in Sources */,
+				A31FD29616964DFA002D4511 /* ExpectationActionsTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -45,21 +45,6 @@ static LRExpectationBuilder *__currentExpectationBuilder = nil;
   return __currentExpectationBuilder;
 }
 
-//+ (id)expectThat:(id)object
-//{
-//  return [__globalExpectationBuilder oneOf:object];
-//}
-//
-//+ (id)allow:(id)object
-//{
-//  return [__globalExpectationBuilder allowing:object];
-//}
-//
-//+ (void)setCardinalityForCurrentExpectation:(id<LRExpectationCardinality>)cardinality
-//{
-//  [__globalExpectationBuilder setCardinalityForCurrentExpectation:cardinality];
-//}
-
 #pragma mark -
 
 - (id)initWithMockery:(LRMockery *)aMockery;
@@ -100,7 +85,7 @@ static LRExpectationBuilder *__currentExpectationBuilder = nil;
 
 - (id)receives;
 {
-  return _capturingImposter;
+  return [self receives:LRM_exactly(1)];
 }
 
 - (id)receives:(id<LRExpectationCardinality>)cardinality

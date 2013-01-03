@@ -15,6 +15,7 @@ NSInvocation *anyValidInvocation(void) {
 
 @implementation CapturesInvocations {
   NSMutableArray *_capturedInvocations;
+  CapturesInvocationsOnInvocationHandler _invocationHandler;
 }
 
 @synthesize capturedInvocations = _capturedInvocations;
@@ -36,12 +37,21 @@ NSInvocation *anyValidInvocation(void) {
   }
   else {
     [_capturedInvocations addObject:invocation];
+    
+    if (_invocationHandler) {
+      _invocationHandler(invocation);
+    }
   }
 }
 
 - (NSInvocation *)lastInvocation
 {
   return [_capturedInvocations lastObject];
+}
+
+- (void)onInvocation:(CapturesInvocationsOnInvocationHandler)invocationHandler
+{
+  _invocationHandler = [invocationHandler copy];
 }
 
 @end

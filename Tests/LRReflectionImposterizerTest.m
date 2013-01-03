@@ -20,10 +20,14 @@
 
 @interface TestClass : NSObject
 - (void)doSomething;
+- (id)returnsObject;
+- (int)returnsInt;
 @end
 
 @implementation TestClass
 - (void)doSomething {}
+- (id)returnsObject { return nil; }
+- (int)returnsInt { return 0; }
 @end
 
 DEFINE_TEST_CASE(LRReflectionImposterizerTest) {
@@ -87,7 +91,6 @@ DEFINE_TEST_CASE(LRReflectionImposterizerTest) {
   STAssertNotNil(lastInvocation, @"Expected forwarded invocation to be captured");
 }
 
-
 - (void)testImposterizedProtocolsForwardInvocationsToInvokableForInheritedProtocolInstanceMethods
 {
   id<ExtendedTestProtocol> imposter = [imposterizer imposterizeProtocol:@protocol(ExtendedTestProtocol) invokable:invocationCapturer ancilliaryProtocols:nil];
@@ -149,6 +152,45 @@ DEFINE_TEST_CASE(LRReflectionImposterizerTest) {
   
   STAssertTrue([imposter respondsToSelector:@selector(doSomethingElse)], @"Expected to report responds to ancilliary protocol method.");
   STAssertTrue([imposter conformsToProtocol:@protocol(TestProtocol)], @"Expected to report conforms to ancilliary protocol.");
+}
+
+- (void)testImposterizedMethodsThatShouldReturnObjectsReturnNilByDefault
+{
+  TestClass *imposter = [imposterizer imposterizeClass:TestClass.class invokable:invocationCapturer ancilliaryProtocols:nil];
+  
+  id result = [imposter returnsObject];
+
+  STAssertNil(result, @"Expected nil result.");
+}
+
+- (void)testImposterizedMethodsThatShouldReturnObjectsReturnTheInvocationReturnValueIfSet
+{
+  TestClass *imposter = [imposterizer imposterizeClass:TestClass.class invokable:invocationCapturer ancilliaryProtocols:nil];
+  
+  __block NSString *expectedReturnValue = @"result";
+  
+  [invocationCapturer onInvocation:^(NSInvocation *invocation) {
+    [invocation setReturnValue:&expectedReturnValue];
+  }];
+  
+  id result = [imposter returnsObject];
+  
+  STAssertEqualObjects(expectedReturnValue, result, @"Expected a matching result.");
+}
+
+- (void)testImposterizedMethodsThatShouldReturnPrimitivesReturnTheInvocationReturnValueIfSet
+{
+  TestClass *imposter = [imposterizer imposterizeClass:TestClass.class invokable:invocationCapturer ancilliaryProtocols:nil];
+  
+  __block int expectedReturnValue = 123;
+  
+  [invocationCapturer onInvocation:^(NSInvocation *invocation) {
+    [invocation setReturnValue:&expectedReturnValue];
+  }];
+  
+  int result = [imposter returnsInt];
+  
+  STAssertEquals(expectedReturnValue, result, @"Expected a matching result.");
 }
 
 END_TEST_CASE
