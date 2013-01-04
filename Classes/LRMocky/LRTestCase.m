@@ -17,22 +17,17 @@
 
 + (id)notifierForTestCase:(SenTestCase *)aTestCase;
 {
-  return [[[self alloc] initWithSenTestCase:aTestCase] autorelease];
+  return [[self alloc] initWithSenTestCase:aTestCase];
 }
 
 - (id)initWithSenTestCase:(SenTestCase *)aTestCase;
 {
   if (self = [super init]) {
-    testCase = [aTestCase retain];
+    testCase = aTestCase;
   }
   return self;
 }
 
-- (void)dealloc;
-{
-  [testCase release];
-  [super dealloc];
-}
 
 - (void)notifiesFailureWithDescription:(NSString *)description 
                                 inFile:(NSString *)fileName 

@@ -16,8 +16,8 @@
 {
   [super setUp];
   testCase = [FakeTestCase new];
-  context = [[LRMockery mockeryForTestCase:testCase] retain];
-  testObject = [[context mock:[SimpleObject class]] retain];
+  context = [LRMockery mockeryForTestCase:testCase];
+  testObject = [context mock:[SimpleObject class]];
 }
 
 @end

@@ -9,14 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "LRExpectation.h"
 
-@class OLD_LRMockObject;
-
 @interface LRUnexpectedInvocation : NSObject <LRExpectation> {
   NSInvocation *invocation;
-  OLD_LRMockObject *mockObject;
+  id mockObject;
 }
-@property (nonatomic, retain) NSInvocation *invocation;
-@property (nonatomic, retain) OLD_LRMockObject *mockObject;
+@property (nonatomic, strong) NSInvocation *invocation;
+@property (nonatomic, strong) id mockObject;
 
 + (id)unexpectedInvocation:(NSInvocation *)invocation;
 - (id)initWithInvocation:(NSInvocation *)anInvocation;

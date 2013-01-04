@@ -17,16 +17,11 @@ LRPerformBlockArgumentAction *LRA_performBlockArgumentsWithObject(id object);
 - (id)initWithObject:(id)anObject;
 {
   if (self = [super init]) {
-    object = [anObject retain];
+    object = anObject;
   }
   return self;
 }
 
-- (void)dealloc
-{
-  [object release];
-  [super dealloc];
-}
 
 - (void)invoke:(NSInvocation *)invocation
 {
@@ -35,10 +30,10 @@ LRPerformBlockArgumentAction *LRA_performBlockArgumentsWithObject(id object);
       void *arg;
       [invocation getArgument:&arg atIndex:i];
       if (object) {
-        void (^block)(id o) = (void (^)(id o))arg;
+        void (^block)(id o) = (__bridge void (^)(id o))arg;
         block(object);
       } else {
-        void (^block)() = (void (^)())arg;
+        void (^block)() = (__bridge void (^)())arg;
         block();
       }
     }
@@ -49,10 +44,10 @@ LRPerformBlockArgumentAction *LRA_performBlockArgumentsWithObject(id object);
 
 LRPerformBlockArgumentAction *LRA_performBlockArguments(void)
 {
-  return [[[LRPerformBlockArgumentAction alloc] init] autorelease]; 
+  return [[LRPerformBlockArgumentAction alloc] init]; 
 }
 
 LRPerformBlockArgumentAction *LRA_performBlockArgumentsWithObject(id object)
 {
-  return [[[LRPerformBlockArgumentAction alloc] initWithObject:object] autorelease]; 
+  return [[LRPerformBlockArgumentAction alloc] initWithObject:object]; 
 }

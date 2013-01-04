@@ -16,8 +16,8 @@
 #import "NSInvocation+OCMAdditions.h"
 
 @interface LRExpectationBuilder ()
-@property (nonatomic, retain) LRInvocationExpectation *currentExpecation;
-@property (nonatomic, readonly) OLD_LRImposterizer *imposterizer;
+@property (nonatomic, strong) LRInvocationExpectation *currentExpecation;
+@property (weak, nonatomic, readonly) OLD_LRImposterizer *imposterizer;
 
 - (id)initWithMockery:(LRMockery *)aMockery;
 - (void)actAsImposterForMockObject:(OLD_LRMockObject *)mock;
@@ -26,7 +26,7 @@
 
 @implementation LRExpectationBuilder {
   LRMockery *_mockery;
-  OLD_LRImposterizer *_imposterizer;
+  OLD_LRImposterizer *__weak _imposterizer;
   id _capturingImposter;
 }
 
@@ -50,17 +50,11 @@ static LRExpectationBuilder *__currentExpectationBuilder = nil;
 - (id)initWithMockery:(LRMockery *)aMockery;
 {
   if (self = [super init]) {
-    _mockery = [aMockery retain];
+    _mockery = aMockery;
   }
   return self;
 }
 
-- (void)dealloc;
-{
-  [_imposterizer release];
-  [_mockery release];
-  [super dealloc];
-}
 
 - (id<LRExpectation>)expectation
 {
@@ -124,7 +118,7 @@ static LRExpectationBuilder *__currentExpectationBuilder = nil;
     // we will *assume* it's a block - not very safe, we'll have
     // to rely on clients of this method to do the right thing.
     
-    LR_invocationActionBlock actionBlock = (LR_invocationActionBlock)action;
+    LRInvocationActionBlock actionBlock = (LRInvocationActionBlock)action;
     action = [[LRPerformBlockAction alloc] initWithBlock:actionBlock];
     [self.currentExpecation addAction:action];
   }

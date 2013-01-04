@@ -20,11 +20,6 @@
   return self;
 }
 
-- (void)dealloc;
-{
-  [actions release];
-  [super dealloc];
-}
 
 - (void)invoke:(NSInvocation *)invocation
 {
@@ -55,5 +50,5 @@ LRConsecutiveCallAction *LRA_onConsecutiveCalls(id<LRExpectationAction>firstActi
     va_end(actionList);
   }
 
-  return [[[LRConsecutiveCallAction alloc] initWithActions:actions] autorelease];
+  return [[LRConsecutiveCallAction alloc] initWithActions:actions];
 }

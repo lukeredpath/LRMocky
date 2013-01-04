@@ -14,23 +14,18 @@
 
 + (id)comparitorForInvocation:(NSInvocation *)invocation;
 {
-  return [[[self alloc] initWithInvocation:invocation] autorelease];
+  return [[self alloc] initWithInvocation:invocation];
 }
 
 - (id)initWithInvocation:(NSInvocation *)anInvocation;
 {
   if (self = [super init]) {
-    expectedInvocation = [anInvocation retain];
+    expectedInvocation = anInvocation;
     [expectedInvocation retainArguments];
   }
   return self;
 }
 
-- (void)dealloc 
-{
-  [expectedInvocation release];
-  [super dealloc];
-}
 
 - (BOOL)matchesParameters:(NSInvocation *)invocation;
 {

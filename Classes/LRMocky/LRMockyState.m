@@ -13,14 +13,14 @@
 
 + (id)stateWithLabel:(NSString *)label inContext:(LRMockyStateMachine *)context;
 {
-  return [[[self alloc] initWithLabel:label context:context] autorelease];
+  return [[self alloc] initWithLabel:label context:context];
 }
 
 - (id)initWithLabel:(NSString *)aLabel context:(LRMockyStateMachine *)aContext;
 {
   if (self = [super init]) {
     label = [aLabel copy];
-    context = [aContext retain];
+    context = aContext;
   }
   return self;
 }
@@ -50,12 +50,6 @@
   return [self state];
 }
 
-- (void)dealloc;
-{
-  [label release];
-  [context release];
-  [super dealloc];
-}
 
 - (BOOL)isActive;
 {

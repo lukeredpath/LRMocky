@@ -23,7 +23,7 @@
 id<HCMatcher> isInState(LRMockyState *state)
 {
   NSInvocation *invocation   = [HCInvocationMatcher invocationForSelector:@selector(currentState) onClass:[LRMockyStateMachine class]];
-  return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:equalTo(state)] autorelease];
+  return [[HCInvocationMatcher alloc] initWithInvocation:invocation matching:equalTo(state)];
 }
 
 DEFINE_TEST_CASE(LRMockyStatesTest)

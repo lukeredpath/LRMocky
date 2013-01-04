@@ -9,15 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "LRExpectationAction.h"
 
-typedef void (^LR_invocationActionBlock)(NSInvocation *);
+typedef void (^LRInvocationActionBlock)(NSInvocation *);
 
 @interface LRPerformBlockAction : NSObject <LRExpectationAction> {
-  LR_invocationActionBlock block;
+  LRInvocationActionBlock block;
 }
-- (id)initWithBlock:(LR_invocationActionBlock)theBlock;
+- (id)initWithBlock:(LRInvocationActionBlock)theBlock;
 @end
 
-LRPerformBlockAction *LRA_performBlock(LR_invocationActionBlock theBlock);
+LRPerformBlockAction *LRA_performBlock(LRInvocationActionBlock theBlock);
 
 #ifdef LRMOCKY_SHORTHAND
 #define performBlock  LRA_performBlock

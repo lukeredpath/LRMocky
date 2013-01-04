@@ -11,19 +11,14 @@
 
 @implementation LRPerformBlockAction
 
-- (id)initWithBlock:(LR_invocationActionBlock)theBlock;
+- (id)initWithBlock:(LRInvocationActionBlock)theBlock;
 {
   if (self = [super init]) {
-    block = Block_copy(theBlock);
+    block = [theBlock copy];
   }
   return self;
 }
 
-- (void)dealloc 
-{
-  Block_release(block);
-  [super dealloc];
-}
 
 - (void)invoke:(NSInvocation *)invocation
 {
@@ -32,7 +27,7 @@
 
 @end
 
-LRPerformBlockAction *LRA_performBlock(LR_invocationActionBlock theBlock)
+LRPerformBlockAction *LRA_performBlock(LRInvocationActionBlock theBlock)
 {
-  return [[[LRPerformBlockAction alloc] initWithBlock:theBlock] autorelease];
+  return [[LRPerformBlockAction alloc] initWithBlock:theBlock];
 }

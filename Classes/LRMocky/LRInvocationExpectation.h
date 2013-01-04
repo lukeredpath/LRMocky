@@ -22,14 +22,14 @@
   NSUInteger numberOfInvocations;
   NSMutableArray *actions;
   id<LRExpectationCardinality> cardinality;
-  OLD_LRMockObject *mockObject;
+  id mockObject;
   LRMockyState *requiredState;
   BOOL calledWithInvalidState;
 }
-@property (nonatomic, retain) NSInvocation *invocation;
-@property (nonatomic, retain) id<LRExpectationCardinality> cardinality;
-@property (nonatomic, retain) OLD_LRMockObject *mockObject;
-@property (nonatomic, retain) LRMockyState *requiredState;
+@property (nonatomic, strong) NSInvocation *invocation;
+@property (nonatomic, strong) id<LRExpectationCardinality> cardinality;
+@property (nonatomic, strong) OLD_LRMockObject *mockObject;
+@property (nonatomic, strong) LRMockyState *requiredState;
 @property (nonatomic, readonly) BOOL calledWithInvalidState;
 
 + (id)expectationWithObject:(OLD_LRMockObject *)mockObject;

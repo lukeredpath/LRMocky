@@ -17,7 +17,7 @@
 NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 
 @interface LRInvocationExpectation ()
-@property (nonatomic, retain) NSInvocation *similarInvocation;
+@property (nonatomic, strong) NSInvocation *similarInvocation;
 @end
 
 @implementation LRInvocationExpectation
@@ -29,9 +29,9 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 @synthesize requiredState;
 @synthesize calledWithInvalidState;
 
-+ (id)expectationWithObject:(OLD_LRMockObject *)mockObject
++ (id)expectationWithObject:(id)mockObject
 {
-  LRInvocationExpectation *expectation = [[[self alloc] init] autorelease];
+  LRInvocationExpectation *expectation = [[self alloc] init];
   expectation.mockObject = mockObject;
   return expectation;
 }
@@ -47,14 +47,6 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
   return self;
 }
 
-- (void)dealloc;
-{
-  [mockObject release];
-  [cardinality release];
-  [actions release];
-  [expectedInvocation release];
-  [super dealloc];
-}
 
 - (BOOL)matches:(NSInvocation *)invocation;
 {

@@ -17,23 +17,17 @@
 
 + (id)unexpectedInvocation:(NSInvocation *)invocation;
 {
-  return [[[self alloc] initWithInvocation:invocation] autorelease];
+  return [[self alloc] initWithInvocation:invocation];
 }
 
 - (id)initWithInvocation:(NSInvocation *)anInvocation;
 {
   if (self = [super init]) {
-    invocation = [anInvocation retain];
+    invocation = anInvocation;
   }
   return self;
 }
 
-- (void)dealloc;
-{
-  [mockObject release];
-  [invocation release];
-  [super dealloc];
-}
 
 - (void)invoke:(NSInvocation *)invocation
 {}
@@ -50,7 +44,7 @@
 
 - (NSException *)failureException;
 {
-  LRExpectationMessage *errorMessage = [[[LRExpectationMessage alloc] init] autorelease];
+  LRExpectationMessage *errorMessage = [[LRExpectationMessage alloc] init];
   [self describeTo:errorMessage];
   return [NSException exceptionWithName:LRMockyExpectationError reason:errorMessage.message userInfo:nil];
 }

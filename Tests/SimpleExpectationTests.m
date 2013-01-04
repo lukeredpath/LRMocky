@@ -200,7 +200,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
   id mockArray = [context mock:[NSArray class]];
  
   [context check:^{
-    [[expectThat(mockArray) receives] indexesOfObjectsPassingTest:anyBlock()];
+    [[expectThat(mockArray) receives] indexesOfObjectsPassingTest:(__bridge BOOL (^)(__strong id, NSUInteger, BOOL *))(anyBlock())];
   }];
   
   [(NSArray *)mockArray indexesOfObjectsPassingTest:^(id object, NSUInteger idx, BOOL *stop) { return YES; }];

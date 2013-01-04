@@ -15,6 +15,7 @@
 #import "LRMockyStates.h"
 #import "LRExpectationMessage.h"
 #import "LRReflectionImposterizer.h"
+#import "LRUnexpectedInvocationException.h"
 
 NSString *failureFor(id<LRDescribable> expectation);
 
@@ -37,13 +38,13 @@ NSString *failureFor(id<LRDescribable> expectation);
 + (id)mockeryForSenTestCase:(SenTestCase *)testCase;
 {
   LRSenTestCaseNotifier *notifier = [LRSenTestCaseNotifier notifierForTestCase:testCase];
-  return [[[self alloc] initWithNotifier:notifier] autorelease];
+  return [[self alloc] initWithNotifier:notifier];
 }
 
 - (id)initWithNotifier:(id<LRTestCaseNotifier>)aNotifier;
 {
   if (self = [super init]) {
-    testNotifier = [aNotifier retain];
+    testNotifier = aNotifier;
     expectations = [[NSMutableArray alloc] init];
     mockObjects  = [[NSMutableArray alloc] init];
     automaticallyResetWhenAsserting = YES;
@@ -53,13 +54,6 @@ NSString *failureFor(id<LRDescribable> expectation);
   return self;
 }
 
-- (void)dealloc;
-{
-  [mockObjects release];
-  [testNotifier release];
-  [expectations release];
-  [super dealloc];
-}
 
 #pragma mark - Creating mock objects
 
@@ -117,7 +111,7 @@ NSString *failureFor(id<LRDescribable> expectation);
 
 - (LRMockyStateMachine *)states:(NSString *)name;
 {
-  return [[[LRMockyStateMachine alloc] initWithName:name] autorelease];
+  return [[LRMockyStateMachine alloc] initWithName:name];
 }
 
 - (LRMockyStateMachine *)states:(NSString *)name defaultTo:(NSString *)defaultState;
@@ -128,7 +122,7 @@ NSString *failureFor(id<LRDescribable> expectation);
 }
 
 NSString *failureFor(id<LRDescribable> expectation) {
-  LRExpectationMessage *errorMessage = [[[LRExpectationMessage alloc] init] autorelease];
+  LRExpectationMessage *errorMessage = [[LRExpectationMessage alloc] init];
   [expectation describeTo:errorMessage];
   return [errorMessage description];
 }

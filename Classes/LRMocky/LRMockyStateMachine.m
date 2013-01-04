@@ -22,12 +22,6 @@
   return self;
 }
 
-- (void)dealloc 
-{
-  [name release];
-  [currentState release];
-  [super dealloc];
-}
 
 - (void)startsAs:(NSString *)label;
 {
@@ -51,8 +45,7 @@
 
 - (void)transitionToState:(LRMockyState *)newState;
 {
-  [currentState release];
-  currentState = [newState retain];
+  currentState = newState;
 }
 
 - (BOOL)isCurrentState:(LRMockyState *)state;

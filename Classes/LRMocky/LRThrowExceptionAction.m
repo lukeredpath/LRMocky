@@ -14,16 +14,11 @@
 - (id)initWithException:(NSException *)exception;
 {
   if (self = [super init]) {
-    exceptionToThrow = [exception retain];
+    exceptionToThrow = exception;
   }
   return self;
 }
 
-- (void)dealloc 
-{
-  [exceptionToThrow release];
-  [super dealloc];
-}
 
 - (void)invoke:(NSInvocation *)invocation
 {
@@ -34,5 +29,5 @@
 
 LRThrowExceptionAction *LRA_throwException(NSException *exception)
 {
-  return [[[LRThrowExceptionAction alloc] initWithException:exception] autorelease];
+  return [[LRThrowExceptionAction alloc] initWithException:exception];
 }

@@ -27,7 +27,7 @@
 
 - (NSString *)message
 {
-  return [[message copy] autorelease];
+  return [message copy];
 }
 
 - (NSString *)description;

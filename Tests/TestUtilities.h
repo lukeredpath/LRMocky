@@ -16,7 +16,7 @@ typedef void (^CapturesInvocationsOnInvocationHandler)(NSInvocation *invocation)
 @interface CapturesInvocations : NSObject <LRInvokable>
 
 @property (nonatomic, readonly) NSArray *capturedInvocations;
-@property (nonatomic, readonly) NSInvocation *lastInvocation;
+@property (weak, nonatomic, readonly) NSInvocation *lastInvocation;
 
 - (void)onInvocation:(CapturesInvocationsOnInvocationHandler)invocationHandler;
 

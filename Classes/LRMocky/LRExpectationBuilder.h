@@ -19,7 +19,7 @@
 
 @interface LRExpectationBuilder : NSObject <LRExpectationCapture, LRExpectationCaptureSyntaticSugar>
 
-@property (nonatomic, readonly) id<LRExpectation> expectation;
+@property (weak, nonatomic, readonly) id<LRExpectation> expectation;
 
 + (void)buildExpectationsWithBlock:(dispatch_block_t)expectationBlock inContext:(LRMockery *)context;
 + (LRExpectationBuilder *)currentExpectationBuilder;

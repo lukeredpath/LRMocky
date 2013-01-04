@@ -43,7 +43,7 @@
 
 id<LRExpectationCardinality> LRM_exactly(int anInt)
 {
-  return [[[LREqualToCardinality alloc] initWithInt:anInt] autorelease];
+  return [[LREqualToCardinality alloc] initWithInt:anInt];
 }
 
 @implementation LRAtLeastCardinality
@@ -75,7 +75,7 @@ id<LRExpectationCardinality> LRM_exactly(int anInt)
 
 id<LRExpectationCardinality> LRM_atLeast(int anInt)
 {
-  return [[[LRAtLeastCardinality alloc] initWithMinimum:anInt] autorelease];
+  return [[LRAtLeastCardinality alloc] initWithMinimum:anInt];
 }
 
 @implementation LRAtMostCardinality
@@ -107,7 +107,7 @@ id<LRExpectationCardinality> LRM_atLeast(int anInt)
 
 id<LRExpectationCardinality> LRM_atMost(int anInt)
 {
-  return [[[LRAtMostCardinality alloc] initWithMaximum:anInt] autorelease];
+  return [[LRAtMostCardinality alloc] initWithMaximum:anInt];
 }
 
 @implementation LRBetweenCardinality
@@ -140,5 +140,5 @@ id<LRExpectationCardinality> LRM_atMost(int anInt)
 
 id<LRExpectationCardinality> LRM_between(int min, int max)
 {
-  return [[[LRBetweenCardinality alloc] initWithMinimum:min andMaximum:max] autorelease];
+  return [[LRBetweenCardinality alloc] initWithMinimum:min andMaximum:max];
 }

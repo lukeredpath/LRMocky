@@ -13,22 +13,17 @@
 
 + (id)transitionToState:(LRMockyState *)state;
 {
-  return [[[self alloc] initWithState:state] autorelease];
+  return [[self alloc] initWithState:state];
 }
 
 - (id)initWithState:(LRMockyState *)aState;
 {
   if (self = [super init]) {
-    state = [aState retain];
+    state = aState;
   }
   return self;
 }
 
-- (void)dealloc
-{
-  [state release];
-  [super dealloc];
-}
 
 - (void)invoke:(NSInvocation *)invocation
 {

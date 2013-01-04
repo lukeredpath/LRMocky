@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LRUnexpectedInvocationException : NSObject
+extern NSString *const LRUnexpectedInvocationInvocationUserInfoKey;
+
+@interface LRUnexpectedInvocationException : NSException
+
++ (id)exceptionWithInvocation:(NSInvocation *)invocation;
 
 @end

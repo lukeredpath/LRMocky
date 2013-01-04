@@ -35,11 +35,6 @@
   return self;
 }
 
-- (void)dealloc;
-{
-  [failures release];
-  [super dealloc];
-}
 
 - (void)failWithException:(NSException *)exception
 {
@@ -89,7 +84,7 @@ id<HCMatcher> isExceptionOfType(id<HCMatcher>nameMatcher)
 {
   NSInvocation *nameInvocation = [HCInvocationMatcher invocationForSelector:@selector(name) onClass:[NSException class]];
   
-  return [[[HCInvocationMatcher alloc] initWithInvocation:nameInvocation matching:nameMatcher] autorelease];
+  return [[HCInvocationMatcher alloc] initWithInvocation:nameInvocation matching:nameMatcher];
 }
 
 id<HCMatcher> exceptionWithDescription(id<HCMatcher> descriptionMatcher)
@@ -97,7 +92,7 @@ id<HCMatcher> exceptionWithDescription(id<HCMatcher> descriptionMatcher)
   NSInvocation *descInvocation = [HCInvocationMatcher 
     invocationForSelector:@selector(description) onClass:[NSException class]];
 
-  return [[[HCInvocationMatcher alloc] initWithInvocation:descInvocation matching:descriptionMatcher] autorelease];
+  return [[HCInvocationMatcher alloc] initWithInvocation:descInvocation matching:descriptionMatcher];
 }
 
 id<HCMatcher> isExceptionOfTypeWithDescription(id<HCMatcher>nameMatcher, id<HCMatcher>descMatcher)
@@ -109,20 +104,20 @@ id<HCMatcher> passed()
 {
   id<HCMatcher> valueMatcher = [HCIsEqual isEqualTo:[NSNumber numberWithInt:0]];
   NSInvocation *invocation   = [HCInvocationMatcher invocationForSelector:@selector(numberOfFailuresAsNumber) onClass:[FakeTestCase class]];
-  return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:valueMatcher] autorelease];
+  return [[HCInvocationMatcher alloc] initWithInvocation:invocation matching:valueMatcher];
 }
 
 id<HCMatcher> failedWithNumberOfFailures(int numberOfFailures)
 {
   id<HCMatcher> valueMatcher = [HCIsEqual isEqualTo:[NSNumber numberWithInt:numberOfFailures]];
   NSInvocation *invocation   = [HCInvocationMatcher invocationForSelector:@selector(numberOfFailuresAsNumber) onClass:[FakeTestCase class]];
-  return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:valueMatcher] autorelease];
+  return [[HCInvocationMatcher alloc] initWithInvocation:invocation matching:valueMatcher];
 }
 
 id<HCMatcher> failedWithExpectationError(NSString *errorDescription)
 {
   NSInvocation *invocation   = [HCInvocationMatcher invocationForSelector:@selector(failures) onClass:[FakeTestCase class]];
-  return [[[HCInvocationMatcher alloc] initWithInvocation:invocation matching:hasItem(exceptionWithDescription(containsString(errorDescription)))] autorelease];
+  return [[HCInvocationMatcher alloc] initWithInvocation:invocation matching:hasItem(exceptionWithDescription(containsString(errorDescription)))];
 }
 
 void LR_assertNothingRaisedWithLocation(void (^block)(void), SenTestCase *testCase, NSString *fileName, int lineNumber)
@@ -162,7 +157,6 @@ void LR_assertNothingRaisedWithLocation(void (^block)(void), SenTestCase *testCa
       LRExpectationMessage *message = [[LRExpectationMessage alloc] init];
       [expectation describeTo:message];
       [passedExpectations addObject:message];
-      [message release];
     }
   }
   if (passedExpectations.count > 0) {
@@ -180,5 +174,5 @@ void LRM_assertContextNotSatisfied(LRMockery *context, NSString *fileName, int l
 
 void *anyBlock()
 {
-  return anything();
+  return (__bridge void *)(anything());
 }

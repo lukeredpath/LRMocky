@@ -90,7 +90,7 @@ DEFINE_TEST_CASE(LRMockeryTest) {
 - (void)setUp;
 {
   testCase = [[FakeTestCase alloc] init];
-  mockery = [[LRMockery mockeryForTestCase:testCase] retain];
+  mockery = [LRMockery mockeryForTestCase:testCase];
 }
 
 #pragma mark -
@@ -98,7 +98,7 @@ DEFINE_TEST_CASE(LRMockeryTest) {
 
 - (void)testNotifiesNoFailuresWhenAllExpectationsPass;
 {
-  [mockery addExpectation:[[PassingExpectation new] autorelease]];
+  [mockery addExpectation:[PassingExpectation new]];
   [mockery assertSatisfied];
   
   assertThat(testCase, passed());
@@ -106,7 +106,7 @@ DEFINE_TEST_CASE(LRMockeryTest) {
 
 - (void)testNotifiesFailureForFailingExpectation;
 {
-  [mockery addExpectation:[[FailingExpectation new] autorelease]];
+  [mockery addExpectation:[FailingExpectation new]];
   [mockery assertSatisfied];
   
   assertThat(testCase, failedWithNumberOfFailures(1));

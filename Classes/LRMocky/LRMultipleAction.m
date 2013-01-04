@@ -50,5 +50,5 @@ LRMultipleAction *LRA_doAll(id<LRExpectationAction>firstAction, ...)
     va_end(actionList);
   }
   
-  return [multipleAction autorelease];
+  return multipleAction;
 }

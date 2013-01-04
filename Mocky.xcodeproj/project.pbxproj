@@ -28,7 +28,7 @@
 		A319BB991695A4C2003BB49A /* LRMockObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A319BB971695A4BF003BB49A /* LRMockObjectTest.m */; };
 		A319BB9D1695A584003BB49A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A319BB9C1695A584003BB49A /* SenTestingKit.framework */; };
 		A319BBA01695AE1A003BB49A /* LRReflectionImposterizerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A319BB9E1695AB7C003BB49A /* LRReflectionImposterizerTest.m */; };
-		A31FD27B16961B66002D4511 /* LRMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E4288E1695E16800780641 /* LRMockObject.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		A31FD27B16961B66002D4511 /* LRMockObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E4288E1695E16800780641 /* LRMockObject.m */; };
 		A31FD27C16961B8B002D4511 /* LRMockyStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = A3385AC712026269006E95AB /* LRMockyStateMachine.m */; };
 		A31FD27D16961B8B002D4511 /* LRMockyState.m in Sources */ = {isa = PBXBuildFile; fileRef = A3385ACA12026274006E95AB /* LRMockyState.m */; };
 		A31FD27E16961B8B002D4511 /* LRMockyStateTransitionAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3385ACD1202627E006E95AB /* LRMockyStateTransitionAction.m */; };
@@ -40,6 +40,11 @@
 		A31FD293169641BB002D4511 /* ExpectationsWithDifferentArgumentsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D496D91210CF910076940C /* ExpectationsWithDifferentArgumentsTest.m */; };
 		A31FD294169641E0002D4511 /* CardinalityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D667B11FF508B00F0C310 /* CardinalityTests.m */; };
 		A31FD29616964DFA002D4511 /* ExpectationActionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */; };
+		A31FD29916965063002D4511 /* LRUnexpectedInvocationException.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD29816965062002D4511 /* LRUnexpectedInvocationException.m */; };
+		A31FD29A16965694002D4511 /* NSInvocation+OCMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A39155B711FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A31FD29B16965694002D4511 /* NSInvocation+LRAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A38AFFC4122BFD020001D038 /* NSInvocation+LRAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A31FD29C16965694002D4511 /* NSInvocation+OCMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A39155B711FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A31FD29D16965694002D4511 /* NSInvocation+LRAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A38AFFC4122BFD020001D038 /* NSInvocation+LRAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A3289A3C122C73B100D89A88 /* LRNotificationExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = A3289A3A122C73B100D89A88 /* LRNotificationExpectation.h */; };
 		A3289A3D122C73B100D89A88 /* LRNotificationExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3289A3B122C73B100D89A88 /* LRNotificationExpectation.m */; };
 		A32E0C6112070555009B4C81 /* NSException_SenTestFailure.h in Headers */ = {isa = PBXBuildFile; fileRef = A32E0C6012070555009B4C81 /* NSException_SenTestFailure.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -52,7 +57,6 @@
 		A3464E8D11F2794A0080B46B /* SimpleExpectationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3464E8C11F2794A0080B46B /* SimpleExpectationTests.m */; };
 		A346500211F2937D0080B46B /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A346500111F2937D0080B46B /* TestHelper.m */; };
 		A34650D411F857680080B46B /* LRMockeryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A34650D311F857680080B46B /* LRMockeryTest.m */; };
-		A35D65BD11FF2DE800F0C310 /* LRInvocationComparitorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D65B611FF2C3F00F0C310 /* LRInvocationComparitorTest.m */; };
 		A35D65BE11FF2DF300F0C310 /* LRInvocationComparitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D65BA11FF2C6C00F0C310 /* LRInvocationComparitor.m */; };
 		A36F414B142962C4004EAA45 /* LRHamcrestSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = A36F414A142962C4004EAA45 /* LRHamcrestSupport.h */; };
 		A381A1FA12243BE900FA2A5C /* LRExpectationAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A301768911FDEEFC004828C5 /* LRExpectationAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -63,9 +67,7 @@
 		A38AFDFB122BEC2E0001D038 /* LRPerformBlockArgumentAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A38AFDF9122BEC2E0001D038 /* LRPerformBlockArgumentAction.h */; };
 		A38AFDFC122BEC2E0001D038 /* LRPerformBlockArgumentAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A38AFDFA122BEC2E0001D038 /* LRPerformBlockArgumentAction.m */; };
 		A38AFFC5122BFD020001D038 /* NSInvocation+LRAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A38AFFC3122BFD020001D038 /* NSInvocation+LRAdditions.h */; };
-		A38AFFC6122BFD020001D038 /* NSInvocation+LRAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A38AFFC4122BFD020001D038 /* NSInvocation+LRAdditions.m */; };
 		A39155B811FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A39155B611FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A39155B911FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A39155B711FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m */; };
 		A391561111FFB80F00FE7C49 /* LRExpectationMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A391557011FF661400FE7C49 /* LRExpectationMessage.m */; };
 		A391561311FFB81300FE7C49 /* LRExpectationCardinality.m in Sources */ = {isa = PBXBuildFile; fileRef = A391554811FF5F0900FE7C49 /* LRExpectationCardinality.m */; };
 		A391561611FFB82000FE7C49 /* LRMultipleAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F3A11FF1680002DA61D /* LRMultipleAction.m */; };
@@ -87,7 +89,7 @@
 		A3E428961695E23000780641 /* LRReflectionImposterizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E428941695E23000780641 /* LRReflectionImposterizer.m */; };
 		A3E428AA1695E32300780641 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3E428A81695E32300780641 /* InfoPlist.strings */; };
 		A3E428AE1695E32300780641 /* Mocky_OSX.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E428AD1695E32300780641 /* Mocky_OSX.m */; };
-		A3E428B31695E33A00780641 /* LRReflectionImposterizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E428941695E23000780641 /* LRReflectionImposterizer.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		A3E428B31695E33A00780641 /* LRReflectionImposterizer.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E428941695E23000780641 /* LRReflectionImposterizer.m */; };
 		A3E428B41695E34900780641 /* Mocky-OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E4289E1695E32300780641 /* Mocky-OSX.framework */; };
 		A3E428B51695E37E00780641 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A319BB951695A469003BB49A /* Foundation.framework */; };
 		A3E428B61695E59200780641 /* LRMockery.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769111FDEEFC004828C5 /* LRMockery.m */; };
@@ -106,10 +108,8 @@
 		A3E428C316961B0F00780641 /* LRExpectationBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A301768B11FDEEFC004828C5 /* LRExpectationBuilder.m */; };
 		A3E428C416961B0F00780641 /* LRInvocationComparitor.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D65BA11FF2C6C00F0C310 /* LRInvocationComparitor.m */; };
 		A3E428C516961B0F00780641 /* LRExpectationMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A391557011FF661400FE7C49 /* LRExpectationMessage.m */; };
-		A3E428C616961B0F00780641 /* LRMockyAutomation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F962431505869F003051DD /* LRMockyAutomation.m */; };
 		A3EE4F5911FF1C10002DA61D /* FunctionalMockeryTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F5811FF1C0F002DA61D /* FunctionalMockeryTestCase.m */; };
 		A3F962441505869F003051DD /* LRMockyAutomation.h in Headers */ = {isa = PBXBuildFile; fileRef = A3F962421505869F003051DD /* LRMockyAutomation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A3F962451505869F003051DD /* LRMockyAutomation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F962431505869F003051DD /* LRMockyAutomation.m */; };
 		AA747D9F0F9514B9006C5449 /* Mocky_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* Mocky_Prefix.pch */; settings = {ATTRIBUTES = (); }; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -164,6 +164,8 @@
 		A31FD28D1696260D002D4511 /* LRExpectationCapture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRExpectationCapture.h; sourceTree = "<group>"; };
 		A31FD28E169626E6002D4511 /* LRInvocationToExpectationTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRInvocationToExpectationTranslator.h; sourceTree = "<group>"; };
 		A31FD28F169626E6002D4511 /* LRInvocationToExpectationTranslator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRInvocationToExpectationTranslator.m; sourceTree = "<group>"; };
+		A31FD29716965062002D4511 /* LRUnexpectedInvocationException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRUnexpectedInvocationException.h; sourceTree = "<group>"; };
+		A31FD29816965062002D4511 /* LRUnexpectedInvocationException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRUnexpectedInvocationException.m; sourceTree = "<group>"; };
 		A3289A3A122C73B100D89A88 /* LRNotificationExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRNotificationExpectation.h; sourceTree = "<group>"; };
 		A3289A3B122C73B100D89A88 /* LRNotificationExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRNotificationExpectation.m; sourceTree = "<group>"; };
 		A3289A53122C744700D89A88 /* NotificationExpectationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationExpectationTests.m; sourceTree = "<group>"; };
@@ -359,6 +361,8 @@
 				A3E428941695E23000780641 /* LRReflectionImposterizer.m */,
 				A31FD28E169626E6002D4511 /* LRInvocationToExpectationTranslator.h */,
 				A31FD28F169626E6002D4511 /* LRInvocationToExpectationTranslator.m */,
+				A31FD29716965062002D4511 /* LRUnexpectedInvocationException.h */,
+				A31FD29816965062002D4511 /* LRUnexpectedInvocationException.m */,
 				A32E0C5C12070477009B4C81 /* Integration */,
 				A3385AC512026244006E95AB /* States */,
 				A30176CF11FDFCC7004828C5 /* Expectations */,
@@ -842,7 +846,6 @@
 				A346500211F2937D0080B46B /* TestHelper.m in Sources */,
 				A34650D411F857680080B46B /* LRMockeryTest.m in Sources */,
 				A3EE4F5911FF1C10002DA61D /* FunctionalMockeryTestCase.m in Sources */,
-				A35D65BD11FF2DE800F0C310 /* LRInvocationComparitorTest.m in Sources */,
 				A3385A2D12024DD3006E95AB /* LRMockyStatesTest.m in Sources */,
 				A3156301150434D5006949E6 /* HCBlockMatcher.m in Sources */,
 				A3E428B71695E6D900780641 /* ProtocolMockTests.m in Sources */,
@@ -850,6 +853,7 @@
 				A31FD293169641BB002D4511 /* ExpectationsWithDifferentArgumentsTest.m in Sources */,
 				A31FD294169641E0002D4511 /* CardinalityTests.m in Sources */,
 				A31FD29616964DFA002D4511 /* ExpectationActionsTest.m in Sources */,
+				A31FD29916965063002D4511 /* LRUnexpectedInvocationException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -884,12 +888,13 @@
 				A3E428C316961B0F00780641 /* LRExpectationBuilder.m in Sources */,
 				A3E428C416961B0F00780641 /* LRInvocationComparitor.m in Sources */,
 				A3E428C516961B0F00780641 /* LRExpectationMessage.m in Sources */,
-				A3E428C616961B0F00780641 /* LRMockyAutomation.m in Sources */,
 				A31FD27B16961B66002D4511 /* LRMockObject.m in Sources */,
 				A31FD27C16961B8B002D4511 /* LRMockyStateMachine.m in Sources */,
 				A31FD27D16961B8B002D4511 /* LRMockyState.m in Sources */,
 				A31FD27E16961B8B002D4511 /* LRMockyStateTransitionAction.m in Sources */,
 				A31FD29216962852002D4511 /* LRInvocationToExpectationTranslator.m in Sources */,
+				A31FD29A16965694002D4511 /* NSInvocation+OCMAdditions.m in Sources */,
+				A31FD29B16965694002D4511 /* NSInvocation+LRAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -903,7 +908,6 @@
 				A301769F11FDEEFC004828C5 /* LRExpectationBuilder.m in Sources */,
 				A30176A311FDEEFC004828C5 /* LRInvocationExpectation.m in Sources */,
 				A30176A511FDEEFC004828C5 /* LRMockery.m in Sources */,
-				A39155B911FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m in Sources */,
 				A30176A911FDEEFC004828C5 /* LRPerformBlockAction.m in Sources */,
 				A30176AB11FDEEFC004828C5 /* LRReturnValueAction.m in Sources */,
 				A30176AD11FDEEFC004828C5 /* LRTestCase.m in Sources */,
@@ -915,12 +919,12 @@
 				A35D65BE11FF2DF300F0C310 /* LRInvocationComparitor.m in Sources */,
 				A391561111FFB80F00FE7C49 /* LRExpectationMessage.m in Sources */,
 				A38AFDFC122BEC2E0001D038 /* LRPerformBlockArgumentAction.m in Sources */,
-				A38AFFC6122BFD020001D038 /* NSInvocation+LRAdditions.m in Sources */,
 				A3289A3D122C73B100D89A88 /* LRNotificationExpectation.m in Sources */,
-				A3F962451505869F003051DD /* LRMockyAutomation.m in Sources */,
 				A3E428901695E16800780641 /* LRMockObject.m in Sources */,
 				A3E428961695E23000780641 /* LRReflectionImposterizer.m in Sources */,
 				A31FD29116962851002D4511 /* LRInvocationToExpectationTranslator.m in Sources */,
+				A31FD29C16965694002D4511 /* NSInvocation+OCMAdditions.m in Sources */,
+				A31FD29D16965694002D4511 /* NSInvocation+LRAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -956,6 +960,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/Mocky.dst;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -981,6 +986,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				DSTROOT = /tmp/Mocky.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1007,7 +1013,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 			};
@@ -1021,7 +1027,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 			};
@@ -1094,6 +1100,7 @@
 			baseConfigurationReference = A31562FC150434B4006949E6 /* Pods-tests.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
@@ -1125,6 +1132,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1226,7 +1234,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1251,7 +1259,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				INFOPLIST_FILE = "Mocky-OSX/Mocky-OSX-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1266,7 +1274,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1286,7 +1294,7 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				INFOPLIST_FILE = "Mocky-OSX/Mocky-OSX-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				WRAPPER_EXTENSION = framework;

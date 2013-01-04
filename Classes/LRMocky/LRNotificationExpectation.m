@@ -15,12 +15,12 @@
 
 + (id)expectationWithNotificationName:(NSString *)name;
 {
-  return [[[self alloc] initWithName:name sender:nil] autorelease];
+  return [[self alloc] initWithName:name sender:nil];
 }
 
 + (id)expectationWithNotificationName:(NSString *)name sender:(id)sender;
 {
-  return [[[self alloc] initWithName:name sender:sender] autorelease];
+  return [[self alloc] initWithName:name sender:sender];
 }
 
 - (id)initWithName:(NSString *)notificationName sender:(id)object;
@@ -28,7 +28,7 @@
   if (self = [super init]) {
     isSatisfied = NO;
     name = [notificationName copy];
-    sender = [object retain];
+    sender = object;
     
     id notificationObject = sender;
     
@@ -58,9 +58,6 @@
 - (void)dealloc
 {
   [[NSNotificationCenter defaultCenter] removeObserver:self];
-  [name release];
-  [sender release];
-  [super dealloc];
 }
 
 - (void)addAction:(id <LRExpectationAction>)action

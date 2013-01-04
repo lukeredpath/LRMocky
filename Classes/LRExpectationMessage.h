@@ -12,6 +12,6 @@
 @interface LRExpectationMessage : NSObject {
   NSMutableString *message;
 }
-@property (nonatomic, readonly) NSString *message;
+@property (weak, nonatomic, readonly) NSString *message;
 - (void)append:(NSString *)string;
 @end
