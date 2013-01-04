@@ -59,7 +59,7 @@
  */
 - (id)then:(id)action;
 
-- (id)then:(LRMockyState *)state becomes:(NSString *)newState;
+// - (id)then:(LRMockyState *)state becomes:(NSString *)newState;
 
 #pragma mark - Deprecated syntax
 

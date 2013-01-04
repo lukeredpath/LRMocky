@@ -120,7 +120,7 @@
     }
 		case '{': // structure
 		{
-			unsigned maxArgSize = [[self methodSignature] frameLength];
+			NSUInteger maxArgSize = [[self methodSignature] frameLength];
 			NSMutableData *argumentData = [[[NSMutableData alloc] initWithLength:maxArgSize] autorelease];
 			[self getArgument:[argumentData mutableBytes] atIndex:argIndex];
 			return [NSValue valueWithBytes:[argumentData bytes] objCType:argType];
@@ -134,7 +134,7 @@
 - (NSString *)invocationDescription
 {
 	NSMethodSignature *methodSignature = [self methodSignature];
-	unsigned int numberOfArgs = [methodSignature numberOfArguments];
+	NSUInteger numberOfArgs = [methodSignature numberOfArguments];
 	
 	if (numberOfArgs == 2)
 		return NSStringFromSelector([self selector]);
@@ -258,7 +258,7 @@
 	long longValue;
 	
 	[self getArgument:&longValue atIndex:anInt];
-	return [NSString stringWithFormat:@"%d", longValue];
+	return [NSString stringWithFormat:@"%ld", longValue];
 }
 
 - (NSString *)unsignedLongDescriptionAtIndex:(int)anInt
@@ -266,7 +266,7 @@
 	unsigned long longValue;
 	
 	[self getArgument:&longValue atIndex:anInt];
-	return [NSString stringWithFormat:@"%u", longValue];
+	return [NSString stringWithFormat:@"%lu", longValue];
 }
 
 - (NSString *)longLongDescriptionAtIndex:(int)anInt
@@ -324,7 +324,7 @@
 	memset(buffer, 0x0, 128);
 	
 	[self getArgument:&buffer atIndex:anInt];
-	return [NSString stringWithFormat:@"\"%S\"", buffer];
+	return [NSString stringWithFormat:@"\"%s\"", buffer];
 }
 
 - (NSString *)selectorDescriptionAtIndex:(int)anInt

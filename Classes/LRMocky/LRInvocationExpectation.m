@@ -108,7 +108,7 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
     [message append:@" but received it only once."];
   }
   else {
-    [message append:[NSString stringWithFormat:@" but received it %d times.", numberOfInvocations]];
+    [message append:[NSString stringWithFormat:@" but received it %ld times.", numberOfInvocations]];
   }
   
   if (self.similarInvocation && numberOfArguments > 2) {

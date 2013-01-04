@@ -68,6 +68,9 @@
   return isSatisfied;
 }
 
+- (void)invoke:(NSInvocation *)invocation
+{} // not applicable
+
 - (void)describeTo:(LRExpectationMessage *)message
 {
   [message append:[NSString stringWithFormat:@"Expected to receive notification named %@", name]];

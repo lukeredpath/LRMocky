@@ -20,8 +20,6 @@
 @property (weak, nonatomic, readonly) OLD_LRImposterizer *imposterizer;
 
 - (id)initWithMockery:(LRMockery *)aMockery;
-- (void)actAsImposterForMockObject:(OLD_LRMockObject *)mock;
-
 @end
 
 @implementation LRExpectationBuilder {

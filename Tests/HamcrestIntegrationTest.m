@@ -93,7 +93,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(HamcrestIntegrationTest)
   [context assertSatisfied];
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomethingWithObject: with arguments: [<same instance as 0x%0x %@>] once but received it 0 times.", testObject, dummy, dummy, other]));
+    @"Expected %@ to receive doSomethingWithObject: with arguments: [<same instance as 0x%0x %@>] once but received it 0 times.", testObject, dummy, dummy]));
 }
 
 END_TEST_CASE

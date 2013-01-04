@@ -48,12 +48,12 @@
 
 - (NSNumber *)numberOfFailuresAsNumber;
 {
-  return [NSNumber numberWithInt:[self numberOfFailures]];
+  return [NSNumber numberWithUnsignedInteger:[self numberOfFailures]];
 }
 
 - (NSString *)description;
 {
-  return [NSString stringWithFormat:@"MockTestCase with %d failures, %@", [self numberOfFailures], failures];
+  return [NSString stringWithFormat:@"MockTestCase with %lu failures, %@", [self numberOfFailures], failures];
 }
 
 - (NSException *)lastFailure;

@@ -11,7 +11,7 @@
 
 @implementation LREqualToCardinality
 
-- (id)initWithInt:(int)anInt;
+- (id)initWithInt:(NSUInteger)anInt;
 {
   if (self = [super init]) {
     equalToInt = anInt;
@@ -19,14 +19,14 @@
   return self;
 }
 
-- (BOOL)satisfiedBy:(int)numberOfInvocations
+- (BOOL)satisfiedBy:(NSUInteger)numberOfInvocations
 {
   return numberOfInvocations == equalToInt;
 }
 
 - (NSString *)description
 {
-  return [NSString stringWithFormat:@"exactly %d", equalToInt];
+  return [NSString stringWithFormat:@"exactly %ld", equalToInt];
 }
 
 - (void)describeTo:(LRExpectationMessage *)message
@@ -41,14 +41,14 @@
 
 @end
 
-id<LRExpectationCardinality> LRM_exactly(int anInt)
+id<LRExpectationCardinality> LRM_exactly(NSUInteger anInt)
 {
   return [[LREqualToCardinality alloc] initWithInt:anInt];
 }
 
 @implementation LRAtLeastCardinality
 
-- (id)initWithMinimum:(int)theMinimum;
+- (id)initWithMinimum:(NSUInteger)theMinimum;
 {
   if (self = [super init]) {
     minimum = theMinimum;
@@ -56,14 +56,14 @@ id<LRExpectationCardinality> LRM_exactly(int anInt)
   return self;
 }
 
-- (BOOL)satisfiedBy:(int)numberOfInvocations
+- (BOOL)satisfiedBy:(NSUInteger)numberOfInvocations
 {
   return numberOfInvocations >= minimum;
 }
 
 - (NSString *)description
 {
-  return [NSString stringWithFormat:@"at least %d", minimum];
+  return [NSString stringWithFormat:@"at least %ld", minimum];
 }
 
 - (void)describeTo:(LRExpectationMessage *)message
@@ -73,14 +73,14 @@ id<LRExpectationCardinality> LRM_exactly(int anInt)
 
 @end
 
-id<LRExpectationCardinality> LRM_atLeast(int anInt)
+id<LRExpectationCardinality> LRM_atLeast(NSUInteger anInt)
 {
   return [[LRAtLeastCardinality alloc] initWithMinimum:anInt];
 }
 
 @implementation LRAtMostCardinality
 
-- (id)initWithMaximum:(int)theMaximum;
+- (id)initWithMaximum:(NSUInteger)theMaximum;
 {
   if (self = [super init]) {
     maximum = theMaximum;
@@ -88,14 +88,14 @@ id<LRExpectationCardinality> LRM_atLeast(int anInt)
   return self;
 }
 
-- (BOOL)satisfiedBy:(int)numberOfInvocations
+- (BOOL)satisfiedBy:(NSUInteger)numberOfInvocations
 {
   return numberOfInvocations <= maximum;
 }
 
 - (NSString *)description
 {
-  return [NSString stringWithFormat:@"at most %d", maximum];
+  return [NSString stringWithFormat:@"at most %ld", maximum];
 }
 
 - (void)describeTo:(LRExpectationMessage *)message
@@ -105,14 +105,14 @@ id<LRExpectationCardinality> LRM_atLeast(int anInt)
 
 @end
 
-id<LRExpectationCardinality> LRM_atMost(int anInt)
+id<LRExpectationCardinality> LRM_atMost(NSUInteger anInt)
 {
   return [[LRAtMostCardinality alloc] initWithMaximum:anInt];
 }
 
 @implementation LRBetweenCardinality
 
-- (id)initWithMinimum:(int)theMinimum andMaximum:(int)theMaximum;
+- (id)initWithMinimum:(NSUInteger)theMinimum andMaximum:(NSUInteger)theMaximum;
 {
   if (self = [super init]) {
     minimum = theMinimum;
@@ -121,14 +121,14 @@ id<LRExpectationCardinality> LRM_atMost(int anInt)
   return self;
 }
 
-- (BOOL)satisfiedBy:(int)numberOfInvocations
+- (BOOL)satisfiedBy:(NSUInteger)numberOfInvocations
 {
   return (numberOfInvocations >= minimum && numberOfInvocations <= maximum);
 }
 
 - (NSString *)description
 {
-  return [NSString stringWithFormat:@"between %d and %d", minimum, maximum];
+  return [NSString stringWithFormat:@"between %ld and %ld", minimum, maximum];
 }
 
 - (void)describeTo:(LRExpectationMessage *)message
@@ -138,7 +138,7 @@ id<LRExpectationCardinality> LRM_atMost(int anInt)
 
 @end
 
-id<LRExpectationCardinality> LRM_between(int min, int max)
+id<LRExpectationCardinality> LRM_between(NSUInteger min, NSUInteger max)
 {
   return [[LRBetweenCardinality alloc] initWithMinimum:min andMaximum:max];
 }

@@ -10,16 +10,16 @@
 #import "LRDescribable.h"
 
 @protocol LRExpectationCardinality <NSObject, LRDescribable>
-- (BOOL)satisfiedBy:(int)numberOfInvocations;
+- (BOOL)satisfiedBy:(NSUInteger)numberOfInvocations;
 @end
 
 @interface LREqualToCardinality : NSObject <LRExpectationCardinality> {
-  int equalToInt;
+  NSUInteger equalToInt;
 }
-- (id)initWithInt:(int)anInt;
+- (id)initWithInt:(NSUInteger)anInt;
 @end
 
-id<LRExpectationCardinality> LRM_exactly(int anInt);
+id<LRExpectationCardinality> LRM_exactly(NSUInteger anInt);
 
 #ifdef MOCKY_SHORTHAND
   #define exactly(int) LRM_exactly(int)
@@ -27,37 +27,37 @@ id<LRExpectationCardinality> LRM_exactly(int anInt);
 #endif
 
 @interface LRAtLeastCardinality : NSObject <LRExpectationCardinality> {
-  int minimum;
+  NSUInteger minimum;
 }
-- (id)initWithMinimum:(int)theMinimum;
+- (id)initWithMinimum:(NSUInteger)theMinimum;
 @end
 
-id<LRExpectationCardinality> LRM_atLeast(int anInt);
+id<LRExpectationCardinality> LRM_atLeast(NSUInteger anInt);
 
 #ifdef MOCKY_SHORTHAND
   #define atLeast(min) LRM_atLeast(min)
 #endif
 
 @interface LRAtMostCardinality : NSObject <LRExpectationCardinality> {
-  int maximum;
+  NSUInteger maximum;
 }
-- (id)initWithMaximum:(int)theMaximum;
+- (id)initWithMaximum:(NSUInteger)theMaximum;
 @end
 
-id<LRExpectationCardinality> LRM_atMost(int anInt);
+id<LRExpectationCardinality> LRM_atMost(NSUInteger anInt);
 
 #ifdef MOCKY_SHORTHAND
   #define atMost(max) LRM_atMost(max)
 #endif
 
 @interface LRBetweenCardinality : NSObject <LRExpectationCardinality> {
-  int minimum;
-  int maximum;
+  NSUInteger minimum;
+  NSUInteger maximum;
 }
-- (id)initWithMinimum:(int)theMinimum andMaximum:(int)theMaximum;
+- (id)initWithMinimum:(NSUInteger)theMinimum andMaximum:(NSUInteger)theMaximum;
 @end
 
-id<LRExpectationCardinality> LRM_between(int min, int max);
+id<LRExpectationCardinality> LRM_between(NSUInteger min, NSUInteger max);
 
 #ifdef MOCKY_SHORTHAND
   #define between(min, max) LRM_between(min, max)
