@@ -58,8 +58,10 @@ id<HCMatcher> passed();
 id<HCMatcher> failedWithNumberOfFailures(int numberOfFailures);
 id<HCMatcher> failedWithExpectationError(NSString *errorDescription);
 
-#define assertTrue(expression) assertThatBool(expression, equalToBool(YES))
-#define assertFalse(expression) assertThatBool(expression, equalToBool(NO))
+#define assertTrue(expression)    assertThatBool(expression, equalToBool(YES))
+#define assertFalse(expression)   assertThatBool(expression, equalToBool(NO))
+#define assertNil(expression)     assertThat(expression, nilValue());
+#define assertNotNil(expression)  assertThat(expression, notNilValue());
 
 @class LRMockery;
 

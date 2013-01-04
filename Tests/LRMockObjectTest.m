@@ -54,8 +54,7 @@ DEFINE_TEST_CASE(LRMockObjectTest) {
 
   [mockObject invoke:invocation];
   
-  STAssertEqualObjects(dispatcher.lastDispatched, invocation,
-      @"Expected invocation to be forwarded to dispatcher");
+  assertThat(dispatcher.lastDispatched, equalTo(invocation));
 }
 
 - (void)testDoesntForwardInvocationsOfCaptureControlProtocolMethodsButHandlesThemDirectly
@@ -75,15 +74,14 @@ DEFINE_TEST_CASE(LRMockObjectTest) {
   
   [mockObject invoke:protocolInvocation];
   
-  STAssertNil(dispatcher.lastDispatched,
-      @"Expected CaptureControl method not to be forwarded to dispatcher.");
+  assertNil(dispatcher.lastDispatched);
 }
 
 - (void)testCanHaveDescriptiveName
 {
   LRMockObject *mockObject = [[LRMockObject alloc] initWithInvocationDispatcher:dispatcher mockedType:NSObject.class name:@"Test Name"];
   
-  STAssertEqualObjects(@"Test Name", mockObject.name, @"Expected a name");
+  assertThat(mockObject.name, equalTo(@"Test Name"));
 }
 
 END_TEST_CASE

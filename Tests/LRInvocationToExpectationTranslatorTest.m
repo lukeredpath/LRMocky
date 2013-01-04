@@ -44,7 +44,7 @@ DEFINE_TEST_CASE(LRInvocationToExpectationTranslatorTest)
   NSInvocation *invocation = anyValidInvocation();
   [translator invoke:invocation];
   
-  STAssertEqualObjects(invocation, capture.capturedInvocation, @"Expected invocation to be captured.");
+  assertThat(invocation, equalTo(capture.capturedInvocation));
 }
 
 - (void)testItInvokesInvocationsThatCanBeHandledByTheCaptureDirectly
@@ -59,8 +59,8 @@ DEFINE_TEST_CASE(LRInvocationToExpectationTranslatorTest)
   
   [translator invoke:invocation];
   
-  STAssertNil(capture.capturedInvocation, @"Expected invocation to not be captured.");
-  STAssertTrue(capture.someDirectMethodCalled, @"Expected direct method to be called.");
+  assertNil(capture.capturedInvocation);
+  assertTrue(capture.someDirectMethodCalled);
 }
 
 END_TEST_CASE

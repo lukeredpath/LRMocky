@@ -48,7 +48,7 @@ DEFINE_TEST_CASE(LRReflectionImposterizerTest) {
   [imposter doSomething];
   
   NSInvocation *lastInvocation = [invocationCapturer.capturedInvocations lastObject];
-  STAssertNotNil(lastInvocation, @"Expected forwarded invocation to be captured");
+  assertNotNil(lastInvocation);
 }
 
 - (void)testImposterizedClassesRaiseForUnknownInstanceMethods
@@ -61,14 +61,14 @@ DEFINE_TEST_CASE(LRReflectionImposterizerTest) {
 {
   TestClass *imposter = [imposterizer imposterizeClass:TestClass.class invokable:invocationCapturer ancilliaryProtocols:nil];
   
-  STAssertTrue([imposter respondsToSelector:@selector(doSomething)], @"Expected to report responds to selector.");
+  assertTrue([imposter respondsToSelector:@selector(doSomething)]);
 }
 
 - (void)testImposterizedClassesReportTheyConformToAnyInheritedProtocols
 { 
   TestClass *imposter = [imposterizer imposterizeClass:TestClass.class invokable:invocationCapturer ancilliaryProtocols:nil];
   
-  STAssertTrue([imposter conformsToProtocol:@protocol(NSObject)], @"Expected to report conforms to protocol.");
+  assertTrue([imposter conformsToProtocol:@protocol(NSObject)]);
 }
 
 - (void)testImposterizedProtocolsForwardInvocationsToInvokableForValidRequiredInstanceMethods
@@ -86,9 +86,8 @@ DEFINE_TEST_CASE(LRReflectionImposterizerTest) {
   id<TestProtocol> imposter = [imposterizer imposterizeProtocol:@protocol(TestProtocol) invokable:invocationCapturer ancilliaryProtocols:nil];
   
   [imposter doSomethingOptional];
-  
-  NSInvocation *lastInvocation = [invocationCapturer.capturedInvocations lastObject];
-  STAssertNotNil(lastInvocation, @"Expected forwarded invocation to be captured");
+
+  assertNotNil([invocationCapturer.capturedInvocations lastObject]);
 }
 
 - (void)testImposterizedProtocolsForwardInvocationsToInvokableForInheritedProtocolInstanceMethods
@@ -97,8 +96,7 @@ DEFINE_TEST_CASE(LRReflectionImposterizerTest) {
   
   [imposter doSomethingElse];
   
-  NSInvocation *lastInvocation = [invocationCapturer.capturedInvocations lastObject];
-  STAssertNotNil(lastInvocation, @"Expected forwarded invocation to be captured");
+  assertNotNil([invocationCapturer.capturedInvocations lastObject]);
 }
 
 - (void)testImposterizedProtocolsRaiseForUnknownInstanceMethods
@@ -111,21 +109,21 @@ DEFINE_TEST_CASE(LRReflectionImposterizerTest) {
 {
   TestClass *imposter = [imposterizer imposterizeProtocol:@protocol(TestProtocol) invokable:invocationCapturer ancilliaryProtocols:nil];
   
-  STAssertTrue([imposter respondsToSelector:@selector(doSomethingElse)], @"Expected to report responds to selector.");
+  assertTrue([imposter respondsToSelector:@selector(doSomethingElse)]);
 }
 
 - (void)testImposterizedProtocolsReportTheyConformToTheImposterizedProtocol
 {
   TestClass *imposter = [imposterizer imposterizeProtocol:@protocol(TestProtocol) invokable:invocationCapturer ancilliaryProtocols:nil];
   
-  STAssertTrue([imposter conformsToProtocol:@protocol(TestProtocol)], @"Expected to report conforms to protocol.");
+  assertTrue([imposter conformsToProtocol:@protocol(TestProtocol)]);
 }
 
 - (void)testImposterizedProtocolsReportTheyConformToTheImposterizedProtocolsInheritedProtocols
 {
   TestClass *imposter = [imposterizer imposterizeProtocol:@protocol(ExtendedTestProtocol) invokable:invocationCapturer ancilliaryProtocols:nil];
   
-  STAssertTrue([imposter conformsToProtocol:@protocol(TestProtocol)], @"Expected to report conforms to protocol.");
+  assertTrue([imposter conformsToProtocol:@protocol(TestProtocol)]);
 }
 
 - (void)testCanImposterizeClassWithAncilliaryProtocols
@@ -135,10 +133,10 @@ DEFINE_TEST_CASE(LRReflectionImposterizerTest) {
   [imposter doSomethingElse];
   
   NSInvocation *lastInvocation = [invocationCapturer.capturedInvocations lastObject];
-  STAssertNotNil(lastInvocation, @"Expected forwarded invocation for ancilliar protocol method to be captured");
-  
-  STAssertTrue([imposter respondsToSelector:@selector(doSomethingElse)], @"Expected to report responds to ancilliary protocol method.");
-  STAssertTrue([imposter conformsToProtocol:@protocol(TestProtocol)], @"Expected to report conforms to ancilliary protocol.");
+
+  assertNotNil(lastInvocation);
+  assertTrue([imposter respondsToSelector:@selector(doSomethingElse)]);
+  assertTrue([imposter conformsToProtocol:@protocol(TestProtocol)]);
 }
 
 - (void)testCanImposterizeProtocolWithAncilliaryProtocols
@@ -148,10 +146,10 @@ DEFINE_TEST_CASE(LRReflectionImposterizerTest) {
   [imposter doSomethingElse];
   
   NSInvocation *lastInvocation = [invocationCapturer.capturedInvocations lastObject];
-  STAssertNotNil(lastInvocation, @"Expected forwarded invocation for ancilliar protocol method to be captured");
-  
-  STAssertTrue([imposter respondsToSelector:@selector(doSomethingElse)], @"Expected to report responds to ancilliary protocol method.");
-  STAssertTrue([imposter conformsToProtocol:@protocol(TestProtocol)], @"Expected to report conforms to ancilliary protocol.");
+
+  assertNotNil(lastInvocation);
+  assertTrue([imposter respondsToSelector:@selector(doSomethingElse)]);
+  assertTrue([imposter conformsToProtocol:@protocol(TestProtocol)]);
 }
 
 - (void)testImposterizedMethodsThatShouldReturnObjectsReturnNilByDefault
@@ -160,7 +158,7 @@ DEFINE_TEST_CASE(LRReflectionImposterizerTest) {
   
   id result = [imposter returnsObject];
 
-  STAssertNil(result, @"Expected nil result.");
+  assertNil(result);
 }
 
 - (void)testImposterizedMethodsThatShouldReturnObjectsReturnTheInvocationReturnValueIfSet
@@ -175,7 +173,7 @@ DEFINE_TEST_CASE(LRReflectionImposterizerTest) {
   
   id result = [imposter returnsObject];
   
-  STAssertEqualObjects(expectedReturnValue, result, @"Expected a matching result.");
+  assertThat(result, equalTo(expectedReturnValue));
 }
 
 - (void)testImposterizedMethodsThatShouldReturnPrimitivesReturnTheInvocationReturnValueIfSet
@@ -190,7 +188,7 @@ DEFINE_TEST_CASE(LRReflectionImposterizerTest) {
   
   int result = [imposter returnsInt];
   
-  STAssertEquals(expectedReturnValue, result, @"Expected a matching result.");
+  assertThat(@(result), equalTo(@(expectedReturnValue)));
 }
 
 END_TEST_CASE
