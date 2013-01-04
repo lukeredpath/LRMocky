@@ -92,7 +92,7 @@ NSString *failureFor(id<LRDescribable> expectation);
 
 - (void)check:(__weak dispatch_block_t)expectationBlock
 {
-  [LRExpectationBuilder buildExpectationsWithBlock:expectationBlock inContext:self];
+  [LRExpectationBuilder buildExpectationsWithBlock:expectationBlock collectUsing:self];
 }
 
 #pragma mark - Notification expectations

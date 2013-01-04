@@ -167,6 +167,7 @@
 		A31FD29816965062002D4511 /* LRUnexpectedInvocationException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRUnexpectedInvocationException.m; sourceTree = "<group>"; };
 		A31FD2B716965C5C002D4511 /* FunctionalTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunctionalTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A31FD2B916965C5C002D4511 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		A31FD2E0169661E1002D4511 /* LRExpectationCollector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRExpectationCollector.h; sourceTree = "<group>"; };
 		A3289A3A122C73B100D89A88 /* LRNotificationExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRNotificationExpectation.h; sourceTree = "<group>"; };
 		A3289A3B122C73B100D89A88 /* LRNotificationExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRNotificationExpectation.m; sourceTree = "<group>"; };
 		A3289A53122C744700D89A88 /* NotificationExpectationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationExpectationTests.m; sourceTree = "<group>"; };
@@ -372,6 +373,7 @@
 				A31FD28F169626E6002D4511 /* LRInvocationToExpectationTranslator.m */,
 				A31FD29716965062002D4511 /* LRUnexpectedInvocationException.h */,
 				A31FD29816965062002D4511 /* LRUnexpectedInvocationException.m */,
+				A31FD2E0169661E1002D4511 /* LRExpectationCollector.h */,
 				A32E0C5C12070477009B4C81 /* Integration */,
 				A3385AC512026244006E95AB /* States */,
 				A30176CF11FDFCC7004828C5 /* Expectations */,

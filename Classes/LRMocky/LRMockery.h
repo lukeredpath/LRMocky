@@ -10,6 +10,7 @@
 #import "LRExpectation.h"
 #import "LRTestCase.h"
 #import "LRInvocationDispatcher.h"
+#import "LRExpectationCollector.h"
 
 @class LRExpectationBuilder;
 @class SenTestCase;
@@ -20,7 +21,7 @@
 /** Represents a context in which mocks are created and verified.
  
  */
-@interface LRMockery : NSObject <LRInvocationDispatcher> {
+@interface LRMockery : NSObject <LRInvocationDispatcher, LRExpectationCollector> {
   NSMutableArray *expectations;
   NSMutableArray *mockObjects;
   id<LRTestCaseNotifier> testNotifier;
@@ -161,17 +162,6 @@
  @see LRExpectationBuilder
  */
 - (void)check:(__weak dispatch_block_t)expectationBlock;
-
-/** Add's a new expectation to the current context.
- 
- Mostly used internally to add expectations created by LRExpectationBuilder. 
- 
- Most people will never need to call this manually, although if you have manually created
- an LRExpectation object you could use this to safely add it to the current context.
- 
- @param expectation The expectation to add.
- */
-- (void)addExpectation:(id<LRExpectation>)expectation;
 
 ///------------------------------------------------------------------------------------/
 /// @name Checking expectations

@@ -10,6 +10,7 @@
 #import "LRExpectation.h"
 #import "LRExpectationCardinality.h"
 #import "LRExpectationCapture.h"
+#import "LRExpectationCollector.h"
 
 @class OLD_LRMockObject;
 @class LRMockery;
@@ -21,7 +22,7 @@
 
 @property (weak, nonatomic, readonly) id<LRExpectation> expectation;
 
-+ (void)buildExpectationsWithBlock:(dispatch_block_t)expectationBlock inContext:(LRMockery *)context;
++ (void)buildExpectationsWithBlock:(dispatch_block_t)expectationBlock collectUsing:(id<LRExpectationCollector>)collector;
 + (LRExpectationBuilder *)currentExpectationBuilder;
 
 #pragma mark - Configuring expectations
