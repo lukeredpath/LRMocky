@@ -22,7 +22,6 @@ LRPerformBlockArgumentAction *LRA_performBlockArgumentsWithObject(id object);
   return self;
 }
 
-
 - (void)invoke:(NSInvocation *)invocation
 {
   for (int i = 2; i < [[invocation methodSignature] numberOfArguments]; i++) {

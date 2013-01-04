@@ -96,23 +96,23 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
   assertThatInt((int)[testObject returnSomeValue], equalToInt(30));
 }
 
-- (void)xtestCanExpectMethodCallsWithBlockArgumentsAndCallTheSuppliedBlock;
-{
-  id mockArray = [context mock:[NSArray class]];
-  
-  __block NSString *someString = nil;
-  
-  [context check:^{
-    [[expectThat(mockArray) receives] indexesOfObjectsPassingTest:(__bridge BOOL (^)(__strong id, NSUInteger, BOOL *))(anyBlock())]; [and then:performBlockArguments];
-  }];
-  
-  [(NSArray *)mockArray indexesOfObjectsPassingTest:^(id object, NSUInteger idx, BOOL *stop) { 
-    someString = @"some string";
-    return YES; 
-  }];
-  
-  assertThat(someString, equalTo(@"some string"));
-}
+//- (void)testCanExpectMethodCallsWithBlockArgumentsAndCallTheSuppliedBlock;
+//{
+//  id mockArray = [context mock:[NSArray class]];
+//  
+//  __block NSString *someString = nil;
+//  
+//  [context check:^{
+//    [[expectThat(mockArray) receives] indexesOfObjectsPassingTest:(__bridge BOOL (^)(__strong id, NSUInteger, BOOL *))(anyBlock())]; [and then:performBlockArguments];
+//  }];
+//  
+//  [(NSArray *)mockArray indexesOfObjectsPassingTest:^(__strong id object, NSUInteger idx, BOOL *stop) {
+//    someString = @"some string";
+//    return YES; 
+//  }];
+//  
+//  assertThat(someString, equalTo(@"some string"));
+//}
 
 #if !(TARGET_IPHONE_SIMULATOR)
 - (void)testMocksCanThrowAnException;
