@@ -23,7 +23,7 @@
 
 - (void)invoke:(NSInvocation *)invocation
 {
-  [(id<LRExpectationAction>)[actions objectAtIndex:numberOfCalls] invoke:invocation];
+  [(id<LRExpectationAction>)actions[numberOfCalls] invoke:invocation];
   
   numberOfCalls++;
   if (numberOfCalls == [actions count]) {
