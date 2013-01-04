@@ -171,13 +171,12 @@ NSString *failureFor(id<LRDescribable> expectation) {
   for (id<LRExpectation> expectation in expectations) {
     if ([expectation matches:invocation]) {
       [expectation invoke:invocation];
+      return;
     }
   }
-//  LRUnexpectedInvocation *unexpectedInvocation = [LRUnexpectedInvocation unexpectedInvocation:invocation];
-//  unexpectedInvocation.mockObject = mockObject;
-//  [expectations addObject:unexpectedInvocation];
-  
-  // TODO: throw unexpected invocation error
+  LRUnexpectedInvocation *unexpectedInvocation = [LRUnexpectedInvocation unexpectedInvocation:invocation];
+  unexpectedInvocation.mockObject = invocation.target;
+  [expectations addObject:unexpectedInvocation];
 }
 
 @end
