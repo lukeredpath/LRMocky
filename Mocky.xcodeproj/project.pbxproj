@@ -23,7 +23,6 @@
 		A30176AC11FDEEFC004828C5 /* LRTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = A301769811FDEEFC004828C5 /* LRTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A30176AD11FDEEFC004828C5 /* LRTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769911FDEEFC004828C5 /* LRTestCase.m */; };
 		A30176AF11FDEEFC004828C5 /* LRUnexpectedInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769B11FDEEFC004828C5 /* LRUnexpectedInvocation.m */; };
-		A3156300150434C4006949E6 /* libPods-tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31562FF150434C4006949E6 /* libPods-tests.a */; };
 		A3156302150434D6006949E6 /* HCBlockMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = A36F415314296449004EAA45 /* HCBlockMatcher.m */; };
 		A319BB961695A469003BB49A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A319BB951695A469003BB49A /* Foundation.framework */; };
 		A319BB9D1695A584003BB49A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A319BB9C1695A584003BB49A /* SenTestingKit.framework */; };
@@ -144,7 +143,6 @@
 		2A31DAE89AAD44DE9CD7A062 /* Pods-ios.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.xcconfig"; path = "Pods/Pods-ios.xcconfig"; sourceTree = SOURCE_ROOT; };
 		4EE5C35DFB204E2DA6216499 /* libPods-tests_osx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tests_osx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		592A5255E4E0402AA826189E /* Pods-osx.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osx.xcconfig"; path = "Pods/Pods-osx.xcconfig"; sourceTree = SOURCE_ROOT; };
-		709447B3C5A6495BB36C5672 /* Pods-tests_osx.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tests_osx.xcconfig"; path = "Pods/Pods-tests_osx.xcconfig"; sourceTree = SOURCE_ROOT; };
 		A301767511FDEB9C004828C5 /* LRMocky.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMocky.h; sourceTree = "<group>"; };
 		A301768811FDEEFC004828C5 /* LRExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectation.h; sourceTree = "<group>"; };
 		A301768911FDEEFC004828C5 /* LRExpectationAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectationAction.h; sourceTree = "<group>"; };
@@ -162,9 +160,6 @@
 		A301769911FDEEFC004828C5 /* LRTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRTestCase.m; sourceTree = "<group>"; };
 		A301769A11FDEEFC004828C5 /* LRUnexpectedInvocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRUnexpectedInvocation.h; sourceTree = "<group>"; };
 		A301769B11FDEEFC004828C5 /* LRUnexpectedInvocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRUnexpectedInvocation.m; sourceTree = "<group>"; };
-		A31562FC150434B4006949E6 /* Pods-tests.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-tests.xcconfig"; path = "Pods/Pods-tests.xcconfig"; sourceTree = "<group>"; };
-		A31562FD150434C0006949E6 /* libPods-tests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-tests.a"; path = "Pods/build/Release-iphoneos/libPods-tests.a"; sourceTree = "<group>"; };
-		A31562FF150434C4006949E6 /* libPods-tests.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-tests.a"; path = "Pods/build/Release-iphoneos/libPods-tests.a"; sourceTree = "<group>"; };
 		A319BB7F1695A414003BB49A /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A319BB951695A469003BB49A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		A319BB971695A4BF003BB49A /* LRMockObjectTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMockObjectTest.m; sourceTree = "<group>"; };
@@ -261,7 +256,6 @@
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libMocky.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMocky.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4D03C0C4219451FBDEE905F /* libPods-tests_osx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tests_osx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D71B8DEB30694B27818D13B5 /* Pods-tests_osx.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tests_osx.xcconfig"; path = "Pods/Pods-tests_osx.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,7 +285,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3156300150434C4006949E6 /* libPods-tests.a in Frameworks */,
 				A340492D11FFBC4D0092E4C6 /* libMocky.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,9 +334,6 @@
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 				A31562FB150434A1006949E6 /* Pods Support */,
-				D71B8DEB30694B27818D13B5 /* Pods-tests_osx.xcconfig */,
-				2A31DAE89AAD44DE9CD7A062 /* Pods-ios.xcconfig */,
-				592A5255E4E0402AA826189E /* Pods-osx.xcconfig */,
 			);
 			name = LRMiniTestKit;
 			sourceTree = "<group>";
@@ -475,10 +465,8 @@
 		A31562FB150434A1006949E6 /* Pods Support */ = {
 			isa = PBXGroup;
 			children = (
-				709447B3C5A6495BB36C5672 /* Pods-tests_osx.xcconfig */,
-				A31562FF150434C4006949E6 /* libPods-tests.a */,
-				A31562FD150434C0006949E6 /* libPods-tests.a */,
-				A31562FC150434B4006949E6 /* Pods-tests.xcconfig */,
+				2A31DAE89AAD44DE9CD7A062 /* Pods-ios.xcconfig */,
+				592A5255E4E0402AA826189E /* Pods-osx.xcconfig */,
 			);
 			name = "Pods Support";
 			sourceTree = "<group>";
@@ -1160,7 +1148,6 @@
 		};
 		A319BB921695A414003BB49A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 709447B3C5A6495BB36C5672 /* Pods-tests_osx.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -1194,7 +1181,6 @@
 		};
 		A319BB931695A414003BB49A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 709447B3C5A6495BB36C5672 /* Pods-tests_osx.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -1222,7 +1208,6 @@
 		};
 		A31FD2C616965C5C002D4511 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D71B8DEB30694B27818D13B5 /* Pods-tests_osx.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1254,7 +1239,6 @@
 		};
 		A31FD2C716965C5C002D4511 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D71B8DEB30694B27818D13B5 /* Pods-tests_osx.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1280,7 +1264,6 @@
 		};
 		A36FDBB611FFBB6F004A08F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A31562FC150434B4006949E6 /* Pods-tests.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
