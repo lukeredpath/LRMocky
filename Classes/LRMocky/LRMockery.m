@@ -7,7 +7,7 @@
 //
 
 #import "LRMockery.h"
-#import "LRExpectationBuilder.h"
+#import "LRExpectations.h"
 #import "LRMockObject.h"
 #import "LRUnexpectedInvocation.h"
 #import "LRInvocationExpectation.h"
@@ -54,7 +54,6 @@ NSString *failureFor(id<LRDescribable> expectation);
   return self;
 }
 
-
 #pragma mark - Creating mock objects
 
 - (id)mock:(Class)klass;
@@ -92,7 +91,7 @@ NSString *failureFor(id<LRDescribable> expectation);
 
 - (void)check:(__weak dispatch_block_t)expectationBlock
 {
-  [LRExpectationBuilder buildExpectationsWithBlock:expectationBlock collectUsing:self];
+  [[LRExpectations captureExpectationsWithBlock:expectationBlock] buildExpectations:self];
 }
 
 #pragma mark - Notification expectations

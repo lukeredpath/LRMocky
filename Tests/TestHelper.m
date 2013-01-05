@@ -53,7 +53,7 @@
 
 - (NSString *)description;
 {
-  return [NSString stringWithFormat:@"MockTestCase with %lu failures, %@", [self numberOfFailures], failures];
+  return [NSString stringWithFormat:@"MockTestCase with %lu failures", [self numberOfFailures]];
 }
 
 - (NSException *)lastFailure;

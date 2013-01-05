@@ -15,7 +15,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
   NSString *expectedObject = @"some string";
   
   [context check:^{
-    [[expectThat(testObject) receives] returnSomething]; [and then:returnObject(expectedObject)];
+    [[expectThat(testObject) receives] returnSomething]; [then returns:expectedObject];
   }];
   
   assertThat([testObject returnSomething], equalTo(expectedObject));

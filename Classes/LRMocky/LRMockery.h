@@ -12,7 +12,7 @@
 #import "LRInvocationDispatcher.h"
 #import "LRExpectationCollector.h"
 
-@class LRExpectationBuilder;
+@class LRInvocationExpectationBuilder;
 @class SenTestCase;
 @class LRMockyStateMachine;
 @class OLD_LRMockObject;

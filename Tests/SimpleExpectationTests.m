@@ -86,7 +86,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
   [context assertSatisfied];
 
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomething once but received it 0 times.", testObject]));
+    @"Expected %@ to receive doSomething exactly once but received it 0 times.", testObject]));
 }
 
 - (void)testFailsWhenUnexpectedMethodIsCalled;
@@ -142,7 +142,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
   [context assertSatisfied];
 
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive returnSomethingForValue: with arguments: [@\"one\"] once but received it 0 times.", testObject]));
+    @"Expected %@ to receive returnSomethingForValue: with arguments: [\"one\"] exactly once but received it 0 times.", testObject]));
 }
 
 - (void)testCanExpectMethodCallWithSpecificParametersAndFailWhenAtLeastOneParameterIsWrong;
@@ -155,7 +155,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
   [context assertSatisfied];
 
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomethingWith:andObject: with arguments: [@\"foo\", @\"bar\"] once but received it 0 times.", testObject]));
+    @"Expected %@ to receive doSomethingWith:andObject: with arguments: [\"foo\", \"bar\"] exactly once but received it 0 times.", testObject]));
 }
 
 - (void)testCanExpectMethodCallWithSpecificNonObjectParametersAndPass;
@@ -192,7 +192,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
   [context assertSatisfied];
 
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomethingWithInt: with arguments: [10] once but received it 0 times.", testObject]));
+    @"Expected %@ to receive doSomethingWithInt: with arguments: [<10>] exactly once but received it 0 times.", testObject]));
 }
 
 - (void)testCanExpectMethodCallsWithBlockArgumentsAndPass;

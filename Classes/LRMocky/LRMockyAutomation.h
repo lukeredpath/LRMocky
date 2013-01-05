@@ -12,14 +12,14 @@
 #define LRMOCKY_KIWI_COMPATIBILITY_MODE
 #import "LRMocky.h"
 
-void LRM_check(id testCase, void (^expectationBlock)(LRExpectationBuilder *));
+void LRM_check(id testCase, void (^expectationBlock)(LRInvocationExpectationBuilder *));
 void LRM_verify(NSString *fileName, int lineNumber, void (^block)(void));
 LRMockery *LRM_automock(id testCase);
 
 @interface LRMockeryAutomation : NSObject
 + (id)sharedAutomation;
 - (void)prepareContextForTestCase:(id)testCase;
-- (void)checking:(void (^)(LRExpectationBuilder *))expectationBlock;
+- (void)checking:(void (^)(LRInvocationExpectationBuilder *))expectationBlock;
 - (void)verify:(void (^)(void))block fileName:(NSString *)fileName lineNumber:(int)lineNumber;
 - (LRMockery *)mockery;
 @end

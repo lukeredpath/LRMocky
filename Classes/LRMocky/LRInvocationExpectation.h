@@ -10,29 +10,22 @@
 #import "LRExpectation.h"
 #import "LRExpectationAction.h"
 #import "LRDescribable.h"
+#import <OCHamcrest/HCMatcher.h>
 
 @protocol LRExpectationCardinality;
 
-@class OLD_LRMockObject;
 @class LRMockyState;
 
-@interface LRInvocationExpectation : NSObject <LRExpectation> {
-  NSInvocation *expectedInvocation;
-  NSInvocation *similarInvocation;
-  NSUInteger numberOfInvocations;
-  NSMutableArray *actions;
-  id<LRExpectationCardinality> cardinality;
-  id mockObject;
-  LRMockyState *requiredState;
-  BOOL calledWithInvalidState;
-}
-@property (nonatomic, strong) NSInvocation *invocation;
+@interface LRInvocationExpectation : NSObject <LRExpectation>
+
 @property (nonatomic, strong) id<LRExpectationCardinality> cardinality;
-@property (nonatomic, strong) OLD_LRMockObject *mockObject;
+@property (nonatomic, strong) id target;
+@property (nonatomic, assign) SEL selector;
+@property (nonatomic, strong) id<HCMatcher> parametersMatcher;
+
 @property (nonatomic, strong) LRMockyState *requiredState;
 @property (nonatomic, readonly) BOOL calledWithInvalidState;
 
-+ (id)expectationWithObject:(OLD_LRMockObject *)mockObject;
 - (void)addAction:(id<LRExpectationAction>)anAction;
-- (void)setInvocation:(NSInvocation *)invocation;
+
 @end

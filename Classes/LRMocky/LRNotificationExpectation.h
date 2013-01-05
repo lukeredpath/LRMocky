@@ -9,12 +9,18 @@
 #import <Foundation/Foundation.h>
 #import "LRExpectation.h"
 
-@interface LRNotificationExpectation : NSObject <LRExpectation> {
-  NSString *name;
-  id sender;
-  BOOL isSatisfied;
-}
+@interface LRNotificationExpectation : NSObject <LRExpectation>
+
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, strong) id sender;
+@property (nonatomic, strong) NSNotificationCenter *notificationCenter;
+
+@property (nonatomic, readonly) BOOL isSatisfied;
+
 + (id)expectationWithNotificationName:(NSString *)name;
 + (id)expectationWithNotificationName:(NSString *)name sender:(id)sender;
 - (id)initWithName:(NSString *)name sender:(id)sender;
+
+- (void)waitForNotification;
+
 @end

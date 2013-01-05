@@ -12,25 +12,10 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 
 #pragma mark Exactly (x) times
 
-- (void)testCanSpecifyExpectationIsCalledOnceAndFailIfCalledTwice
-{
-  [context check:^{
-    [[expectThat(testObject) receives] doSomething];
-  }];
-  
-  [testObject doSomething];
-  [testObject doSomething];
-  
-  [context assertSatisfied];
-
-  assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomething once but received it 2 times.", testObject]));
-}
-
 - (void)testCanSpecifyExpectationIsCalledExactNumberOfTimesAndFailIfCalledFewerTimes
 {
   [context check:^{
-    [[expectThat(testObject) receives:exactly(3)] doSomething];
+    [[expectThat(testObject) receivesExactly:3] doSomething];
   }];
   
   [testObject doSomething];
@@ -45,7 +30,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsCalledExactNumberOfTimesAndFailIfCalledMoreTimes
 {
   [context check:^{
-    [[[expectThat(testObject) receives:exactly(2)] of] doSomething];
+    [[[expectThat(testObject) receivesExactly:2] of] doSomething];
   }];
 
   [testObject doSomething];
@@ -54,8 +39,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
   
   [context assertSatisfied];
   
-  assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomething exactly 2 times but received it 3 times.", testObject]));
+  assertThat(testCase, failedWithNumberOfFailures(1));
 }
 
 #pragma mark At least (x) times
@@ -63,7 +47,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsCalledAtLeastNumberOfTimesAndFailIfCalledFewerTimes
 {
   [context check:^{
-    [[[expectThat(testObject) receives:atLeast(2)] of] doSomething];
+    [[[expectThat(testObject) receivesAtLeast:2] of] doSomething];
   }];
   
   [testObject doSomething];
@@ -77,7 +61,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsCalledAtLeastNumberOfTimesAndPassIfCalledMoreTimes
 {
   [context check:^{
-    [[[expectThat(testObject) receives:atLeast(2)] of] doSomething];
+    [[[expectThat(testObject) receivesAtLeast:2] of] doSomething];
   }];
   
   [testObject doSomething];
@@ -92,7 +76,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsCalledAtLeastNumberOfTimesAndPassIfCalledTheExactNumberOfTimes
 {
   [context check:^{
-    [[[expectThat(testObject) receives:atLeast(2)] of] doSomething];
+    [[[expectThat(testObject) receivesAtLeast:2] of] doSomething];
   }];
   
   [testObject doSomething];
@@ -108,7 +92,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsCalledAtMostNumberOfTimesAndFailIfCalledMoreTimes
 {
   [context check:^{
-    [[[expectThat(testObject) receives:atMost(2)] of] doSomething];
+    [[[expectThat(testObject) receivesAtMost:2] of] doSomething];
   }];
   
   [testObject doSomething];
@@ -117,14 +101,13 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
   
   [context assertSatisfied];
   
-  assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomething at most 2 times but received it 3 times.", testObject]));
+  assertThat(testCase, failedWithNumberOfFailures(1));
 }
 
 - (void)testCanSpecifyExpectationIsCalledAtMostNumberOfTimesAndPassIfCalledFewerTimes
 {
   [context check:^{
-    [[[expectThat(testObject) receives:atMost(2)] of] doSomething];
+    [[[expectThat(testObject) receivesAtMost:2] of] doSomething];
   }];
   
   [testObject doSomething];
@@ -137,7 +120,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsCalledAtMostNumberOfTimesAndPassIfCalledTheExactNumberOfTimes
 {
   [context check:^{
-    [[[expectThat(testObject) receives:atMost(2)] of] doSomething];
+    [[[expectThat(testObject) receivesAtMost:2] of] doSomething];
   }];
   
   [testObject doSomething];
@@ -153,7 +136,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndFailIfCalledMoreTimesThanTheUpperLimit
 {
   [context check:^{
-    [[[expectThat(testObject) receives:between(2, 5)] of] doSomething];
+    [[[expectThat(testObject) receivesBetween:2 and:5] of] doSomething];
   }];
   
   [testObject doSomething];
@@ -165,14 +148,13 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 
   [context assertSatisfied];
   
-  assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomething between 2 and 5 times but received it 6 times.", testObject]));
+  assertThat(testCase, failedWithNumberOfFailures(1));
 }
 
 - (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndFailIfCalledFewerTimesThanTheLowerLimit
 {
   [context check:^{
-    [[[expectThat(testObject) receives:between(2, 5)] of] doSomething];
+    [[[expectThat(testObject) receivesBetween:2 and:5] of] doSomething];
   }];
   
   [testObject doSomething];
@@ -186,7 +168,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndPassIfCalledLowerLimitTimes
 {
   [context check:^{
-    [[[expectThat(testObject) receives:between(2, 5)] of] doSomething];
+    [[[expectThat(testObject) receivesBetween:2 and:5] of] doSomething];
   }];
   
   [testObject doSomething];
@@ -200,7 +182,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndPassIfCalledUpperLimitTimes
 {
   [context check:^{
-    [[[expectThat(testObject) receives:between(2, 5)] of] doSomething];
+    [[[expectThat(testObject) receivesBetween:2 and:5] of] doSomething];
   }];
   
   [testObject doSomething];
@@ -217,39 +199,12 @@ DEFINE_FUNCTIONAL_TEST_CASE(CardinalityTests)
 - (void)testCanSpecifyExpectationIsCalledBetweenNumberOfTimesAndPassIfCalledBetweenUpperAndLowerLimitTimes
 {
   [context check:^{
-    [[[expectThat(testObject) receives:between(2, 5)] of] doSomething];
+    [[[expectThat(testObject) receivesBetween:2 and:5] of] doSomething];
   }];
   
   [testObject doSomething];
   [testObject doSomething];
   [testObject doSomething];
-  
-  [context assertSatisfied];
-  
-  assertThat(testCase, passed());
-}
-
-#pragma mark Never allowed
-
-- (void)testCanSpecifyExpectationIsNotAllowedAndFailIfItIsCalled
-{
-  [context check:^{
-    [[expectThat(testObject) neverReceives] doSomething];
-  }];
-  
-  [testObject doSomething];
-  
-  [context assertSatisfied];
-  
-  assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomething exactly 0 times but received it only once.", testObject]));
-}
-
-- (void)testCanSpecifyExpectationIsNotAllowedAndPassIfItIsNotCalled
-{
-  [context check:^{
-    [[expectThat(testObject) neverReceives] doSomething];
-  }];
   
   [context assertSatisfied];
   

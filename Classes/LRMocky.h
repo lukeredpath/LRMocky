@@ -8,7 +8,7 @@
 
 // base classes
 #import "LRMockery.h"
-#import "LRExpectationBuilder.h"
+#import "LRExpectations.h"
 
 // actions
 #import "LRReturnValueAction.h"

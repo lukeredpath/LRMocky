@@ -1,13 +1,20 @@
-target :tests, :exclusive => true do
-  platform :ios
-  link_with 'Tests'
-  
-  pod 'OCHamcrest', '~> 1.6'
+module CommonPods
+  def self.extended(base)
+    base.pod 'OCHamcrest', '~> 1.6'
+  end
 end
 
-target :tests_osx, :exclusive => true do
-  platform :osx, :deployment_target => '10.7'
-  link_with ['UnitTests', 'FunctionalTests']
+target :ios do
+  platform :ios, deployment_target: 5.0
   
-  pod 'OCHamcrest', '~> 1.6'
+  link_with "Mocky-iOS"
+  
+  extend CommonPods
+end
+
+target :osx do
+  platform :osx, deployment_target: 10.7
+  link_with "Mocky-OSX"
+  
+  extend CommonPods
 end

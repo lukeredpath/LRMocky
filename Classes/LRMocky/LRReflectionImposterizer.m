@@ -52,9 +52,14 @@ typedef NSMethodSignature* (^LRMethodSignatureProvider)(SEL selector);
   return self;
 }
 
-- (NSString *)description
+- (NSString *)debugDescription
 {
   return [NSString stringWithFormat:@"<Imposter: %@>", [_type description]];
+}
+
+- (NSString *)description
+{
+  return [_invokable description];
 }
 
 #pragma mark - Message forwarding
@@ -265,9 +270,19 @@ typedef NSMethodSignature* (^LRMethodSignatureProvider)(SEL selector);
   return self;
 }
 
+- (NSString *)debugDescription
+{
+  NSMutableString *descriptions = [NSMutableString string];
+  for (id type in _types) {
+    [descriptions appendFormat:@"%@,", [type debugDescription]];
+  }
+  return [NSString stringWithFormat:@"<Multiple imposterized types: %@>", descriptions];
+}
+
 - (NSString *)description
 {
-  return [NSString stringWithFormat:@"<Multiple imposterized types: %@>", _types];
+  /* We assume the first type is the main type, and the rest are ancilliary types */
+  return [[_types objectAtIndex:0] description];
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector

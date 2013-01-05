@@ -12,54 +12,72 @@ DEFINE_FUNCTIONAL_TEST_CASE(NotificationExpectationTests)
 
 - (void)testCanExpectNotificationWithNameAndPass
 {
-  [context expectNotificationNamed:@"SomeTestNotification"];
-  [[NSNotificationCenter defaultCenter] postNotificationName:@"SomeTestNotification" object:nil];
+  [context check:^{
+    expectNotification(@"SomeTestNotification");
+  }];
   
-  assertContextSatisfied(context);
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"SomeTestNotification" object:nil];
+  [context assertSatisfied];
+  
   assertThat(testCase, passed());
 }
 
 - (void)testCanExpectNotificationWithNameAndFail
 {
-  [context expectNotificationNamed:@"SomeTestNotification"];
-
-  assertContextSatisfied(context);
+  [context check:^{
+    expectNotification(@"SomeTestNotification");
+  }];
+  
+  [context assertSatisfied];
+  
   assertThat(testCase, failedWithNumberOfFailures(1));
 }
 
 - (void)testCanExpectNotificationWithSpecificSenderAndPass
 {
-  [context expectNotificationNamed:@"SomeTestNotification" fromObject:self];
-  [[NSNotificationCenter defaultCenter] postNotificationName:@"SomeTestNotification" object:self];
+  [context check:^{
+    [expectNotification(@"SomeTestNotification") fromSender:self];
+  }];
   
-  assertContextSatisfied(context);
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"SomeTestNotification" object:self];
+  [context assertSatisfied];
+  
   assertThat(testCase, passed());
 }
 
 - (void)testCanExpectNotificationWithSpecificSenderAndFail
 {
-  [context expectNotificationNamed:@"SomeTestNotification" fromObject:self];
-  [[NSNotificationCenter defaultCenter] postNotificationName:@"SomeTestNotification" object:@"some other object"];
+  [context check:^{
+    [expectNotification(@"SomeTestNotification") fromSender:self];
+  }];
   
-  assertContextSatisfied(context);
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"SomeTestNotification" object:@"some other object"];
+  [context assertSatisfied];
+  
   assertThat(testCase, failedWithNumberOfFailures(1));
 }
 
 - (void)testCanExpectNotificationWithMatcherAsSenderAndPass
 {
-  [context expectNotificationNamed:@"SomeTestNotification" fromObject:equalTo(@"sender")];
-  [[NSNotificationCenter defaultCenter] postNotificationName:@"SomeTestNotification" object:@"sender"];
+  [context check:^{
+    [expectNotification(@"SomeTestNotification") fromSender:equalTo(@"sender")];
+  }];
   
-  assertContextSatisfied(context);
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"SomeTestNotification" object:@"sender"];
+  [context assertSatisfied];
+  
   assertThat(testCase, passed());
 }
 
 - (void)testCanExpectNotificationWithMatcherAsSenderAndFail
 {
-  [context expectNotificationNamed:@"SomeTestNotification" fromObject:equalTo(@"sender")];
-  [[NSNotificationCenter defaultCenter] postNotificationName:@"SomeTestNotification" object:@"other sender"];
+  [context check:^{
+    [expectNotification(@"SomeTestNotification") fromSender:equalTo(@"sender")];
+  }];
   
-  assertContextSatisfied(context);
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"SomeTestNotification" object:@"other sender"];
+  [context assertSatisfied];
+  
   assertThat(testCase, failedWithNumberOfFailures(1));
 }
 

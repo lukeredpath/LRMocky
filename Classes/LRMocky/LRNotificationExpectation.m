@@ -10,6 +10,9 @@
 #import "LRExpectationMessage.h"
 #import "LRHamcrestSupport.h"
 
+@interface LRNotificationExpectation ()
+@property (nonatomic, strong) id senderMatcher;
+@end
 
 @implementation LRNotificationExpectation
 
@@ -23,59 +26,66 @@
   return [[self alloc] initWithName:name sender:sender];
 }
 
-- (id)initWithName:(NSString *)notificationName sender:(id)object;
+- (id)init
 {
-  if (self = [super init]) {
-    isSatisfied = NO;
-    name = [notificationName copy];
-    sender = object;
-    
-    id notificationObject = sender;
-    
-    if ([sender conformsToProtocol:NSProtocolFromString(@"HCMatcher")]) {
-      notificationObject = nil;
-    }
-    
-    [[NSNotificationCenter defaultCenter] 
-        addObserver:self 
-           selector:@selector(receiveNotification:) 
-               name:name 
-             object:notificationObject];
+  self = [super init];
+  if (self) {
+    self.notificationCenter = [NSNotificationCenter defaultCenter];
   }
   return self;
 }
 
-- (void)receiveNotification:(NSNotification *)note
+- (id)initWithName:(NSString *)notificationName sender:(id)object;
+{
+  if (self = [super init]) {
+    self.name = notificationName;
+    self.sender = object;
+  }
+  return self;
+}
+
+- (void)setSender:(id)sender
 {
   if ([sender conformsToProtocol:NSProtocolFromString(@"HCMatcher")]) {
-    isSatisfied = [sender matches:note.object];
+    _sender = nil;
+    self.senderMatcher = sender;
   }
   else {
-    isSatisfied = YES;
+    _sender = sender;
+  }
+}
+
+- (void)waitForNotification
+{
+  [self.notificationCenter addObserver:self selector:@selector(receiveNotification:) name:self.name object:self.sender];
+}
+
+- (void)receiveNotification:(NSNotification *)note
+{
+  if (self.senderMatcher) {
+    _isSatisfied = [self.senderMatcher matches:note.object];
+  }
+  else {
+    _isSatisfied = YES;
   }
 }
 
 - (void)dealloc
 {
-  [[NSNotificationCenter defaultCenter] removeObserver:self];
+  [self.notificationCenter removeObserver:self];
 }
 
 - (void)addAction:(id <LRExpectationAction>)action
 {} // not supported yet
-
-- (BOOL)isSatisfied
-{
-  return isSatisfied;
-}
 
 - (void)invoke:(NSInvocation *)invocation
 {} // not applicable
 
 - (void)describeTo:(LRExpectationMessage *)message
 {
-  [message append:[NSString stringWithFormat:@"Expected to receive notification named %@", name]];
-  if (sender) {
-    [message append:[NSString stringWithFormat:@" from %@", sender]];
+  [message append:[NSString stringWithFormat:@"Expected to receive notification named %@", self.name]];
+  if (self.sender) {
+    [message append:[NSString stringWithFormat:@" from %@", self.sender]];
   }
   [message append:@", but notification was not posted."];
 }

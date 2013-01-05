@@ -11,6 +11,7 @@
 #import "LRExpectationCardinality.h"
 #import "LRExpectationMessage.h"
 #import "LRMockyStates.h"
+#import "NSInvocation+Conveniences.h"
 #import "NSInvocation+OCMAdditions.h"
 #import "NSInvocation+LRAdditions.h"
 
@@ -18,114 +19,111 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 
 @interface LRInvocationExpectation ()
 @property (nonatomic, strong) NSInvocation *similarInvocation;
+@property (nonatomic, assign) NSUInteger numberOfInvocations;
 @end
 
-@implementation LRInvocationExpectation
+@implementation LRInvocationExpectation {
+  NSInvocation *similarInvocation;
+  NSMutableArray *_actions;
+  LRMockyState *requiredState;
+  BOOL calledWithInvalidState;
+}
 
-@synthesize invocation = expectedInvocation;
-@synthesize cardinality;
-@synthesize mockObject;
 @synthesize similarInvocation;
 @synthesize requiredState;
 @synthesize calledWithInvalidState;
 
-+ (id)expectationWithObject:(id)mockObject
-{
-  LRInvocationExpectation *expectation = [[self alloc] init];
-  expectation.mockObject = mockObject;
-  return expectation;
-}
-
 - (id)init;
 {
   if (self = [super init]) {
-    numberOfInvocations = 0;
-    actions = [[NSMutableArray alloc] init];
-    calledWithInvalidState = NO;
-    self.cardinality = LRM_exactly(1); // TODO choose a better default
+    _actions = [[NSMutableArray alloc] init];
+    _cardinality = [LRExpectationCardinality atLeast:0];
   }
   return self;
 }
 
-
 - (BOOL)matches:(NSInvocation *)invocation;
 {
-  LRInvocationComparitor *comparitor = [LRInvocationComparitor comparitorForInvocation:expectedInvocation];
-    
-  if ([invocation selector] != [expectedInvocation selector]) {
+  if (![self allowsMoreInvocations]) {
     return NO;
   }
-  if(![comparitor matchesParameters:invocation]) {
+  
+  if (self.target && self.target != invocation.target) {
     return NO;
   }
-  if (self.requiredState && ![self.requiredState isActive]) {
-    NSLog(@"Required state %@ but it is not active", self.requiredState);
-    calledWithInvalidState = YES;
-    return YES;
+  if (self.selector && self.selector != invocation.selector) {
+    return NO;
+  }
+  if (self.parametersMatcher && ![self.parametersMatcher matches:invocation.argumentsArray]) {
+    return NO;
   }
   return YES;
+
+//  LRInvocationComparitor *comparitor = [LRInvocationComparitor comparitorForInvocation:expectedInvocation];
+//  
+//  if ([invocation selector] != [expectedInvocation selector]) {
+//    return NO;
+//  }
+//  if(![comparitor matchesParameters:invocation]) {
+//    return NO;
+//  }
+//  if (self.requiredState && ![self.requiredState isActive]) {
+//    NSLog(@"Required state %@ but it is not active", self.requiredState);
+//    calledWithInvalidState = YES;
+//    return YES;
+//  }
 }
 
 - (void)invoke:(NSInvocation *)invocation
 {
-  LRInvocationComparitor *comparitor = [LRInvocationComparitor comparitorForInvocation:expectedInvocation];
-
-  if([comparitor matchesParameters:invocation]) {
-    numberOfInvocations++;
+  _numberOfInvocations++;
+  
+  // TODO: this should probably move up to where we first capture the invocation
+  [invocation retainArguments];
+  [invocation copyBlockArguments];
     
-    [invocation copyBlockArguments];
-    
-    for (id<LRExpectationAction> action in actions) {
-      [action invoke:invocation];
-    } 
-  } else {
-    [invocation retainArguments];
-    self.similarInvocation = invocation;
+  for (id<LRExpectationAction> action in _actions) {
+    [action invoke:invocation];
   }
 }
 
 - (BOOL)isSatisfied;
 {
-  return [self.cardinality satisfiedBy:numberOfInvocations];
+  return [self.cardinality isSatisfiedByInvocationCount:self.numberOfInvocations];
+}
+
+- (BOOL)allowsMoreInvocations
+{
+  return [self.cardinality allowsMoreExpectations:self.numberOfInvocations];
 }
 
 - (void)describeTo:(LRExpectationMessage *)message
 {
-  [message append:[NSString stringWithFormat:@"Expected %@ to receive %@ ", mockObject, NSStringFromSelector([expectedInvocation selector])]];
-  
-  NSInteger numberOfArguments = [[expectedInvocation methodSignature] numberOfArguments];
-  if (numberOfArguments > 2) {
-    NSMutableArray *parameters = [NSMutableArray array];
-    for (int i = 2; i < numberOfArguments; i++) {
-      [parameters addObject:[expectedInvocation argumentDescriptionAtIndex:i]];
-    }
-    [message append:[NSString stringWithFormat:@"with arguments: [%@] ", [parameters componentsJoinedByString:@", "]]];
-  } 
-  
+  [message append:[NSString stringWithFormat:@"Expected %@ to receive %@ ", self.target, NSStringFromSelector(self.selector)]];
+  [self.parametersMatcher describeTo:message];
   [self.cardinality describeTo:message];
   
-  if (numberOfInvocations == 1) {
+  if (self.numberOfInvocations == 1) {
     [message append:@" but received it only once."];
   }
   else {
-    [message append:[NSString stringWithFormat:@" but received it %ld times.", numberOfInvocations]];
+    [message append:[NSString stringWithFormat:@" but received it %ld times.", self.numberOfInvocations]];
   }
   
-  if (self.similarInvocation && numberOfArguments > 2) {
-    [message append:[NSString stringWithFormat:@" %@ was called ", NSStringFromSelector([expectedInvocation selector])]];
-    
-    NSMutableArray *parameters = [NSMutableArray array];
-    for (int i = 2; i < numberOfArguments; i++) {
-      [parameters addObject:[self.similarInvocation objectDescriptionAtIndex:i]];
-    }
-    [message append:[NSString stringWithFormat:@"with arguments: [%@].", [parameters componentsJoinedByString:@", "]]];
-  }
+//  if (self.similarInvocation && numberOfArguments > 2) {
+//    [message append:[NSString stringWithFormat:@" %@ was called ", NSStringFromSelector(self.selector)]];
+//    
+//    NSMutableArray *parameters = [NSMutableArray array];
+//    for (int i = 2; i < numberOfArguments; i++) {
+//      [parameters addObject:[self.similarInvocation objectDescriptionAtIndex:i]];
+//    }
+//    [message append:[NSString stringWithFormat:@"with arguments: [%@].", [parameters componentsJoinedByString:@", "]]];
+//  }
 }
 
 - (void)addAction:(id<LRExpectationAction>)anAction;
 {
-  [actions addObject:anAction];
+  [_actions addObject:anAction];
 }
 
 @end
-

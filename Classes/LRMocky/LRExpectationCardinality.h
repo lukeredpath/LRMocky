@@ -10,10 +10,29 @@
 #import "LRDescribable.h"
 
 @protocol LRExpectationCardinality <NSObject, LRDescribable>
-- (BOOL)satisfiedBy:(NSUInteger)numberOfInvocations;
+
+- (BOOL)isSatisfiedByInvocationCount:(NSUInteger)numberOfInvocationsSoFar;
+- (BOOL)allowsMoreExpectations:(NSUInteger)invocationCount;
+
 @end
 
-@interface LREqualToCardinality : NSObject <LRExpectationCardinality> {
+@interface LRExpectationCardinality : NSObject <LRExpectationCardinality>
+
+@property (nonatomic, readonly) NSUInteger required;
+@property (nonatomic, readonly) NSUInteger maximium;
+
+- (id)initWithRequired:(NSUInteger)required maximum:(NSUInteger)maximum;
+
+#pragma mark - Factory methods
+
++ (id)exactly:(NSUInteger)amount;
++ (id)atLeast:(NSUInteger)amount;
++ (id)atMost:(NSUInteger)amount;
++ (id)between:(NSUInteger)min and:(NSUInteger)max;
+
+@end
+
+@interface LREqualToCardinality : NSObject {
   NSUInteger equalToInt;
 }
 - (id)initWithInt:(NSUInteger)anInt;
@@ -26,7 +45,7 @@ id<LRExpectationCardinality> LRM_exactly(NSUInteger anInt);
   #define times(int)   LRM_exactly(int)
 #endif
 
-@interface LRAtLeastCardinality : NSObject <LRExpectationCardinality> {
+@interface LRAtLeastCardinality : NSObject {
   NSUInteger minimum;
 }
 - (id)initWithMinimum:(NSUInteger)theMinimum;
@@ -38,7 +57,7 @@ id<LRExpectationCardinality> LRM_atLeast(NSUInteger anInt);
   #define atLeast(min) LRM_atLeast(min)
 #endif
 
-@interface LRAtMostCardinality : NSObject <LRExpectationCardinality> {
+@interface LRAtMostCardinality : NSObject {
   NSUInteger maximum;
 }
 - (id)initWithMaximum:(NSUInteger)theMaximum;
@@ -50,7 +69,7 @@ id<LRExpectationCardinality> LRM_atMost(NSUInteger anInt);
   #define atMost(max) LRM_atMost(max)
 #endif
 
-@interface LRBetweenCardinality : NSObject <LRExpectationCardinality> {
+@interface LRBetweenCardinality : NSObject {
   NSUInteger minimum;
   NSUInteger maximum;
 }
