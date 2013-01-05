@@ -1096,6 +1096,7 @@
 				GCC_PREFIX_HEADER = Mocky_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = NO;
 				INSTALL_PATH = /usr/local/lib;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Mocky;
@@ -1120,6 +1121,7 @@
 				GCC_PREFIX_HEADER = Mocky_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_TYPECHECK_CALLS_TO_PRINTF = NO;
 				INSTALL_PATH = /usr/local/lib;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Mocky;
