@@ -35,9 +35,9 @@
 		A31FD29116962851002D4511 /* LRInvocationToExpectationTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD28F169626E6002D4511 /* LRInvocationToExpectationTranslator.m */; };
 		A31FD29216962852002D4511 /* LRInvocationToExpectationTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD28F169626E6002D4511 /* LRInvocationToExpectationTranslator.m */; };
 		A31FD29A16965694002D4511 /* NSInvocation+OCMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A39155B711FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A31FD29B16965694002D4511 /* NSInvocation+LRAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A38AFFC4122BFD020001D038 /* NSInvocation+LRAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A31FD29B16965694002D4511 /* NSInvocation+LRAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A38AFFC4122BFD020001D038 /* NSInvocation+LRAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -Xanalyzer -analyzer-disable-checker"; }; };
 		A31FD29C16965694002D4511 /* NSInvocation+OCMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A39155B711FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A31FD29D16965694002D4511 /* NSInvocation+LRAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A38AFFC4122BFD020001D038 /* NSInvocation+LRAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A31FD29D16965694002D4511 /* NSInvocation+LRAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A38AFFC4122BFD020001D038 /* NSInvocation+LRAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -Xanalyzer -analyzer-disable-checker"; }; };
 		A31FD2A4169659B9002D4511 /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A346500111F2937D0080B46B /* TestHelper.m */; };
 		A31FD2AC16965C0D002D4511 /* LRInvocationToExpectationTranslatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD286169623B4002D4511 /* LRInvocationToExpectationTranslatorTest.m */; };
 		A31FD2AD16965C0D002D4511 /* LRMockObjectTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A319BB971695A4BF003BB49A /* LRMockObjectTest.m */; };
