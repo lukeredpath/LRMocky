@@ -78,10 +78,6 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 - (void)invoke:(NSInvocation *)invocation
 {
   _numberOfInvocations++;
-  
-  // TODO: this should probably move up to where we first capture the invocation
-  [invocation retainArguments];
-  [invocation copyBlockArguments];
     
   for (id<LRExpectationAction> action in _actions) {
     [action invoke:invocation];

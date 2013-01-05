@@ -15,6 +15,7 @@
 #import "LRMockyStates.h"
 #import "LRReflectionImposterizer.h"
 #import "LRUnexpectedInvocationException.h"
+#import "NSInvocation+LRAdditions.h"
 
 #import <OCHamcrest/HCStringDescription.h>
 
@@ -162,6 +163,9 @@ NSString *failureFor(id<HCSelfDescribing> expectation) {
 
 - (void)dispatch:(NSInvocation *)invocation
 {
+  [invocation retainArguments];
+  [invocation copyBlockArguments];
+  
   for (id<LRExpectation> expectation in expectations) {
     if ([expectation matches:invocation]) {
       [expectation invoke:invocation];
