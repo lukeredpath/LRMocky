@@ -10,6 +10,7 @@
 #import "HCBlockMatcher.h"
 #import "LRInvocationExpectation.h"
 #import "LRAllParametersMatcher.h"
+#import "LRExpectationCardinality.h"
 #import "NSInvocation+Conveniences.h"
 
 #pragma mark - Helper functions
@@ -69,17 +70,50 @@ DEFINE_TEST_CASE(LRInvocationExpectationTest) {
 {
   expectation.parametersMatcher = [[LRAllParametersMatcher alloc] initWithParameters:@[equalToInteger(123)]];
   
-  NSInvocation *theInvocation = invocationForSelectorOn(anyObject(), @selector(doSomethingWithInt:));
+  NSInvocation *anInvocation = invocationForSelectorOn(anyObject(), @selector(doSomethingWithInt:));
   
   NSInteger argumentOne = 123;
-  [theInvocation setArgument:&argumentOne atIndex:2];
+  [anInvocation setArgument:&argumentOne atIndex:2];
   
-  assertTrue([expectation matches:theInvocation]);
+  assertTrue([expectation matches:anInvocation]);
   
   NSInteger argumentTwo = 456;
-  [theInvocation setArgument:&argumentTwo atIndex:2];
+  [anInvocation setArgument:&argumentTwo atIndex:2];
   
-  assertTrue(![expectation matches:theInvocation]);
+  assertTrue(![expectation matches:anInvocation]);
+}
+
+- (void)testDoesNotMatchIfNumberOfInvocationsExceedsCardinalityMaximum
+{
+  NSUInteger maximumInvocations = 3;
+  
+  expectation.cardinality = [LRExpectationCardinality atMost:maximumInvocations];
+  
+  for (int i = 0; i < maximumInvocations; i++) {
+    NSInvocation *invocation = anyInvocationOn(anyObject());
+    assertTrue([expectation matches:invocation]);
+    [expectation invoke:invocation];
+  }
+  assertTrue(![expectation matches:anyInvocationOn(anyObject())]);
+}
+
+- (void)testIsNotSatisfiedWhileNumberOfInvocationsBelowCardinailityRequiredButStillMatchesUntilMaximumReached
+{
+  NSUInteger requiredInvocations = 3;
+  
+  expectation.cardinality = [LRExpectationCardinality atLeast:requiredInvocations];
+  
+  for (int i = 0; i < requiredInvocations; i++) {
+    NSInvocation *invocation = anyInvocationOn(anyObject());
+    
+    assertTrue([expectation matches:invocation]);
+    assertFalse([expectation isSatisfied]);
+
+    [expectation invoke:invocation];
+  }
+
+  assertTrue([expectation matches:anyInvocationOn(anyObject())]);
+  assertTrue([expectation isSatisfied]);
 }
 
 END_TEST_CASE
