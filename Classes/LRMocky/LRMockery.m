@@ -13,11 +13,12 @@
 #import "LRInvocationExpectation.h"
 #import "LRNotificationExpectation.h"
 #import "LRMockyStates.h"
-#import "LRExpectationMessage.h"
 #import "LRReflectionImposterizer.h"
 #import "LRUnexpectedInvocationException.h"
 
-NSString *failureFor(id<LRDescribable> expectation);
+#import <OCHamcrest/HCStringDescription.h>
+
+NSString *failureFor(id<HCSelfDescribing> expectation);
 
 @interface LRMockery ()
 - (void)assertSatisfiedInFile:(NSString *)fileName lineNumber:(int)lineNumber;
@@ -120,10 +121,10 @@ NSString *failureFor(id<LRDescribable> expectation);
   return stateMachine;
 }
 
-NSString *failureFor(id<LRDescribable> expectation) {
-  LRExpectationMessage *errorMessage = [[LRExpectationMessage alloc] init];
-  [expectation describeTo:errorMessage];
-  return [errorMessage description];
+NSString *failureFor(id<HCSelfDescribing> expectation) {
+  HCStringDescription *description = [HCStringDescription stringDescription];
+  [expectation describeTo:description];
+  return [description description];
 }
 
 #pragma mark - Verification

@@ -7,8 +7,9 @@
 //
 
 #import "LRNotificationExpectation.h"
-#import "LRExpectationMessage.h"
 #import "LRHamcrestSupport.h"
+
+#import <OCHamcrest/HCDescription.h>
 
 @interface LRNotificationExpectation ()
 @property (nonatomic, strong) id senderMatcher;
@@ -81,13 +82,13 @@
 - (void)invoke:(NSInvocation *)invocation
 {} // not applicable
 
-- (void)describeTo:(LRExpectationMessage *)message
+- (void)describeTo:(id<HCDescription>)description
 {
-  [message append:[NSString stringWithFormat:@"Expected to receive notification named %@", self.name]];
+  [description appendText:[NSString stringWithFormat:@"Expected to receive notification named %@", self.name]];
   if (self.sender) {
-    [message append:[NSString stringWithFormat:@" from %@", self.sender]];
+    [description appendText:[NSString stringWithFormat:@" from %@", self.sender]];
   }
-  [message append:@", but notification was not posted."];
+  [description appendText:@", but notification was not posted."];
 }
 
 @end

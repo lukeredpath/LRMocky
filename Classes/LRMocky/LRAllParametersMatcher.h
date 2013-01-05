@@ -7,9 +7,9 @@
 //
 
 #import <OCHamcrest/HCBaseMatcher.h>
-#import "LRDescribable.h"
+#import "HCSelfDescribing.h"
 
-@interface LRAllParametersMatcher : HCBaseMatcher <LRDescribable>
+@interface LRAllParametersMatcher : HCBaseMatcher
 
 - (id)initWithParameters:(NSArray *)parameters;
 

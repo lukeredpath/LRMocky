@@ -7,10 +7,10 @@
 //
 
 #import "LRAllParametersMatcher.h"
-#import "LRExpectationMessage.h"
 
 #import <OCHamcrest/HCIsEqual.h>
 #import <OCHamcrest/HCStringDescription.h>
+#import <OCHamcrest/HCDescription.h>
 
 @implementation LRAllParametersMatcher {
   NSArray *_parameterMatchers;
@@ -24,7 +24,7 @@
   return self;
 }
 
-- (void)describeTo:(LRExpectationMessage *)message
+- (void)describeTo:(id<HCDescription>)description
 {
   if (_parameterMatchers.count == 0) return;
   
@@ -34,7 +34,7 @@
     [descriptions addObject:[HCStringDescription stringFrom:matcher]];
   }
   
-  [message append:[NSString stringWithFormat:@"with arguments: [%@] ", [descriptions componentsJoinedByString:@", "]]];
+  [description appendText:[NSString stringWithFormat:@"with arguments: [%@] ", [descriptions componentsJoinedByString:@", "]]];
 }
 
 - (BOOL)matches:(id)item

@@ -7,8 +7,9 @@
 //
 
 #import "LRUnexpectedInvocation.h"
-#import "LRExpectationMessage.h"
 #import "NSInvocation+OCMAdditions.h"
+
+#import <OCHamcrest/HCStringDescription.h>
 
 @implementation LRUnexpectedInvocation
 
@@ -44,18 +45,18 @@
 
 - (NSException *)failureException;
 {
-  LRExpectationMessage *errorMessage = [[LRExpectationMessage alloc] init];
-  [self describeTo:errorMessage];
-  return [NSException exceptionWithName:LRMockyExpectationError reason:errorMessage.message userInfo:nil];
+  HCStringDescription *description = [HCStringDescription stringDescription];
+  [self describeTo:description];
+  return [NSException exceptionWithName:LRMockyExpectationError reason:[description description] userInfo:nil];
 }
 
-- (void)describeTo:(LRExpectationMessage *)message
+- (void)describeTo:(id<HCDescription>)description
 {
   NSMutableArray *arguments = [NSMutableArray array];
   for (int i = 2; i < [[invocation methodSignature] numberOfArguments]; i++) {
     [arguments addObject:[invocation getArgumentAtIndexAsObject:i]];
   }  
-  [message append:[NSString stringWithFormat:@"Unexpected method %@ called on %@ with arguments: %@", 
+  [description appendText:[NSString stringWithFormat:@"Unexpected method %@ called on %@ with arguments: %@", 
       NSStringFromSelector([invocation selector]), mockObject, arguments]];
 }
 

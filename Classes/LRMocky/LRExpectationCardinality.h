@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "LRDescribable.h"
+#import "HCSelfDescribing.h"
 
-@protocol LRExpectationCardinality <NSObject, LRDescribable>
+@protocol LRExpectationCardinality <NSObject, HCSelfDescribing>
 
 - (BOOL)isSatisfiedByInvocationCount:(NSUInteger)numberOfInvocationsSoFar;
 - (BOOL)allowsMoreExpectations:(NSUInteger)invocationCount;

@@ -7,7 +7,8 @@
 //
 
 #import "LRExpectationCardinality.h"
-#import "LRExpectationMessage.h"
+
+#import <OCHamcrest/HCDescription.h>
 
 @implementation LRExpectationCardinality
 
@@ -48,28 +49,28 @@
   return [NSString stringWithFormat:@"<LRExpectationCardinality between:%ld and:%ld>", _required, _maximium];
 }
 
-- (void)describeTo:(LRExpectationMessage *)message
+- (void)describeTo:(id<HCDescription>)description
 {
   if (_required == 0 && _maximium == INT_MAX) {
-    [message append:@"any number of times"];
+    [description appendText:@"any number of times"];
   }
   else {
     if (_required == _maximium) {
       if (_required == 1) {
-        [message append:@"exactly once"];
+        [description appendText:@"exactly once"];
       }
       else {
-        [message append:[NSString stringWithFormat:@"exactly %ld times", _required]];
+        [description appendText:[NSString stringWithFormat:@"exactly %ld times", _required]];
       }
     }
     else if (_required == 0 && _maximium < INT_MAX) {
-      [message append:[NSString stringWithFormat:@"a maximum of %ld times", _maximium]];
+      [description appendText:[NSString stringWithFormat:@"a maximum of %ld times", _maximium]];
     }
     else if (_required > 0 && _maximium == INT_MAX) {
-      [message append:[NSString stringWithFormat:@"at least %ld times", _required]];
+      [description appendText:[NSString stringWithFormat:@"at least %ld times", _required]];
     }
     else if (_required > 0 && _maximium < INT_MAX) {
-      [message append:[NSString stringWithFormat:@"between %ld and %ld times", _required, _maximium]];
+      [description appendText:[NSString stringWithFormat:@"between %ld and %ld times", _required, _maximium]];
     }
   }
 }
@@ -118,13 +119,13 @@
   return [NSString stringWithFormat:@"exactly %ld", equalToInt];
 }
 
-- (void)describeTo:(LRExpectationMessage *)message
+- (void)describeTo:(id<HCDescription>)description
 {
   if (equalToInt == 1) {
-    [message append:@"once"];
+    [description appendText:@"once"];
   }
   else {
-    [message append:[NSString stringWithFormat:@"%@ times", [self description]]];
+    [description appendText:[NSString stringWithFormat:@"%@ times", [self description]]];
   }
 }
 
@@ -155,9 +156,9 @@ id<LRExpectationCardinality> LRM_exactly(NSUInteger anInt)
   return [NSString stringWithFormat:@"at least %ld", minimum];
 }
 
-- (void)describeTo:(LRExpectationMessage *)message
+- (void)describeTo:(id<HCDescription>)description
 {
-  [message append:[NSString stringWithFormat:@"%@ times", [self description]]];
+  [description appendText:[NSString stringWithFormat:@"%@ times", [self description]]];
 }
 
 @end
@@ -187,9 +188,9 @@ id<LRExpectationCardinality> LRM_atLeast(NSUInteger anInt)
   return [NSString stringWithFormat:@"at most %ld", maximum];
 }
 
-- (void)describeTo:(LRExpectationMessage *)message
+- (void)describeTo:(id<HCDescription>)description
 {
-  [message append:[NSString stringWithFormat:@"%@ times", [self description]]];
+  [description appendText:[NSString stringWithFormat:@"%@ times", [self description]]];
 }
 
 @end
@@ -220,9 +221,9 @@ id<LRExpectationCardinality> LRM_atMost(NSUInteger anInt)
   return [NSString stringWithFormat:@"between %ld and %ld", minimum, maximum];
 }
 
-- (void)describeTo:(LRExpectationMessage *)message
+- (void)describeTo:(id<HCDescription>)description
 {
-  [message append:[NSString stringWithFormat:@"%@ times", [self description]]];
+  [description appendText:[NSString stringWithFormat:@"%@ times", [self description]]];
 }
 
 @end

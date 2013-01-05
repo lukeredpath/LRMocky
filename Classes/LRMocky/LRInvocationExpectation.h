@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "LRExpectation.h"
 #import "LRExpectationAction.h"
-#import "LRDescribable.h"
+#import "HCSelfDescribing.h"
 #import <OCHamcrest/HCMatcher.h>
 
 @protocol LRExpectationCardinality;

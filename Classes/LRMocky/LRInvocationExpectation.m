@@ -9,11 +9,12 @@
 #import "LRInvocationExpectation.h"
 #import "LRInvocationComparitor.h"
 #import "LRExpectationCardinality.h"
-#import "LRExpectationMessage.h"
 #import "LRMockyStates.h"
 #import "NSInvocation+Conveniences.h"
 #import "NSInvocation+OCMAdditions.h"
 #import "NSInvocation+LRAdditions.h"
+
+#import <OCHamcrest/HCDescription.h>
 
 NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 
@@ -97,27 +98,27 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
   return [self.cardinality allowsMoreExpectations:self.numberOfInvocations];
 }
 
-- (void)describeTo:(LRExpectationMessage *)message
+- (void)describeTo:(id<HCDescription>)description
 {
-  [message append:[NSString stringWithFormat:@"Expected %@ to receive %@ ", self.target, NSStringFromSelector(self.selector)]];
-  [self.parametersMatcher describeTo:message];
-  [self.cardinality describeTo:message];
+  [description appendText:[NSString stringWithFormat:@"Expected %@ to receive %@ ", self.target, NSStringFromSelector(self.selector)]];
+  [self.parametersMatcher describeTo:description];
+  [self.cardinality describeTo:description];
   
   if (self.numberOfInvocations == 1) {
-    [message append:@" but received it only once."];
+    [description appendText:@" but received it only once."];
   }
   else {
-    [message append:[NSString stringWithFormat:@" but received it %ld times.", self.numberOfInvocations]];
+    [description appendText:[NSString stringWithFormat:@" but received it %ld times.", self.numberOfInvocations]];
   }
   
 //  if (self.similarInvocation && numberOfArguments > 2) {
-//    [message append:[NSString stringWithFormat:@" %@ was called ", NSStringFromSelector(self.selector)]];
+//    [description appendText:[NSString stringWithFormat:@" %@ was called ", NSStringFromSelector(self.selector)]];
 //    
 //    NSMutableArray *parameters = [NSMutableArray array];
 //    for (int i = 2; i < numberOfArguments; i++) {
 //      [parameters addObject:[self.similarInvocation objectDescriptionAtIndex:i]];
 //    }
-//    [message append:[NSString stringWithFormat:@"with arguments: [%@].", [parameters componentsJoinedByString:@", "]]];
+//    [description appendText:[NSString stringWithFormat:@"with arguments: [%@].", [parameters componentsJoinedByString:@", "]]];
 //  }
 }
 

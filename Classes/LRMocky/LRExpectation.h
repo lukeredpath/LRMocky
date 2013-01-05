@@ -7,11 +7,11 @@
 //
 
 #import "LRExpectationAction.h"
-#import "LRDescribable.h"
+#import "HCSelfDescribing.h"
 
 extern NSString *const LRMockyExpectationError;
 
-@protocol LRExpectation <NSObject, LRDescribable>
+@protocol LRExpectation <NSObject, HCSelfDescribing>
 
 - (BOOL)isSatisfied;
 - (BOOL)matches:(NSInvocation *)invocation;

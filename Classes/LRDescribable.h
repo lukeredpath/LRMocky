@@ -1,5 +1,5 @@
 //
-//  LRDescribable.h
+//  HCSelfDescribing.h
 //  Mocky
 //
 //  Created by Luke Redpath on 27/07/2010.
@@ -8,8 +8,8 @@
 
 @class LRExpectationMessage;
 
-@protocol LRDescribable <NSObject>
+@protocol HCSelfDescribing <NSObject>
 
-- (void)describeTo:(LRExpectationMessage *)message;
+- (void)describeTo:(id<HCDescription>)description;
 
 @end

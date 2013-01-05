@@ -9,7 +9,7 @@
 #import "TestHelper.h"
 #import "LRExpectation.h"
 #import "LRMockery.h"
-#import "LRExpectationMessage.h"
+#import <OCHamcrest/HCStringDescription.h>
 
 @implementation NSInvocation (LRAdditions)
 
@@ -154,9 +154,9 @@ void LR_assertNothingRaisedWithLocation(void (^block)(void), SenTestCase *testCa
   
   for (id<LRExpectation> expectation in expectations) {
     if ([expectation isSatisfied] == YES) {
-      LRExpectationMessage *message = [[LRExpectationMessage alloc] init];
-      [expectation describeTo:message];
-      [passedExpectations addObject:message];
+      id<HCDescription> description = [HCStringDescription stringDescription];
+      [expectation describeTo:description];
+      [passedExpectations addObject:description];
     }
   }
   if (passedExpectations.count > 0) {
