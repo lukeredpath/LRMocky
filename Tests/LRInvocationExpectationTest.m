@@ -10,6 +10,81 @@
 #import "HCBlockMatcher.h"
 #import "LRInvocationExpectation.h"
 #import "LRAllParametersMatcher.h"
+#import "NSInvocation+Conveniences.h"
+
+#pragma mark - Helper functions
+
+id anyObject(void);
+
+NSInvocation *invocationForSelectorOn(id object, SEL selector);
+NSInvocation *invocationWithArguments(id object, SEL selector, NSArray *args);
+NSInvocation *anyInvocationOn(id object);
+
+#pragma mark -
+
+DEFINE_TEST_CASE(LRInvocationExpectationTest) {
+  LRInvocationExpectation *expectation;
+}
+
+- (void)setUp
+{
+  expectation = [[LRInvocationExpectation alloc] init];
+}
+
+- (void)testMatchesAnyInvocationByDefault
+{
+  assertTrue([expectation matches:anyInvocationOn(anyObject())]);
+}
+
+- (void)testCanConstrainToInvocationsOnSpecificTarget
+{
+  id targetObject = anyObject();
+
+  expectation.target = targetObject;
+  
+  assertTrue([expectation matches:anyInvocationOn(targetObject)]);
+  assertTrue(![expectation matches:anyInvocationOn(anyObject())]);
+}
+
+- (void)testCanConstrainToInvocationsOnSpecificSelector
+{
+  SEL selectorOne = @selector(description);
+  SEL selectorTwo = @selector(init);
+
+  expectation.selector = selectorOne;
+  
+  assertTrue([expectation matches:invocationForSelectorOn(anyObject(), selectorOne)]);
+  assertTrue(![expectation matches:invocationForSelectorOn(anyObject(), selectorTwo)]);
+}
+
+- (void)testCanConstrainToInvocationsToSpecificMethodArguments
+{
+  expectation.parametersMatcher = [[LRAllParametersMatcher alloc] initWithParameters:@[@"expected"]];
+
+  assertTrue([expectation matches:invocationWithArguments(anyObject(), @selector(doSomethingWithObject:), @[@"expected"])]);
+  assertTrue(![expectation matches:invocationWithArguments(anyObject(), @selector(doSomethingWithObject:), @[@"unexpected"])]);
+}
+
+- (void)testCanConstrainToInvocationsWithNonObjectArguments
+{
+  expectation.parametersMatcher = [[LRAllParametersMatcher alloc] initWithParameters:@[equalToInteger(123)]];
+  
+  NSInvocation *theInvocation = invocationForSelectorOn(anyObject(), @selector(doSomethingWithInt:));
+  
+  NSInteger argumentOne = 123;
+  [theInvocation setArgument:&argumentOne atIndex:2];
+  
+  assertTrue([expectation matches:theInvocation]);
+  
+  NSInteger argumentTwo = 456;
+  [theInvocation setArgument:&argumentTwo atIndex:2];
+  
+  assertTrue(![expectation matches:theInvocation]);
+}
+
+END_TEST_CASE
+
+#pragma mark -
 
 id anyObject(void) {
   return [[SimpleObject alloc] init];
@@ -23,107 +98,23 @@ NSInvocation *invocationForSelectorOn(id object, SEL selector) {
   return invocation;
 }
 
+NSInvocation *invocationWithArguments(id object, SEL selector, NSArray *args) {
+  NSInvocation *invocation = invocationForSelectorOn(object, selector);
+  NSUInteger numberOfArguments = invocation.numberOfActualArguments;
+  
+  if (numberOfArguments == 0) return invocation;
+  
+  for (int i = 0; i < numberOfArguments; i++) {
+    if (i < args.count) {
+      [invocation putObject:args[i] asArgumentAtIndex:i];
+    }
+    else {
+      [invocation putObject:[NSNull null] asArgumentAtIndex:i];
+    }
+  }
+  return invocation;
+}
+
 NSInvocation *anyInvocationOn(id object) {
   return invocationForSelectorOn(object, @selector(description));
 }
-
-DEFINE_TEST_CASE(LRInvocationExpectationTest)
-
-- (void)testMatchesAnyInvocationByDefault
-{
-  LRInvocationExpectation *expectation = [[LRInvocationExpectation alloc] init];
-  
-  assertTrue([expectation matches:anyInvocationOn(anyObject())]);
-}
-
-- (void)testCanConstrainToInvocationsOnSpecificTarget
-{
-  id targetObject = anyObject();
-  
-  LRInvocationExpectation *expectation = [[LRInvocationExpectation alloc] init];
-  expectation.target = targetObject;
-  
-  assertTrue([expectation matches:anyInvocationOn(targetObject)]);
-  assertFalse([expectation matches:anyInvocationOn(anyObject())]);
-}
-
-- (void)testCanConstrainToInvocationsOnSpecificSelector
-{
-  SEL expectedSelector = @selector(description);
-  
-  LRInvocationExpectation *expectation = [[LRInvocationExpectation alloc] init];
-  expectation.selector = expectedSelector;
-  
-  assertTrue([expectation matches:invocationForSelectorOn(anyObject(), expectedSelector)]);
-  assertFalse([expectation matches:invocationForSelectorOn(anyObject(), @selector(init))]);
-}
-
-- (void)testCanConstrainToInvocationsWithSpecificParameters
-{
-  NSInvocation *_invocation = invocationForSelectorOn(anyObject(), @selector(doSomethingWithObject:));
-  
-  LRInvocationExpectation *expectation = [[LRInvocationExpectation alloc] init];
-  
-  id<HCMatcher> parametersMatcher = [[LRAllParametersMatcher alloc] initWithParameters:@[@"expected"]];
-  expectation.parametersMatcher = parametersMatcher;
-  
-  id argument;
-  
-  argument = @"expected";
-  [_invocation setArgument:&argument atIndex:2];
-  
-  assertTrue([expectation matches:_invocation]);
-  
-  argument = @"unexpected";
-  [_invocation setArgument:&argument atIndex:2];
-  
-  assertFalse([expectation matches:_invocation]);
-}
-
-// TODO: move these tests somewhere better
-//
-//- (void)testCanConstrainToInvocationsWithNonObjectArguments
-//{
-//  NSInvocation *_invocation = invocationForSelectorOn(anyObject(), @selector(doSomethingWithInt:));
-//  
-//  LRInvocationExpectation *expectation = [[LRInvocationExpectation alloc] init];
-//  
-//  id<HCMatcher> parametersMatcher = [[AllParametersMatcher alloc] initWithParameters:@[@123]];
-//  expectation.parametersMatcher = parametersMatcher;
-//  
-//  NSInteger argument;
-//  
-//  argument = 123;
-//  [_invocation setArgument:&argument atIndex:2];
-//  
-//  assertTrue([expectation matches:_invocation]);
-//  
-//  argument = 456;
-//  [_invocation setArgument:&argument atIndex:2];
-//  
-//  assertFalse([expectation matches:_invocation]);
-//}
-//
-//- (void)testCanConstrainObjectArgumentsUsingMatchers
-//{
-//  NSInvocation *_invocation = invocationForSelectorOn(anyObject(), @selector(doSomethingWithObject:));
-//  
-//  LRInvocationExpectation *expectation = [[LRInvocationExpectation alloc] init];
-//  
-//  id<HCMatcher> parametersMatcher = [[AllParametersMatcher alloc] initWithParameters:@[startsWith(@"exp")]];
-//  expectation.parametersMatcher = parametersMatcher;
-//  
-//  id argument;
-//  
-//  argument = @"expected";
-//  [_invocation setArgument:&argument atIndex:2];
-//  
-//  assertTrue([expectation matches:_invocation]);
-//  
-//  argument = @"unexpected";
-//  [_invocation setArgument:&argument atIndex:2];
-//  
-//  assertFalse([expectation matches:_invocation]);
-//}
-
-END_TEST_CASE

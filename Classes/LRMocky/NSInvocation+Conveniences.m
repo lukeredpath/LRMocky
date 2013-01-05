@@ -9,6 +9,8 @@
 #import "NSInvocation+Conveniences.h"
 #import "NSInvocation+OCMAdditions.h"
 
+const NSUInteger NSMethodSignatureArgumentsToIgnore = 2;
+
 @implementation NSInvocation (Conveniences)
 
 - (NSArray *)argumentsArray
@@ -20,6 +22,16 @@
     [arguments addObject:[self getArgumentAtIndexAsObject:i]];
   }
   return [arguments copy];
+}
+
+- (NSUInteger)numberOfActualArguments
+{
+  return self.methodSignature.numberOfArguments - NSMethodSignatureArgumentsToIgnore;
+}
+
+- (void)putObject:(id)object asArgumentAtIndex:(NSUInteger)index
+{
+  [self setArgument:&object atIndex:index + NSMethodSignatureArgumentsToIgnore];
 }
 
 @end

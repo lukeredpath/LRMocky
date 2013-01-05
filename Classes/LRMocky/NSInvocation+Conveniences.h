@@ -11,5 +11,8 @@
 @interface NSInvocation (Conveniences)
 
 @property (nonatomic, readonly) NSArray *argumentsArray;
+@property (nonatomic, readonly) NSUInteger numberOfActualArguments;
+
+- (void)putObject:(id)object asArgumentAtIndex:(NSUInteger)index;
 
 @end
