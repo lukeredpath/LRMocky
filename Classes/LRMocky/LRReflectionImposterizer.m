@@ -92,6 +92,14 @@ typedef NSMethodSignature* (^LRMethodSignatureProvider)(SEL selector);
 
 @implementation LRReflectionImposterizer
 
+- (id)imposterize:(id)type invokable:(id<LRInvokable>)invokable ancilliaryProtocols:(NSArray *)protocols
+{
+  if ([type isKindOfClass:NSClassFromString(@"Protocol")]) {
+    return [self imposterizeProtocol:type invokable:invokable ancilliaryProtocols:protocols];
+  }
+  return [self imposterizeClass:type invokable:invokable ancilliaryProtocols:protocols];
+}
+
 - (id)imposterizeClass:(Class)class invokable:(id<LRInvokable>)invokable ancilliaryProtocols:(NSArray *)ancilliaryProtocols
 {
   NSMutableArray *types = [NSMutableArray arrayWithObject:[LRImposterizedClass imposterize:class]];

@@ -7,7 +7,7 @@
 //
 
 #import "LRExpectationAction.h"
-#import "HCSelfDescribing.h"
+#import <OCHamcrest/HCSelfDescribing.h>
 
 extern NSString *const LRMockyExpectationError;
 

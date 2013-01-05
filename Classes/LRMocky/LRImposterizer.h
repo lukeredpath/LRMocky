@@ -10,6 +10,7 @@
 
 @protocol LRImposterizer <NSObject>
 
+- (id)imposterize:(id)type invokable:(id<LRInvokable>)invokable ancilliaryProtocols:(NSArray *)protocols;
 - (id)imposterizeClass:(Class)class invokable:(id<LRInvokable>)invokable ancilliaryProtocols:(NSArray *)protocols;
 - (id)imposterizeProtocol:(Protocol *)protocol invokable:(id<LRInvokable>)invokable ancilliaryProtocols:(NSArray *)protocols;
 

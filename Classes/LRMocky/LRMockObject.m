@@ -46,15 +46,7 @@
 {
   LRInvocationToExpectationTranslator *translator = [[LRInvocationToExpectationTranslator alloc] initWithExpectationCapture:capture];
   
-  id imposter = nil;
-  
-  if ([_mockedType class] == NSClassFromString(@"Protocol")) {
-    imposter = [_imposterizer imposterizeProtocol:(Protocol *)_mockedType invokable:translator ancilliaryProtocols:@[@protocol(LRExpectationCaptureSyntaticSugar)]];
-  }
-  else {
-    imposter = [_imposterizer imposterizeClass:_mockedType invokable:translator ancilliaryProtocols:@[@protocol(LRExpectationCaptureSyntaticSugar)]];
-  }
-  
+  id imposter = [_imposterizer imposterize:_mockedType invokable:translator ancilliaryProtocols:@[@protocol(LRExpectationCaptureSyntaticSugar)]];
   NSAssert(imposter, @"Imposter should never be nil.");
   
   return imposter;

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <SenTestingKit/SenTestingKit.h>
 #define HC_SHORTHAND
-#import "OCHamcrest.h"
+#import <OCHamcrest/OCHamcrest.h>
 #import "LRTestCase.h"
 #import "TestUtilities.h"
 
