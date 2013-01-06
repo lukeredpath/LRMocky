@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1647ABFDC60349EEA1BCDEBD /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4F7D900EB84BFC9EFA4091 /* libPods-osx.a */; };
 		7DED459037CC411CBCB4518D /* libPods-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 228D1BB905C942619A74305D /* libPods-ios.a */; };
 		A301767E11FDEC22004828C5 /* LRMocky.h in Headers */ = {isa = PBXBuildFile; fileRef = A301767511FDEB9C004828C5 /* LRMocky.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A301769E11FDEEFC004828C5 /* LRInvocationExpectationBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = A301768A11FDEEFC004828C5 /* LRInvocationExpectationBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -61,8 +60,6 @@
 		A31FD30F1697B61F002D4511 /* NSInvocation+Conveniences.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD30C1697B59E002D4511 /* NSInvocation+Conveniences.m */; };
 		A31FD3101697BD20002D4511 /* CardinalityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A35D667B11FF508B00F0C310 /* CardinalityTests.m */; };
 		A31FD3111697BE5C002D4511 /* ExpectationsWithDifferentArgumentsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3D496D91210CF910076940C /* ExpectationsWithDifferentArgumentsTest.m */; };
-		A31FD31F1698EC99002D4511 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31FD31E1698EC99002D4511 /* libPods-osx.a */; };
-		A31FD3201698ECA4002D4511 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31FD31E1698EC99002D4511 /* libPods-osx.a */; };
 		A31FD3231698F94D002D4511 /* ExpectationActionsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */; };
 		A31FD32C16990608002D4511 /* LRExpectationActions.h in Headers */ = {isa = PBXBuildFile; fileRef = A31FD32A16990600002D4511 /* LRExpectationActions.h */; };
 		A31FD32D16990608002D4511 /* LRExpectationActions.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD32B16990604002D4511 /* LRExpectationActions.m */; };
@@ -73,6 +70,10 @@
 		A31FD33716990EF2002D4511 /* NSInvocation+BlockArguments.h in Headers */ = {isa = PBXBuildFile; fileRef = A31FD33516990EF2002D4511 /* NSInvocation+BlockArguments.h */; };
 		A31FD33816990EF2002D4511 /* NSInvocation+BlockArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD33616990EF2002D4511 /* NSInvocation+BlockArguments.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A31FD34216991122002D4511 /* NSInvocation+BlockArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD33616990EF2002D4511 /* NSInvocation+BlockArguments.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A31FD3441699122C002D4511 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31FD3431699122C002D4511 /* libPods-osx.a */; };
+		A31FD34616991243002D4511 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31FD3431699122C002D4511 /* libPods-osx.a */; };
+		A31FD34716991243002D4511 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31FD3431699122C002D4511 /* libPods-osx.a */; };
+		A31FD34816991283002D4511 /* StateMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C66A2A120244F20004F78B /* StateMachineTests.m */; };
 		A3289A3C122C73B100D89A88 /* LRNotificationExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = A3289A3A122C73B100D89A88 /* LRNotificationExpectation.h */; };
 		A3289A3D122C73B100D89A88 /* LRNotificationExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3289A3B122C73B100D89A88 /* LRNotificationExpectation.m */; };
 		A32E0C6112070555009B4C81 /* NSException_SenTestFailure.h in Headers */ = {isa = PBXBuildFile; fileRef = A32E0C6012070555009B4C81 /* NSException_SenTestFailure.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -133,11 +134,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0320E4B8467A449C9250B972 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C4F7D900EB84BFC9EFA4091 /* libPods-osx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-osx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		228D1BB905C942619A74305D /* libPods-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A31DAE89AAD44DE9CD7A062 /* Pods-ios.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.xcconfig"; path = "Pods/Pods-ios.xcconfig"; sourceTree = SOURCE_ROOT; };
-		4EE5C35DFB204E2DA6216499 /* libPods-tests_osx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tests_osx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		592A5255E4E0402AA826189E /* Pods-osx.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-osx.xcconfig"; path = "Pods/Pods-osx.xcconfig"; sourceTree = SOURCE_ROOT; };
 		A301767511FDEB9C004828C5 /* LRMocky.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMocky.h; sourceTree = "<group>"; };
 		A301768811FDEEFC004828C5 /* LRExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectation.h; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 		A31FD29716965062002D4511 /* LRUnexpectedInvocationException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRUnexpectedInvocationException.h; sourceTree = "<group>"; };
 		A31FD29816965062002D4511 /* LRUnexpectedInvocationException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRUnexpectedInvocationException.m; sourceTree = "<group>"; };
 		A31FD2B716965C5C002D4511 /* FunctionalTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FunctionalTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A31FD2B916965C5C002D4511 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		A31FD2E0169661E1002D4511 /* LRExpectationCollector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRExpectationCollector.h; sourceTree = "<group>"; };
 		A31FD2E71696683C002D4511 /* LRExpectationsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRExpectationsTest.m; sourceTree = "<group>"; };
 		A31FD2F016970BB8002D4511 /* LRExpectations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectations.h; sourceTree = "<group>"; };
@@ -179,7 +176,6 @@
 		A31FD3061697B49D002D4511 /* LRAllParametersMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRAllParametersMatcher.m; sourceTree = "<group>"; };
 		A31FD30B1697B59E002D4511 /* NSInvocation+Conveniences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+Conveniences.h"; sourceTree = "<group>"; };
 		A31FD30C1697B59E002D4511 /* NSInvocation+Conveniences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+Conveniences.m"; sourceTree = "<group>"; };
-		A31FD31E1698EC99002D4511 /* libPods-osx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-osx.a"; path = "../../../Library/Developer/Xcode/DerivedData/Mocky-awvbrhvldukpccebypapggudtzvg/Build/Products/Debug/libPods-osx.a"; sourceTree = "<group>"; };
 		A31FD3281699043C002D4511 /* LRExpectationActionSyntax.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRExpectationActionSyntax.h; sourceTree = "<group>"; };
 		A31FD32A16990600002D4511 /* LRExpectationActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectationActions.h; sourceTree = "<group>"; };
 		A31FD32B16990604002D4511 /* LRExpectationActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRExpectationActions.m; sourceTree = "<group>"; };
@@ -188,6 +184,7 @@
 		A31FD33116990C12002D4511 /* LRCompositeAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCompositeAction.m; sourceTree = "<group>"; };
 		A31FD33516990EF2002D4511 /* NSInvocation+BlockArguments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+BlockArguments.h"; sourceTree = "<group>"; };
 		A31FD33616990EF2002D4511 /* NSInvocation+BlockArguments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+BlockArguments.m"; sourceTree = "<group>"; };
+		A31FD3431699122C002D4511 /* libPods-osx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-osx.a"; path = "../../../../Library/Developer/Xcode/DerivedData/Mocky-awvbrhvldukpccebypapggudtzvg/Build/Products/Debug/libPods-osx.a"; sourceTree = "<group>"; };
 		A3289A3A122C73B100D89A88 /* LRNotificationExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRNotificationExpectation.h; sourceTree = "<group>"; };
 		A3289A3B122C73B100D89A88 /* LRNotificationExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRNotificationExpectation.m; sourceTree = "<group>"; };
 		A3289A53122C744700D89A88 /* NotificationExpectationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationExpectationTests.m; sourceTree = "<group>"; };
@@ -250,7 +247,6 @@
 		AA747D9E0F9514B9006C5449 /* Mocky_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mocky_Prefix.pch; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libMocky.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMocky.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4D03C0C4219451FBDEE905F /* libPods-tests_osx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tests_osx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,10 +254,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A31FD31F1698EC99002D4511 /* libPods-osx.a in Frameworks */,
 				A3E428B41695E34900780641 /* Mocky-OSX.framework in Frameworks */,
 				A319BB9D1695A584003BB49A /* SenTestingKit.framework in Frameworks */,
 				A319BB961695A469003BB49A /* Foundation.framework in Frameworks */,
+				A31FD34616991243002D4511 /* libPods-osx.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,10 +265,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A31FD3201698ECA4002D4511 /* libPods-osx.a in Frameworks */,
 				A31FD2CF16965CD9002D4511 /* Mocky-OSX.framework in Frameworks */,
 				A31FD2CE16965C96002D4511 /* Foundation.framework in Frameworks */,
 				A31FD2B816965C5C002D4511 /* SenTestingKit.framework in Frameworks */,
+				A31FD34716991243002D4511 /* libPods-osx.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,8 +284,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A31FD3441699122C002D4511 /* libPods-osx.a in Frameworks */,
 				A3E428B51695E37E00780641 /* Foundation.framework in Frameworks */,
-				1647ABFDC60349EEA1BCDEBD /* libPods-osx.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +316,6 @@
 		0867D691FE84028FC02AAC07 /* LRMiniTestKit */ = {
 			isa = PBXGroup;
 			children = (
-				A31FD31E1698EC99002D4511 /* libPods-osx.a */,
 				A3943E0911FFBB99007FE700 /* Examples */,
 				A30176EE11FE017E004828C5 /* Vendor */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
@@ -340,13 +335,9 @@
 				A319BB9C1695A584003BB49A /* SenTestingKit.framework */,
 				A319BB951695A469003BB49A /* Foundation.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
-				0320E4B8467A449C9250B972 /* libPods.a */,
-				A31FD2B916965C5C002D4511 /* Cocoa.framework */,
 				A3E428A11695E32300780641 /* Other Frameworks */,
-				D4D03C0C4219451FBDEE905F /* libPods-tests_osx.a */,
-				4EE5C35DFB204E2DA6216499 /* libPods-tests_osx.a */,
 				228D1BB905C942619A74305D /* libPods-ios.a */,
-				0C4F7D900EB84BFC9EFA4091 /* libPods-osx.a */,
+				A31FD3431699122C002D4511 /* libPods-osx.a */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -990,6 +981,7 @@
 				A31FD3101697BD20002D4511 /* CardinalityTests.m in Sources */,
 				A31FD3111697BE5C002D4511 /* ExpectationsWithDifferentArgumentsTest.m in Sources */,
 				A31FD3231698F94D002D4511 /* ExpectationActionsTest.m in Sources */,
+				A31FD34816991283002D4511 /* StateMachineTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1409,6 +1401,10 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				INFOPLIST_FILE = "Mocky-OSX/Mocky-OSX-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Mocky-awvbrhvldukpccebypapggudtzvg/Build/Products/Debug\"",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1446,6 +1442,10 @@
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				INFOPLIST_FILE = "Mocky-OSX/Mocky-OSX-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Mocky-awvbrhvldukpccebypapggudtzvg/Build/Products/Debug\"",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;

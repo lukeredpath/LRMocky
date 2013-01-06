@@ -202,6 +202,11 @@ LRExpectations *expectThat(id object) {
   return [__currentExpectations expectThat:object];
 }
 
+LRExpectations *expectNotification(NSString *name)
+{
+  return [__currentExpectations expectNotification:name];
+}
+
 id allowing(id object) {
   return [__currentExpectations allowing:object];
 }
@@ -215,7 +220,10 @@ id<LRExpectationActionSyntax> andThen(void) {
   return __currentExpectations.actions;
 }
 
-LRExpectations *expectNotification(NSString *name)
-{
-  return [__currentExpectations expectNotification:name];
+id thenStateOf(id state) {
+  return nil;
+}
+
+id whenStateOf(id state) {
+  return nil;
 }

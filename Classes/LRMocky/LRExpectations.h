@@ -54,6 +54,8 @@ LRExpectations *expectNotification(NSString *name);
 id allowing(id object);
 id ignoring(id object);
 id<LRExpectationActionSyntax> andThen(void);
+id thenStateOf(id state);
+id whenStateOf(id state);
 
 /* Makes the interface a little bit more readable 
  */
