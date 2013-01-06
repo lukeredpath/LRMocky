@@ -38,6 +38,16 @@
                ReferencedContainer = "container:Mocky.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A31FD2B616965C5C002D4511"
+               BuildableName = "FunctionalTests.octest"
+               BlueprintName = "FunctionalTests"
+               ReferencedContainer = "container:Mocky.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
