@@ -25,5 +25,5 @@ LRMockery *LRM_automock(id testCase);
 @end
 
 #define automock  LRM_automock(self)
-#define check(block)  LRM_check(self, block)
+#define xcheck(block)  LRM_check(self, block)
 #define verifyWith(block) LRM_verify([NSString stringWithUTF8String:__FILE__], __LINE__, block)

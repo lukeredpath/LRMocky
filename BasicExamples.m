@@ -12,7 +12,7 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 #import <OCHamcrest/OCHamcrest.h>
-#import "LRMocky.h"
+#import <Mocky/Mocky.h>
 #import "TestHelper.h"
 
 DEFINE_TEST_CASE(BasicExamples) {

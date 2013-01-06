@@ -1,5 +1,5 @@
 export BUILT_PRODUCTS_DIR="/Users/luke/Library/Developer/Xcode/DerivedData/Mocky-awvbrhvldukpccebypapggudtzvg/Build/Products/Debug"
 export CURRENT_ARCH="x86_64"
-export OBJECT_FILE_DIR_normal="/Users/luke/Library/Developer/Xcode/DerivedData/Mocky-awvbrhvldukpccebypapggudtzvg/Build/Intermediates/Mocky.build/Debug/Mocky-OSX.build/Objects-normal"
+export OBJECT_FILE_DIR_normal="/Users/luke/Library/Developer/Xcode/DerivedData/Mocky-awvbrhvldukpccebypapggudtzvg/Build/Intermediates/Mocky.build/Debug/Mocky.build/Objects-normal"
 export OBJROOT="/Users/luke/Library/Developer/Xcode/DerivedData/Mocky-awvbrhvldukpccebypapggudtzvg/Build/Intermediates"
 export SRCROOT="/Users/luke/Code/repos/LRMocky"
