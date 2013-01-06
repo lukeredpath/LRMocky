@@ -372,42 +372,13 @@
 		A301768711FDEEFC004828C5 /* LRMocky */ = {
 			isa = PBXGroup;
 			children = (
+				A31FD34016991069002D4511 /* Core */,
+				A31FD33F16990FF3002D4511 /* Internal */,
 				A31FD30A1697B583002D4511 /* Categories */,
-				A3E4288D1695E16800780641 /* LRMockObject.h */,
-				A3E4288E1695E16800780641 /* LRMockObject.m */,
-				A3E428911695E1A500780641 /* LRInvocationDispatcher.h */,
-				A3E428921695E1DD00780641 /* LRInvokable.h */,
-				A3E428971695E24B00780641 /* LRImposterizer.h */,
-				A31FD28D1696260D002D4511 /* LRExpectationCapture.h */,
-				A3E428931695E22F00780641 /* LRReflectionImposterizer.h */,
-				A3E428941695E23000780641 /* LRReflectionImposterizer.m */,
-				A31FD28E169626E6002D4511 /* LRInvocationToExpectationTranslator.h */,
-				A31FD28F169626E6002D4511 /* LRInvocationToExpectationTranslator.m */,
-				A31FD29716965062002D4511 /* LRUnexpectedInvocationException.h */,
-				A31FD29816965062002D4511 /* LRUnexpectedInvocationException.m */,
-				A31FD2E0169661E1002D4511 /* LRExpectationCollector.h */,
 				A32E0C5C12070477009B4C81 /* Integration */,
 				A3385AC512026244006E95AB /* States */,
 				A30176CF11FDFCC7004828C5 /* Expectations */,
 				A30176B011FDEF01004828C5 /* Actions */,
-				A31FD2F416970C08002D4511 /* LRExpectationBuilder.h */,
-				A301768A11FDEEFC004828C5 /* LRInvocationExpectationBuilder.h */,
-				A301768B11FDEEFC004828C5 /* LRInvocationExpectationBuilder.m */,
-				A31FD2F016970BB8002D4511 /* LRExpectations.h */,
-				A31FD2F116970BB9002D4511 /* LRExpectations.m */,
-				A31FD32E169906F8002D4511 /* LRExpectationActionCollector.h */,
-				A31FD3281699043C002D4511 /* LRExpectationActionSyntax.h */,
-				A31FD32A16990600002D4511 /* LRExpectationActions.h */,
-				A31FD32B16990604002D4511 /* LRExpectationActions.m */,
-				A301769011FDEEFC004828C5 /* LRMockery.h */,
-				A301769111FDEEFC004828C5 /* LRMockery.m */,
-				A35D65B911FF2C6B00F0C310 /* LRInvocationComparitor.h */,
-				A35D65BA11FF2C6C00F0C310 /* LRInvocationComparitor.m */,
-				A391557A11FF670500FE7C49 /* LRDescribable.h */,
-				A3C66A42120249240004F78B /* LRMockyStates.h */,
-				A36F414A142962C4004EAA45 /* LRHamcrestSupport.h */,
-				A3F962421505869F003051DD /* LRMockyAutomation.h */,
-				A3F962431505869F003051DD /* LRMockyAutomation.m */,
 			);
 			path = LRMocky;
 			sourceTree = "<group>";
@@ -416,6 +387,10 @@
 			isa = PBXGroup;
 			children = (
 				A301768911FDEEFC004828C5 /* LRExpectationAction.h */,
+				A31FD32E169906F8002D4511 /* LRExpectationActionCollector.h */,
+				A31FD3281699043C002D4511 /* LRExpectationActionSyntax.h */,
+				A31FD32A16990600002D4511 /* LRExpectationActions.h */,
+				A31FD32B16990604002D4511 /* LRExpectationActions.m */,
 				A301769411FDEEFC004828C5 /* LRPerformBlockAction.h */,
 				A301769511FDEEFC004828C5 /* LRPerformBlockAction.m */,
 				A3EE4EF511FE5D64002DA61D /* LRConsecutiveCallAction.h */,
@@ -431,6 +406,8 @@
 			children = (
 				A31FD2FE1697B3B9002D4511 /* Matchers */,
 				A301768811FDEEFC004828C5 /* LRExpectation.h */,
+				A31FD28D1696260D002D4511 /* LRExpectationCapture.h */,
+				A31FD2E0169661E1002D4511 /* LRExpectationCollector.h */,
 				A301768E11FDEEFC004828C5 /* LRInvocationExpectation.h */,
 				A301768F11FDEEFC004828C5 /* LRInvocationExpectation.m */,
 				A301769A11FDEEFC004828C5 /* LRUnexpectedInvocation.h */,
@@ -439,6 +416,11 @@
 				A391554811FF5F0900FE7C49 /* LRExpectationCardinality.m */,
 				A3289A3A122C73B100D89A88 /* LRNotificationExpectation.h */,
 				A3289A3B122C73B100D89A88 /* LRNotificationExpectation.m */,
+				A31FD2F416970C08002D4511 /* LRExpectationBuilder.h */,
+				A301768A11FDEEFC004828C5 /* LRInvocationExpectationBuilder.h */,
+				A301768B11FDEEFC004828C5 /* LRInvocationExpectationBuilder.m */,
+				A31FD28E169626E6002D4511 /* LRInvocationToExpectationTranslator.h */,
+				A31FD28F169626E6002D4511 /* LRInvocationToExpectationTranslator.m */,
 			);
 			name = Expectations;
 			sourceTree = "<group>";
@@ -482,9 +464,43 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		A31FD33F16990FF3002D4511 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				A35D65B911FF2C6B00F0C310 /* LRInvocationComparitor.h */,
+				A35D65BA11FF2C6C00F0C310 /* LRInvocationComparitor.m */,
+				A391557A11FF670500FE7C49 /* LRDescribable.h */,
+				A3C66A42120249240004F78B /* LRMockyStates.h */,
+				A36F414A142962C4004EAA45 /* LRHamcrestSupport.h */,
+				A31FD29716965062002D4511 /* LRUnexpectedInvocationException.h */,
+				A31FD29816965062002D4511 /* LRUnexpectedInvocationException.m */,
+				A3E428911695E1A500780641 /* LRInvocationDispatcher.h */,
+				A3E428921695E1DD00780641 /* LRInvokable.h */,
+				A3E428971695E24B00780641 /* LRImposterizer.h */,
+				A3E428931695E22F00780641 /* LRReflectionImposterizer.h */,
+				A3E428941695E23000780641 /* LRReflectionImposterizer.m */,
+				A3E4288D1695E16800780641 /* LRMockObject.h */,
+				A3E4288E1695E16800780641 /* LRMockObject.m */,
+			);
+			name = Internal;
+			sourceTree = "<group>";
+		};
+		A31FD34016991069002D4511 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A301769011FDEEFC004828C5 /* LRMockery.h */,
+				A301769111FDEEFC004828C5 /* LRMockery.m */,
+				A31FD2F016970BB8002D4511 /* LRExpectations.h */,
+				A31FD2F116970BB9002D4511 /* LRExpectations.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		A32E0C5C12070477009B4C81 /* Integration */ = {
 			isa = PBXGroup;
 			children = (
+				A3F962421505869F003051DD /* LRMockyAutomation.h */,
+				A3F962431505869F003051DD /* LRMockyAutomation.m */,
 				A301769811FDEEFC004828C5 /* LRTestCase.h */,
 				A301769911FDEEFC004828C5 /* LRTestCase.m */,
 			);
