@@ -7,7 +7,7 @@
 //
 
 #import "LRInvocationExpectation.h"
-#import "LRInvocationComparitor.h"
+#import "LRExpectationConstraints.h"
 #import "LRExpectationCardinality.h"
 #import "LRMockyStates.h"
 #import "NSInvocation+Conveniences.h"
@@ -17,67 +17,92 @@
 NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 
 @interface LRInvocationExpectation ()
-@property (nonatomic, strong) NSInvocation *similarInvocation;
-@property (nonatomic, assign) NSUInteger numberOfInvocations;
+@property (nonatomic, readonly) NSUInteger numberOfInvocations;
+@property (nonatomic, strong) LRCardinalityConstraint *cardinalityConstraint;
+@property (nonatomic, strong) id<LRExpectationConstraint> targetConstraint;
+@property (nonatomic, strong) id<LRExpectationConstraint> selectorConstraint;
+@property (nonatomic, strong) id<LRExpectationConstraint> parametersConstraint;
+@property (nonatomic, readonly) NSArray *constraints;
 @end
 
-@implementation LRInvocationExpectation {
-  NSInvocation *similarInvocation;
-  LRMockyState *requiredState;
-  BOOL calledWithInvalidState;
-}
-
-@synthesize similarInvocation;
-@synthesize requiredState;
-@synthesize calledWithInvalidState;
+@implementation LRInvocationExpectation
 
 - (id)init;
 {
   if (self = [super init]) {
-    _cardinality = [LRExpectationCardinality atLeast:0];
+    _targetConstraint = LRCanBeAnythingConstraint();
+    _selectorConstraint = LRCanBeAnythingConstraint();
+    _parametersConstraint = LRCanBeAnythingConstraint();
+    
+    [self setCardinality:[LRExpectationCardinality atLeast:0]];
   }
   return self;
 }
 
+- (void)setCardinality:(id<LRExpectationCardinality>)cardinality
+{
+  _cardinality = cardinality;
+  _cardinalityConstraint = [LRCardinalityConstraint constraintWithCardinality:cardinality];
+}
+
+- (void)setTarget:(id)target
+{
+  _target = target;
+  _targetConstraint = [LRExpectationConstraintUsingBlock constraintWithBlock:^BOOL(NSInvocation *invocation) {
+    return invocation.target == target;
+  }];
+}
+
+- (void)setSelector:(SEL)selector
+{
+  _selector = selector;
+  _selectorConstraint = [LRExpectationConstraintUsingBlock constraintWithBlock:^BOOL(NSInvocation *invocation) {
+    return invocation.selector == selector;
+  }];
+}
+
+- (void)setParametersMatcher:(id<HCMatcher>)parametersMatcher
+{
+  _parametersMatcher = parametersMatcher;
+  _parametersConstraint = [LRExpectationConstraintUsingBlock constraintWithBlock:^BOOL(NSInvocation *invocation) {
+    return [parametersMatcher matches:invocation.argumentsArray];
+  }];
+}
+
+- (NSArray *)constraints
+{
+  return @[
+    self.cardinalityConstraint,
+    self.targetConstraint,
+    self.selectorConstraint,
+    self.parametersConstraint
+  ];
+}
+
+- (NSUInteger)numberOfInvocations
+{
+  return self.cardinalityConstraint.invocationCount;
+}
+
 - (BOOL)matches:(NSInvocation *)invocation;
 {
-  if (![self allowsMoreInvocations]) {
-    return NO;
-  }
-  
-  if (self.target && self.target != invocation.target) {
-    return NO;
-  }
-  if (self.selector && self.selector != invocation.selector) {
-    return NO;
-  }
-  if (self.parametersMatcher && ![self.parametersMatcher matches:invocation.argumentsArray]) {
-    return NO;
+  for (id<LRExpectationConstraint> constraint in self.constraints) {
+    if (![constraint allowsInvocation:invocation]) {
+      return NO;
+    }
   }
   return YES;
-  
-//  if (self.requiredState && ![self.requiredState isActive]) {
-//    NSLog(@"Required state %@ but it is not active", self.requiredState);
-//    calledWithInvalidState = YES;
-//    return YES;
-//  }
 }
 
 - (void)invoke:(NSInvocation *)invocation
 {
-  _numberOfInvocations++;
-  
+  [self.cardinalityConstraint incrementInvocationCount];
   [self.action invoke:invocation];
 }
 
 - (BOOL)isSatisfied;
 {
   return [self.cardinality isSatisfiedByInvocationCount:self.numberOfInvocations];
-}
-
-- (BOOL)allowsMoreInvocations
-{
-  return [self.cardinality allowsMoreExpectations:self.numberOfInvocations];
 }
 
 - (void)describeTo:(id<HCDescription>)description

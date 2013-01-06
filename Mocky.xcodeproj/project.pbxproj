@@ -74,6 +74,9 @@
 		A31FD34616991243002D4511 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31FD3431699122C002D4511 /* libPods-osx.a */; };
 		A31FD34716991243002D4511 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31FD3431699122C002D4511 /* libPods-osx.a */; };
 		A31FD34816991283002D4511 /* StateMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C66A2A120244F20004F78B /* StateMachineTests.m */; };
+		A31FD34B1699180E002D4511 /* LRExpectationConstraints.h in Headers */ = {isa = PBXBuildFile; fileRef = A31FD3491699180A002D4511 /* LRExpectationConstraints.h */; };
+		A31FD34C1699180E002D4511 /* LRExpectationConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD34A1699180C002D4511 /* LRExpectationConstraints.m */; };
+		A31FD34D16991D6F002D4511 /* LRExpectationConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD34A1699180C002D4511 /* LRExpectationConstraints.m */; };
 		A3289A3C122C73B100D89A88 /* LRNotificationExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = A3289A3A122C73B100D89A88 /* LRNotificationExpectation.h */; };
 		A3289A3D122C73B100D89A88 /* LRNotificationExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3289A3B122C73B100D89A88 /* LRNotificationExpectation.m */; };
 		A32E0C6112070555009B4C81 /* NSException_SenTestFailure.h in Headers */ = {isa = PBXBuildFile; fileRef = A32E0C6012070555009B4C81 /* NSException_SenTestFailure.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -183,6 +186,8 @@
 		A31FD33516990EF2002D4511 /* NSInvocation+BlockArguments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+BlockArguments.h"; sourceTree = "<group>"; };
 		A31FD33616990EF2002D4511 /* NSInvocation+BlockArguments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+BlockArguments.m"; sourceTree = "<group>"; };
 		A31FD3431699122C002D4511 /* libPods-osx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-osx.a"; path = "../../../../Library/Developer/Xcode/DerivedData/Mocky-awvbrhvldukpccebypapggudtzvg/Build/Products/Debug/libPods-osx.a"; sourceTree = "<group>"; };
+		A31FD3491699180A002D4511 /* LRExpectationConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectationConstraints.h; sourceTree = "<group>"; };
+		A31FD34A1699180C002D4511 /* LRExpectationConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRExpectationConstraints.m; sourceTree = "<group>"; };
 		A3289A3A122C73B100D89A88 /* LRNotificationExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRNotificationExpectation.h; sourceTree = "<group>"; };
 		A3289A3B122C73B100D89A88 /* LRNotificationExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRNotificationExpectation.m; sourceTree = "<group>"; };
 		A3289A53122C744700D89A88 /* NotificationExpectationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationExpectationTests.m; sourceTree = "<group>"; };
@@ -409,6 +414,8 @@
 				A301768B11FDEEFC004828C5 /* LRInvocationExpectationBuilder.m */,
 				A31FD28E169626E6002D4511 /* LRInvocationToExpectationTranslator.h */,
 				A31FD28F169626E6002D4511 /* LRInvocationToExpectationTranslator.m */,
+				A31FD3491699180A002D4511 /* LRExpectationConstraints.h */,
+				A31FD34A1699180C002D4511 /* LRExpectationConstraints.m */,
 			);
 			name = Expectations;
 			sourceTree = "<group>";
@@ -652,6 +659,7 @@
 				A31FD32C16990608002D4511 /* LRExpectationActions.h in Headers */,
 				A31FD33216990C14002D4511 /* LRCompositeAction.h in Headers */,
 				A31FD33716990EF2002D4511 /* NSInvocation+BlockArguments.h in Headers */,
+				A31FD34B1699180E002D4511 /* LRExpectationConstraints.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1016,6 +1024,7 @@
 				A31FD32F169907F4002D4511 /* LRExpectationActions.m in Sources */,
 				A31FD33416990D66002D4511 /* LRCompositeAction.m in Sources */,
 				A31FD34216991122002D4511 /* NSInvocation+BlockArguments.m in Sources */,
+				A31FD34D16991D6F002D4511 /* LRExpectationConstraints.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1045,6 +1054,7 @@
 				A31FD32D16990608002D4511 /* LRExpectationActions.m in Sources */,
 				A31FD33316990C14002D4511 /* LRCompositeAction.m in Sources */,
 				A31FD33816990EF2002D4511 /* NSInvocation+BlockArguments.m in Sources */,
+				A31FD34C1699180E002D4511 /* LRExpectationConstraints.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
