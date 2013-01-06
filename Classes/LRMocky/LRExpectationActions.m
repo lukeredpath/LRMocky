@@ -7,10 +7,10 @@
 //
 
 #import "LRExpectationActions.h"
-#import "LRReturnValueAction.h"
 #import "LRPerformBlockAction.h"
 #import "LRConsecutiveCallAction.h"
 #import "LRCompositeAction.h"
+#import "NSInvocation+Conveniences.h"
 
 @implementation LRExpectationActions {
   __weak id<LRExpectationActionCollector> _collector;
@@ -26,7 +26,9 @@
 
 - (void)returns:(id)returnValue
 {
-  [_collector addAction:[[LRReturnValueAction alloc] initWithReturnValue:returnValue]];
+  [self performsBlock:^(NSInvocation *invocation) {
+    [invocation setReturnValueFromObject:returnValue];
+  }];
 }
 
 - (void)performsBlock:(void (^)(NSInvocation *))block
