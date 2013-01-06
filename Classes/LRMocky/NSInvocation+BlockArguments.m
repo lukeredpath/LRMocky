@@ -1,15 +1,14 @@
 //
-//  NSInvocation+LRAdditions.m
+//  NSInvocation+BlockArguments.m
 //  Mocky
 //
-//  Created by Luke Redpath on 30/08/2010.
-//  Copyright 2010 LJR Software Limited. All rights reserved.
+//  Created by Luke Redpath on 06/01/2013.
+//
 //
 
-#import "NSInvocation+LRAdditions.h"
-#import "NSInvocation+OCMAdditions.h"
+#import "NSInvocation+BlockArguments.h"
 
-@implementation NSInvocation (LRAdditions)
+@implementation NSInvocation (BlockArguments)
 
 - (void)copyBlockArguments;
 {
@@ -20,7 +19,7 @@
       void (^block)() = (void (^)())arg;
       [block copy];
     }
-  } 
+  }
 }
 
 - (void)releaseBlockArguments;
@@ -32,7 +31,7 @@
       void (^block)() = (void (^)())arg;
       [block release];
     }
-  } 
+  }
 }
 
 @end

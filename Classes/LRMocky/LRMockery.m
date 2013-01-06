@@ -15,7 +15,7 @@
 #import "LRMockyStates.h"
 #import "LRReflectionImposterizer.h"
 #import "LRUnexpectedInvocationException.h"
-#import "NSInvocation+LRAdditions.h"
+#import "NSInvocation+BlockArguments.h"
 
 #import <OCHamcrest/HCStringDescription.h>
 
