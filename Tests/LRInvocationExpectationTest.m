@@ -15,6 +15,10 @@
 
 #pragma mark - Helper functions
 
+@interface MockAction : NSObject <LRExpectationAction>
+@property (nonatomic, readonly) BOOL wasInvoked;
+@end
+
 id anyObject(void);
 
 NSInvocation *invocationForSelectorOn(id object, SEL selector);
@@ -116,6 +120,16 @@ DEFINE_TEST_CASE(LRInvocationExpectationTest) {
   assertTrue([expectation isSatisfied]);
 }
 
+- (void)testPerformsActionOnSuccessfulInvocation
+{
+  MockAction *action = [[MockAction alloc] init];
+  expectation.action = action;
+  
+  [expectation invoke:anyInvocationOn(anyObject())];
+  
+  assertTrue([action wasInvoked]);
+}
+
 END_TEST_CASE
 
 #pragma mark -
@@ -152,3 +166,12 @@ NSInvocation *invocationWithArguments(id object, SEL selector, NSArray *args) {
 NSInvocation *anyInvocationOn(id object) {
   return invocationForSelectorOn(object, @selector(description));
 }
+
+@implementation MockAction
+
+- (void)invoke:(NSInvocation *)invocation
+{
+  _wasInvoked = YES;
+}
+
+@end

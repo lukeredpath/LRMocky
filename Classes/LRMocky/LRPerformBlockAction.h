@@ -16,10 +16,3 @@ typedef void (^LRInvocationActionBlock)(NSInvocation *);
 }
 - (id)initWithBlock:(LRInvocationActionBlock)theBlock;
 @end
-
-LRPerformBlockAction *LRA_performBlock(LRInvocationActionBlock theBlock);
-
-#ifdef LRMOCKY_SHORTHAND
-#define performBlock  LRA_performBlock
-#define performsBlock LRA_performBlock
-#endif

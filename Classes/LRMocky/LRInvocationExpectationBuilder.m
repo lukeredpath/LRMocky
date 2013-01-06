@@ -54,6 +54,13 @@
   self.expectation.cardinality = cardinality;
 }
 
+- (void)setAction:(id<LRExpectationAction>)action
+{
+  self.expectation.action = action;
+}
+
+#pragma mark - Invocation capture
+
 - (id)captureExpectedObject
 {
   id<LRCaptureControl> target = self.expectation.target;

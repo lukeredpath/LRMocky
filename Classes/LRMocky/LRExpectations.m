@@ -9,6 +9,13 @@
 #import "LRExpectations.h"
 #import "LRInvocationExpectationBuilder.h"
 #import "LRNotificationExpectation.h"
+#import "LRReturnValueAction.h"
+#import "LRPerformBlockAction.h"
+
+@interface LRExpectations ()
+@property (nonatomic, readonly) LRInvocationExpectationBuilder *currentInvocationExpectationBuilder;
+@property (nonatomic, readonly) LRNotificationExpectationBuilder *currentNotificationExpectationBuilder;
+@end
 
 @implementation LRExpectations {
   NSMutableArray *_builders;
@@ -110,6 +117,23 @@ static LRExpectations *__currentExpectations = nil;
 - (id)receivesBetween:(NSUInteger)min and:(NSUInteger)max
 {
   return [self startCaptureWithCardinality:[LRExpectationCardinality between:min and:max]];
+}
+
+#pragma mark - Expectation actions
+
+- (void)returns:(id)returnValue
+{
+  self.currentInvocationExpectationBuilder.action = [[LRReturnValueAction alloc] initWithReturnValue:returnValue];
+}
+
+- (void)performBlock:(void (^)(NSInvocation *))block
+{
+  self.currentInvocationExpectationBuilder.action = [[LRPerformBlockAction alloc] initWithBlock:block];
+}
+
+- (void)onConsecutiveCalls:(void (^)(id))sequenceBlock
+{
+  
 }
 
 #pragma mark - NSNotification expectations

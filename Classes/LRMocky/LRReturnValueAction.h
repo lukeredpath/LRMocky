@@ -9,28 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "LRExpectationAction.h"
 
-@interface LRReturnValueAction : NSObject <LRExpectationAction> {
-  id objectToReturn;
-  NSData *returnValue;
-}
-- (id)initWithObject:(id)object;
-- (id)initWithValue:(void *)value;
+@interface LRReturnValueAction : NSObject <LRExpectationAction>
+
+- (id)initWithReturnValue:(id)returnValue;
+
 @end
-
-LRReturnValueAction *LRA_returnObject(id object);
-LRReturnValueAction *LRA_returnValue(void *value);
-LRReturnValueAction *LRA_returnInt(int anInt);
-LRReturnValueAction *LRA_returnInteger(NSInteger anInteger);
-LRReturnValueAction *LRA_returnFloat(float aFloat);
-LRReturnValueAction *LRA_returnLong(long aLong);
-LRReturnValueAction *LRA_returnBool(BOOL aBool);
-
-#ifdef LRMOCKY_SHORTHAND
-#define returnObject  LRA_returnObject
-#define returnValue   LRA_returnValue
-#define returnInt     LRA_returnInt
-#define returnInteger LRA_returnInteger
-#define returnFloat   LRA_returnFloat
-#define returnLong    LRA_returnLong
-#define returnBool    LRA_returnBool
-#endif

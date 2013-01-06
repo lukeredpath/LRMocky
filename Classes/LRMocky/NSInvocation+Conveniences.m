@@ -34,4 +34,75 @@ const NSUInteger NSMethodSignatureArgumentsToIgnore = 2;
   [self setArgument:&object atIndex:index + NSMethodSignatureArgumentsToIgnore];
 }
 
+- (void)setReturnValueFromObject:(id)object
+{
+  const char* returnType = [self.methodSignature methodReturnType];
+  
+  switch (returnType[0]) {
+    case '#':
+    case '@':
+      [self setReturnValue:&object];
+      break;
+    case 'i':
+		{
+			int value = [object intValue];
+      [self setReturnValue:&value];
+      break;
+		}
+// TODO: support remaining values, but implement with unit test coverage instead of acceptance test coverage
+//
+//		case 's':
+//		{
+//			short value;
+//		}
+//		case 'l':
+//		{
+//			long value;
+//		}
+//		case 'q':
+//		{
+//			long long value;
+//		}
+//		case 'c':
+//		{
+//			char value;
+//		}
+//		case 'C':
+//		{
+//			unsigned char value;
+//		}
+//		case 'I':
+//		{
+//			unsigned int value;
+//		}
+//		case 'S':
+//		{
+//			unsigned short value;
+//		}
+//		case 'L':
+//		{
+//			unsigned long value;
+//		}
+//		case 'Q':
+//		{
+//			unsigned long long value;
+//		}
+//		case 'f':
+//		{
+//			float value;
+//		}
+//		case 'd':
+//		{
+//			double value;
+//		}
+//		case 'B':
+//		{
+//			bool value;
+//		}
+    default:
+      @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"Unable to set return value of %@ for invocation with signature %@.", object, [self.methodSignature debugDescription]] userInfo:nil];
+      break;
+  }
+}
+
 @end

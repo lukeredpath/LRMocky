@@ -25,7 +25,6 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 
 @implementation LRInvocationExpectation {
   NSInvocation *similarInvocation;
-  NSMutableArray *_actions;
   LRMockyState *requiredState;
   BOOL calledWithInvalidState;
 }
@@ -37,7 +36,6 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 - (id)init;
 {
   if (self = [super init]) {
-    _actions = [[NSMutableArray alloc] init];
     _cardinality = [LRExpectationCardinality atLeast:0];
   }
   return self;
@@ -78,10 +76,8 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 - (void)invoke:(NSInvocation *)invocation
 {
   _numberOfInvocations++;
-    
-  for (id<LRExpectationAction> action in _actions) {
-    [action invoke:invocation];
-  }
+  
+  [self.action invoke:invocation];
 }
 
 - (BOOL)isSatisfied;
@@ -116,11 +112,6 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 //    }
 //    [description appendText:[NSString stringWithFormat:@"with arguments: [%@].", [parameters componentsJoinedByString:@", "]]];
 //  }
-}
-
-- (void)addAction:(id<LRExpectationAction>)anAction;
-{
-  [_actions addObject:anAction];
 }
 
 @end

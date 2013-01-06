@@ -7,16 +7,9 @@
 //
 
 #import "LRExpectationBuilder.h"
-#import "LRExpectation.h"
-#import "LRExpectationCardinality.h"
 #import "LRExpectationCapture.h"
-#import "LRExpectationCollector.h"
-
-@class OLD_LRMockObject;
-@class LRMockery;
-@class LRInvocationExpectation;
-@class LRMockyState;
-@class OLD_LRImposterizer;
+#import "LRExpectationCardinality.h"
+#import "LRExpectationAction.h"
 
 @interface LRInvocationExpectationBuilder : NSObject <LRExpectationBuilder, LRExpectationCapture, LRExpectationCaptureSyntaticSugar>
 
@@ -24,6 +17,10 @@
 
 - (void)setTarget:(id)target;
 - (void)setCardinality:(id<LRExpectationCardinality>)cardinality;
+- (void)setAction:(id<LRExpectationAction>)action;
+
+#pragma mark - Invocation capture
+
 - (id)captureExpectedObject;
 
 @end

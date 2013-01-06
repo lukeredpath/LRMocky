@@ -15,4 +15,6 @@
 
 - (void)putObject:(id)object asArgumentAtIndex:(NSUInteger)index;
 
+- (void)setReturnValueFromObject:(id)object;
+
 @end

@@ -27,6 +27,12 @@
 - (id)receivesAtMost:(NSUInteger)max;
 - (id)receivesBetween:(NSUInteger)min and:(NSUInteger)max;
 
+#pragma mark - Expectation actions
+
+- (void)returns:(id)returnObject;
+- (void)performBlock:(void (^)(NSInvocation *))block;
+- (void)onConsecutiveCalls:(void (^)(id))sequenceBlock;
+
 #pragma mark - NSNotification expectations
 
 - (id)expectNotification:(NSString *)notificationName;

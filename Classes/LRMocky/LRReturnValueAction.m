@@ -7,56 +7,23 @@
 //
 
 #import "LRReturnValueAction.h"
+#import "NSInvocation+Conveniences.h"
 
-
-@implementation LRReturnValueAction
-
-- (id)initWithObject:(id)object;
-{
-  return [self initWithValue:&object];
+@implementation LRReturnValueAction {
+  id _returnValue;
 }
 
-- (id)initWithValue:(void *)value;
+- (id)initWithReturnValue:(id)returnValue
 {
-  if (self = [super init]) {
-    // use NSData to take a copy of the value to ensure it doesn't change
-    returnValue = [NSData dataWithBytes:value length:sizeof(value)];
+  if ((self = [super init])) {
+    _returnValue = returnValue;
   }
   return self;
 }
 
-
-- (void)invoke:(NSInvocation *)invocation;
+- (void)invoke:(NSInvocation *)invocation
 {
-  [invocation setReturnValue:(void *)[returnValue bytes]];
+  [invocation setReturnValueFromObject:_returnValue];
 }
 
 @end
-
-LRReturnValueAction *LRA_returnObject(id object) {
-  return [[LRReturnValueAction alloc] initWithObject:object];
-}
-
-LRReturnValueAction *LRA_returnValue(void *value) {
-  return [[LRReturnValueAction alloc] initWithValue:value];
-}
-
-LRReturnValueAction *LRA_returnInt(int anInt) {
-  return [[LRReturnValueAction alloc] initWithValue:&anInt];
-}
-
-LRReturnValueAction *LRA_returnInteger(NSInteger anInteger) {
-  return [[LRReturnValueAction alloc] initWithValue:&anInteger];
-}
-
-LRReturnValueAction *LRA_returnFloat(float aFloat) {
-  return [[LRReturnValueAction alloc] initWithValue:&aFloat];
-}
-
-LRReturnValueAction *LRA_returnLong(long aLong) {
-  return [[LRReturnValueAction alloc] initWithValue:&aLong];
-}
-
-LRReturnValueAction *LRA_returnBool(BOOL aBool) {
-  return [[LRReturnValueAction alloc] initWithValue:&aBool];
-}

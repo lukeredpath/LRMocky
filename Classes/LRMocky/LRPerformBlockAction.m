@@ -19,15 +19,9 @@
   return self;
 }
 
-
 - (void)invoke:(NSInvocation *)invocation
 {
   block(invocation);
 }
 
 @end
-
-LRPerformBlockAction *LRA_performBlock(LRInvocationActionBlock theBlock)
-{
-  return [[LRPerformBlockAction alloc] initWithBlock:theBlock];
-}
