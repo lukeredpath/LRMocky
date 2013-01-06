@@ -7,6 +7,7 @@
 //
 
 #import "NSInvocation+BlockArguments.h"
+#import "NSInvocation+OCMAdditions.h"
 
 @implementation NSInvocation (BlockArguments)
 

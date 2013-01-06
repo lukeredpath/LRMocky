@@ -71,7 +71,8 @@
 		A31FD33316990C14002D4511 /* LRCompositeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD33116990C12002D4511 /* LRCompositeAction.m */; };
 		A31FD33416990D66002D4511 /* LRCompositeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD33116990C12002D4511 /* LRCompositeAction.m */; };
 		A31FD33716990EF2002D4511 /* NSInvocation+BlockArguments.h in Headers */ = {isa = PBXBuildFile; fileRef = A31FD33516990EF2002D4511 /* NSInvocation+BlockArguments.h */; };
-		A31FD33816990EF2002D4511 /* NSInvocation+BlockArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD33616990EF2002D4511 /* NSInvocation+BlockArguments.m */; };
+		A31FD33816990EF2002D4511 /* NSInvocation+BlockArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD33616990EF2002D4511 /* NSInvocation+BlockArguments.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A31FD34216991122002D4511 /* NSInvocation+BlockArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD33616990EF2002D4511 /* NSInvocation+BlockArguments.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A3289A3C122C73B100D89A88 /* LRNotificationExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = A3289A3A122C73B100D89A88 /* LRNotificationExpectation.h */; };
 		A3289A3D122C73B100D89A88 /* LRNotificationExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3289A3B122C73B100D89A88 /* LRNotificationExpectation.m */; };
 		A32E0C6112070555009B4C81 /* NSException_SenTestFailure.h in Headers */ = {isa = PBXBuildFile; fileRef = A32E0C6012070555009B4C81 /* NSException_SenTestFailure.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1029,6 +1030,7 @@
 				A31FD30F1697B61F002D4511 /* NSInvocation+Conveniences.m in Sources */,
 				A31FD32F169907F4002D4511 /* LRExpectationActions.m in Sources */,
 				A31FD33416990D66002D4511 /* LRCompositeAction.m in Sources */,
+				A31FD34216991122002D4511 /* NSInvocation+BlockArguments.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
