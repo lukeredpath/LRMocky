@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A36FDBB311FFBB6E004A08F4"
                BuildableName = "Example Tests.octest"
-               BlueprintName = "Example Tests"
+               BlueprintName = "Examples"
                ReferencedContainer = "container:Mocky.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,7 +34,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A36FDBB311FFBB6E004A08F4"
                BuildableName = "Example Tests.octest"
-               BlueprintName = "Example Tests"
+               BlueprintName = "Examples"
                ReferencedContainer = "container:Mocky.xcodeproj">
             </BuildableReference>
          </TestableReference>

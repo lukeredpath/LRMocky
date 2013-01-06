@@ -17,12 +17,14 @@
 NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 
 @interface LRInvocationExpectation ()
+
 @property (nonatomic, readonly) NSUInteger numberOfInvocations;
 @property (nonatomic, strong) LRCardinalityConstraint *cardinalityConstraint;
 @property (nonatomic, strong) id<LRExpectationConstraint> targetConstraint;
 @property (nonatomic, strong) id<LRExpectationConstraint> selectorConstraint;
 @property (nonatomic, strong) id<LRExpectationConstraint> parametersConstraint;
 @property (nonatomic, readonly) NSArray *constraints;
+
 @end
 
 @implementation LRInvocationExpectation

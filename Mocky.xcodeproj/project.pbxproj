@@ -70,20 +70,22 @@
 		A31FD33716990EF2002D4511 /* NSInvocation+BlockArguments.h in Headers */ = {isa = PBXBuildFile; fileRef = A31FD33516990EF2002D4511 /* NSInvocation+BlockArguments.h */; };
 		A31FD33816990EF2002D4511 /* NSInvocation+BlockArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD33616990EF2002D4511 /* NSInvocation+BlockArguments.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A31FD34216991122002D4511 /* NSInvocation+BlockArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD33616990EF2002D4511 /* NSInvocation+BlockArguments.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		A31FD3441699122C002D4511 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31FD3431699122C002D4511 /* libPods-osx.a */; };
 		A31FD34616991243002D4511 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31FD3431699122C002D4511 /* libPods-osx.a */; };
 		A31FD34716991243002D4511 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31FD3431699122C002D4511 /* libPods-osx.a */; };
 		A31FD34816991283002D4511 /* StateMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C66A2A120244F20004F78B /* StateMachineTests.m */; };
 		A31FD34B1699180E002D4511 /* LRExpectationConstraints.h in Headers */ = {isa = PBXBuildFile; fileRef = A31FD3491699180A002D4511 /* LRExpectationConstraints.h */; };
 		A31FD34C1699180E002D4511 /* LRExpectationConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD34A1699180C002D4511 /* LRExpectationConstraints.m */; };
 		A31FD34D16991D6F002D4511 /* LRExpectationConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD34A1699180C002D4511 /* LRExpectationConstraints.m */; };
+		A31FD3501699204D002D4511 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A319BB951695A469003BB49A /* Foundation.framework */; };
+		A31FD35116992054002D4511 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A319BB9C1695A584003BB49A /* SenTestingKit.framework */; };
+		A31FD3531699205E002D4511 /* Mocky-OSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3E4289E1695E32300780641 /* Mocky-OSX.framework */; };
+		A31FD35E1699223A002D4511 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31FD35D16992239002D4511 /* libPods-osx.a */; };
 		A3289A3C122C73B100D89A88 /* LRNotificationExpectation.h in Headers */ = {isa = PBXBuildFile; fileRef = A3289A3A122C73B100D89A88 /* LRNotificationExpectation.h */; };
 		A3289A3D122C73B100D89A88 /* LRNotificationExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3289A3B122C73B100D89A88 /* LRNotificationExpectation.m */; };
 		A32E0C6112070555009B4C81 /* NSException_SenTestFailure.h in Headers */ = {isa = PBXBuildFile; fileRef = A32E0C6012070555009B4C81 /* NSException_SenTestFailure.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3385ADD12026372006E95AB /* LRMockyStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = A3385AC712026269006E95AB /* LRMockyStateMachine.m */; };
 		A3385ADE12026375006E95AB /* LRMockyState.m in Sources */ = {isa = PBXBuildFile; fileRef = A3385ACA12026274006E95AB /* LRMockyState.m */; };
 		A3385ADF12026377006E95AB /* LRMockyStateTransitionAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3385ACD1202627E006E95AB /* LRMockyStateTransitionAction.m */; };
-		A340492D11FFBC4D0092E4C6 /* libMocky.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2AAC07E0554694100DB518D /* libMocky.a */; };
 		A36F414B142962C4004EAA45 /* LRHamcrestSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = A36F414A142962C4004EAA45 /* LRHamcrestSupport.h */; };
 		A381A1FA12243BE900FA2A5C /* LRExpectationAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A301768911FDEEFC004828C5 /* LRExpectationAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A381A1FB12243BF200FA2A5C /* LRDescribable.h in Headers */ = {isa = PBXBuildFile; fileRef = A391557A11FF670500FE7C49 /* LRDescribable.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -188,6 +190,7 @@
 		A31FD3431699122C002D4511 /* libPods-osx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-osx.a"; path = "../../../../Library/Developer/Xcode/DerivedData/Mocky-awvbrhvldukpccebypapggudtzvg/Build/Products/Debug/libPods-osx.a"; sourceTree = "<group>"; };
 		A31FD3491699180A002D4511 /* LRExpectationConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectationConstraints.h; sourceTree = "<group>"; };
 		A31FD34A1699180C002D4511 /* LRExpectationConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRExpectationConstraints.m; sourceTree = "<group>"; };
+		A31FD35D16992239002D4511 /* libPods-osx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-osx.a"; path = "../../../Library/Developer/Xcode/DerivedData/Mocky-awvbrhvldukpccebypapggudtzvg/Build/Products/Debug/libPods-osx.a"; sourceTree = "<group>"; };
 		A3289A3A122C73B100D89A88 /* LRNotificationExpectation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRNotificationExpectation.h; sourceTree = "<group>"; };
 		A3289A3B122C73B100D89A88 /* LRNotificationExpectation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRNotificationExpectation.m; sourceTree = "<group>"; };
 		A3289A53122C744700D89A88 /* NotificationExpectationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationExpectationTests.m; sourceTree = "<group>"; };
@@ -277,7 +280,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A340492D11FFBC4D0092E4C6 /* libMocky.a in Frameworks */,
+				A31FD3531699205E002D4511 /* Mocky-OSX.framework in Frameworks */,
+				A31FD3501699204D002D4511 /* Foundation.framework in Frameworks */,
+				A31FD35116992054002D4511 /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +290,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A31FD3441699122C002D4511 /* libPods-osx.a in Frameworks */,
+				A31FD35E1699223A002D4511 /* libPods-osx.a in Frameworks */,
 				A3E428B51695E37E00780641 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,6 +322,7 @@
 		0867D691FE84028FC02AAC07 /* LRMiniTestKit */ = {
 			isa = PBXGroup;
 			children = (
+				A31FD35D16992239002D4511 /* libPods-osx.a */,
 				A3943E0911FFBB99007FE700 /* Examples */,
 				A30176EE11FE017E004828C5 /* Vendor */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
@@ -704,9 +710,9 @@
 			productReference = A31FD2B716965C5C002D4511 /* FunctionalTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
-		A36FDBB311FFBB6E004A08F4 /* Example Tests */ = {
+		A36FDBB311FFBB6E004A08F4 /* Examples */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A36FDBB811FFBB6F004A08F4 /* Build configuration list for PBXNativeTarget "Example Tests" */;
+			buildConfigurationList = A36FDBB811FFBB6F004A08F4 /* Build configuration list for PBXNativeTarget "Examples" */;
 			buildPhases = (
 				A36FDBAF11FFBB6E004A08F4 /* Resources */,
 				A36FDBB011FFBB6E004A08F4 /* Sources */,
@@ -719,7 +725,7 @@
 			dependencies = (
 				A340492C11FFBC420092E4C6 /* PBXTargetDependency */,
 			);
-			name = "Example Tests";
+			name = Examples;
 			productName = "Example Tests";
 			productReference = A36FDBB411FFBB6E004A08F4 /* Example Tests.octest */;
 			productType = "com.apple.product-type.bundle";
@@ -785,7 +791,7 @@
 			targets = (
 				D2AAC07D0554694100DB518D /* Mocky-iOS */,
 				A3E4289D1695E32300780641 /* Mocky-OSX */,
-				A36FDBB311FFBB6E004A08F4 /* Example Tests */,
+				A36FDBB311FFBB6E004A08F4 /* Examples */,
 				A319BB7E1695A414003BB49A /* UnitTests */,
 				A31FD2B616965C5C002D4511 /* FunctionalTests */,
 			);
@@ -1164,6 +1170,7 @@
 		};
 		A319BB921695A414003BB49A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 592A5255E4E0402AA826189E /* Pods-osx.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -1188,12 +1195,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/Headers/**";
 				INFOPLIST_FILE = "Tests-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Mocky-awvbrhvldukpccebypapggudtzvg/Build/Products/Debug\"",
-				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1223,12 +1225,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/Pods/Headers/**";
 				INFOPLIST_FILE = "Tests-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/Mocky-awvbrhvldukpccebypapggudtzvg/Build/Products/Debug\"",
-				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1238,6 +1235,7 @@
 		};
 		A31FD2C616965C5C002D4511 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 592A5255E4E0402AA826189E /* Pods-osx.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1304,32 +1302,23 @@
 		};
 		A36FDBB611FFBB6F004A08F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 592A5255E4E0402AA826189E /* Pods-osx.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/xcodeproj.dst;
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Example Tests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					SenTestingKit,
-					"-framework",
-					UIKit,
-					"-lstdc++",
-					"-all_load",
-				);
 				PRODUCT_NAME = "Example Tests";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = octest;
 			};
@@ -1339,29 +1328,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DSTROOT = /tmp/xcodeproj.dst;
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Example Tests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					SenTestingKit,
-					"-framework",
-					UIKit,
-					"-lstdc++",
-					"-all_load",
-				);
 				PRODUCT_NAME = "Example Tests";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = octest;
 				ZERO_LINK = NO;
@@ -1494,7 +1473,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A36FDBB811FFBB6F004A08F4 /* Build configuration list for PBXNativeTarget "Example Tests" */ = {
+		A36FDBB811FFBB6F004A08F4 /* Build configuration list for PBXNativeTarget "Examples" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A36FDBB611FFBB6F004A08F4 /* Debug */,

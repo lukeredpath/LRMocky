@@ -14,7 +14,7 @@ end
 
 target :osx do
   platform :osx, deployment_target: 10.7
-  link_with "Mocky-OSX"
+  link_with ["Mocky-OSX", "Examples"]
   
   extend CommonPods
 end
