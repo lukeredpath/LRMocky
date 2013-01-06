@@ -6,16 +6,5 @@
 //  Copyright (c) 2010 LJR Software Limited. All rights reserved.
 //
 
-// base classes
 #import "LRMockery.h"
 #import "LRExpectations.h"
-
-// actions
-#import "LRReturnValueAction.h"
-#import "LRPerformBlockAction.h"
-#import "LRConsecutiveCallAction.h"
-#import "LRMultipleAction.h"
-#import "LRPerformBlockArgumentAction.h"
-
-// state machine
-#import "LRMockyStates.h"

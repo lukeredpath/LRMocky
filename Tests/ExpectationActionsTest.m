@@ -63,10 +63,10 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
 - (void)testMocksCanReturnDifferentValuesOnConsecutiveCalls;
 {
   [context check:^{
-    [[[expectThat(testObject) receivesAtLeast:3] of] returnSomeValue]; [then onConsecutiveCalls:^(id sequence) {
-      [sequence returns:@10];
-      [sequence returns:@20];
-      [sequence returns:@30];
+    [[[expectThat(testObject) receivesAtLeast:3] of] returnSomeValue]; [then onConsecutiveCalls:^(id actions) {
+      [actions returns:@10];
+      [actions returns:@20];
+      [actions returns:@30];
     }];
   }];
   
@@ -100,6 +100,23 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
 }
 #endif
 
+- (void)testMocksCanPerformMultipleActions;
+{
+  __block BOOL calledSecondAction = NO;
+
+  [context check:^{
+    [allowing(testObject) returnSomething]; [then doesAllOf:^(id<LRExpectationActionSyntax> actions) {
+      [actions returns:@"return value"];
+      [actions performBlock:^(NSInvocation *unused) {
+        calledSecondAction = YES;
+      }];
+    }];
+  }];
+
+  assertThat([testObject returnSomething], equalTo(@"return value"));
+  assertTrue(calledSecondAction);
+}
+
 //
 ////- (void)testCanExpectMethodCallsWithBlockArgumentsAndCallTheSuppliedBlock;
 ////{
@@ -120,21 +137,5 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
 ////}
 //
 //
-//- (void)testMocksCanPerformMultipleActions;
-//{
-//  NSMutableArray *array = [NSMutableArray array];
-//
-//  [context check:^{
-//    [allowing(testObject) returnSomething]; [and then:doAll(
-//      returnObject(@"test"),
-//      performBlock(^(NSInvocation *invocation){ 
-//        [array addObject:@"from block"];
-//      }), 
-//    nil)];
-//  }];
-//  
-//  assertThat([testObject returnSomething], equalTo(@"test"));
-//  assertThat(array, hasItem(@"from block"));
-//}
 
 END_TEST_CASE

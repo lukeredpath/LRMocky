@@ -10,6 +10,7 @@
 #import "LRReturnValueAction.h"
 #import "LRPerformBlockAction.h"
 #import "LRConsecutiveCallAction.h"
+#import "LRCompositeAction.h"
 
 @implementation LRExpectationActions {
   __weak id<LRExpectationActionCollector> _collector;
@@ -40,12 +41,21 @@
   }];
 }
 
+- (void)doesAllOf:(void (^)(id<LRExpectationActionSyntax>))actionsBlock
+{
+  [self composeAction:[[LRCompositeAction alloc] init] withActions:actionsBlock];
+}
+
 - (void)onConsecutiveCalls:(void (^)(id<LRExpectationActionSyntax>))actionsBlock
 {
-  LRConsecutiveCallAction *consecutiveCalls = [[LRConsecutiveCallAction alloc] init];
-  LRExpectationActions *actions = [[LRExpectationActions alloc] initWithActionCollector:consecutiveCalls];
+  [self composeAction:[[LRConsecutiveCallAction alloc] init] withActions:actionsBlock];
+}
+
+- (void)composeAction:(id<LRExpectationAction,LRExpectationActionCollector>)action withActions:(void (^)(id<LRExpectationActionSyntax>))actionsBlock
+{
+  LRExpectationActions *actions = [[LRExpectationActions alloc] initWithActionCollector:action];
   actionsBlock(actions);
-  [_collector addAction:consecutiveCalls];
+  [_collector addAction:action];
 }
 
 @end
