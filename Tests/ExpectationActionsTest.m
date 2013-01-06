@@ -76,6 +76,30 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
   assertThatInt((int)[testObject returnSomeValue], equalToInt(30));
 }
 
+#if !(TARGET_IPHONE_SIMULATOR)
+- (void)testMocksCanThrowAnException;
+{
+  [context check:^{
+    [allowing(testObject) doSomething]; [then raiseException:[NSException exceptionWithName:@"Test Exception" reason:nil userInfo:nil]];
+  }];
+  
+  /**
+   * this will only pass using the iOS 4.0 Device SDK, it currently fails
+   * with the simulator SDK due to a runtime bug. rdar://8081169
+   * also see: http://openradar.appspot.com/8081169
+   * filed dupe: http://openradar.appspot.com/
+   */
+  
+  @try {
+    [testObject doSomething];
+    STFail(@"Exception expected but none was thrown");
+  }
+  @catch (NSException *exception) {
+    assertThat([exception name], equalTo(@"Test Exception"));
+  }
+}
+#endif
+
 //
 ////- (void)testCanExpectMethodCallsWithBlockArgumentsAndCallTheSuppliedBlock;
 ////{
@@ -95,29 +119,6 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
 ////  assertThat(someString, equalTo(@"some string"));
 ////}
 //
-//#if !(TARGET_IPHONE_SIMULATOR)
-//- (void)testMocksCanThrowAnException;
-//{
-//  [context check:^{
-//    [allowing(testObject) doSomething]; [and then:throwException([NSException exceptionWithName:@"Test Exception" reason:nil userInfo:nil])];
-//  }];
-//  
-//  /**
-//   * this will only pass using the iOS 4.0 Device SDK, it currently fails
-//   * with the simulator SDK due to a runtime bug. rdar://8081169
-//   * also see: http://openradar.appspot.com/8081169
-//   * filed dupe: http://openradar.appspot.com/
-//   */
-//  
-//  @try {
-//    [testObject doSomething];
-//    STFail(@"Exception expected but none was thrown");
-//  }
-//  @catch (NSException *exception) {
-//    assertThat([exception name], equalTo(@"Test Exception"));
-//  }
-//}
-//#endif
 //
 //- (void)testMocksCanPerformMultipleActions;
 //{

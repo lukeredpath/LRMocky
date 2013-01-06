@@ -33,6 +33,13 @@
   [_collector addAction:[[LRPerformBlockAction alloc] initWithBlock:block]];
 }
 
+- (void)raiseException:(NSException *)exception
+{
+  [self performBlock:^(NSInvocation *unused) {
+    [exception raise];
+  }];
+}
+
 - (void)onConsecutiveCalls:(void (^)(id<LRExpectationActionSyntax>))actionsBlock
 {
   LRConsecutiveCallAction *consecutiveCalls = [[LRConsecutiveCallAction alloc] init];

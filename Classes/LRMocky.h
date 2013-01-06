@@ -19,8 +19,3 @@
 
 // state machine
 #import "LRMockyStates.h"
-
-#if !(TARGET_IPHONE_SIMULATOR)
-#import "LRThrowExceptionAction.h"
-#endif
-

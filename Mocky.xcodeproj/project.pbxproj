@@ -91,7 +91,6 @@
 		A39155B811FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A39155B611FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A391561311FFB81300FE7C49 /* LRExpectationCardinality.m in Sources */ = {isa = PBXBuildFile; fileRef = A391554811FF5F0900FE7C49 /* LRExpectationCardinality.m */; };
 		A391561611FFB82000FE7C49 /* LRMultipleAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F3A11FF1680002DA61D /* LRMultipleAction.m */; };
-		A391561711FFB82300FE7C49 /* LRThrowExceptionAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F1511FE6187002DA61D /* LRThrowExceptionAction.m */; };
 		A391561A11FFB82900FE7C49 /* LRConsecutiveCallAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4EF611FE5D64002DA61D /* LRConsecutiveCallAction.m */; };
 		A3943E0B11FFBBAB007FE700 /* BasicExamples.m in Sources */ = {isa = PBXBuildFile; fileRef = A3943E0A11FFBBAB007FE700 /* BasicExamples.m */; };
 		A398EEF413D1F759005C26AA /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A346500111F2937D0080B46B /* TestHelper.m */; };
@@ -120,7 +119,6 @@
 		A3E428BD16961B0F00780641 /* LRPerformBlockAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769511FDEEFC004828C5 /* LRPerformBlockAction.m */; };
 		A3E428BE16961B0F00780641 /* LRReturnValueAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769711FDEEFC004828C5 /* LRReturnValueAction.m */; };
 		A3E428BF16961B0F00780641 /* LRConsecutiveCallAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4EF611FE5D64002DA61D /* LRConsecutiveCallAction.m */; };
-		A3E428C016961B0F00780641 /* LRThrowExceptionAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F1511FE6187002DA61D /* LRThrowExceptionAction.m */; };
 		A3E428C116961B0F00780641 /* LRMultipleAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F3A11FF1680002DA61D /* LRMultipleAction.m */; };
 		A3E428C216961B0F00780641 /* LRPerformBlockArgumentAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A38AFDFA122BEC2E0001D038 /* LRPerformBlockArgumentAction.m */; };
 		A3E428C316961B0F00780641 /* LRInvocationExpectationBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A301768B11FDEEFC004828C5 /* LRInvocationExpectationBuilder.m */; };
@@ -252,8 +250,6 @@
 		A3E428AD1695E32300780641 /* Mocky_OSX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mocky_OSX.m; sourceTree = "<group>"; };
 		A3EE4EF511FE5D64002DA61D /* LRConsecutiveCallAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRConsecutiveCallAction.h; sourceTree = "<group>"; };
 		A3EE4EF611FE5D64002DA61D /* LRConsecutiveCallAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRConsecutiveCallAction.m; sourceTree = "<group>"; };
-		A3EE4F1411FE6187002DA61D /* LRThrowExceptionAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRThrowExceptionAction.h; sourceTree = "<group>"; };
-		A3EE4F1511FE6187002DA61D /* LRThrowExceptionAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRThrowExceptionAction.m; sourceTree = "<group>"; };
 		A3EE4F3911FF1680002DA61D /* LRMultipleAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMultipleAction.h; sourceTree = "<group>"; };
 		A3EE4F3A11FF1680002DA61D /* LRMultipleAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMultipleAction.m; sourceTree = "<group>"; };
 		A3EE4F5111FF1B7C002DA61D /* HamcrestIntegrationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HamcrestIntegrationTest.m; sourceTree = "<group>"; };
@@ -401,7 +397,6 @@
 				A31FD29716965062002D4511 /* LRUnexpectedInvocationException.h */,
 				A31FD29816965062002D4511 /* LRUnexpectedInvocationException.m */,
 				A31FD2E0169661E1002D4511 /* LRExpectationCollector.h */,
-				A31FD3281699043C002D4511 /* LRExpectationActionSyntax.h */,
 				A32E0C5C12070477009B4C81 /* Integration */,
 				A3385AC512026244006E95AB /* States */,
 				A30176CF11FDFCC7004828C5 /* Expectations */,
@@ -412,6 +407,7 @@
 				A31FD2F016970BB8002D4511 /* LRExpectations.h */,
 				A31FD2F116970BB9002D4511 /* LRExpectations.m */,
 				A31FD32E169906F8002D4511 /* LRExpectationActionCollector.h */,
+				A31FD3281699043C002D4511 /* LRExpectationActionSyntax.h */,
 				A31FD32A16990600002D4511 /* LRExpectationActions.h */,
 				A31FD32B16990604002D4511 /* LRExpectationActions.m */,
 				A301769011FDEEFC004828C5 /* LRMockery.h */,
@@ -437,8 +433,6 @@
 				A301769711FDEEFC004828C5 /* LRReturnValueAction.m */,
 				A3EE4EF511FE5D64002DA61D /* LRConsecutiveCallAction.h */,
 				A3EE4EF611FE5D64002DA61D /* LRConsecutiveCallAction.m */,
-				A3EE4F1411FE6187002DA61D /* LRThrowExceptionAction.h */,
-				A3EE4F1511FE6187002DA61D /* LRThrowExceptionAction.m */,
 				A3EE4F3911FF1680002DA61D /* LRMultipleAction.h */,
 				A3EE4F3A11FF1680002DA61D /* LRMultipleAction.m */,
 				A38AFDF9122BEC2E0001D038 /* LRPerformBlockArgumentAction.h */,
@@ -1024,7 +1018,6 @@
 				A3E428BD16961B0F00780641 /* LRPerformBlockAction.m in Sources */,
 				A3E428BE16961B0F00780641 /* LRReturnValueAction.m in Sources */,
 				A3E428BF16961B0F00780641 /* LRConsecutiveCallAction.m in Sources */,
-				A3E428C016961B0F00780641 /* LRThrowExceptionAction.m in Sources */,
 				A3E428C116961B0F00780641 /* LRMultipleAction.m in Sources */,
 				A3E428C216961B0F00780641 /* LRPerformBlockArgumentAction.m in Sources */,
 				A3E428C316961B0F00780641 /* LRInvocationExpectationBuilder.m in Sources */,
@@ -1059,7 +1052,6 @@
 				A30176AF11FDEEFC004828C5 /* LRUnexpectedInvocation.m in Sources */,
 				A391561311FFB81300FE7C49 /* LRExpectationCardinality.m in Sources */,
 				A391561A11FFB82900FE7C49 /* LRConsecutiveCallAction.m in Sources */,
-				A391561711FFB82300FE7C49 /* LRThrowExceptionAction.m in Sources */,
 				A391561611FFB82000FE7C49 /* LRMultipleAction.m in Sources */,
 				A35D65BE11FF2DF300F0C310 /* LRInvocationComparitor.m in Sources */,
 				A38AFDFC122BEC2E0001D038 /* LRPerformBlockArgumentAction.m in Sources */,

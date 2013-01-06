@@ -12,6 +12,7 @@
 
 - (void)returns:(id)returnObject;
 - (void)performBlock:(void (^)(NSInvocation *))block;
+- (void)raiseException:(NSException *)exception;
 - (void)onConsecutiveCalls:(void (^)(id<LRExpectationActionSyntax>))actionsBlock;
 
 @end
