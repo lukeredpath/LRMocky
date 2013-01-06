@@ -12,8 +12,6 @@
 #import "LRMockyStates.h"
 #import "NSInvocation+Conveniences.h"
 #import "NSInvocation+OCMAdditions.h"
-#import "NSInvocation+LRAdditions.h"
-
 #import <OCHamcrest/HCDescription.h>
 
 NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
