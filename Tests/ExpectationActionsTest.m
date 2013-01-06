@@ -35,7 +35,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
   __block BOOL blockWasPerformed = NO;
   
   [context check:^{
-    [[expectThat(testObject) receives] doSomething]; [then performBlock:^(NSInvocation *invocation){
+    [[expectThat(testObject) receives] doSomething]; [then performsBlock:^(NSInvocation *invocation){
       blockWasPerformed = YES;
     }];
   }];
@@ -50,7 +50,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
   __block id expectedReturnValue = @"anything";
   
   [context check:^{
-    [[expectThat(testObject) receives] returnSomething]; [then performBlock:^(NSInvocation *invocation){
+    [[expectThat(testObject) receives] returnSomething]; [then performsBlock:^(NSInvocation *invocation){
       [invocation setReturnValue:&expectedReturnValue];
     }];
   }];
@@ -80,7 +80,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
 - (void)testMocksCanThrowAnException;
 {
   [context check:^{
-    [allowing(testObject) doSomething]; [then raiseException:[NSException exceptionWithName:@"Test Exception" reason:nil userInfo:nil]];
+    [allowing(testObject) doSomething]; [then raisesException:[NSException exceptionWithName:@"Test Exception" reason:nil userInfo:nil]];
   }];
   
   /**
@@ -107,7 +107,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
   [context check:^{
     [allowing(testObject) returnSomething]; [then doesAllOf:^(id<LRExpectationActionSyntax> actions) {
       [actions returns:@"return value"];
-      [actions performBlock:^(NSInvocation *unused) {
+      [actions performsBlock:^(NSInvocation *unused) {
         calledSecondAction = YES;
       }];
     }];

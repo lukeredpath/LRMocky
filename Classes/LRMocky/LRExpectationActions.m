@@ -29,14 +29,14 @@
   [_collector addAction:[[LRReturnValueAction alloc] initWithReturnValue:returnValue]];
 }
 
-- (void)performBlock:(void (^)(NSInvocation *))block
+- (void)performsBlock:(void (^)(NSInvocation *))block
 {
   [_collector addAction:[[LRPerformBlockAction alloc] initWithBlock:block]];
 }
 
-- (void)raiseException:(NSException *)exception
+- (void)raisesException:(NSException *)exception
 {
-  [self performBlock:^(NSInvocation *unused) {
+  [self performsBlock:^(NSInvocation *unused) {
     [exception raise];
   }];
 }

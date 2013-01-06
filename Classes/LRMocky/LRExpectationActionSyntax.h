@@ -11,8 +11,8 @@
 @protocol LRExpectationActionSyntax <NSObject>
 
 - (void)returns:(id)returnObject;
-- (void)performBlock:(void (^)(NSInvocation *))block;
-- (void)raiseException:(NSException *)exception;
+- (void)performsBlock:(void (^)(NSInvocation *))block;
+- (void)raisesException:(NSException *)exception;
 - (void)doesAllOf:(void (^)(id<LRExpectationActionSyntax>))actionsBlock;
 - (void)onConsecutiveCalls:(void (^)(id<LRExpectationActionSyntax>))actionsBlock;
 
