@@ -55,15 +55,7 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
     return NO;
   }
   return YES;
-
-//  LRInvocationComparitor *comparitor = [LRInvocationComparitor comparitorForInvocation:expectedInvocation];
-//  
-//  if ([invocation selector] != [expectedInvocation selector]) {
-//    return NO;
-//  }
-//  if(![comparitor matchesParameters:invocation]) {
-//    return NO;
-//  }
+  
 //  if (self.requiredState && ![self.requiredState isActive]) {
 //    NSLog(@"Required state %@ but it is not active", self.requiredState);
 //    calledWithInvalidState = YES;
