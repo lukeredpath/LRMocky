@@ -220,7 +220,7 @@ DEFINE_TEST_CASE(LRExpectationsTest) {
   
   [expectations buildExpectations:collector];
   
-  assertThat(collector.expectations, hasItem([expectationFor(mockObject, @selector(doSomething)) withCardinalityOf:exactly(1)]));
+  assertThat(collector.expectations, hasItem([expectationFor(mockObject, @selector(doSomething)) withCardinalityOf:[LRExpectationCardinality exactly:1]]));
 }
 
 - (void)testCreatingExpectationWithAtLeastCardinality
@@ -231,7 +231,7 @@ DEFINE_TEST_CASE(LRExpectationsTest) {
   
   [expectations buildExpectations:collector];
   
-  assertThat(collector.expectations, hasItem([expectationFor(mockObject, @selector(doSomething)) withCardinalityOf:atLeast(1)]));
+  assertThat(collector.expectations, hasItem([expectationFor(mockObject, @selector(doSomething)) withCardinalityOf:[LRExpectationCardinality atLeast:1]]));
 }
 
 - (void)testCreatingExpectationWithAtMostCardinality
@@ -242,7 +242,7 @@ DEFINE_TEST_CASE(LRExpectationsTest) {
   
   [expectations buildExpectations:collector];
   
-  assertThat(collector.expectations, hasItem([expectationFor(mockObject, @selector(doSomething)) withCardinalityOf:atMost(1)]));
+  assertThat(collector.expectations, hasItem([expectationFor(mockObject, @selector(doSomething)) withCardinalityOf:[LRExpectationCardinality atMost:1]]));
 }
 
 - (void)testCreatingExpectationWithBetweenCardinality
@@ -253,7 +253,7 @@ DEFINE_TEST_CASE(LRExpectationsTest) {
   
   [expectations buildExpectations:collector];
   
-  assertThat(collector.expectations, hasItem([expectationFor(mockObject, @selector(doSomething)) withCardinalityOf:between(1, 3)]));
+  assertThat(collector.expectations, hasItem([expectationFor(mockObject, @selector(doSomething)) withCardinalityOf:[LRExpectationCardinality between:1 and:3]]));
 }
 
 - (void)testCreatingExpectationWithCardinalitySyntaticSugar
@@ -264,7 +264,7 @@ DEFINE_TEST_CASE(LRExpectationsTest) {
   
   [expectations buildExpectations:collector];
   
-  assertThat(collector.expectations, hasItem([expectationFor(mockObject, @selector(doSomething)) withCardinalityOf:exactly(1)]));
+  assertThat(collector.expectations, hasItem([expectationFor(mockObject, @selector(doSomething)) withCardinalityOf:[LRExpectationCardinality exactly:1]]));
 }
 
 - (void)testCreatingMultipleExpectations
