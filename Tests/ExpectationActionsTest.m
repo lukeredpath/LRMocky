@@ -117,25 +117,4 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
   assertTrue(calledSecondAction);
 }
 
-//
-////- (void)testCanExpectMethodCallsWithBlockArgumentsAndCallTheSuppliedBlock;
-////{
-////  id mockArray = [context mock:[NSArray class]];
-////  
-////  __block NSString *someString = nil;
-////  
-////  [context check:^{
-////    [[expectThat(mockArray) receives] indexesOfObjectsPassingTest:(__bridge BOOL (^)(__strong id, NSUInteger, BOOL *))(anyBlock())]; [and then:performBlockArguments];
-////  }];
-////  
-////  [(NSArray *)mockArray indexesOfObjectsPassingTest:^(__strong id object, NSUInteger idx, BOOL *stop) {
-////    someString = @"some string";
-////    return YES; 
-////  }];
-////  
-////  assertThat(someString, equalTo(@"some string"));
-////}
-//
-//
-
 END_TEST_CASE
