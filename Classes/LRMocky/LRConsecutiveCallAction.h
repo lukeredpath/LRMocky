@@ -9,15 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "LRExpectationAction.h"
 
-@interface LRConsecutiveCallAction : NSObject <LRExpectationAction> {
-  NSMutableArray *actions;
-  NSUInteger numberOfCalls;
-}
+@interface LRConsecutiveCallAction : NSObject <LRExpectationAction>
+
 - (id)initWithActions:(NSArray *)actionList;
+
 @end
-
-LRConsecutiveCallAction *LRA_onConsecutiveCalls(id<LRExpectationAction>firstAction, ...) NS_REQUIRES_NIL_TERMINATION;
-
-#ifdef LRMOCKY_SHORTHAND
-#define onConsecutiveCalls LRA_onConsecutiveCalls
-#endif

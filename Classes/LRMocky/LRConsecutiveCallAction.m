@@ -9,7 +9,10 @@
 #import "LRConsecutiveCallAction.h"
 
 
-@implementation LRConsecutiveCallAction 
+@implementation LRConsecutiveCallAction {
+  NSMutableArray *actions;
+  NSUInteger numberOfCalls;
+}
 
 - (id)initWithActions:(NSArray *)actionList;
 {
@@ -32,23 +35,3 @@
 }
 
 @end
-
-LRConsecutiveCallAction *LRA_onConsecutiveCalls(id<LRExpectationAction>firstAction, ...)
-{
-  id eachAction;
-  va_list actionList;
-  
-  NSMutableArray *actions = [NSMutableArray array];
-  
-  if (firstAction) {
-    [actions addObject:firstAction];
-    
-    va_start(actionList, firstAction);
-    while ((eachAction = va_arg(actionList, id<LRExpectationAction>))) {
-      [actions addObject:eachAction];
-    }
-    va_end(actionList);
-  }
-
-  return [[LRConsecutiveCallAction alloc] initWithActions:actions];
-}

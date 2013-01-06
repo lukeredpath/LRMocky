@@ -11,6 +11,8 @@
 #import "LRNotificationExpectation.h"
 #import "LRReturnValueAction.h"
 #import "LRPerformBlockAction.h"
+#import "LRConsecutiveCallAction.h"
+#import "LRActionSequence.h"
 
 @interface LRExpectations ()
 @property (nonatomic, readonly) LRInvocationExpectationBuilder *currentInvocationExpectationBuilder;
@@ -133,7 +135,8 @@ static LRExpectations *__currentExpectations = nil;
 
 - (void)onConsecutiveCalls:(void (^)(id))sequenceBlock
 {
-  
+  LRActionSequence *sequence = [LRActionSequence sequenceWithBlock:sequenceBlock];
+  self.currentInvocationExpectationBuilder.action = [[LRConsecutiveCallAction alloc] initWithActions:sequence.actions];
 }
 
 #pragma mark - NSNotification expectations

@@ -8,8 +8,9 @@
 
 #import "LRExpectationBuilder.h"
 #import "LRExpectationCapture.h"
+#import "LRExpectationActionSyntax.h"
 
-@interface LRExpectations : NSObject <LRExpectationBuilder>
+@interface LRExpectations : NSObject <LRExpectationBuilder, LRExpectationActionSyntax>
 
 + (id)captureExpectationsWithBlock:(dispatch_block_t)block;
 
@@ -29,8 +30,6 @@
 
 #pragma mark - Expectation actions
 
-- (void)returns:(id)returnObject;
-- (void)performBlock:(void (^)(NSInvocation *))block;
 - (void)onConsecutiveCalls:(void (^)(id))sequenceBlock;
 
 #pragma mark - NSNotification expectations

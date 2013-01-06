@@ -63,7 +63,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
 - (void)testMocksCanReturnDifferentValuesOnConsecutiveCalls;
 {
   [context check:^{
-    [[[expectThat(testObject) receives:atLeast(3)] of] returnSomeValue]; [then onConsecutiveCalls:^(id sequence) {
+    [[[expectThat(testObject) receivesAtLeast:3] of] returnSomeValue]; [then onConsecutiveCalls:^(id sequence) {
       [sequence returns:@10];
       [sequence returns:@20];
       [sequence returns:@30];
