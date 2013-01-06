@@ -6,11 +6,9 @@
 //  Copyright (c) 2010 LJR Software Limited. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "LRExpectationAction.h"
+#import "LRExpectationActionCollector.h"
 
-@interface LRConsecutiveCallAction : NSObject <LRExpectationAction>
-
-- (id)initWithActions:(NSArray *)actionList;
+@interface LRConsecutiveCallAction : NSObject <LRExpectationAction, LRExpectationActionCollector>
 
 @end

@@ -9,8 +9,11 @@
 #import "LRExpectationBuilder.h"
 #import "LRExpectationCapture.h"
 #import "LRExpectationActionSyntax.h"
+#import "LRExpectationActionCollector.h"
 
-@interface LRExpectations : NSObject <LRExpectationBuilder, LRExpectationActionSyntax>
+@interface LRExpectations : NSObject <LRExpectationBuilder, LRExpectationActionCollector>
+
+@property (nonatomic, readonly) id<LRExpectationActionSyntax> actions;
 
 + (id)captureExpectationsWithBlock:(dispatch_block_t)block;
 
@@ -27,10 +30,6 @@
 - (id)receivesAtLeast:(NSUInteger)min;
 - (id)receivesAtMost:(NSUInteger)max;
 - (id)receivesBetween:(NSUInteger)min and:(NSUInteger)max;
-
-#pragma mark - Expectation actions
-
-- (void)onConsecutiveCalls:(void (^)(id))sequenceBlock;
 
 #pragma mark - NSNotification expectations
 
@@ -51,10 +50,10 @@
 #pragma mark - Global expectation builder proxy functions
 
 LRExpectations *expectThat(id object);
+LRExpectations *expectNotification(NSString *name);
 id allowing(id object);
 id ignoring(id object);
-LRExpectations *andThen(void);
-LRExpectations *expectNotification(NSString *name);
+id<LRExpectationActionSyntax> andThen(void);
 
 /* Makes the interface a little bit more readable 
  */

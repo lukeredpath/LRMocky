@@ -9,10 +9,7 @@
 #import "LRExpectations.h"
 #import "LRInvocationExpectationBuilder.h"
 #import "LRNotificationExpectation.h"
-#import "LRReturnValueAction.h"
-#import "LRPerformBlockAction.h"
-#import "LRConsecutiveCallAction.h"
-#import "LRActionSequence.h"
+#import "LRExpectationActions.h"
 
 @interface LRExpectations ()
 @property (nonatomic, readonly) LRInvocationExpectationBuilder *currentInvocationExpectationBuilder;
@@ -39,6 +36,7 @@ static LRExpectations *__currentExpectations = nil;
   self = [super init];
   if (self) {
     _builders = [[NSMutableArray alloc] init];
+    _actions = [[LRExpectationActions alloc] initWithActionCollector:self];
   }
   return self;
 }
@@ -123,20 +121,9 @@ static LRExpectations *__currentExpectations = nil;
 
 #pragma mark - Expectation actions
 
-- (void)returns:(id)returnValue
+- (void)addAction:(id<LRExpectationAction>)action
 {
-  self.currentInvocationExpectationBuilder.action = [[LRReturnValueAction alloc] initWithReturnValue:returnValue];
-}
-
-- (void)performBlock:(void (^)(NSInvocation *))block
-{
-  self.currentInvocationExpectationBuilder.action = [[LRPerformBlockAction alloc] initWithBlock:block];
-}
-
-- (void)onConsecutiveCalls:(void (^)(id))sequenceBlock
-{
-  LRActionSequence *sequence = [LRActionSequence sequenceWithBlock:sequenceBlock];
-  self.currentInvocationExpectationBuilder.action = [[LRConsecutiveCallAction alloc] initWithActions:sequence.actions];
+  self.currentInvocationExpectationBuilder.action = action;
 }
 
 #pragma mark - NSNotification expectations
@@ -224,8 +211,8 @@ LRExpectations *ignoring(id object)
   return [__currentExpectations ignoring:object];
 }
 
-LRExpectations *andThen(void) {
-  return __currentExpectations;
+id<LRExpectationActionSyntax> andThen(void) {
+  return __currentExpectations.actions;
 }
 
 LRExpectations *expectNotification(NSString *name)
