@@ -11,7 +11,7 @@
 #define MOCKY_SHORTHAND
 
 #import "TestHelper.h"
-#import "LRMocky.h"
+#import "Mocky.h"
 
 #define DEFINE_FUNCTIONAL_TEST_CASE(name) DEFINE_TEST_CASE_WITH_SUBCLASS(name, FunctionalMockeryTestCase)
 

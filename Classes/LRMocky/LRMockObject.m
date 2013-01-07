@@ -42,6 +42,16 @@
   }
 }
 
+- (id)imposterizeTo:(id<LRInvokable>)invokable ancilliaryProtocols:(NSArray *)ancilliaryProtocols
+{
+  return [_imposterizer imposterize:_mockedType invokable:invokable ancilliaryProtocols:ancilliaryProtocols];
+}
+
+- (id)imposterize
+{
+  return [self imposterizeTo:self ancilliaryProtocols:@[@protocol(LRCaptureControl)]];
+}
+
 - (id)captureExpectationTo:(id<LRExpectationCapture>)capture
 {
   LRInvocationToExpectationTranslator *translator = [[LRInvocationToExpectationTranslator alloc] initWithExpectationCapture:capture];

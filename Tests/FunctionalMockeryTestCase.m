@@ -8,7 +8,7 @@
 
 #import "FunctionalMockeryTestCase.h"
 #import "TestHelper.h"
-#import "LRMocky.h"
+#import "Mocky.h"
 
 @implementation FunctionalMockeryTestCase
 

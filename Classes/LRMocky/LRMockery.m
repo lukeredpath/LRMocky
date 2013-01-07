@@ -62,14 +62,14 @@ NSString *failureFor(id<HCSelfDescribing> expectation);
 {
   LRMockObject *mock = [[LRMockObject alloc] initWithInvocationDispatcher:self mockedType:klass name:nil];
   [mockObjects addObject:mock];
-  return [_imposterizer imposterizeClass:klass invokable:mock ancilliaryProtocols:@[@protocol(LRCaptureControl)]];
+  return [mock imposterize];
 }
 
 - (id)mock:(Class)klass named:(NSString *)name;
 {
   LRMockObject *mock = [[LRMockObject alloc] initWithInvocationDispatcher:self mockedType:klass name:name];
   [mockObjects addObject:mock];
-  return [_imposterizer imposterizeClass:klass invokable:mock ancilliaryProtocols:@[@protocol(LRCaptureControl)]];
+  return [mock imposterize];
 }
 
 - (id)mock
@@ -86,7 +86,7 @@ NSString *failureFor(id<HCSelfDescribing> expectation);
 {
   LRMockObject *mock = [[LRMockObject alloc] initWithInvocationDispatcher:self mockedType:protocol name:nil];
   [mockObjects addObject:mock];
-  return [_imposterizer imposterizeProtocol:protocol invokable:mock ancilliaryProtocols:@[@protocol(LRCaptureControl)]];
+  return [mock imposterize];
 }
 
 #pragma mark - Configuring expectations
