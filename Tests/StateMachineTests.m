@@ -26,7 +26,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(StateMachineTests) {
   readiness = [context states:@"readiness"];
 }
 
-- (void)testCanConstrainExpectationsToOccurWithinGivenState
+- (void)xtestCanConstrainExpectationsToOccurWithinGivenState
 {
   [context check:^{
     [allowing(testObject) doSomethingElse]; [thenStateOf(readiness) becomes:@"ready"];

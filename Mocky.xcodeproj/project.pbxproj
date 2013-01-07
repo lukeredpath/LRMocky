@@ -108,6 +108,13 @@
 		A391561A11FFB82900FE7C49 /* LRConsecutiveCallAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4EF611FE5D64002DA61D /* LRConsecutiveCallAction.m */; };
 		A3943E0B11FFBBAB007FE700 /* BasicExamples.m in Sources */ = {isa = PBXBuildFile; fileRef = A3943E0A11FFBBAB007FE700 /* BasicExamples.m */; };
 		A398EEF413D1F759005C26AA /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A346500111F2937D0080B46B /* TestHelper.m */; };
+		A3A206CC169B4D4E00A05F07 /* LRMockeryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A37D8D00169B4C14003DDA02 /* LRMockeryTests.m */; };
+		A3A206CF169B5C9B00A05F07 /* NSObject+Identity.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A206CD169B5C9B00A05F07 /* NSObject+Identity.h */; };
+		A3A206D0169B5C9B00A05F07 /* NSObject+Identity.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A206CE169B5C9B00A05F07 /* NSObject+Identity.m */; };
+		A3A206D1169B5E2B00A05F07 /* NSObject+Identity.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A206CE169B5C9B00A05F07 /* NSObject+Identity.m */; };
+		A3A206D4169B631900A05F07 /* HCRaisesException.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A206D2169B631900A05F07 /* HCRaisesException.h */; };
+		A3A206D6169B637600A05F07 /* HCRaisesException.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A206D3169B631900A05F07 /* HCRaisesException.m */; };
+		A3A206D7169B637700A05F07 /* HCRaisesException.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A206D3169B631900A05F07 /* HCRaisesException.m */; };
 		A3C805921207139A00BA64E7 /* LRMockyStateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = A3385AC612026269006E95AB /* LRMockyStateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3C805931207139A00BA64E7 /* LRMockyState.h in Headers */ = {isa = PBXBuildFile; fileRef = A3385AC912026273006E95AB /* LRMockyState.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3C805941207139A00BA64E7 /* LRMockyStateTransitionAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A3385ACC1202627E006E95AB /* LRMockyStateTransitionAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -212,12 +219,17 @@
 		A36FDBB411FFBB6E004A08F4 /* Example Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Example Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A36FDBB511FFBB6E004A08F4 /* Example Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example Tests-Info.plist"; sourceTree = "<group>"; };
 		A37D8CDC169AD1F2003DDA02 /* LRImposterizable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRImposterizable.h; sourceTree = "<group>"; };
+		A37D8D00169B4C14003DDA02 /* LRMockeryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMockeryTests.m; sourceTree = "<group>"; };
 		A381A25212243FAC00FA2A5C /* ProtocolMockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolMockTests.m; sourceTree = "<group>"; };
 		A391554711FF5F0900FE7C49 /* LRExpectationCardinality.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRExpectationCardinality.h; sourceTree = "<group>"; };
 		A391554811FF5F0900FE7C49 /* LRExpectationCardinality.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRExpectationCardinality.m; sourceTree = "<group>"; };
 		A39155B611FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+OCMAdditions.h"; sourceTree = "<group>"; };
 		A39155B711FFAEF000FE7C49 /* NSInvocation+OCMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInvocation+OCMAdditions.m"; sourceTree = "<group>"; };
 		A3943E0A11FFBBAB007FE700 /* BasicExamples.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicExamples.m; sourceTree = "<group>"; };
+		A3A206CD169B5C9B00A05F07 /* NSObject+Identity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Identity.h"; sourceTree = "<group>"; };
+		A3A206CE169B5C9B00A05F07 /* NSObject+Identity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Identity.m"; sourceTree = "<group>"; };
+		A3A206D2169B631900A05F07 /* HCRaisesException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCRaisesException.h; sourceTree = "<group>"; };
+		A3A206D3169B631900A05F07 /* HCRaisesException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCRaisesException.m; sourceTree = "<group>"; };
 		A3C66A2A120244F20004F78B /* StateMachineTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateMachineTests.m; sourceTree = "<group>"; };
 		A3C66A42120249240004F78B /* LRMockyStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMockyStates.h; sourceTree = "<group>"; };
 		A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpectationActionsTest.m; sourceTree = "<group>"; };
@@ -454,6 +466,8 @@
 				A31FD30C1697B59E002D4511 /* NSInvocation+Conveniences.m */,
 				A31FD33516990EF2002D4511 /* NSInvocation+BlockArguments.h */,
 				A31FD33616990EF2002D4511 /* NSInvocation+BlockArguments.m */,
+				A3A206CD169B5C9B00A05F07 /* NSObject+Identity.h */,
+				A3A206CE169B5C9B00A05F07 /* NSObject+Identity.m */,
 			);
 			name = Categories;
 			path = LRMocky;
@@ -559,6 +573,7 @@
 		A3464F8911F289260080B46B /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
+				A37D8D00169B4C14003DDA02 /* LRMockeryTests.m */,
 				A31FD2E71696683C002D4511 /* LRExpectationsTest.m */,
 				A319BB971695A4BF003BB49A /* LRMockObjectTest.m */,
 				A319BB9E1695AB7C003BB49A /* LRReflectionImposterizerTest.m */,
@@ -588,6 +603,8 @@
 		A381A2F012244DC400FA2A5C /* Hamcrest-Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A3A206D2169B631900A05F07 /* HCRaisesException.h */,
+				A3A206D3169B631900A05F07 /* HCRaisesException.m */,
 				A36F415214296449004EAA45 /* HCBlockMatcher.h */,
 				A36F415314296449004EAA45 /* HCBlockMatcher.m */,
 			);
@@ -656,6 +673,8 @@
 				A31FD33216990C14002D4511 /* LRCompositeAction.h in Headers */,
 				A31FD33716990EF2002D4511 /* NSInvocation+BlockArguments.h in Headers */,
 				A31FD34B1699180E002D4511 /* LRExpectationConstraints.h in Headers */,
+				A3A206CF169B5C9B00A05F07 /* NSObject+Identity.h in Headers */,
+				A3A206D4169B631900A05F07 /* HCRaisesException.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -979,6 +998,8 @@
 				A31FD2EF16966B0B002D4511 /* LRExpectationsTest.m in Sources */,
 				A31FD2FC16975A39002D4511 /* LRInvocationExpectationTest.m in Sources */,
 				A31FD2FD16975B7A002D4511 /* HCBlockMatcher.m in Sources */,
+				A3A206CC169B4D4E00A05F07 /* LRMockeryTests.m in Sources */,
+				A3A206D6169B637600A05F07 /* HCRaisesException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -996,6 +1017,7 @@
 				A31FD3111697BE5C002D4511 /* ExpectationsWithDifferentArgumentsTest.m in Sources */,
 				A31FD3231698F94D002D4511 /* ExpectationActionsTest.m in Sources */,
 				A31FD34816991283002D4511 /* StateMachineTests.m in Sources */,
+				A3A206D7169B637700A05F07 /* HCRaisesException.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1026,6 +1048,7 @@
 				A31FD3A516992551002D4511 /* LRConsecutiveCallAction.m in Sources */,
 				A31FD3A616992551002D4511 /* LRCompositeAction.m in Sources */,
 				A31FD3A716992584002D4511 /* NSInvocation+OCMAdditions.m in Sources */,
+				A3A206D1169B5E2B00A05F07 /* NSObject+Identity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1073,6 +1096,7 @@
 				A31FD33316990C14002D4511 /* LRCompositeAction.m in Sources */,
 				A31FD33816990EF2002D4511 /* NSInvocation+BlockArguments.m in Sources */,
 				A31FD34C1699180E002D4511 /* LRExpectationConstraints.m in Sources */,
+				A3A206D0169B5C9B00A05F07 /* NSObject+Identity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

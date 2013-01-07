@@ -21,7 +21,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(ProtocolMockTests) {
 - (void)setUp
 {
   [super setUp];
-  mockObject = [context protocolMock:@protocol(SimpleProtocol)];
+  mockObject = [context mock:@protocol(SimpleProtocol)];
 }
 
 - (void)testCanSetExpectationsOnRequiredMethods

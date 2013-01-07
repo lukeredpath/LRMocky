@@ -13,6 +13,7 @@
   id<LRInvocationDispatcher> _dispatcher;
   id<LRImposterizer> _imposterizer;
   id _mockedType;
+  NSString *_name;
 }
 
 - (id)initWithInvocationDispatcher:(id<LRInvocationDispatcher>)dispatcher
@@ -38,6 +39,11 @@
   else {
     [_dispatcher dispatch:invocation];
   }
+}
+
+- (NSString *)description
+{
+  return _name;
 }
 
 - (id)imposterizeTo:(id<LRInvokable>)invokable ancilliaryProtocols:(NSArray *)ancilliaryProtocols

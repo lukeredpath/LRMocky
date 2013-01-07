@@ -16,6 +16,7 @@
 #import "LRReflectionImposterizer.h"
 #import "LRUnexpectedInvocationException.h"
 #import "NSInvocation+BlockArguments.h"
+#import "NSObject+Identity.h"
 
 #import <OCHamcrest/HCStringDescription.h>
 
@@ -54,35 +55,32 @@ NSString *failureFor(id<HCSelfDescribing> expectation);
 
 #pragma mark - Creating mock objects
 
-- (id)mock:(Class)klass;
+- (id)mock:(id)klassOrProtocol;
 {
-  LRMockObject *mock = [[LRMockObject alloc] initWithInvocationDispatcher:self mockedType:klass name:nil];
+  return [self mock:klassOrProtocol named:[self defaultNameForMockOfType:klassOrProtocol]];
+}
+
+- (id)mock:(id)klassOrProtocol named:(NSString *)name
+{
+  if (![klassOrProtocol LR_isProtocol] && ![klassOrProtocol LR_isClass]) {
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:@"Can only mock classes or protocols." userInfo:nil];
+  }  
+  LRMockObject *mock = [[LRMockObject alloc] initWithInvocationDispatcher:self mockedType:klassOrProtocol name:name];
   [mockObjects addObject:mock];
   return [mock imposterize];
 }
 
-- (id)mock:(Class)klass named:(NSString *)name;
+- (NSString *)defaultNameForMockOfType:(id)type
 {
-  LRMockObject *mock = [[LRMockObject alloc] initWithInvocationDispatcher:self mockedType:klass name:name];
-  [mockObjects addObject:mock];
-  return [mock imposterize];
-}
-
-- (id)mock
-{
-  return [self mock:[NSObject class]];
-}
-
-- (id)mockNamed:(NSString *)name
-{
-  return [self mock:[NSObject class] named:name];
-}
-
-- (id)protocolMock:(Protocol *)protocol;
-{
-  LRMockObject *mock = [[LRMockObject alloc] initWithInvocationDispatcher:self mockedType:protocol name:nil];
-  [mockObjects addObject:mock];
-  return [mock imposterize];
+  NSString *typeName = nil;
+  
+  if ([type LR_isProtocol]) {
+    typeName = NSStringFromProtocol(type);
+  }
+  else if([type LR_isClass]) {
+    typeName = NSStringFromClass(type);
+  }
+  return [NSString stringWithFormat:@"<mock %@>", typeName];
 }
 
 #pragma mark - Configuring expectations

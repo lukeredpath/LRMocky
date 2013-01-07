@@ -12,6 +12,7 @@
 #import <OCHamcrest/OCHamcrest.h>
 #import "LRTestCase.h"
 #import "TestUtilities.h"
+#import "HCRaisesException.h"
 
 #define DEFINE_TEST_CASE_WITH_SUBCLASS(name, subclass) \
 @interface name : subclass \

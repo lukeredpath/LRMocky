@@ -65,39 +65,27 @@
 /// @name Creating mocks
 ///------------------------------------------------------------------------------------/
 
-/** Creates a new class mock object.
+/** Creates a new mock object for a given Class or Protocol.
  
  Class mocks act as stand-ins for the given class. By default, any invocations performed
  on the mock that haven't been previously configured will raise an exception.
  
+ By default, mocks will have a name of <mock Type> and this will be used in any error output.
+ 
  @param klass The class you wish to mock.
- @return An auto-released mock object that acts as an imposter for instances of klass.
+ @return An auto-released mock object that acts as an imposter for the specified class/protocol.
  */
-- (id)mock:(Class)klass;
+- (id)mock:(id)klassOrProtocol;
 
-/** Creates a new named class mock object.
- 
- Mock objects can be given names to allow for easier identification within your tests.
- This could be useful if you have more than one mock object instance for a single Class.
- 
+/** Creates a new mock object for a given Class or Protocol, with a custom name.
+ *
+ * The mocks name will be used in its description in any error output.
+ *
  @param klass The class you with to mock.
  @param name A descriptive name for the mock.
+ @return An auto-released mock object that acts as an imposter for the specified class/protocol.
  */
-- (id)mock:(Class)klass named:(NSString *)name;
-
-- (id)mock;
-
-- (id)mockNamed:(NSString *)name;
-
-/** Creates a new protocol mock object.
- 
- Similar to a class mock, but protocol mocks only represent an object that implements
- the specified protocol. Using protocol mocks encourages your classes to not be tied
- to concrete classes.
- 
- @param protocol The protocol you with to mock.
- */
-- (id)protocolMock:(Protocol *)protocol;
+- (id)mock:(id)klassOrProtocol named:(NSString *)name;
 
 ///------------------------------------------------------------------------------------/
 /// @name Expecting NSNotifications

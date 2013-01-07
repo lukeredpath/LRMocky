@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @protocol LRTestCaseNotifier <NSObject>
-- (void)notifiesFailureWithDescription:(NSString *)description 
+
+- (void)notifiesFailureWithDescription:(NSString *)description
                                 inFile:(NSString *)fileName 
-                                lineNumber:(int)lineNumber;
+                            lineNumber:(int)lineNumber;
+
 @end
 
 @class SenTestCase;

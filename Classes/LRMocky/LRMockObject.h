@@ -13,8 +13,6 @@
 
 @interface LRMockObject : NSObject <LRInvokable, LRImposterizable>
 
-@property (nonatomic, readonly) NSString *name;
-
 - (id)initWithInvocationDispatcher:(id<LRInvocationDispatcher>)dispatcher
                         mockedType:(id)mockedType
                               name:(NSString *)name;

@@ -78,11 +78,4 @@ DEFINE_TEST_CASE(LRMockObjectTest) {
   assertNil(dispatcher.lastDispatched);
 }
 
-- (void)testCanHaveDescriptiveName
-{
-  LRMockObject *mockObject = [[LRMockObject alloc] initWithInvocationDispatcher:dispatcher mockedType:NSObject.class name:@"Test Name"];
-  
-  assertThat(mockObject.name, equalTo(@"Test Name"));
-}
-
 END_TEST_CASE
