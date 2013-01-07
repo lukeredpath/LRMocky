@@ -25,9 +25,7 @@ NSString *failureFor(id<HCSelfDescribing> expectation);
 - (void)assertSatisfiedInFile:(NSString *)fileName lineNumber:(int)lineNumber;
 @end
 
-@implementation LRMockery {
-  id<LRImposterizer> _imposterizer;
-}
+@implementation LRMockery
 
 @synthesize automaticallyResetWhenAsserting;
 
@@ -50,8 +48,6 @@ NSString *failureFor(id<HCSelfDescribing> expectation);
     expectations = [[NSMutableArray alloc] init];
     mockObjects  = [[NSMutableArray alloc] init];
     automaticallyResetWhenAsserting = YES;
-
-    _imposterizer = [[LRReflectionImposterizer alloc] init];
   }
   return self;
 }
