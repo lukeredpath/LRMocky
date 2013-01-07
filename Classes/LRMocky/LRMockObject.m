@@ -8,7 +8,6 @@
 
 #import "LRMockObject.h"
 #import "LRReflectionImposterizer.h"
-#import "LRInvocationToExpectationTranslator.h"
 
 @implementation LRMockObject {
   id<LRInvocationDispatcher> _dispatcher;
@@ -34,8 +33,7 @@
 - (void)invoke:(NSInvocation *)invocation
 {
   if ([self respondsToSelector:invocation.selector]) {
-    [invocation setTarget:self];
-    [invocation invoke];
+    [invocation invokeWithTarget:self];
   }
   else {
     [_dispatcher dispatch:invocation];
@@ -49,17 +47,7 @@
 
 - (id)imposterize
 {
-  return [self imposterizeTo:self ancilliaryProtocols:@[@protocol(LRCaptureControl)]];
-}
-
-- (id)captureExpectationTo:(id<LRExpectationCapture>)capture
-{
-  LRInvocationToExpectationTranslator *translator = [[LRInvocationToExpectationTranslator alloc] initWithExpectationCapture:capture];
-  
-  id imposter = [_imposterizer imposterize:_mockedType invokable:translator ancilliaryProtocols:@[@protocol(LRExpectationCaptureSyntaticSugar)]];
-  NSAssert(imposter, @"Imposter should never be nil.");
-  
-  return imposter;
+  return [self imposterizeTo:self ancilliaryProtocols:@[@protocol(LRImposterizable)]];
 }
 
 @end

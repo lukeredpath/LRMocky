@@ -8,21 +8,10 @@
 
 #import "LRInvocationDispatcher.h"
 #import "LRInvokable.h"
+#import "LRImposterizable.h"
 #import "LRExpectationCapture.h"
 
-@protocol LRImposterizable <NSObject>
-
-- (id)imposterizeTo:(id<LRInvokable>)invokable ancilliaryProtocols:(NSArray *)ancilliaryProtocols;
-
-@end
-
-@protocol LRCaptureControl <NSObject>
-
-- (id)captureExpectationTo:(id<LRExpectationCapture>)capture;
-
-@end
-
-@interface LRMockObject : NSObject <LRInvokable, LRCaptureControl, LRImposterizable>
+@interface LRMockObject : NSObject <LRInvokable, LRImposterizable>
 
 @property (nonatomic, readonly) NSString *name;
 

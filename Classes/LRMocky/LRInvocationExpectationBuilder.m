@@ -40,7 +40,7 @@
 
 - (void)setTarget:(id)target
 {
-  if (![target conformsToProtocol:@protocol(LRCaptureControl)]) {
+  if (![target conformsToProtocol:@protocol(LRImposterizable)]) {
     @throw [NSException exceptionWithName:NSInternalInconsistencyException
                                    reason:@"Can only set expectations on mock objects!"
                                  userInfo:nil];
@@ -63,8 +63,8 @@
 
 - (id)captureExpectedObject
 {
-  id<LRCaptureControl> target = self.expectation.target;
-  self.expectationCapturingImposter = [target captureExpectationTo:self];
+  id<LRImposterizable> target = self.expectation.target;
+  self.expectationCapturingImposter = [target imposterizeTo:self ancilliaryProtocols:@[@protocol(LRExpectationCaptureSyntaticSugar)]];
   return self.expectationCapturingImposter;
 }
 
@@ -76,6 +76,16 @@
 }
 
 #pragma mark - Capturing expectations
+
+- (void)invoke:(NSInvocation *)invocation
+{
+  if ([self respondsToSelector:invocation.selector]) {
+    [invocation invokeWithTarget:self];
+  }
+  else {
+    [self createExpectationFromInvocation:invocation];
+  }
+}
 
 - (void)createExpectationFromInvocation:(NSInvocation *)invocation
 {

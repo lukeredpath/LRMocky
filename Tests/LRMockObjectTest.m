@@ -57,7 +57,7 @@ DEFINE_TEST_CASE(LRMockObjectTest) {
   assertThat(dispatcher.lastDispatched, equalTo(invocation));
 }
 
-- (void)testDoesntForwardInvocationsOfCaptureControlProtocolMethodsButHandlesThemDirectly
+- (void)testDoesntForwardInvocationsOfImposterizableProtocolMethodsButHandlesThemDirectly
 {
   /* Because LRMockObject instances will ultimately be wrapped in an invocation intercepting
    proxy (see LRImposter), all calls to methods on the mock will ultimately be dispatched through
@@ -65,12 +65,13 @@ DEFINE_TEST_CASE(LRMockObjectTest) {
 
   LRMockObject *mockObject = [[LRMockObject alloc] initWithInvocationDispatcher:dispatcher mockedType:NSObject.class name:nil];
   
-  SEL selectorForMethodNotToForward = @selector(captureExpectationTo:);
+  SEL selectorForMethodNotToForward = @selector(imposterizeTo:ancilliaryProtocols:);
 
   NSMethodSignature *methodSignature = [mockObject methodSignatureForSelector:selectorForMethodNotToForward];
 
   NSInvocation *protocolInvocation = [NSInvocation invocationWithMethodSignature:methodSignature];
   [protocolInvocation setSelector:selectorForMethodNotToForward];
+  [protocolInvocation setArgument:&mockObject atIndex:2];
   
   [mockObject invoke:protocolInvocation];
   

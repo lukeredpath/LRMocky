@@ -59,19 +59,10 @@
 
 @end
 
-/* In order for mock objects used in tests to behave as they would when
-   created through a mockery, they need to be imposterized. 
- */
 id aMockObject(void) {
-  static id<LRImposterizer> imposterizer = nil;
-  
-  if (imposterizer == nil) {
-    imposterizer = [[LRReflectionImposterizer alloc] init];
-  }
-  
   LRMockObject *mockObject = [[LRMockObject alloc] initWithInvocationDispatcher:[[FakeInvocationDispatcher alloc] init] mockedType:[SimpleObject class] name:@"test mock"];
-
-  return [imposterizer imposterizeClass:SimpleObject.class invokable:mockObject ancilliaryProtocols:@[@protocol(LRCaptureControl)]];
+  
+  return [mockObject imposterize];
 }
 
 @interface LRInvocationExpectationMatcher : HCBaseMatcher

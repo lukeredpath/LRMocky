@@ -10,8 +10,9 @@
 #import "LRExpectationCapture.h"
 #import "LRExpectationCardinality.h"
 #import "LRExpectationAction.h"
+#import "LRInvokable.h"
 
-@interface LRInvocationExpectationBuilder : NSObject <LRExpectationBuilder, LRExpectationCapture, LRExpectationCaptureSyntaticSugar>
+@interface LRInvocationExpectationBuilder : NSObject <LRExpectationBuilder, LRInvokable, LRExpectationCaptureSyntaticSugar>
 
 #pragma mark - Builder API
 
