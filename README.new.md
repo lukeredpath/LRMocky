@@ -356,3 +356,32 @@ If you are expecting multiple calls to a method, you could configure the expecta
     [actions raisesException:<some exception>];
   }];
 ```
+
+### States
+
+Some times you want expectations to match only when in a particular state. This can be useful when testing that methods are only called in certain situations (normally after some other method call has taken place).
+
+You can ask the mockery for a new state:
+
+```objc
+id readiness = [[context states:@"readiness"] startsAs:@"unready"];
+```
+
+We can use this state object within our expectation blocks to constraint expectations to only occur in the given state:
+
+```objc
+whenState([readiness equals:@"ready"], ^{
+  [[expectThat(testObject) receives] someMethod];
+});
+```
+
+If we were to call `someMethod` on `testObject` in the current state, an unexpected invocation error would be raised.
+
+You can trigger a state transition by calling `transitionTo:` on the state object, but more typically you would trigger this as the result of another expectation, using a state transition action:
+
+```objc
+[[expectThat(testObject) receives] doSomethingElse]; 
+  [then state:readiness becomes:@"ready"];
+```
+
+Now, as long as our object under test calls `doSomethingElse` before calling `doSomething`, the test will pass.
