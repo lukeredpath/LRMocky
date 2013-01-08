@@ -304,10 +304,10 @@ If you need to return a primitive value, you can use `returnValue:` instead of `
 
 ```objc
 [allowing(<mock object>) returnsSomeInteger]; 
-  [then returnsValue:123];
+  [then returnsValue:(void *)123];
 ```
 
-Alternatively, you can pass the boxed value to `returns:` and it will still work as expected:
+You'll notice the need to cast the value to a void pointer to prevent a compiler warning. Alternatively, you can pass a boxed value to `returns:` and it will still work as expected:
 
 ```objc
 [allowing(<mock object>) returnsSomeInteger]; 

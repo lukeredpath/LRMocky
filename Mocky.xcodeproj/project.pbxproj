@@ -123,6 +123,7 @@
 		A3A207B6169C76B500A05F07 /* TestUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A207A9169C76B500A05F07 /* TestUtilities.m */; };
 		A3A207B7169C76B500A05F07 /* TestUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A207A9169C76B500A05F07 /* TestUtilities.m */; };
 		A3A207B8169C76B500A05F07 /* TestUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A207A9169C76B500A05F07 /* TestUtilities.m */; };
+		A3A208D8169C9A7800A05F07 /* HamcrestIntegrationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4F5111FF1B7C002DA61D /* HamcrestIntegrationTest.m */; };
 		A3C805921207139A00BA64E7 /* LRMockyStateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = A3385AC612026269006E95AB /* LRMockyStateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3C805931207139A00BA64E7 /* LRMockyState.h in Headers */ = {isa = PBXBuildFile; fileRef = A3385AC912026273006E95AB /* LRMockyState.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3C805941207139A00BA64E7 /* LRMockyStateTransitionAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A3385ACC1202627E006E95AB /* LRMockyStateTransitionAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1073,6 +1074,7 @@
 				A3A207B2169C76B500A05F07 /* HCRaisesException.m in Sources */,
 				A3A207B5169C76B500A05F07 /* TestHelper.m in Sources */,
 				A3A207B8169C76B500A05F07 /* TestUtilities.m in Sources */,
+				A3A208D8169C9A7800A05F07 /* HamcrestIntegrationTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

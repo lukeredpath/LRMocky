@@ -24,7 +24,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(ExpectationActionsTest)
 - (void)testCanReturnPrimitivesFromMethodsUsingUnboxedValues
 {
   [context check:^{
-    [[expectThat(testObject) receives] returnSomeValue]; [then returnsValue:10];
+    [[expectThat(testObject) receives] returnSomeValue]; [then returnsValue:(void *)10];
   }];
 
   assertThatInt((int)[testObject returnSomeValue], equalToInt(10));
