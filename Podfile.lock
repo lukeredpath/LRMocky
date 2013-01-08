@@ -4,7 +4,6 @@ PODS:
 
 DEPENDENCIES:
 - OCHamcrest (~> 1.6)
-- OCHamcrest (~> 1.6)
 
 SPEC CHECKSUMS:
   OCHamcrest: 75258b3746b118ed9de96a6a8d985546f32e0f9b

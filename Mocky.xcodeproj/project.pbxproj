@@ -52,7 +52,6 @@
 		A31FD38B169924F6002D4511 /* libMocky-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31FD37F16992479002D4511 /* libMocky-OSX.a */; };
 		A31FD38C16992500002D4511 /* libMocky-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31FD37F16992479002D4511 /* libMocky-OSX.a */; };
 		A31FD38D16992508002D4511 /* libMocky-OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31FD37F16992479002D4511 /* libMocky-OSX.a */; };
-		A31FD38E16992508002D4511 /* libPods-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31FD35D16992239002D4511 /* libPods-osx.a */; };
 		A31FD38F16992551002D4511 /* LRMockery.m in Sources */ = {isa = PBXBuildFile; fileRef = A301769111FDEEFC004828C5 /* LRMockery.m */; };
 		A31FD39016992551002D4511 /* LRExpectations.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD2F116970BB9002D4511 /* LRExpectations.m */; };
 		A31FD39116992551002D4511 /* LRUnexpectedInvocationException.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD29816965062002D4511 /* LRUnexpectedInvocationException.m */; };
@@ -312,7 +311,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A31FD38D16992508002D4511 /* libMocky-OSX.a in Frameworks */,
-				A31FD38E16992508002D4511 /* libPods-osx.a in Frameworks */,
 				A3E428B51695E37E00780641 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1173,6 +1171,7 @@
 /* Begin XCBuildConfiguration section */
 		1DEB921F08733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96B74DFED73148BBAD6AB5EC /* Pods-ios.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
@@ -1200,6 +1199,7 @@
 		};
 		1DEB922008733DC00010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96B74DFED73148BBAD6AB5EC /* Pods-ios.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
@@ -1253,6 +1253,7 @@
 		};
 		A319BB921695A414003BB49A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EFB356B391541568D192777 /* Pods-osx.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -1292,6 +1293,7 @@
 		};
 		A319BB931695A414003BB49A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EFB356B391541568D192777 /* Pods-osx.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -1325,6 +1327,7 @@
 		};
 		A31FD2C616965C5C002D4511 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EFB356B391541568D192777 /* Pods-osx.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1361,6 +1364,7 @@
 		};
 		A31FD2C716965C5C002D4511 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EFB356B391541568D192777 /* Pods-osx.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1391,6 +1395,7 @@
 		};
 		A31FD38916992479002D4511 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EFB356B391541568D192777 /* Pods-osx.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -1425,6 +1430,7 @@
 		};
 		A31FD38A16992479002D4511 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EFB356B391541568D192777 /* Pods-osx.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -1453,6 +1459,7 @@
 		};
 		A36FDBB611FFBB6F004A08F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EFB356B391541568D192777 /* Pods-osx.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -1469,7 +1476,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "Example Tests-Info.plist";
+				INFOPLIST_FILE = "Examples/Example Tests-Info.plist";
 				PRODUCT_NAME = "Example Tests";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1479,6 +1486,7 @@
 		};
 		A36FDBB711FFBB6F004A08F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EFB356B391541568D192777 /* Pods-osx.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -1494,7 +1502,7 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "Example Tests-Info.plist";
+				INFOPLIST_FILE = "Examples/Example Tests-Info.plist";
 				PRODUCT_NAME = "Example Tests";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
