@@ -23,13 +23,11 @@ DEFINE_FUNCTIONAL_TEST_CASE(StateMachineTests) {
 {
   [super setUp];
   
-  readiness = [context states:@"readiness"];
+  readiness = [[context states:@"readiness"] startsAs:@"unready"];
 }
 
 - (void)testCanConstrainExpectationsToOccurWithinGivenState
 {
-  [readiness startsAs:@"unready"];
-  
   [context check:^{
     whenState([readiness equals:@"ready"], ^{
       [[expectThat(testObject) receives] doSomething];
@@ -44,7 +42,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(StateMachineTests) {
 
 - (void)testAllowsExpectationsToOccurWhenAlreadyInCorrectState
 {
-  [readiness startsAs:@"ready"];
+  [readiness transitionTo:@"ready"];
   
   [context check:^{
     whenState([readiness equals:@"ready"], ^{
@@ -60,8 +58,6 @@ DEFINE_FUNCTIONAL_TEST_CASE(StateMachineTests) {
 
 - (void)testCanTriggerStateChangesAsResultOfExpectation
 {
-  [readiness startsAs:@"unready"];
-  
   [context check:^{
     [allowing(testObject) doSomething]; [then state:readiness becomes:@"ready"];
   }];
@@ -74,8 +70,6 @@ DEFINE_FUNCTIONAL_TEST_CASE(StateMachineTests) {
 
 - (void)testMultipleExpectationsWithStates
 {
-  [readiness startsAs:@"unready"];
-  
   [context check:^{
     [allowing(testObject) doSomething]; [then state:readiness becomes:@"ready"];
     

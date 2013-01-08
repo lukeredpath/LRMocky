@@ -15,8 +15,8 @@
 @property (nonatomic, readonly) NSString *currentState;
 
 - (id)initWithName:(NSString *)aName;
-- (void)startsAs:(NSString *)state;
-- (void)transitionTo:(NSString *)state;
+- (id)startsAs:(NSString *)state;
+- (id)transitionTo:(NSString *)state;
 - (BOOL)isCurrentState:(NSString *)state;
 - (id<LRStatePredicate>)equals:(NSString *)state;
 

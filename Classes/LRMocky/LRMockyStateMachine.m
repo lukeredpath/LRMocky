@@ -22,14 +22,16 @@
   return self;
 }
 
-- (void)startsAs:(NSString *)state;
+- (id)startsAs:(NSString *)state;
 {
   _currentState = state;
+  return self;
 }
 
-- (void)transitionTo:(NSString *)state
+- (id)transitionTo:(NSString *)state
 {
   _currentState = state;
+  return self;
 }
 
 - (id<LRStatePredicate>)equals:(NSString *)stateName

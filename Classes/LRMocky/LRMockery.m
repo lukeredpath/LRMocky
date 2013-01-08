@@ -109,13 +109,6 @@ NSString *failureFor(id<HCSelfDescribing> expectation);
   return [[LRMockyStateMachine alloc] initWithName:name];
 }
 
-- (LRMockyStateMachine *)states:(NSString *)name defaultTo:(NSString *)defaultState;
-{
-  LRMockyStateMachine *stateMachine = [self states:name];
-  [stateMachine startsAs:defaultState];
-  return stateMachine;
-}
-
 NSString *failureFor(id<HCSelfDescribing> expectation) {
   HCStringDescription *description = [HCStringDescription stringDescription];
   [expectation describeTo:description];

@@ -113,7 +113,7 @@
 - (void)expectNotificationNamed:(NSString *)name fromObject:(id)sender;
 
 ///------------------------------------------------------------------------------------/
-/// @name Creating state machines
+/// @name States
 ///------------------------------------------------------------------------------------/
 
 /** Creates a new state machine.
@@ -125,14 +125,6 @@
  @see LRMockyStateMachine
  */
 - (LRMockyStateMachine *)states:(NSString *)name;
-
-/** Creates a new state machine in a default state.
- 
- @param name A descriptive name for the state this represents.
- @param defaultState The default state for the state machine.
- @see states:
- */
-- (LRMockyStateMachine *)states:(NSString *)name defaultTo:(NSString *)defaultState;
 
 ///------------------------------------------------------------------------------------/
 /// @name Setting up expectations
