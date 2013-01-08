@@ -9,7 +9,6 @@
 #import "LRInvocationExpectation.h"
 #import "LRExpectationConstraints.h"
 #import "LRExpectationCardinality.h"
-#import "LRMockyStates.h"
 #import "NSInvocation+Conveniences.h"
 #import "NSInvocation+OCMAdditions.h"
 #import <OCHamcrest/HCDescription.h>
@@ -23,6 +22,7 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 @property (nonatomic, strong) id<LRExpectationConstraint> targetConstraint;
 @property (nonatomic, strong) id<LRExpectationConstraint> selectorConstraint;
 @property (nonatomic, strong) id<LRExpectationConstraint> parametersConstraint;
+@property (nonatomic, strong) id<LRExpectationConstraint> stateConstraint;
 @property (nonatomic, readonly) NSArray *constraints;
 
 @end
@@ -32,9 +32,11 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 - (id)init;
 {
   if (self = [super init]) {
-    _targetConstraint = LRCanBeAnythingConstraint();
-    _selectorConstraint = LRCanBeAnythingConstraint();
-    _parametersConstraint = LRCanBeAnythingConstraint();
+    self.target = nil;
+    self.selector = nil;
+    self.cardinality = nil;
+    self.parametersMatcher = nil;
+    self.statePredicate = nil;
     
     [self setCardinality:[LRExpectationCardinality atLeast:0]];
   }
@@ -44,31 +46,69 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 - (void)setCardinality:(id<LRExpectationCardinality>)cardinality
 {
   _cardinality = cardinality;
-  _cardinalityConstraint = [LRCardinalityConstraint constraintWithCardinality:cardinality];
+  
+  if (_cardinality) {
+    _cardinalityConstraint = [LRCardinalityConstraint constraintWithCardinality:cardinality];
+  }
+  else {
+    _cardinalityConstraint = LRCanBeAnythingConstraint();
+  }
 }
 
 - (void)setTarget:(id)target
 {
   _target = target;
-  _targetConstraint = [LRExpectationConstraintUsingBlock constraintWithBlock:^BOOL(NSInvocation *invocation) {
-    return invocation.target == target;
-  }];
+  
+  if (_target) {
+    _targetConstraint = [LRExpectationConstraintUsingBlock constraintWithBlock:^BOOL(NSInvocation *invocation) {
+      return invocation.target == target;
+    }];
+  }
+  else {
+    _targetConstraint = LRCanBeAnythingConstraint();
+  }
 }
 
 - (void)setSelector:(SEL)selector
 {
   _selector = selector;
-  _selectorConstraint = [LRExpectationConstraintUsingBlock constraintWithBlock:^BOOL(NSInvocation *invocation) {
-    return invocation.selector == selector;
-  }];
+  
+  if (_selector) {
+    _selectorConstraint = [LRExpectationConstraintUsingBlock constraintWithBlock:^BOOL(NSInvocation *invocation) {
+      return invocation.selector == selector;
+    }];
+  }
+  else {
+    _selectorConstraint = LRCanBeAnythingConstraint();
+  }
 }
 
 - (void)setParametersMatcher:(id<HCMatcher>)parametersMatcher
 {
   _parametersMatcher = parametersMatcher;
-  _parametersConstraint = [LRExpectationConstraintUsingBlock constraintWithBlock:^BOOL(NSInvocation *invocation) {
-    return [parametersMatcher matches:invocation.argumentsArray];
-  }];
+  
+  if (_parametersMatcher) {
+    _parametersConstraint = [LRExpectationConstraintUsingBlock constraintWithBlock:^BOOL(NSInvocation *invocation) {
+      return [parametersMatcher matches:invocation.argumentsArray];
+    }];
+  }
+  else {
+    _parametersConstraint = LRCanBeAnythingConstraint();
+  }
+}
+
+- (void)setStatePredicate:(id<LRStatePredicate>)statePredicate
+{
+  _statePredicate = statePredicate;
+  
+  if (_statePredicate) {
+    _stateConstraint = [LRExpectationConstraintUsingBlock constraintWithBlock:^BOOL(NSInvocation *invocation) {
+      return [statePredicate isActive];
+    }];
+  }
+  else {
+    _stateConstraint = LRCanBeAnythingConstraint();
+  }
 }
 
 - (NSArray *)constraints
@@ -77,7 +117,8 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
     self.cardinalityConstraint,
     self.targetConstraint,
     self.selectorConstraint,
-    self.parametersConstraint
+    self.parametersConstraint,
+    self.stateConstraint
   ];
 }
 

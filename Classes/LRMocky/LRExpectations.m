@@ -14,6 +14,7 @@
 @interface LRExpectations ()
 @property (nonatomic, readonly) LRInvocationExpectationBuilder *currentInvocationExpectationBuilder;
 @property (nonatomic, readonly) LRNotificationExpectationBuilder *currentNotificationExpectationBuilder;
+@property (nonatomic, strong) id<LRStatePredicate> currentStatePredicate;
 @end
 
 @implementation LRExpectations {
@@ -76,6 +77,7 @@ static LRExpectations *__currentExpectations = nil;
 {
   LRInvocationExpectationBuilder *builder = [[LRInvocationExpectationBuilder alloc] init];
   builder.target = mock;
+  builder.statePredicate = self.currentStatePredicate;
   
   [_builders addObject:builder];
   
@@ -90,6 +92,13 @@ static LRExpectations *__currentExpectations = nil;
 - (id)ignoring:(id)mock
 {
   return [self allowing:mock];
+}
+
+- (void)captureExpectations:(dispatch_block_t)expectations whenStateIs:(id<LRStatePredicate>)state
+{
+  self.currentStatePredicate = state;
+  expectations();
+  self.currentStatePredicate = nil;
 }
 
 #pragma mark - Expectation cardinality
@@ -220,10 +229,10 @@ id<LRExpectationActionSyntax> andThen(void) {
   return __currentExpectations.actions;
 }
 
-id thenStateOf(id state) {
-  return nil;
+id<LRExpectationActionSyntax> thenState(id state) {
+  return __currentExpectations.actions;
 }
 
-id whenStateOf(id state) {
-  return nil;
+void whenState(id<LRStatePredicate> state, dispatch_block_t expectationsBlock) {
+  [__currentExpectations captureExpectations:expectationsBlock whenStateIs:state];
 }

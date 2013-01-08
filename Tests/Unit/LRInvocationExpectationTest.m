@@ -12,11 +12,16 @@
 #import "LRAllParametersMatcher.h"
 #import "LRExpectationCardinality.h"
 #import "NSInvocation+Conveniences.h"
+#import "LRStatePredicate.h"
 
 #pragma mark - Helper functions
 
 @interface MockAction : NSObject <LRExpectationAction>
 @property (nonatomic, readonly) BOOL wasInvoked;
+@end
+
+@interface FakeStatePredicate : NSObject <LRStatePredicate>
+@property (nonatomic, assign, getter=isActive) BOOL active;
 @end
 
 id anyObject(void);
@@ -85,6 +90,20 @@ DEFINE_TEST_CASE(LRInvocationExpectationTest) {
   [anInvocation setArgument:&argumentTwo atIndex:2];
   
   assertTrue(![expectation matches:anInvocation]);
+}
+
+- (void)testCanConstraintToSpecificState
+{
+  FakeStatePredicate *state = [[FakeStatePredicate alloc] init];
+  state.active = NO;
+  
+  expectation.statePredicate = state;
+  
+  assertFalse([expectation matches:anyInvocationOn(anyObject())]);
+  
+  state.active = YES;
+  
+  assertTrue([expectation matches:anyInvocationOn(anyObject())]);
 }
 
 - (void)testDoesNotMatchIfNumberOfInvocationsExceedsCardinalityMaximum
@@ -174,4 +193,7 @@ NSInvocation *anyInvocationOn(id object) {
   _wasInvoked = YES;
 }
 
+@end
+
+@implementation FakeStatePredicate
 @end

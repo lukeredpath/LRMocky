@@ -7,50 +7,68 @@
 //
 
 #import "LRMockyStateMachine.h"
-#import "LRMockyState.h"
 
-@implementation LRMockyStateMachine
-
-@synthesize currentState;
+@implementation LRMockyStateMachine {
+  NSString *_name;
+  NSString *_currentState;
+}
 
 - (id)initWithName:(NSString *)aName;
 {
   if (self = [super init]) {
-    name = [aName copy];
+    _name = [aName copy];
     [self startsAs:@"<<initial state>>"];
   }
   return self;
 }
 
-
-- (void)startsAs:(NSString *)label;
+- (void)startsAs:(NSString *)state;
 {
-  [self transitionToState:[self state:label]];
+  _currentState = state;
 }
 
-- (LRMockyState *)state:(NSString *)label;
+- (void)transitionTo:(NSString *)state
 {
-  return [LRMockyState stateWithLabel:label inContext:self];
+  _currentState = state;
 }
 
-- (LRMockyState *)becomes:(NSString *)label;
+- (id<LRStatePredicate>)equals:(NSString *)stateName
 {
-  return [self state:label];
+  return [[LRMockyState alloc] initWithName:stateName context:self];
 }
 
-- (LRMockyState *)hasBecome:(NSString *)label;
+- (BOOL)isCurrentState:(NSString *)state
 {
-  return [self state:label];
+  return [state isEqualToString:_currentState];
 }
 
-- (void)transitionToState:(LRMockyState *)newState;
-{
-  currentState = newState;
+@end
+
+#pragma mark -
+
+@implementation LRMockyState {
+  NSString *_name;
+  LRMockyStateMachine *_context;
 }
 
-- (BOOL)isCurrentState:(LRMockyState *)state;
+- (id)initWithName:(NSString *)name context:(LRMockyStateMachine *)context;
 {
-  return [state isEqual:currentState]; 
+  if (self = [super init]) {
+    _name = [name copy];
+    _context = context;
+  }
+  return self;
+}
+
+- (NSString *)description
+{
+  return _name;
+}
+
+
+- (BOOL)isActive;
+{
+  return [_context isCurrentState:_name];
 }
 
 @end

@@ -10,6 +10,7 @@
 #import "LRExpectationCapture.h"
 #import "LRExpectationCardinality.h"
 #import "LRExpectationAction.h"
+#import "LRStatePredicate.h"
 #import "LRInvokable.h"
 
 @interface LRInvocationExpectationBuilder : NSObject <LRExpectationBuilder, LRInvokable, LRExpectationCaptureSyntaticSugar>
@@ -19,6 +20,7 @@
 - (void)setTarget:(id)target;
 - (void)setCardinality:(id<LRExpectationCardinality>)cardinality;
 - (void)setAction:(id<LRExpectationAction>)action;
+- (void)setStatePredicate:(id<LRStatePredicate>)statePredicate;
 
 #pragma mark - Invocation capture
 

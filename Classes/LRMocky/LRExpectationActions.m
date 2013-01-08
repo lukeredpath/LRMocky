@@ -10,6 +10,7 @@
 #import "LRPerformBlockAction.h"
 #import "LRConsecutiveCallAction.h"
 #import "LRCompositeAction.h"
+#import "LRMockyStateMachine.h"
 #import "NSInvocation+Conveniences.h"
 
 @implementation LRExpectationActions {
@@ -59,6 +60,15 @@
 {
   [self composeAction:[[LRConsecutiveCallAction alloc] init] withActions:actionsBlock];
 }
+
+- (void)state:(LRMockyStateMachine *)state becomes:(NSString *)newState
+{
+  [self performsBlock:^(NSInvocation *unused) {
+    [state transitionTo:newState];
+  }];
+}
+
+#pragma mark Private
 
 - (void)composeAction:(id<LRExpectationAction,LRExpectationActionCollector>)action withActions:(void (^)(id<LRExpectationActionSyntax>))actionsBlock
 {

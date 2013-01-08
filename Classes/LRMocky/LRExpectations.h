@@ -10,6 +10,7 @@
 #import "LRExpectationCapture.h"
 #import "LRExpectationActionSyntax.h"
 #import "LRExpectationActionCollector.h"
+#import "LRStatePredicate.h"
 
 @interface LRExpectations : NSObject <LRExpectationBuilder, LRExpectationActionCollector>
 
@@ -22,6 +23,7 @@
 - (id)expectThat:(id)mock;
 - (id)allowing:(id)mock;
 - (id)ignoring:(id)mock;
+- (void)captureExpectations:(dispatch_block_t)expectations whenStateIs:(id<LRStatePredicate>)state;
 
 #pragma mark - Expectation cardinality
 
@@ -54,8 +56,8 @@ LRExpectations *expectNotification(NSString *name);
 id allowing(id object);
 id ignoring(id object);
 id<LRExpectationActionSyntax> andThen(void);
-id thenStateOf(id state);
-id whenStateOf(id state);
+id<LRExpectationActionSyntax> thenState(id state);
+void whenState(id<LRStatePredicate> state, dispatch_block_t expectationsBlock);
 
 /* Makes the interface a little bit more readable 
  */

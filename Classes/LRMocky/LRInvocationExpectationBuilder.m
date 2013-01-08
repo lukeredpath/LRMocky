@@ -11,7 +11,6 @@
 #import "LRMockery.h"
 #import "LRInvocationExpectation.h"
 #import "LRExpectationCardinality.h"
-#import "LRMockyStates.h"
 #import "LRPerformBlockAction.h"
 #import "LRAllParametersMatcher.h"
 #import "NSInvocation+Conveniences.h"
@@ -57,6 +56,11 @@
 - (void)setAction:(id<LRExpectationAction>)action
 {
   self.expectation.action = action;
+}
+
+- (void)setStatePredicate:(id<LRStatePredicate>)statePredicate
+{
+  self.expectation.statePredicate = statePredicate;
 }
 
 #pragma mark - Invocation capture

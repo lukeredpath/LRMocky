@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class LRMockyStateMachine;
+
 @protocol LRExpectationActionSyntax <NSObject>
 
 - (void)returns:(id)returnObject;
@@ -16,5 +18,6 @@
 - (void)raisesException:(NSException *)exception;
 - (void)doesAllOf:(void (^)(id<LRExpectationActionSyntax>))actionsBlock;
 - (void)onConsecutiveCalls:(void (^)(id<LRExpectationActionSyntax>))actionsBlock;
+- (void)state:(LRMockyStateMachine *)state becomes:(NSString *)newState;
 
 @end

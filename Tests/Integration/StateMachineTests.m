@@ -26,64 +26,70 @@ DEFINE_FUNCTIONAL_TEST_CASE(StateMachineTests) {
   readiness = [context states:@"readiness"];
 }
 
-- (void)xtestCanConstrainExpectationsToOccurWithinGivenState
+- (void)testCanConstrainExpectationsToOccurWithinGivenState
 {
+  [readiness startsAs:@"unready"];
+  
   [context check:^{
-    [allowing(testObject) doSomethingElse]; [thenStateOf(readiness) becomes:@"ready"];
-    [[expectThat(testObject) receives] doSomething]; [whenStateOf(readiness) equals:@"ready"];
+    whenState([readiness equals:@"ready"], ^{
+      [[expectThat(testObject) receives] doSomething];
+    });
+  }];
+  
+  [testObject doSomething];
+  [context assertSatisfied];
+  
+  assertThat(testCase, failedWithNumberOfFailures(2));
+}
+
+- (void)testAllowsExpectationsToOccurWhenAlreadyInCorrectState
+{
+  [readiness startsAs:@"ready"];
+  
+  [context check:^{
+    whenState([readiness equals:@"ready"], ^{
+      [[expectThat(testObject) receives] doSomething];
+    });
+  }];
+  
+  [testObject doSomething];
+  [context assertSatisfied];
+  
+  assertThat(testCase, passed());
+}
+
+- (void)testCanTriggerStateChangesAsResultOfExpectation
+{
+  [readiness startsAs:@"unready"];
+  
+  [context check:^{
+    [allowing(testObject) doSomething]; [then state:readiness becomes:@"ready"];
   }];
   
   [testObject doSomething];
   
-  [context assertSatisfied];
-  
-  assertThat(testCase, failedWithNumberOfFailures(1));
+  assertThat(readiness.currentState, equalTo(@"ready"));
+  assertThat(testCase, passed());
 }
 
-//- (void)testAllowsExpectationsToOccurInCorrectState
-//{
-//  [context checking:^(that){
-//    [allowing(testObject) doSomethingElse]; then([readiness becomes:@"ready"]);
-//    [oneOf(testObject) doSomething]; when([readiness hasBecome:@"ready"]);
-//  }];
-//  
-//  [testObject doSomethingElse];
-//  [testObject doSomething];
-//  
-//  assertContextSatisfied(context);
-//  
-//  assertThat(testCase, passed());
-//}
-//
-//- (void)testCanStartInASpecificState
-//{
-//  [readiness startsAs:@"ready"];
-//
-//  [context checking:^(that){
-//    [allowing(testObject) doSomething]; when([readiness hasBecome:@"ready"]);
-//  }];
-//  
-//  [testObject doSomething];
-//  
-//  assertContextSatisfied(context);
-//  
-//  assertThat(testCase, passed());
-//}
-//
-//- (void)testCanConstraintExpectationsToStatesTriggeredByBlocks
-//{
-//  [context checking:^(that){
-//    [allowing(testObject) doSomethingWithBlock:anyBlock()]; then([readiness becomes:@"ready"]); andThen(performBlockArguments);
-//    [oneOf(testObject) doSomething]; when([readiness hasBecome:@"ready"]);
-//  }];
-//  
-//  [testObject doSomethingWithBlock:^{
-//    [testObject doSomething];
-//  }];
-//  
-//  assertContextSatisfied(context);
-//
-//  assertThat(testCase, passed());  
-//}
+- (void)testMultipleExpectationsWithStates
+{
+  [readiness startsAs:@"unready"];
+  
+  [context check:^{
+    [allowing(testObject) doSomething]; [then state:readiness becomes:@"ready"];
+    
+    whenState([readiness equals:@"ready"], ^{
+      [[expectThat(testObject) receives] doSomethingElse];
+    });
+  }];
+  
+  [testObject doSomething];
+  [testObject doSomethingElse];
+  
+  [context assertSatisfied];
+  
+  assertThat(testCase, passed());
+}
 
 END_TEST_CASE

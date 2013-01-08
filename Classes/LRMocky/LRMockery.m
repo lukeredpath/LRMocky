@@ -12,7 +12,7 @@
 #import "LRUnexpectedInvocation.h"
 #import "LRInvocationExpectation.h"
 #import "LRNotificationExpectation.h"
-#import "LRMockyStates.h"
+#import "LRMockyStateMachine.h"
 #import "LRReflectionImposterizer.h"
 #import "LRUnexpectedInvocationException.h"
 #import "NSInvocation+BlockArguments.h"
