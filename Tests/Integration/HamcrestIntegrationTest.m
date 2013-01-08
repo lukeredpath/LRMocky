@@ -34,7 +34,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(HamcrestIntegrationTest)
   [context assertSatisfied];
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomethingWithObject: with arguments: [<\"foo\">] once but received it 0 times.", testObject]));
+    @"Expected %@ to receive doSomethingWithObject: with arguments: [\"foo\"] exactly once but received it 0 times.", testObject]));
 }
 
 - (void)testCanExpectInvocationWithStringWithPrefixAndPass
@@ -61,7 +61,7 @@ DEFINE_FUNCTIONAL_TEST_CASE(HamcrestIntegrationTest)
   [context assertSatisfied];
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-   @"Expected %@ to receive doSomethingWithObject: with arguments: [<a string starting with \"foo\">] once but received it 0 times.", testObject]));
+   @"Expected %@ to receive doSomethingWithObject: with arguments: [a string starting with \"foo\"] exactly once but received it 0 times.", testObject]));
 }
 
 - (void)testCanExpectInvocationWithIdenticalObjectAndPass
@@ -93,7 +93,22 @@ DEFINE_FUNCTIONAL_TEST_CASE(HamcrestIntegrationTest)
   [context assertSatisfied];
   
   assertThat(testCase, failedWithExpectationError([NSString stringWithFormat:
-    @"Expected %@ to receive doSomethingWithObject: with arguments: [<same instance as 0x%0x %@>] once but received it 0 times.", testObject, dummy, dummy]));
+    @"Expected %@ to receive doSomethingWithObject: with arguments: [same instance as 0x%0x %@] exactly once but received it 0 times.", testObject, dummy, dummy]));
+}
+
+- (void)testExpectingInvocationsWithAnyObjectParameter
+{
+  [context check:^{
+    [allowing(testObject) doSomethingWithObject:anything()];
+  }];
+  
+  [testObject doSomethingWithObject:@"foo"];
+  [testObject doSomethingWithObject:@"bar"];
+  [testObject doSomethingWithObject:@"baz"];
+  
+  [context assertSatisfied];
+  
+  assertThat(testCase, passed());
 }
 
 END_TEST_CASE
