@@ -7,7 +7,7 @@
 //
 
 #import "HCBlockMatcher.h"
-#import "HCDescription.h"
+#import <OCHamcrest/HCDescription.h>
 
 @implementation HCBlockMatcher
 

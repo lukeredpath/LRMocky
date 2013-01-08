@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HCBaseMatcher.h"
+#import <OCHamcrest/HCBaseMatcher.h>
 
 typedef BOOL (^HCBlockMatcherBlock)(id actual);
 
