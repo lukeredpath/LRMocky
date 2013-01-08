@@ -4,6 +4,8 @@ Mocky is an opinionated, [jMock](http:://jmock.org) inspired mock objects framew
 
 It supports class and protocol-based mocking; a simple, expressive API designed for readability; Hamcrest matcher support using [OCHamcrest](http://github.com/hamcrest/OCHamcrest) and ships with support for OCUnit, or any testing framework built on top of it.
 
+Note: This document is currently a work in progress.
+
 ## Getting Started
 
 The recommended way of adding Mocky to your project is using [CocoaPods](http://cocoapods.org). Mocky is available as a static library for iOS and a framework for OSX. You can also clone the project repository and add it to Xcode to your workspace or project and build it as a dependency.
