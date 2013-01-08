@@ -11,6 +11,7 @@
 @protocol LRExpectationActionSyntax <NSObject>
 
 - (void)returns:(id)returnObject;
+- (void)returnsValue:(void *)value;
 - (void)performsBlock:(void (^)(NSInvocation *))block;
 - (void)raisesException:(NSException *)exception;
 - (void)doesAllOf:(void (^)(id<LRExpectationActionSyntax>))actionsBlock;

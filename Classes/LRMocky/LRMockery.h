@@ -188,6 +188,5 @@
  */
 void LRM_assertContextSatisfied(LRMockery *context, NSString *fileName, int lineNumber);
 
-#ifdef LRMOCKY_SUGAR
 #define assertContextSatisfied(context) LRM_assertContextSatisfied(context, [NSString stringWithUTF8String:__FILE__], __LINE__)
-#endif
+

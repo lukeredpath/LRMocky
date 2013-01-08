@@ -106,7 +106,6 @@
 		A39155B811FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A39155B611FFAEF000FE7C49 /* NSInvocation+OCMAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A391561311FFB81300FE7C49 /* LRExpectationCardinality.m in Sources */ = {isa = PBXBuildFile; fileRef = A391554811FF5F0900FE7C49 /* LRExpectationCardinality.m */; };
 		A391561A11FFB82900FE7C49 /* LRConsecutiveCallAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EE4EF611FE5D64002DA61D /* LRConsecutiveCallAction.m */; };
-		A3943E0B11FFBBAB007FE700 /* BasicExamples.m in Sources */ = {isa = PBXBuildFile; fileRef = A3943E0A11FFBBAB007FE700 /* BasicExamples.m */; };
 		A398EEF413D1F759005C26AA /* TestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A346500111F2937D0080B46B /* TestHelper.m */; };
 		A3A206CC169B4D4E00A05F07 /* LRMockeryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A37D8D00169B4C14003DDA02 /* LRMockeryTests.m */; };
 		A3A206CF169B5C9B00A05F07 /* NSObject+Identity.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A206CD169B5C9B00A05F07 /* NSObject+Identity.h */; };
@@ -115,6 +114,7 @@
 		A3A206D4169B631900A05F07 /* HCRaisesException.h in Headers */ = {isa = PBXBuildFile; fileRef = A3A206D2169B631900A05F07 /* HCRaisesException.h */; };
 		A3A206D6169B637600A05F07 /* HCRaisesException.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A206D3169B631900A05F07 /* HCRaisesException.m */; };
 		A3A206D7169B637700A05F07 /* HCRaisesException.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A206D3169B631900A05F07 /* HCRaisesException.m */; };
+		A3A206DA169C306300A05F07 /* DocumentationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3A206D8169C303900A05F07 /* DocumentationTests.m */; };
 		A3C805921207139A00BA64E7 /* LRMockyStateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = A3385AC612026269006E95AB /* LRMockyStateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3C805931207139A00BA64E7 /* LRMockyState.h in Headers */ = {isa = PBXBuildFile; fileRef = A3385AC912026273006E95AB /* LRMockyState.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A3C805941207139A00BA64E7 /* LRMockyStateTransitionAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A3385ACC1202627E006E95AB /* LRMockyStateTransitionAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -230,6 +230,7 @@
 		A3A206CE169B5C9B00A05F07 /* NSObject+Identity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Identity.m"; sourceTree = "<group>"; };
 		A3A206D2169B631900A05F07 /* HCRaisesException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCRaisesException.h; sourceTree = "<group>"; };
 		A3A206D3169B631900A05F07 /* HCRaisesException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCRaisesException.m; sourceTree = "<group>"; };
+		A3A206D8169C303900A05F07 /* DocumentationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocumentationTests.m; sourceTree = "<group>"; };
 		A3C66A2A120244F20004F78B /* StateMachineTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateMachineTests.m; sourceTree = "<group>"; };
 		A3C66A42120249240004F78B /* LRMockyStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRMockyStates.h; sourceTree = "<group>"; };
 		A3C707F711FDDFE0000D2A8C /* ExpectationActionsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpectationActionsTest.m; sourceTree = "<group>"; };
@@ -615,6 +616,7 @@
 		A3943E0911FFBB99007FE700 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				A3A206D8169C303900A05F07 /* DocumentationTests.m */,
 				A3943E0A11FFBBAB007FE700 /* BasicExamples.m */,
 				A36FDBB511FFBB6E004A08F4 /* Example Tests-Info.plist */,
 			);
@@ -1056,9 +1058,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3943E0B11FFBBAB007FE700 /* BasicExamples.m in Sources */,
 				A398EEF413D1F759005C26AA /* TestHelper.m in Sources */,
 				A3156302150434D6006949E6 /* HCBlockMatcher.m in Sources */,
+				A3A206DA169C306300A05F07 /* DocumentationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

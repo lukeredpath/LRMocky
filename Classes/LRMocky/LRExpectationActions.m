@@ -31,6 +31,13 @@
   }];
 }
 
+- (void)returnsValue:(void *)value
+{
+  [self performsBlock:^(NSInvocation *invocation) {
+    [invocation setReturnValue:(void *)&value];
+  }];
+}
+
 - (void)performsBlock:(void (^)(NSInvocation *))block
 {
   [_collector addAction:[[LRPerformBlockAction alloc] initWithBlock:block]];
