@@ -6,8 +6,6 @@
 //  Copyright (c) 2010 LJR Software Limited. All rights reserved.
 //
 
-#define LRMOCKY_SHORTHAND
-#define LRMOCKY_SUGAR
 #define MOCKY_SHORTHAND
 
 #import "TestHelper.h"

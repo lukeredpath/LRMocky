@@ -10,8 +10,6 @@
 #import "LRInvocationComparitor.h"
 #import "LRReflectionImposterizer.h"
 
-#define LRMOCKY_SHORTHAND
-
 @interface InvocationTesterObject : NSObject
 - (id)takesAnObject:(id)object;
 - (id)takesAnInt:(int)anInt;

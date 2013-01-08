@@ -6,8 +6,6 @@
 //  Copyright 2010 LJR Software Limited. All rights reserved.
 //
 
-#define LRMOCKY_SHORTHAND
-#define LRMOCKY_SUGAR
 #define HC_SHORTHAND
 
 #import <SenTestingKit/SenTestingKit.h>

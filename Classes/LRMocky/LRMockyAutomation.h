@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#define LRMOCKY_SUGAR
-#define LRMOCKY_KIWI_COMPATIBILITY_MODE
 #import "LRMocky.h"
 
 void LRM_check(id testCase, void (^expectationBlock)(LRInvocationExpectationBuilder *));
