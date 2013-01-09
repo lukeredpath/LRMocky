@@ -55,6 +55,9 @@
 
 - (BOOL)matchesParameter:(id)parameter atIndex:(int)index
 {
+  if (parameter == NSNull.null) {
+    parameter = nil;
+  }
   return [_parameterMatchers[index] matches:parameter];
 }
 

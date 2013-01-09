@@ -19,7 +19,12 @@ const NSUInteger NSMethodSignatureArgumentsToIgnore = 2;
   NSMutableArray *arguments = [NSMutableArray arrayWithCapacity:argumentCount];
   
   for (int i = 2; i < argumentCount; i++) {
-    [arguments addObject:[self getArgumentAtIndexAsObject:i]];
+    id argument = [self getArgumentAtIndexAsObject:i];
+
+    if (!argument) {
+      argument = [NSNull null];
+    }
+    [arguments addObject:argument];
   }
   return [arguments copy];
 }

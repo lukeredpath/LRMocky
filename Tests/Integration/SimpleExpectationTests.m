@@ -206,6 +206,30 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
   [(NSArray *)mockArray indexesOfObjectsPassingTest:^(id object, NSUInteger idx, BOOL *stop) { return YES; }];
 }
 
+- (void)testCanExpectMethodCallsWithAnythingAndPassWithGivenNil
+{
+  [context check:^{
+    [[expectThat(testObject) receives] doSomethingWithObject:anything()];
+  }];
+  
+  [testObject doSomethingWithObject:nil];
+  [context assertSatisfied];
+  
+  assertThat(testCase, passed());
+}
+
+- (void)testCanExpectMethodCallsWithNilParameter
+{
+  [context check:^{
+    [[expectThat(testObject) receives] doSomethingWithObject:nilValue()];
+  }];
+  
+  [testObject doSomethingWithObject:nil];
+  [context assertSatisfied];
+  
+  assertThat(testCase, passed());
+}
+
 //- (void)testCanExpectMethodCallsWithBlockArgumentsWithObjectAndPass;
 //{
 //  [context check:^{
