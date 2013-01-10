@@ -9,6 +9,7 @@
 #import "LRAllParametersMatcher.h"
 
 #import <OCHamcrest/HCIsEqual.h>
+#import <OCHamcrest/HCIsNil.h>
 #import <OCHamcrest/HCStringDescription.h>
 #import <OCHamcrest/HCDescription.h>
 
@@ -68,6 +69,9 @@
   for (id parameter in parameters) {
     if ([parameter conformsToProtocol:@protocol(HCMatcher)]) {
       [matchers addObject:parameter];
+    }
+    else if (parameter == NSNull.null) {
+      [matchers addObject:HC_nilValue()];
     }
     else {
       [matchers addObject:HC_equalTo(parameter)];

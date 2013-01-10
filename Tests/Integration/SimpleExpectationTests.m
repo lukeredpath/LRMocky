@@ -218,10 +218,22 @@ DEFINE_FUNCTIONAL_TEST_CASE(SimpleExpectationTests)
   assertThat(testCase, passed());
 }
 
-- (void)testCanExpectMethodCallsWithNilParameter
+- (void)testCanExpectMethodCallsWithNilParameterUsingMatcher
 {
   [context check:^{
     [[expectThat(testObject) receives] doSomethingWithObject:nilValue()];
+  }];
+  
+  [testObject doSomethingWithObject:nil];
+  [context assertSatisfied];
+  
+  assertThat(testCase, passed());
+}
+
+- (void)testCanExpectMethodCallsWithNilParameterUsingNil
+{
+  [context check:^{
+    [[expectThat(testObject) receives] doSomethingWithObject:nil];
   }];
   
   [testObject doSomethingWithObject:nil];
