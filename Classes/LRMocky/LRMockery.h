@@ -11,12 +11,11 @@
 #import "LRTestCase.h"
 #import "LRInvocationDispatcher.h"
 #import "LRExpectationCollector.h"
+#import "LRStatePredicate.h"
 
 @class LRInvocationExpectationBuilder;
 @class SenTestCase;
 @class LRMockyStateMachine;
-@class OLD_LRMockObject;
-
 
 /** Represents a context in which mocks are created and verified.
  
@@ -142,6 +141,23 @@
  @see LRExpectationBuilder
  */
 - (void)check:(__weak dispatch_block_t)expectationBlock;
+
+///------------------------------------------------------------------------------------/
+/// @name Synchronising with states
+///------------------------------------------------------------------------------------/
+
+/* Calls waitUntil:withTimeout: with a default timeout (1 second)
+ */
+- (void)waitUntil:(id<LRStatePredicate>)state;
+
+/** Pauses execution of the calling runloop until the given state becomes active, or
+ timeout is reached.
+ 
+ Use this method to synchronise the context with any asynchronous behaviour in your 
+ code under test by invoking a state change using an action on your expectation, then
+ call this method to wait for the state change.
+ */
+- (void)waitUntil:(id<LRStatePredicate>)state withTimeout:(NSTimeInterval)timeout;
 
 ///------------------------------------------------------------------------------------/
 /// @name Checking expectations

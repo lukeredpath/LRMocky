@@ -42,7 +42,6 @@
 		A31FD32D16990608002D4511 /* LRExpectationActions.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD32B16990604002D4511 /* LRExpectationActions.m */; };
 		A31FD33216990C14002D4511 /* LRCompositeAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A31FD33016990C10002D4511 /* LRCompositeAction.h */; };
 		A31FD33316990C14002D4511 /* LRCompositeAction.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD33116990C12002D4511 /* LRCompositeAction.m */; };
-		A31FD34816991283002D4511 /* StateMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C66A2A120244F20004F78B /* StateMachineTests.m */; };
 		A31FD34B1699180E002D4511 /* LRExpectationConstraints.h in Headers */ = {isa = PBXBuildFile; fileRef = A31FD3491699180A002D4511 /* LRExpectationConstraints.h */; };
 		A31FD34C1699180E002D4511 /* LRExpectationConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = A31FD34A1699180C002D4511 /* LRExpectationConstraints.m */; };
 		A31FD3501699204D002D4511 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A319BB951695A469003BB49A /* Foundation.framework */; };
@@ -76,6 +75,11 @@
 		A3289A3D122C73B100D89A88 /* LRNotificationExpectation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3289A3B122C73B100D89A88 /* LRNotificationExpectation.m */; };
 		A3385ADD12026372006E95AB /* LRMockyStateMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = A3385AC712026269006E95AB /* LRMockyStateMachine.m */; };
 		A36F414B142962C4004EAA45 /* LRHamcrestSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = A36F414A142962C4004EAA45 /* LRHamcrestSupport.h */; };
+		A376C6A4169EEE4200B1C584 /* LRSynchroniser.h in Headers */ = {isa = PBXBuildFile; fileRef = A376C6A2169EEE4200B1C584 /* LRSynchroniser.h */; };
+		A376C6A5169EEE4200B1C584 /* LRSynchroniser.m in Sources */ = {isa = PBXBuildFile; fileRef = A376C6A3169EEE4200B1C584 /* LRSynchroniser.m */; };
+		A376C6A6169EEE9000B1C584 /* StateMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C66A2A120244F20004F78B /* StateMachineTests.m */; };
+		A376C6A7169EEE9000B1C584 /* StateMachineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C66A2A120244F20004F78B /* StateMachineTests.m */; };
+		A376C6A8169EEEA300B1C584 /* LRSynchroniser.m in Sources */ = {isa = PBXBuildFile; fileRef = A376C6A3169EEE4200B1C584 /* LRSynchroniser.m */; };
 		A37D8CD4169928A6003DDA02 /* LRMockery.h in Headers */ = {isa = PBXBuildFile; fileRef = A301769011FDEEFC004828C5 /* LRMockery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A37D8CD5169928A6003DDA02 /* LRExpectations.h in Headers */ = {isa = PBXBuildFile; fileRef = A31FD2F016970BB8002D4511 /* LRExpectations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A381A1FA12243BE900FA2A5C /* LRExpectationAction.h in Headers */ = {isa = PBXBuildFile; fileRef = A301768911FDEEFC004828C5 /* LRExpectationAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -204,6 +208,8 @@
 		A36F414A142962C4004EAA45 /* LRHamcrestSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRHamcrestSupport.h; sourceTree = "<group>"; };
 		A36FDBB411FFBB6E004A08F4 /* Example Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Example Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A36FDBB511FFBB6E004A08F4 /* Example Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example Tests-Info.plist"; sourceTree = "<group>"; };
+		A376C6A2169EEE4200B1C584 /* LRSynchroniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRSynchroniser.h; sourceTree = "<group>"; };
+		A376C6A3169EEE4200B1C584 /* LRSynchroniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRSynchroniser.m; sourceTree = "<group>"; };
 		A37D8CDC169AD1F2003DDA02 /* LRImposterizable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRImposterizable.h; sourceTree = "<group>"; };
 		A37D8D00169B4C14003DDA02 /* LRMockeryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRMockeryTests.m; sourceTree = "<group>"; };
 		A381A25212243FAC00FA2A5C /* ProtocolMockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProtocolMockTests.m; sourceTree = "<group>"; };
@@ -529,6 +535,8 @@
 				A3A208D9169CA82300A05F07 /* LRStatePredicate.h */,
 				A3385AC612026269006E95AB /* LRMockyStateMachine.h */,
 				A3385AC712026269006E95AB /* LRMockyStateMachine.m */,
+				A376C6A2169EEE4200B1C584 /* LRSynchroniser.h */,
+				A376C6A3169EEE4200B1C584 /* LRSynchroniser.m */,
 			);
 			name = States;
 			sourceTree = "<group>";
@@ -663,6 +671,7 @@
 				A3A20794169C768500A05F07 /* NSInvocation+OCMAdditions.h in Headers */,
 				A3A20798169C768500A05F07 /* NSObject+Identity.h in Headers */,
 				A3A2079E169C769E00A05F07 /* NSException_SenTestFailure.h in Headers */,
+				A376C6A4169EEE4200B1C584 /* LRSynchroniser.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1046,7 +1055,6 @@
 				A31FD3101697BD20002D4511 /* CardinalityTests.m in Sources */,
 				A31FD3111697BE5C002D4511 /* ExpectationsWithDifferentArgumentsTest.m in Sources */,
 				A31FD3231698F94D002D4511 /* ExpectationActionsTest.m in Sources */,
-				A31FD34816991283002D4511 /* StateMachineTests.m in Sources */,
 				A3A207AC169C76B500A05F07 /* FunctionalMockeryTestCase.m in Sources */,
 				A3A207AF169C76B500A05F07 /* HCBlockMatcher.m in Sources */,
 				A3A207B2169C76B500A05F07 /* HCRaisesException.m in Sources */,
@@ -1082,6 +1090,8 @@
 				A3A20793169C768500A05F07 /* NSInvocation+Conveniences.m in Sources */,
 				A3A20797169C768500A05F07 /* NSInvocation+OCMAdditions.m in Sources */,
 				A3A2079B169C768500A05F07 /* NSObject+Identity.m in Sources */,
+				A376C6A6169EEE9000B1C584 /* StateMachineTests.m in Sources */,
+				A376C6A8169EEEA300B1C584 /* LRSynchroniser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1131,6 +1141,8 @@
 				A3A20792169C768500A05F07 /* NSInvocation+Conveniences.m in Sources */,
 				A3A20796169C768500A05F07 /* NSInvocation+OCMAdditions.m in Sources */,
 				A3A2079A169C768500A05F07 /* NSObject+Identity.m in Sources */,
+				A376C6A5169EEE4200B1C584 /* LRSynchroniser.m in Sources */,
+				A376C6A7169EEE9000B1C584 /* StateMachineTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

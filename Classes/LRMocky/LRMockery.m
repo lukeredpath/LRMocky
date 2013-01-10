@@ -17,8 +17,11 @@
 #import "LRUnexpectedInvocationException.h"
 #import "NSInvocation+BlockArguments.h"
 #import "NSObject+Identity.h"
+#import "LRSynchroniser.h"
 
 #import <OCHamcrest/HCStringDescription.h>
+
+#define kDEFAULT_TIMEOUT_FOR_WAIT_UNTIL 1.0
 
 NSString *failureFor(id<HCSelfDescribing> expectation);
 
@@ -113,6 +116,18 @@ NSString *failureFor(id<HCSelfDescribing> expectation) {
   HCStringDescription *description = [HCStringDescription stringDescription];
   [expectation describeTo:description];
   return [description description];
+}
+
+#pragma mark - Synchronisation
+
+- (void)waitUntil:(id<LRStatePredicate>)state
+{
+  [self waitUntil:state withTimeout:kDEFAULT_TIMEOUT_FOR_WAIT_UNTIL];
+}
+
+- (void)waitUntil:(id<LRStatePredicate>)state withTimeout:(NSTimeInterval)timeout
+{
+  [[LRSynchroniser synchroniserWithTimeout:timeout] waitUntil:state];
 }
 
 #pragma mark - Verification
