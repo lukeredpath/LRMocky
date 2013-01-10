@@ -387,3 +387,38 @@ You can trigger a state transition by calling `transitionTo:` on the state objec
 ```
 
 Now, as long as our object under test calls `doSomethingElse` before calling `doSomething`, the test will pass.
+
+### Asynchronous behaviour
+
+Sometimes, your expectations will be satisfied by invocations that are performed by some asynchronous operation. In order to test that these expectations are met, you need to be able to ask the context to wait for a given invocation.
+
+Mocky supports asynchronous behaviour testing using states and a synchroniser, which can be invoked using the `waitUntil:` or `waitUntil:withTimeout:` methods on `LRMockery`.
+
+First of all, you need a state to represent the asynchronous nature of the call:
+
+```objc
+id operation = [[context states:@"operation"] startsAs:@"waiting"];
+```
+
+You can now configure your expectation as normal, triggering a state change when it is invoked:
+
+```objc
+[[expectThat(testObject) receives] doSomethingElse]; 
+  [then state:operation becomes:@"finished"];
+```
+
+Finally, you can ask the context to wait for the expected state; in this case, the finished state.
+
+```objc
+[context waitUntil:[operation equals:@"finished"]];
+```
+
+The default timeout is 1 second, but this can be changed by passing in a different timeout value:
+
+```objc
+[context waitUntil:[operation equals:@"finished"] withTimeout:3];
+```
+
+You will still need to place a call to `assertContextSatisfied()` after the `waitUntil:` call.
+
+If the state change is never triggered, or the timeout is reached, the method will return and your test will fail as expected.
