@@ -89,8 +89,6 @@ DEFINE_FUNCTIONAL_TEST_CASE(StateMachineTests) {
 
 - (void)testUsingStatesToTestAsynchronousCode
 {
-  LRSynchroniser *synchroniser = [LRSynchroniser synchroniser];
-  
   [readiness transitionTo:@"waiting"];
   
   [context check:^{
