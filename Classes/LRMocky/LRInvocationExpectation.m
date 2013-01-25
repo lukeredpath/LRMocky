@@ -29,6 +29,9 @@ NSString *const LRMockyExpectationError = @"LRMockyExpectationError";
 
 @implementation LRInvocationExpectation
 
+@synthesize action = _action;
+@synthesize statePredicate = _statePredicate;
+
 - (id)init;
 {
   if (self = [super init]) {

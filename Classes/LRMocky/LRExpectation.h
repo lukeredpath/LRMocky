@@ -7,18 +7,18 @@
 //
 
 #import "LRExpectationAction.h"
+#import "LRStatePredicate.h"
 #import <OCHamcrest/HCSelfDescribing.h>
 
 extern NSString *const LRMockyExpectationError;
 
 @protocol LRExpectation <NSObject, HCSelfDescribing>
 
+@property (nonatomic, strong) id<LRExpectationAction> action;
+@property (nonatomic, strong) id<LRStatePredicate> statePredicate;
+
 - (BOOL)isSatisfied;
 - (BOOL)matches:(NSInvocation *)invocation;
 - (void)invoke:(NSInvocation *)invocation;
-
-@optional
-- (void)addAction:(id<LRExpectationAction>)action;
-- (BOOL)calledWithInvalidState;
 
 @end

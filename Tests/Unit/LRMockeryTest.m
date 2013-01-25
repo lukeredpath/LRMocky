@@ -16,6 +16,9 @@
 
 @implementation FailingExpectation
 
+@synthesize action = _action;
+@synthesize statePredicate = _statePredicate;
+
 - (BOOL)isSatisfied
 {
   return NO;
@@ -50,6 +53,9 @@
 @end
 
 @implementation PassingExpectation
+
+@synthesize action = _action;
+@synthesize statePredicate = _statePredicate;
 
 - (BOOL)isSatisfied;
 {

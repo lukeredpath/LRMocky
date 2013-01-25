@@ -143,6 +143,7 @@ static LRExpectations *__currentExpectations = nil;
 {
   LRNotificationExpectationBuilder *builder = [[LRNotificationExpectationBuilder alloc] init];
   builder.notificationName = notificationName;
+  builder.statePredicate = self.currentStatePredicate;
   [_builders addObject:builder];
   return self;
 }
@@ -202,6 +203,11 @@ static LRExpectations *__currentExpectations = nil;
 - (void)setAction:(id<LRExpectationAction>)action
 {
   _expectation.action = action;
+}
+
+- (void)setStatePredicate:(id<LRStatePredicate>)statePredicate
+{
+  _expectation.statePredicate = statePredicate;
 }
 
 - (void)buildExpectations:(id<LRExpectationCollector>)expectationCollector

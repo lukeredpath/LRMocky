@@ -8,10 +8,15 @@
 
 #import "LRExpectationCollector.h"
 #import "LRExpectationAction.h"
+#import "LRStatePredicate.h"
 
 @protocol LRExpectationBuilder <NSObject>
 
-- (void)setAction:(id<LRExpectationAction>)action;
 - (void)buildExpectations:(id<LRExpectationCollector>)expectationCollector;
+
+@optional
+
+- (void)setAction:(id<LRExpectationAction>)action;
+- (void)setStatePredicate:(id<LRStatePredicate>)statePredicate;
 
 @end

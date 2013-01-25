@@ -17,6 +17,9 @@
 
 @implementation LRNotificationExpectation
 
+@synthesize action = _action;
+@synthesize statePredicate = _statePredicate;
+
 + (id)expectationWithNotificationName:(NSString *)name;
 {
   return [[self alloc] initWithName:name sender:nil];
@@ -63,6 +66,8 @@
 
 - (void)receiveNotification:(NSNotification *)note
 {
+  if (self.statePredicate && ![self.statePredicate isActive]) return;
+
   if (self.senderMatcher) {
     _isSatisfied = [self.senderMatcher matches:note.object];
     

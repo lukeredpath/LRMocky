@@ -13,6 +13,8 @@
 
 @implementation LRUnexpectedInvocation
 
+@synthesize action = _action;
+@synthesize statePredicate = _statePredicate;
 @synthesize invocation;
 @synthesize mockObject;
 

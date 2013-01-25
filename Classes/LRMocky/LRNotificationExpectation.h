@@ -15,7 +15,6 @@
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, strong) id sender;
 @property (nonatomic, strong) NSNotificationCenter *notificationCenter;
-@property (nonatomic, strong) id<LRExpectationAction> action;
 
 @property (nonatomic, readonly) BOOL isSatisfied;
 

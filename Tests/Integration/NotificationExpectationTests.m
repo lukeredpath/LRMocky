@@ -99,14 +99,30 @@ DEFINE_FUNCTIONAL_TEST_CASE(NotificationExpectationTests)
   assertThat(testCase, passed());
 }
 
-- (void)testCanUseStatesWithNotificationExpecations
+- (void)testCanUseStatesToConstraintNotificationExpectationsAndFail
 {
-  id notificationState = [[context states:@"notification"] startsAs:@"not-notified"];
+  id notificationState = [[context states:@"notification"] startsAs:@"not-ready"];
   
   [context check:^{
-    whenState([notificationState equals:@"not-notified"], ^{
+    whenState([notificationState equals:@"ready"], ^{
       [expectNotification(@"SomeTestNotification") fromSender:equalTo(@"sender")];
-        [then state:notificationState becomes:@"notified"];
+    });
+  }];
+  
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"SomeTestNotification" object:@"sender"];
+
+  [context assertSatisfied];
+  
+  assertThat(testCase, failedWithNumberOfFailures(1));
+}
+
+- (void)testCanUseStatesToConstraintNotificationExpectationsAndPass
+{
+  id notificationState = [[context states:@"notification"] startsAs:@"ready"];
+  
+  [context check:^{
+    whenState([notificationState equals:@"ready"], ^{
+      [expectNotification(@"SomeTestNotification") fromSender:equalTo(@"sender")];
     });
   }];
   

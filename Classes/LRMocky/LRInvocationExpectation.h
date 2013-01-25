@@ -23,10 +23,5 @@
 @property (nonatomic, strong) id target;
 @property (nonatomic, assign) SEL selector;
 @property (nonatomic, strong) id<HCMatcher> parametersMatcher;
-@property (nonatomic, strong) id<LRExpectationAction> action;
-@property (nonatomic, strong) id<LRStatePredicate> statePredicate;
-
-@property (nonatomic, strong) LRMockyState *requiredState;
-@property (nonatomic, readonly) BOOL calledWithInvalidState;
 
 @end
