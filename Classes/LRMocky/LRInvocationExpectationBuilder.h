@@ -19,7 +19,6 @@
 
 - (void)setTarget:(id)target;
 - (void)setCardinality:(id<LRExpectationCardinality>)cardinality;
-- (void)setAction:(id<LRExpectationAction>)action;
 - (void)setStatePredicate:(id<LRStatePredicate>)statePredicate;
 
 #pragma mark - Invocation capture

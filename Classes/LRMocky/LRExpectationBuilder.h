@@ -7,9 +7,11 @@
 //
 
 #import "LRExpectationCollector.h"
+#import "LRExpectationAction.h"
 
 @protocol LRExpectationBuilder <NSObject>
 
+- (void)setAction:(id<LRExpectationAction>)action;
 - (void)buildExpectations:(id<LRExpectationCollector>)expectationCollector;
 
 @end

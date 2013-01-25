@@ -81,4 +81,41 @@ DEFINE_FUNCTIONAL_TEST_CASE(NotificationExpectationTests)
   assertThat(testCase, failedWithNumberOfFailures(1));
 }
 
+- (void)testCanPerformActionsWhenMatchedNotificationsArePosted
+{
+  __block BOOL blockCalled = NO;
+  
+  [context check:^{
+    [expectNotification(@"SomeTestNotification") fromSender:equalTo(@"sender")];
+      [then performsBlock:^(NSInvocation *_) {
+        blockCalled = YES;
+      }];
+  }];
+  
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"SomeTestNotification" object:@"sender"];
+  [context assertSatisfied];
+  
+  assertThatBool(blockCalled, equalToBool(YES));
+  assertThat(testCase, passed());
+}
+
+- (void)testCanUseStatesWithNotificationExpecations
+{
+  id notificationState = [[context states:@"notification"] startsAs:@"not-notified"];
+  
+  [context check:^{
+    whenState([notificationState equals:@"not-notified"], ^{
+      [expectNotification(@"SomeTestNotification") fromSender:equalTo(@"sender")];
+        [then state:notificationState becomes:@"notified"];
+    });
+  }];
+  
+  [[NSNotificationCenter defaultCenter] postNotificationName:@"SomeTestNotification" object:@"sender"];
+  
+  [context waitUntil:[notificationState equals:@"notified"]];
+  [context assertSatisfied];
+  
+  assertThat(testCase, passed());
+}
+
 END_TEST_CASE

@@ -12,6 +12,7 @@
 #import "LRExpectationActions.h"
 
 @interface LRExpectations ()
+@property (nonatomic, readonly) id<LRExpectationBuilder> currentExpectationBuilder;
 @property (nonatomic, readonly) LRInvocationExpectationBuilder *currentInvocationExpectationBuilder;
 @property (nonatomic, readonly) LRNotificationExpectationBuilder *currentNotificationExpectationBuilder;
 @property (nonatomic, strong) id<LRStatePredicate> currentStatePredicate;
@@ -44,24 +45,25 @@ static LRExpectations *__currentExpectations = nil;
 
 - (LRInvocationExpectationBuilder *)currentInvocationExpectationBuilder
 {
-  id builder = [_builders lastObject];
-  
-  if (![builder isKindOfClass:[LRInvocationExpectationBuilder class]]) {
+  if (![self.currentExpectationBuilder isKindOfClass:[LRInvocationExpectationBuilder class]]) {
     @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:@"Tried to use the invocation expectation fluent interface whilst in the middle of configuring a notification expectation!" userInfo:nil];
   }
   
-  return builder;
+  return (LRInvocationExpectationBuilder *)self.currentExpectationBuilder;
 }
 
 - (LRNotificationExpectationBuilder *)currentNotificationExpectationBuilder
 {
-  id builder = [_builders lastObject];
-  
-  if (![builder isKindOfClass:[LRNotificationExpectationBuilder class]]) {
+  if (![self.currentExpectationBuilder isKindOfClass:[LRNotificationExpectationBuilder class]]) {
     @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:@"Tried to use the notification expectation fluent interface whilst in the middle of configuring an invocation expectation!" userInfo:nil];
   }
   
-  return builder;
+  return (LRNotificationExpectationBuilder *)self.currentExpectationBuilder;
+}
+
+- (id<LRExpectationBuilder>)currentExpectationBuilder
+{
+  return [_builders lastObject];
 }
 
 - (void)buildExpectations:(id<LRExpectationCollector>)expectationCollector
@@ -132,7 +134,7 @@ static LRExpectations *__currentExpectations = nil;
 
 - (void)addAction:(id<LRExpectationAction>)action
 {
-  self.currentInvocationExpectationBuilder.action = action;
+  [self.currentExpectationBuilder setAction:action];
 }
 
 #pragma mark - NSNotification expectations
@@ -195,6 +197,11 @@ static LRExpectations *__currentExpectations = nil;
 - (void)setNotificationCenter:(NSNotificationCenter *)notificationCenter
 {
   _expectation.notificationCenter = notificationCenter;
+}
+
+- (void)setAction:(id<LRExpectationAction>)action
+{
+  _expectation.action = action;
 }
 
 - (void)buildExpectations:(id<LRExpectationCollector>)expectationCollector

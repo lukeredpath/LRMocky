@@ -65,6 +65,8 @@
 {
   if (self.senderMatcher) {
     _isSatisfied = [self.senderMatcher matches:note.object];
+    
+    [self.action invoke:nil];
   }
   else {
     _isSatisfied = YES;
@@ -76,11 +78,13 @@
   [self.notificationCenter removeObserver:self];
 }
 
-- (void)addAction:(id <LRExpectationAction>)action
-{} // not supported yet
+- (BOOL)matches:(id)object
+{
+  return NO;
+}
 
-- (void)invoke:(NSInvocation *)invocation
-{} // not applicable
+- (void)invoke:(NSInvocation *)invocation // will never be called
+{} 
 
 - (void)describeTo:(id<HCDescription>)description
 {
