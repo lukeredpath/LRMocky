@@ -70,11 +70,13 @@
 
   if (self.senderMatcher) {
     _isSatisfied = [self.senderMatcher matches:note.object];
-    
-    [self.action invoke:nil];
   }
   else {
     _isSatisfied = YES;
+  }
+  
+  if (_isSatisfied) {
+    [self.action invoke:nil];
   }
 }
 
