@@ -15,7 +15,7 @@ The recommended way of adding Mocky to your project is using [CocoaPods](http://
 If you are using CocoaPods, all you need to do is add the following line to your Podfile:
 
 ```ruby
-pod 'Mocky'
+pod 'LRMocky'
 ```
 
 Using the framework on OSX is as simple as dragging it into your project. If you are using the static library in an iOS project, you'll also need to put the headers somewhere in your source tree, or reference them on disk by setting the header search path for your test bundle.
