@@ -10,11 +10,11 @@ Pod::Spec.new do |s|
   s.source_files = 'Classes/**/*.{h,m}'
   s.public_header_files = 'Classes/**/*.h'
   
-  non_arc_compatible_file_patterns = ['Classes/**/LRMockyAutomation', 'Classes/**/NSInvocation+{BlockArguments,OCMAdditions}']
+  non_arc_compatible_file_patterns = ['Classes/**/NSInvocation+{BlockArguments,OCMAdditions}']
   
   # exclude files that are not ARC compatible
   non_arc_source_files = non_arc_compatible_file_patterns.map { |p| p + ".{h,m}" }
-  s.exclude_files = non_arc_source_files
+  s.exclude_files = non_arc_source_files + ['Classes/**/LRMockyAutomation.{h,m}']
   
   # create a sub-spec just for the non-ARC files
    s.subspec 'no-arc' do |sp|
