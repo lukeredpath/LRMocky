@@ -7,17 +7,19 @@ Pod::Spec.new do |s|
   s.authors      = { 'Luke Redpath' => 'luke@lukeredpath.co.uk' }
   s.source       = { :git => 'https://github.com/lukeredpath/LRMocky.git' }
   s.requires_arc = true
+  s.source_files = 'Classes/**/*.{h,m}'
+  s.public_header_files = 'Classes/**/*.h'
+  
+  non_arc_compatible_file_patterns = ['Classes/**/LRMockyAutomation', 'Classes/**/NSInvocation+{BlockArguments,OCMAdditions}']
   
   # exclude files that are not ARC compatible
-  source_files = FileList['Classes/**/*.{h,m}'].exclude(/LRMockyAutomation/)
-  source_files.exclude(/NSInvocation\+(BlockArguments|OCMAdditions).m/)
-  s.source_files = source_files
-  
-  s.public_header_files = FileList['Classes/**/*.h'].exclude(/LRMockyAutomation/)
+  non_arc_source_files = non_arc_compatible_file_patterns.map { |p| p + ".{h,m}" }
+  s.exclude_files = non_arc_source_files
   
   # create a sub-spec just for the non-ARC files
    s.subspec 'no-arc' do |sp|
-     sp.source_files = FileList['Classes/LRMocky/Categories/NSInvocation+{BlockArguments,OCMAdditions}.m']
+     sp.source_files = non_arc_source_files
+     sp.public_header_files = non_arc_compatible_file_patterns.map { |p| p + ".h" }
      sp.requires_arc = false
    end
 

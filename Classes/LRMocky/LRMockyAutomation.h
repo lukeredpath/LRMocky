@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "LRMocky.h"
+#import "Mocky.h"
 
 void LRM_check(id testCase, void (^expectationBlock)(LRInvocationExpectationBuilder *));
 void LRM_verify(NSString *fileName, int lineNumber, void (^block)(void));
